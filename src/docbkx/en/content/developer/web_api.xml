@@ -120,7 +120,7 @@ curl -X POST -H &quot;Content-Type: application/json&quot; -d @client.json
   -u admin:district $SERVER/api/oAuth2Clients</screen>
         <para>We will use this client as the basis for our next grant type examples.</para>
       </section>
-      <section>
+      <section xml:id="webapi_oauth2_password">
         <title>Grant type password</title>
         <para>The simplest of all grant types is the <emphasis role="bold">password</emphasis> grant
           type. This grant type is similar to basic authenticaion in the sense that it requires the
@@ -147,7 +147,7 @@ curl -X POST -H &quot;Accept: application/json&quot; -u demo:$SECRET $SERVER/uaa
           token:<screen>SERVER=&quot;https://play.dhis2.org/dev&quot;
 curl -H &quot;Authorization: Bearer 07fc551c-806c-41a4-9a8c-10658bd15435&quot; $SERVER/api/26/dataElements.json</screen></para>
       </section>
-      <section>
+      <section xml:id="webapi_refresh_token">
         <title>Grant type refresh_token</title>
         <para>In general the access tokens have limited validity. You can have a look at the
             <emphasis role="bold">expires_in</emphasis> property of the response in the previous
@@ -163,7 +163,7 @@ curl -X POST -H &quot;Accept: application/json&quot; -u demo:$SECRET $SERVER/uaa
 -d grant_type=refresh_token -d refresh_token=$REFRESH_TOKEN</screen></para>
         <para>The response will be exactly the same as when you get an token to start with.</para>
       </section>
-      <section>
+      <section xml:id="webapi_authorization_code">
         <title>Grant type authorization_code</title>
         <para>Authorized code grant type is the recommended approach if you don&apos;t want to store
           the user credentials externally. It allows DHIS2 to collect the username/password
@@ -10494,7 +10494,7 @@ interval=WEEK" -u admin:district</screen>
   <section xml:id="webapi_users">
     <title>Users</title>
     <para>This section covers the user resource methods.<screen>/api/26/users</screen></para>
-    <section>
+    <section xml:id="webapi_users_query">
       <title>User query</title>
       <para>The <emphasis role="italic">users</emphasis> resource offers additional query parameters
         beyond the standard parameters (e.g. paging). To query for users at the users resource you
@@ -10587,7 +10587,7 @@ interval=WEEK" -u admin:district</screen>
         in-sensitive) who have a subset of authorities compared to the current user:</para>
       <screen>/api/26/users?query=konan&amp;authSubset=true&amp;pageSize=10</screen>
     </section>
-    <section>
+    <section xml:id="webapi_users_credentials_query">
       <title>User credentials query</title>
       <para>An alternative to the previous user query, is to directly query the user credentials
         (the part where username, etc resides) using <emphasis role="italic"
@@ -10599,7 +10599,7 @@ interval=WEEK" -u admin:district</screen>
           role="italic">adm</emphasis>:</para>
       <screen>/api/26/userCredentials?fields=username,code&amp;filter=username:^like:adm</screen>
     </section>
-    <section>
+    <section xml:id="webapi_users_create_update">
       <title>User account create and update</title>
       <para>Both creating and updating a user is supported through the web-api. The payload itself
         is similar to other payloads in the web-api, so they support collection references etc. A
@@ -10633,7 +10633,7 @@ interval=WEEK" -u admin:district</screen>
       <para>For more info about the full payload available, please see <emphasis role="italic"
           >/api/schemas/user</emphasis></para>
     </section>
-    <section>
+    <section xml:id="webapi_user_invitations">
       <title>User account invitations</title>
       <para>The Web API supports inviting people to create user accounts through the <emphasis
           role="italic">invite</emphasis> resource. To create an invitation you should POST a user
@@ -10734,7 +10734,7 @@ interval=WEEK" -u admin:district</screen>
           </listitem>
         </itemizedlist></para>
     </section>
-    <section>
+    <section xml:id="webapi_user_replication">
       <title>User replication</title>
       <para>To replicate a user you can use the <emphasis role="italic">replica</emphasis> resource.
         Replicating a user can be useful when debugging or reproducing issues reported by a
@@ -11217,7 +11217,7 @@ interval=WEEK" -u admin:district</screen>
       other metadata resources in DHIS2. This resource supports some additional query
       parameters.
     </para>
-    <section>
+    <section xml:id="webapi_list_of_organisation_units">
       <title>Get list of organisation units</title>
       <para>To get a list of organisation units you can use the following resource.
         <screen>/api/26/organisationUnits</screen></para>
@@ -11271,7 +11271,7 @@ interval=WEEK" -u admin:district</screen>
         </tgroup>
     </table>
     </section>
-    <section>
+    <section xml:id="webapi_organisation_units_with_relations">
       <title>Get organisation unit with relations</title>
       <para>To get an organisation unit with related organisation units you can use the following
         resource. <screen>/api/24/organisationUnits/{id} </screen></para>
@@ -11565,7 +11565,7 @@ interval=WEEK" -u admin:district</screen>
       Web-API. Together with the API for enrollment most operations needed for working with tracked
       entity instances and programs are
       supported.<screen>/api/26/trackedEntityInstances</screen></para>
-    <section>
+    <section xml:id="webapi_creating_tei">
       <title>Creating a new tracked entity instance</title>
       <para>For creating a new person in the system, you will be working with the <emphasis
           role="italic">trackedEntityInstances</emphasis> resource. A template payload can be seen
@@ -11638,7 +11638,7 @@ interval=WEEK" -u admin:district</screen>
   ]
 }</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_updating_tei">
       <title>Updating a tracked entity instance</title>
       <para>For updating a tracked entity instance, the payload is the equal to the previous
         section. The difference is that you must use the HTTP <emphasis role="bold">PUT</emphasis>
@@ -11648,13 +11648,13 @@ interval=WEEK" -u admin:district</screen>
         identifier of the tracked entity instance:</para>
       <screen>/api/trackedEntityInstances/&lt;tracked-entity-instance-id&gt;</screen>
     </section>
-    <section>
+    <section xml:id="webapi_deleting_tei">
       <title>Deleting a tracked entity instance</title>
       <para>To delete a tracked entity instance you can make a request to the URL identifiying the
         tracked entity instance with the HTTP <emphasis role="bold">DELETE</emphasis> method. The
         URL is equal to the one above used for update.</para>
     </section>
-    <section>
+    <section xml:id="webapi_enrolling_tei">
       <title>Enrolling a tracked entity instance into a program</title>
       <para>For enrolling persons into a program, you will need to first get the identifier of the
         person from the <emphasis role="italic">trackedEntityInstances</emphasis> resource. Then,
@@ -11681,7 +11681,7 @@ interval=WEEK" -u admin:district</screen>
       <para>For deleting a enrollment, you can make a <emphasis role="bold">DELETE</emphasis>
         request to the following URL:<screen>/api/enrollments/&lt;enrollment-id&gt;</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_tei_update_strategies">
       <title>Update strategies</title>
       <para>Two update strategies for tracked entity instance are supported: enrollment and event
         creation. This is useful when you have generated an identifier on the client side and are
@@ -11711,7 +11711,7 @@ interval=WEEK" -u admin:district</screen>
       <para>To change the parameter, please use the strategy
         parameter:<screen>POST /api/trackedEntityInstances?strategy=CREATE_AND_UPDATE</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_create_enroll_tei">
       <title>Create and enroll tracked entity instances</title>
       <para>It is also possible to both create (and update) a tracked entity instance and at the
         same time enroll into a program.</para>
@@ -11739,12 +11739,12 @@ interval=WEEK" -u admin:district</screen>
         instane.<screen>curl -X POST -d @tei.json -H "Content-Type: application/json"
   -u user:pass http://server/api/26/trackedEntityInstances</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_generate_tei_attributes">
       <title>Generated tracked entity instance attributes</title>
       <para>Tracked entity instance attributes that is using automatic generation of unique values
         has two endpoints that is used by apps. One is used to generate values, the other to
         generate and reserve one or more values for use later.</para>
-      <section>
+      <section xml:id="webapi_generate_values">
         <title>Generate value endpoint</title>
         <para>Online web apps and other clients that wants to generate a value that will be used
           right away can use the simple generate endpoint. This endpoint will generate a value that
@@ -11753,7 +11753,7 @@ interval=WEEK" -u admin:district</screen>
         <screen>curl -X GET -H "Content-Type: application/json" -u admin:district 
           https://play.dhis2.org/dev/api/trackedEntityAttributes/lZGmxYbs97q/generate</screen>
       </section>
-      <section>
+      <section xml:id="webapi_generate_reserve_values">
         <title>Generate and reserve value endpoint</title>
         <para>The generate and reserve endpoint is used by offline clients that needs to be able to
           register tracked entities with unique ids. They will reserve a number of unique ids that
@@ -11826,7 +11826,7 @@ interval=WEEK" -u admin:district</screen>
     <para>To query for tracked entity instances you can interact with the <emphasis role="italic"
         >/api/trackedEntityInstances</emphasis>
       resource.<screen>/api/26/trackedEntityInstances</screen></para>
-    <section>
+    <section xml:id="webapi_tei_query_request_syntax">
       <title>Request syntax</title>
       <table frame="all">
         <title>Tracked entity instances query parameters</title>
@@ -12058,7 +12058,7 @@ interval=WEEK" -u admin:district</screen>
         </tgroup>
       </table>
     </section>
-    <section>
+    <section xml:id="webapi_tei_query_response_format">
       <title>Response format</title>
       <para>This resource supports JSON, JSONP, XLS and CSV resource representations.</para>
       <itemizedlist>
@@ -12233,7 +12233,7 @@ interval=WEEK" -u admin:district</screen>
       are defined. This endpoint uses a more compact &quot;grid&quot; format, and is an alternative
       to the query in the previous
       section.<screen>api/24/trackedEntityInstances/query</screen></para>
-    <section>
+    <section xml:id="webapi_tei_grid_query_request_syntax">
       <title>Request syntax</title>
       <table frame="all">
         <title>Tracked entity instances query parameters</title>
@@ -12550,7 +12550,7 @@ interval=WEEK" -u admin:district</screen>
         </tgroup>
       </table>
     </section>
-    <section>
+    <section xml:id="webapi_tei_grid_query_response_format">
       <title>Response format</title>
       <para>This resource supports JSON, JSONP, XLS and CSV resource representations.</para>
       <itemizedlist>
@@ -12628,7 +12628,7 @@ interval=WEEK" -u admin:district</screen>
     <title>Enrollment instance query</title>
     <para>To query for tracked entity instances you can interact with the <emphasis role="italic"
         >/api/enrollments</emphasis> resource. <screen>/api/26/enrollments</screen></para>
-    <section>
+    <section xml:id="webapi_enrollment_query_request_syntax">
       <title>Request syntax</title>
       <table frame="all">
         <title>Tracked entity instances query parameters</title>
@@ -12798,7 +12798,7 @@ interval=WEEK" -u admin:district</screen>
         the page and pageSize query parameters:</para>
       <screen>/api/26/enrollments.json?ou=O6uvpzGd5pu&amp;ouMode=DESCENDANTS&amp;page=2&amp;pageSize=3</screen>
     </section>
-    <section>
+    <section xml:id="webapi_enrollment_query_response_format">
       <title>Response format</title>
       <para>This resource supports JSON, JSONP, XLS and CSV resource representations.</para>
       <itemizedlist>
@@ -12877,7 +12877,7 @@ interval=WEEK" -u admin:district</screen>
       address for the DHIS2 instance has been defined. You can set SMTP settings from the email
       settings screen and system notification email address from the general settings screen in DHIS
       2.<screen>/api/26/email</screen></para>
-    <section>
+    <section xml:id="webapi_email_system_notification">
       <title>System notification</title>
       <para>The <emphasis role="italic">notification</emphasis> resource lets you send system email
         notifications with a given subject and text in JSON or XML. The email will be sent to the
@@ -12890,7 +12890,7 @@ interval=WEEK" -u admin:district</screen>
         this:</para>
       <screen>curl -d @email.json &quot;localhost/api/26/email/notification&quot; -X POST -H &quot;Content-Type:application/json&quot; -u admin:district -v</screen>
     </section>
-    <section>
+    <section xml:id="webapi_email_test_message">
       <title>Test message</title>
       <para>To test whether the SMTP setup is correct by sending a test email to yourself you can
         interact with the <emphasis role="italic">test</emphasis> resource. To send test emails it
@@ -12905,7 +12905,7 @@ interval=WEEK" -u admin:district</screen>
       groups and to define whether objects should be publicly accessible or private. To get and set
       sharing status for objects you can interact with the <emphasis role="italic"
         >sharing</emphasis> resource.<screen>/api/26/sharing</screen></para>
-    <section>
+    <section xml:id="webapi_get_sharing_status">
       <title>Get sharing status</title>
       <para>To request the sharing status for an object use a GET request to:</para>
       <screen>/api/26/sharing?type=dataElement&amp;id=fbfJHSPpUQD</screen>
@@ -12934,7 +12934,7 @@ interval=WEEK" -u admin:district</screen>
     }
 }</screen>
     </section>
-    <section>
+    <section xml:id="webapi_set_sharing_status">
       <title>Set sharing status</title>
       <para>You can define the sharing status for an object using the same URL with a POST request,
         where the payload in JSON format looks like this:</para>
@@ -13039,7 +13039,7 @@ interval=WEEK" -u admin:district</screen>
           reports.</para>
       </listitem>
     </itemizedlist>
-    <section>
+    <section xml:id="webapi_customization_javascript">
       <title>Javascript</title>
       <para>To insert Javascript from a file called <emphasis role="italic">script.js</emphasis> you
         can interact with the <emphasis role="italic">files/script</emphasis> resource with a
@@ -13051,7 +13051,7 @@ interval=WEEK" -u admin:district</screen>
       <screen>/api/26/files/script</screen>
       <para>To remove the Javascript content you can use a DELETE-request.</para>
     </section>
-    <section>
+    <section xml:id="webapi_customization_css">
       <title>CSS</title>
       <para>To insert CSS from a file called <emphasis role="italic">style.css</emphasis> you can
         interact with the <emphasis role="italic">files/style</emphasis> resource with a
@@ -13066,20 +13066,20 @@ interval=WEEK" -u admin:district</screen>
   <section xml:id="webapi_synchronization">
     <title>Synchronization</title>
     <para>This section covers pull and push of data and metadata.</para>
-    <section>
+    <section xml:id="webapi_sync_data_push">
       <title>Data push</title>
       <para>To initiate a data push to a remote server one must first configure the URL and
         credentials for the relevant server from System settings &gt; Synchronization, then make a
         POST request to the following
         resource:<screen>/api/26/synchronization/dataPush</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_sync_metadata_pull">
       <title>Metadata pull</title>
       <para>To initiate a metadata pull from a remote JSON document you can make a POST request with
         a <emphasis role="italic">url</emphasis> as request payload to the following
         resource:<screen>/api/26/synchronization/metadataPull</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_sync_availability_check">
       <title>Availability check</title>
       <para>To check the availability of the remote data server and verify user credentials you can
         make a GET request to the following
