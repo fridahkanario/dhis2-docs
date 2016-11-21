@@ -59,7 +59,7 @@
       <title>Event layer</title>
       <mediaobject>
         <imageobject>
-          <imagedata width="80%" fileref="resources/images/gis/gis_event_layer.png" format="PNG"
+          <imagedata width="80%" fileref="resources/images/gis/gis_event_layer.png" format="png"
             align="center"/>
         </imageobject>
       </mediaobject>
@@ -183,7 +183,7 @@
         <title>Pop-up window with event information</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="resources/images/gis/gis_eventlayer_eventinfopopup.png" format="PNG"
+            <imagedata fileref="resources/images/gis/gis_eventlayer_eventinfopopup.png" format="png"
               width="40%" align="center"/>
           </imageobject>
         </mediaobject>
@@ -242,7 +242,7 @@
       <title>Facility layer</title>
       <mediaobject>
         <imageobject>
-          <imagedata width="100%" fileref="resources/images/gis/gis_facility_layer.png" format="PNG"
+          <imagedata width="100%" fileref="resources/images/gis/gis_facility_layer.png" format="png"
             align="center"/>
         </imageobject>
       </mediaobject>
@@ -402,7 +402,7 @@
       <mediaobject>
         <imageobject>
           <imagedata width="100%" fileref="resources/images/gis/gis_thematic_mapping.png"
-            format="PNG" align="center"/>
+            format="png" align="center"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -553,7 +553,7 @@
       <title>Boundary layer</title>
       <mediaobject>
         <imageobject>
-          <imagedata width="80%" fileref="resources/images/gis/gis_boundary_layers.png" format="PNG"
+          <imagedata width="80%" fileref="resources/images/gis/gis_boundary_layers.png" format="png"
             align="center"/>
 
         </imageobject>
@@ -622,7 +622,7 @@
     </section>
     <section>
       <title>Clear boundary layer</title>
-      <para>To clear all data in a boundary layer: </para>
+      <para>To clear data in a boundary layer: </para>
       <orderedlist>
         <listitem>
           <para>In the top menu, click the boundary layer icon.</para>
@@ -639,9 +639,8 @@
       <mediaobject>
         <imageobject>
           <?oxy_comment_start author="cecilia" timestamp="20160630T212009+0200" comment="Before release: Update screenshot: Select layer has changed to Select data set" flag="done"?>
-
           <imagedata width="80%" fileref="resources/images/gis/gis_earth_engine_layer.png"
-            format="PNG" align="center"/>
+            format="png" align="center"/>
           <?oxy_comment_end?>
         </imageobject>
       </mediaobject>
@@ -670,7 +669,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
             <mediaobject>
               <imageobject>
                 <imagedata width="50%" fileref="resources/images/gis/gis-temperature-landcover4.png"
-                  format="PNG" align="center"/>
+                  format="png" align="center"/>
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -712,7 +711,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
                 <mediaobject>
                   <imageobject>
                     <imagedata width="50%" fileref="resources/images/gis/gis_external_layers1.png"
-                format="PNG" align="center"/>
+                format="png" align="center"/>
                   </imageobject>
                 </mediaobject>
               </screenshot>
@@ -730,7 +729,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <mediaobject>
         <imageobject>
           <imagedata width="50%" fileref="resources/images/gis/gis_administrative_boundaries.png"
-            format="PNG" align="center"/>
+            format="png" align="center"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -738,7 +737,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <title>Example 2: Aerial imagery of Dar-es-Salaam</title>
       <mediaobject>
         <imageobject>
-          <imagedata width="50%" fileref="resources/images/gis/gis_aerial_imagery.png" format="PNG"
+          <imagedata width="50%" fileref="resources/images/gis/gis_aerial_imagery.png" format="png"
             align="center"/>
         </imageobject>
       </mediaobject>
@@ -748,7 +747,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <mediaobject>
         <imageobject>
           <imagedata width="50%"
-            fileref="resources/images/gis/gis_black_basemap_and_nighttime_lights.png" format="PNG"
+            fileref="resources/images/gis/gis_black_basemap_and_nighttime_lights.png" format="png"
             align="center"/>
         </imageobject>
       </mediaobject>
@@ -758,7 +757,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <mediaobject>
         <imageobject>
           <imagedata width="50%" fileref="resources/images/gis/gis_world_time_zones.png"
-            format="PNG" align="center"/>
+            format="png" align="center"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -774,7 +773,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <title>Favorite maps</title>
       <mediaobject>
         <imageobject>
-          <imagedata width="50%" fileref="resources/images/gis/gis_favorites.png" format="PNG"
+          <imagedata width="50%" fileref="resources/images/gis/gis_favorites.png" format="png"
             align="center"/>
         </imageobject>
       </mediaobject>
@@ -1006,7 +1005,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <mediaobject>
         <imageobject>
           <imagedata fileref="resources/images/gis/gis_place_search.png" align="center" width="75%"
-            format="PNG"/>
+            format="png"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -1046,7 +1045,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <mediaobject>
         <imageobject>
           <imagedata width="50%" fileref="resources/images/gis/gis-latitude-longitude.png"
-            format="PNG" align="center"/>
+            format="png" align="center"/>
         </imageobject>
       </mediaobject>
     </screenshot>
