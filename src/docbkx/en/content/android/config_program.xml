@@ -54,47 +54,25 @@ you DHIS2 web instance?"?>DHIS2<?oxy_comment_end?>
     <note>
         <title>Error
             <?oxy_comment_start author="cecilia" timestamp="20161114T114138+0100" comment="Nov2016: SME confirms that only one error message is available." flag="done"?>message<?oxy_comment_end?></title>
-        <informaltable frame="all">
-            <tgroup cols="3">
-                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-                <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-                <colspec colname="newCol3" colnum="3" colwidth="1*"/>
-                <thead>
-                    <row>
-                        <entry/>
-                        <entry>
-                            <para>Error message</para>
-                        </entry>
-                        <entry>
-                            <para>Solution</para>
-                        </entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry>
-                            <screenshot>
-                                <mediaobject>
-                                    <imageobject>
-                                        <imagedata width="40%" align="center"
-                                            fileref="resources/images/android/common/config_error_program.png"
-                                            format="PNG"/>
-                                    </imageobject>
-                                </mediaobject>
-                            </screenshot>
-                        </entry>
-                        <entry>
-                            <para>"You don't have any programs assigned to the organisation
-                                unit"</para>
-                        </entry>
-                        <entry>
-                            <para>In the <emphasis role="bold">Program</emphasis> app, assign
-                                programs to the relevant organisation units.</para>
-                        </entry>
-                    </row>
-                </tbody>
-            </tgroup>
-        </informaltable>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata width="40%" align="center"
+                        fileref="resources/images/android/common/config_error_program.png"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+        <itemizedlist>
+            <listitem>
+                <para>Error message: "You don't have any programs assigned to the organisation
+                    unit"</para>
+            </listitem>
+            <listitem>
+                <para>Solution: In the <emphasis role="bold">Program</emphasis> app, assign programs
+                    to the relevant organisation units.</para>
+            </listitem>
+        </itemizedlist>
     </note>
     <para>See
         <?oxy_comment_start author="cecilia" timestamp="20161102T135023+0100" comment="Add URL to correct sections when build works."?>also<?oxy_comment_end?>:</para>
