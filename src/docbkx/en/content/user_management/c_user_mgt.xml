@@ -104,8 +104,11 @@ You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
                         <para>A group of
                             <?oxy_comment_start author="cecilia" timestamp="20161115T152054+0100" comment="A group of user accounts?"?>users<?oxy_comment_end?></para>
                     </entry>
-                    <entry><para>Kenya staff</para><para>Feedback message recipients</para>HIV
-                        program coordinators</entry>
+                    <entry>
+                        <para>Kenya staff</para>
+                        <para>Feedback message recipients</para>
+                        <para>HIV program coordinators</para>
+                    </entry>
                 </row>
             </tbody>
         </tgroup>
@@ -135,7 +138,7 @@ You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
                     </entry>
                     <entry>
                         <para>Create, edit, clone, disable, assign search organisation units,
-                            display by organisation unit, share, delete and show details</para>
+                            display by organisation unit, delete and show details</para>
                     </entry>
                 </row>
                 <row>
@@ -160,21 +163,8 @@ You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
     <section>
         <title>About users</title>
         <para>Each user in DHIS2 must have a user account which is identified by a user name. You
-            should register the following information for each user:</para>
-        <itemizedlist>
-            <listitem>
-                <para>first name</para>
-            </listitem>
-            <listitem>
-                <para>last name</para>
-            </listitem>
-            <listitem>
-                <para>email address</para>
-            </listitem>
-            <listitem>
-                <para>phone number</para>
-            </listitem>
-        </itemizedlist>
+            should register a first and last name for each user as well as contact information, for
+            example an email address and a phone number.</para>
         <para>It is important that you register the correct contact information. DHIS2 uses this
             information to contact users directly, for example sending emails to notify users about
             important events.
@@ -194,12 +184,10 @@ Review the term&quot;associated&quot;, might be better with &quot;assigned&quot;
         <para>The assigned organisation unit affect how the user can use DHIS2:</para>
         <itemizedlist>
             <listitem>
-                <para>In the
-                    <?oxy_comment_start author="cecilia" timestamp="20161109T134826+0100" comment="Tracker Capture, Event Capture and Data Entry apps?"?>data
-                    entry module<?oxy_comment_end?>, a user can only be entering data for the
-                    organisation unit she is associated with and the organisation units below that
-                    in the hierarchy. For instance, a district records officer will be able to
-                    register data for her district and the facilities below that district
+                <para>In the <emphasis role="bold">Data Entry</emphasis> app, a user can only enter
+                    data for the organisation unit she is associated with and the organisation units
+                    below that in the hierarchy. For instance, a district records officer will be
+                    able to register data for her district and the facilities below that district
                     only.</para>
             </listitem>
             <listitem>
@@ -208,11 +196,8 @@ Review the term&quot;associated&quot;, might be better with &quot;assigned&quot;
                     organisation units below that in the hierarchy.</para>
             </listitem>
             <listitem>
-                <para>In
-                    th<?oxy_comment_start author="cecilia" timestamp="20161109T134919+0100" comment="Which apps?
-Event Reports and Reports?"?>e
-                    reports module,<?oxy_comment_end?> a user can only view reports her organisation
-                    units and those below.
+                <para>In the <emphasis role="bold">Reports</emphasis> app, a user can only view
+                    reports her organisation units and those below.
                     <?oxy_comment_start author="cecilia" timestamp="20161109T134941+0100" comment="Verify with SME: still valid?"?>(This
                     is something we consider to open up to allow for comparison
                     reports.)<?oxy_comment_end?></para>
@@ -239,14 +224,12 @@ Event Reports and Reports?"?>e
         <para>A user can have multiple user roles. If so, the user's authorities will be the sum of
             all authorities and data sets in the user roles. This means that you can mix and match
             user roles for special purposes instead of only creating new ones.</para>
-        <para>An user role is
+        <para>A user role is
             <?oxy_comment_start author="cecilia" timestamp="20161114T102710+0100" comment="Review term."?>associated<?oxy_comment_end?>
-            with a collection of data sets. This affects the
-            <?oxy_comment_start author="cecilia" timestamp="20161114T102052+0100" comment="Which apps?"?>data
-            entry module<?oxy_comment_end?>: an user can only enter data for the data sets
-            registered for his/her user role. This can be useful when for example you want to allow
-            officers from health programs to enter data only for their relevant data entry
-            forms.</para>
+            with a collection of data sets. This affects the <emphasis role="bold">Data
+                Entry</emphasis> app: a user can only enter data for the data sets registered for
+            his/her user role. This can be useful when, for example, you want to allow officers from
+            health programs to enter data only for their relevant data entry forms.</para>
         <para>Recommendations:</para>
         <itemizedlist>
             <listitem>
@@ -270,20 +253,19 @@ Event Reports and Reports?"?>e
 Sharing
 Notifications
 What happens when you share a user group with another user group?"?>groups<?oxy_comment_end?></title>
-        <para/>
+        <para>A user group is a group of users. You use user groups when you set up sharing of
+            objects or notifications, for example push reports or program notifications.</para>
         <para>See
             <?oxy_comment_start author="cecilia" timestamp="20161102T135023+0100" comment="Add URL to correct sections when build works."?>also<?oxy_comment_end?>:</para>
-        <para><citetitle pubwork="section">Sharing</citetitle>
+        <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/sharing.html"
+                >Sharing</link></para>
+        <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/program_notifications.html"
+                >Manage program notifications</link></para>
+        <para>
             <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en_full.html#d0e2861"
-            /></para>
-        <para><citetitle pubwork="section">Manage program notifications</citetitle>
-            <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en_full.html#program_notifications"
-            /></para>
-        <para><citetitle>Manage push reports</citetitle>
-            <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en_full.html#manage_push_reports"
-            /></para>
+                xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/manage_push_reports.html"
+                >Mange push reports</link></para>
     </section>
 </section>

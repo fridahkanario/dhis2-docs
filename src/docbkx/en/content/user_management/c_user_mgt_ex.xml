@@ -19,8 +19,8 @@
     <orderedlist>
         <listitem>
             <para>Define which users that should have the role as system administrators. They are
-                often part of the members of the national HIS division and should have full
-                authority in the system.</para>
+                often part of the national HIS division and should have full authority in the
+                system.</para>
         </listitem>
         <listitem>
             <para>Create roughly one user role for each position. </para>
@@ -29,95 +29,96 @@
     <para>Examples of common positions are:</para>
     <informaltable frame="all">
         <tgroup cols="4">
-            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c1" colnum="1" colwidth="1.27*"/>
             <colspec colname="newCol2" colnum="2" colwidth="1*"/>
-            <colspec colname="c2" colnum="3" colwidth="1.0*"/>
-            <colspec colname="c3" colnum="4" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.14*"/>
+            <colspec colname="c3" colnum="4" colwidth="1.14*"/>
             <thead>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Position</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Typical tasks</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Recommended authorities</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Comment</para>
                     </entry>
                 </row>
             </thead>
             <tbody>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>System administrators</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Set up the basic structure (metadata) of the system.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Add, update and delete the core elements of the system, for example
                             data elements, indicators and data sets.</para>
                     </entry>
-                    <entry>Only system administrators should modify metadata. <para>If you allow
-                            users outside the system administrators team to modify the metadata,
+                    <entry align="left" valign="top">Only system administrators should modify
+                        metadata. <para>If you allow users outside the system administrators team to
+                            modify the metadata,
                             <?oxy_comment_start author="cecilia" timestamp="20161109T141705+0100" comment="Still correct?"?>it
                             might lead to problems with
                             coordination.<?oxy_comment_end?></para><para> is to the system and
                             should only be performed by the administrators of system.</para></entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>National health managers</para>
                         <para>Province health managers</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Monitor and analyse data</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Access to the
                             <?oxy_comment_start author="cecilia" timestamp="20161109T140537+0100" comment="Which apps?"?>reports<?oxy_comment_end?>
                             module, the <emphasis role="bold">GIS</emphasis>, <emphasis role="bold"
                                 >Data Quality</emphasis> apps and the dashboard.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Don't need access to enter data, modify data elements or data
                             sets.</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>National health information system division officers (HISO)</para>
                         <para>District health records and information officers (DHRIO)</para>
                         <para>Facility health records and information officers (HRIO)</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Enter data that comes from facilities which are not able to do so
                             directly</para>
                         <para>Monitor, evaluate and analyse data</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Access to all the analysis and validation apps</para>
                         <para>Access to <?oxy_comment_start author="cecilia" timestamp="20161109T141112+0100" comment="And teh tracker Capture and Event Capture?"?>the<?oxy_comment_end?>
                             <emphasis role="bold">Data Entry</emphasis> app.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>-</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Data entry clerks</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>-</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>-</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>-</para>
                     </entry>
                 </row>
