@@ -68,20 +68,6 @@
 							<goal>run</goal>
 						</goals>
 					</execution>
-					<execution>
-						<id>submodules</id>
-						<phase>package</phase>
-						<configuration>
-							<target name="init-git-submodules">
-								<exec executable="git" failifexecutionfails="true">
-									<arg line="submodule update --init --recursive"/>
-								</exec>
-							</target>
-						</configuration>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
 				</executions>
 			</plugin>
 			<plugin>
