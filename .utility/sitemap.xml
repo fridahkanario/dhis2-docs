@@ -6,2502 +6,2502 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/</loc>
+  <loc>https://ci.dhis2.org/docs/</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/dhis2_user_manual_en.pdf</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/dhis2_user_manual_en.pdf</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/dhis2_user_manual_en.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en_full.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/dhis2_user_manual_en_full.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/dhis2_implementation_guide_en.pdf</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/dhis2_implementation_guide_en.pdf</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/dhis2_implementation_guide_en.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/dhis2_implementation_guide_en.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/dhis2_implementation_guide_en_full.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/dhis2_implementation_guide_en_full.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/dhis2_end_user_manual.pdf</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/dhis2_end_user_manual.pdf</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/dhis2_end_user_manual.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/dhis2_end_user_manual.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/dhis2_end_user_manual_full.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/dhis2_end_user_manual_full.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/dhis2_android_user_man.pdf</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/dhis2_android_user_man.pdf</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/dhis2_android_user_man.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/dhis2_android_user_man.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/dhis2_android_user_man_full.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/dhis2_android_user_man_full.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/dhis2_developer_manual.pdf</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/dhis2_developer_manual.pdf</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/dhis2_developer_manual.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/dhis2_developer_manual.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/dhis2_developer_manual_full.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/dhis2_developer_manual_full.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/dhis2_user_manual_en.pdf</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/dhis2_user_manual_en.pdf</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/dhis2_user_manual_en.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/dhis2_user_manual_en.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/dhis2_user_manual_en_full.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/dhis2_user_manual_en_full.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/implementer/dhis2_implementation_guide_en.pdf</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/implementer/dhis2_implementation_guide_en.pdf</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/implementer/html/dhis2_implementation_guide_en.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/implementer/html/dhis2_implementation_guide_en.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/implementer/html/dhis2_implementation_guide_en_full.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/implementer/html/dhis2_implementation_guide_en_full.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/end-user/dhis2_end_user_manual.pdf</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/end-user/dhis2_end_user_manual.pdf</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/end-user/html/dhis2_end_user_manual.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/end-user/html/dhis2_end_user_manual.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/end-user/html/dhis2_end_user_manual_full.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/end-user/html/dhis2_end_user_manual_full.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/android/dhis2_android_user_man.pdf</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/android/dhis2_android_user_man.pdf</loc>
   <lastmod>2016-01-19T17:29:42+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/android/html/dhis2_android_user_man.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/android/html/dhis2_android_user_man.html</loc>
   <lastmod>2016-01-19T17:29:42+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/android/html/dhis2_android_user_man_full.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/android/html/dhis2_android_user_man_full.html</loc>
   <lastmod>2016-01-19T17:29:42+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/developer/dhis2_developer_manual.pdf</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/developer/dhis2_developer_manual.pdf</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/developer/html/dhis2_developer_manual.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/developer/html/dhis2_developer_manual.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/developer/html/dhis2_developer_manual_full.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/developer/html/dhis2_developer_manual_full.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/pr01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/pr01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch01s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch01s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch01s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch01s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch01s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch01s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch01s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch01s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch01s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch01s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch02s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch02s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch02s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch02s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch02s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch02s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch02s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch02s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch03s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch03s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch03s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch03s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch03s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch03s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch03s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch03s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch03s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch03s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch03s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch03s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch03s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch03s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch04s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch04s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch05s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch05s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch05s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch05s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch05s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch05s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch05s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch05s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch05s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch05s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch05s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch05s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch05s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch05s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch05s09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch05s09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch05s10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch05s10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch06s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch06s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch08s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch08s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch08s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch08s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch09s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch09s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch09s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch09s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch09s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch09s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch11.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch11.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch11s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch11s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch11s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch11s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch11s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch11s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch11s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch11s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch11s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch11s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch12.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch12.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch12s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch12s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch12s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch12s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch12s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch12s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch12s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch12s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch12s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch12s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch13.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch13.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch13s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch13s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch13s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch13s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch13s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch13s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch13s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch13s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch14.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch14.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch14s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch14s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch14s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch14s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch14s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch14s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch14s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch14s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch14s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch14s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch15.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch15.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch15s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch15s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch15s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch15s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch15s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch15s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch15s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch15s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch15s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch15s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch15s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch15s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch15s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch15s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s11.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s11.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s12.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s12.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s13.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s13.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s14.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s14.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s15.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s15.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s16.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s16.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch16s17.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch16s17.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch17.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch17.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch17s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch17s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch17s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch17s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch18.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch18.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch18s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch18s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch19.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch19.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch19s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch19s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch19s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch19s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch19s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch19s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch20.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch20.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch20s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch20s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch20s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch20s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch20s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch20s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch20s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch20s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch20s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch20s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch21.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch21.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch21s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch21s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch21s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch21s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s11.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s11.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s12.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s12.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s13.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s13.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s14.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s14.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s15.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s15.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch22s16.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch22s16.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch23.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch23.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch24.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch24.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch24s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch24s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch24s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch24s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch24s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch24s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch24s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch24s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch25.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch25.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch25s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch25s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch26.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch26.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch27.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch27.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch28.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch28.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch28s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch28s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch28s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch28s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch28s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch28s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch29.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch29.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch29s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch29s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch30.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch30.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch30s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch30s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch30s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch30s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch31.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch31.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch31s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch31s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch31s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch31s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch31s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch31s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch31s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch31s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch31s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch31s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch32.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch32.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch32s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch32s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ch33.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ch33.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/apa.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/apa.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/go01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/go01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/bi01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/bi01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/user/html/ix01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/user/html/ix01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch01s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch01s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch01s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch01s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch01s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch01s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch01s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch01s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch01s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch01s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch01s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch01s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch01s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch01s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch01s09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch01s09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch01s10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch01s10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch02s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch02s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch02s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch02s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch02s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch02s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch02s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch02s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch02s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch02s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch03s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch03s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch03s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch03s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch04s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch04s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch04s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch04s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch04s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch04s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch05s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch05s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch05s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch05s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch06s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch06s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch06s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch06s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch07s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch07s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch07s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch07s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch07s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch07s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch08s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch08s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch08s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch08s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch08s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch08s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch08s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch08s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch08s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch08s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch08s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch08s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch08s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch08s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch08s09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch08s09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch08s10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch08s10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch09s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch09s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch09s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch09s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch10s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch10s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch11.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch11.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch11s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch11s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch11s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch11s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch12.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch12.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch12s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch12s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch12s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch12s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch13.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch13.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch13s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch13s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch13s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch13s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch13s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch13s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch14.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch14.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch14s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch14s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch14s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch14s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch14s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch14s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch15.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch15.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch15s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch15s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch16.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch16.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch17.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch17.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch17s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch17s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch17s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch17s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch17s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch17s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch17s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch17s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch18.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch18.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch18s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch18s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch18s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch18s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch19.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch19.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch19s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch19s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch19s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch19s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch20.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch20.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch20s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch20s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch20s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch20s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch20s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch20s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/re01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/re01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/re02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/re02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/re03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/re03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/re04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/re04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/re05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/re05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/re06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/re06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/re07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/re07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/re08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/re08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/ch20s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/ch20s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/apa.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/apa.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/apas02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/apas02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/apas03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/apas03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/apas04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/apas04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/apas05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/apas05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/apas06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/apas06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/apas07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/apas07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/apas08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/apas08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/apas09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/apas09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/implementer/html/apas10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/implementer/html/apas10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch01s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch01s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch01s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch01s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch01s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch01s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch03s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch03s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch03s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch03s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch03s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch03s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch03s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch03s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch03s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch03s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch04s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch04s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch04s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch04s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch04s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch04s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch04s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch04s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch04s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch04s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch05s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch05s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch05s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch05s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch05s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch05s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch05s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch05s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch05s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch05s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch05s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch05s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch05s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch05s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s11.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s11.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s12.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s12.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s13.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s13.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s14.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s14.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s15.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s15.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s16.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s16.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch06s17.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch06s17.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch07s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch07s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch07s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch07s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch08s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch08s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch08s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch08s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch08s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch08s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/end-user/html/ch09s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/end-user/html/ch09s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch01s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch01s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch01s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch01s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch01s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch01s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch01s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch01s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch01s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch01s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch02s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch02s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch02s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch02s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch02s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch02s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch03s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch03s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch03s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch03s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch03s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch03s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch03s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch03s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch03s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch03s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch03s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch03s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch03s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch03s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/android/html/ch03s09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/android/html/ch03s09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s11.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s11.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s12.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s12.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s13.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s13.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s14.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s14.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s15.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s15.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s16.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s16.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s17.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s17.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s18.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s18.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s19.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s19.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s20.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s20.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s21.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s21.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s22.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s22.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s23.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s23.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s24.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s24.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s25.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s25.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s26.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s26.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s27.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s27.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s28.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s28.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s29.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s29.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s30.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s30.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s31.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s31.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s32.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s32.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s33.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s33.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s34.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s34.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s35.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s35.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s36.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s36.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s37.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s37.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s38.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s38.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s39.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s39.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s40.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s40.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s41.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s41.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s42.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s42.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s43.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s43.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s44.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s44.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s45.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s45.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s46.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s46.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s47.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s47.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s48.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s48.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s49.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s49.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s50.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s50.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s51.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s51.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s52.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s52.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s53.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s53.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s54.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s54.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s55.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s55.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s56.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s56.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s57.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s57.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s58.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s58.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s59.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s59.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s60.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s60.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s61.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s61.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s62.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s62.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s63.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s63.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch01s64.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch01s64.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch02s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch02s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch02s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch02s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch02s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch02s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch02s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch02s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ch03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ch03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ar01.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ar01.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ar01s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ar01s02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ar01s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ar01s03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ar01s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ar01s04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ar01s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ar01s05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ar01s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ar01s06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ar01s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ar01s07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ar01s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ar01s08.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ar01s09.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ar01s09.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/ar01s10.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/ar01s10.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/apa.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/apa.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/apas02.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/apas02.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/apas03.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/apas03.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/apas04.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/apas04.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/apas05.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/apas05.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/apas06.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/apas06.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/master/en/developer/html/apas07.html</loc>
+  <loc>https://ci.dhis2.org/docs/master/en/developer/html/apas07.html</loc>
   <lastmod>2016-01-19T17:29:45+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/pr01.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/pr01.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch01.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch01.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch01s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch01s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch01s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch01s03.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch01s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch01s04.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch01s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch01s05.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch01s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch01s06.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch02s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch02s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch02s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch02s03.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch02s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch02s04.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch02s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch02s05.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch03.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch03.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch03s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch03s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch03s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch03s03.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch03s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch03s04.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch03s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch03s05.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch03s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch03s06.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch03s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch03s07.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch03s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch03s08.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch04.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch04.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch04s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch04s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch05.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch05.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch05s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch05s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch05s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch05s03.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch05s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch05s04.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch05s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch05s05.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch05s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch05s06.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch05s07.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch05s07.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch05s08.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch05s08.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch05s09.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch05s09.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch05s10.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch05s10.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch06.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch06.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch06s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch06s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch07.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch07.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch08.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch08.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch08s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch08s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch08s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch08s03.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch09.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch09.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch09s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch09s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch10.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch10.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch11.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch11.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch11s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch11s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch11s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch11s03.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch11s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch11s04.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch11s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch11s05.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch11s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch11s06.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch12.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch12.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch12s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch12s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch12s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch12s03.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch12s04.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch12s04.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch12s05.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch12s05.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch12s06.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch12s06.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch13.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch13.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch13s02.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch13s02.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://dhis2.github.io/dhis2-docs/2.21/en/user/html/ch13s03.html</loc>
+  <loc>https://ci.dhis2.org/docs/2.21/en/user/html/ch13s03.html</loc>
   <lastmod>2016-01-19T17:29:43+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
