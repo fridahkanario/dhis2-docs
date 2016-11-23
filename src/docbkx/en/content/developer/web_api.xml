@@ -7530,6 +7530,12 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>EQ | GT | GE | LT | LE</entry>
               </row>
               <row>
+                <entry>preAggregationMeasureCriteria</entry>
+                <entry>No</entry>
+                <entry>Filters for the date/measure before aggregation</entry>
+                <entry>EQ | GT | GE | LT | LE</entry>
+              </row>
+              <row>
                 <entry>skipMeta</entry>
                 <entry>No</entry>
                 <entry>Exclude the meta data part of the response (improves performance).</entry>
@@ -7673,6 +7679,12 @@ ORDER BY oul.level, par.name, ou.name</screen>
         greater or equal to 6500 and less than 33000:</para>
       <screen>/api/26/analytics?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU&amp;dimension=pe:2014
   &amp;dimension=ou:O6uvpzGd5pu;lc3eMKXaEfw&amp;measureCriteria=GE:6500;LT:33000</screen>
+      <para>Similar to <emphasis>measureCriteria</emphasis>, the
+          <emphasis>preAggregationMeasureCriteria</emphasis> query parameter lets you filter out
+        data, only before aggregation is performed. For example, the following query only aggregates
+        data where the original value is within the criterias
+        defined:<screen>/api/26/analytics?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU&amp;dimension=pe:2014
+  &amp;dimension=ou:O6uvpzGd5pu;lc3eMKXaEfw&amp;preAggregationMeasureCriteria=GE:10;LT:100</screen></para>
       <para>In order to have the analytics resource generate the data in the shape of a ready-made
         table, you can provide the <emphasis role="italic">tableLayout</emphasis> parameter with
         true as value. Instead of generating a plain, normalized data source, the analytics resource
