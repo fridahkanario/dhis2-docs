@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook">
+    <title>About data elements</title>
+    <para>Data elements are the base of DHIS2. Data elements define what is actually recorded in the
+        system, for example number of immunisations or number of cases of malaria.</para>
+    <para>Data elements such as &quot;Number of cases of confirmed malaria&quot; are often broken
+        into smaller component parts to determine, for example, the number of confirmed malaria
+        cases of particular age groups.</para>
+    <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following data
+        elements objects:</para>
+    <table frame="all">
+        <title><?oxy_comment_start author="cecilia" timestamp="20160510T092315+0200" comment="Review with SME: 
+What is the generic term for what elements you can edit in this section? Types? Objects?
+In which order would a user edit them?
+What is the hierarcy between the elements?
+
+Decided with Lars: object" flag="done"?>Data
+            element objects <?oxy_comment_end?>in the Maintenance app</title>
+        <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>Object type</para>
+                    </entry>
+                    <entry>
+                        <para>Available functions</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Data element</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Data element group</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Data element group set</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+</section>

@@ -7,6 +7,12 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <title>Delete metadata objects</title>
+    <note>
+        <para>You can only delete a data element and other data element objects if no data is
+            <?oxy_comment_start author="cecilia" timestamp="20160510T162310+0200" comment="At next revision:
+For SME: &quot;Associated&quot; as message says in GUI? Instead of attached." flag="done"?>associated<?oxy_comment_end?>
+            to the data element itself.</para>
+    </note>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and find the type of
