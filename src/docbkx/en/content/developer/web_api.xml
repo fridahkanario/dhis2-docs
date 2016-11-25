@@ -7601,13 +7601,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>outputIdScheme</entry>
                 <entry>No</entry>
                 <entry>Identifier scheme to use for metadata items the query response, can be identifier, code or attributes.</entry>
-                <entry>UID | CODE | NAME</entry>
+                <entry>UID | CODE | ATTRIBUTE:&lt;UID></entry>
               </row>
               <row>
                 <entry>inputIdScheme</entry>
                 <entry>No</entry>
                 <entry>Identifier scheme to use for metadata items in the query request, can be identifier, code or attributes.</entry>
-                <entry>UID | CODE</entry>
+                <entry>UID | CODE | ATTRIBUTE:&lt;UID></entry>
               </row>
               <row>
                 <entry>approvalLevel</entry>
@@ -8162,8 +8162,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
         multiple data elements and import this data for a single data element in the destionation
         system. As another example one can aggregate data collected at organisation unit level 4 in
         the target system to level 2 and import that data in the destination system.</para>
-      <para>You can retrieve data in the raw data value set format from the
-          <emphasis>analytics/dataValueSethttp://dhis2.github.io/dhis2-docs/master/en/developer/html/webapi_authentication.html#webapi_oauth2http://dhis2.github.io/dhis2-docs/master/en/developer/html/webapi_authentication.html#webapi_oauth2</emphasis>
+      <para>You can retrieve data in the raw data value set format from the dataValueSet
         resource:<screen>/api/26/analytics/dataValueSet</screen></para>
       <para>The following resource representations are supported:<itemizedlist>
           <listitem>
@@ -8192,6 +8191,11 @@ ORDER BY oul.level, par.name, ou.name</screen>
         organisation units and returns it as regular data values in XML looks like
         this:<screen>api/analytics/dataValueSet.xml?dimension=dx:Uvn6LCg7dVU;OdiHJayrsKo
   &amp;dimension=pe:LAST_4_QUARTERS&amp;dimension=ou:lc3eMKXaEfw;PMa2VCrupOd</screen></para>
+      <para>When using attribute-based identifier schemes for export there is a risk of producing
+        duplicate data values. The boolean query parameter duplicatesOnly can be used for debugging
+        purposes to return only duplicates data values. This response can be used to clean up the
+        duplicates:<screen>api/analytics/dataValueSet.xml?dimension=dx:Uvn6LCg7dVU;OdiHJayrsKo
+  &amp;dimension=pe:LAST_4_QUARTERS&amp;dimension=ou:lc3eMKXaEfw&amp;duplicatesOnly=true</screen></para>
     </section>
     <section xml:id="webapi_analytics_debugging">
       <title>Debugging</title>
