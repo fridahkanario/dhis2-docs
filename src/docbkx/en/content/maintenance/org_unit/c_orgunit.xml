@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook">
+    <?oxy_comment_start author="cecilia" timestamp="20160524T140340+0200" comment="At next revision, minimize concept info even more and add example graphic." flag="done"?>
+    <title>About organisation units</title>
+    <?oxy_comment_end?>
+    <para>The organisation unit hierarchy defines the organisation structure of DHIS2, for example
+        how health facilities, administrative areas and other geographical areas are arranged with
+        respect to each other. It is the &quot;where&quot; dimension of DHIS2, similar to how
+        periods represent the &quot;when&quot; dimension.</para>
+    <para>The organisation unit hierarchy is built up by parent-child relations. In DHIS2,
+        e<?oxy_comment_start author="cecilia" timestamp="20160513T123133+0200" comment="Good definition." flag="done"?>ach
+        of these nodes is an organisation unit.<?oxy_comment_end?> A country might for example have
+        eight provinces, and each province might have a number of districts as children. Normally,
+        the lowest levels consist of facilities where data is collected. Data collecting facilities
+        can also be located at higher levels, for example national or provincial hospitals.
+        Therefore, you can create
+        s<?oxy_comment_start author="cecilia" timestamp="20160524T141418+0200" comment="At next revision, add graphic to illustrate." flag="done"?>kewed
+        organisation trees<?oxy_comment_end?> in DHIS2.</para>
+    <itemizedlist>
+        <listitem>
+            <para>You can only have one organisation hierarchy at the same time.</para>
+        </listitem>
+        <listitem>
+            <para>You can have any number of levels in a hierarchy.</para>
+            <para>Typically national organisation hierarchies in public health have four to six
+                levels.</para>
+        </listitem>
+        <listitem>
+            <para>You
+                ca<?oxy_comment_start author="cecilia" timestamp="20160513T123708+0200" comment="For SME: A separate task? For implementer?
+
+Typically sets up by implementer, maintained at district level." flag="done"?>n
+                create additional <?oxy_comment_end?>classifications by using organisation groups
+                and organisation group sets.</para>
+            <para>For example to create parallel administrative boundaries to the health care
+                sector.</para>
+        </listitem>
+        <listitem>
+            <para>It is recommended to use organisation unit groups to create a non-geographical
+                hierarchy.</para>
+        </listitem>
+        <listitem>
+            <para>An organisation unit can only be a member of a single organisation unit group
+                within an organisation unit group set.</para>
+        </listitem>
+        <listitem>
+            <?oxy_comment_start author="cecilia" timestamp="20160525T120205+0200" comment="At next release, review para. The para is the same in user guide and implementer guides.
+
+User guide also contained this statement:
+Original version:
+&quot;The design of the organisation unit hierarchy determines the geographical units of analysis available to the users as data is collected and aggregated in this structure.&quot;
+Rewritten version:
+&quot;How you design the organisation unit hierarchy determines the geographical units that you can analyse after data collection and aggregation.&quot;" flag="done"?>
+            <para>The organisation unit hierarchy is the main vehicle for data aggregation on the
+                geographical dimension.</para>
+            <?oxy_comment_end?>
+        </listitem>
+    </itemizedlist>
+    <important>
+        <title>Changing the organisation unit hierarchy</title>
+        <para>You can change the organisation unit hierarchy after you've created it, even
+            organisation units that collect data. However, DHIS2 always uses the latest hierarchy
+            for data aggregation. So if you change the hierarchy, you loose the temporal
+            representation of the hierarchy across time.</para>
+        <example>
+            <para>District A is sub-divided into District B and District C. Facilities which
+                belonged to District A are reassigned to District B and C. Any historical data,
+                which you entered before the split occurred, is still registered as belonging to
+                District B and C, not to the obsolete District A.</para>
+        </example>
+    </important>
+    <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following
+        organisation unit objects:</para>
+    <table frame="all">
+        <title>Organisation
+            unit<?oxy_comment_start author="cecilia" timestamp="20160510T092315+0200" comment="Review with SME: 
+What is the generic term for what elements you can edit in this section? Types? Objects?
+In which order would a user edit them?
+What is the hierarcy between the elements?" flag="done"?>
+            objects <?oxy_comment_end?>in the Maintenance app</title>
+        <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>Object type</para>
+                    </entry>
+                    <entry>
+                        <para>Available functions</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Organisation unit</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Organisation unit group</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Organisation unit group set</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Organisation unit level</para>
+                    </entry>
+                    <entry>
+                        <para>Edit and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Hierarchy operations</para>
+                    </entry>
+                    <entry>
+                        <para>Move organisation units</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+</section>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="move_org_units">
+    <title><?oxy_comment_start author="cecilia" timestamp="20160509T144253+0200" comment="Many can do this task. Options are linked to the access rights for the user.
+Maintenance performed 
+Province, national, global adm
+Implementer" flag="done"?>Move
+        organisation unit<?oxy_comment_end?>s within a hierarchy</title>
+    <para>You can move organisation units within in the hierarchy by changing the parent of a
+        selected
+        <?oxy_comment_start author="cecilia" timestamp="20160923T093641+0200" comment="For SME: When you select an org unit with children, do you move the children as well?"?>organisation<?oxy_comment_end?>
+        unit.</para>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Organisation units</emphasis> > <emphasis role="bold">Hierarchy
+                    operations</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>In the left-hand hierarchy tree, select the organisation unit(s) you want to
+                move.</para>
+            <note>
+                <para>If the selected organisation unit is has sub-organisation units, all of them
+                    move to the new parent organisation unit.</para>
+            </note>
+        </listitem>
+        <listitem>
+            <para>In the right-hand hierarchy tree, select which organisation unit you want to move
+                the selected organisation unit(s) to.</para>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Move x organisation units</emphasis>, where x stands
+                for the number of organisation units you have selected.</para>
+            <para>Your changes are immediately reflected in the left-hand side hierarchy
+                tree.</para>
+        </listitem>
+    </orderedlist>
+</section>

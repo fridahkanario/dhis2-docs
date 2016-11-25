@@ -7,10 +7,10 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <title>Translate metadata objects</title>
-    <para>DHIS2 provides functionality for translations of database content like data elements, data
-        element groups, indicators, indicator groups, validation rules and more. You can translate
-        these elements to any number of locales. A locale represents a specific geographical,
-        political, or cultural region.</para>
+    <para>DHIS2 provides functionality for translations of database content, for example data
+        elements, data element groups, indicators, indicator groups or  organisation units. You can
+        translate these elements to any number of locales. A locale represents a specific
+        geographical, political, or cultural region.</para>
     <tip>
         <para>To activate a
             <?oxy_comment_start author="cecilia" timestamp="20160512T110522+0200" comment="At next revision, verify that this task is documentet and add link to correct topic." flag="done"?>translation<?oxy_comment_end?>,
@@ -25,6 +25,11 @@
         <listitem>
             <para>In the object list, click the options menu and select <emphasis role="bold"
                     >Translate</emphasis>.</para>
+            <tip>
+                <para>If you want to translate an organisation unit level, click directly on the
+                        <emphasis role="bold">Translate</emphasis> icon next to each list
+                    item.</para>
+            </tip>
         </listitem>
         <listitem>
             <para>Select a locale.</para>

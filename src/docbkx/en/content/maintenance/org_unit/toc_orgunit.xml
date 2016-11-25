@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="manage_org_units">
+    <title><?oxy_comment_start author="cecilia" timestamp="20160513T122617+0200" comment="Who peforms the tasks listed in this section? 
+- Admin 
+- District record officers (district levels)
+- Project coordinator" flag="done"?>Manage<?oxy_comment_end?>
+        organisation units</title>
+    <para>In this section you will learn how to:</para>
+    <para>
+        <itemizedlist>
+            <listitem>
+                <para>Create a new organisation unit and build up the organisation unit
+                    hierarchy</para>
+            </listitem>
+            <listitem>
+                <para>Create organisation unit groups, group sets, and assign organisation units to
+                    them</para>
+            </listitem>
+            <listitem>
+                <para><?oxy_comment_start author="cecilia" timestamp="20160513T122218+0200" comment="At next revision: Review term with Rachael, maybe &quot;Change&quot; is  better? Or &quot;Edit&quot;? 
+If term is changed, update mtn and analysis topics." flag="done"?>Modify<?oxy_comment_end?>
+                    the organisation unit hierarchy</para>
+            </listitem>
+        </itemizedlist>
+    </para>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="c_orgunit.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wf_orgunit.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_orgunit_create.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_orgunitgroup_create.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_orgunitgroupset_create.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_orgunit_level_name.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_orgunit_move.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_edit.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_clone.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_share.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_delete.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_display.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_translate.xml" encoding="UTF-8"/>
+</section>
