@@ -33,6 +33,6 @@
   <xi:include href="content/implementer/pivot_tables_and_mydatamart.xml" encoding="UTF-8"/>
   <xi:include href="content/implementer/as_a_platform.xml" encoding="UTF-8"/>
   <xi:include href="content/implementer/localization.xml" encoding="UTF-8"/>
-  <xi:include  href="dhis2tools/dhis2-tools/docs/manual.xml" encoding="UTF-8"/>
+  <xi:include href="content/implementer/dhis2tools/manual.xml" encoding="UTF-8"/>
   <xi:include href="dhis2_documentation_guide.xml" encoding="UTF-8"/>
 </book>

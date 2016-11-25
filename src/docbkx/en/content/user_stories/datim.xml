@@ -8,52 +8,24 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="datim">
     <title>DHIS2-DATIM: an ongoing collaboration</title>
-    <table frame="none" colsep="0" rowsep="0">
-        <title/>
-        <tgroup cols="2">
-            <colspec colname="c1" colnum="1" colwidth="1.55*"/>
-            <colspec colname="c2" colnum="2" colwidth="1*"/>
-            <tbody>
-                <row>
-                    <entry colsep="0" rowsep="0">
-                        <para><emphasis>In less than three years, PEPFAR’s DATIM program has
-                                implemented HIV/AIDS programs in 700,000 facilities across the
-                                globe. DATIM, which stands for Data for Accountability, Transparency
-                                and Impact, is striving to reach the ambitious 90-90-90 treatment
-                                target by 2020 to help end the AIDS epidemic.</emphasis></para>
-                        <para><emphasis>With DHIS2 technology at the very core of DATIM, and a tight
-                                collaboration between teams based in Washington and Oslo, learn more
-                                about how a country program evolved into what is now called the
-                                largest health program ever initiated by one country to address a
-                                disease. </emphasis></para>
-                    </entry>
-                    <entry>
-                        <para>
-                            <screenshot>
-                                <mediaobject>
-                                    <imageobject>
-                                        <imagedata
-                                            fileref="resources/images/use_cases/pepfar_facts.png"
-                                            format="PNG" width="8cm" align="right"/>
-                                    </imageobject>
-                                </mediaobject>
-                            </screenshot>
-                        </para>
-                    </entry>
-                </row>
-            </tbody>
-        </tgroup>
-    </table>
-    <section><title>DATIM: the background details</title><para>
-            <para dir="ltr">In 2009 a DHIS2 pilot project was being tested in Rwanda. This project,
-                which was being run by PEPFAR’s Mike Gehron and HISP Oslo’s Lars Helge Overland, was
-                an extension of a Tanzanian health program called Promise. After five years of
-                thoroughly shaping and structuring this pilot project, DHIS2 was deployed
-                successfully and became Rwanda’s first national HMIS. The expertise and experience
-                of this project was then scaled up to an even bigger project; in 2014 DHIS2 became
-                the underlying technology of the largest software system ever dedicated to ending
-                the AIDS epidemic: PEPFAR’s DATIM project.</para>
-        </para></section>
+    <para><emphasis>In less than three years, PEPFAR’s DATIM program has implemented HIV/AIDS
+            programs in 700,000 facilities across the globe. DATIM, which stands for Data for
+            Accountability, Transparency and Impact, is striving to reach the ambitious <link
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.pepfar.gov/priorities/data/index.htm">90-90-90</link>
+            treatment target by 2020 to help end the AIDS epidemic.</emphasis></para>
+    <para><emphasis>With DHIS2 technology at the very core of DATIM, and a tight collaboration
+            between teams based in Washington and Oslo, learn more about how a country program
+            evolved into what is now called the largest health program ever initiated by one country
+            to address a disease. </emphasis></para>
+    <section><title>DATIM: the background details</title>
+        <para dir="ltr">In 2009 a DHIS2 pilot project was being tested in Rwanda. This project was
+            an extension of a Tanzanian health program called Promise. After five years of
+            thoroughly shaping and structuring this pilot project, DHIS2 was deployed successfully
+            and became Rwanda’s first national HMIS. The expertise and experience of this project
+            was then scaled up to an even bigger project; in 2014 DHIS2 became the underlying
+            technology of the largest software system ever dedicated to ending the AIDS epidemic:
+            PEPFAR’s DATIM project.</para></section>
     <section><title>A data revolution</title><para><emphasis>“Things happened very fast at the time,”</emphasis> recalls Mike Gehron, founder of
             the project. <emphasis>“Upon the completion of the Rwanda pilot project in November
                 2014, a new Global AIDS coordinator took up office. Deborah L. Birx had a data
@@ -65,10 +37,156 @@
         <para>DATIM’s deployment manager, Mark DeZalia, came onboard and was assigned the role of
             involving all fifty countries in getting DATIM implementations up and running. HISP Oslo
             hosted intensive training academies. As the project picked up momentum, teams were
-            formed, the system was set up and in late 2014, DATIM went live across the world.</para></section>
-    <section><title></title><para></para></section>
-    <section><title></title><para></para></section>
-    <section><title></title><para></para></section>
-    <section><title></title><para></para></section>
+            formed, the system was set up and in late 2014, DATIM went live across the world.</para>
+        <itemizedlist>
+            <listitem>
+                <para>Everybody using DATIM at every site in the world shares the same preconfigured
+                    organizational hierarchy.</para>
+            </listitem>
+            <listitem>
+                <para>Data is collected right at the facility level.</para>
+            </listitem>
+            <listitem>
+                <para>GIS coordinates enable teams to see accurate data such as where exactly
+                    treatment and counseling are taking place.</para>
+            </listitem>
+            <listitem>
+                <para>High transparency on where and to whom funding is being allocated gives PEPFAR
+                    clear visibility on the status of partners’ progress.</para>
+            </listitem>
+        </itemizedlist></section>
+    <section><title>Prior to DATIM how did PEPFAR collect data?</title><para>As Steffen Tengesdal from <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://baosystems.com/">BAO Systems</link> explains: <emphasis>“Before
+                DATIM, every PEPFAR-funded country had their own system with different contractors
+                on site. There was no commonality between the systems. Although the contractors were
+                collecting the same indicators, combining those results in a meaningful way and then
+                into a report for Congress, took up a lot of PEPFAR’s time and
+                resources.”</emphasis></para></section>
+    <section><title>Cloud hosting: the key to efficiency</title><para><emphasis>“Instead of maintaining 40 systems, now with DATIM, we have one big system, hosted
+                in the cloud,”</emphasis> explains Steffen Tengesdal. <emphasis>“When data goes into
+                the system, it's in real-time, and it’s therefore possible to see what’s happening
+                in all the countries rather than having to reach out to the countries
+                individually.”</emphasis></para>
+        <para>Indeed, this greater visibility has helped DATIM to identify and direct resources,
+            funding, and logistics to where it's the most needed. DATIM can monitor progress, detect
+            data duplication, and troubleshoot with so much more ease now. <emphasis>“Instead of
+                having an entire team trying to coordinate the data pooling, more time can be spent
+                on the immediate analysis of data. This increases scalability, reliability and
+                backups,”</emphasis> confirms Steffen Tengesdal. </para></section>
+    <section><title>Moving towards 2020 targets faster than ever</title><para>PEPFAR is monitoring in incredible detail the movement towards their goals. Everything that
+            DATIM collects is consistent with PEPFAR’s 90-90-90 objectives. PEPFAR's implementing
+            partners set targets for 2017 and on a quarterly basis, everyone at the Washington
+            headquarters gets to review the targets and progress, to see if any course correction is
+            needed. There are common DATIM concepts implemented in a unique way for each country.
+            The previous model of distributing resources has changed from an “equity” based model to
+            a model where PEPFAR looks at “where resources are needed the most”. This ensures PEPFAR
+            is distributing resources, care, and funds much better over its 700,000 operating units
+            (countries).</para></section>
+    <section><title>Observing through the GIS lens</title><para>PEPFAR is using GIS extensively with DATIM. It’s used to indicate the level at which PEPFAR is
+            working and the level at which they are adding the implementation attributes. Every map
+            is color-coded to say where the sensitive zones are located.</para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resources/images/use_cases/pepfar_datim_GIS.png"
+                        align="left" width="40%" format="png"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot></section>
+    <section>
+        <title>Customization</title>
+        <para><emphasis>“Although setting up the software was surprisingly easy,” </emphasis>recalls
+            Steffen Tengesdal,<emphasis> “the developmental side was the most time-consuming, as
+                many of the features for this application of DHIS2 involved some custom programming
+                and changes to the core software.”</emphasis> Contractors such as BAO were involved
+            in building up the functionality, building out the data forms, testing the data
+            migration servers and so forth. </para>
+    </section>
+    <section>
+        <title>Data security: FISMA, AWS and FedRAMP</title>
+        <para>In the United States, every US government system has to meet a federal requirement
+            called FISMA: the Federal Information Security Act. This act defines a comprehensive
+            framework to protect government information, operations and assets against natural or
+            man-made threats. To operate within a federal context, PEPFAR had to ensure that DATIM’s
+            data was stored in a FISMA-compliant zone. AWS has such an area called <link
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://aws.amazon.com/compliance/fedramp/">FedRAMP</link> (the Federal
+            Risk and Authorization Program), which is a risk management program that provides a
+            standardized approach for assessing and monitoring the security of cloud products and
+            services. Currently, a lot of the data flowing into DATIM has to be ushered through a
+            series of approvals before it is available on PEPFAR’s dashboards, which can be viewed
+            publicly at <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://data.pepfar.net/">data.pepfar.net</link>. </para>
+    </section>
+    <section>
+        <title>Gathering reliable data in unstable contexts</title>
+        <para>While having a standard set of indicators was an advantage, it was challenging to load
+            in all the facilities and districts, and the geographic hierarchy of all the countries
+            covered by DATIM. In certain countries where there is political instability, new
+            districts are sometimes formed, or a province can suddenly be split in half. PEPFAR has
+            to react fast to such changes to ensure that data is being captured correctly. This
+            might at times require redoing the entire hierarchy of a country.</para>
+        <para>Thanks to the data de-duplication app, data quality and data integrity has improved
+            significantly. Before DATIM, implementing partners had the mind-bending task of checking
+            rows and rows of spreadsheets to spot any data duplication occurrences</para>
+    </section>
+    <section>
+        <title>The next steps for DATIM?</title>
+        <section>
+            <title>Developing DHIS2 extensibility</title>
+            <para>To continue being eligible for funding, all of PEPFAR’s partners and NGOs have to
+                report their data. However, in certain cases, partners have to migrate their data or
+                enter it into DATIM. This situation is changing though, as DATIM teams are adding
+                further integration abilities to DHIS2, allowing users to push their data into and
+                through other systems, without there being any manual intervention required.</para>
+        </section>
+        <section>
+            <title>Future trends: Creating an Open Health Information Exchange (OpenHIE)</title>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://ohie.org/"
+                    >OpenHIE </link>was formed in early 2013 by a community of practitioners who
+                agreed to open standards and a common protocol for sharing data amongst and between
+                health related systems. PEPFAR is interested in this initiative and is working on
+                wrapping DATIM in an interoperable OpenHIE container. The aim of this initiative is
+                to enable data to be freely shared between many systems and stakeholders. With
+                OpenHIE you can do many things such as mapping facility lists to health worker
+                registries; scheduling doctors at facilities for certain services; using an open MRS
+                (medical record system) to do patient monitoring, and so forth.</para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="resources/images/use_cases/ohie.png" align="left"
+                            width="40%" format="png"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </section>
+        <section>
+            <title>OpenHIE and DATIM4U: a global health infrastructure</title>
+            <para>Currently in development, DATIM4U (DATIM for Operating Units) is a new DHIS2
+                component. DATIM is making this component available to their 1,500 implementing
+                partners to support PEPFAR aggregate reporting. However, many of the workflows and
+                software features can be applied to more generic use cases. With this solution,
+                OpenHIE will be used to support aggregate data transactions that enable a country or
+                an organization to send required indicator data to PEPFAR via an aggregate data
+                transaction (ADX message). In addition to supporting the aggregate data exchange,
+                metadata required to provide semantic interoperability is also being exchanged using
+                the OpenHIE architecture and workflows. PEPFAR hopes to bring on board all of their
+                countries and implementing partners with DATIM4U. The aim of the OHIE is also to
+                encourage implementing partners to operate locally and to interconnect with their
+                Ministries of Health. The outcome of this would be an international,
+                standards-based, OpenHIE, that has no bounds around a particular type of health
+                care. </para>
+        </section>
+        <section>
+            <title>DATIM is here to stay</title>
+            <para>According to Mike Gehron, <emphasis>“Although it was rolled out over the course of
+                    just six months, DATIM took years of preparation.” “As sad as it is to say,”
+                </emphasis>he adds, <emphasis>“you need an Ebola epidemic to get an environment
+                    where people are moving fast, and where you have to find people who have
+                    experience working in such an environment. Nobody had been through this process
+                    before us, so there is now an entire generation of people who have experience
+                    setting up a large system like DATIM.”</emphasis></para>
+        </section>
+    </section>
 </chapter>
 

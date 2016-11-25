@@ -8,6 +8,8 @@
     xmlns:db="http://docbook.org/ns/docbook">
     <!-- xml:id="clone_metadata"-->
     <title>Clone metadata objects</title>
+    <para>Cloning a data element or other objects can save time when you create many similar
+        objects.</para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and find the type of

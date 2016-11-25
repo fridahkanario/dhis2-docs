@@ -7,10 +7,12 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-    <title>Managed
+    <title>Decentralize
         <?oxy_comment_start author="cecilia" timestamp="20161108T140711+0100" comment="This is a task:
 How to set up users to manage other users. 
-or similar?"?>users<?oxy_comment_end?></title>
+or similar?
+Complete reveiw needed."?>user<?oxy_comment_end?>
+        management</title>
     <?oxy_custom_end?>
     <para>DHIS2 supports a concept for user management referred to as <emphasis role="italic"
             >managed users</emphasis> which allows to explicitly define which users should be

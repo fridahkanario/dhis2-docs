@@ -10,12 +10,15 @@
          xmlns:svg="http://www.w3.org/2000/svg"
          xmlns:mth="http://www.w3.org/1998/Math/MathML"
          xmlns:db="http://docbook.org/ns/docbook">
-  <title>Localization concepts</title>
+  <title>Localization of DHIS2</title>
+ <section xml:id="localization-intro">
   <para>Localization involves the adaptation of an application to another location. When
-    implementing DHIS2 in a given country, adequate resources should be allocated to translate the
-    application when required. Translation of the user interface elements, messages, layout, date
-    and time formats, currency and other aspects must be considered. DHIS2 supports
-    internationalization (i18n) of the user interface through the use of Java property strings. Each
+      implementing DHIS2 in a given country, adequate resources should be allocated to translate the
+      application when required. Translation of the user interface elements, messages, layout, date
+      and time formats, currency and other aspects must be considered.  In addition to translation
+      of the user interface itself, metadata content which is contained in the database must also be
+      considered to be translated. </para>
+   <para>DHIS2 supports internationalization (i18n) of the user interface through the use of Java property strings. Each
     element in the user interface has been assigned a specific key which is linked to a value. As an
     example, consider the following key/value pairs.</para>
   <programlisting>org_unit_tree=Organisation Unit Tree
@@ -51,9 +54,42 @@ error_occurred=Une erreur s&apos;est produite</programlisting>
     keys which are not translated in the Brazilian Portuguese resource bundle, the system will fall
     back to the general Portuguese translation. If the key is not present in that file either, the
     system will fall back to the ultimate fallback locale which is English.</para>
-  <para>There are a number of different mechanisms to begin to localize DHIS2, two of which will be
-    discussed in the next sections.</para>
-  <section>
+  <important>
+    <itemizedlist>
+      <listitem>
+        <para>There are a number of key/value pairs such as &quot;format.FinancialApril.startDate=dd
+          MMM yyyy &apos;to &apos;&quot; which are used for date/time formatting in the application.
+          Part of the value should not be translated because it is actually a Java date formatting
+          template. It this example it is &quot;dd MMM yyyy&quot;. Consult this <link
+            xl:href="http://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html"
+            >site</link> for more information on the Java date formatting syntax. The part of the
+          value which can be translated would be &quot;to&quot;, for instance to &quot;a&quot; in
+          Spanish. If these data format template strings are translated, it may result in errors in
+          the application. </para>
+      </listitem>
+      <listitem>
+        <para>It is not necessary to translate a string from the original language (English) if the
+          translated string is the same. You can simply leave it blank. By default, DHIS2 will use
+          English values for all strings which have not been translated. </para>
+      </listitem>
+      <listitem>
+        <para>All translated strings must be stored in escaped UTF-8 format. If you are using the
+          translation portal, be sure your browser settings are set to UTF-8 when translating. If
+          you are using a text editor or other tool such as an IDE, you may need to convert the
+          UTF-8 characters to escaped syntax, using the Java &quot;native2ascii&quot; utility.
+        </para>
+      </listitem>
+      <listitem>
+        <para>Some special variables (e.g. {0} ) used curly brackets. This denotes a variable which
+          will be replaced by a number or other value by the application. You must place this
+          variable notation in the correct position. </para>
+      </listitem>
+    </itemizedlist>
+  </important>
+    <para>There are a number of tools which can be user to support the localization of the user
+      interface as well as the database content, which will be discussed below.</para>
+ </section>
+  <section xml:id="dhis2-i18n-translations-tool">
     <title>DHIS2 i18n tool</title>
     <para>The i18n resource editor is Java desktop application which can be downloaded from
       http://www.dhis2.org/downloads . It requires that you have checked out the DHIS2 source code
@@ -109,11 +145,12 @@ error_occurred=Une erreur s&apos;est produite</programlisting>
           there.</para>
       </listitem>
       <listitem>
-        <para>Once you have finished translating, make sure to press the &quot;Save&quot; button. </para>
+        <para>Once you have finished translating, make sure to press the &quot;Save&quot; button.
+        </para>
       </listitem>
     </orderedlist>
   </section>
-  <section>
+  <section xml:id="translation-server">
     <title>Using the DHIS2 translation server</title>
     <para>A web-based portal solution has been setup in order to facilitate the translation of DHIS
       2 into multiple languages. Simply direct your browser to http://translate.dhis2.net/ and
@@ -121,43 +158,58 @@ error_occurred=Une erreur s&apos;est produite</programlisting>
       send you a confirmation email which you can use to activate your account. Once you have
       activated your account, simply press the &quot;Log in&quot; link from the main portal page,
       and provide your username and password. </para>
-    <para>The first time you login, you should select your settings, by clicking &quot;My account-&gt;Settings&quot;. Here you can select your interface language, the projects which you wish to work on,  and the languages which you will translate into. Be sure to press &quot;Save&quot; when have finished making your changes. </para>
+    <para>The first time you login, you should select your settings, by clicking &quot;My
+      account-&gt;Settings&quot;. Here you can select your interface language, the projects which
+      you wish to work on, and the languages which you will translate into. Be sure to press
+      &quot;Save&quot; when have finished making your changes. </para>
     <para>To start translating, be sure you have logged in, and then press the &quot;Home&quot; link
       in the upper-right hand corner. Select a project (e.g. DHIS2) and then click on the language
       which you wish to translate. The number of words which need to be translated will be displayed
       under the &quot;Summary&quot; field. Click on one of the modules (e.g. dhis-2) and the keep
       drilling down through the folders to find a module which needs translation, (e.g.
       dhis-web-&gt;dhis-web-caseentry). Now click on the &quot;Summary&quot; text which will say
-      something like &quot;194 words need attention&quot;. You will be directed to the key/value
-      pair which requires translation. </para>
+      something like &quot;194 words need attention&quot;. You will be directed to the string which
+      requires translation. </para>
     <screenshot>
       <mediaobject>
         <imageobject>
-          <imagedata width="80%" align="center" fileref="resources/images/i18n/i18n_web_portal_translate.PNG"/>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/i18n/i18n_web_portal_translate.png"/>
         </imageobject>
       </mediaobject>
     </screenshot>
-    <para>In this case, we need to translate the phrase &quot;Name-based&quot; from English to French. Enter the translation in the window just below the reference phrase.. If you are unsure if the translation is correct or needs review, you can mark it as &quot;Fuzzy&quot;. Once you have completed the translation, just press &quot;Submit&quot;. Your translations will be incorporated into the source code on a regular basis by the development team. </para>
+    <para>Simply translate the term, and then press "Submit". Your translations will be incorporated
+      into the source code on a regular basis by the development team. </para>
   </section>
-  <section>
-    <title>Important localization concepts</title>
-    <important>
-      <itemizedlist>
-        <listitem>
-          <para>There are a number of key/value pairs such as &quot;format.FinancialApril.startDate=dd MMM yyyy &apos;to &apos;&quot; which are used for date/time formatting in the application. Part of the value should not be translated because it is actually a Java date formatting template. It this example it is  &quot;dd MMM yyyy&quot;. Consult this <link xl:href="http://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html">site</link> for more information on the Java date formatting syntax. The part of the value which can be translated would be &quot;to&quot;, for instance to &quot;a&quot; in Spanish. If these data format template strings are translated, it may result in errors in the application. </para>
-        </listitem>
-        <listitem>
-          <para>It is not necessary to translate a string from the original language (English) if
-            the translated string is the same. You can simply leave it blank. By default, DHIS2
-            will use English values for all strings which have not been translated. </para>
-        </listitem>
-        <listitem>
-          <para>All translated strings must be stored in escaped UTF-8 format. If you are using the translation portal, be sure your browser settings are set to UTF-8 when translating. If you are using a text editor or other tool such as an IDE, you may need to convert the UTF-8 characters to escaped syntax, using the Java &quot;native2ascii&quot; utility. </para>
-        </listitem>
-        <listitem>
-          <para>Some special variables (e.g. {0} ) used curly brackets. This denotes a variable which will be replaced by a number or other value by the application. You must place this variable notation in the correct position. </para>
-        </listitem>
-      </itemizedlist>
-    </important>
+  <section xml:id="translations-app">
+    <title>Database translation app</title>
+    <para>In addition to translation of the user interface, DHIS2 also supports the localization of
+      the metadata content in the database. It is possible to translate individual objects through
+      the maintenance app, but in order to better support a standard translation workflow, a
+      specialized app has been developed for this purpose. The DHIS2 translation app can be used to
+      translate all metadata (data elements, categories, organisation units, etc) into any locale
+      which is present in the database. </para>
+    <para>To get started, simply choose the "Translations" app from the top level menu. </para>
+    <mediaobject>
+      <imageobject>
+        <imagedata align="center" fileref="resources/images/i18n/translations_app.png" width="75%"/>
+      </imageobject>
+    </mediaobject>
+    <orderedlist>
+      <listitem>
+        <para>From the top of the app, choose the locale you wish to translate into.</para>
+      </listitem>
+      <listitem>
+        <para>Next, choose the type of obejct you wish to translate from the left-hand pane. </para>
+      </listitem>
+      <listitem>
+        <para>Choose the specific object you wish to translate, and translate each of the properties
+          (Name, Short name, Description, etc). </para>
+      </listitem>
+      <listitem>
+        <para>Press "Save" when you are done translating the object to save your changes. </para>
+      </listitem>
+    </orderedlist>
+    <para>Take note that you can filter the translations based on their status </para>
   </section>
 </chapter>

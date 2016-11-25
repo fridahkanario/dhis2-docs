@@ -14,7 +14,8 @@
 metadata object
 object type
 metadata..."?>metadata
-                object <?oxy_comment_end?>you want to edit.</para>
+                object <?oxy_comment_end?>you want to edit, for example data element or
+                constant.</para>
         </listitem>
         <listitem>
             <para>In the object list, click the options menu and select <emphasis role="bold"

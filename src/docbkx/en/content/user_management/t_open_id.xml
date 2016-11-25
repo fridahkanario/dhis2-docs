@@ -13,10 +13,11 @@
     xml:id="open_id">
     <title>Enable support for OpenID</title>
     <para>DHIS2 supports the OpenID standard, which allows third party login using a OpenID
-        provider, for ore information see <link xl:href="http://openid.net"
-        >http://openid.net</link>. To create a custom OpenID URL for a user name you can visit this
-        URL and log in with your OpenID provider: <link xl:href="http://openid-provider.appspot.com"
-            >http://openid-provider.appspot.com</link>.</para>
+        provider, for more information see <link xl:href="http://openid.net"
+            >http://openid.net</link>. To create a custom OpenID URL for a user name you can visit
+        this URL and log in with your OpenID provider: <link
+            xl:href="http://openid-provider.appspot.com"
+        >http://openid-provider.appspot.com</link>.</para>
     <para>To enable support for OpenID in DHIS2, you must:</para>
     <orderedlist>
         <listitem>
