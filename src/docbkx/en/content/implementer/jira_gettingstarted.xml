@@ -171,7 +171,7 @@
             search.<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="90%"
+                        <imagedata width="80%"
                             fileref="resources/images/implementation_guide/jira_remove_filters.png"
                             format="png" align="left"/>
                     </imageobject>
