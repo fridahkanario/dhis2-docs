@@ -221,6 +221,7 @@
 							<sectionAutolabel>1</sectionAutolabel>
 							<sectionLabelIncludesComponentLabel>1</sectionLabelIncludesComponentLabel>
 							<chunkedOutput>true</chunkedOutput>
+							<chunkSectionDepth>1</chunkSectionDepth>
 							<includes>dhis2_implementation_guide.xml</includes>
 							<sourceDirectory>${docbook.source}/en/</sourceDirectory>
 							<targetDirectory>${docbook.target}/en/implementer/html</targetDirectory>
