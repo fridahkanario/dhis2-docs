@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<chapter version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="user_story_kurdistan">
+    <title>DHIS2 in the Autonomous Region of Kurdistan</title>
+    <para><emphasis>For the thousands of refugees stranded in camps across the war-torn Autonomous
+            Region of Iraqi Kurdistan, getting access to regular health care hasn’t always been
+            straightforward.</emphasis></para>
+    <itemizedlist>
+        <listitem>
+            <para>Set up in 2015 by the University of Rome Tor Vergata (Italy) with the Ministry of
+                Health of Kurdistan Regional Government (KRG).</para>
+        </listitem>
+        <listitem>
+            <para>Funded by the Cooperation and Development Agency of the Ministry of Foreign
+                Affairs of Italy.p</para>
+        </listitem>
+        <listitem>
+            <para>Deployed by <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="http://ipro.orgipro-it.eu/">I-PRO</link>.</para>
+        </listitem>
+        <listitem>
+            <para>Compliant with <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="http://www.who.int/classifications/icd/en/">WHO ICD-10</link>
+                standards. </para>
+        </listitem>
+        <listitem>
+            <para>700 doctors trained in ICD-10.</para>
+        </listitem>
+        <listitem>
+            <para>130,000 health events registered so far in the system. </para>
+        </listitem>
+        <listitem>
+            <para>Bilingual English and Kurdish-Sorani DHIS2 interface. </para>
+        </listitem>
+    </itemizedlist>
+    <section><para><emphasis role="bold">In June 2015, a DHIS2 Health Information System</emphasis> was set up to
+            assist the Kurdish health authorities in collecting population data and improving the
+            access and quality of public health care.</para></section>
+    <section>
+        <para>A KRG DHIS2 pilot project led by the University of Tor Vergata, Rome, and realized by
+            IPRO and Euresist was deployed across a set of pilot health centers and hospitals in the
+            Kurdish directorates of Erbil, Duhok and Slemani.<screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="resources/images/use_cases/regions.png" format="PNG"
+                            align="left" width="20cm"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot></para><para><emphasis role="bold">With 34 operating users spread across 10 health centers</emphasis>,
+            Kurdish medical professionals can now follow more than 130,000 health events. Health
+            professionals are gathering statistics for disease diagnoses, hospital discharges,
+            registrations of births, deaths and immunizations.</para></section>
+    <section><title></title><para></para></section>
+    <section><title></title><para></para></section>
+    <section><title></title><para></para></section>
+    <section><title></title><para></para></section>
+    <section><title></title><para></para></section>
+</chapter>
+
