@@ -21,8 +21,9 @@
                 user group is added to the list.</para>
         </listitem>
         <listitem>
-            <para><emphasis role="bold">External access (without
-                login)</emphasis><?oxy_comment_start author="cecilia" timestamp="20161110T121601+0100" comment="For SME: What does this option mean?"?></para>
+            <para>(Optional) Select <emphasis role="bold">External access (without
+                login)</emphasis>.<?oxy_comment_start author="cecilia" timestamp="20161110T121601+0100" comment="For SME: What does this option mean?
+Question send to Lars 22 nov 2016"?></para>
             <?oxy_comment_end?>
         </listitem>
         <listitem>
@@ -30,7 +31,7 @@
             <itemizedlist>
                 <listitem>
                     <para><emphasis role="bold"
-                            ><?oxy_comment_start author="cecilia" timestamp="20161110T121337+0100" comment="What does this mean?"?>None<?oxy_comment_end?></emphasis>:
+                            ><?oxy_comment_start author="cecilia" timestamp="20161110T121337+0100" comment="What does this mean?"?>None<?oxy_comment_end?></emphasis>
                     </para>
                 </listitem>
                 <listitem>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_indicator_group_set">
+    <title>Create an indicator group set</title>
+    <screenshot>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="80%" align="center"
+                    fileref="resources/images/maintainence/indicator_group_set_create.png"
+                    format="PNG"/>
+            </imageobject>
+        </mediaobject>
+    </screenshot>
+    <para>Indicator group sets create combined groups of similar indicators. For example, you might
+        have a group of indicators called &quot;Malaria&quot; and &quot;Leishmaniasis&quot;. Both of
+        these groups could be combined into a group set called &quot;Vector-borne diseases&quot;.
+        Indicator groups sets are used during analysis of data to combine similar themes of
+        indicators.</para>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Indicators</emphasis> > <emphasis role="bold">Indicator
+                    group</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add button.</para>
+        </listitem>
+        <listitem>
+            <para>Fill in the form:</para>
+            <orderedlist>
+                <listitem>
+                    <para><emphasis role="bold">Name</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Description</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold"
+                            ><?oxy_comment_start author="cecilia" timestamp="20160626T172625+0200" comment="At next revision: 
+Add description of what this option does.
+Compulsory in the data form?" flag="done"?>Compulsory<?oxy_comment_end?></emphasis></para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <para>Select indicator groups and assign them.</para>
+            <?oxy_comment_start author="cecilia" timestamp="20160513T113037+0200" comment="At next revision, review this para. Is it necessary? Does it add value?" flag="done"?>
+            <para>Available indicator groups are displayed in the left panel. Indicator groups that
+                are currently members of the indicator group set are displayed in the right hand
+                panel.</para>
+            <?oxy_comment_end?>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>
+    </section>

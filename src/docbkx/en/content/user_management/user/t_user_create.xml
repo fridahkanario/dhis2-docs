@@ -13,22 +13,10 @@
     xml:id="create_user">
     <title>Create a user</title>
     <screenshot>
-        <title>Select Users menu item</title>
         <mediaobject>
             <imageobject>
                 <imagedata width="80%" align="center"
                     fileref="resources/images/dhis2UserManual/select_user_menu.png" format="PNG"/>
-            </imageobject>
-        </mediaobject>
-    </screenshot>
-    <para>User accounts already registered will appear as a list as seen below.</para>
-    <screenshot>
-        <title>Search by user name</title>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="80%" align="center"
-                    fileref="resources/images/dhis2UserManual/search_user_by_name.png" format="PNG"
-                />
             </imageobject>
         </mediaobject>
     </screenshot>
@@ -41,20 +29,12 @@
             <para>Click <emphasis role="bold">Add new</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>Select whether you want to fill in all the personal user information , or invite
+            <para>Select whether you want to fill in all the personal user information, or invite
                 the user by email to complete the rest of the user information:</para>
             <itemizedlist>
                 <listitem>
-                    <para><emphasis role="bold">Create account with user details</emphasis>: Choose
-                        this if you would like to enter all the details of the new user such as
-                        name, password, etc.</para>
-                    <para>If you choose this action, then enter the following information: user
-                        name, password, surname, first name, E-mail, OpenID account (if any) and
-                        mobile phone number (if any).</para>
-                    <para>After you finish adding the user, the account will be ready for them to
-                        use with the user name and password that you supply.</para>
+                    <para><emphasis role="bold">Create account with user details</emphasis></para>
                     <screenshot>
-                        <title>Select Users menu item</title>
                         <mediaobject>
                             <imageobject>
                                 <imagedata width="80%" align="center"
@@ -63,33 +43,16 @@
                             </imageobject>
                         </mediaobject>
                     </screenshot>
+                    <para>Choose this option if you would like to enter all the details of the new
+                        user such as name, password, etc.</para>
+                    <para>Enter the following information: user name, password, surname, first name,
+                        email, OpenID account (if any) and mobile phone number (if any).</para>
+                    <para>After you've created the user, the account is ready for the user to use
+                        with the user name and password that you provide.</para>
                 </listitem>
                 <listitem>
-                    <para><emphasis role="bold">Email invitation to create account</emphasis>:
-                        Choose this if you would like to send by email an invitation for the user to
-                        return to the system and finish setting up their user account. The user will
-                        then return to the system and fill in most of their personal information.
-                        The account that the user finishes setting up will be limited according to
-                        how you configure it below.</para>
-                    <para>Note that you may not select this option to create an account with
-                        &quot;critical&quot; system authorities such as All, Scheduling
-                        Administration, Perform maintenance tasks, Merge organisation units,
-                        Eliminate duplicate data elements, SQL View Management, Change system
-                        settings, and List, Add or Delete user roles.</para>
-                    <para>If you choose this action, then enter the email address to which the
-                        invitation should be sent. If you want to, you may also enter the user name
-                        that the account will have. If you leave the user name empty, then the user
-                        may choose their own user name when they respond to the invitation (as long
-                        as it is not taken already for another user.)</para>
-                    <para>After you finish adding the new user, two emails will be sent to the
-                        address you provided. One contains a unique web link by which the user can
-                        return to the system and activate their account by entering the rest of
-                        their user information. The other email contains a unique code that they
-                        must enter into the system in order to complete the registration, after
-                        following the link in the first email. The user must finish setting up the
-                        account within three months, or the invitation becomes invalid.</para>
+                    <para><emphasis role="bold">Email invitation to create account</emphasis></para>
                     <screenshot>
-                        <title>Select Users menu item</title>
                         <mediaobject>
                             <imageobject>
                                 <imagedata width="80%" align="center"
@@ -98,6 +61,29 @@
                             </imageobject>
                         </mediaobject>
                     </screenshot>
+                    <para>Choose this option if you want to send an invitation by email to the user.
+                        Then she/he must return to DHIS2 and finish setting up their user account.
+                        The account that the user finishes setting up will be limited according to
+                        how you configure the account.</para>
+                    <note>
+                        <para>You may not select this option to create an account with
+                            &quot;critical&quot; system authorities such as All, Scheduling
+                            Administration, Perform maintenance tasks, Merge organisation units,
+                            Eliminate duplicate data elements, SQL View Management, Change system
+                            settings, and List, Add or Delete user roles.</para>
+                    </note>
+                    <para>Enter the email address to which the invitation should be sent. If you
+                        want to, you may also enter the user name that the account will have. If you
+                        leave the user name empty, then the user may choose their own user name when
+                        they respond to the invitation (as long as it is not taken already for
+                        another user.)</para>
+                    <para>After you've created the user, the system sends two emails to the address
+                        you provided. One contains a unique web link by which the user can return to
+                        the system and activate their account by entering the rest of their user
+                        information. The other email contains a unique code that they must enter
+                        into the system in order to complete the registration, after following the
+                        link in the first email. The user must finish setting up the account within
+                        three months, after that the invitation becomes invalid.</para>
                 </listitem>
             </itemizedlist>
         </listitem>
@@ -123,46 +109,7 @@
         <listitem>
             <para>Select <emphasis role="bold">Data capture and maintenance organisation
                     units</emphasis>.</para>
-            <?oxy_comment_start author="cecilia" timestamp="20161111T161240+0100" comment="Rewrite"?>
-            <para>Users must be assigned to at least one data capture and maintenance organisation
-                unit. Users will have access to all children of the organisation units which have
-                been assigned to them. For instance, if a user has been assigned to a district which
-                has several facilities contained in the district, the user would have access to the
-                district&apos;s data, as well as all of the facilities contained within the
-                district. The data approval organisation units control for which organisation units
-                the user can do data entry.</para>
-            <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-            <?oxy_comment_start author="cecilia" timestamp="20161111T161446+0100" comment="Review step."?>
-            <para>Select <emphasis role="bold">Data output and
-                    <?oxy_comment_start author="cecilia" timestamp="20161111T160942+0100" comment="Why analysis here and analytics further down?"?>analysis<?oxy_comment_end?>
-                    organisation units</emphasis>.</para>
-            <?oxy_comment_end?>
-            <para>You can assign a users to any number of data view organisation units. This
-                controls which organisation units the user can view aggregated data for in analysis
-                <?oxy_comment_start author="cecilia" timestamp="20161111T161314+0100" comment="Which apps?"?>modules<?oxy_comment_end?>.</para>
-            <important>
-                <para> Giving access to an organisation unit implicitly gives access to all
-                    organisation units below it in the organisation unit hierarchy. Thus, you should
-                    not select the descendants of an organisation unit which you have already
-                    selected. As an example, if the user has been assigned to a district, you should
-                    not (and not need to) select the facilities within that district.</para>
-                <para>Note that data view organisation units are optional. If you do not specify
-                    any, the user will have access to the full organisation unit hierarchy for
-                    viewing aggregated data. As with the data capture organisation units,
-                        <emphasis>you should not select descendant organisation units of a unit
-                        which you have already selected</emphasis>. </para>
-            </important>
-            <para>In several places in the analysis
-                <?oxy_comment_start author="cecilia" timestamp="20161111T161421+0100" comment="Which apps?"?>modules<?oxy_comment_end?>
-                one can select &quot;user organisation unit&quot; for the organisation unit
-                dimension. This mechanism will first attempt to use the data view organisation units
-                linked to the current user. If not found, it will use the data capture organisation
-                units. If the user has been assigned to multiple organisation units, the use of
-                &quot;user organisation unit&quot; may result in unpredictable behavior.</para>
             <screenshot>
-                <title>User management screen</title>
                 <mediaobject>
                     <imageobject>
                         <imagedata width="80%" align="center"
@@ -171,9 +118,55 @@
                     </imageobject>
                 </mediaobject>
             </screenshot>
+            <para>The data capture and maintenance organisation units control for which organisation
+                units the user can do data entry. You must assign at least one data capture and
+                maintenance organisation unit to each user.</para>
+            <para>Users will have access to all sub-organisation units of the assigned organisation
+                units. For example, if you've assigned a user to a district which has several
+                facilities contained in the district, the user would have access to the
+                district&apos;s data, as well as all of the facilities contained within the
+                district.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Select <emphasis role="bold">Data output and analysis organisation
+                    units</emphasis>.</para>
+            <para>The data output and analysis organisation units controls for which organisation
+                units the user can view aggregated data  in the analytics apps, for example the
+                    <emphasis role="bold">Pivot Table</emphasis> and <emphasis role="bold"
+                    >GIS</emphasis> apps. You can assign any number of data output and analysis
+                organisation units to a user.</para>
+            <para>Users will have access to all sub-organisation units of the assigned organisation
+                units. You shouldn't select the descendants of an organisation unit which you have
+                already selected. For example, if you've assigned the user to a district, you
+                shouldn't select the facilities within that district.</para>
+            <note>
+                <para>Assigning data output and analysis organisation units organisation units is
+                    optional. If you don't specify any organisation unit, the user will have access
+                    to the full organisation unit hierarchy for viewing aggregated data. As with the
+                    data capture organisation units, <emphasis>you should not select descendant
+                        organisation units of a unit which you have already selected</emphasis>.
+                </para>
+            </note>
+            <?oxy_comment_start author="cecilia" timestamp="20161122T153602+0100" comment="Verify with SME: Still correct? "?>
+            <para>In several places in the analytics apps, you can select &quot;user organisation
+                unit&quot; for the organisation unit dimension. This mechanism will first attempt to
+                use the data view organisation units linked to the current user. If not found, it
+                will use the data capture and maintenance organisation units. If the user has been
+                assigned to multiple organisation units, the use of &quot;user organisation
+                unit&quot; may result in unpredictable behavior.</para>
+            <?oxy_comment_end?>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Show more options</emphasis>.</para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="resources/images/dhis2UserManual/user_management_more_options.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
         </listitem>
         <listitem>
             <?oxy_comment_start author="cecilia" timestamp="20161111T160625+0100" comment="Verify step with SME."?>
@@ -184,30 +177,22 @@
         <listitem>
             <?oxy_comment_start author="cecilia" timestamp="20161111T160625+0100" comment="More information needed. What do you do in this step?"?>
             <para>(Optional) In the <emphasis role="bold">Available dimension restrictions for data
-                    analytics</emphasis> section, double-click the ?? groups you want to assign to
+                    analytics</emphasis> section, double-click the dimensions you want to assign to
                 the user.</para>
             <?oxy_comment_end?>
-            <para>You can restrict the values this user sees in data
-                <?oxy_comment_start author="cecilia" timestamp="20161111T161728+0100" comment="In which apps?"?>analytics<?oxy_comment_end?>
-                by selecting dimensions that will restrict the users view. For example, let&apos;s
-                say you have defined <emphasis role="italic">Implementing Partner</emphasis> as a
-                category option group set, and you have shared with this user only one or more
-                specific implementing partners (category option groups.) If you want to insure that
-                the user does not see totals in analytics that include values from other groups,
-                assign <emphasis role="italic">Implementing Partner</emphasis> to this user. This
-                insures that any data visible to the user through DHIS2 analytics will be filtered
-                to select only the Implementing Partner category option group(s) which are visible
-                to the user.</para>
-            <screenshot>
-                <title>User management screen</title>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata width="80%" align="center"
-                            fileref="resources/images/dhis2UserManual/user_management_more_options.png"
-                            format="PNG"/>
-                    </imageobject>
-                </mediaobject>
-            </screenshot>
+            <para>You can restrict the values the user sees in data analytics apps by selecting
+                dimensions that will restrict the user's view. </para>
+            <example>
+                <para>Let&apos;s say you have defined <emphasis role="italic">Implementing
+                        Partner</emphasis> as a category option group set, and you have shared with
+                    this user only one or more specific implementing partners (category option
+                    groups). If you want to make sure that the user does not see totals in analytics
+                    that include values from other groups, assign <emphasis role="italic"
+                        >Implementing Partner</emphasis> to the user. This insures that any data
+                    visible to the user through the analytics apps will be filtered to select only
+                    the Implementing Partner category option group(s) which are visible to the
+                    user.</para>
+            </example>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Add</emphasis>.</para>

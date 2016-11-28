@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook">
+    <title>Assign a legend to indicator or data
+        <?oxy_comment_start author="Home" timestamp="20160414T113214+0200" comment="At next revision, add x-ref to relevant topic." flag="done"?>element<?oxy_comment_end?></title>
+    <para>You can assign a legend to an indicator or a data element in the <emphasis role="bold"
+            >Maintenance</emphasis> app, either when you create the object or edit it. When you then
+        select the indicator or data element in the <emphasis role="bold">GIS</emphasis> app, the
+        system automatically selects the assigned legend.</para>
+    </section>
