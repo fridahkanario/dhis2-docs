@@ -82,7 +82,7 @@
                 >Search syntax for text fields</link>. <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="40%"
+                        <imagedata width="30%"
                             fileref="resources/images/implementation_guide/jira_search_issues.png"
                             format="png" align="left"/>
                     </imageobject>
@@ -160,7 +160,7 @@
                 filters</emphasis> and click the star icon next to each filter.<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="80%"
+                        <imagedata width="90%"
                             fileref="resources/images/implementation_guide/jira_manage_filters.png"
                             format="png" align="left"/>
                     </imageobject>
@@ -171,7 +171,7 @@
             search.<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="12cm"
+                        <imagedata width="90%"
                             fileref="resources/images/implementation_guide/jira_remove_filters.png"
                             format="png" align="left"/>
                     </imageobject>
