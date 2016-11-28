@@ -8,7 +8,7 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="jira-gettingstarted">
     <title>Using JIRA for DHIS2 issues</title>
-    <section><title>Sign up to JIRA - it's free!</title>
+    <section><title>Sign up to JIRA - it's open to everyone!</title>
         <orderedlist>
             <listitem>
                 <para>Go to: <link xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -19,6 +19,11 @@
             </listitem>
         </orderedlist></section>
     <section><title>Report an issue</title>
+        <tip>
+            <para>Uncertain whether something is a missing feature, a bug or deprecated? We'd really
+                appreciate that you ask on the developer list before reporting a bug directly.
+                Thanks!</para>
+        </tip>
         <orderedlist>
             <listitem>
                 <para>Click <emphasis role="bold">Create</emphasis> in the top menu.</para>
