@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook">
+    <title>Create a data element group set</title>
+    <?oxy_comment_start author="cecilia" timestamp="20160513T112352+0200" comment="At next revision, rephrase into active voice." flag="done"?>
+    <para>Data element group sets allows you to categorise multiple data element groups into a set.
+        The system uses data element group sets during analysis and reporting to combine similar
+        data element groups into a common theme.</para>
+    <?oxy_comment_end?>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Data elements</emphasis> > <emphasis role="bold">Data element group
+                    set</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add
+                <?oxy_comment_start author="cecilia" timestamp="20160510T112410+0200" comment="Do not refer to the FAB as an icon, according to MS Manual of Style." flag="done"?>button<?oxy_comment_end?>.</para>
+        </listitem>
+        <listitem>
+            <para>Fill in the form:</para>
+            <orderedlist>
+                <listitem>
+                    <para><emphasis role="bold">Name</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Code</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Description</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Compulsory</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Data dimension</emphasis></para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <para>Select data element groups and assign them.</para>
+            <?oxy_comment_start author="cecilia" timestamp="20160513T113037+0200" comment="At next revision, review this para. Is it necessary? Does it add value?" flag="done"?>
+            <para>Available data element groups are displayed in the left panel. Data element groups
+                that are currently members of the data element group set are displayed in the right
+                hand panel.</para>
+            <?oxy_comment_end?>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>
+</section>

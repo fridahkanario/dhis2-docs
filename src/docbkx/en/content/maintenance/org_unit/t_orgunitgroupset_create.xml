@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_org_unit_group_set">
+    <title>Create an organisation unit group set</title>
+    <para>Organisation unit group sets allows you to create additional classifications of
+        organisation units. The group sets create new dimensions so that you can make a more
+        detailed data analysis. You an easily filter, organise or aggregate data by groups within a
+        group set.</para>
+    <itemizedlist>
+        <listitem>
+            <para>You can have any number of organisation unit group sets.</para>
+        </listitem>
+        <listitem>
+            <para>The default organisation unit group sets are <emphasis role="bold">Type</emphasis>
+                and <emphasis role="bold">Ownership</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>An organisation unit group set is always exclusive: an organisation unit can't be
+                a member of more than one group in a group set.</para>
+            <para>You can only select a single organisation group membership for each group set when
+                you create a new organisation unit.</para>
+        </listitem>
+        <listitem>
+            <para>You can define whether an organisation unit group set is compulsory or not, which
+                will affect the completeness of the data. Compulsory means that all organisation
+                units must be member of a group in that group set.</para>
+        </listitem>
+    </itemizedlist>
+    <note>
+        <?oxy_comment_start author="cecilia" timestamp="20160527T112025+0200" comment="At next revision, add x-ref to Data admin app doc." flag="done"?>
+        <title>Data completeness</title>
+        <?oxy_comment_end?>
+        <?oxy_comment_start author="cecilia" timestamp="20160518T162017+0200" comment="Would a user do this? Implementer? Admin?" flag="done"?>
+        <para>In the <emphasis role="bold">Data integrity</emphasis> part of the <emphasis
+                role="bold">Data administration</emphasis> app you can verify if you've accidentally
+            assigned the same organisation unit to multiple groups within the same group set. In
+            this app you also find information about organisation units that are not members of a
+            compulsory organisation unit group set.</para>
+        <?oxy_comment_end?>
+    </note>
+    <para>To create an organisation unit group set:</para>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Organisation units</emphasis> > <emphasis role="bold">Organisation
+                    unit group set</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add button.</para>
+        </listitem>
+        <listitem>
+            <para>Fill in:</para>
+            <orderedlist>
+                <listitem>
+                    <para><emphasis role="bold">Name</emphasis>: Provide a precise name for the
+                        organisation unit group set.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Code</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Description</emphasis>: Describe what the
+                        organisation unit group set measures or captures.</para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <para>If you want all organisation units to be members of a group within the group set,
+                select <emphasis role="bold"
+                    ><?oxy_comment_start author="cecilia" timestamp="20160518T143103+0200" comment="Verify with SME: Is the default selection = cleared box?
+
+Yes" flag="done"?>Compulsory<?oxy_comment_end?></emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Select <emphasis role="bold"
+                    ><?oxy_comment_start author="cecilia" timestamp="20160518T142229+0200" comment="At next revision, add explanation." flag="done"?>Data
+                    dimension<?oxy_comment_end?></emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Select organisation unit groups and assign them.</para>
+            <para>In the left-hand list, you find the available organisation unit groups. Use the
+                arrows to move selected groups between the two lists.</para>
+            <?oxy_comment_start author="cecilia" timestamp="20160526T104008+0200" comment="At next revision, ad x-ref." flag="done"?>
+            <para>If there are no organisation unit groups in the left-hand list, click <emphasis
+                    role="bold">Add new</emphasis>. In the form that opens, create the organisation
+                units group you
+                <?oxy_comment_start author="cecilia" timestamp="20160923T100715+0200" comment="When x-refs work, add link to Create organisation unit group." flag="done"?>need<?oxy_comment_end?>.
+                When you're done, click <emphasis role="bold">Refresh values</emphasis>.</para>
+            <?oxy_comment_end?>
+            <note>
+                <?oxy_comment_start author="cecilia" timestamp="20160923T101007+0200" comment="Verify with SME: still correct?"?>
+                <para>An organisation unit can only be a member of a single organisation unit group
+                    within an organisation unit group set.</para>
+                <?oxy_comment_end?>
+            </note>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>
+    <example>
+        <title>Classify facilities based on ownership</title>
+        <?oxy_comment_start author="cecilia" timestamp="20160525T161530+0200" comment="At next revision, replace graphic.
+Single source concept information in implmenter guide and user guide" flag="done"?>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata format="png" align="center"
+                        fileref="resources/images/implementation_guide/organisation_unit_hiearchy.png"
+                        width="80%"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+        <?oxy_comment_end?>
+        <para>You want to analyse data based on the ownership of the facilities. All facilities have
+            an owner so you need to make sure that all organisation units get this classification.
+            To do that you can use the <emphasis role="bold">Compulsory</emphasis> option:</para>
+        <orderedlist>
+            <listitem>
+                <para>Create a group for each ownership type, for example "MoH", "Private" and
+                    "Faith-based".</para>
+            </listitem>
+            <listitem>
+                <para>Assign all facilities in the database to one of these groups.</para>
+            </listitem>
+            <listitem>
+                <para>Create an organisation unit group set called "Ownership" and select <emphasis
+                        role="bold">Compulsory</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>Assign the organisation unit groups "MoH", "Private" and "Faith-based" to the
+                    "Ownership" organisation group set.</para>
+            </listitem>
+        </orderedlist>
+    </example>
+</section>

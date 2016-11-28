@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_org_unit">
+    <title>Create an
+        <?oxy_comment_start author="cecilia" timestamp="20160518T101541+0200" comment="For SME: Who creats the original org unit hierarchy? Admin? Implmenter?" flag="done"?>organisation
+        unit<?oxy_comment_end?></title>
+    <screenshot>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="80%" align="center"
+                    fileref="resources/images/orgunits/create_new_orgunit.png" format="PNG"/>
+            </imageobject>
+        </mediaobject>
+    </screenshot>
+    <para>You add organisation units to the hierarchy one by one, either as a
+        <?oxy_comment_start author="cecilia" timestamp="20160518T102014+0200" comment="For SME: Can you crate a new root? 
+Follow-up with SME before release.
+- 2.24. you can only have one root unit." flag="done"?>root
+        unit<?oxy_comment_end?> or as a child of a selected organisation unit. You can only have one
+        root unit.</para>
+    <para>To create a new organisation unit:</para>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Organisation units</emphasis> > <emphasis role="bold">Organisation
+                    unit</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>In the left-hand organisation unit tree, select the organisation unit you want to
+                add the new organisation unit to. The selected organisation unit is marked in
+                yellow.</para>
+            <para>You can locate an organisation unit in the tree by expanding the branches (click
+                on the arrow symbol), or by searching for it by name or code.</para>
+            <note>
+                <para>The search is case-insensitive for organisation unit names. For codes you need
+                    to type the exact code.</para>
+            </note>
+        </listitem>
+        <listitem>
+            <para>Click the add button.</para>
+        </listitem>
+        <listitem>
+            <para>In the <emphasis role="bold">Name</emphasis> field, define the precise name of the
+                organisation unit.</para>
+            <para>Each organisation unit must have an unique name.</para>
+        </listitem>
+        <listitem>
+            <para>In the <emphasis role="bold">Short name</emphasis> field, define a short name for
+                the organisation unit.</para>
+            <para>Typically, the short name is an abbreviation of the full organisation unit name.
+                This attribute is often used in reports to display the name of the organisation
+                unit, where space is limited.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) In the <emphasis role="bold">Code</emphasis> field, assign a
+                code.</para>
+            <para>In many countries organisation units are assigned a code.</para>
+        </listitem>
+        <listitem>
+            <para>In the <emphasis role="bold">Description</emphasis> field, type a description of
+                the organisation unit.</para>
+        </listitem>
+        <listitem>
+            <para>Select an <emphasis role="bold">Opening date</emphasis>.</para>
+            <para>The opening dates control which organisation units that where existing at a point
+                in time, for example when analysing historical data. This attribute is
+                mandatory.</para>
+        </listitem>
+        <listitem>
+            <para>If applicable, select a <emphasis role="bold">Closed date</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>In the <emphasis role="bold">Comment</emphasis> field, enter any additional
+                information that you would like to add.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) In the <emphasis role="bold">URL</emphasis> field, enter a link to an
+                external web site that has additional information about the organisation
+                unit.</para>
+        </listitem>
+        <listitem>
+            <para>Enter contact information:</para>
+            <itemizedlist>
+                <listitem>
+                    <para>Contact person</para>
+                </listitem>
+                <listitem>
+                    <para>Address</para>
+                </listitem>
+                <listitem>
+                    <para>E-mail</para>
+                </listitem>
+                <listitem>
+                    <para>Phone number</para>
+                </listitem>
+            </itemizedlist>
+            <para>This information can be vital for facilitating follow-up.</para>
+        </listitem>
+        <listitem>
+            <para>If applicable, enter custom attributes values, for example <emphasis role="bold"
+                    >HR identifier</emphasis>.</para>
+            <para>You set custom attributes in <emphasis role="bold">Data administration</emphasis>
+                > <emphasis role="bold">Attribute</emphasis>.
+                <?oxy_comment_start author="cecilia" timestamp="20160518T114951+0200" comment="At next revsision, add x-ref here." flag="done"?>For
+                more information about how to use attributes, refer to the &quot;Attributes&quot;
+                section.<?oxy_comment_end?></para>
+        </listitem>
+        <?oxy_comment_start author="cecilia" timestamp="20160524T121553+0200" comment="Will be added, see Iissue on GitHub
+https://github.com/dhis2/maintenance-app/issues/162
+- If release on Monday, field included."?>
+        <listitem>
+            <para>(Optional) Enter
+                <?oxy_comment_start author="cecilia" timestamp="20160923T102103+0200" comment="For SME: are coordinates always here, or a custom attribute?"?>coordinates<?oxy_comment_end?>.</para>
+        </listitem>
+        <?oxy_comment_end?>
+        <listitem>
+            <para><?oxy_comment_start author="cecilia" timestamp="20160923T101928+0200" comment="Removed step 14 &quot;Enter Coordinates&quot;. See GitHub issue #162. SME confirms this will not be implemented for 2.25. 
+Removed text:
+&quot;This field is used to create the maps in the GIS module. Paste in the coordinates of the organisation unit in this field, either a polygon (for organisation units that represent an administrative boundary) or a point (for health facilities). Without this information the GIS module will not work. It might be more efficient to import these coordinates later as a batch job for all organisation units using the import module. See the GIS chapter for more details.&quot;"?>Click<?oxy_comment_end?>
+                <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>
+</section>
