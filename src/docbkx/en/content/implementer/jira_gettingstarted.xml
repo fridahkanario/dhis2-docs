@@ -82,7 +82,7 @@
                 >Search syntax for text fields</link>. <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="80%"
+                        <imagedata width="40%"
                             fileref="resources/images/implementation_guide/jira_search_issues.png"
                             format="png" align="left"/>
                     </imageobject>
@@ -147,9 +147,9 @@
                         Dashboard</emphasis>.<screenshot>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%"
-                                        fileref="resources/images/implementation_guide/jira_favorite_filters.png"
-                                        format="png" align="left"/>
+                                    <imagedata width="10cm"
+                                    fileref="resources/images/implementation_guide/jira_favorite_filters.png"
+                                    format="png" align="left"/>
                                 </imageobject>
                             </mediaobject>
                         </screenshot></para>
@@ -171,7 +171,7 @@
             search.<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="80%"
+                        <imagedata width="12cm"
                             fileref="resources/images/implementation_guide/jira_remove_filters.png"
                             format="png" align="left"/>
                     </imageobject>
