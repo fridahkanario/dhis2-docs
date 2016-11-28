@@ -14,7 +14,6 @@
     <title>Create a user
         <?oxy_comment_start author="cecilia" timestamp="20161110T140711+0100" comment="Which fields are mandatory?"?>role<?oxy_comment_end?></title>
     <screenshot>
-        <title>Role maintenance page</title>
         <mediaobject>
             <imageobject>
                 <imagedata width="80%" align="center"

@@ -5,8 +5,8 @@ git:
 install: true
 script:
     - bash ./travis-build.sh
-after_success:
-    - bash ./.utility/deploy.sh
+#after_success:
+#    - bash ./.utility/deploy.sh
 jdk:
     - openjdk7
 cache:

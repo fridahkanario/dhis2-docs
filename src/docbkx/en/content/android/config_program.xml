@@ -57,24 +57,29 @@ you DHIS2 web instance?"?>DHIS2<?oxy_comment_end?>
         <screenshot>
             <mediaobject>
                 <imageobject>
-                    <imagedata width="50%" align="center"
+                    <imagedata width="40%" align="center"
                         fileref="resources/images/android/common/config_error_program.png"
                         format="PNG"/>
                 </imageobject>
             </mediaobject>
         </screenshot>
-        <para>Error message: "You don't have any programs assigned to the organisation unit"</para>
-        <para>Solution: In the <emphasis role="bold">Program</emphasis> app, assign programs to the
-            relevant organisation units.</para>
+        <itemizedlist>
+            <listitem>
+                <para>Error message: "You don't have any programs assigned to the organisation
+                    unit"</para>
+            </listitem>
+            <listitem>
+                <para>Solution: In the <emphasis role="bold">Program</emphasis> app, assign programs
+                    to the relevant organisation units.</para>
+            </listitem>
+        </itemizedlist>
     </note>
     <para>See
         <?oxy_comment_start author="cecilia" timestamp="20161102T135023+0100" comment="Add URL to correct sections when build works."?>also<?oxy_comment_end?>:</para>
-    <para><citetitle pubwork="section">Manage programs</citetitle>
-        <link xmlns:xlink="http://www.w3.org/1999/xlink"
-            xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en_full.html#manage_tracker_programs"
-        /></para>
-    <para><citetitle pubwork="section">Manage users, user roles and user groups</citetitle>
-        <link xmlns:xlink="http://www.w3.org/1999/xlink"
-            xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/dhis2_user_manual_en_full.html#mgt_user_role_group"
-        /></para>
+    <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/manage_tracker_programs.html"
+            >Manage programs</link></para>
+    <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/mgt_user_role_group.html"
+            >Manage users, user roles and user groups</link></para>
 </chapter>

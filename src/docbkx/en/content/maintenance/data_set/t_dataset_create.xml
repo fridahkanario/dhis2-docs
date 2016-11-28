@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook">
+    <title> Create a legend</title>
+    <note>
+        <para>It is not allowed to have gaps in a legend.</para>
+        <para>It is not allowed to have overlapping legend items.</para>
+    </note>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Other</emphasis> > <emphasis role="bold">Legend</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add
+                <?oxy_comment_start author="cecilia" timestamp="20160510T112410+0200" comment="Do not refer to the FAB as an icon, according to MS Manual of Style." flag="done"?>button<?oxy_comment_end?>.</para>
+        </listitem>
+        <listitem>
+            <para>In the <emphasis role="bold">Name</emphasis> field, type the legend name.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) In the <emphasis role="bold">Code</emphasis> field, assign a
+                code.</para>
+        </listitem>
+        <listitem>
+            <para>Create the legend items you want to have in your legend:</para>
+            <orderedlist>
+                <listitem>
+                    <para>Select <emphasis role="bold">Start value</emphasis> and <emphasis
+                            role="bold">End value</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Select <emphasis role="bold">Number of legend items</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Select a color
+                        <?oxy_comment_start author="cecilia" timestamp="20160921T154150+0200" comment="Verify with SME the correct term for this" flag="done"?>scheme<?oxy_comment_end?>.</para>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">Create legend items</emphasis>.</para>
+                </listitem>
+            </orderedlist>
+            <tip>
+                <para>Click the options menu to edit or delete a legend item.</para>
+            </tip>
+        </listitem>
+        <listitem>
+            <para>(Optional) Add more legend items:</para>
+            <orderedlist>
+                <listitem>
+                    <para>Click the add button.</para>
+                </listitem>
+                <listitem>
+                    <para>Enter a name and select a start value, an end value and a color.</para>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">OK</emphasis>.</para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <para>(Optional) Change the color scales.</para>
+            <orderedlist>
+                <listitem>
+                    <para>Click the colour scale to view a list of color scale options, and select a
+                        color scale.</para>
+                </listitem>
+                <listitem>
+                    <para>To customize a color scale, click the add button. In the <emphasis
+                            role="bold">Edit legend item</emphasis> dialog, click the color scale
+                        button and handpick colors, or enter your color values.</para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>
+    <example>
+        <title>Vaccination coverage legends</title>
+        <table frame="all">
+            <?oxy_comment_start author="cecilia" timestamp="20160921T162540+0200" comment="Verify how empty title tag renders, should be enough with the example tag."?>
+            <title/>
+            <?oxy_comment_end?>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+                <thead>
+                    <row>
+                        <entry>Legend item</entry>
+                        <entry>Start value</entry>
+                        <entry>End value</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Low bad</entry>
+                        <entry>0</entry>
+                        <entry>50</entry>
+                    </row>
+                    <row>
+                        <entry>Medium</entry>
+                        <entry>50</entry>
+                        <entry>80</entry>
+                    </row>
+                    <row>
+                        <entry>High good</entry>
+                        <entry>80</entry>
+                        <entry>100</entry>
+                    </row>
+                    <row>
+                        <entry>Too high</entry>
+                        <entry>100</entry>
+                        <entry>1000</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </example>    
+</section>

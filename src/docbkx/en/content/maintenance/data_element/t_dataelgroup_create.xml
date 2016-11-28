@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook">
+    <title>Create a data element group</title>
+    <para>Data element groups lets you classify related data elements into a common theme. For
+        example, two data elements &quot;Measles immunisation&quot; and &quot;BCG Immunisation&quot;
+        might be grouped together into a data element group &quot;Childhood
+        immunisation&quot;.</para>
+    <para>To create a data element group:</para>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Data elements</emphasis> > <emphasis role="bold">Data element
+                    group</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add
+                <?oxy_comment_start author="cecilia" timestamp="20160510T112410+0200" comment="Do not refer to the FAB as an icon, according to MS Manual of Style." flag="done"?>button<?oxy_comment_end?>.</para>
+        </listitem>
+        <listitem>
+            <para>Fill in the form:</para>
+            <orderedlist>
+                <listitem>
+                    <para><emphasis role="bold">Name</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Short name</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Code</emphasis></para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <para>Select data elements and assign them.</para>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>
+    </section>
