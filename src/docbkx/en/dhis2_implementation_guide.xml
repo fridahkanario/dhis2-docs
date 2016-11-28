@@ -35,4 +35,5 @@
   <xi:include href="content/implementer/localization.xml" encoding="UTF-8"/>
   <xi:include href="content/implementer/dhis2tools/manual.xml" encoding="UTF-8"/>
   <xi:include href="dhis2_documentation_guide.xml" encoding="UTF-8"/>
+    <xi:include href="content/implementer/jira_gettingstarted.xml" encoding="UTF-8"/>
 </book>
