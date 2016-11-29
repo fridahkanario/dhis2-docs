@@ -7,6 +7,8 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <title>Change sharing settings for metadata objects</title>
+    <para>You can assign different rights to the  for example a data set based on user groups and
+        user roles.</para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and find the type of

@@ -14,8 +14,8 @@
     <tip>
         <para>To activate a
             <?oxy_comment_start author="cecilia" timestamp="20160512T110522+0200" comment="At next revision, verify that this task is documentet and add link to correct topic." flag="done"?>translation<?oxy_comment_end?>,
-            go to <emphasis role="bold">Apps</emphasis> > <emphasis role="bold">Settings</emphasis>
-            > <emphasis role="bold">Appearance</emphasis> and select a language.</para>
+            open the <emphasis role="bold">System Settings</emphasis> app, click > <emphasis
+                role="bold">Appearance</emphasis> and select a language.</para>
     </tip>
     <orderedlist>
         <listitem>
