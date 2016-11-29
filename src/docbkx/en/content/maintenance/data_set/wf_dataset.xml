@@ -5,32 +5,26 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="workflow_org_unit">
-    <title><?oxy_comment_start author="cecilia" timestamp="20160622T114303+0200" comment="Removed content from previous version:
-
-To avoid such situations it is recommend to first add groups to group sets, and then organisation units to groups.
-It is recommend that you approach the organisation unit grouping in the following sequence (and one group set at a time):
-Define a new organisation unit group set, for example &quot;Location&quot;.
-Add new organisation unit groups (for example &quot;Urban&quot;, &quot;Rural&quot; and &quot;Peri-urban&quot;). Once all groups have been defined, return to the organisation unit group set and assign each of the desired groups to the group set.
-Go back to each group, one by one, go to edit mode and assign the organisation units that should be member of the group. Should you follow this route, you can place multiple organisation units at a time in a group. However, you must be careful not to place the same organisation units in two groups which itself is a member of an organisation unit group set. This will result in a data integrity violation. If you have organisation unit groups which are not exclusive, they should not be members of a group.
-A better way to ensure that you do not mistakenly assign an organisation unit to multiple members of a group set is you can use the edit feature of each organisation unit to assign memberships to each group set. You will only be able to assign a single organisation unit at a time however." flag="done"?>Workflow<?oxy_comment_end?></title>
-    <?oxy_comment_start author="cecilia" timestamp="20160525T141210+0200" comment="At next relese:
-Specify what you do in the workflow.
-Handle org units? Manage org units? Create an org unit group set? Create an org unit group?" flag="done"?>
-    <para>The recommended workflow is: </para>
-    <?oxy_comment_end?>
+    xmlns:db="http://docbook.org/ns/docbook" 
+    xml:id="workflow_data_set">
+    <title>Workflow</title>
+    <para>You need to have data elements and categories to create data sets and data entry
+        forms.</para>
     <orderedlist>
-        <?oxy_comment_start author="cecilia" timestamp="20160525T140635+0200" comment="Information from Lars." flag="done"?>
         <listitem>
-            <para>Create organisation units.</para>
+            <para>Create a data set.</para>
         </listitem>
         <listitem>
-            <para>Create organisation unit groups.</para>
+            <?oxy_comment_start author="cecilia" timestamp="20160623T173255+0200" comment="For SME: Is it mandatory to assign a data set to an org unit?
+- More or less. You can not register data unless you do that." flag="done"?>
+            <para>Assign the data set to organisation units.</para>
+            <?oxy_comment_end?>
+            <para>A default form is created automatically.</para>
         </listitem>
         <listitem>
-            <para>Create organisation unit group sets.</para>
+            <para>Create a section form or a custom form.</para>
+            <para>Now you can register data in the <emphasis role="bold">Data entry</emphasis>
+                app.</para>
         </listitem>
-        <?oxy_comment_end?>
     </orderedlist>
 </section>
