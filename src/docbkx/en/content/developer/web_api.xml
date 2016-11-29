@@ -9572,6 +9572,8 @@ interval=WEEK" -u admin:district</screen>
     <para>Data pruning will remove complete data set registrations, data approvals, data value
       audits and data values, in this case for an organisation unit.</para>
     <screen>/api/26/maintenance/dataPruning/organisationUnits/&lt;org-unit-id&gt;</screen>
+    <para>Data pruning for data elements, which will remove data value audits and data
+      values.<screen>/api/26/maintenance/dataPruning/dataElement/&lt;data-element-uid></screen></para>
     <para>Metadata validation will apply all metadata validation rules and return the result of the
       operation:</para>
     <screen>/api/26/metadataValidation</screen>
