@@ -8356,6 +8356,14 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Specify enrollment status of events to include.</entry>
               <entry>ACTIVE | COMPLETED | CANCELLED</entry>
             </row>
+            <row xmlns:ns2="http://www.w3.org/1998/Math/MathML"
+              xmlns:ns="http://docbook.org/ns/docbook" xmlns:date="http://exslt.org/dates-and-times">
+              <entry>relativePeriodDate</entry>
+              <entry>string</entry>
+              <entry>No</entry>
+              <entry>Date identifier e.g: "2016-01-01". Overrides the start date of the relative
+                period</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
