@@ -283,32 +283,19 @@ Even Send message to other users." flag="done"?>feedback<?oxy_comment_end?>
       </orderedlist>
     </section>
     <section>
-      <title>Configure feedback message function</title>
-      <para>To configure the feedback message function, you must:</para>
-      <orderedlist>
-        <listitem>
-          <?oxy_comment_start author="cecilia" timestamp="20160623T113416+0200" comment="At next revision:
-Add link to correct section in user guide. 
-
-Removed text for now since it is unclear which section the reference point to:
-Refer to the section in this manual on &quot;User groups&quot; for more information of how to do this." flag="done"?>
-          <para>Create a user group (for example &quot;Feedback recipients&quot;) that contains all
-            the users who should receive feedback messages.</para>
-          <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Apps</emphasis> > <emphasis role="bold"
-              >Settings</emphasis> > <emphasis role="bold">General</emphasis> > <emphasis
-              role="bold">Feedback recipients</emphasis> and select the user group.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section>
       <title>Manage feedback messages</title>
       <note>
         <para>You'll only see feedback messages and have access to the feedback handling tools if
           you are a member of the user group that is set up to handle feedback messages.</para>
       </note>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="80%" align="center" scale="70"
+              fileref="resources/images/dashboard/dashboard_message_manage.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
       <para>You'll receive feedback messages to your <emphasis role="bold">Messages</emphasis>
         inbox. For feedback messages you've the following options in addition to the messages
         options:</para>
@@ -326,21 +313,7 @@ Refer to the section in this manual on &quot;User groups&quot; for more informat
           <tbody>
             <row>
               <entry>
-                <para>Set status</para>
-              </entry>
-              <entry>
-                <para>All feedback messages get the status <emphasis role="bold">Open</emphasis>
-                  when created.</para>
-                <para>To keep track of existing feedback messages, you can change the status to
-                    <emphasis role="bold">Invalid</emphasis>, <emphasis role="bold"
-                    >Pending</emphasis> or <emphasis role="bold">Solved</emphasis>.</para>
-                <para>You can filter feedback messages in your inbox based on their status. This
-                  makes it easier to switch between feedback messages and normal messages.</para>
-              </entry>
-            </row>
-            <row>
-              <entry>
-                <para>Set priority</para>
+                <para><emphasis role="bold">Priority</emphasis></para>
               </entry>
               <entry>
                 <para>You can mark a feedback message with different priorities: <emphasis
@@ -352,7 +325,32 @@ Refer to the section in this manual on &quot;User groups&quot; for more informat
             </row>
             <row>
               <entry>
-                <para>Write internal reply</para>
+                <para><emphasis role="bold">Status</emphasis></para>
+              </entry>
+              <entry>
+                <para>All feedback messages get the status <emphasis role="bold">Open</emphasis>
+                  when created.</para>
+                <para>To keep track of existing feedback messages, you can change the status to
+                    <emphasis role="bold">Pending</emphasis>, <emphasis role="bold"
+                    >Invalid</emphasis> or <emphasis role="bold">Solved</emphasis>.</para>
+                <para>You can filter feedback messages in your inbox based on their status. This
+                  makes it easier to switch between feedback messages and normal messages.</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para><emphasis role="bold">Assigned to</emphasis></para>
+              </entry>
+              <entry>
+                <para>You can assign a feedback message to any member of the user group that is set
+                  up to handle feedback messages.</para>
+                <para><emphasis role="bold">None</emphasis> means that you haven't assigned a user
+                  to the feedback message.</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para><emphasis role="bold">Internal reply</emphasis></para>
               </entry>
               <entry>
                 <para>When you work in a feedback
@@ -367,6 +365,29 @@ Refer to the section in this manual on &quot;User groups&quot; for more informat
           </tbody>
         </tgroup>
       </table>
+    </section>
+    <section>
+      <title>Configure feedback message function</title>
+      <para>To configure the feedback message function, you must:</para>
+      <orderedlist>
+        <listitem>
+          <?oxy_comment_start author="cecilia" timestamp="20160623T113416+0200" comment="At next revision:
+Add link to correct section in user guide. 
+
+Removed text for now since it is unclear which section the reference point to:
+Refer to the section in this manual on &quot;User groups&quot; for more information of how to do this." flag="done"?>
+          <para>Create a user group (for example &quot;Feedback message recipients&quot;) that
+            contains all the users who should receive feedback messages.</para>
+          <?oxy_comment_end?>
+        </listitem>
+        <listitem>
+          <para>Open the <emphasis role="bold">System
+              <?oxy_comment_start author="cecilia" timestamp="20161130T144441+0100" comment="System Settings app?"?>Settings<?oxy_comment_end?></emphasis>
+            app and click <emphasis role="bold">General</emphasis> > <emphasis role="bold">Feedback
+              recipients</emphasis> and select the user group you created in the previous
+            step.</para>
+        </listitem>
+      </orderedlist>
     </section>
   </section>
 </chapter>
