@@ -191,16 +191,18 @@ Even Send message to other users." flag="done"?>feedback<?oxy_comment_end?>
     <?oxy_comment_end?>
     <section>
       <title>About messages and feedback messages</title>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <?oxy_comment_start author="cecilia" timestamp="20160623T084850+0200" comment="Will not replace graphic, do not want to show feedback message options to the &quot;normal&quot; user." flag="done"?>
-            <imagedata width="80%" align="center"
-              fileref="resources/images/dashboard/dashboard_messages_queue.png"/>
-            <?oxy_comment_end?>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <?oxy_comment_start author="cecilia" timestamp="20160623T084850+0200" comment="Will not replace graphic, do not want to show feedback message options to the &quot;normal&quot; user." flag="done"?>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/dashboard/dashboard_messages_queue.png"/>
+              <?oxy_comment_end?>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
       <para>Within DHIS2 you can send messages and feedback messages to users, user groups and
         organisation units. When you send a feedback message, it is routed to a particular user
         group. If you're a member of this user group, you've access to feedback handling tools. You
@@ -213,14 +215,16 @@ Even Send message to other users." flag="done"?>feedback<?oxy_comment_end?>
     </section>
     <section>
       <title>Create a message</title>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="80%" align="center" scale="70"
-              fileref="resources/images/dashboard/dashboard_message.png"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="90%" align="center" scale="70"
+                fileref="resources/images/dashboard/dashboard_message.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
       <orderedlist>
         <listitem>
           <para>From the <emphasis role="bold">Dashboard</emphasis>, click <emphasis role="bold"
@@ -284,16 +288,18 @@ Even Send message to other users." flag="done"?>feedback<?oxy_comment_end?>
     </section>
     <section>
       <title>Manage feedback messages</title>
-      <note>
-        <para>You'll only see feedback messages and have access to the feedback handling tools if
-          you are a member of the user group that is set up to handle feedback messages.</para>
-      </note>
+      <para>
+        <note>
+          <para>You'll only see feedback messages and have access to the feedback handling tools if
+            you are a member of the user group that is set up to handle feedback messages.</para>
+        </note>
+      </para>
       <para>
         <screenshot>
           <mediaobject>
             <imageobject>
               <imagedata fileref="resources/images/dashboard/dashboard_messages_manage.png"
-                align="center" format="png" width="60%"/>
+                align="center" format="png" width="80%"/>
             </imageobject>
           </mediaobject>
         </screenshot>
@@ -304,7 +310,7 @@ Even Send message to other users." flag="done"?>feedback<?oxy_comment_end?>
       <table frame="all">
         <title>Feedback handling tools</title>
         <tgroup cols="2">
-          <colspec colname="c1" colnum="1" colwidth="1.19*"/>
+          <colspec colname="c1" colnum="1" colwidth="2.3*"/>
           <colspec colname="c2" colnum="2" colwidth="1*"/>
           <thead>
             <row>
