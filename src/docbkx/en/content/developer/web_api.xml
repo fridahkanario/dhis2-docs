@@ -30,13 +30,14 @@
       </listitem>
       <listitem>
         <para>All resources can be uniquely identified by a <emphasis role="italic">URI</emphasis>
-          (also referred to as <emphasis role="italic">URL</emphasis>). All resources have a default
-          representation. You can indicate that you are interested in a specific representation by
-          supplying an <emphasis role="italic">Accept</emphasis> HTTP header, a file extension or a
-            <emphasis role="italic">format</emphasis> query parameter. So in order to retrieve the
-          PDF representation of a report table you can supply a <emphasis role="italic">Accept:
-            application/pdf</emphasis> header or append <emphasis role="italic">.pdf</emphasis> or
-            <emphasis role="italic">?format=pdf</emphasis> to your request URL.</para>
+          (also referred to a/s <emphasis role="italic">URL</emphasis>). All resources have a
+          default representation. You can indicate that you are interested in a specific
+          representation by supplying an <emphasis role="italic">Accept</emphasis> HTTP header, a
+          file extension or a <emphasis role="italic">format</emphasis> query parameter. So in order
+          to retrieve the PDF representation of a report table you can supply a <emphasis
+            role="italic">Accept: application/pdf</emphasis> header or append <emphasis
+            role="italic">.pdf</emphasis> or <emphasis role="italic">?format=pdf</emphasis> to your
+          request URL.</para>
       </listitem>
       <listitem>
         <para>Interactions with the API requires correct use of HTTP <emphasis role="italic"
@@ -1581,13 +1582,12 @@ http://server/api/26/constants/ID</screen></para>
         "ANC":<screen>curl -u user:pass http://server/api/26/metadata?defaultFilter=name:^like:ANC&amp;dataElements=true&amp;indicators=true</screen></para>
     </section>
     <section xml:id="webapi_dataset_program_export_dependencies">
-      <title>Data set and program export with dependencies</title>
-      <para>When you want to move a whole set of data set or program metadata from one server to
-        another (possibly empty) server, we have two special endpoints for just that
-        purpose:<screen>/api/26/dataSets/ID/metadata.json</screen><screen>/api/26/programs/ID/metadata.json</screen></para>
-      <para>These exports can be imported both using the old importer at <emphasis role="italic"
-          >/api/metadata</emphasis> and the new importer at <emphasis role="italic"
-          >/api/23/metadata</emphasis>.</para>
+      <title>Metadata export with dependencies</title>
+      <para>When you want to move a whole set of data set, program or category combo metadata from
+        one server to another (possibly empty) server, we have three special endpoints for just that
+        purpose:<screen>/api/26/dataSets/ID/metadata.json</screen><screen>/api/26/programs/ID/metadata.json</screen><screen>/api/26/categoryCombos/ID/metadata.json</screen></para>
+      <para>These exports can then be imported using <emphasis role="italic"
+          >/api/26/metadata</emphasis>.</para>
     </section>
   </section>
   <section xml:id="webapi_metadata_import">
