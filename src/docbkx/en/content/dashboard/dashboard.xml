@@ -288,21 +288,23 @@ Even Send message to other users." flag="done"?>feedback<?oxy_comment_end?>
         <para>You'll only see feedback messages and have access to the feedback handling tools if
           you are a member of the user group that is set up to handle feedback messages.</para>
       </note>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="80%" align="center" scale="70"
-              fileref="resources/images/dashboard/dashboard_message_manage.png"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center" scale="70"
+                fileref="resources/images/dashboard/dashboard_message_manage.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
       <para>You'll receive feedback messages to your <emphasis role="bold">Messages</emphasis>
         inbox. For feedback messages you've the following options in addition to the messages
         options:</para>
       <table frame="all">
         <title>Feedback handling tools</title>
         <tgroup cols="2">
-          <colspec colname="c1" colnum="1" colwidth="1.06*"/>
+          <colspec colname="c1" colnum="1" colwidth="1.19*"/>
           <colspec colname="c2" colnum="2" colwidth="1*"/>
           <thead>
             <row>
