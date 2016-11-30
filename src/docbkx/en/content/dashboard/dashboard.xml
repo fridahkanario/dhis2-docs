@@ -292,8 +292,8 @@ Even Send message to other users." flag="done"?>feedback<?oxy_comment_end?>
         <screenshot>
           <mediaobject>
             <imageobject>
-              <imagedata width="80%" align="center" scale="70"
-                fileref="resources/images/dashboard/dashboard_message_manage.png"/>
+              <imagedata fileref="resources/images/dashboard/dashboard_messages_manage.png"
+                align="center" format="png" width="60%"/>
             </imageobject>
           </mediaobject>
         </screenshot>
