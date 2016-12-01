@@ -5,7 +5,8 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook">
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="use_category_combo_for_data_set">
     <title>Use category combinations for data sets</title>
     <para>When categories and category combinations have the data dimension type
         &quot;Attribute&quot;, they can apply a common set of attributes to a related set of data
