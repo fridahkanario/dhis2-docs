@@ -30,13 +30,14 @@
       </listitem>
       <listitem>
         <para>All resources can be uniquely identified by a <emphasis role="italic">URI</emphasis>
-          (also referred to as <emphasis role="italic">URL</emphasis>). All resources have a default
-          representation. You can indicate that you are interested in a specific representation by
-          supplying an <emphasis role="italic">Accept</emphasis> HTTP header, a file extension or a
-            <emphasis role="italic">format</emphasis> query parameter. So in order to retrieve the
-          PDF representation of a report table you can supply a <emphasis role="italic">Accept:
-            application/pdf</emphasis> header or append <emphasis role="italic">.pdf</emphasis> or
-            <emphasis role="italic">?format=pdf</emphasis> to your request URL.</para>
+          (also referred to a/s <emphasis role="italic">URL</emphasis>). All resources have a
+          default representation. You can indicate that you are interested in a specific
+          representation by supplying an <emphasis role="italic">Accept</emphasis> HTTP header, a
+          file extension or a <emphasis role="italic">format</emphasis> query parameter. So in order
+          to retrieve the PDF representation of a report table you can supply a <emphasis
+            role="italic">Accept: application/pdf</emphasis> header or append <emphasis
+            role="italic">.pdf</emphasis> or <emphasis role="italic">?format=pdf</emphasis> to your
+          request URL.</para>
       </listitem>
       <listitem>
         <para>Interactions with the API requires correct use of HTTP <emphasis role="italic"
@@ -1581,13 +1582,12 @@ http://server/api/26/constants/ID</screen></para>
         "ANC":<screen>curl -u user:pass http://server/api/26/metadata?defaultFilter=name:^like:ANC&amp;dataElements=true&amp;indicators=true</screen></para>
     </section>
     <section xml:id="webapi_dataset_program_export_dependencies">
-      <title>Data set and program export with dependencies</title>
-      <para>When you want to move a whole set of data set or program metadata from one server to
-        another (possibly empty) server, we have two special endpoints for just that
-        purpose:<screen>/api/26/dataSets/ID/metadata.json</screen><screen>/api/26/programs/ID/metadata.json</screen></para>
-      <para>These exports can be imported both using the old importer at <emphasis role="italic"
-          >/api/metadata</emphasis> and the new importer at <emphasis role="italic"
-          >/api/23/metadata</emphasis>.</para>
+      <title>Metadata export with dependencies</title>
+      <para>When you want to move a whole set of data set, program or category combo metadata from
+        one server to another (possibly empty) server, we have three special endpoints for just that
+        purpose:<screen>/api/26/dataSets/ID/metadata.json</screen><screen>/api/26/programs/ID/metadata.json</screen><screen>/api/26/categoryCombos/ID/metadata.json</screen></para>
+      <para>These exports can then be imported using <emphasis role="italic"
+          >/api/26/metadata</emphasis>.</para>
     </section>
   </section>
   <section xml:id="webapi_metadata_import">
@@ -7601,13 +7601,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>outputIdScheme</entry>
                 <entry>No</entry>
                 <entry>Identifier scheme to use for metadata items the query response, can be identifier, code or attributes.</entry>
-                <entry>UID | CODE | NAME</entry>
+                <entry>UID | CODE | ATTRIBUTE:&lt;UID></entry>
               </row>
               <row>
                 <entry>inputIdScheme</entry>
                 <entry>No</entry>
                 <entry>Identifier scheme to use for metadata items in the query request, can be identifier, code or attributes.</entry>
-                <entry>UID | CODE</entry>
+                <entry>UID | CODE | ATTRIBUTE:&lt;UID></entry>
               </row>
               <row>
                 <entry>approvalLevel</entry>
@@ -8162,8 +8162,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
         multiple data elements and import this data for a single data element in the destionation
         system. As another example one can aggregate data collected at organisation unit level 4 in
         the target system to level 2 and import that data in the destination system.</para>
-      <para>You can retrieve data in the raw data value set format from the
-          <emphasis>analytics/dataValueSethttp://dhis2.github.io/dhis2-docs/master/en/developer/html/webapi_authentication.html#webapi_oauth2http://dhis2.github.io/dhis2-docs/master/en/developer/html/webapi_authentication.html#webapi_oauth2</emphasis>
+      <para>You can retrieve data in the raw data value set format from the dataValueSet
         resource:<screen>/api/26/analytics/dataValueSet</screen></para>
       <para>The following resource representations are supported:<itemizedlist>
           <listitem>
@@ -8192,6 +8191,11 @@ ORDER BY oul.level, par.name, ou.name</screen>
         organisation units and returns it as regular data values in XML looks like
         this:<screen>api/analytics/dataValueSet.xml?dimension=dx:Uvn6LCg7dVU;OdiHJayrsKo
   &amp;dimension=pe:LAST_4_QUARTERS&amp;dimension=ou:lc3eMKXaEfw;PMa2VCrupOd</screen></para>
+      <para>When using attribute-based identifier schemes for export there is a risk of producing
+        duplicate data values. The boolean query parameter duplicatesOnly can be used for debugging
+        purposes to return only duplicates data values. This response can be used to clean up the
+        duplicates:<screen>api/analytics/dataValueSet.xml?dimension=dx:Uvn6LCg7dVU;OdiHJayrsKo
+  &amp;dimension=pe:LAST_4_QUARTERS&amp;dimension=ou:lc3eMKXaEfw&amp;duplicatesOnly=true</screen></para>
     </section>
     <section xml:id="webapi_analytics_debugging">
       <title>Debugging</title>
@@ -8351,6 +8355,14 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>No</entry>
               <entry>Specify enrollment status of events to include.</entry>
               <entry>ACTIVE | COMPLETED | CANCELLED</entry>
+            </row>
+            <row xmlns:ns2="http://www.w3.org/1998/Math/MathML"
+              xmlns:ns="http://docbook.org/ns/docbook" xmlns:date="http://exslt.org/dates-and-times">
+              <entry>relativePeriodDate</entry>
+              <entry>string</entry>
+              <entry>No</entry>
+              <entry>Date identifier e.g: "2016-01-01". Overrides the start date of the relative
+                period</entry>
             </row>
           </tbody>
         </tgroup>
@@ -9568,6 +9580,8 @@ interval=WEEK" -u admin:district</screen>
     <para>Data pruning will remove complete data set registrations, data approvals, data value
       audits and data values, in this case for an organisation unit.</para>
     <screen>/api/26/maintenance/dataPruning/organisationUnits/&lt;org-unit-id&gt;</screen>
+    <para>Data pruning for data elements, which will remove data value audits and data
+      values.<screen>/api/26/maintenance/dataPruning/dataElement/&lt;data-element-uid></screen></para>
     <para>Metadata validation will apply all metadata validation rules and return the result of the
       operation:</para>
     <screen>/api/26/metadataValidation</screen>

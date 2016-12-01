@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<chapter version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="jira-gettingstarted">
+    <title>Using JIRA for DHIS2 issues</title>
+    <section><title>Sign up to JIRA - it's open to everyone!</title>
+        <orderedlist>
+            <listitem>
+                <para>Go to: <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="https://jira.dhis2.org">https://jira.dhis2.org</link>.</para>
+            </listitem>
+            <listitem>
+                <para>Create an account with your name and email address.</para>
+            </listitem>
+        </orderedlist></section>
+    <section><title>Report an issue</title>
+        <tip>
+            <para>Uncertain whether something is a missing feature, a bug or deprecated? We'd really
+                appreciate that you ask on the developer list before reporting a bug directly.
+                Thanks!</para>
+        </tip>
+        <orderedlist>
+            <listitem>
+                <para>Click <emphasis role="bold">Create</emphasis> in the top menu.</para>
+            </listitem>
+            <listitem>
+                <para>Select a <emphasis role="bold">Project</emphasis> from the list.</para>
+            </listitem>
+            <listitem>
+                <para>Select an <emphasis role="bold">Issue Type</emphasis>: <itemizedlist>
+                        <listitem>
+                            <para><emphasis role="bold">Improvement</emphasis> - if you’d like to
+                                tell us about something that could be better such as usability or
+                                design suggestions.</para>
+                        </listitem>
+                        <listitem>
+                            <para><emphasis role="bold">New feature</emphasis> - if you want to
+                                suggest a feature.</para>
+                        </listitem>
+                        <listitem>
+                            <para><emphasis role="bold">Task</emphasis> - if you’ve been asked to
+                                work on a DHIS2 task. </para>
+                        </listitem>
+                        <listitem>
+                            <para><emphasis role="bold">Bug</emphasis> - if you’ve found something
+                                that needs fixing.</para>
+                        </listitem>
+                        <listitem>
+                            <para><emphasis role="bold">Epic</emphasis> - if you’d like to submit an
+                                idea for a new DHIS2 area such as an app. Epic is used for issues
+                                more complex than new features.</para>
+                        </listitem>
+                    </itemizedlist></para>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold">Create</emphasis>.</para>
+                <tip>
+                    <para> To create several issues in one go, select <emphasis role="bold">Create
+                            another</emphasis>.</para>
+                </tip>
+            </listitem>
+            <listitem>
+                <para>Fill out the issue form. Please give us plenty of context! Include server
+                    logs, JavaScript console logs, the DHIS2 version and the web browser you’re
+                    using.</para>
+            </listitem>
+        </orderedlist><screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata width="80%"
+                        fileref="resources/images/implementation_guide/jira_create_issue.png"
+                        format="png" align="left"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot></section>
+    <section><title>Search for issues</title>
+        <para>Click <emphasis role="bold">Issues > Search for issues</emphasis>. </para>
+        <para>If you click <emphasis role="bold">Advanced</emphasis>, you can order your search
+            criteria using the predefined fields. You can also enter search terms in the search
+            field. See also: <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://confluence.atlassian.com/jirasoftwareserver072/search-syntax-for-text-fields-829057414.html"
+                >Search syntax for text fields</link>. <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="30%"
+                            fileref="resources/images/implementation_guide/jira_search_issues.png"
+                            format="png" align="left"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot></para></section>
+    <section><title>About filters</title><para>You can save your search results as filters to get back to them faster. A filter is very
+            similar to a favorite. We’ve created filters for features intended for release numbers
+            2.26, 2.27 and 2.28 and for all open bugs. </para></section>
+    <section><title>Create a filter</title>
+        <orderedlist>
+            <listitem>
+                <para>To create a filter, go to <emphasis role="bold">Issues > Search for
+                        issues</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>Add filters to your search such as:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para><emphasis role="bold">Project</emphasis> – the main software project
+                            is DHIS 2.</para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Type</emphasis> – you can filter by <emphasis
+                                role="bold">Standard Issue Types</emphasis> such as New Features,
+                            Improvements, Bugs or Epic or <emphasis role="bold">Sub-Task Issue
+                                Types</emphasis>.</para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Status</emphasis> – filter by <emphasis
+                                role="bold">To Do</emphasis> (not started) and <emphasis role="bold"
+                                >Done</emphasis>, for example.</para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Version</emphasis> - click <emphasis role="bold"
+                                >More > All Criteria > Fix version</emphasis> to filter by DHIS2
+                            release number.</para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Internal </emphasis>- click <emphasis
+                                role="bold">More > Internal feature</emphasis> to exclude low-level
+                            (back end) features from your search. </para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold">Save As</emphasis>. This button is at the top of
+                    the Search pane.<screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata width="80%"
+                                    fileref="resources/images/implementation_guide/jira_save.png"
+                                    format="png" align="left"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot></para>
+            </listitem>
+            <listitem>
+                <para>Enter a name for your search filter and click <emphasis role="bold"
+                        >Submit</emphasis>. Your filter is now available in <emphasis role="bold"
+                        >Favorite Filters</emphasis>. Use the arrow to modify your filter. Your
+                    filter is also available on the <emphasis role="bold">System
+                        Dashboard</emphasis>.<screenshot>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="10cm"
+                                    fileref="resources/images/implementation_guide/jira_favorite_filters.png"
+                                    format="png" align="left"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot></para>
+            </listitem>
+        </orderedlist></section>
+    <section><title>Add a filter to your profile</title>
+        <para>To add a filter to your profile, click <emphasis role="bold">Issues > Manage
+                filters</emphasis> and click the star icon next to each filter.<screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="90%"
+                            fileref="resources/images/implementation_guide/jira_manage_filters.png"
+                            format="png" align="left"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot></para></section>
+    <section><title>Remove search filter terms from your search</title>
+        <para>Click the cross to remove search filter terms you previously added from your
+            search.<screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%"
+                            fileref="resources/images/implementation_guide/jira_remove_filters.png"
+                            format="png" align="left"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot></para></section>
+    <section>
+        <title>Communicate with us</title>
+        <para>To share information, clarify requirements, or discuss details about an issue, do this
+            using issue comments.</para>
+        <orderedlist>
+            <listitem>
+                <para>Select the issue you want to comment.</para>
+            </listitem>
+            <listitem>
+                <para>In the Issue Detail view click <emphasis role="bold">Comment</emphasis> and
+                    enter your text.</para>
+                <para>To email others about your comment, simply enter <emphasis role="bold">@User's
+                        Name</emphasis> in the comment field. An email will be sent to the users'
+                    email addresses that are registered with their JIRA accounts.</para>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold">Add</emphasis>.</para>
+            </listitem>
+        </orderedlist>
+    </section>
+</chapter>

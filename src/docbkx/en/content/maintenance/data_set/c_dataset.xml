@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="about_dataset_dataform">
+    <title>About data sets and data entry forms</title>
+    <para>All data entry in DHIS2 is organised in data sets. A data set is a collection of data
+        elements grouped together for data entry and data export between instances of DHIS2. To use
+        a data set to collect data for a specific organisation unit, you must assign the
+        organisation unit to the data set. Once you have assigned the data set to an organisation
+        unit,
+        t<?oxy_comment_start author="cecilia" timestamp="20160609T110521+0200" comment="For SME: The default form?
+- Yes the default form is created automatically." flag="done"?>hat
+        data set <?oxy_comment_end?>is available in the <emphasis role="bold">Data entry</emphasis>
+        app. Only the organisation units that you have assigned the data set to can use the data set
+        for data entry.</para>
+    <para>A category combination can link to both data elements and data sets. If you use a category
+        combination for a data set, the category combinations is applicable for the whole form. This
+        means that you can use categories to capture information which is common to an entire form,
+        for example the name of the a project or grant. When a data set is linked to a category
+        combination, those categories will be displayed as drop-down boxes in the <emphasis
+            role="bold">Data entry</emphasis> app. Data captured in the form will then be linked to
+        the selected category options from those drop-down boxes. For information about how to
+        create categories and category combinations,
+        s<?oxy_comment_start author="cecilia" timestamp="20160627T144103+0200" comment="At next revision:
+- add olink to correct secion
+- review content, some duplication with Data elements section" flag="done"?>ee
+        section "Manage data elements and categories"<?oxy_comment_end?>. Make sure that you set the
+        type of categories and category combinations to &quot;Attribute&quot;. </para>
+    <example>
+        <title>Categories for data sets</title>
+        <?oxy_comment_start author="cecilia" timestamp="20160627T144543+0200" comment="For SME: Example still correct?
+- Verify with Lars."?>
+        <para>An scenario for when categories are useful is when you need to capture a data entry
+            form for a implementing partner organisation and a project. In that case:</para>
+        <orderedlist>
+            <listitem>
+                <para>Create category options and categories for all partner organisations and
+                    projects and link them in a new category combination.</para>
+            </listitem>
+            <listitem>
+                <para>Assign the category combination to the data set (form) for which you need to
+                    capture this information.</para>
+                <para>When opening this data set in data entry module, the partner organisation and
+                    project categories will automatically be rendered as drop-down boxes, allowing
+                    you to select a specific implementing partner organisation and project before
+                    continuing to do data entry.</para>
+            </listitem>
+        </orderedlist>
+        <?oxy_comment_end?>
+    </example>
+    <para>You create and edit data sets in the <emphasis role="bold">Maintenance</emphasis> app.
+        Here you define, for example, which data elements you want to include in the data set and
+        the data collection frequency.</para>
+    <para>You enter data in the <emphasis role="bold">Data entry</emphasis> app. The <emphasis
+            role="bold">Data entry</emphasis> app uses data entry forms to display the data sets.
+        There are three types of data entry forms:</para>
+    <table frame="all">
+        <title>Data entry form types</title>
+        <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.65*"/>
+            <thead>
+                <row>
+                    <entry><?oxy_comment_start author="cecilia" timestamp="20160615T145549+0200" comment="A form = a way to present the data set to the end user. (Visually)
+You can do it in two ways: custom form (design your own data entry form) and section form (automatic)
+
+In fact default form simply means auto-generated section forms based on the category combinations of the data elements." flag="done"?>Data<?oxy_comment_end?>
+                        entry form
+                        <?oxy_comment_start author="cecilia" timestamp="20160615T145526+0200" comment="At next revision:
+Add screenshots with examples of the different data entry forms." flag="done"?>type<?oxy_comment_end?></entry>
+                    <entry>Description</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Default form</para>
+                    </entry>
+                    <entry>
+                        <para>Once you have assigned a data set to an organisation unit, a default
+                            form is created automatically. The default form is then available in the
+                                <emphasis role="bold">Data entry</emphasis> app for the organisation
+                            units you have assigned it to.</para>
+                        <para>A default form consist of a list of the data elements belonging to the
+                            data set together with a column
+                            f<?oxy_comment_start author="cecilia" timestamp="20160615T144118+0200" comment="At next release: rewrite para." flag="done"?>or
+                            inputting the values.<?oxy_comment_end?> If your data set contains data
+                            elements with a non-default category combination, for example age groups
+                            or gender, additional columns are automatically created in the default
+                            form based on the different
+                            <?oxy_comment_start author="cecilia" timestamp="20160609T110139+0200" comment="For SME: In Implementation guide, the phrase is almost identical. The only difference is that &quot;options/dimensions&quot; is replaced with &quot;categories&quot;. Which information is correct?
+
+Use categories" flag="done"?>categories<?oxy_comment_end?>.</para>
+                        <para>If you use more than one category combination you get multiple columns
+                            in the default form with different column headings for the
+                            options.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para><?oxy_comment_start author="cecilia" timestamp="20160608T161706+0200" comment="For SME: Are the sections created automatically?
+
+No" flag="done"?>Section<?oxy_comment_end?>
+                            form</para>
+                    </entry>
+                    <entry>
+                        <para>If the default form doesn't meet your needs, you can modify it to
+                            create a section form. Section forms give you more flexibility when it
+                            comes to using tabular forms.</para>
+                        <para>In a section form you can, for example, create multiple tables with
+                            subheadings and disable (grey out) cells in a table.</para>
+                        <para>When you have added a section form to a data set, the section form is
+                            available in the <emphasis role="bold">Data entry</emphasis>
+                            <?oxy_comment_start author="cecilia" timestamp="20160608T165012+0200" comment="For SME: What do you mean with &quot;used automatically&quot;? A user still has to select it, right?
+No, it is the preferred form, selected by the system." flag="done"?>a<?oxy_comment_end?>pp.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Custom form</para>
+                    </entry>
+                    <entry>
+                        <para>If the form you want to design is too complicated for default or
+                            section forms, you can create a custom form. A custom form takes more
+                            time to create than a section form, but you have full control over the
+                            design.</para>
+                        <para>You can, for example, mimic an existing paper aggregation form with a
+                            custom form. This makes data entry easier, and should reduce the number
+                            incorrectly entered data elements.</para>
+                        <para>When you have added a custom form to a data set, the custom form is
+                            available in the <emphasis role="bold">Data entry</emphasis>
+                            <?oxy_comment_start author="cecilia" timestamp="20160608T165012+0200" comment="For SME: What do you mean with &quot;used automatically&quot;? A user still has to select it, right?
+No, it is the preferred form, selected by the system." flag="done"?>a<?oxy_comment_end?>pp.</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+    <note>
+        <title>A data set can have both section and custom forms</title>
+        <para>If a data set has both a section form and a custom form, the system displays the
+            custom form during data entry. Users who enter data can't select which form they want to
+            use. In web-based data entry the order of display preference is:</para>
+        <orderedlist>
+            <listitem>
+                <para>Custom form (if it exists)</para>
+            </listitem>
+            <listitem>
+                <para>Section form (if it exists)</para>
+            </listitem>
+            <listitem>
+                <para>Default form</para>
+            </listitem>
+        </orderedlist>
+        <para>Mobile devices do not support custom forms. In mobile-based data entry the order of
+            display preference is:</para>
+        <orderedlist>
+            <listitem>
+                <para>Section form (if it exists)</para>
+            </listitem>
+            <listitem>
+                <para>Default form</para>
+            </listitem>
+        </orderedlist>
+    </note>
+    <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following data set
+        <?oxy_comment_start author="cecilia" timestamp="20160701T142527+0200" comment="At next revision: review table with SME." flag="done"?>objects<?oxy_comment_end?>:</para>
+    <table frame="all">
+        <title>Data set objects in the Maintenance app</title>
+        <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>Object type</para>
+                    </entry>
+                    <entry>
+                        <para>Available functions</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Data set</para>
+                    </entry>
+                    <entry>
+                        <para>Create, assign to organisation units, edit, clone, share, delete, show
+                            details and translate</para>
+                        <para>Edit compulsory data elements</para>
+                        <para>Add and remove multiple data sets to organisation units at once</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Section form</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit and manage grey fields</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Section</para>
+                    </entry>
+                    <entry>
+                        <para>Change display order, delete and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Custom form</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit and script</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+</section>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook" 
+    xml:id="workflow_dataset">
+    <title>Workflow</title>
+    <para>You need to have data elements and categories to create data sets and data entry
+        forms.</para>
+    <orderedlist>
+        <listitem>
+            <para>Create a data set.</para>
+        </listitem>
+        <listitem>
+            <?oxy_comment_start author="cecilia" timestamp="20160623T173255+0200" comment="For SME: Is it mandatory to assign a data set to an org unit?
+- More or less. You can not register data unless you do that." flag="done"?>
+            <para>Assign the data set to organisation units.</para>
+            <?oxy_comment_end?>
+            <para>A default form is created automatically.</para>
+        </listitem>
+        <listitem>
+            <para>Create a section form or a custom form.</para>
+            <para>Now you can register data in the <emphasis role="bold">Data entry</emphasis>
+                app.</para>
+        </listitem>
+    </orderedlist>
+</section>

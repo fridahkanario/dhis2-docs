@@ -5,42 +5,97 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook" xml:id="android_config">
-    <title>[Review ongoing]Configure DHIS2 programs to work on Android apps</title>
+    xmlns:db="http://docbook.org/ns/docbook" 
+    xml:id="android_config_program">
+    <title>Configure DHIS2 programs to work on Android apps</title>
     <para>To use event programs and tracker programs on the Android <emphasis role="bold">Event
             Capture</emphasis> and <emphasis role="bold">Tracker Capture</emphasis> apps, you must
-        configure the programs in your
+        configure both the programs and the users' profiles on your
         <?oxy_comment_start author="cecilia" timestamp="20161107T095657+0100" comment="DHIS2 web?
 you DHIS2 web instance?"?>DHIS2<?oxy_comment_end?>
-        web instance.</para>
+        web instance. You do this in the <emphasis role="bold">Users</emphasis> and <emphasis
+            role="bold">Program</emphasis> web apps.<note>
+            <itemizedlist>
+                <listitem>
+                    <para>To work on an Android device you must assign the same <emphasis
+                            role="bold">Data capture and maintenance organisation units</emphasis>
+                        as the organisation units you've assigned the program to.</para>
+                </listitem>
+                <listitem>
+                    <para>In the Android apps you want to save as much data as possible. Therefore,
+                        the user can only download and capture data against the <emphasis
+                            role="bold">Data capture and maintenance organisation units</emphasis>.
+                        You configure these organisation units in the <emphasis role="bold"
+                            >Users</emphasis> app.</para>
+                </listitem>
+                <listitem>
+                    <para>If you select the top organisation unit as the <emphasis role="bold">Data
+                            capture and maintenance organisation units</emphasis>, the user can only
+                        download and capture data on the top organisation unit.</para>
+                </listitem>
+                <listitem>
+                    <para>To give the user access to download and capture data on all organisation
+                        units, you must assign all organisation units as <emphasis role="bold">Data
+                            capture and maintenance organisation units</emphasis>.</para>
+                </listitem>
+            </itemizedlist>
+        </note></para>
     <orderedlist>
         <listitem>
-            <para>Create a user with the correct settings in DHIS2 web instance:</para>
-            <orderedlist>
+            <para>In the <emphasis role="bold">Users</emphasis> app, create a new or update an
+                existing user with the following settings:</para>
+            <itemizedlist>
                 <listitem>
-                    <para>Create a user.</para>
+                    <para><emphasis role="bold">Available roles</emphasis>: Assign a user role that
+                        allow the user to access programs.</para>
                 </listitem>
                 <listitem>
-                    <para>Assign a user role that allow the user to access programs.</para>
+                    <para><emphasis role="bold">Data capture and maintenance organisation
+                            units</emphasis>: Select the organisation units that are relevant for
+                        your program.</para>
+                    <para>The <emphasis role="bold">Data capture and maintenance organisation
+                            units</emphasis> control for which organisation units the user can do
+                        data entry. You must assign at least one data capture and maintenance
+                        organisation unit to each user.</para>
                 </listitem>
-                <listitem>
-                    <para>Assign programs to the user role.</para>
-                </listitem>
-            </orderedlist>
+            </itemizedlist>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="90%" align="center"
+                            fileref="resources/images/android/common/config_program_user_setting.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
         </listitem>
         <listitem>
-            <?oxy_comment_start author="cecilia" timestamp="20161114T113306+0100" comment="Reword."?>
-            <para>Open the <emphasis role="bold">Program</emphasis> app and assign programs to
-                organisation units. To work on an Android device you must have the same data capture
-                and maintenance organisation unit as the organisation unit the program is assigned
-                to.</para>
-            <?oxy_comment_end?>
-            <note>
-                <para>It is important to only select the actual data capture organisation unit, if
-                    you select the top organisation unit, the Android <emphasis role="bold">Event
-                        Capture</emphasis> and the <emphasis role="bold">Tracker Capture</emphasis>
-                    apps, download ALL data for the organisation unit.</para>
-            </note>
+            <para>In the <emphasis role="bold">Users</emphasis> app, assign programs to the user
+                role you selected in the previous step.</para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="90%" align="center"
+                            fileref="resources/images/android/common/config_program_userrole_setting.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </listitem>
+        <listitem>
+            <para>In the <emphasis role="bold">Program</emphasis> app, assign your programs to the
+                same organisation units as the <emphasis role="bold">Data capture and maintenance
+                    organisation units</emphasis> you selected in the <emphasis role="bold"
+                    >Users</emphasis> app.</para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="60%" align="center"
+                            fileref="resources/images/android/common/config_program_orgunit_setting.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
         </listitem>
         <listitem>
             <para>Open the relevant Android app and log in with the user you created.</para>
@@ -77,9 +132,9 @@ you DHIS2 web instance?"?>DHIS2<?oxy_comment_end?>
     <para>See
         <?oxy_comment_start author="cecilia" timestamp="20161102T135023+0100" comment="Add URL to correct sections when build works."?>also<?oxy_comment_end?>:</para>
     <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-            xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/manage_tracker_programs.html"
+            xlink:href="https://ci.dhis2.org/docs/master/en/user/html/manage_tracker_programs.html"
             >Manage programs</link></para>
     <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-            xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/mgt_user_role_group.html"
+            xlink:href="https://ci.dhis2.org/docs/master/en/user/html/mgt_user_role_group.html"
             >Manage users, user roles and user groups</link></para>
 </chapter>

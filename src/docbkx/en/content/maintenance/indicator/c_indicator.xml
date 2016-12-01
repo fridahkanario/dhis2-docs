@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="about_indicator">
+    <title>About indicators</title>
+    <para>An indicator is a formula that can consist of multiple data elements, constants,
+        organisation unit group counts and mathematical operators. The indicator consist typically
+        of a numerator and denominator. You use indicators to calculate coverage rates, incidence
+        and other values that are a result of data element values that have been entered into the
+        system. Calculated totals do not have a denominator.</para>
+    <note>
+        <para>You never enter indicators directly in DHIS2, you calculate them.</para>
+    </note>
+    <para>An indicator formula can consist of mathematical operators, for example plus and minus,
+        and of the following
+        <?oxy_comment_start author="cecilia" timestamp="20160628T144558+0200" comment="At next revision: review table completely and add more examples." flag="done"?>elements<?oxy_comment_end?>:</para>
+    <table frame="all">
+        <title><?oxy_comment_start author="cecilia" timestamp="20160626T170812+0200" comment="At next release, review table with SME." flag="done"?>Indicator<?oxy_comment_end?>
+            formula</title>
+        <tgroup cols="3">
+            <colspec colname="c1" colnum="1" colwidth="1.22*"/>
+            <colspec colname="newCol2" colnum="2" colwidth="1*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.11*"/>
+            <thead>
+                <row>
+                    <entry>Formula element</entry>
+                    <entry>Type</entry>
+                    <entry>Description</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Constant</para>
+                    </entry>
+                    <entry>
+                        <para>Component</para>
+                    </entry>
+                    <entry>
+                        <para>Constants are numerical values which remain the same for all indicator
+                            calculations. This is useful in order to have a single place to change
+                            values that might change over time.</para>
+                        <para>Constants are applied AFTER data element values have been
+                            aggregated.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Data elements</para>
+                    </entry>
+                    <entry>
+                        <para>Component</para>
+                    </entry>
+                    <entry>
+                        <para>Data elements are substituted by the data value captured for the data
+                            element.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Days</para>
+                    </entry>
+                    <entry>
+                        <para>Operator</para>
+                    </entry>
+                    <entry>
+                        <para>"Days" is special operator that always provides the number of days for
+                            a given indicator calculation.</para>
+                        <para>For example: if you want to calculate the &quot;Percentage of time
+                            vaccine refrigerator was non-functional&quot;, you could define the
+                            <?oxy_comment_start author="cecilia" timestamp="20160628T143839+0200" comment="For SME: Is numerator really correct? Do you mean indicator?"?>numerator<?oxy_comment_end?>
+                            as:</para>
+                        <para>(&quot;Days-&quot;Number of days vaccine refrigerator was
+                            available&quot;&quot;)/&quot;Days&quot;</para>
+                        <para>If the fridge was available 25 days in June, the indicator would be
+                            calculated as:</para>
+                        <para>(30-25/25)*100 = 17 %</para>
+                        <para>If you want to calculate the total for Quarter 1, the number of days
+                            (&quot;Days&quot;) would be:</para>
+                        <para>31+28+31 = 90</para>
+                        <para>The "Days" parameter will always be the number of days in the period
+                            of interest.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Organisation unit counts</para>
+                    </entry>
+                    <entry>
+                        <para>Component</para>
+                    </entry>
+                    <entry>
+                        <para>You can use organisation unit groups in formulas. They will be
+                            replaced by the number of organisation units in the group. During
+                            aggregation, the organisation units in the group will be intersected
+                            with the part of the organisation unit hierarchy being requested.</para>
+                        <para>This lets you use the number of public facilities in a specific
+                            district in indicators. This is useful for example when you create
+                            facility infrastructure surveys and reports.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Programs</para>
+                    </entry>
+                    <entry>
+                        <para>Component</para>
+                    </entry>
+                    <entry>
+                        <para>Click <emphasis role="bold">Programs</emphasis> and select a program
+                            to view all data elements, attributes and indicators related to a
+                            specific program.</para>
+                        <?oxy_comment_start author="cecilia" timestamp="20160628T145309+0200" comment="At next releasee: review para with SME." flag="done"?>
+                        <para>The program components you include in your formula will have a program
+                            tag assigned to them.</para>
+                        <?oxy_comment_end?>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+    <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following
+        indicator objects:</para>
+    <table frame="all">
+        <title>Indicator objects in the Maintenance app</title>
+        <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>Object type</para>
+                    </entry>
+                    <entry>
+                        <para>Available functions</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Indicator</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Indicator type</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Indicator group</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Indicator group set</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+</section>
