@@ -2910,6 +2910,12 @@ http://server/api/26/constants/ID</screen></para>
               <entry>Property of the org unit object to use to map the data values.</entry>
             </row>
             <row>
+              <entry>categoryOptionComboIdScheme</entry>
+              <entry>id | name | code |&#160;attribute:ID</entry>
+              <entry>Property of the category option combo and attribute option combo objects to use
+                to map the data values.</entry>
+            </row>
+            <row>
               <entry>idScheme</entry>
               <entry>id | name | code|&#160;attribute:ID</entry>
               <entry>Property of all objects including data elements, org units and category option
@@ -3226,8 +3232,8 @@ http://server/api/26/constants/ID</screen></para>
             </row>
             <row>
               <entry>categoryOptionComboIdScheme</entry>
-              <entry>Property of the category option combo object to use for data values in
-                response.</entry>
+              <entry>Property of the category option combo and attribute option combo objects to use
+                for data values in response.</entry>
             </row>
           </tbody>
         </tgroup>
@@ -8543,6 +8549,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Yes</entry>
               <entry>Size of clusters in meters.</entry>
               <entry>Numeric positive value</entry>
+            </row>
+            <row>
+              <entry>clusterField</entry>
+              <entry>No</entry>
+              <entry>Field to base event clustering on. Default is event. Can be set to identifiers
+                of attributes and data elements of value type coordinate.</entry>
+              <entry>EVENT | &lt;attribute-id> | &lt;dataelement-id></entry>
             </row>
             <row>
               <entry>bbox</entry>
