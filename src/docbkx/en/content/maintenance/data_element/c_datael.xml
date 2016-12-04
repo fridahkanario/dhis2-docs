@@ -5,7 +5,8 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook">
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="about_data_element">
     <title>About data elements</title>
     <para>Data elements are the base of DHIS2. Data elements define what is actually recorded in the
         system, for example number of immunisations or number of cases of malaria.</para>
