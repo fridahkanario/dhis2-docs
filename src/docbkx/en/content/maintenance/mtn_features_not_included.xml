@@ -7,8 +7,8 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <title>Content that could be useful for next release</title>
-    <para>Gathering content about features that are being developped but won't be included in
-        release, hence should'nt go in user doc.</para>
+    <para>Gathering content about features that are being developed but won't be included in
+        release, hence shouldn’t go in user doc.</para>
     <section>
         <?oxy_custom_start type="oxy_content_highlight" color="255,198,140"?>
         <title>Edit multiple data sets at

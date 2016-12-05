@@ -10,14 +10,16 @@
     <title>Create an
         <?oxy_comment_start author="cecilia" timestamp="20160518T101541+0200" comment="For SME: Who creats the original org unit hierarchy? Admin? Implmenter?" flag="done"?>organisation
         unit<?oxy_comment_end?></title>
-    <screenshot>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="80%" align="center"
-                    fileref="resources/images/orgunits/create_new_orgunit.png" format="PNG"/>
-            </imageobject>
-        </mediaobject>
-    </screenshot>
+    <para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata width="80%" align="center"
+                        fileref="resources/images/orgunits/create_new_orgunit.png" format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </para>
     <para>You add organisation units to the hierarchy one by one, either as a
         <?oxy_comment_start author="cecilia" timestamp="20160518T102014+0200" comment="For SME: Can you crate a new root? 
 Follow-up with SME before release.
@@ -28,49 +30,59 @@ Follow-up with SME before release.
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
-                    role="bold">Organisation units</emphasis> > <emphasis role="bold">Organisation
+                    role="bold">Organisation unit</emphasis> > <emphasis role="bold">Organisation
                     unit</emphasis>.</para>
-        </listitem>
-        <listitem>
-            <para>In the left-hand organisation unit tree, select the organisation unit you want to
-                add the new organisation unit to. The selected organisation unit is marked in
-                yellow.</para>
-            <para>You can locate an organisation unit in the tree by expanding the branches (click
-                on the arrow symbol), or by searching for it by name or code.</para>
-            <note>
-                <para>The search is case-insensitive for organisation unit names. For codes you need
-                    to type the exact code.</para>
-            </note>
         </listitem>
         <listitem>
             <para>Click the add button.</para>
         </listitem>
         <listitem>
-            <para>In the <emphasis role="bold">Name</emphasis> field, define the precise name of the
-                organisation unit.</para>
+            <para>Select which organisation unit your new organisation unit will belong to:</para>
+            <orderedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">Parent organisation unit</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>In the organisation unit tree, locate the parent organisation unit and
+                        select it. Your selection is marked in yellow.</para>
+                    <tip>
+                        <para>Click the arrows to expand the organisation unit
+                            t<?oxy_comment_start author="cecilia" timestamp="20161205T104317+0100" comment="Cecilia 5 Dec 2016: No search for 2.25 or master.
+Removed text:
+&quot; or by searching for it by name or code&quot;
+and note:
+&quot;The search is case-insensitive for organisation unit names. For codes you need to type the exact code.&quot;" flag="done"?>ree<?oxy_comment_end?>
+                            .</para>
+                    </tip>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">Select</emphasis>.</para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <para>Enter a <emphasis role="bold">Name</emphasis> of the organisation unit.</para>
             <para>Each organisation unit must have an unique name.</para>
         </listitem>
         <listitem>
-            <para>In the <emphasis role="bold">Short name</emphasis> field, define a short name for
-                the organisation unit.</para>
+            <para>Enter a <emphasis role="bold">Short name</emphasis> for the organisation
+                unit.</para>
             <para>Typically, the short name is an abbreviation of the full organisation unit name.
                 This attribute is often used in reports to display the name of the organisation
                 unit, where space is limited.</para>
         </listitem>
         <listitem>
-            <para>(Optional) In the <emphasis role="bold">Code</emphasis> field, assign a
-                code.</para>
+            <para>(Optional) Assign a <emphasis role="bold">Code</emphasis>.</para>
             <para>In many countries organisation units are assigned a code.</para>
         </listitem>
         <listitem>
-            <para>In the <emphasis role="bold">Description</emphasis> field, type a description of
-                the organisation unit.</para>
+            <para>(Optional) Type a <emphasis role="bold">Description</emphasis> of the organisation
+                unit.</para>
         </listitem>
         <listitem>
             <para>Select an <emphasis role="bold">Opening date</emphasis>.</para>
-            <para>The opening dates control which organisation units that where existing at a point
-                in time, for example when analysing historical data. This attribute is
-                mandatory.</para>
+            <para>The opening dates control which organisation units that existed at a point in
+                time, for example when analysing historical data.</para>
         </listitem>
         <listitem>
             <para>If applicable, select a <emphasis role="bold">Closed date</emphasis>.</para>
@@ -100,30 +112,49 @@ Follow-up with SME before release.
                     <para>Phone number</para>
                 </listitem>
             </itemizedlist>
-            <para>This information can be vital for facilitating follow-up.</para>
+        </listitem>
+        <listitem>
+            <para>(<?oxy_comment_start author="cecilia" timestamp="20161205T113400+0100" comment="WHen x-refs work, add link to GIS section" flag="done"?>Optional<?oxy_comment_end?>)
+                Enter <emphasis role="bold">Latitude</emphasis> and <emphasis role="bold"
+                    >Longitude</emphasis>.</para>
+            <para>You must have latitude and longitude values to create maps in the <emphasis
+                    role="bold">GIS</emphasis> app. Then your organisation units can be represented
+                as points on a map, for example a health facility. Without this information, the
+                    <emphasis role="bold">GIS</emphasis> app will not work. </para>
+            <para>It might be more efficient to import coordinates later as a batch job for all
+                organisation units using the <emphasis role="bold">Import-Export</emphasis> app. You
+                also use the <emphasis role="bold">Import-Export</emphasis> app to create polygons.
+                A polygon is an organisation unit that represent an administrative boundary.</para>
+        </listitem>
+        <listitem>
+            <para>If applicable, select <emphasis role="bold"
+                    >D<?oxy_comment_start author="cecilia" timestamp="20161205T120303+0100" comment="When x-refs work, add link to Data set section" flag="done"?>ata
+                    sets<?oxy_comment_end?></emphasis> and assign
+                <?oxy_comment_start author="cecilia" timestamp="20161205T120116+0100" comment="What is the purpose of having them here?
+A user can only register data for a data set if that data set is assigned to the same org unit as the user." flag="done"?>them<?oxy_comment_end?>.</para>
+            <note>
+                <para>You control whether a user should be able to assign data sets to an
+                    organisation unit in the <emphasis role="bold">System Settings</emphasis>
+                    app:</para>
+                <para>Open the <emphasis role="bold">System Settings</emphasis> app, click <emphasis
+                        role="bold">Access</emphasis> and select <emphasis role="bold">Allow
+                        assigning object to related objects during add or update</emphasis>.</para>
+            </note>
         </listitem>
         <listitem>
             <para>If applicable, enter custom attributes values, for example <emphasis role="bold"
                     >HR identifier</emphasis>.</para>
-            <para>You set custom attributes in <emphasis role="bold">Data administration</emphasis>
-                > <emphasis role="bold">Attribute</emphasis>.
-                <?oxy_comment_start author="cecilia" timestamp="20160518T114951+0200" comment="At next revsision, add x-ref here." flag="done"?>For
-                more information about how to use attributes, refer to the &quot;Attributes&quot;
-                section.<?oxy_comment_end?></para>
+            <note>
+                <para>You configure the custom attributes in the <emphasis role="bold"
+                        >Maintenance</emphasis> app:</para>
+                <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                        role="bold">Other</emphasis> > <emphasis role="bold"
+                    >Attribute</emphasis><?oxy_comment_start author="cecilia" timestamp="20160518T114951+0200" comment="At next revsision, add x-ref here." flag="done"?>. </para>
+                <?oxy_comment_end?>
+            </note>
         </listitem>
-        <?oxy_comment_start author="cecilia" timestamp="20160524T121553+0200" comment="Will be added, see Iissue on GitHub
-https://github.com/dhis2/maintenance-app/issues/162
-- If release on Monday, field included."?>
         <listitem>
-            <para>(Optional) Enter
-                <?oxy_comment_start author="cecilia" timestamp="20160923T102103+0200" comment="For SME: are coordinates always here, or a custom attribute?"?>coordinates<?oxy_comment_end?>.</para>
-        </listitem>
-        <?oxy_comment_end?>
-        <listitem>
-            <para><?oxy_comment_start author="cecilia" timestamp="20160923T101928+0200" comment="Removed step 14 &quot;Enter Coordinates&quot;. See GitHub issue #162. SME confirms this will not be implemented for 2.25. 
-Removed text:
-&quot;This field is used to create the maps in the GIS module. Paste in the coordinates of the organisation unit in this field, either a polygon (for organisation units that represent an administrative boundary) or a point (for health facilities). Without this information the GIS module will not work. It might be more efficient to import these coordinates later as a batch job for all organisation units using the import module. See the GIS chapter for more details.&quot;"?>Click<?oxy_comment_end?>
-                <emphasis role="bold">Save</emphasis>.</para>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
         </listitem>
     </orderedlist>
 </section>
