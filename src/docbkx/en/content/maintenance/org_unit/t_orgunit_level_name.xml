@@ -23,7 +23,7 @@ If so, go trough all topics and update." flag="done"?>Province<?oxy_comment_end?
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
-                    role="bold">Organisation units</emphasis> > <emphasis role="bold">Organisation
+                    role="bold">Organisation unit</emphasis> > <emphasis role="bold">Organisation
                     unit level</emphasis>.</para>
             <para>The loading time of the list depends on the depth of the organisation unit
                 hierarchy tree.</para>
@@ -38,10 +38,10 @@ Number of levels that are loaded offline, depends on the org unit the user is as
             <para>Select the number of offline levels.</para>
             <?oxy_comment_end?>
             <note>
-                <para>You set the default value in the <emphasis role="bold">Settings</emphasis>
-                    app:</para>
-                <para>Open the <emphasis role="bold">Settings</emphasis> app, click <emphasis
-                        role="bold">General</emphasis> and select an item in the <emphasis
+                <para>You configure the default value in the <emphasis role="bold">System
+                        Settings</emphasis> app:</para>
+                <para>Open the <emphasis role="bold">System Settings</emphasis> app, click <emphasis
+                        role="bold">General</emphasis> and select a level in the <emphasis
                         role="bold">Max offline organisation unit levels</emphasis> list.</para>
             </note>
         </listitem>
