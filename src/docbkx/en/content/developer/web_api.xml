@@ -8551,9 +8551,9 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Numeric positive value</entry>
             </row>
             <row>
-              <entry>clusterField</entry>
+              <entry>coordinateField</entry>
               <entry>No</entry>
-              <entry>Field to base event clustering on. Default is event. Can be set to identifiers
+              <entry>Field to base geospatial event analytics on. Default is event. Can be set to identifiers
                 of attributes and data elements of value type coordinate.</entry>
               <entry>EVENT | &lt;attribute-id> | &lt;dataelement-id></entry>
             </row>
