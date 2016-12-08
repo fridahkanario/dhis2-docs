@@ -8211,10 +8211,10 @@ ORDER BY oul.level, par.name, ou.name</screen>
     </section>
     <section xml:id="webapi_analytics_raw_data">
       <title>Raw data format</title>
-      <para>The analytics rawData resource allows for returning the data stored in the analytics
-        data tables without any aggregation being performed. This is useful for clients which would
-        like to perform aggregation and filtering on their own without having to denormalize data in
-        all of the available data dimensions.</para>
+      <para>The analytics <emphasis>rawData</emphasis> resource allows for returning the data stored
+        in the analytics data tables without any aggregation being performed. This is useful for
+        clients which would like to perform aggregation and filtering on their own without having to
+        denormalize data in the available data dimensions themselves.</para>
       <para>
         <screen>/api/analytics/rawData</screen>
       </para>
@@ -8227,8 +8227,9 @@ ORDER BY oul.level, par.name, ou.name</screen>
           </listitem>
         </itemizedlist></para>
       <para>This resource follows the syntax of the regular analytics resource. Only a subset of the
-        query parameters are supported, as well as startDate and endDate parameters. The supported
-        parameters are listed in the table below.<table frame="all">
+        query parameters are supported. Additionally, a <emphasis>startDate</emphasis> and
+          <emphasis>endDate</emphasis> parameter are available. The supported parameters are listed
+        in the table below.<table frame="all">
           <title>Query parameters</title>
           <tgroup cols="2">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
@@ -8287,13 +8288,14 @@ ORDER BY oul.level, par.name, ou.name</screen>
             </tbody>
           </tgroup>
         </table></para>
-      <para>The dimension query parameter defines which dimensions (table columns) should be
-        included in the response. It can optionally be constrained with items. The filter query
-        parameter defines which items and dimensions (table columns) should be used as filter for
-        the response.</para>
-      <para>The organisation unit dimension works in a particular way as the response will contain
-        data associated with the organisation unit as well as all organisation units in the
-        sub-hierarchy (children in the tree).</para>
+      <para>The <emphasis>dimension</emphasis> query parameter defines which dimensions (table
+        columns) should be included in the response. It can optionally be constrained with items.
+        The <emphasis>filter</emphasis> query parameter defines which items and dimensions (table
+        columns) should be used as filter for the response.</para>
+      <para>For the organisation unit dimension, the response will contain data associated with the
+        organisation unit and all organisation units in the sub-hierarchy (children in the tree).
+        This is different compared to the regular analytics resource, where only the explicitly
+        selected organisation units are included.</para>
       <para>To retrieve a response with specific data elements, specific periods, specific
         organisation units and all data for two custom dimensions you can issue a request like
         this:
@@ -8301,21 +8303,22 @@ ORDER BY oul.level, par.name, ou.name</screen>
 &amp;dimension=J5jldMd8OHv&amp;dimension=Bpx0589u8y0
 &amp;dimension=pe:LAST_12_MONTHS
 &amp;dimension=ou:O6uvpzGd5pu;fdc6uOvgoji</screen></para>
-      <para>The startDate and endDate parameters allow for fetching data linked to any period
-        between those dates. This avoid the need for defining all periods explicitly in the request:
+      <para>The <emphasis>startDate</emphasis> and <emphasis>endDate</emphasis> parameters allow for
+        fetching data linked to any period between those dates. This avoids the need for defining
+        all periods explicitly in the request:
         <screen>/api/analytics/rawData.json?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU;Jtf34kNZhzP
 &amp;dimension=J5jldMd8OHv&amp;dimension=Bpx0589u8y0
-&amp;dimension=ou:O6uvpzGd5pu;fdc6uOvgoji
-&amp;startDate=2015-01-01&amp;endDate=2015-12-31</screen></para>
-      <para>The filter parameter can be used to filter a response without including that dimension
-        as part of the response, this time in CSV
+&amp;startDate=2015-01-01&amp;endDate=2015-12-31
+&amp;dimension=ou:O6uvpzGd5pu;fdc6uOvgoji</screen></para>
+      <para>The <emphasis>filter</emphasis> parameter can be used to filter a response without
+        including that dimension as part of the response, this time in CSV
         format:<screen>/api/analytics/rawData.csv?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU;Jtf34kNZhzP
 &amp;filter=J5jldMd8OHv:uYxK4wmcPqA;tDZVQ1WtwpA
-&amp;dimension=ou:O6uvpzGd5pu
-&amp;startDate=2015-01-01&amp;endDate=2015-12-31</screen></para>
-      <para>The response from the rawData resource will look identical to the regular analytics
-        resource; the difference is that the response contain raw, non-aggregated data, suitable for
-        further aggregation by third-party systems.</para>
+&amp;startDate=2015-01-01&amp;endDate=2015-12-31
+&amp;dimension=ou:O6uvpzGd5pu</screen></para>
+      <para>The response from the <emphasis>rawData</emphasis> resource will look identical to the
+        regular analytics resource; the difference is that the response contain raw, non-aggregated
+        data, suitable for further aggregation by third-party systems.</para>
     </section>
     <section xml:id="webapi_analytics_debugging">
       <title>Debugging</title>
