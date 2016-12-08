@@ -8209,6 +8209,114 @@ ORDER BY oul.level, par.name, ou.name</screen>
         <screen>api/analytics/dataValueSet.xml?dimension=dx:Uvn6LCg7dVU;OdiHJayrsKo
   &amp;dimension=pe:LAST_4_QUARTERS&amp;dimension=ou:lc3eMKXaEfw&amp;duplicatesOnly=true</screen></para>
     </section>
+    <section xml:id="webapi_analytics_raw_data">
+      <title>Raw data format</title>
+      <para>The analytics rawData resource allows for returning the data stored in the analytics
+        data tables without any aggregation being performed. This is useful for clients which would
+        like to perform aggregation and filtering on their own without having to denormalize data in
+        all of the available data dimensions.</para>
+      <para>
+        <screen>/api/analytics/rawData</screen>
+      </para>
+      <para>The following resource representations are supported:<itemizedlist>
+          <listitem>
+            <para>json (application/json)</para>
+          </listitem>
+          <listitem>
+            <para>csv (application/csv)</para>
+          </listitem>
+        </itemizedlist></para>
+      <para>This resource follows the syntax of the regular analytics resource. Only a subset of the
+        query parameters are supported, as well as startDate and endDate parameters. The supported
+        parameters are listed in the table below.<table frame="all">
+          <title>Query parameters</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Query parameter</entry>
+                <entry>Required / Notes</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>dimension</entry>
+                <entry>Yes</entry>
+              </row>
+              <row>
+                <entry>filter</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>startDate</entry>
+                <entry>No / yyyy-MM-dd</entry>
+              </row>
+              <row>
+                <entry>endDate</entry>
+                <entry>No / yyyy-MM-dd</entry>
+              </row>
+              <row>
+                <entry>skipMeta</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>skipData</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>hierarchyMeta</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>showHierarchy</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>displayProperty</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>inputIdScheme</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>userOrgUnit</entry>
+                <entry>No</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
+      <para>The dimension query parameter defines which dimensions (table columns) should be
+        included in the response. It can optionally be constrained with items. The filter query
+        parameter defines which items and dimensions (table columns) should be used as filter for
+        the response.</para>
+      <para>The organisation unit dimension works in a particular way as the response will contain
+        data associated with the organisation unit as well as all organisation units in the
+        sub-hierarchy (children in the tree).</para>
+      <para>To retrieve a response with specific data elements, specific periods, specific
+        organisation units and all data for two custom dimensions you can issue a request like
+        this:
+      <screen>/api/analytics/rawData.json?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU;Jtf34kNZhzP
+&amp;dimension=J5jldMd8OHv&amp;dimension=Bpx0589u8y0
+&amp;dimension=pe:LAST_12_MONTHS
+&amp;dimension=ou:O6uvpzGd5pu;fdc6uOvgoji</screen></para>
+      <para>The startDate and endDate parameters allow for fetching data linked to any period
+        between those dates. This avoid the need for defining all periods explicitly in the request:
+        <screen>/api/analytics/rawData.json?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU;Jtf34kNZhzP
+&amp;dimension=J5jldMd8OHv&amp;dimension=Bpx0589u8y0
+&amp;dimension=ou:O6uvpzGd5pu;fdc6uOvgoji
+&amp;startDate=2015-01-01&amp;endDate=2015-12-31</screen></para>
+      <para>The filter parameter can be used to filter a response without including that dimension
+        as part of the response, this time in CSV
+        format:<screen>/api/analytics/rawData.csv?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU;Jtf34kNZhzP
+&amp;filter=J5jldMd8OHv:uYxK4wmcPqA;tDZVQ1WtwpA
+&amp;dimension=ou:O6uvpzGd5pu
+&amp;startDate=2015-01-01&amp;endDate=2015-12-31</screen></para>
+      <para>The response from the rawData resource will look identical to the regular analytics
+        resource; the difference is that the response contain raw, non-aggregated data, suitable for
+        further aggregation by third-party systems.</para>
+    </section>
     <section xml:id="webapi_analytics_debugging">
       <title>Debugging</title>
       <para>When debugging analytics requests it can be useful to examine the data value source of
