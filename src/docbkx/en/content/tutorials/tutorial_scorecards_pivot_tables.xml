@@ -85,6 +85,69 @@
                     </screenshot></para>
             </listitem>
     </itemizedlist></section>
+
+    <section><title>Create a scorecard in the Pivot Table app</title>
+        <para></para>
+        <itemizedlist>
+            <listitem><para>Open the Pivot Table app from the top right menu of the dashboard. You can also enter the first letters of Pivot Table in the search field.</para></listitem>
+            <listitem><para>Go to the <emphasis role="bold">Data</emphasis> menu in the pane on the left side and select
+                        <emphasis role="bold">Indicators</emphasis> in the list.</para></listitem>
+            <listitem>
+                <para>Select an <emphasis role="bold">Indicator group</emphasis> such as “ANC” from
+                    the second list.</para>
+            </listitem>
+            <listitem><para>Using the arrows, select the type of indicators you want to see in your scorecard.<screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="resources/images/tutorials/scorecards_pivot_indicators.png"
+                            align="left" width="90%" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot></para></listitem>
+            <listitem><para>Click <emphasis role="bold">Update</emphasis>. This button is in the menu at the top of the
+                    workspace</para></listitem>
+            <listitem>
+                <para>Go to <emphasis role="bold">Periods</emphasis> and select a period for which
+                    you want to display data. In this “traffic light” example, we’ll go to the
+                    relative period section, where the checkboxes are. In <emphasis role="bold"
+                        >Quarters</emphasis>, select <emphasis role="bold">This quarter
+                    </emphasis>and <emphasis role="bold">Last quarter</emphasis>. Clear any other
+                    checkboxes and click <emphasis role="bold">Update</emphasis>.<screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="resources/images/tutorials/scorecards_pivot_period.png"
+                                    align="left" width="90%" format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot></para>
+            </listitem>
+            <listitem>
+                <para>Go to <emphasis role="bold">Organisation Units</emphasis> in the same left
+                    side pane, and click the arrow next to the gear icon.</para>
+            </listitem>
+            <listitem>
+                <para>Select <emphasis role="bold">Select levels</emphasis>.<screenshot>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="resources/images/tutorials/scorecards_pivot_orgunit_level.png"
+                                align="left" width="90%" format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot></para>
+            </listitem>
+            <listitem>
+                <para>Select <emphasis role="bold">District</emphasis> from the list next to the
+                    gear. Click <emphasis role="bold">Update</emphasis>.<screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="resources/images/tutorials/scorecards_pivot_orgunit_level2.png"
+                                    align="left" width="90%" format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot></para>
+            </listitem>
+        </itemizedlist><para>As you can see, the scorecard is starting to take shape in the workspace. Now it’s time to fine-tune the look and feel.</para></section>
+
     <section><title>Create a legend</title>
         <para></para>
         <itemizedlist>
@@ -93,6 +156,7 @@
             <listitem><para></para></listitem>
             <listitem><para></para></listitem>
         </itemizedlist></section>
+
     <section>
         <para></para>
         <itemizedlist>
@@ -125,6 +189,6 @@
             <listitem><para></para></listitem>
             <listitem><para></para></listitem>
         </itemizedlist></section>
-   
+ 
     
 </section>
