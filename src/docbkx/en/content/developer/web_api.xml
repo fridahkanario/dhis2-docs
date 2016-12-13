@@ -4174,6 +4174,12 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                 <entry>Filter the result down to a limited set of IDs by using <emphasis
                     role="italic">event=id1;id2</emphasis>.</entry>
               </row>
+              <row>
+                <entry>includeDeleted</entry>
+                <entry>boolean</entry>
+                <entry>false</entry>
+                <entry>When true, soft deleted events will be included in your query result.</entry>
+              </row>
             </tbody>
           </tgroup>
         </table>
