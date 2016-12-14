@@ -80,19 +80,23 @@
   </section>
   <section>
     <title>Create a program rule</title>
-    <screenshot>
-      <mediaobject>
-        <imageobject>
-          <?oxy_comment_start author="cecilia" timestamp="20161003T223145+0200" comment="Screen shot ok"?>
-          <imagedata width="80%" fileref="resources/images/program_rules/program-rule-edit.png"
-            format="PNG"/>
-          <?oxy_comment_end?>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
-    <note>
-      <para>A program rule belongs to exactly one program.</para>
-    </note>
+    <para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <?oxy_comment_start author="cecilia" timestamp="20161003T223145+0200" comment="Screen shot ok"?>
+            <imagedata width="80%" fileref="resources/images/program_rules/program-rule-edit.png"
+              format="PNG"/>
+            <?oxy_comment_end?>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
+    <para>
+      <note>
+        <para>A program rule belongs to exactly one program.</para>
+      </note>
+    </para>
     <orderedlist>
       <listitem>
         <para>Open the <emphasis role="bold">Program / Attributes</emphasis> app and click <emphasis
