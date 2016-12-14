@@ -14,11 +14,11 @@
         <para>You can create program notifications for programs with registration and their program
             stages. The notifications are sent either via the internal DHIS2 messaging system, via
             e-mail or via text messages (SMS). You can use program notifications to, for example,
-            send an automatic reminder to a tracked entity 10 days before a scheduled
-            appointment.</para>
-        <para>You use the program’s tracked entity attributes and the variables to create a
-            notification. The following attributes are available in the <emphasis role="bold"
-                >Parameters</emphasis> field:</para>
+            send an automatic reminder to a tracked entity 10 days before a scheduled appointment.
+            You use the program’s tracked entity attributes (for example first name) and program
+            parameters (for example enrollment date) to create a notification template.</para>
+        <para>In the <emphasis role="bold">Parameters</emphasis> field, you'll find a list of
+            available tracked entity attributes and the following program parameters:</para>
         <table frame="all">
             <title/>
             <tgroup cols="3">
@@ -44,11 +44,50 @@
                             <para>Program</para>
                         </entry>
                         <entry>
-                            <para>Program name</para>
+                            <para>Current date</para>
                         </entry>
                         <entry>
                             <para>
-                                <screen>V{program_name}</screen>
+                                <screen>V{current_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Days since enrollment date</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{days_since_enrollment_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Enrollment date</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{enrollment_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Incident date</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{incident_date}</screen>
                             </para>
                         </entry>
                     </row>
@@ -68,6 +107,19 @@
                     <row>
                         <entry>
                             <para/>
+                        </entry>
+                        <entry>
+                            <para>Program name</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{program_name}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>Program stage</para>
                         </entry>
                         <entry>
                             <para>Current date</para>
@@ -80,62 +132,10 @@
                     </row>
                     <row>
                         <entry>
-                            <para>Program stage</para>
-                        </entry>
-                        <entry>
-                            <para>Program name</para>
-                        </entry>
-                        <entry>
-                            <para>
-                                <screen>V{program_name}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
                             <para/>
                         </entry>
                         <entry>
-                            <para>Program stage name</para>
-                        </entry>
-                        <entry>
-                            <para>
-                                <screen>V{program_stage_name}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para/>
-                        </entry>
-                        <entry>
-                            <para>Organisation unit name</para>
-                        </entry>
-                        <entry>
-                            <para>
-                                <screen>V{org_unit_name}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para/>
-                        </entry>
-                        <entry>
-                            <para>Due date (of the event)</para>
-                        </entry>
-                        <entry>
-                            <para>
-                                <screen>V{due_date}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry>
-                            <para/>
-                        </entry>
-                        <entry>
-                            <para> (Elapsed) days since due date</para>
+                            <para>Days since due date</para>
                         </entry>
                         <entry>
                             <para>
@@ -159,11 +159,50 @@
                             <para/>
                         </entry>
                         <entry>
-                            <para>Current date</para>
+                            <para>Due date</para>
                         </entry>
                         <entry>
                             <para>
-                                <screen>V{current_date}</screen>
+                                <screen>V{due_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Organisation unit name</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{org_unit_name}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Program name</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{program_name}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Program stage name</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{program_stage_name}</screen>
                             </para>
                         </entry>
                     </row>
@@ -173,6 +212,17 @@
     </section>
     <section>
         <title>Create a program notification</title>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%"
+                            fileref="resources/images/program/program_notification_ui.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
         <orderedlist>
             <listitem>
                 <para>Open the <emphasis role="bold">Program / Attributes</emphasis> app and click
@@ -347,10 +397,8 @@
             </listitem>
             <listitem>
                 <para>Create the <emphasis role="bold">Subject template</emphasis>.</para>
-                <para>Double-click the
-                    <?oxy_comment_start author="cecilia" timestamp="20161005T120230+0200" comment="consist of TEI attributes and??"?>parameter<?oxy_comment_end?>s
-                    in the <emphasis role="bold">Parameters</emphasis> field to add them to your
-                    subject.</para>
+                <para>Double-click the parameters in the <emphasis role="bold">Parameters</emphasis>
+                    field to add them to your subject.</para>
                 <note>
                     <para>The subject is not included in text messages.</para>
                 </note>
