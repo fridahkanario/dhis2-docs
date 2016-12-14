@@ -9,8 +9,7 @@
     xml:id="create-scorecards-pivot-table">
     <title>Create Scorecards using the Pivot Table app</title>
     <para><emphasis><emphasis role="bold">Scorecards definition:</emphasis> In public health
-        settings such as Ministries of Health, scorecards offer a useful and standardized method for combining related indicators into one table. A scorecard gives an overall view of the performance of a health program such as a
-        vaccination program, highlighting successes, weaknesses, and areas for improvement
+        settings such as Ministries of Health, scorecards offer a useful and standardized method for combining related indicators into one table. A scorecard gives an overall view of the performance of a health program such as a vaccination program, highlighting successes, weaknesses, and areas for improvement
             Here's what a typical  scorecard looks like:</emphasis>  
         <screenshot>
                 <mediaobject>
@@ -43,7 +42,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_maintenance_app.png"
-                                    align="left" width="10" format="PNG"/>
+                                    align="left" width="60%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -59,7 +58,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_maintenance_legend.png"
-                                    align="left" width="70%" format="PNG"/>
+                                    align="left" width="50%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -71,7 +70,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_maintenance_addbtn.png"
-                                    align="left" width="10%" format="PNG"/>
+                                    align="left" width="6%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -89,7 +88,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_maintenance_legend_color.png"
-                                    align="left" width="90%" format="PNG"/>
+                                    align="left" width="70%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -117,7 +116,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_pivot_indicators.png"
-                                    align="left" width="70%" format="PNG"/>
+                                    align="left" width="60%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -137,7 +136,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_pivot_period.png"
-                                    align="left" width="70%" format="PNG"/>
+                                    align="left" width="60%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -152,7 +151,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_pivot_orgunit_level.png"
-                                    align="left" width="70%" format="PNG"/>
+                                    align="left" width="60%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -164,7 +163,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_pivot_orgunit_level2.png"
-                                    align="left" width="70%" format="PNG"/>
+                                    align="left" width="60%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -179,7 +178,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_pivot_layout.png"
-                                    align="left" width="70%" format="PNG"/>
+                                    align="left" width="60%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -204,7 +203,7 @@
                         <imageobject>
                             <imagedata
                                 fileref="resources/images/tutorials/scorecards_pivot_options.png"
-                                align="left" width="70%" format="PNG"/>
+                                align="left" width="60%" format="PNG"/>
                         </imageobject>
                     </mediaobject>
                 </screenshot></para>
@@ -231,7 +230,7 @@
             <mediaobject>
                 <imageobject>
                     <imagedata fileref="resources/images/tutorials/scorecards_pivot_result.png"
-                        align="left" width="90%" format="PNG"/>
+                        align="left" width="60%" format="PNG"/>
                 </imageobject>
             </mediaobject>
         </screenshot></section>
