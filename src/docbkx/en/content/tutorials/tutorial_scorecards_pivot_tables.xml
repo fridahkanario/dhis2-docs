@@ -9,10 +9,8 @@
     xml:id="create-scorecards-pivot-table">
     <title>Create Scorecards using the Pivot Table app</title>
     <para><emphasis><emphasis role="bold">Scorecards definition:</emphasis> In public health
-            settings such as Ministries of Health, scorecards offer a useful method for combining a
-            range of data. A scorecard gives an overall view of the performance of a health program such as a
-            vaccination program, highlighting successes, weaknesses, and areas for improvement. A
-            scorecard usually contains data such as district names, health indicators, and a period.
+        settings such as Ministries of Health, scorecards offer a useful and standardized method for combining related indicators into one table. A scorecard gives an overall view of the performance of a health program such as a
+        vaccination program, highlighting successes, weaknesses, and areas for improvement
             Here's what a typical  scorecard looks like:</emphasis>  
         <screenshot>
                 <mediaobject>
