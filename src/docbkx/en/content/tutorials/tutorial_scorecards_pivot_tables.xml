@@ -20,51 +20,62 @@
                     </imageobject>
                 </mediaobject>
             </screenshot></para>
-    <para><emphasis>This tutorial explains how to create a scorecard in the DHIS2 Pivot Table app. There are several advantages to using the Pivot Table to create a scorecard, such as:</emphasis></para>
+    <para>This tutorial explains how to create a scorecard in the DHIS2 Pivot Table app. There are
+        several advantages to using the Pivot Table to create a scorecard, such as:</para>
     <itemizedlist>
         <listitem>
-            <para><emphasis>You can save the scorecard on the dashboard and use it
-                    offline.</emphasis></para>
+            <para>You can save the scorecard on the dashboard and use it offline.</para>
         </listitem>
         <listitem>
-            <para><emphasis>You can share the scorecard with other DHIS2 users.</emphasis></para>
+            <para>You can share the scorecard with other DHIS2 users.</para>
         </listitem>
     </itemizedlist>
-    <para><emphasis>Let's get started!</emphasis></para>
+    <para>Let's get started!</para>
     <section><title>Create a legend for your scorecard</title>
         <para>First, we’ll create a 3-color “traffic light” legend for the scorecard. With three
             basic colors, the scorecard is easy to scan and easy to understand.</para>
-    <itemizedlist>
-        <listitem><para>Open the <emphasis role="bold">Maintenance</emphasis> app. Click the menu in the top right
-                    corner and select Maintenance from the list of apps. You can also type the first
-                    letters of the word maintenance in the search field to find the app.<screenshot>
+        <orderedlist>
+            <listitem>
+                <para>Open the <emphasis role="bold">Maintenance</emphasis> app. Click the menu in
+                    the top right corner and select Maintenance from the list of apps. You can also
+                    type the first letters of the word maintenance in the search field to find the app.<screenshot>
                         <mediaobject>
                             <imageobject>
-                                <imagedata fileref="resources/images/tutorials/scorecards_maintenance_app.png"
-                                    align="left" width="90%" format="PNG"/>
+                                <imagedata
+                                    fileref="resources/images/tutorials/scorecards_maintenance_app.png"
+                                    align="left" width="10" format="PNG"/>
                             </imageobject>
                         </mediaobject>
-                    </screenshot></para></listitem>
-        <listitem><para>In the Maintenance app, scroll to the bottom of the page right down to the <emphasis
-                        role="bold">Other</emphasis> section.</para></listitem>
-        <listitem><para>Go to <emphasis role="bold">Legend</emphasis> and click the <emphasis role="bold"
-            >+</emphasis>.<screenshot>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata fileref="resources/images/tutorials/scorecards_maintenance_legend.png"
-                            align="left" width="90%" format="PNG"/>
-                    </imageobject>
-                </mediaobject>
-            </screenshot></para></listitem>
-        <listitem><para>In the <emphasis role="bold">Legend Management</emphasis> page, scroll to the bottom of the
-            page and create a new legend by clicking the blue + button.<screenshot>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata fileref="resources/images/tutorials/scorecards_maintenance_addbtn.png"
-                            align="left" width="90%" format="PNG"/>
-                    </imageobject>
-                </mediaobject>
-            </screenshot></para></listitem>
+                    </screenshot></para>
+            </listitem>
+            <listitem>
+                <para>In the Maintenance app, scroll to the bottom of the page right down to the
+                        <emphasis role="bold">Other</emphasis> section.</para>
+            </listitem>
+            <listitem>
+                <para>Go to <emphasis role="bold">Legend</emphasis> and click the <emphasis
+                        role="bold">+</emphasis>.<screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata
+                                    fileref="resources/images/tutorials/scorecards_maintenance_legend.png"
+                                    align="left" width="70%" format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot></para>
+            </listitem>
+            <listitem>
+                <para>In the <emphasis role="bold">Legend Management</emphasis> page, scroll to the
+                    bottom of the page and create a new legend by clicking the blue + button.<screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata
+                                    fileref="resources/images/tutorials/scorecards_maintenance_addbtn.png"
+                                    align="left" width="10%" format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot></para>
+            </listitem>
             <listitem>
                 <para>Enter a name for the legend such as “Traffic Light”, a start value and an end
                     value in the fields. The values you enter here depend on the performance ratings
@@ -76,34 +87,45 @@
                     + button and then edit the colors.<screenshot>
                         <mediaobject>
                             <imageobject>
-                                <imagedata fileref="resources/images/tutorials/scorecards_maintenance_legend_color.png"
+                                <imagedata
+                                    fileref="resources/images/tutorials/scorecards_maintenance_legend_color.png"
                                     align="left" width="90%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
             </listitem>
-    </itemizedlist></section>
+        </orderedlist></section>
 
     <section><title>Create a scorecard in the Pivot Table app</title>
-        <para></para>
-        <itemizedlist>
-            <listitem><para>Open the Pivot Table app from the top right menu of the dashboard. You can also enter the first letters of Pivot Table in the search field.</para></listitem>
-            <listitem><para>Go to the <emphasis role="bold">Data</emphasis> menu in the pane on the left side and select
-                        <emphasis role="bold">Indicators</emphasis> in the list.</para></listitem>
+        <orderedlist>
+            <listitem>
+                <para>Open the <emphasis role="bold">Pivot Table</emphasis> app from the top right
+                    menu of the dashboard. You can also enter the first letters of Pivot Table in
+                    the search field.</para>
+            </listitem>
+            <listitem>
+                <para>Go to the <emphasis role="bold">Data</emphasis> menu in the pane on the left
+                    side and select <emphasis role="bold">Indicators</emphasis> in the list.</para>
+            </listitem>
             <listitem>
                 <para>Select an <emphasis role="bold">Indicator group</emphasis> such as “ANC” from
                     the second list.</para>
             </listitem>
-            <listitem><para>Using the arrows, select the type of indicators you want to see in your scorecard.<screenshot>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata fileref="resources/images/tutorials/scorecards_pivot_indicators.png"
-                            align="left" width="90%" format="PNG"/>
-                    </imageobject>
-                </mediaobject>
-            </screenshot></para></listitem>
-            <listitem><para>Click <emphasis role="bold">Update</emphasis>. This button is in the menu at the top of the
-                    workspace</para></listitem>
+            <listitem>
+                <para>Using the arrows, select the type of indicators you want to see in your scorecard.<screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata
+                                    fileref="resources/images/tutorials/scorecards_pivot_indicators.png"
+                                    align="left" width="70%" format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot></para>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold">Update</emphasis>. This button is in the menu at
+                    the top of the workspace</para>
+            </listitem>
             <listitem>
                 <para>Go to <emphasis role="bold">Periods</emphasis> and select a period for which
                     you want to display data. In this “traffic light” example, we’ll go to the
@@ -113,8 +135,9 @@
                     checkboxes and click <emphasis role="bold">Update</emphasis>.<screenshot>
                         <mediaobject>
                             <imageobject>
-                                <imagedata fileref="resources/images/tutorials/scorecards_pivot_period.png"
-                                    align="left" width="90%" format="PNG"/>
+                                <imagedata
+                                    fileref="resources/images/tutorials/scorecards_pivot_period.png"
+                                    align="left" width="70%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -125,68 +148,115 @@
             </listitem>
             <listitem>
                 <para>Select <emphasis role="bold">Select levels</emphasis>.<screenshot>
-                    <mediaobject>
-                        <imageobject>
-                            <imagedata fileref="resources/images/tutorials/scorecards_pivot_orgunit_level.png"
-                                align="left" width="90%" format="PNG"/>
-                        </imageobject>
-                    </mediaobject>
-                </screenshot></para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata
+                                    fileref="resources/images/tutorials/scorecards_pivot_orgunit_level.png"
+                                    align="left" width="70%" format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot></para>
             </listitem>
             <listitem>
                 <para>Select <emphasis role="bold">District</emphasis> from the list next to the
                     gear. Click <emphasis role="bold">Update</emphasis>.<screenshot>
                         <mediaobject>
                             <imageobject>
-                                <imagedata fileref="resources/images/tutorials/scorecards_pivot_orgunit_level2.png"
-                                    align="left" width="90%" format="PNG"/>
+                                <imagedata
+                                    fileref="resources/images/tutorials/scorecards_pivot_orgunit_level2.png"
+                                    align="left" width="70%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
             </listitem>
-        </itemizedlist><para>As you can see, the scorecard is starting to take shape in the workspace. Now it’s time to fine-tune the look and feel.</para></section>
+        </orderedlist><para>As you can see, the scorecard is starting to take shape in the workspace. Now it’s time to fine-tune the look and feel.</para></section>
 
-    <section><title>Create a legend</title>
-        <para></para>
-        <itemizedlist>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-        </itemizedlist></section>
-
+    <section><title>Add background colors to your scorecard</title>
+        <orderedlist>
+            <listitem>
+                <para>In the workspace, click <emphasis role="bold">Layout</emphasis>. <screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata
+                                    fileref="resources/images/tutorials/scorecards_pivot_layout.png"
+                                    align="left" width="70%" format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot></para>
+            </listitem>
+            <listitem>
+                <para>In <emphasis role="bold">Table layout</emphasis>, drag <emphasis role="bold"
+                        >Organisation units</emphasis> down to the <emphasis role="bold">Row
+                        dimensions</emphasis> section.</para>
+            </listitem>
+            <listitem>
+                <para>Drag <emphasis role="bold">Data</emphasis> to the <emphasis role="bold">Column
+                        dimensions</emphasis> section.</para>
+            </listitem>
+            <listitem>
+                <para>In the <emphasis role="bold">Column dimensions</emphasis> pane, drag <emphasis
+                        role="bold">Periods</emphasis> below <emphasis role="bold">Data</emphasis>,
+                    and click <emphasis role="bold">Update</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>In the workspace, click <emphasis role="bold">Options</emphasis>.<screenshot>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata
+                                fileref="resources/images/tutorials/scorecards_pivot_options.png"
+                                align="left" width="70%" format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot></para>
+            </listitem>
+            <listitem>
+                <para>Go to <emphasis role="bold">Data</emphasis> and clear all the
+                    checkboxes.</para>
+            </listitem>
+            <listitem>
+                <para>Go to <emphasis role="bold">Style</emphasis> > <emphasis role="bold">Legend
+                        set</emphasis> and from the list, select the legend you created in the
+                    Maintenance app. In this example, we called it Traffic Light.</para>
+            </listitem>
+            <listitem>
+                <para>Go to <emphasis role="bold">Style</emphasis> > <emphasis role="bold">Legend
+                        display style</emphasis> and select <emphasis role="bold">Background
+                            color</emphasis>. </para>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold">Update</emphasis>. </para>
+            </listitem>
+        </orderedlist>
+        <para>The Scorecard is ready! </para><screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resources/images/tutorials/scorecards_pivot_result.png"
+                        align="left" width="90%" format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot></section>
     <section>
-        <para></para>
-        <itemizedlist>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-        </itemizedlist></section>
-    <section><title>Create a legend</title>
-        <para></para>
-        <itemizedlist>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-        </itemizedlist></section>
-    <section><title>Create a legend</title>
-        <para></para>
-        <itemizedlist>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-        </itemizedlist></section>
-    <section><title>Create a legend</title>
-        <para></para>
-        <itemizedlist>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-            <listitem><para></para></listitem>
-        </itemizedlist></section>
+        <title>Save and share your Scorecard</title>
+        <orderedlist>
+            <listitem>
+                <para>In the workspace, go to the <emphasis role="bold">Favorites</emphasis>
+                    menu.</para>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold">Save as</emphasis>. Enter a name for your
+                    Scorecard.</para>
+            </listitem>
+            <listitem>
+                <para>To share your Scorecard, select <emphasis role="bold"
+                    >Favorites</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>Enter the name of a user group name, and click <emphasis role="bold"
+                        >Save</emphasis>. Your scorecard can be viewed by people that you share a
+                    dashboard with.</para>
+            </listitem>
+        </orderedlist>
+    </section>
  
     
 </section>
