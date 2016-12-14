@@ -58,7 +58,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_maintenance_legend.png"
-                                    align="left" width="50%" format="PNG"/>
+                                    align="left" width="20%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -202,8 +202,8 @@
                     <mediaobject>
                         <imageobject>
                             <imagedata
-                                fileref="resources/images/tutorials/scorecards_pivot_options.png"
-                                align="left" width="60%" format="PNG"/>
+                                    fileref="resources/images/tutorials/scorecards_pivot_options.png"
+                                    align="left" width="50%" format="PNG"/>
                         </imageobject>
                     </mediaobject>
                 </screenshot></para>
@@ -230,7 +230,7 @@
             <mediaobject>
                 <imageobject>
                     <imagedata fileref="resources/images/tutorials/scorecards_pivot_result.png"
-                        align="left" width="60%" format="PNG"/>
+                        align="left" width="100%" format="PNG"/>
                 </imageobject>
             </mediaobject>
         </screenshot></section>
