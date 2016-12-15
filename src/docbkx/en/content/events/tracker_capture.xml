@@ -838,8 +838,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       <listitem>
         <para>In the upper right corner, click <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png" width="30%"
-              />
+              <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png" width="7%"/>
             </imageobject>
           </inlinemediaobject> > <emphasis role="bold">Deactivate</emphasis>.</para>
       </listitem>
@@ -860,8 +859,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       <listitem>
         <para>In the upper right corner, click <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png" width="50%"
-              />
+              <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png" width="7%"/>
             </imageobject>
           </inlinemediaobject> > <emphasis role="bold">Activate</emphasis>.</para>
       </listitem>
@@ -889,8 +887,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       <listitem>
         <para>In the upper right corner, click <inlinemediaobject>
             <imageobject>
-              <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png" width="80%"
-              />
+              <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png" width="7%"/>
             </imageobject>
           </inlinemediaobject> > <emphasis role="bold">Delete</emphasis>.</para>
       </listitem>
