@@ -58,7 +58,7 @@
                             <imageobject>
                                 <imagedata
                                     fileref="resources/images/tutorials/scorecards_maintenance_legend.png"
-                                    align="left" width="20%" format="PNG"/>
+                                    align="left" width="25%" format="PNG"/>
                             </imageobject>
                         </mediaobject>
                     </screenshot></para>
@@ -76,12 +76,12 @@
                     </screenshot></para>
             </listitem>
             <listitem>
-                <para>Enter a name for the legend such as “Traffic Light”, a start value and an end
+                <para>Enter a name for the legend such as “Traffic light”, a start value and an end
                     value in the fields. The values you enter here depend on the performance ratings
                     you wish to set for the scorecard.</para>
             </listitem>
             <listitem>
-                <para>Change <emphasis role="bold">Number of legend items</emphasis> to 3 to obtain
+                <para>Change <emphasis role="bold">Number of legend items</emphasis> to 3 to display
                     three colors in the scorecard. To change the legend item colors, click the blue
                     + button and then edit the colors.<screenshot>
                         <mediaobject>
@@ -103,11 +103,11 @@
                     the search field.</para>
             </listitem>
             <listitem>
-                <para>Go to the <emphasis role="bold">Data</emphasis> menu in the pane on the left
-                    side and select <emphasis role="bold">Indicators</emphasis> in the list.</para>
+                <para>Go to <emphasis role="bold">Data</emphasis> in the pane on the left side and
+                    select <emphasis role="bold">Indicators</emphasis> in the list.</para>
             </listitem>
             <listitem>
-                <para>Select an <emphasis role="bold">Indicator group</emphasis> such as “ANC” from
+                <para>Select an <emphasis role="bold">Indicator group</emphasis> such as “ANC” in
                     the second list.</para>
             </listitem>
             <listitem>
@@ -127,11 +127,11 @@
             </listitem>
             <listitem>
                 <para>Go to <emphasis role="bold">Periods</emphasis> and select a period for which
-                    you want to display data. In this “traffic light” example, we’ll go to the
-                    relative period section, where the checkboxes are. In <emphasis role="bold"
-                        >Quarters</emphasis>, select <emphasis role="bold">This quarter
-                    </emphasis>and <emphasis role="bold">Last quarter</emphasis>. Clear any other
-                    checkboxes and click <emphasis role="bold">Update</emphasis>.<screenshot>
+                    you want to display data. In this “traffic light” example, we’ll use the
+                    relative period section. In <emphasis role="bold">Quarters</emphasis>, select
+                        <emphasis role="bold">This quarter </emphasis>and <emphasis role="bold">Last
+                        quarter</emphasis>. Clear any other checkboxes and click <emphasis
+                        role="bold">Update</emphasis>.<screenshot>
                         <mediaobject>
                             <imageobject>
                                 <imagedata
@@ -143,7 +143,7 @@
             </listitem>
             <listitem>
                 <para>Go to <emphasis role="bold">Organisation Units</emphasis> in the same left
-                    side pane, and click the arrow next to the gear icon.</para>
+                    side pane, and click the arrow next to the gear button.</para>
             </listitem>
             <listitem>
                 <para>Select <emphasis role="bold">Select levels</emphasis>.<screenshot>
@@ -157,8 +157,8 @@
                     </screenshot></para>
             </listitem>
             <listitem>
-                <para>Select <emphasis role="bold">District</emphasis> from the list next to the
-                    gear. Click <emphasis role="bold">Update</emphasis>.<screenshot>
+                <para>Select <emphasis role="bold">District</emphasis> from the list (next to the
+                    gear button). Click <emphasis role="bold">Update</emphasis>.<screenshot>
                         <mediaobject>
                             <imageobject>
                                 <imagedata
@@ -215,7 +215,7 @@
             <listitem>
                 <para>Go to <emphasis role="bold">Style</emphasis> > <emphasis role="bold">Legend
                         set</emphasis> and from the list, select the legend you created in the
-                    Maintenance app. In this example, we called it Traffic Light.</para>
+                    Maintenance app. In this example, we called it Traffic light.</para>
             </listitem>
             <listitem>
                 <para>Go to <emphasis role="bold">Style</emphasis> > <emphasis role="bold">Legend
