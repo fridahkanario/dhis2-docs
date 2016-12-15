@@ -825,6 +825,78 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
     </orderedlist>
   </section>
   <section>
+    <title>Deactivate a TEI</title>
+    <para>If you deactivate a TEI, the TEI becomes 'read-only'. Data associated with the TEI is not
+      deleted.</para>
+    <orderedlist>
+      <listitem>
+        <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+      </listitem>
+      <listitem>
+        <para>Open an existing TEI dashboard.</para>
+      </listitem>
+      <listitem>
+        <para>In the upper right corner, click <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png"/>
+            </imageobject>
+          </inlinemediaobject>  > <emphasis role="bold">Deactivate</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Yes</emphasis> to confirm the deactivation.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section>
+    <title>Activate a TEI</title>
+    <orderedlist>
+      <listitem>
+        <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+      </listitem>
+      <listitem>
+        <para>Open an existing TEI dashboard.</para>
+      </listitem>
+      <listitem>
+        <para>In the upper right corner, click <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png"/>
+            </imageobject>
+          </inlinemediaobject>  > <emphasis role="bold">Activate</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Yes</emphasis> to confirm the activation.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section>
+    <title>Delete a TEI</title>
+    <para>
+      <warning>
+        <para>When you delete a TEI, you delete all
+          <?oxy_comment_start author="cecilia" timestamp="20161215T143004+0100" comment="As for example?"?>data<?oxy_comment_end?>
+          associated with the TEI.</para>
+      </warning>
+    </para>
+    <orderedlist>
+      <listitem>
+        <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+      </listitem>
+      <listitem>
+        <para>Open an existing TEI dashboard.</para>
+      </listitem>
+      <listitem>
+        <para>In the upper right corner, click <inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png"/>
+            </imageobject>
+          </inlinemediaobject>  > <emphasis role="bold">Delete</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Yes</emphasis> to confirm the deletion.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section>
     <title>Configure the TEI dashboard</title>
     <section>
       <title>Show or hide widgets</title>
