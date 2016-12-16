@@ -10732,6 +10732,12 @@ interval=WEEK" -u admin:district</screen>
                   identifier.</entry>
               </row>
               <row>
+                <entry>includeChildren</entry>
+                <entry>false | true</entry>
+                <entry>Includes users from all children organisation units of the ou
+                  parameter.</entry>
+              </row>
+              <row>
                 <entry>page</entry>
                 <entry>Number</entry>
                 <entry>The page number.</entry>
