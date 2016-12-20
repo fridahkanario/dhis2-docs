@@ -45,6 +45,7 @@
   <!-- <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/program_rules.xml" encoding="UTF-8"/> -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/profile/profile.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/metadata_sync/metadata_sync.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/tutorials/dhis2_tutorial_toc.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/faq/faq.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/user_authorities/user_authorities_table.xml" encoding="UTF-8"/> 
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/glossary/glossary.xml" encoding="UTF-8"/>
