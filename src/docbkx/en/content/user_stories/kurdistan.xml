@@ -13,30 +13,31 @@
             straightforward.</emphasis></para>
     <itemizedlist>
         <listitem>
-            <para>Set up in 2015 by the University of Rome Tor Vergata (Italy) with the Ministry of
-                Health of Kurdistan Regional Government (KRG).</para>
+            <para><emphasis>Set up in 2015 by the University of Rome Tor Vergata (Italy) with the
+                    Ministry of Health of Kurdistan Regional Government (KRG).</emphasis></para>
         </listitem>
         <listitem>
-            <para>Funded by the Cooperation and Development Agency of the Ministry of Foreign
-                Affairs of Italy.p</para>
+            <para><emphasis>Funded by the Cooperation and Development Agency of the Ministry of
+                    Foreign Affairs of Italy.p</emphasis></para>
         </listitem>
         <listitem>
-            <para>Deployed by <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="http://ipro.orgipro-it.eu/">I-PRO</link>.</para>
+            <para><emphasis>Deployed by <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://ipro.orgipro-it.eu/">I-PRO</link>.</emphasis></para>
         </listitem>
         <listitem>
-            <para>Compliant with <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="http://www.who.int/classifications/icd/en/">WHO ICD-10</link>
-                standards. </para>
+            <para><emphasis>Compliant with <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://www.who.int/classifications/icd/en/">WHO ICD-10</link>
+                    standards. </emphasis></para>
         </listitem>
         <listitem>
-            <para>700 doctors trained in ICD-10.</para>
+            <para><emphasis>700 doctors trained in ICD-10.</emphasis></para>
         </listitem>
         <listitem>
-            <para>130,000 health events registered so far in the system. </para>
+            <para><emphasis>130,000 health events registered so far in the system.
+                </emphasis></para>
         </listitem>
         <listitem>
-            <para>Bilingual English and Kurdish-Sorani DHIS2 interface. </para>
+            <para><emphasis>Bilingual English and Kurdish-Sorani DHIS2 interface. </emphasis></para>
         </listitem>
     </itemizedlist>
     <section><para><emphasis role="bold">In June 2015, a DHIS2 Health Information System</emphasis> was set up to
@@ -48,14 +49,30 @@
             Kurdish directorates of Erbil, Duhok and Slemani.<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/use_cases/regions.png" format="PNG"
-                            align="left" width="20cm"/>
+                        <imagedata fileref="resources/images/use_cases/kurdistan_terrain.png"
+                            format="PNG" align="left" width="60%"/>
                     </imageobject>
                 </mediaobject>
-            </screenshot></para><para><emphasis role="bold">With 34 operating users spread across 10 health centers</emphasis>,
-            Kurdish medical professionals can now follow more than 130,000 health events. Health
-            professionals are gathering statistics for disease diagnoses, hospital discharges,
-            registrations of births, deaths and immunizations.</para></section>
+            </screenshot></para><para><emphasis role="bold">With 60 registered users spread across 30 health centers</emphasis>,
+            Kurdish medical professionals can now follow a staggering <emphasis role="bold">150,000
+                health events</emphasis>! Indeed, just 16 months into the pilot project, there are
+            now 7 primary/family health centers, 9 hospitals, and 14 general health centers, 10
+            health centers in rural areas or small towns/villages, and 20 health centers in major
+            towns. </para>
+        <para>100,000 cases have been imported via periodic uploads from existing and running
+            databases, and 50,000 cases have been recorded by DHIS2 users. This great progress is
+            enabling health professionals to gather statistics for disease diagnoses, hospital
+            discharges, registrations of births, deaths and immunizations.</para>
+        <para><emphasis role="bold">The project is also using the WHO’s International Classification
+                of Diseases</emphasis> (<link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.who.int/classifications/icd/en/">ICD-10</link>), which is the
+            standard diagnostic tool for epidemiology, health management and clinical purposes. So
+            far, over 700 doctors and nurses have received specialized ICD-10 training and
+            epidemiological surveillance training.</para>
+        <para>You can see a YouTube video of the project here: <link
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://www.youtube.com/watch?v=-jIOUJkVGJw&amp;feature=em-uploademail"
+                >Kurdistan Region, DHIS2 Health Monitoring System - October 2016</link>.</para></section>
     <section><title></title><para></para></section>
     <section><title></title><para></para></section>
     <section><title></title><para></para></section>
