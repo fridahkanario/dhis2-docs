@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="manage_customform">
+    <title>Manage custom forms</title>
+    <section>
+        <title>Create a custom
+            <?oxy_comment_start author="cecilia" timestamp="20160630T172030+0200" comment="Before release, verify that image renders correctly.
+- Ok in output." flag="done"?>form<?oxy_comment_end?></title>
+        <para>You design custom forms in a built-in WYSIWYG HTML editor. If you select <emphasis
+                role="bold">Source</emphasis>, you can paste HTML code directly in the editing area.
+            For a complete guide on how to use the
+            <?oxy_comment_start author="cecilia" timestamp="20160609T114330+0200" comment="For SME: Which version of the editor is used? 
+Answer from SME:
+We&apos;re using CKEditor version 4.5.9 - which is the latest release at the moment. (Nicolay)
+" flag="done"?>editor<?oxy_comment_end?>,
+            refer to
+                <?oxy_comment_start author="cecilia" timestamp="20160609T112954+0200" comment="Verfy that link works and is visible in output.
+- Link ok" flag="done"?><link
+                xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://docs.ckeditor.com/"
+            /><?oxy_comment_end?>.</para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata width="80%" align="center"
+                        fileref="resources/images/datasets/data_set_custom_form_create.png"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+        <para>To create a custom form:</para>
+        <orderedlist>
+            <listitem>
+                <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                        role="bold">Data set</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>In the list, find the data set you want to add a custom form to.</para>
+            </listitem>
+            <listitem>
+                <para>Click the options menu and select <emphasis role="bold">Design data entry
+                        form</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>In the editing area, create the custom form.</para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Double-clik on a object in the left-hand list to insert it in the
+                            form.</para>
+                    </listitem>
+                    <listitem>
+                        <para>If you already have the HTML code for your form, click <emphasis
+                                role="bold">Source</emphasis> and paste the code.</para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+            <listitem>
+                <para>Select a <emphasis role="bold">Form display style</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold">Save</emphasis>.</para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title><?oxy_comment_start author="cecilia" timestamp="20160609T164133+0200" comment="Task done by implmenter" flag="done"?>Script<?oxy_comment_end?>ing
+            in custom forms</title>
+        <para>In custom data entry form you can use
+            <?oxy_comment_start author="cecilia" timestamp="20160614T113801+0200" comment="Note: JavaScript is a trademark owned by Oracle (previously Sun corp.)" flag="done"?>JavaScript<?oxy_comment_end?>
+            to create dynamic behavior and customizations. As an example, you can hide form sections
+            based on specific user input for data elements, or show specific information when a form
+            loads.</para>
+        <section>
+            <title>Events</title>
+            <para>The DHIS2 data entry module provides a range of events which you can register for
+                and use to perform actions at certain times. The events are registered on the
+                <?oxy_comment_start author="cecilia" timestamp="20160609T173110+0200" comment="A document element is a term used by developers." flag="done"?>document
+                element<?oxy_comment_end?>. The jQuery event object and the data set identifier are
+                always the first two arguments provided to the callback functions. The table below
+                provides an overview of the events and when they are triggered.</para>
+            <table frame="all">
+                <?oxy_comment_start author="cecilia" timestamp="20160609T172708+0200" comment="Before publication, verify that cell content don&apos;t bleed.
+- Table ok." flag="done"?>
+                <title>Data entry events</title>
+                <?oxy_comment_end?>
+                <tgroup cols="3">
+                    <colspec colnum="1" colname="c1" colwidth="1.18*"/>
+                    <colspec colnum="2" colname="c2" colwidth="1.42*"/>
+                    <colspec colnum="3" colname="newCol3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Key</entry>
+                            <entry>Description</entry>
+                            <entry>Arguments</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>dhis2.de.event.formLoaded</para>
+                            </entry>
+                            <entry>
+                                <para>Triggered after the data entry form is rendered, but before
+                                    data values are set in entry fields.</para>
+                            </entry>
+                            <entry>
+                                <para>Event | Data set ID</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>dhis2.de.event.dataValuesLoaded</para>
+                            </entry>
+                            <entry>
+                                <para>Triggered after data values are set in entry fields.</para>
+                            </entry>
+                            <entry>
+                                <para>Event | Data set ID</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>dhis2.de.event.formReady</para>
+                            </entry>
+                            <entry>
+                                <para>Triggered when the data entry form is completely rendered and
+                                    loaded with all elements.</para>
+                            </entry>
+                            <entry>
+                                <para>Event | Data set ID</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>dhis2.de.event.dataValueSaved</para>
+                            </entry>
+                            <entry>
+                                <para>Triggered when a data value is saved successfully.</para>
+                            </entry>
+                            <entry>
+                                <para>Event | Data set ID | Data value object</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>dhis2.de.event.completed</para>
+                            </entry>
+                            <entry>
+                                <para>Triggered when a data set is successfully marked as
+                                    complete.</para>
+                            </entry>
+                            <entry>
+                                <para>Event | Data set ID | Complete registration object</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>dhis2.de.event.uncompleted</para>
+                            </entry>
+                            <entry>
+                                <para>Triggered when a data set is successfully marked as
+                                    incomplete.</para>
+                            </entry>
+                            <entry>
+                                <para>Event | Data set ID</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>dhis2.de.event.validationSuccess</para>
+                            </entry>
+                            <entry>
+                                <para>Triggered when validation is done and there were no
+                                    violations.</para>
+                            </entry>
+                            <entry>
+                                <para>Event | Data set ID</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>dhis2.de.event.validationError</para>
+                            </entry>
+                            <entry>
+                                <para>Triggered when validation is done and there were one or more
+                                    violations.</para>
+                            </entry>
+                            <entry>
+                                <para>Event | Data set ID</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>dhis2.ou.event.orgUnitSelected</para>
+                            </entry>
+                            <entry>
+                                <para>Triggered when one or more organisation units are selected in
+                                    the org unit web tree.</para>
+                            </entry>
+                            <entry>
+                                <para>Event | Org unit IDs | Org unit names | Sub org unit
+                                    IDs</para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <para>To register for an event:</para>
+            <screen>&lt;script type=&quot;text/javascript&quot;&gt;
+
+dhis2.util.on( &apos;dhis2.de.event.formReady&apos;, function( event, ds ) {
+  console.log( &apos;The form with id: &apos; + ds + &apos; is loaded!&apos; );
+} );
+
+dhis2.util.on( &apos;dhis2.de.event.dataValueSaved&apos;, function( event, ds, dv ) {
+  console.log( &apos;Data value: &apos; + dv.value + &apos; was saved with data element: &apos; + dv.de );
+} );
+
+dhis2.util.on( &apos;dhis2.de.event.completed&apos;, function( event, ds, cr ) {
+  console.log( &apos;Form was completed for org unit: &apos; + cr.ou );
+} );
+
+&lt;/script&gt;</screen>
+            <note>
+                <para>Be careful to only use &quot;namespaced&quot; events like the ones in the
+                    example above and not general ones like &quot;click&quot; as the dhis2.util.on
+                    method will unregister the event first.</para>
+            </note>
+            <para>If your function only applies to certain data sets you can use the supplied data
+                set identifier and shortcut your function for unwanted data sets like this:</para>
+            <screen>dhis2.de.on( &apos;dhis2.de.event.validationSuccess&apos;, function( event, ds ) {
+  if ( $.inArray( ds, [&apos;utXOiGbEj14&apos;, &apos;Re7qzHEThSC&apos;] ) == -1 ) {
+    return false;
+  }
+  console.log( &apos;Form with id: &apos; + ds + &apos; validated successfully!&apos; );
+} );</screen>
+            <para>The identifiers of the input fields in the data entry form is on the format
+                described below. This format can be used to select the input fields in your script
+                and perform actions on
+                them:<screen>&lt;dataelementid&gt;-&lt;optioncomboid&gt;-val</screen></para>
+            <para>Since the data set identifier is provided for all events a feasible alternative is
+                to utilize the &quot;files&quot; Web API resource and keep your callback functions
+                in a single file, where you let the JavaScript code take action based on which data
+                set is currently loaded.</para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>The DHIS2 data entry module contains JavaScript API functions which can be
+                accessed from custom data entry forms.</para>
+            <para><emphasis role="bold">dhis2.de.api.getSelections</emphasis>: This function returns
+                a JavaScript object which contains properties for all dimensions with corresponding
+                values for the identifiers of the selected options. It contains properties for "ds"
+                (data set), "pe" (period), "ou" (organisation unit) and identifiers for all data set
+                categories.</para>
+            <para>An example response looks like
+                this:<screen>{
+ +  ds: "lyLU2wR22tC",
+ +  pe: "201605",
+ +  ou: "g8upMTyEZGZ",
+ +  LFsZ8v5v7rq: "CW81uF03hvV",
+ +  yY2bQYqNt0o: "yMj2MnmNI8L"
+ +}</screen></para>
+            <para>Example JavaScript usage of this
+                function:<screen>var sel = dhis2.de.api.getSelections();
+ +var orgUnit = sel["ou"];
+ +var partner = sel["LFsZ8v5v7rq"];</screen></para>
+        </section>
+    </section>
+    </section>

@@ -30,13 +30,14 @@
       </listitem>
       <listitem>
         <para>All resources can be uniquely identified by a <emphasis role="italic">URI</emphasis>
-          (also referred to as <emphasis role="italic">URL</emphasis>). All resources have a default
-          representation. You can indicate that you are interested in a specific representation by
-          supplying an <emphasis role="italic">Accept</emphasis> HTTP header, a file extension or a
-            <emphasis role="italic">format</emphasis> query parameter. So in order to retrieve the
-          PDF representation of a report table you can supply a <emphasis role="italic">Accept:
-            application/pdf</emphasis> header or append <emphasis role="italic">.pdf</emphasis> or
-            <emphasis role="italic">?format=pdf</emphasis> to your request URL.</para>
+          (also referred to a/s <emphasis role="italic">URL</emphasis>). All resources have a
+          default representation. You can indicate that you are interested in a specific
+          representation by supplying an <emphasis role="italic">Accept</emphasis> HTTP header, a
+          file extension or a <emphasis role="italic">format</emphasis> query parameter. So in order
+          to retrieve the PDF representation of a report table you can supply a <emphasis
+            role="italic">Accept: application/pdf</emphasis> header or append <emphasis
+            role="italic">.pdf</emphasis> or <emphasis role="italic">?format=pdf</emphasis> to your
+          request URL.</para>
       </listitem>
       <listitem>
         <para>Interactions with the API requires correct use of HTTP <emphasis role="italic"
@@ -1581,13 +1582,12 @@ http://server/api/26/constants/ID</screen></para>
         "ANC":<screen>curl -u user:pass http://server/api/26/metadata?defaultFilter=name:^like:ANC&amp;dataElements=true&amp;indicators=true</screen></para>
     </section>
     <section xml:id="webapi_dataset_program_export_dependencies">
-      <title>Data set and program export with dependencies</title>
-      <para>When you want to move a whole set of data set or program metadata from one server to
-        another (possibly empty) server, we have two special endpoints for just that
-        purpose:<screen>/api/26/dataSets/ID/metadata.json</screen><screen>/api/26/programs/ID/metadata.json</screen></para>
-      <para>These exports can be imported both using the old importer at <emphasis role="italic"
-          >/api/metadata</emphasis> and the new importer at <emphasis role="italic"
-          >/api/23/metadata</emphasis>.</para>
+      <title>Metadata export with dependencies</title>
+      <para>When you want to move a whole set of data set, program or category combo metadata from
+        one server to another (possibly empty) server, we have three special endpoints for just that
+        purpose:<screen>/api/26/dataSets/ID/metadata.json</screen><screen>/api/26/programs/ID/metadata.json</screen><screen>/api/26/categoryCombos/ID/metadata.json</screen></para>
+      <para>These exports can then be imported using <emphasis role="italic"
+          >/api/26/metadata</emphasis>.</para>
     </section>
   </section>
   <section xml:id="webapi_metadata_import">
@@ -2910,6 +2910,12 @@ http://server/api/26/constants/ID</screen></para>
               <entry>Property of the org unit object to use to map the data values.</entry>
             </row>
             <row>
+              <entry>categoryOptionComboIdScheme</entry>
+              <entry>id | name | code |&#160;attribute:ID</entry>
+              <entry>Property of the category option combo and attribute option combo objects to use
+                to map the data values.</entry>
+            </row>
+            <row>
               <entry>idScheme</entry>
               <entry>id | name | code|&#160;attribute:ID</entry>
               <entry>Property of all objects including data elements, org units and category option
@@ -3226,8 +3232,8 @@ http://server/api/26/constants/ID</screen></para>
             </row>
             <row>
               <entry>categoryOptionComboIdScheme</entry>
-              <entry>Property of the category option combo object to use for data values in
-                response.</entry>
+              <entry>Property of the category option combo and attribute option combo objects to use
+                for data values in response.</entry>
             </row>
           </tbody>
         </tgroup>
@@ -4167,6 +4173,12 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                 <entry>false</entry>
                 <entry>Filter the result down to a limited set of IDs by using <emphasis
                     role="italic">event=id1;id2</emphasis>.</entry>
+              </row>
+              <row>
+                <entry>includeDeleted</entry>
+                <entry>boolean</entry>
+                <entry>false</entry>
+                <entry>When true, soft deleted events will be included in your query result.</entry>
               </row>
             </tbody>
           </tgroup>
@@ -8153,11 +8165,11 @@ ORDER BY oul.level, par.name, ou.name</screen>
     </section>
     <section xml:id="webapi_analytics_data_value_set_format">
       <title>Data value set format</title>
-      <para>The analytics resource allows for returning aggregated data in the data value set
-        format. This format represents raw data values, as opposed to data which has been aggregated
-        along various dimensions. Exporting aggregated data as regular data values is useful for
-        data exchange between systems when the target system contains data of finer granularity
-        compared to what the destination system is storing. </para>
+      <para>The analytics <emphasis>dataValueSet</emphasis> resource allows for returning aggregated
+        data in the data value set format. This format represents raw data values, as opposed to
+        data which has been aggregated along various dimensions. Exporting aggregated data as
+        regular data values is useful for data exchange between systems when the target system
+        contains data of finer granularity compared to what the destination system is storing. </para>
       <para>As an example one can specify an indicator in the target system to summarize data for
         multiple data elements and import this data for a single data element in the destionation
         system. As another example one can aggregate data collected at organisation unit level 4 in
@@ -8186,16 +8198,133 @@ ORDER BY oul.level, par.name, ou.name</screen>
         </itemizedlist></para>
       <para>Any other dimension will be ignored. Filters will be applied as with regular analytics
         requests. Note that any data dimension type can be specified, including indicators, data
-        elements, data sets and program indicators.</para>
+        elements, data element operands, data sets and program indicators.</para>
       <para>An example request which aggregates data for specific indicators, periods and
-        organisation units and returns it as regular data values in XML looks like
-        this:<screen>api/analytics/dataValueSet.xml?dimension=dx:Uvn6LCg7dVU;OdiHJayrsKo
+        organisation units and returns it as regular data values in XML looks like this:
+        <screen>api/analytics/dataValueSet.xml?dimension=dx:Uvn6LCg7dVU;OdiHJayrsKo
   &amp;dimension=pe:LAST_4_QUARTERS&amp;dimension=ou:lc3eMKXaEfw;PMa2VCrupOd</screen></para>
+      <para>A request which aggregates data for data element operands and uses CODE as output
+        identifier scheme looks like the below. When defining the output identifier scheme, all
+        metadata objects part of the response are
+        affected:<screen>api/analytics/dataValueSet.json?dimension=dx:fbfJHSPpUQD.pq2XI5kz2BY;fbfJHSPpUQD.PT59n8BQbqM
+  &amp;dimension=pe:LAST_12_MONTHS&amp;dimension=ou:ImspTQPwCqd&amp;outputIdScheme=CODE</screen></para>
       <para>When using attribute-based identifier schemes for export there is a risk of producing
         duplicate data values. The boolean query parameter duplicatesOnly can be used for debugging
         purposes to return only duplicates data values. This response can be used to clean up the
-        duplicates:<screen>api/analytics/dataValueSet.xml?dimension=dx:Uvn6LCg7dVU;OdiHJayrsKo
+        duplicates:
+        <screen>api/analytics/dataValueSet.xml?dimension=dx:Uvn6LCg7dVU;OdiHJayrsKo
   &amp;dimension=pe:LAST_4_QUARTERS&amp;dimension=ou:lc3eMKXaEfw&amp;duplicatesOnly=true</screen></para>
+    </section>
+    <section xml:id="webapi_analytics_raw_data">
+      <title>Raw data format</title>
+      <para>The analytics <emphasis>rawData</emphasis> resource allows for returning the data stored
+        in the analytics data tables without any aggregation being performed. This is useful for
+        clients which would like to perform aggregation and filtering on their own without having to
+        denormalize data in the available data dimensions themselves.</para>
+      <para>
+        <screen>/api/analytics/rawData</screen>
+      </para>
+      <para>The following resource representations are supported:<itemizedlist>
+          <listitem>
+            <para>json (application/json)</para>
+          </listitem>
+          <listitem>
+            <para>csv (application/csv)</para>
+          </listitem>
+        </itemizedlist></para>
+      <para>This resource follows the syntax of the regular analytics resource. Only a subset of the
+        query parameters are supported. Additionally, a <emphasis>startDate</emphasis> and
+          <emphasis>endDate</emphasis> parameter are available. The supported parameters are listed
+        in the table below.<table frame="all">
+          <title>Query parameters</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Query parameter</entry>
+                <entry>Required / Notes</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>dimension</entry>
+                <entry>Yes</entry>
+              </row>
+              <row>
+                <entry>filter</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>startDate</entry>
+                <entry>No / yyyy-MM-dd</entry>
+              </row>
+              <row>
+                <entry>endDate</entry>
+                <entry>No / yyyy-MM-dd</entry>
+              </row>
+              <row>
+                <entry>skipMeta</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>skipData</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>hierarchyMeta</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>showHierarchy</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>displayProperty</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>inputIdScheme</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>userOrgUnit</entry>
+                <entry>No</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
+      <para>The <emphasis>dimension</emphasis> query parameter defines which dimensions (table
+        columns) should be included in the response. It can optionally be constrained with items.
+        The <emphasis>filter</emphasis> query parameter defines which items and dimensions (table
+        columns) should be used as filter for the response.</para>
+      <para>For the organisation unit dimension, the response will contain data associated with the
+        organisation unit and all organisation units in the sub-hierarchy (children in the tree).
+        This is different compared to the regular analytics resource, where only the explicitly
+        selected organisation units are included.</para>
+      <para>To retrieve a response with specific data elements, specific periods, specific
+        organisation units and all data for two custom dimensions you can issue a request like
+        this:
+      <screen>/api/analytics/rawData.json?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU;Jtf34kNZhzP
+&amp;dimension=J5jldMd8OHv&amp;dimension=Bpx0589u8y0
+&amp;dimension=pe:LAST_12_MONTHS
+&amp;dimension=ou:O6uvpzGd5pu;fdc6uOvgoji</screen></para>
+      <para>The <emphasis>startDate</emphasis> and <emphasis>endDate</emphasis> parameters allow for
+        fetching data linked to any period between those dates. This avoids the need for defining
+        all periods explicitly in the request:
+        <screen>/api/analytics/rawData.json?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU;Jtf34kNZhzP
+&amp;dimension=J5jldMd8OHv&amp;dimension=Bpx0589u8y0
+&amp;startDate=2015-01-01&amp;endDate=2015-12-31
+&amp;dimension=ou:O6uvpzGd5pu;fdc6uOvgoji</screen></para>
+      <para>The <emphasis>filter</emphasis> parameter can be used to filter a response without
+        including that dimension as part of the response, this time in CSV
+        format:<screen>/api/analytics/rawData.csv?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU;Jtf34kNZhzP
+&amp;filter=J5jldMd8OHv:uYxK4wmcPqA;tDZVQ1WtwpA
+&amp;startDate=2015-01-01&amp;endDate=2015-12-31
+&amp;dimension=ou:O6uvpzGd5pu</screen></para>
+      <para>The response from the <emphasis>rawData</emphasis> resource will look identical to the
+        regular analytics resource; the difference is that the response contain raw, non-aggregated
+        data, suitable for further aggregation by third-party systems.</para>
     </section>
     <section xml:id="webapi_analytics_debugging">
       <title>Debugging</title>
@@ -8355,6 +8484,14 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>No</entry>
               <entry>Specify enrollment status of events to include.</entry>
               <entry>ACTIVE | COMPLETED | CANCELLED</entry>
+            </row>
+            <row xmlns:ns2="http://www.w3.org/1998/Math/MathML"
+              xmlns:ns="http://docbook.org/ns/docbook" xmlns:date="http://exslt.org/dates-and-times">
+              <entry>relativePeriodDate</entry>
+              <entry>string</entry>
+              <entry>No</entry>
+              <entry>Date identifier e.g: "2016-01-01". Overrides the start date of the relative
+                period</entry>
             </row>
           </tbody>
         </tgroup>
@@ -8535,6 +8672,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Yes</entry>
               <entry>Size of clusters in meters.</entry>
               <entry>Numeric positive value</entry>
+            </row>
+            <row>
+              <entry>coordinateField</entry>
+              <entry>No</entry>
+              <entry>Field to base geospatial event analytics on. Default is event. Can be set to identifiers
+                of attributes and data elements of value type coordinate.</entry>
+              <entry>EVENT | &lt;attribute-id> | &lt;dataelement-id></entry>
             </row>
             <row>
               <entry>bbox</entry>
@@ -9572,6 +9716,8 @@ interval=WEEK" -u admin:district</screen>
     <para>Data pruning will remove complete data set registrations, data approvals, data value
       audits and data values, in this case for an organisation unit.</para>
     <screen>/api/26/maintenance/dataPruning/organisationUnits/&lt;org-unit-id&gt;</screen>
+    <para>Data pruning for data elements, which will remove data value audits and data
+      values.<screen>/api/26/maintenance/dataPruning/dataElement/&lt;data-element-uid></screen></para>
     <para>Metadata validation will apply all metadata validation rules and return the result of the
       operation:</para>
     <screen>/api/26/metadataValidation</screen>
@@ -10584,6 +10730,12 @@ interval=WEEK" -u admin:district</screen>
                 <entry>Identifier</entry>
                 <entry>Filter on users who are associated with the organisation unit with the given
                   identifier.</entry>
+              </row>
+              <row>
+                <entry>includeChildren</entry>
+                <entry>false | true</entry>
+                <entry>Includes users from all children organisation units of the ou
+                  parameter.</entry>
               </row>
               <row>
                 <entry>page</entry>

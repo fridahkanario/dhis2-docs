@@ -258,14 +258,14 @@ What happens when you share a user group with another user group?"?>groups<?oxy_
         <para>See
             <?oxy_comment_start author="cecilia" timestamp="20161102T135023+0100" comment="Add URL to correct sections when build works."?>also<?oxy_comment_end?>:</para>
         <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/sharing.html"
+                xlink:href="https://ci.dhis2.org/docs/master/en/user/html/sharing.html"
                 >Sharing</link></para>
         <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/program_notifications.html"
+                xlink:href="https://ci.dhis2.org/docs/master/en/user/html/program_notifications.html"
                 >Manage program notifications</link></para>
         <para>
             <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/manage_push_reports.html"
+                xlink:href="https://ci.dhis2.org/docs/master/en/user/html/manage_push_reports.html"
                 >Mange push reports</link></para>
     </section>
 </section>
