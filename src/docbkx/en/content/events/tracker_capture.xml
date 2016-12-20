@@ -836,14 +836,14 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         <para>Open an existing TEI dashboard.</para>
       </listitem>
       <listitem>
-        <para>In the upper right corner, click <inlinemediaobject>
+        <para>In the top right corner, click the <inlinemediaobject>
             <imageobject>
               <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png" width="7%"/>
             </imageobject>
-          </inlinemediaobject> > <emphasis role="bold">Deactivate</emphasis>.</para>
+          </inlinemediaobject> button > <emphasis role="bold">Deactivate</emphasis>.</para>
       </listitem>
       <listitem>
-        <para>Click <emphasis role="bold">Yes</emphasis> to confirm the deactivation.</para>
+        <para>Click <emphasis role="bold">Yes</emphasis> to confirm.</para>
       </listitem>
     </orderedlist>
   </section>
@@ -857,14 +857,14 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         <para>Open an existing TEI dashboard.</para>
       </listitem>
       <listitem>
-        <para>In the upper right corner, click <inlinemediaobject>
+        <para>In the upper top corner, click the <inlinemediaobject>
             <imageobject>
               <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png" width="7%"/>
             </imageobject>
-          </inlinemediaobject> > <emphasis role="bold">Activate</emphasis>.</para>
+          </inlinemediaobject> button > <emphasis role="bold">Activate</emphasis>.</para>
       </listitem>
       <listitem>
-        <para>Click <emphasis role="bold">Yes</emphasis> to confirm the activation.</para>
+        <para>Click <emphasis role="bold">Yes</emphasis> to confirm.</para>
       </listitem>
     </orderedlist>
   </section>
@@ -885,14 +885,14 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         <para>Open an existing TEI dashboard.</para>
       </listitem>
       <listitem>
-        <para>In the upper right corner, click <inlinemediaobject>
+        <para>In the top right corner, click the <inlinemediaobject>
             <imageobject>
               <imagedata fileref="resources/images/tracker_capture/tc_tei_red_icon.png" width="7%"/>
             </imageobject>
-          </inlinemediaobject> > <emphasis role="bold">Delete</emphasis>.</para>
+          </inlinemediaobject> button > <emphasis role="bold">Delete</emphasis>.</para>
       </listitem>
       <listitem>
-        <para>Click <emphasis role="bold">Yes</emphasis> to confirm the deletion.</para>
+        <para>Click <emphasis role="bold">Yes</emphasis> to confirm.</para>
       </listitem>
     </orderedlist>
   </section>
