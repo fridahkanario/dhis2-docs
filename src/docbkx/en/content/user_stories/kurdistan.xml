@@ -44,12 +44,12 @@
             assist the Kurdish health authorities in collecting population data and improving the
             access and quality of public health care.</para></section>
     <section>
-        <para>A KRG DHIS2 pilot project led by the University of Tor Vergata, Rome, and realized by
+        <para>A KRG-DHIS2 pilot project led by the University of Tor Vergata, Rome, and realized by
             IPRO and Euresist was deployed across a set of pilot health centers and hospitals in the
             Kurdish directorates of Erbil, Duhok and Slemani.<screenshot>
                 <mediaobject>
                     <imageobject>
-<imagedata fileref="resources/images/use_cases/kurdistan_terrain.png"
+                        <imagedata fileref="resources/images/use_cases/kurdistan_terrain.png"
                             format="PNG" align="left" width="60%"/>
                     </imageobject>
                 </mediaobject>
@@ -69,10 +69,57 @@
             standard diagnostic tool for epidemiology, health management and clinical purposes. So
             far, over 700 doctors and nurses have received specialized ICD-10 training and
             epidemiological surveillance training.</para>
-        <para>You can see a YouTube video of the project here: <link
+        <para>If you'd like a summary, view a video of the project here: <link
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 xlink:href="https://www.youtube.com/watch?v=-jIOUJkVGJw&amp;feature=em-uploademail"
                 >Kurdistan Region, DHIS2 Health Monitoring System - October 2016</link>.</para></section>
-    <section><title></title><para></para></section>
+    <section><title>DHIS2 - the best choice available</title><para>After conducting a thorough benchmarking of six software platforms that can be found with a
+            tight budget, DHIS2 was selected as the most promising, all-encompassing software. Those
+            involved in the assessment got affirmative answers to all of these key points regarding DHIS2:<itemizedlist>
+                <listitem>
+                    <para>This software enables you to define the composition of the local health
+                        management system.</para>
+                </listitem>
+                <listitem>
+                    <para>It enables you to define the hierarchy between health structures.</para>
+                </listitem>
+                <listitem>
+                    <para>It records aggregated data and case by case data.</para>
+                </listitem>
+                <listitem>
+                    <para>It uses smart phones and SMS as data entry points.</para>
+                </listitem>
+                <listitem>
+                    <para>It works offline and is web-based.</para>
+                </listitem>
+                <listitem>
+                    <para>It's intended for health institutions and governments.</para>
+                </listitem>
+                <listitem>
+                    <para>It has a good track record: already adopted and assessed in several
+                        countries.</para>
+                </listitem>
+                <listitem>
+                    <para>It has a strong user network for supporting development and
+                        implementation.</para>
+                </listitem>
+                <listitem>
+                    <para>There are good training programs available for users.</para>
+                </listitem>
+            </itemizedlist></para></section>
+    <section>
+        <title>Key implementation challenges</title>
+        <para>With a small time frame to get a DHIS2 epidemiological surveillance pilot project
+            implemented and deployed in the whole Kurdish region of Iraq, many challenges lay ahead
+            for the teams involved.</para>
+        <para>The first challenge lay in building a solution that would work in a short time. One
+            that would satisfy at the very least the basic needs of the regional health system in
+            collecting data.</para>
+        <para>A subset of the regional health centers came on board; rural and urban centers, family
+            health centers, hospitals, hospital colleges and general health centers were involved in
+            the pilot project. These centers, roughly around 30 establishments, tested the system,
+            its feasibility and functions.</para>
+        <para/>
+    </section>
 </chapter>
 
