@@ -153,11 +153,12 @@ error_occurred=Une erreur s&apos;est produite</programlisting>
   <section xml:id="translation-server">
     <title>Using the DHIS2 translation server</title>
     <para>A web-based portal solution has been setup in order to facilitate the translation of DHIS
-      2 into multiple languages. Simply direct your browser to https://translate.dhis2.net/ and
-      register for an account by providing a username, email address and password. The server will
-      send you a confirmation email which you can use to activate your account. Once you have
-      activated your account, simply press the &quot;Log in&quot; link from the main portal page,
-      and provide your username and password. </para>
+      2 into multiple languages. Simply direct your browser to <link
+        xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://translate.dhis2.net/"
+        >https://translate.dhis2.net/</link> and register for an account by providing a username,
+      email address and password. The server will send you a confirmation email which you can use to
+      activate your account. Once you have activated your account, simply press the &quot;Log
+      in&quot; link from the main portal page, and provide your username and password. </para>
     <para>The first time you login, you should select your settings, by clicking &quot;My
       account-&gt;Settings&quot;. Here you can select your interface language, the projects which
       you wish to work on, and the languages which you will translate into. Be sure to press
