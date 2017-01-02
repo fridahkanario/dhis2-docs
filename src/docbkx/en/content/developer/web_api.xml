@@ -10777,6 +10777,7 @@ interval=WEEK" -u admin:district</screen>
   &quot;surname&quot;: &quot;Doe&quot;,
   &quot;email&quot;: &quot;johndoe@mail.com&quot;,
   &quot;userCredentials&quot;: {
+    &quot;id&quot;: &quot;ZyjSDLHGPv4&quot;,
     &quot;username&quot;: &quot;johndoe&quot;,
     &quot;password&quot;: &quot;your-password-123&quot;,
     &quot;userRoles&quot;: [ {
