@@ -18,7 +18,7 @@
 - Explain that in Event Capture you register events without registration, (in one single program stage?)
 Within a porgram you can create an event with registreation or without registration -  what&apos;s the third option?"?>app<?oxy_comment_end?></title>
   <section>
-    <title>About the Event
+    <title>[Review ongoing] About the Event
       <?oxy_comment_start author="cecilia" timestamp="20160826T105748+0200" comment="For tech writer:
 Add definitions of: event, event without registration, ..."?>Capture<?oxy_comment_end?>
       app</title>
@@ -39,12 +39,22 @@ Add definitions of: event, event without registration, ..."?>Capture<?oxy_commen
       regular intervals. Events are sometimes called cases or records. In DHIS2
       e<?oxy_comment_start author="cecilia" timestamp="20160829T095359+0200" comment="Can an event be registered without a program?"?>vents<?oxy_comment_end?>
       are linked to a program. The Event Capture app lets you select the organisation unit and
-      program and specifiy a date when a event happened, before entering information for the
+      program and specify a date when a event happened, before entering information for the
       event.</para>
-    <para>The Event Capture app works online and offline. If the Internet connectivity drops, you
-      can continue to capture events. The events will be stored locally in your web browser
-      (client). When connectivity has returned, the system will ask you to upload the locally stored
-      data. The system then sends the data to the server where the data is stored.</para>
+    <para>The <emphasis role="bold">Event Capture</emphasis> app works online and offline. If the
+      Internet connectivity drops, you can continue to capture events. The events will be stored
+      locally in your web browser (client). When connectivity has returned, the system will ask you
+      to upload the locally stored data. The system then sends the data to the server where the data
+      is stored.</para>
+    <note>
+      <para>When you close an organisation unit, you can't register or edit events
+        <?oxy_comment_start author="cecilia" timestamp="20170102T105411+0100" comment="Related to this organisation unit?
+
+Pending info from SME. 
+Could also effect TEIs."?>to<?oxy_comment_end?>
+        this organisation unit in the <emphasis role="bold">Event Capture</emphasis> and <emphasis
+          role="bold">Tracker Capture</emphasis> apps.</para>
+    </note>
     <note>
       <?oxy_comment_start author="cecilia" timestamp="20160829T140850+0200" comment="Verify with SME if this is still correct.
 So data is saved on the local machine but not accessible in the newly reopened web browser?"?>
@@ -56,30 +66,23 @@ So data is saved on the local machine but not accessible in the newly reopened w
     </note>
     <itemizedlist>
       <listitem>
-        <para>
-          <orderedlist>
-            <listitem>
-              <para><emphasis role="bold">Sorting:</emphasis> this can be done by clicking the
-                sorting icon of each column header. A red sorting icon implies the current sorting
-                column. However, the sorting functionality works only within the page displayed.
-                Currently, it is not possible to do sorting from serverside.</para>
-            </listitem>
-            <listitem>
-              <para><emphasis role="bold">Filtering:</emphasis> this is done by clicking the small
-                search icon shown to the right of each column header. Clicking them provides an
-                input field to type a filtering criteria. The system starts applying the filter the
-                moment a user starts to type. During filtering it is possible to define start and
-                end dates for date type data elements and lower and upper limits for number types.
-                Server side filtering is not-support at the moment.</para>
-            </listitem>
-            <listitem>
-              <para><emphasis role="bold">Paging:</emphasis> The list of events can be paged by
-                using the paging section at the bootom of the list. Paging allows you to quickly
-                move between pages of events and to change the page size, i.e. the number of events
-                per page.</para>
-            </listitem>
-          </orderedlist>
-        </para>
+        <para><emphasis role="bold">Sorting:</emphasis> this can be done by clicking the sorting
+          icon of each column header. A red sorting icon implies the current sorting column.
+          However, the sorting functionality works only within the page displayed. Currently, it is
+          not possible to do sorting from serverside.</para>
+      </listitem>
+      <listitem>
+        <para><emphasis role="bold">Filtering:</emphasis> this is done by clicking the small search
+          icon shown to the right of each column header. Clicking them provides an input field to
+          type a filtering criteria. The system starts applying the filter the moment a user starts
+          to type. During filtering it is possible to define start and end dates for date type data
+          elements and lower and upper limits for number types. Server side filtering is not-support
+          at the moment.</para>
+      </listitem>
+      <listitem>
+        <para><emphasis role="bold">Paging:</emphasis> The list of events can be paged by using the
+          paging section at the bootom of the list. Paging allows you to quickly move between pages
+          of events and to change the page size, i.e. the number of events per page.</para>
       </listitem>
     </itemizedlist>
     <?oxy_comment_start author="cecilia" timestamp="20160829T161102+0200" comment="Verify with SME:
@@ -87,14 +90,14 @@ Is this relevant for the user? Of more implementer information?"?>
     <para>Another feature available in the <emphasis role="bold">Event Capture</emphasis> app is
       skip-logic and validation functionality. Using program rules engine it is possible to put some
       rules for a program and take some actions when the rules are met. Currently supported actions
-      are skipping/hiding a dataelement or an entire section, display warning for some
+      are skipping/hiding a data element or an entire section, display warning for some
       soft-validations or display error for hard-validations. For example if a rule defined says
       "DataElementA > 100" and has action as "show warning" and message "Datalelement A can not have
       value more than 100". What will happen during data entry is - the moment a value greater than
-      100 is entered for data element A, the warning message will be dsiplayed. Because, it is just
+      100 is entered for data element A, the warning message will be displayed. Because, it is just
       a warning it is still possible to keep the value more than 100. However, if the action is
       "Show error", the error message will be displayed and the system will also ignore the value -
-      i.e. it is not possible to store a value that viloates the rule.</para>
+      i.e. it is not possible to store a value that violates the rule.</para>
     <para>Together with the rules engine expression evaluation, on-the-fly indicator expression
       evaluation is also supported. If a program has indicators defined for it and the moment all
       values related to the indicator expression are filled, the system will calcualte indicator and
