@@ -4236,7 +4236,6 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           </imageobject>
         </mediaobject>
       </screenshot>
-      <!-- original google drawing: https://docs.google.com/drawings/d/1q2Fb5DyknrgkHm6mveSyclokJTSGRuCfo4VMRauJnlU/edit?usp=sharing -->
       <section>
         <title>Program rule model details</title>
         <para>The following table gives a detailed overview over the programRule model.</para>
@@ -8252,10 +8251,6 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>Yes</entry>
               </row>
               <row>
-                <entry>filter</entry>
-                <entry>No</entry>
-              </row>
-              <row>
                 <entry>startDate</entry>
                 <entry>No / yyyy-MM-dd</entry>
               </row>
@@ -8281,6 +8276,10 @@ ORDER BY oul.level, par.name, ou.name</screen>
               </row>
               <row>
                 <entry>displayProperty</entry>
+                <entry>No</entry>
+              </row>
+              <row>
+                <entry>outputIdScheme</entry>
                 <entry>No</entry>
               </row>
               <row>
