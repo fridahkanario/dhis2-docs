@@ -18,7 +18,7 @@ Print the empty form? The filled out form?"?>Capture<?oxy_comment_end?>
     <?oxy_comment_start author="cecilia" timestamp="20160830T134627+0200" comment="Add workflow section and commonc concept information about event vs. tracked event
 Also add info about search results, that you can download the list. What is the list called? Participants in a program?"?>app<?oxy_comment_end?></title>
   <section>
-    <title>About the Tracker Capture app</title>
+    <title>[Review ongoing] About the Tracker Capture app</title>
     <screenshot>
       <mediaobject>
         <imageobject>
@@ -62,6 +62,15 @@ Also add info about search results, that you can download the list. What is the 
         <para>Both skip-logic and validation error/warning messages are supported during
           registration.</para>
         <?oxy_comment_end?>
+      </listitem>
+      <listitem>
+        <para>When you close an organisation unit, you can't register or edit events
+          <?oxy_comment_start author="cecilia" timestamp="20170102T105411+0100" comment="Related to this organisation unit?
+
+Pending info from SME. 
+Could also effect TEIs."?>to<?oxy_comment_end?>
+          this organisation unit in the <emphasis role="bold">Event Capture</emphasis> and <emphasis
+            role="bold">Tracker Capture</emphasis> apps.</para>
       </listitem>
     </itemizedlist>
   </section>

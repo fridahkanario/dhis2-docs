@@ -114,10 +114,13 @@ sudo locale-gen nb_NO.UTF-8</screen>
     <section xml:id="install_postgresql_installation">
       <title>PostgreSQL installation</title>
       <para>Install PostgreSQL by invoking:</para>
-      <screen>sudo apt-get install postgresql-9.4</screen>
-      <para><emphasis>Note:</emphasis> Alternatively, you can consult the PostgreSQL documentation to
+      <screen>sudo apt-get install postgresql-9.4 postgresql-contrib-9.4 postgresql-9.4-postgis-2.2 </screen>
+      <para><emphasis>Note:</emphasis> Alternatively you can consult the PostgreSQL documentation to
         install the latest version from the PostgreSQL APT repository:
           <link>http://www.postgresql.org/download/linux/ubuntu/</link>.</para>
+      <para><emphasis>Note:</emphasis> The <emphasis>PostGIS</emphasis> extension is not strictly
+        required for the system to operate, but is needed for several mapping visualization features
+        to work.</para>
       <para>Switch to the postgres user by invoking:</para>
       <screen>sudo su postgres</screen>
       <para>Create a non-privileged user called <emphasis role="italic">dhis</emphasis> by
@@ -195,11 +198,11 @@ sudo locale-gen nb_NO.UTF-8</screen>
     </section>
     <section xml:id="install_postgis_installation">
       <title>PostGIS installation</title>
-      <para>In order to take advantage of the GIS clustering functionality introduced in DHIS2.23
-        you must install the PostGIS extender on the server. After installing the extender, PostGIS
-        will be installed in the database automatically when DHIS2 is started. Install PostGIS on
-        the server by invoking:</para>
-      <screen>sudo apt-get install postgresql-9.4 postgresql-9.4-postgis-2.2 postgresql-contrib-9.4</screen>
+      <para>In order to take advantage of the GIS clustering functionality introduced in version
+        2.23 you need to install the PostGIS extender on the server. After installing the extender,
+        PostGIS will be installed in the database automatically when DHIS2 is started. Install
+        PostGIS on the server by invoking:</para>
+      <screen>sudo apt-get install postgresql-9.4 postgresql-contrib-9.4 postgresql-9.4-postgis-2.2</screen>
     </section>
     <section xml:id="install_database_configuration">
       <title>Database configuration</title>
