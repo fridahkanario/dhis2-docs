@@ -12,11 +12,11 @@
          xmlns:db="http://docbook.org/ns/docbook">
   <title>Localization of DHIS2</title>
  <section xml:id="localization-intro">
-  <para>Localization involves the adaptation of an application to another location. When
+  <para>Localization involves the adaptation of an application to a specific location. When
       implementing DHIS2 in a given country, adequate resources should be allocated to translate the
       application when required. Translation of the user interface elements, messages, layout, date
-      and time formats, currency and other aspects must be considered.  In addition to translation
-      of the user interface itself, metadata content which is contained in the database must also be
+      and time formats, currency and other aspects must be considered. In addition to translation of
+      the user interface itself, metadata content which is contained in the database must also be
       considered to be translated. </para>
    <para>DHIS2 supports internationalization (i18n) of the user interface through the use of Java property strings. Each
     element in the user interface has been assigned a specific key which is linked to a value. As an
@@ -153,11 +153,12 @@ error_occurred=Une erreur s&apos;est produite</programlisting>
   <section xml:id="translation-server">
     <title>Using the DHIS2 translation server</title>
     <para>A web-based portal solution has been setup in order to facilitate the translation of DHIS
-      2 into multiple languages. Simply direct your browser to http://translate.dhis2.net/ and
-      register for an account by providing a username, email address and password. The server will
-      send you a confirmation email which you can use to activate your account. Once you have
-      activated your account, simply press the &quot;Log in&quot; link from the main portal page,
-      and provide your username and password. </para>
+      2 into multiple languages. Simply direct your browser to <link
+        xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://translate.dhis2.net/"
+        >https://translate.dhis2.net/</link> and register for an account by providing a username,
+      email address and password. The server will send you a confirmation email which you can use to
+      activate your account. Once you have activated your account, simply press the &quot;Log
+      in&quot; link from the main portal page, and provide your username and password. </para>
     <para>The first time you login, you should select your settings, by clicking &quot;My
       account-&gt;Settings&quot;. Here you can select your interface language, the projects which
       you wish to work on, and the languages which you will translate into. Be sure to press
@@ -204,12 +205,11 @@ error_occurred=Une erreur s&apos;est produite</programlisting>
       </listitem>
       <listitem>
         <para>Choose the specific object you wish to translate, and translate each of the properties
-          (Name, Short name, Description, etc). </para>
+          (Name, Short name, Description, etc). These properties will vary from object to object. </para>
       </listitem>
       <listitem>
-        <para>Press "Save" when you are done translating the object to save your changes. </para>
+        <para>Press "Save" when you are done translating the  specific object to save your changes. </para>
       </listitem>
     </orderedlist>
-    <para>Take note that you can filter the translations based on their status </para>
   </section>
 </chapter>

@@ -6,7 +6,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="manage_org_unit">
+    xml:id="manage_organisation_unit">
     <title><?oxy_comment_start author="cecilia" timestamp="20160513T122617+0200" comment="Who peforms the tasks listed in this section? 
 - Admin 
 - District record officers (district levels)
@@ -37,6 +37,7 @@ If term is changed, update mtn and analysis topics." flag="done"?>Modify<?oxy_co
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_orgunitgroupset_create.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_orgunit_level_name.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_orgunit_move.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_orgunit_close.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_edit.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_clone.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_share.xml" encoding="UTF-8"/>

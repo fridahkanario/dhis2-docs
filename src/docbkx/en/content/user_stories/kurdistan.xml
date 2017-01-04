@@ -13,53 +13,143 @@
             straightforward.</emphasis></para>
     <itemizedlist>
         <listitem>
-            <para>Set up in 2015 by the University of Rome Tor Vergata (Italy) with the Ministry of
-                Health of Kurdistan Regional Government (KRG).</para>
+<para><emphasis>Set up in 2015 by the University of Rome Tor Vergata (Italy) with the
+                    Ministry of Health of Kurdistan Regional Government (KRG).</emphasis></para>
         </listitem>
         <listitem>
-            <para>Funded by the Cooperation and Development Agency of the Ministry of Foreign
-                Affairs of Italy.p</para>
+            <para><emphasis>Funded by the Cooperation and Development Agency of the Ministry of
+                    Foreign Affairs of Italy.</emphasis></para>
         </listitem>
         <listitem>
-            <para>Deployed by <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="http://ipro.orgipro-it.eu/">I-PRO</link>.</para>
+            <para><emphasis>Deployed by <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://ipro.orgipro-it.eu/">I-PRO</link>.</emphasis></para>
         </listitem>
         <listitem>
-            <para>Compliant with <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="http://www.who.int/classifications/icd/en/">WHO ICD-10</link>
-                standards. </para>
+            <para><emphasis>Compliant with <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://www.who.int/classifications/icd/en/">WHO ICD-10</link>
+                    standards. </emphasis></para>
         </listitem>
         <listitem>
-            <para>700 doctors trained in ICD-10.</para>
+            <para><emphasis>700 doctors trained in ICD-10.</emphasis></para>
         </listitem>
         <listitem>
-            <para>130,000 health events registered so far in the system. </para>
+            <para><emphasis>130,000 health events registered so far in the system.
+                </emphasis></para>
         </listitem>
         <listitem>
-            <para>Bilingual English and Kurdish-Sorani DHIS2 interface. </para>
+            <para><emphasis>Bilingual English and Kurdish-Sorani DHIS2 interface. </emphasis></para>
         </listitem>
     </itemizedlist>
     <section><para><emphasis role="bold">In June 2015, a DHIS2 Health Information System</emphasis> was set up to
             assist the Kurdish health authorities in collecting population data and improving the
             access and quality of public health care.</para></section>
     <section>
-        <para>A KRG DHIS2 pilot project led by the University of Tor Vergata, Rome, and realized by
+        <para>A KRG-DHIS2 pilot project led by the University of Tor Vergata, Rome, and realized by
             IPRO and Euresist was deployed across a set of pilot health centers and hospitals in the
             Kurdish directorates of Erbil, Duhok and Slemani.<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/use_cases/regions.png" format="PNG"
-                            align="left" width="20cm"/>
+                        <imagedata fileref="resources/images/use_cases/kurdistan_terrain.png"
+                            format="PNG" align="left" width="60%"/>
                     </imageobject>
                 </mediaobject>
-            </screenshot></para><para><emphasis role="bold">With 34 operating users spread across 10 health centers</emphasis>,
-            Kurdish medical professionals can now follow more than 130,000 health events. Health
-            professionals are gathering statistics for disease diagnoses, hospital discharges,
-            registrations of births, deaths and immunizations.</para></section>
-    <section><title></title><para></para></section>
-    <section><title></title><para></para></section>
-    <section><title></title><para></para></section>
-    <section><title></title><para></para></section>
-    <section><title></title><para></para></section>
+            </screenshot></para><para><emphasis role="bold">With 60 registered users spread across 30 health centers</emphasis>,
+            Kurdish medical professionals can now follow a staggering <emphasis role="bold">150,000
+                health events</emphasis>! Indeed, just 16 months into the pilot project, there are
+            now 7 primary/family health centers, 9 hospitals, and 14 general health centers, 10
+            health centers in rural areas or small towns/villages, and 20 health centers in major
+            towns. </para>
+        <para>100,000 cases have been imported via periodic uploads from existing and running
+            databases, and 50,000 cases have been recorded by DHIS2 users. This great progress is
+            enabling health professionals to gather statistics for disease diagnoses, hospital
+            discharges, registrations of births, deaths and immunizations.</para>
+        <para><emphasis role="bold">The project is also using the WHO’s International Classification
+                of Diseases</emphasis> (<link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.who.int/classifications/icd/en/">ICD-10</link>), which is the
+            standard diagnostic tool for epidemiology, health management and clinical purposes. So
+            far, over 700 doctors and nurses have received specialized ICD-10 training and
+            epidemiological surveillance training.</para>
+        <para>If you'd like a summary, you can view a video of the project here: <link
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://www.youtube.com/watch?v=-jIOUJkVGJw&amp;feature=em-uploademail"
+                >Kurdistan Region, DHIS2 Health Monitoring System - October 2016</link>.</para></section>
+    <!--<section><title>DHIS2 - the best choice available</title><para>After conducting a thorough benchmarking of six software platforms, DHIS2 was selected as the
+            most promising, all-encompassing software. DHIS2 covers all of these areas:<itemizedlist>
+                <listitem>
+                    <para>This software enables you to define the composition of the local health
+                        management system.</para>
+                </listitem>
+                <listitem>
+                    <para>It enables you to define the hierarchy between health structures.</para>
+                </listitem>
+                <listitem>
+                    <para>It records aggregated data and case by case data.</para>
+                </listitem>
+                <listitem>
+                    <para>It uses smart phones and SMS as data entry points.</para>
+                </listitem>
+                <listitem>
+                    <para>It works offline and is web-based.</para>
+                </listitem>
+                <listitem>
+                    <para>It's intended for health institutions and governments.</para>
+                </listitem>
+                <listitem>
+                    <para>It has a good track record: already adopted and assessed in several
+                        countries.</para>
+                </listitem>
+                <listitem>
+                    <para>It has a strong user network for supporting development and
+                        implementation.</para>
+                </listitem>
+                <listitem>
+                    <para>There are good training programs available for users.</para>
+                </listitem>
+            </itemizedlist></para></section>-->
+    <section>
+        <title>Key implementation challenges</title>
+        <para>With a small time frame to get a DHIS2 epidemiological surveillance pilot project
+            implemented and deployed in the whole Kurdish region of Iraq, many challenges lay ahead
+            for the teams involved.</para>
+        <para><emphasis role="bold">Racing against the clock. </emphasis>The first challenge lay in
+            building a solution that would work in a short time; one that would satisfy the basic
+            needs of the regional health system in collecting data. A subset of the regional health
+            centers, approximately 30 establishments, made up of rural and urban centers, family
+            health centers, hospitals, hospital colleges and general health centers were involved in
+            testing the system.</para>
+        <para><emphasis role="bold">Pulling in data from other systems. </emphasis>Another challenge
+            lay in importing existing data already used in hospitals in to DHIS2; making it possible
+            to enter data from mobile devices; preparing reports equal to those requested from the
+            health centers by the health directorates; and building a DHIS2 system to be used by
+            people without a background in health. </para>
+        <para><emphasis role="bold">Testing using a small, live version of DHIS2.</emphasis> The
+            testing phase was centered around two areas: data sets with aggregate data entry, and
+            programs with disaggregate event data capture. After analyzing the data reports produced
+            by the tests, the project managers decided to use programs without registration using
+            the Event Capture app.</para>
+        <para><emphasis role="bold">Capturing data with the Event Capture app.</emphasis> In this
+            region of Iraq, people do not have identification numbers. It's therefore almost
+            impossible to follow a patient's visits to different health centers. Bearing this in
+            mind, we decided to build a system to record basic health events such as births, deaths,
+            immunizations, disease diagnoses and hospital discharges using the Event Capture app.
+            Using this app, you can import existing data from hospital databases while adhering to
+            the same data structure, which is extremely helpful. Physicians or other health
+            technicians are able to enter data in real-time while a visitation is taking place,
+            without having to complete further data aggregation operations.  </para>
+        <para><emphasis role="bold">Hosting.</emphasis> Without the means to implement a dedicated
+            server, we chose to use an outsourced hosting solution through a recommended company
+            called BAO Systems. With this solution we will be able to scale up our DHIS2 instance in
+            the future.</para>
+        <para><emphasis role="bold">Translating the UI into Kurdish-Sorani.</emphasis> With the help
+            of the DHIS2 community and its developers and translation team, we were able to
+            translate the DHIS2 user interface into Kurdish-Sorani, a language which is spoken by 6
+            million people in Iraq. <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="resources/images/use_cases/kurdistan_ui.png"
+                            format="PNG" align="left" width="60%"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot></para>
+    </section>
 </chapter>
-
