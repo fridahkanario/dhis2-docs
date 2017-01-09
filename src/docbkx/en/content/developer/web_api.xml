@@ -7828,7 +7828,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
         dimension items:</para>
       <screen>/api/26/analytics?dimension=Bpx0589u8y0:oRVt7g429ZO;MAs88nJc9nL
   &amp;dimension=pe:2016&amp;dimension=ou:ImspTQPwCqd</screen>
-      <para>To query for data elements and categories you can use this URL - use the category
+      <para>To query for data elements and categories you can use this URL. Use the category
         identifier as dimension identifier and the category options as dimension items:</para>
       <screen>/api/26/analytics?dimension=dx:s46m5MS0hxu;fClA2Erf6IO&amp;dimension=pe:2016
   &amp;dimension=YNZyaJHiHYq:btOyqprQ9e8;GEqzEKCHoGA&amp;filter=ou:ImspTQPwCqd</screen>
@@ -7854,6 +7854,11 @@ ORDER BY oul.level, par.name, ou.name</screen>
         of times:</para>
       <screen>/api/26/analytics?dimension=dx:fbfJHSPpUQD&amp;dimension=pe:2016
   &amp;dimension=ou:OU_GROUP-w0gFTTmsUcF;OU_GROUP-EYbopBOJWsW;O6uvpzGd5pu;lc3eMKXaEf</screen>
+      <para>You can utilize identifier schemes for the metadata part of the analytics response
+        with the outputIdScheme property like this. You can use ID, code and attributes as
+        identifier scheme:</para>
+      <screen>/api/26/analytics?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU
+  &amp;dimension=pe:2017Q1;2017Q2&amp;dimension=ou:O6uvpzGd5pu&amp;outputIdScheme=CODE</screen>
       <para>A few things to be aware of when using the analytics resource are listed below.</para>
       <itemizedlist>
         <listitem>
@@ -9673,6 +9678,11 @@ interval=WEEK" -u admin:district</screen>
             <entry>Skip generation of event data</entry>
           </row>
           <row>
+            <entry>skipEnrollment</entry>
+            <entry>false | true</entry>
+            <entry>Skip generation of enrollment data</entry>
+          </row>
+          <row>
             <entry>lastYears</entry>
             <entry>integer</entry>
             <entry>Number of last years of data to include</entry>
@@ -10261,7 +10271,7 @@ interval=WEEK" -u admin:district</screen>
       <title>Inbound SMS service</title>
       <para>The Web API supports collecting incoming SMS messages using the
         POST method. Incoming messages routed towards the DHIS2 Web API can be received using this
-        API. The API collects inbound SMS messages and provides it to  listeners for parsing, based
+        API. The API collects inbound SMS messages and provides it to listeners for parsing, based
         on the SMS content (SMS Command). An example payload in JSON format is given below. Text,
         originator, received date and sent date are mandatory parameters. The rest are optional but
         the system will use the default value for these parameters.</para>
