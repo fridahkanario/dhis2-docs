@@ -14,6 +14,7 @@
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./indicator/toc_indicator.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./org_unit/toc_orgunit.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./tracker/toc_program.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./validation_rule/toc_val_rule.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./attribute/toc_attribute.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./constant/toc_constant.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./option_set/toc_option_set.xml" encoding="UTF-8"/>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="follow_up_analysis">
+    <title>Follow-up analysis</title>
+    <section>
+        <title>About follow-up analysis</title>
+        <para>The follow-up analysis will list all data values which are marked for follow-up. A
+            data value can be marked for follow-up in the <emphasis role="bold">Data
+                Entry</emphasis> app and in the other
+            <?oxy_comment_start author="cecilia" timestamp="20170106T144757+0100" comment="Verify with SME: what does this phrase mean?"?>validation
+            analysis variants in this <?oxy_comment_end?>app.</para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata width="90%" align="center"
+                        fileref="resources/images/data_quality/data_quality_follow_up.png"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </section>
+    <section>
+        <title>Configure follow-up
+            <?oxy_comment_start author="cecilia" timestamp="20170104T155452+0100" comment="Do you need to configure anything to use this feature?"?>analysis<?oxy_comment_end?></title>
+        <para/>
+    </section>
+    <section>
+        <title><?oxy_comment_start author="cecilia" timestamp="20170109T140545+0100" comment="Do you analyse them in any way?"?>Create<?oxy_comment_end?>
+            list of data values marked for follow-up</title>
+        <orderedlist>
+            <listitem>
+                <para>Open the <emphasis role="bold">Data Quality</emphasis> app and click <emphasis
+                        role="bold">Follow-up analysis</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>Select an <emphasis role="bold">Organisation unit</emphasis>.</para>
+                <para>A list with all data values marked for follow-up for the descendants of the
+                    selected organisation unit is displayed. </para>
+            </listitem>
+        </orderedlist>
+    </section>
+</section>
+

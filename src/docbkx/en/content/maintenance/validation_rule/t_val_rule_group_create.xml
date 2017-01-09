@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_validation_rule_group">
+    <title> Create a validation rule group</title>
+    <section>
+        <title>Create a validation rule
+            <?oxy_comment_start author="cecilia" timestamp="20170106T150222+0100" comment="Add URL to Mtn app doc."?>group<?oxy_comment_end?></title>
+        <para>A validation rule group provides a mechanism for classifying related validation rules.
+            Another advantage of using validation rule groups is that it can later be run
+            separately, instead of running all validation rules.</para>
+        <para>You can run the validation rules in a group interactively. To do so, choose Data
+            Quality -&gt; Validation Rule. You can choose whether to run all validation rules in the
+            system, or just the rules in one group.</para>
+        <para>You can also run the rules in a group as part of a scheduled validation run, as
+            described below.</para>
+        <para>For each validation rule group, you can specify one or more groups of users to be
+            notified of validation rule exceptions. Alerts will be sent to these users from
+            scheduled validation runs, or from interactive runs when you request to send alerts. To
+            set this up:</para>
+        <itemizedlist>
+            <?dbfo keep-together="always" ?>
+            <listitem>
+                <para>Be sure that one or more user groups contain all the users you wish to
+                    notify.</para>
+            </listitem>
+            <listitem>
+                <para>Define a validation rule group for a set of validation rules. In the section
+                    User groups to alert, select one or more user groups to be notified.</para>
+            </listitem>
+        </itemizedlist>
+        <para>By repeating these two steps, you can build any set of relations you need between
+            validation rules and users to notify.</para>
+        <para>When you create or edit a validation rule group, there is an option called <emphasis
+                role="italic">Only organisation unit related users are alerted</emphasis>. If this
+            is set to <emphasis role="italic">Yes</emphasis>, then each user in the user group(s)
+            will be alerted only for validation exceptions in an organisation unit to which the user
+            has been assigned through user management -- or for any lower-level organisation unit
+            under the assigned organisation unit. If this is set to <emphasis role="italic"
+                >No</emphasis>, then each user in the assigned user group(s) will be alerted for all
+            validation exceptions in the group, regardless of their user-assigned organisation
+            units.</para>
+    </section>    
+</section>

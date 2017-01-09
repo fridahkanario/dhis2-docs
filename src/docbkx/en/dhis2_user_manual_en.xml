@@ -21,8 +21,9 @@
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/sharing/sharing.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/dashboard/dashboard.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_entry/data_entry.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_quality/using_data_quality.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_quality/creating_data_quality.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_quality/toc_data_quality.xml" encoding="UTF-8"/>
+  <!-- <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_quality/using_data_quality.xml" encoding="UTF-8"/>-->
+  <!-- <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_quality/creating_data_quality.xml" encoding="UTF-8"/>-->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/maintenance/mtn_toc.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/using_reporting.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/pivot_tables.xml" encoding="UTF-8"/>
