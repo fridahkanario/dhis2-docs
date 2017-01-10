@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="about_validation_rule">
-    <title>About validation rules</title>
+    <title>About validation rules, validation rule groups and validation notifications </title>
     <para>A validation rule is based on an expression which defines a relationship between a number
         of data elements. The expression has a left side and a right side and an operator which
         defines whether the former must be less than, equal to or greater than the latter. The
@@ -19,6 +19,12 @@
                 is less than or equal to the total number of infants.</para>
         </example>
     </para>
+    <para>A validation rule group allows you to group related validation rules. When you then
+        <?oxy_comment_start author="cecilia" timestamp="20170110T171721+0100" comment="When x-refs work, add link to Validation rule analysis section." flag="done"?>run<?oxy_comment_end?>
+        a <emphasis role="bold">Validation rule analysis</emphasis>, you can select whether to run
+        all validation rules in the system, or just the validation rules in one group. You can also
+        run the validation rules in a group as part of a scheduled <emphasis role="bold">Validation
+            rule analysis</emphasis>.</para>
     <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following
         validation rule objects:</para>
     <table frame="all">
