@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="create_validation_notification">
+    <title>Create a validation notification</title>
+    <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+    <para>For each validation rule group, you can specify one or more groups of users to be notified
+        of validation rule exceptions. Alerts will be sent to these users from scheduled validation
+        runs, or from interactive runs when you request to send alerts. To set this up:</para>
+    <itemizedlist>
+        <?dbfo keep-together="always" ?>
+        <listitem>
+            <para>Be sure that one or more user groups contain all the users you wish to
+                notify.</para>
+        </listitem>
+        <listitem>
+            <para>Define a validation rule group for a set of validation rules. In the section User
+                groups to alert, select one or more user groups to be notified.</para>
+        </listitem>
+    </itemizedlist>
+    <para>By repeating these two steps, you can build any set of relations you need between
+        validation rules and users to notify.</para>
+    <?oxy_custom_end?>
+    <orderedlist>
+        <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+        <listitem>
+            <para>(Optional) Select <emphasis role="bold">Alert only organisation unit related
+                    users</emphasis>.</para>
+            <para>If you select this option, each user in the user group(s) will be alerted only for
+                validation exceptions in an organisation unit to which the user has been assigned
+                through user management -- or for any lower-level organisation unit under the
+                assigned organisation unit. </para>
+            <para>If you don't select this option, each user in the assigned user group(s) will be
+                alerted for all validation exceptions in the group, regardless of their assigned
+                organisation units.</para>
+        </listitem>
+        <?oxy_custom_end?>
+    </orderedlist>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Validation</emphasis> > <emphasis role="bold">Validation
+                    notification</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add
+                <?oxy_comment_start author="cecilia" timestamp="20160510T112410+0200" comment="Do not refer to the FAB as an icon, according to MS Manual of Style." flag="done"?>button<?oxy_comment_end?>.</para>
+        </listitem>
+        <listitem>
+            <para>Type a <emphasis role="bold"
+                    ><?oxy_comment_start author="cecilia" timestamp="20170110T171331+0100" comment="Unique name required?"?>Name<?oxy_comment_end?></emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) In the <emphasis role="bold">Code</emphasis> field, assign a
+                code.</para>
+        </listitem>
+        <listitem>
+            <para>Select <emphasis role="bold">Recipient user groups</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Select <emphasis role="bold">Notify users in hierarchy
+                only</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Create the <emphasis role="bold">Message
+                    <?oxy_comment_start author="cecilia" timestamp="20170110T173410+0100" comment="Re-use program notification doc?"?>template<?oxy_comment_end?></emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Select <emphasis role="bold">Validation rules</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>
+</section>
