@@ -5,8 +5,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="about_validation_rule">
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="about_validation_rule">
     <title>About validation rules, validation rule groups and validation notifications </title>
     <para>A validation rule is based on an expression which defines a relationship between a number
         of data elements. The expression has a left side and a right side and an operator which
@@ -21,10 +20,13 @@
     </para>
     <para>A validation rule group allows you to group related validation rules. When you then
         <?oxy_comment_start author="cecilia" timestamp="20170110T171721+0100" comment="When x-refs work, add link to Validation rule analysis section." flag="done"?>run<?oxy_comment_end?>
-        a <emphasis role="bold">Validation rule analysis</emphasis>, you can select whether to run
-        all validation rules in the system, or just the validation rules in one group. You can also
-        run the validation rules in a group as part of a scheduled <emphasis role="bold">Validation
-            rule analysis</emphasis>.</para>
+        a <emphasis>validation rule analysis</emphasis>, you can select whether to run all
+        validation rules in the system, or just the validation rules in one group. You can also run
+        the validation rules in a group as part of a scheduled validation rule analysis.</para>
+    <para>You can configure a validation rule analysis to automatically send out to information
+        about validation violations to selected user groups. These messages are called
+            <emphasis>validation notifications</emphasis> and are send via the internal DHIS2
+        messaging system.</para>
     <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following
         validation rule objects:</para>
     <table frame="all">
