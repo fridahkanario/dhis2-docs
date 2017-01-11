@@ -42,7 +42,15 @@
     </itemizedlist>
     <section><para><emphasis role="bold">In June 2015, a DHIS2 Health Information System</emphasis> was set up to
             assist the Kurdish health authorities in collecting population data and improving the
-            access and quality of public health care.</para></section>
+            access and quality of public health care.
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resources/images/use_cases/kurdistan_ui.png"
+                        format="PNG" align="left" width="40%"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot></para></section>
     <section>
         <para>A KRG-DHIS2 pilot project led by the University of Tor Vergata, Rome, and realized by
             IPRO and Euresist was deployed across a set of pilot health centers and hospitals in the
