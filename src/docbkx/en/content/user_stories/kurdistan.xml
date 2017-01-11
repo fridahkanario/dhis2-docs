@@ -58,7 +58,7 @@
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_ui.png"
-                            format="PNG" align="left" width="60%"/>
+                            format="PNG" align="left" width="70%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot></para><para><emphasis role="bold">With 60 registered users spread across 30 health centers</emphasis>,
@@ -76,7 +76,7 @@
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_ipro_screen.png"
-                            format="PNG" align="left" width="70%"/>
+                            format="PNG" align="left" width="90%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot></para>
@@ -174,49 +174,23 @@
         <para><emphasis role="bold">Translating the UI into Kurdish-Sorani.</emphasis> With the help
             of the DHIS2 community and its developers and translation team, we were able to
             translate the DHIS2 user interface into Kurdish-Sorani, a language which is spoken by 6
-            million people in Iraq. <informaltable frame="all" rowsep="0" colsep="0">
-                <tgroup cols="2" align="center">
-                    <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-                    <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-                    <tbody>
-                        <row>
-                            <entry><screenshot>
-                                <mediaobject>
-                                    <imageobject>
-                                        <imagedata fileref="resources/images/use_cases/kurdistan_ipro_screen2.png"
-                                            format="PNG" align="left" width="60%"/>
-                                    </imageobject>
-                                </mediaobject>
-                            </screenshot></entry>
-                            <entry><screenshot>
-                                <mediaobject>
-                                    <imageobject>
-                                        <imagedata fileref="resources/images/use_cases/kurdistan_ipro_screen3.png"
-                                            format="PNG" align="left" width="60%"/>
-                                    </imageobject>
-                                </mediaobject>
-                            </screenshot></entry>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </informaltable>
-            <!--<screenshot>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata fileref="resources/images/use_cases/kurdistan_ipro_screen2.png"
-                            format="PNG" align="left" width="50%"/>
-                    </imageobject>
-                </mediaobject>
-            </screenshot>
+            million people in Iraq.</para>
+        <para>This is how the user interface looks in English and Kurdish-Sorani: <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resources/images/use_cases/kurdistan_ipro_screen2.png"
+                        format="PNG" align="left" width="90%"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
             <screenshot>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_ipro_screen3.png"
-                            format="PNG" align="left" width="50%"/>
+                            format="PNG" align="left" width="90%"/>
                     </imageobject>
                 </mediaobject>
-            </screenshot>-->
-        </para>
+            </screenshot></para>            
     </section>
     <section><title>What's ahead?</title>
     <para><emphasis role="bold">Creating national health numbers for all citizens</emphasis>  Our
@@ -230,7 +204,7 @@
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_opening_training_center.png"
-                            format="PNG" align="left" width="70%"/>
+                            format="PNG" align="left" width="80%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot><para>Image source: Opening a DHIS2 training center in KRG, IPRO (c) 2016.</para>
