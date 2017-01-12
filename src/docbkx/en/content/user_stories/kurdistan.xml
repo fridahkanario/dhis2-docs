@@ -18,35 +18,6 @@
             </imageobject>
         </mediaobject>
         </screenshot></para>
-    <!--<itemizedlist>
-        <listitem>
-<para><emphasis>Set up in 2015 by the University of Rome Tor Vergata (Italy) with the
-                    Ministry of Health of Kurdistan Regional Government (KRG).</emphasis></para>
-        </listitem>
-        <listitem>
-            <para><emphasis>Funded by the Cooperation and Development Agency of the Ministry of
-                    Foreign Affairs of Italy.</emphasis></para>
-        </listitem>
-        <listitem>
-            <para><emphasis>Deployed by <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="http://ipro.orgipro-it.eu/">I-PRO</link>.</emphasis></para>
-        </listitem>
-        <listitem>
-            <para><emphasis>Compliant with <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="http://www.who.int/classifications/icd/en/">WHO ICD-10</link>
-                    standards. </emphasis></para>
-        </listitem>
-        <listitem>
-            <para><emphasis>700 doctors trained in ICD-10.</emphasis></para>
-        </listitem>
-        <listitem>
-            <para><emphasis>130,000 health events registered so far in the system.
-                </emphasis></para>
-        </listitem>
-        <listitem>
-            <para><emphasis>Bilingual English and Kurdish-Sorani DHIS2 interface. </emphasis></para>
-        </listitem>
-    </itemizedlist>-->
     <section><para><emphasis role="bold">In June 2015, a DHIS2 Health Information System</emphasis> was set up to
             assist the Kurdish health authorities in collecting population data and improving the
             access and quality of public health care.</para></section>
@@ -103,39 +74,6 @@
                 xlink:href="https://www.youtube.com/watch?v=-jIOUJkVGJw&amp;feature=em-uploademail"
                 >Kurdistan Region, DHIS2 Health Monitoring System - October 2016</link>.</para>
     </section>
-    <!--<section><title>DHIS2 - the best choice available</title><para>After conducting a thorough benchmarking of six software platforms, DHIS2 was selected as the
-            most promising, all-encompassing software. DHIS2 covers all of these areas:<itemizedlist>
-                <listitem>
-                    <para>This software enables you to define the composition of the local health
-                        management system.</para>
-                </listitem>
-                <listitem>
-                    <para>It enables you to define the hierarchy between health structures.</para>
-                </listitem>
-                <listitem>
-                    <para>It records aggregated data and case by case data.</para>
-                </listitem>
-                <listitem>
-                    <para>It uses smart phones and SMS as data entry points.</para>
-                </listitem>
-                <listitem>
-                    <para>It works offline and is web-based.</para>
-                </listitem>
-                <listitem>
-                    <para>It's intended for health institutions and governments.</para>
-                </listitem>
-                <listitem>
-                    <para>It has a good track record: already adopted and assessed in several
-                        countries.</para>
-                </listitem>
-                <listitem>
-                    <para>It has a strong user network for supporting development and
-                        implementation.</para>
-                </listitem>
-                <listitem>
-                    <para>There are good training programs available for users.</para>
-                </listitem>
-            </itemizedlist></para></section>-->
     <section>
         <title>Key implementation challenges</title>
         <para>With a small time frame to get a DHIS2 epidemiological surveillance pilot project
@@ -198,8 +136,7 @@
             each citizen accessing health services. Once this is in place, we plan to integrate the
             HNID into the Kurdish DHIS2 platform. Furthermore, we plan to involve at least 300
             health centers in our KRG-DHIS2 platform. Finally, our aim is to grow and to extend
-            DHIS2 to other areas besides health. Areas we are interested in are <!--(Antonia, please
-            complete)-->. </para>
+            DHIS2 to other areas besides health.</para>
         <screenshot>
                 <mediaobject>
                     <imageobject>
