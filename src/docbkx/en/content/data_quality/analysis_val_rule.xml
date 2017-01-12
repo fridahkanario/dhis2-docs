@@ -7,76 +7,110 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="validation_rule_analysis">
-    <title>Validation rule
+    <title>[Work in progress]Validation rule
         <?oxy_comment_start author="cecilia" timestamp="20170106T150311+0100" comment="Also add link to Validation notification doc in Mtn app doc
 Make sure the possibility to create a validation notification is mentioned is this section."?>analysis<?oxy_comment_end?></title>
     <section>
         <title>About validation rule analysis</title>
         <para>A validation rule is based on an expression which defines a relationship between a
-            number of data elements. The expression has a left side and a right side and an operator
-            which defines whether the former must be less than, equal to or greater than the latter.
-            The expression forms a condition which should assert that certain logical criteria are
-            met.</para>
-        <para>The validation rule analysis function will test validation rules against the data
-            registered in the system. Validation violations will be reported in cases where the
-            condition defined through the validation rule expression is not met, that is the
-            condition is false.</para>
+            number of
+            <?oxy_comment_start author="cecilia" timestamp="20170111T131405+0100" comment="Alaso other data?"?>data
+            elements<?oxy_comment_end?>. The expression has a left side and a right side and an
+            operator which defines whether the left side must be less than, equal to or greater than
+            the right side. The expression forms a condition which should assert that certain
+            logical criteria are met.</para>
+        <para>The validation rule analysis tests validation rules against the data registered in the
+            system. Validation violations will be reported for cases where the condition defined in
+            the validation rule expression is not met, that means when the condition is
+            false.</para>
+        <para>You can configure a validation rule analysis to automatically send out to information
+            about validation violations to selected user groups. These messages are called
+                <emphasis>validation notifications</emphasis> and you create them in the <emphasis
+                role="bold">Maintenance</emphasis> app. These messages are send via the internal
+            DHIS2 messaging system.</para>
     </section>
     <section>
-        <title><?oxy_comment_start author="cecilia" timestamp="20170109T153555+0100" comment="Do you need to configure anything before running a validation rule analysis?"?>Configure<?oxy_comment_end?>
-            validation rule analysis</title>
-        <section>
-            <title>Schedule a validation rule analysis</title>
-            <?oxy_comment_start author="cecilia" timestamp="20170109T161916+0100" comment="Review para with SME."?>
-            <para>During a scheduled validation run, those validation rule groups will be evaluated
-                that have one or more user groups defined for alerts. Validation rule groups that
-                have no user groups defined for alerts will not be run during a scheduled
-                run.</para>
-            <?oxy_comment_end?>
-            <orderedlist>
-                <listitem>
-                    <para>Open the <emphasis role="bold">Data Administration</emphasis> app and
-                        click <emphasis role="bold">Scheduling</emphasis>.</para>
-                </listitem>
-                <listitem>
-                    <para>If scheduling is active, click <emphasis role="bold"
-                        >Stop</emphasis>.</para>
-                </listitem>
-                <listitem>
-                    <para>In the <emphasis role="bold">Data monitoring</emphasis> section, select
-                            <emphasis role="bold">All
-                            <?oxy_comment_start author="cecilia" timestamp="20170109T161934+0100" comment="When will this run?"?>daily<?oxy_comment_end?></emphasis>.
-                    </para>
-                </listitem>
-                <listitem>
-                    <para>Click <emphasis role="bold">Start</emphasis>.</para>
-                </listitem>
-            </orderedlist>
-        </section>
-    </section>
-    <section>
-        <title>Run validation rule analysis</title>
-        <screenshot>
-            <mediaobject>
-                <imageobject>
-                    <imagedata width="80%" align="center"
-                        fileref="resources/images/dhis2UserManual/Validation Rule_Analysis.png"
-                        format="PNG"/>
-                </imageobject>
-            </mediaobject>
-        </screenshot>
-        <note>
-            <para>Before you can run a validation rule analysis, you must create validation rules
-                and validation rule groups in the <emphasis role="bold">Maintenance</emphasis>
-                app:</para>
-            <para><?oxy_comment_start author="cecilia" timestamp="20170109T153415+0100" comment="Add URL"?><link
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="add link to mtn section, validation rule create"/></para>
-            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="add link to mtn section, validation rule groupcreate"
-                /><?oxy_comment_end?></para>
-        </note>
+        <title>Workflow</title>
         <orderedlist>
+            <listitem>
+                <para>In the <emphasis role="bold">Maintenance</emphasis> app, create validation
+                    rules and validation rule groups.</para>
+            </listitem>
+            <listitem>
+                <para>(Optional) In the <emphasis role="bold">Maintenance</emphasis> app, create
+                    validation notifications.</para>
+            </listitem>
+            <listitem>
+                <para>Run the validation rule analysis, either automatically or manually.</para>
+                <itemizedlist>
+                    <listitem>
+                        <para>In the <emphasis role="bold">Data Administration</emphasis> app, you
+                            schedule the validation rule analysis to run automatically for all
+                            validation rules. After the system has run the analysis, you'll see the
+                            validation violations (if any) in the validation notifications.</para>
+                    </listitem>
+                    <listitem>
+                        <para>In the <emphasis role="bold">Data Quality</emphasis> app, you run the
+                            validation rule analysis manually for selected validation rules. After
+                            the analysis process has finished, you'll see a list of validation
+                            violations (if any).</para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>Schedule a validation rule analysis to run
+            <?oxy_comment_start author="cecilia" timestamp="20170111T133333+0100" comment="Add screen shot"?>automatically<?oxy_comment_end?></title>
+        <para>
+            <note>
+                <para>Only validation rules that are included in one or several validation
+                    notifications will be a part of the validation rule analysis. If there's no
+                    corresponding validation notification for a validation rule, the system has
+                    nowhere to send the validation violations.</para>
+            </note>
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>Verify that you have created all the validation rules, validation rule groups
+                    and validation notifications you need.</para>
+            </listitem>
+            <listitem>
+                <para>Open the <emphasis role="bold">Data Administration</emphasis> app and click
+                        <emphasis role="bold">Scheduling</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>If scheduling is active, click <emphasis role="bold">Stop</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>In the <emphasis role="bold">Data monitoring</emphasis> section, select
+                        <emphasis role="bold">All
+                        <?oxy_comment_start author="cecilia" timestamp="20170109T161934+0100" comment="When will this run?"?>daily<?oxy_comment_end?></emphasis>.
+                </para>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold">Start</emphasis>.</para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>Run a validation rule analysis manually</title>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="resources/images/dhis2UserManual/Validation Rule_Analysis.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>Verify that you have created all the validation rules, validation rule groups
+                    and validation notifications you need.</para>
+            </listitem>
             <listitem>
                 <para>Open the <emphasis role="bold">Data Quality</emphasis> app and click <emphasis
                         role="bold">Validation rule analysis</emphasis>.</para>
@@ -92,6 +126,15 @@ Make sure the possibility to create a validation notification is mentioned is th
                     validation rule group.</para>
             </listitem>
             <listitem>
+                <para>(Optional) Select <emphasis role="bold">Send notifications</emphasis> to
+                    trigger automatic validation notifications.</para>
+                <note>
+                    <para>If you want to send out validation notifications, you need to create a
+                        validation notification message in the <emphasis role="bold"
+                            >Maintenance</emphasis> app.</para>
+                </note>
+            </listitem>
+            <listitem>
                 <para>Select <emphasis role="bold">Parent organisation unit</emphasis>.</para>
             </listitem>
             <listitem>
@@ -100,34 +143,53 @@ Make sure the possibility to create a validation notification is mentioned is th
                     analysed. If there are no violations of the validation rules, you'll see a
                     message saying <emphasis role="italic">Validation passed
                     successfully</emphasis>. If there are validation violations, they will be
-                    presented in a list. </para>
+                    presented in a list.</para>
+                <para>
+                    <screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata width="80%" align="center"
+                                    fileref="resources/images/dhis2UserManual/Validation Rule_Analysis Result.png"
+                                    format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot>
+                </para>
+                <para> For each validation violation, you'll see the organisation unit, period, left
+                    side description and value, operator, and right side value and
+                    description</para>
+            </listitem>
+            <listitem>
+                <para>(Optional) Click the show details
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T163931+0100" comment="How does it look like? Can&apos;t get a result from demo"?>icon<?oxy_comment_end?>
+                    to get more information about a validation violation. In the pop-up window
+                    you'll find information about the data elements included in the validation rules
+                    and their corresponding data values. You can use this information to
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T163522+0100" comment="Can you fix incorrect data here?"?>fix<?oxy_comment_end?>
+                    incorrect data.</para>
+            </listitem>
+            <listitem>
+                <para>(Optional) Click <emphasis role="bold">Download as PDF</emphasis>, <emphasis
+                        role="bold">Download as Excel</emphasis> or <emphasis role="bold">Download
+                        as CSV</emphasis> to download the validation violations list in PDF, Excel
+                    or CSV formats.</para>
             </listitem>
         </orderedlist>
     </section>
     <section>
-        <title>Analyse result from validation rule
-            <?oxy_comment_start author="cecilia" timestamp="20170109T135758+0100" comment="Add screen shot of list"?>analysis<?oxy_comment_end?></title>
-        <screenshot>
-            <mediaobject>
-                <imageobject>
-                    <imagedata width="80%" align="center"
-                        fileref="resources/images/dhis2UserManual/Validation Rule_Analysis Result.png"
-                        format="PNG"/>
-                </imageobject>
-            </mediaobject>
-        </screenshot>
-        <para>After the analysis process has finished, you'll see a list of validation violations.
-            For each validation violation, you'll see the organisation unit, period, left side
-            description and value, operator, and right side value and description</para>
-        <para>Click the show details
-            <?oxy_comment_start author="cecilia" timestamp="20170109T163931+0100" comment="How does it look like? Can&apos;t get a result from demo"?>icon<?oxy_comment_end?>
-            to get more information about a validation violation. In the pop-up window you'll find
-            information about the data elements included in the validation rules and their
-            corresponding data values. This information can be used in order to
-            <?oxy_comment_start author="cecilia" timestamp="20170109T163522+0100" comment="Can you fix incorrect data here?"?>fix<?oxy_comment_end?>
-            incorrect data.</para>
-        <para>Click <emphasis role="bold">Download as PDF</emphasis>, <emphasis role="bold">Download
-                as Excel</emphasis> or <emphasis role="bold">Download as CSV</emphasis> to download
-            the validation violations list in PDF, Excel or CSV formats.</para>
+        <title>See also</title>
+        <itemizedlist>
+            <listitem>
+                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="https://docs.dhis2.org/master/en/user/html/manage_validation_rule.html"
+                        >Manage validation rules</link></para>
+            </listitem>
+            <listitem>
+                <para>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="https://docs.dhis2.org/master/en/user/html/data_admin.html">Data
+                        Administration</link> app</para>
+            </listitem>
+        </itemizedlist>
     </section>
 </section>
