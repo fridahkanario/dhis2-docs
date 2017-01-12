@@ -7,9 +7,12 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="min_max_analysis">
-    <title>Minimum maximum outlier
+    <title><?oxy_comment_start author="cecilia" timestamp="20170112T161442+0100" comment="Term: Mimimum and maximum value range
+OR
+Mimimum maximum value range?"?>Minimum maximum<?oxy_comment_end?>
+        <?oxy_comment_start author="cecilia" timestamp="20170112T104520+0100" comment="No API for this analysis" flag="done"?>outlier<?oxy_comment_end?>
         <?oxy_comment_start author="cecilia" timestamp="20170106T150550+0100" comment="UI suggestion: add a Stop button.
-For example when you&apos;ve selected the wrong org unit and the analysis takes too long."?>analysis<?oxy_comment_end?></title>
+For example when you&apos;ve selected the wrong org unit and the analysis takes too long." flag="done"?>analysis<?oxy_comment_end?></title>
     <section>
         <title>About minimum maximum outlier analysis</title>
         <para>You can verify the data quality at the point of data entry by setting a minimum and
@@ -18,29 +21,91 @@ For example when you&apos;ve selected the wrong org unit and the analysis takes 
         <para>The auto-generated minimum maximum value range is suitable only for normally
             distributed data. DHIS2 will determine the arithmetic mean and standard deviation of all
             values for a given
-            <?oxy_comment_start author="cecilia" timestamp="20170109T141245+0100" comment="Do it for them separately?"?>data
-            element /category option/organisation unit combination.<?oxy_comment_end?> Then the
-            system will calculate the min-max value range
-            based<?oxy_comment_start author="cecilia" timestamp="20170106T154550+0100" comment="end of phrase missing in legacy content.
+            <?oxy_comment_start author="cecilia" timestamp="20170109T141245+0100" comment="Do it for them separately?
 
-Based on what?"?>
-            on the <?oxy_comment_end?></para>
+SME: system only checks raw data, maybe attribute option, verify with Lars."?>data
+            element /category option/organisation unit combination.<?oxy_comment_end?> Then the
+            system will calculate the
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>min-max<?oxy_custom_end?>
+            value range
+            based<?oxy_comment_start author="cecilia" timestamp="20170106T154550+0100" comment="end of phrase missing in legacy content. Based on what?
+
+SME: system calculates average value based per org unit and data element, cat option and attribute option, then, based on the average, the system sets the min value to average - x number of std dev, max value to average + number or std deviations. You set this in Sytem Settings,  General, Data analysis std dev factor." flag="done"?>
+            on the
+                <?oxy_comment_end?><?oxy_comment_start author="cecilia" timestamp="20170112T163557+0100" comment="Also relevant for other outlier analysis?"?><emphasis
+                role="bold">Data analysis std dev factor</emphasis><?oxy_comment_end?> specified in
+            the <emphasis role="bold">System Settings</emphasis> app.</para>
         <para>For data which is highly-skewed or zero inflated (as is often the case with aggregate
             data), the values which DHIS2 auto-generates may not provide an accurate minimum maximum
             value range.
             <?oxy_comment_start author="cecilia" timestamp="20170109T141420+0100" comment="What does this mean? 
-Add an example"?>This
-            can lead to excessive false violations<?oxy_comment_end?>.</para>
+Add an example
+
+Facility, 0 0 2, outlier but it oculd be possible to go from 1 delivery to 3 from month to month.
+
+Malaria seasons: max value could be lower than the max value during high season." flag="done"?>This
+            can lead to excessive false violations<?oxy_comment_end?>, for example if you analyse
+            values
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>for<?oxy_custom_end?>
+            seasonal diseases.</para>
         <note>
-            <para>C<?oxy_comment_start author="cecilia" timestamp="20170106T151747+0100" comment="Still correct?"?>urrently<?oxy_comment_end?>,
+            <para>C<?oxy_comment_start author="cecilia" timestamp="20170106T151747+0100" comment="Still correct?
+
+SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
                 min-max values are calculated across all attribute combination options for a given
                 data element /category option / organisation unit combination.</para>
         </note>
     </section>
     <section>
-        <title>Configure minimum maximum outlier analysis</title>
+        <title>Workflow</title>
+        <orderedlist>
+            <listitem>
+                <para>In the <emphasis role="bold">System Settings</emphasis> app, set the <emphasis
+                        role="bold">Data analysis std dev factor</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>Create a minimum and maximum value range, either automatically or
+                    manually.</para>
+                <itemizedlist>
+                    <listitem>
+                        <para>In the <emphasis role="bold">Data Administration</emphasis> app, you
+                            can generate value ranges automatically.</para>
+                    </listitem>
+                    <listitem>
+                        <para>In the <emphasis role="bold">Data Quality</emphasis> app, you can set
+                            value ranges manually for each field. </para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+            <listitem>
+                <para>In the <emphasis role="bold">Data Quality</emphasis> app, run the <emphasis
+                        role="bold">Min-max outlier analysis</emphasis>.</para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>Configure a minimum maximum outlier analysis</title>
         <section>
-            <title>Generate minimum and maximum value range automatically</title>
+            <title>Set 'Data analysis std dev factor'</title>
+            <orderedlist>
+                <listitem>
+                    <para>Open the <emphasis role="bold">System Settings</emphasis> app, and click
+                            <emphasis role="bold">General</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>In the <emphasis role="bold">Data analysis std dev factor</emphasis>
+                        field, enter a value.</para>
+                    <?oxy_comment_start author="cecilia" timestamp="20170112T163812+0100" comment="Copied from System settings app doc." flag="done"?>
+                    <para>This sets the number of standard deviations to use in the outlier
+                        analysis. The default value is
+                        <?oxy_comment_start author="cecilia" timestamp="20170112T163845+0100" comment="Still correct?"?>2<?oxy_comment_end?>.
+                        A high value will catch less outlier values than a low value.</para>
+                    <?oxy_comment_end?>
+                </listitem>
+            </orderedlist>
+        </section>
+        <section>
+            <title>Create minimum and maximum value range automatically</title>
             <screenshot>
                 <mediaobject>
                     <imageobject>
@@ -83,7 +148,7 @@ Add an example"?>This
             </note>
         </section>
         <section>
-            <title>Set the minimum and maximum value range manually </title>
+            <title>Create minimum and maximum value range manually </title>
             <screenshot>
                 <mediaobject>
                     <imageobject>
@@ -96,13 +161,15 @@ Add an example"?>This
             <orderedlist>
                 <listitem>
                     <para>In the <emphasis role="bold">Data
-                            <?oxy_comment_start author="cecilia" timestamp="20170109T144747+0100" comment="Can you do it in any other app too?"?>Entry<?oxy_comment_end?></emphasis>
+                            <?oxy_comment_start author="cecilia" timestamp="20170109T144747+0100" comment="Can you do it in any other app too?
+
+SME: no" flag="done"?>Entry<?oxy_comment_end?></emphasis>
                         app, open a data entry form.</para>
                 </listitem>
                 <listitem>
                     <?oxy_comment_start author="cecilia" timestamp="20170109T150432+0100" comment="Reword"?>
-                    <para>Double-click the field for which you want to set the minimum maximum
-                        value.</para>
+                    <para>Double-click the field for which you want to set the minimum maximum value
+                        range.</para>
                     <?oxy_comment_end?>
                 </listitem>
                 <listitem>
@@ -111,11 +178,9 @@ Add an example"?>This
                 </listitem>
                 <listitem>
                     <para>Click <emphasis role="bold">Save</emphasis>.</para>
-                    <?oxy_comment_start author="cecilia" timestamp="20170109T150509+0100" comment="Reword."?>
-                    <para>On subsequent data entry, if the values entered do not fall within the new
-                        minimum maximum range, the data entry cell will appear with an orange
-                        background, to highlight that this value does not fall within the min-max
-                        range. </para>
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T150509+0100" comment="Reword." flag="done"?>
+                    <para>If values don't fall within the new value range the next time you enter
+                        data, the data entry cell will appear with an orange background. </para>
                     <?oxy_comment_end?>
                 </listitem>
                 <listitem>
@@ -134,8 +199,14 @@ Add an example"?>This
         </section>
     </section>
     <section>
-        <title>Run minimum maximum outlier analysis</title>
+        <title>Run a minimum maximum outlier analysis</title>
         <orderedlist>
+            <listitem>
+                <para>Verify that you've created
+                    <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>minimum and
+                    maximum<?oxy_custom_end?> value ranges and set the <emphasis role="bold">Data
+                        analysis std dev factor</emphasis>.</para>
+            </listitem>
             <listitem>
                 <para>Open the <emphasis role="bold">Data Quality</emphasis> app and click <emphasis
                         role="bold">Min-max outlier analysis</emphasis>.</para>
@@ -143,7 +214,9 @@ Add an example"?>This
             <listitem>
                 <para>Select a <emphasis role="bold">From date</emphasis> and a <emphasis
                         role="bold"
-                        ><?oxy_comment_start author="cecilia" timestamp="20170106T145720+0100" comment="Why not Start and End date as in Validation rule analysis?"?>To<?oxy_comment_end?>
+                        ><?oxy_comment_start author="cecilia" timestamp="20170106T145720+0100" comment="UI: Why not Start and End date as in Validation rule analysis?
+
+SME: could be same" flag="done"?>To<?oxy_comment_end?>
                         date</emphasis>.</para>
             </listitem>
             <listitem>
@@ -154,14 +227,33 @@ Add an example"?>This
             </listitem>
             <listitem>
                 <para>Click <emphasis role="bold"
-                        ><?oxy_comment_start author="cecilia" timestamp="20170106T145826+0100" comment="Why not Validate as in Validation rule analysis?"?>Start<?oxy_comment_end?></emphasis>.</para>
+                        ><?oxy_comment_start author="cecilia" timestamp="20170106T145826+0100" comment="UI: Why not Validate as in Validation rule analysis?" flag="done"?>Start<?oxy_comment_end?></emphasis>.</para>
+                <para>The analysis process duration depends on the amount of data that is being
+                    analysed. If there are validation violations, they will be presented in a
+                    list.</para>
+                <para>
+                    <screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata width="80%" align="center"
+                                    fileref="resources/images/data_quality/min_max_result.png"
+                                    format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot>
+                </para>
+                <para> For each outlier, you'll see the data element, organisation unit, period,
+                    minimum value, value and maximum value.</para>
+            </listitem>
+            <listitem>
+                <para>(Optional) Click <emphasis role="bold">Download as PDF</emphasis>, <emphasis
+                        role="bold">Download as Excel</emphasis> or <emphasis role="bold">Download
+                        as CSV</emphasis> to download the list in PDF, Excel or CSV formats.</para>
             </listitem>
         </orderedlist>
-    </section>
-    <section>
-        <title><?oxy_comment_start author="cecilia" timestamp="20170109T144415+0100" comment="How do you analyse the result? How is the result presented?"?>Analyse<?oxy_comment_end?>
-            result from minimum maximum outlier analysis</title>
-        <para/>
+        <tip>
+            <para>Click the star icon to mark the value for further follow-up.</para>
+        </tip>
     </section>
 </section>
 

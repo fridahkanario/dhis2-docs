@@ -7,35 +7,27 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="standard_deviation_analysis">
-    <title>Standard deviation outlier analysis</title>
+    <title>Standard deviation outlier
+        <?oxy_comment_start author="cecilia" timestamp="20170112T154631+0100" comment="You don&apos;t need to configure anything to run a std dev outlier analysis" flag="done"?>analysis<?oxy_comment_end?></title>
     <section>
         <title>About standard deviation outlier analysis</title>
         <para>The standard deviation outlier analysis provides a mechanism for revealing values that
             are numerically distant from the rest of the data. The analysis is based on the standard
-            normal distribution. Outliers can occur by chance but often indicate:</para>
-        <itemizedlist>
-            <listitem>
-                <para>a measurement error</para>
-                <para>You want to discard these values from the
-                    <?oxy_comment_start author="cecilia" timestamp="20170109T135330+0100" comment="Discard from what? Analysis? Data treatment?
-original text:
-&quot;In the former case you would like to discard them.&quot;
-"?>??<?oxy_comment_end?>.</para>
-            </listitem>
-            <listitem>
-                <para>a heavy-tailed distribution which leads to very high numbers</para>
-                <para>In this case, be cautious to use tools or interpretations that assume a normal
-                    distribution.</para>
-            </listitem>
-        </itemizedlist>
+            normal distribution. Outliers can occur by chance but often indicate a measurement error
+            or a heavy-tailed distribution which leads to very high numbers. You should investigate
+            measurement errors and try to correct them before you discard them from the
+            analysis.</para>
+        <para>
+            <note>
+                <para>Be
+                    <?oxy_comment_start author="cecilia" timestamp="20170112T154953+0100" comment="Replace with &quot;it&apos;s not recommended&quot;?"?>cautious<?oxy_comment_end?>
+                    to use tools or interpretations that assume a normal distribution for
+                    heavy-tailed distributions.</para>
+            </note>
+        </para>
     </section>
     <section>
-        <title>Configure standard deviation outlier
-            <?oxy_comment_start author="cecilia" timestamp="20170109T134829+0100" comment="Do you need to configure something to use this analysis type?"?>analysis<?oxy_comment_end?></title>
-        <para/>
-    </section>
-    <section>
-        <title>Run standard deviation outlier analysis</title>
+        <title>Run a standard deviation outlier analysis</title>
         <screenshot>
             <mediaobject>
                 <?oxy_comment_start author="cecilia" timestamp="20170109T133828+0100" comment="Update screenshot when Validation rule have been removed."?>
@@ -57,37 +49,47 @@ original text:
                         role="bold">To date</emphasis>.</para>
             </listitem>
             <listitem>
-                <?oxy_comment_start author="cecilia" timestamp="20170109T134523+0100" comment="Verify with SME that this phrase is correct. Then, copy to other analysis topics."?>
+                <?oxy_comment_start author="cecilia" timestamp="20170109T134523+0100" comment="Verify with SME that this phrase is correct. Then, copy to other analysis topics." flag="done"?>
                 <para><?oxy_comment_start author="cecilia" timestamp="20170109T134556+0100" comment="Double-click?"?>Select<?oxy_comment_end?>
                     data
                     <?oxy_comment_start author="cecilia" timestamp="20170109T134709+0100" comment="Removed text:
 &quot;Third, select all or some of the data elements in the data set by double-clicking or marking them and clicking the add/remove buttons.&quot;
 
-Question: in UI there&apos;s no data element selection, only data sets."?>set<?oxy_comment_end?>(s).</para>
+Question: in UI there&apos;s no data element selection, only data sets.
+
+Should only be data sets" flag="done"?>set<?oxy_comment_end?>(s).</para>
                 <?oxy_comment_end?>
             </listitem>
             <listitem>
-                <para>Select <?oxy_comment_start author="cecilia" timestamp="20170106T152437+0100" comment="SHould it be possible to select several org units?"?>a<?oxy_comment_end?>
-                    <emphasis role="bold"><?oxy_comment_start author="cecilia" timestamp="20170109T134301+0100" comment="&quot;Select&quot; should be removed from UI"?>Parent<?oxy_comment_end?>
-                        <?oxy_comment_start author="cecilia" timestamp="20170109T133526+0100" comment="Why Parent organisation unit here and only Oranisation unit in other analysis forms?"?>organisation<?oxy_comment_end?>
+                <para>Select <?oxy_comment_start author="cecilia" timestamp="20170106T152437+0100" comment="SHould it be possible to select several org units?
+SME: no" flag="done"?>a<?oxy_comment_end?>
+                    <emphasis role="bold"><?oxy_comment_start author="cecilia" timestamp="20170109T134301+0100" comment="UI: &quot;Select&quot; should be removed from UI" flag="done"?>Parent<?oxy_comment_end?>
+                        <?oxy_comment_start author="cecilia" timestamp="20170109T133526+0100" comment="Why Parent organisation unit here and only Oranisation unit in other analysis forms?
+
+SME: Analysis is made on raw data &quot;under&quot; the parent org unit, not on aggregated data. Take todays value, and generate std avations per org unit back in history.
+
+Average based on which time? 2 year, all history?? Follow-up with Lars."?>organisation<?oxy_comment_end?>
                         unit</emphasis>.</para>
-                <para>All children of the organisation unit will be included.</para>
+                <para>All children of the organisation unit will be included. The analysis is made
+                    on raw data "under" the parent organisation unit, not on aggregated data.</para>
             </listitem>
             <listitem>
                 <para>Select a number of standard
-                    <?oxy_comment_start author="cecilia" timestamp="20170109T134122+0100" comment="When you have run one analysis, and you click Done, you&apos;re taken back to the analysis form but the number of standard deviations is gone. You won&apos;t see this field unless you click the menu to the left."?>deviations<?oxy_comment_end?>.</para>
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T134122+0100" comment="UI: When you have run one analysis, and you click Done, you&apos;re taken back to the analysis form but the number of standard deviations is gone. You won&apos;t see this field unless you click the menu to the left." flag="done"?>deviations<?oxy_comment_end?>.</para>
                 <para>This refers to the number of standard deviations the data is allowed to
                     deviate from the mean before it is classified as an outlier.</para>
             </listitem>
             <listitem>
                 <para>Click <emphasis role="bold"
-                        ><?oxy_comment_start author="cecilia" timestamp="20170109T133644+0100" comment="Why Start here? Generate and Create are also used for other analysis forms."?>Start<?oxy_comment_end?></emphasis>.</para>
+                        ><?oxy_comment_start author="cecilia" timestamp="20170109T133644+0100" comment="UI: Why Start here? Generate and Create are also used for other analysis forms." flag="done"?>Start<?oxy_comment_end?></emphasis>.</para>
             </listitem>
         </orderedlist>
     </section>
     <section>
         <title>Analyse result from standard deviation outlier
-            <?oxy_comment_start author="cecilia" timestamp="20170109T135758+0100" comment="Add screen shot of list"?>analysis<?oxy_comment_end?></title>
+            <?oxy_comment_start author="cecilia" timestamp="20170109T135758+0100" comment="Add screen shot of list
+
+SME: couldn&apos;t create on on training land."?>analysis<?oxy_comment_end?></title>
         <para>After the analysis process has finished, you'll see a list of potential outlier
             values. For each outlier, you'll see the data element, organisation unit, period,
             minimum value, actual value, and maximum value. The minimum and maximum values refer to

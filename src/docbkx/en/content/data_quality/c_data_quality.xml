@@ -8,7 +8,9 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="about_data_quality">
     <title>About data quality
-        <?oxy_comment_start author="cecilia" timestamp="20170109T161157+0100" comment="At next release, review section again."?>checks<?oxy_comment_end?></title>
+        <?oxy_comment_start author="cecilia" timestamp="20170109T161157+0100" comment="At next release, review section again.
+
+Typical user: users on national level." flag="done"?>checks<?oxy_comment_end?></title>
     <para>Good data quality is a key concern in building an effective HMIS. The <emphasis
             role="bold">Data Quality</emphasis> app contains tools to improve the accuracy and
         reliability of the data in the system. You can verify the data quality with the help of
