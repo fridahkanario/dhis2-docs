@@ -7,21 +7,25 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <title>Delete metadata objects</title>
-    <note>
-        <para>You can only delete a data element and other data element objects if no data is
-            <?oxy_comment_start author="cecilia" timestamp="20160510T162310+0200" comment="At next revision:
+    <para>
+        <note>
+            <para>You can only delete a data element and other data element objects if no data is
+                <?oxy_comment_start author="cecilia" timestamp="20160510T162310+0200" comment="At next revision:
 For SME: &quot;Associated&quot; as message says in GUI? Instead of attached." flag="done"?>associated<?oxy_comment_end?>
-            to the data element itself.</para>
-    </note>
-    <warning>
-        <?oxy_comment_start author="cecilia" timestamp="20160602T151710+0200" comment="For next release:
+                to the data element itself.</para>
+        </note>
+    </para>
+    <para>
+        <warning>
+            <?oxy_comment_start author="cecilia" timestamp="20160602T151710+0200" comment="For next release:
 Reword, remove passive voice." flag="done"?>
-        <para>Any data set that you delete from the system is irrevocably lost. All data entry
-            forms, and section forms which may have been developed will also be removed. Make sure
-            that you have made a backup of your database before deleting any data set in case you
-            need to restore it at some point in time.</para>
-        <?oxy_comment_end?>
-    </warning>
+            <para>Any data set that you delete from the system is irrevocably lost. All data entry
+                forms, and section forms which may have been developed will also be removed. Make
+                sure that you have made a backup of your database before deleting any data set in
+                case you need to restore it at some point in time.</para>
+            <?oxy_comment_end?>
+        </warning>
+    </para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and find the type of
