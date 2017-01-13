@@ -9,14 +9,14 @@
     xml:id="min_max_analysis">
     <title><?oxy_comment_start author="cecilia" timestamp="20170112T161442+0100" comment="Term: Mimimum and maximum value range
 OR
-Mimimum maximum value range?"?>Minimum maximum<?oxy_comment_end?>
+Mimimum maximum value range? (This one!)"?>Minimum maximum<?oxy_comment_end?>
         <?oxy_comment_start author="cecilia" timestamp="20170112T104520+0100" comment="No API for this analysis" flag="done"?>outlier<?oxy_comment_end?>
         <?oxy_comment_start author="cecilia" timestamp="20170106T150550+0100" comment="UI suggestion: add a Stop button.
 For example when you&apos;ve selected the wrong org unit and the analysis takes too long." flag="done"?>analysis<?oxy_comment_end?></title>
     <section>
         <title>About minimum maximum outlier analysis</title>
-        <para>You can verify the data quality at the point of data entry by setting a minimum and
-            maximum value range for each data element. You can create the value ranges manually or
+        <para>You can verify the data quality at the point of data entry by setting a minimum
+            maximum value range for each data element. You create the value ranges manually or
             generate them automatically.</para>
         <para>The auto-generated minimum maximum value range is suitable only for normally
             distributed data. DHIS2 will determine the arithmetic mean and standard deviation of all
@@ -25,9 +25,7 @@ For example when you&apos;ve selected the wrong org unit and the analysis takes 
 
 SME: system only checks raw data, maybe attribute option, verify with Lars."?>data
             element /category option/organisation unit combination.<?oxy_comment_end?> Then the
-            system will calculate the
-            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>min-max<?oxy_custom_end?>
-            value range
+            system will calculate the minimum maximum value range
             based<?oxy_comment_start author="cecilia" timestamp="20170106T154550+0100" comment="end of phrase missing in legacy content. Based on what?
 
 SME: system calculates average value based per org unit and data element, cat option and attribute option, then, based on the average, the system sets the min value to average - x number of std dev, max value to average + number or std deviations. You set this in Sytem Settings,  General, Data analysis std dev factor." flag="done"?>
@@ -45,15 +43,13 @@ Facility, 0 0 2, outlier but it oculd be possible to go from 1 delivery to 3 fro
 
 Malaria seasons: max value could be lower than the max value during high season." flag="done"?>This
             can lead to excessive false violations<?oxy_comment_end?>, for example if you analyse
-            values
-            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>for<?oxy_custom_end?>
-            seasonal diseases.</para>
+            values related to seasonal diseases.</para>
         <note>
             <para>C<?oxy_comment_start author="cecilia" timestamp="20170106T151747+0100" comment="Still correct?
 
 SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
-                min-max values are calculated across all attribute combination options for a given
-                data element /category option / organisation unit combination.</para>
+                minimum maximum value ranges are calculated across all attribute combination options
+                for a given data element /category option / organisation unit combination.</para>
         </note>
     </section>
     <section>
@@ -64,8 +60,7 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
                         role="bold">Data analysis std dev factor</emphasis>.</para>
             </listitem>
             <listitem>
-                <para>Create a minimum and maximum value range, either automatically or
-                    manually.</para>
+                <para>Create a minimum maximum value range, either automatically or manually.</para>
                 <itemizedlist>
                     <listitem>
                         <para>In the <emphasis role="bold">Data Administration</emphasis> app, you
@@ -105,22 +100,26 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
             </orderedlist>
         </section>
         <section>
-            <title>Create minimum and maximum value range automatically</title>
-            <screenshot>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata align="center" width="40%"
-                            fileref="resources/images/data_quality/generate_min_max.png"/>
-                    </imageobject>
-                </mediaobject>
-            </screenshot>
-            <note>
-                <?oxy_comment_start author="cecilia" timestamp="20170109T141658+0100" comment="Verify with SME that the statement is correct."?>
-                <para>Auto-generated minimum maximum value ranges can be useful for many situations,
-                    but it's recommended to verify that the data is actually normally distributed
-                    prior to using this function.</para>
-                <?oxy_comment_end?>
-            </note>
+            <title>Create minimum maximum value range automatically</title>
+            <para>
+                <screenshot>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata align="center" width="40%"
+                                fileref="resources/images/data_quality/generate_min_max.png"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
+            <para>
+                <note>
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T141658+0100" comment="Verify with SME that the statement is correct."?>
+                    <para>Auto-generated minimum maximum value ranges can be useful for many
+                        situations, but it's recommended to verify that the data is actually
+                        normally distributed prior to using this function.</para>
+                    <?oxy_comment_end?>
+                </note>
+            </para>
             <para>You generate and remove the minimum maximum value ranges calculated by data set in
                 the <emphasis role="bold">Data Administration</emphasis> app.</para>
             <orderedlist>
@@ -137,18 +136,21 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
                 </listitem>
                 <listitem>
                     <para>Click <emphasis role="bold">Generate</emphasis>.</para>
-                    <para>New min-max value ranges for all data elements in the selected data sets
-                        for all organisation units (including descendants) of the selected
+                    <para>New minimum maximum value ranges for all data elements in the selected
+                        data sets for all organisation units (including descendants) of the selected
                         organisation units are generated.</para>
                 </listitem>
             </orderedlist>
-            <note>
-                <para>Click <emphasis role="bold">Remove</emphasis> to permanently delete all
-                    min-max value ranges for the selected data sets and organisation units.</para>
-            </note>
+            <para>
+                <tip>
+                    <para>Click <emphasis role="bold">Remove</emphasis> to permanently delete all
+                        minimum maximum value ranges for the selected data sets and organisation
+                        units.</para>
+                </tip>
+            </para>
         </section>
         <section>
-            <title>Create minimum and maximum value range manually </title>
+            <title>Create minimum maximum value range manually </title>
             <screenshot>
                 <mediaobject>
                     <imageobject>
@@ -193,19 +195,20 @@ SME: no" flag="done"?>Entry<?oxy_comment_end?></emphasis>
                     <para>(Optional) Click <emphasis role="bold">Save comment</emphasis>.</para>
                 </listitem>
             </orderedlist>
-            <tip>
-                <para>Click the star icon to mark the value for further follow-up.</para>
-            </tip>
+            <para>
+                <tip>
+                    <para>Click the star icon to mark the value for further follow-up.</para>
+                </tip>
+            </para>
         </section>
     </section>
     <section>
-        <title>Run a minimum maximum outlier analysis</title>
+        <title>Run a minimum maximum outlier
+            <?oxy_comment_start author="cecilia" timestamp="20170113T085551+0100" comment="Add screenshot when validation rules have been removed from UI."?>analysis<?oxy_comment_end?></title>
         <orderedlist>
             <listitem>
-                <para>Verify that you've created
-                    <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>minimum and
-                    maximum<?oxy_custom_end?> value ranges and set the <emphasis role="bold">Data
-                        analysis std dev factor</emphasis>.</para>
+                <para>Verify that you've created minimum maximum value ranges and set the <emphasis
+                        role="bold">Data analysis std dev factor</emphasis>.</para>
             </listitem>
             <listitem>
                 <para>Open the <emphasis role="bold">Data Quality</emphasis> app and click <emphasis
@@ -223,7 +226,7 @@ SME: could be same" flag="done"?>To<?oxy_comment_end?>
                 <para>Select which data sets you want to include in the analysis.</para>
             </listitem>
             <listitem>
-                <para>Select <emphasis role="bold">Parent organisation unit</emphasis>.</para>
+                <para>Select a <emphasis role="bold">Parent organisation unit</emphasis>.</para>
             </listitem>
             <listitem>
                 <para>Click <emphasis role="bold"
@@ -251,9 +254,11 @@ SME: could be same" flag="done"?>To<?oxy_comment_end?>
                         as CSV</emphasis> to download the list in PDF, Excel or CSV formats.</para>
             </listitem>
         </orderedlist>
-        <tip>
-            <para>Click the star icon to mark the value for further follow-up.</para>
-        </tip>
+        <para>
+            <tip>
+                <para>Click the star icon to mark the value for further follow-up.</para>
+            </tip>
+        </para>
     </section>
 </section>
 

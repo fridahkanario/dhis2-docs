@@ -11,36 +11,67 @@
         <?oxy_comment_start author="cecilia" timestamp="20170109T161157+0100" comment="At next release, review section again.
 
 Typical user: users on national level." flag="done"?>checks<?oxy_comment_end?></title>
-    <para>Good data quality is a key concern in building an effective HMIS. The <emphasis
-            role="bold">Data Quality</emphasis> app contains tools to improve the accuracy and
-        reliability of the data in the system. You can verify the data quality with the help of
-        validation rules and various statistical checks.</para>
+    <para>The <emphasis role="bold">Data Quality</emphasis> app contains tools to improve the
+        accuracy and reliability of the data in the system. You can verify the data quality with the
+        help of validation rules and various statistical checks.</para>
     <para>Data quality has different dimensions including:</para>
-    <itemizedlist>
-        <listitem>
-            <para><emphasis>Correctness:</emphasis></para>
-            <para>Data should be within the normal range for data collected at that facility. There
-                should be no gross discrepancies when compared with data from related data
-                elements.</para>
-        </listitem>
-        <listitem>
-            <para><emphasis>Completeness:</emphasis></para>
-            <para>Data for all data elements for all reporting organisation units should have been
-                submitted.</para>
-        </listitem>
-        <listitem>
-            <para><emphasis>Consistency:</emphasis></para>
-            <para>Data should be consistent with data entered during earlier months and years while
-                allowing for changes with reorganization, increased work load, etc. and consistent
-                with other similar facilities.</para>
-        </listitem>
-        <listitem>
-            <para><emphasis>Timeliness:</emphasis></para>
-            <para>All data from all reporting organisation units should be submitted at the
-                appointed time.</para>
-        </listitem>
-    </itemizedlist>
-    <para>Data quality checking can be done through various means, including:</para>
+    <informaltable frame="all">
+        <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>Dimension</para>
+                    </entry>
+                    <entry>
+                        <para>Discription</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Correctness</para>
+                    </entry>
+                    <entry>
+                        <para>Data should be within the normal range for data collected at that
+                            facility. There should be no gross discrepancies when compared with data
+                            from related data elements.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Completeness</para>
+                    </entry>
+                    <entry>
+                        <para>Data for all data elements for all reporting organisation units should
+                            have been submitted.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Consistency</para>
+                    </entry>
+                    <entry>
+                        <para>Data should be consistent with data entered during earlier months and
+                            years while allowing for changes with reorganization, increased work
+                            load, etc. and consistent with other similar facilities.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Timeliness</para>
+                    </entry>
+                    <entry>
+                        <para>All data from all reporting organisation units should be submitted at
+                            the appointed time.</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+    <para>You can verify data quality in different ways, for example:</para>
     <itemizedlist>
         <listitem>
             <para>At point of data entry, DHIS2 can check the data entered to see if it falls within
@@ -48,17 +79,17 @@ Typical user: users on national level." flag="done"?>checks<?oxy_comment_end?></
                 registered).</para>
         </listitem>
         <listitem>
-            <para>Defining validation rules, which can be run once the user has finished data entry.
-                The user can also check the entered data for a particular period and organization
-                unit(s) against the validation rules, and display the violations for these
-                validation rules.</para>
+            <para>By defining validation rules, which can be run once the user has finished data
+                entry. The user can also check the entered data for a particular period and
+                organization unit(s) against the validation rules, and display the violations for
+                these validation rules.</para>
         </listitem>
         <listitem>
-            <para>Analysis of data sets, that is examine gaps in the data.</para>
+            <para>By analysing data sets, that is, examine gaps in the data.</para>
         </listitem>
         <listitem>
-            <para>Data triangulation, that is comparing the same data or indicator from different
-                sources.</para>
+            <para>By data triangulation, that is, comparing the same data or indicator from
+                different sources.</para>
         </listitem>
     </itemizedlist>
 </section>

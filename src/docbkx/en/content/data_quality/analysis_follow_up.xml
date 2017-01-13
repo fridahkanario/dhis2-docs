@@ -11,9 +11,9 @@
         <?oxy_comment_start author="cecilia" timestamp="20170112T165059+0100" comment="You don&apos;t need to configure anything." flag="done"?>analysis<?oxy_comment_end?></title>
     <section>
         <title>About follow-up analysis</title>
-        <para>The follow-up analysis will create a list of all data values marked for follow-up. You
-            can mark a data value for follow-up in the <emphasis role="bold">Data Entry</emphasis>
-            app and in the result list you get from a standard deviation outlier or minimum maximum
+        <para>The follow-up analysis creates a list of all data values marked for follow-up. You can
+            mark a data value for follow-up in the <emphasis role="bold">Data Entry</emphasis> app
+            and in the result list you get from a standard deviation outlier or minimum maximum
             <?oxy_comment_start author="cecilia" timestamp="20170106T144757+0100" comment="Verify with SME: what does this phrase mean?
 
 In all report types, but not validation rule analysis. Could be due to one validation rule could have multiple values, the others one value that is marked." flag="done"?>outlier
@@ -25,7 +25,8 @@ In all report types, but not validation rule analysis. Could be due to one valid
 SME: open data entry, download list....
 
 Would be good to have a link to corresponding data entry form. (JIRA)" flag="done"?>Create<?oxy_comment_end?>
-            list of data values marked for follow-up</title>
+            list of data values marked for
+            <?oxy_comment_start author="cecilia" timestamp="20170113T085608+0100" comment="Add screenshot when validation rules have been removed from UI."?>follow<?oxy_comment_end?>-up</title>
         <orderedlist>
             <listitem>
                 <para>Open the <emphasis role="bold">Data Quality</emphasis> app and click <emphasis
@@ -55,6 +56,11 @@ Would be good to have a link to corresponding data entry form. (JIRA)" flag="don
                     or CSV formats.</para>
             </listitem>
         </orderedlist>
+        <para>
+            <tip>
+                <para>Click the star icon to remove the follow-up tag from the data value.</para>
+            </tip>
+        </para>
     </section>
 </section>
 

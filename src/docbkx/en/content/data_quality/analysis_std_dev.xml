@@ -11,12 +11,11 @@
         <?oxy_comment_start author="cecilia" timestamp="20170112T154631+0100" comment="You don&apos;t need to configure anything to run a std dev outlier analysis" flag="done"?>analysis<?oxy_comment_end?></title>
     <section>
         <title>About standard deviation outlier analysis</title>
-        <para>The standard deviation outlier analysis provides a mechanism for revealing values that
-            are numerically distant from the rest of the data. The analysis is based on the standard
-            normal distribution. Outliers can occur by chance but often indicate a measurement error
-            or a heavy-tailed distribution which leads to very high numbers. You should investigate
-            measurement errors and try to correct them before you discard them from the
-            analysis.</para>
+        <para>The standard deviation outlier analysis identifies values that are numerically distant
+            from the rest of the data. The analysis is based on the standard normal distribution.
+            Outliers can occur by chance but often indicate a measurement error or a heavy-tailed
+            distribution which leads to very high numbers. You should investigate measurement errors
+            and try to correct them before you discard them from the analysis.</para>
         <para>
             <note>
                 <para>Be
@@ -28,17 +27,19 @@
     </section>
     <section>
         <title>Run a standard deviation outlier analysis</title>
-        <screenshot>
-            <mediaobject>
-                <?oxy_comment_start author="cecilia" timestamp="20170109T133828+0100" comment="Update screenshot when Validation rule have been removed."?>
-                <imageobject>
-                    <imagedata width="80%"
-                        fileref="resources/images/dhis2UserManual/Data Quality_Std Deviation Analysis.png"
-                        format="PNG" align="center"/>
-                </imageobject>
-                <?oxy_comment_end?>
-            </mediaobject>
-        </screenshot>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T133828+0100" comment="Update screenshot when Validation rule have been removed."?>
+                    <imageobject>
+                        <imagedata width="80%"
+                            fileref="resources/images/dhis2UserManual/Data Quality_Std Deviation Analysis.png"
+                            format="PNG" align="center"/>
+                    </imageobject>
+                    <?oxy_comment_end?>
+                </mediaobject>
+            </screenshot>
+        </para>
         <orderedlist>
             <listitem>
                 <para>Open the <emphasis role="bold">Data Quality</emphasis> app and click <emphasis
@@ -82,19 +83,32 @@ Average based on which time? 2 year, all history?? Follow-up with Lars."?>organi
             <listitem>
                 <para>Click <emphasis role="bold"
                         ><?oxy_comment_start author="cecilia" timestamp="20170109T133644+0100" comment="UI: Why Start here? Generate and Create are also used for other analysis forms." flag="done"?>Start<?oxy_comment_end?></emphasis>.</para>
+                <para>The analysis process duration depends on the amount of data that is being
+                    analysed. If there are potential standard deviations outliers, they will be
+                    presented in a
+                    <?oxy_comment_start author="cecilia" timestamp="20170113T084355+0100" comment="Add screenshot of list.
+SME couldn&apos;t create one in Trainingland or Demo, neither I.
+Have asked Lars.
+Verify if you can download the result list."?>list<?oxy_comment_end?>.</para>
+                <?oxy_comment_start author="cecilia" timestamp="20170113T084502+0100" comment="Haven&apos;t been able to verify this since I haven&apos;t been able to create a outlier list."?>
+                <para>For each outlier, you'll see the data element, organisation unit, period,
+                    minimum value, actual value, and maximum value. The minimum and maximum values
+                    refer to the border values derived from the number of standard deviations
+                    selected for the analysis.</para>
+                <?oxy_comment_end?>
             </listitem>
         </orderedlist>
+        <para>
+            <tip>
+                <para>Click the star icon to mark an outlier value for further follow-up.</para>
+            </tip>
+        </para>
     </section>
     <section>
-        <title>Analyse result from standard deviation outlier
+        <title>Modify a standard deviation outlier
             <?oxy_comment_start author="cecilia" timestamp="20170109T135758+0100" comment="Add screen shot of list
 
-SME: couldn&apos;t create on on training land."?>analysis<?oxy_comment_end?></title>
-        <para>After the analysis process has finished, you'll see a list of potential outlier
-            values. For each outlier, you'll see the data element, organisation unit, period,
-            minimum value, actual value, and maximum value. The minimum and maximum values refer to
-            the border values derived from the number of standard deviations selected for the
-            analysis.</para>
+SME: couldn&apos;t create on on training land."?>value<?oxy_comment_end?></title>
         <para>You can modify an outlier value directly in the analysis result list:</para>
         <orderedlist>
             <listitem>
@@ -104,15 +118,14 @@ SME: couldn&apos;t create on on training land."?>analysis<?oxy_comment_end?></ti
             <listitem>
                 <para>Enter a value and then navigate away from that field either by clicking tab or
                     anywhere outside the field.</para>
+                <?oxy_comment_start author="cecilia" timestamp="20170113T084655+0100" comment="Haven&apos;t been able to verify this since no list."?>
                 <para>The system provides an alert if the value is still outside the defined minimum
                     and maximum values, but the value will saved in any case.
                     <?oxy_comment_start author="cecilia" timestamp="20170109T140119+0100" comment="Apply for all values or just the outlier ones?"?>The
                     field will have a red background color if the value is outside the range, and a
                     green if inside.<?oxy_comment_end?></para>
+                <?oxy_comment_end?>
             </listitem>
         </orderedlist>
-        <tip>
-            <para>Click the star icon to mark an outlier value for further follow-up.</para>
-        </tip>
     </section>
 </section>

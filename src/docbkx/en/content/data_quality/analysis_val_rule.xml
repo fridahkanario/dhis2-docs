@@ -36,14 +36,13 @@ Make sure the possibility to create a validation notification is mentioned is th
             </example>
         </para>
         <para>The validation rule analysis tests validation rules against the data registered in the
-            system. Validation violations will be reported for cases where the condition defined in
-            the validation rule expression is not met, that means when the condition is
-            false.</para>
-        <para>You can configure a validation rule analysis to automatically send out to information
+            system. Validation violations are reported when the condition defined in the validation
+            rule expression is not met, which means when the condition is false.</para>
+        <para>You can configure a validation rule analysis to automatically send out information
             about validation violations to selected user groups. These messages are called
                 <emphasis>validation notifications</emphasis> and you create them in the <emphasis
-                role="bold">Maintenance</emphasis> app. These messages are send via the internal
-            DHIS2 messaging system.</para>
+                role="bold">Maintenance</emphasis> app. Validation notifications are send via the
+            internal DHIS2 messaging system.</para>
     </section>
     <section>
         <title>Workflow</title>
@@ -144,13 +143,12 @@ Make sure the possibility to create a validation notification is mentioned is th
                 <para>(Optional) Select <emphasis role="bold">Send notifications</emphasis> to
                     trigger automatic validation notifications.</para>
                 <note>
-                    <para>If you want to send out validation notifications, you need to create a
-                        validation notification message in the <emphasis role="bold"
-                            >Maintenance</emphasis> app.</para>
+                    <para>If you want to send out validation notifications, you must first create
+                        them in the <emphasis role="bold">Maintenance</emphasis> app.</para>
                 </note>
             </listitem>
             <listitem>
-                <para>Select <emphasis role="bold">Parent organisation unit</emphasis>.</para>
+                <para>Select a <emphasis role="bold">Parent organisation unit</emphasis>.</para>
             </listitem>
             <listitem>
                 <para>Click <emphasis role="bold">Validate</emphasis>.</para>
