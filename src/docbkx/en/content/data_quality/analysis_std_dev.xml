@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="standard_deviation_analysis">
+    <title>Standard deviation outlier
+        <?oxy_comment_start author="cecilia" timestamp="20170112T154631+0100" comment="You don&apos;t need to configure anything to run a std dev outlier analysis" flag="done"?>analysis<?oxy_comment_end?></title>
+    <section>
+        <title>About standard deviation outlier analysis</title>
+        <para>The standard deviation outlier analysis identifies values that are numerically distant
+            from the rest of the data. The analysis is based on the standard normal distribution.
+            Outliers can occur by chance but often indicate a measurement error or a heavy-tailed
+            distribution which leads to very high numbers. You should investigate measurement errors
+            and try to correct them before you discard them from the analysis.</para>
+        <para>
+            <note>
+                <para>Be
+                    <?oxy_comment_start author="cecilia" timestamp="20170112T154953+0100" comment="Replace with &quot;it&apos;s not recommended&quot;?"?>cautious<?oxy_comment_end?>
+                    to use tools or interpretations that assume a normal distribution for
+                    heavy-tailed distributions.</para>
+            </note>
+        </para>
+    </section>
+    <section>
+        <title>Run a standard deviation outlier analysis</title>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T133828+0100" comment="Update screenshot when Validation rule have been removed."?>
+                    <imageobject>
+                        <imagedata width="80%"
+                            fileref="resources/images/dhis2UserManual/Data Quality_Std Deviation Analysis.png"
+                            format="PNG" align="center"/>
+                    </imageobject>
+                    <?oxy_comment_end?>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>Open the <emphasis role="bold">Data Quality</emphasis> app and click <emphasis
+                        role="bold">Std dev outlier analysis</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>Select a <emphasis role="bold">From date</emphasis> and an <emphasis
+                        role="bold">To date</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <?oxy_comment_start author="cecilia" timestamp="20170109T134523+0100" comment="Verify with SME that this phrase is correct. Then, copy to other analysis topics." flag="done"?>
+                <para><?oxy_comment_start author="cecilia" timestamp="20170109T134556+0100" comment="Double-click?"?>Select<?oxy_comment_end?>
+                    data
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T134709+0100" comment="Removed text:
+&quot;Third, select all or some of the data elements in the data set by double-clicking or marking them and clicking the add/remove buttons.&quot;
+
+Question: in UI there&apos;s no data element selection, only data sets.
+
+Should only be data sets" flag="done"?>set<?oxy_comment_end?>(s).</para>
+                <?oxy_comment_end?>
+            </listitem>
+            <listitem>
+                <para>Select <?oxy_comment_start author="cecilia" timestamp="20170106T152437+0100" comment="SHould it be possible to select several org units?
+SME: no" flag="done"?>a<?oxy_comment_end?>
+                    <emphasis role="bold"><?oxy_comment_start author="cecilia" timestamp="20170109T134301+0100" comment="UI: &quot;Select&quot; should be removed from UI" flag="done"?>Parent<?oxy_comment_end?>
+                        <?oxy_comment_start author="cecilia" timestamp="20170109T133526+0100" comment="Why Parent organisation unit here and only Oranisation unit in other analysis forms?
+
+SME: Analysis is made on raw data &quot;under&quot; the parent org unit, not on aggregated data. Take todays value, and generate std avations per org unit back in history.
+
+Average based on which time? 2 year, all history?? Follow-up with Lars."?>organisation<?oxy_comment_end?>
+                        unit</emphasis>.</para>
+                <para>All children of the organisation unit will be included. The analysis is made
+                    on raw data "under" the parent organisation unit, not on aggregated data.</para>
+            </listitem>
+            <listitem>
+                <para>Select a number of standard
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T134122+0100" comment="UI: When you have run one analysis, and you click Done, you&apos;re taken back to the analysis form but the number of standard deviations is gone. You won&apos;t see this field unless you click the menu to the left." flag="done"?>deviations<?oxy_comment_end?>.</para>
+                <para>This refers to the number of standard deviations the data is allowed to
+                    deviate from the mean before it is classified as an outlier.</para>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold"
+                        ><?oxy_comment_start author="cecilia" timestamp="20170109T133644+0100" comment="UI: Why Start here? Generate and Create are also used for other analysis forms." flag="done"?>Start<?oxy_comment_end?></emphasis>.</para>
+                <para>The analysis process duration depends on the amount of data that is being
+                    analysed. If there are potential standard deviations outliers, they will be
+                    presented in a
+                    <?oxy_comment_start author="cecilia" timestamp="20170113T084355+0100" comment="Add screenshot of list.
+SME couldn&apos;t create one in Trainingland or Demo, neither I.
+Have asked Lars.
+Verify if you can download the result list."?>list<?oxy_comment_end?>.</para>
+                <?oxy_comment_start author="cecilia" timestamp="20170113T084502+0100" comment="Haven&apos;t been able to verify this since I haven&apos;t been able to create a outlier list."?>
+                <para>For each outlier, you'll see the data element, organisation unit, period,
+                    minimum value, actual value, and maximum value. The minimum and maximum values
+                    refer to the border values derived from the number of standard deviations
+                    selected for the analysis.</para>
+                <?oxy_comment_end?>
+            </listitem>
+        </orderedlist>
+        <para>
+            <tip>
+                <para>Click the star icon to mark an outlier value for further follow-up.</para>
+            </tip>
+        </para>
+    </section>
+    <section>
+        <title>Modify a standard deviation outlier
+            <?oxy_comment_start author="cecilia" timestamp="20170109T135758+0100" comment="Add screen shot of list
+
+SME: couldn&apos;t create on on training land."?>value<?oxy_comment_end?></title>
+        <para>You can modify an outlier value directly in the analysis result list:</para>
+        <orderedlist>
+            <listitem>
+                <para>In the value column, click inside the field that contains the value you want
+                    to change.</para>
+            </listitem>
+            <listitem>
+                <para>Enter a value and then navigate away from that field either by clicking tab or
+                    anywhere outside the field.</para>
+                <?oxy_comment_start author="cecilia" timestamp="20170113T084655+0100" comment="Haven&apos;t been able to verify this since no list."?>
+                <para>The system provides an alert if the value is still outside the defined minimum
+                    and maximum values, but the value will saved in any case.
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T140119+0100" comment="Apply for all values or just the outlier ones?"?>The
+                    field will have a red background color if the value is outside the range, and a
+                    green if inside.<?oxy_comment_end?></para>
+                <?oxy_comment_end?>
+            </listitem>
+        </orderedlist>
+    </section>
+</section>

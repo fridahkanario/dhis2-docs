@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="about_data_quality">
+    <title>About data quality
+        <?oxy_comment_start author="cecilia" timestamp="20170109T161157+0100" comment="At next release, review section again.
+
+Typical user: users on national level." flag="done"?>checks<?oxy_comment_end?></title>
+    <para>The <emphasis role="bold">Data Quality</emphasis> app contains tools to improve the
+        accuracy and reliability of the data in the system. You can verify the data quality with the
+        help of validation rules and various statistical checks.</para>
+    <para>Data quality has different dimensions including:</para>
+    <informaltable frame="all">
+        <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>Dimension</para>
+                    </entry>
+                    <entry>
+                        <para>Discription</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Correctness</para>
+                    </entry>
+                    <entry>
+                        <para>Data should be within the normal range for data collected at that
+                            facility. There should be no gross discrepancies when compared with data
+                            from related data elements.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Completeness</para>
+                    </entry>
+                    <entry>
+                        <para>Data for all data elements for all reporting organisation units should
+                            have been submitted.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Consistency</para>
+                    </entry>
+                    <entry>
+                        <para>Data should be consistent with data entered during earlier months and
+                            years while allowing for changes with reorganization, increased work
+                            load, etc. and consistent with other similar facilities.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Timeliness</para>
+                    </entry>
+                    <entry>
+                        <para>All data from all reporting organisation units should be submitted at
+                            the appointed time.</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+    <para>You can verify data quality in different ways, for example:</para>
+    <itemizedlist>
+        <listitem>
+            <para>At point of data entry, DHIS2 can check the data entered to see if it falls within
+                the minimum maximum value ranges of that data element (based on all previous data
+                registered).</para>
+        </listitem>
+        <listitem>
+            <para>By defining validation rules, which can be run once the user has finished data
+                entry. The user can also check the entered data for a particular period and
+                organization unit(s) against the validation rules, and display the violations for
+                these validation rules.</para>
+        </listitem>
+        <listitem>
+            <para>By analysing data sets, that is, examine gaps in the data.</para>
+        </listitem>
+        <listitem>
+            <para>By data triangulation, that is, comparing the same data or indicator from
+                different sources.</para>
+        </listitem>
+    </itemizedlist>
+</section>

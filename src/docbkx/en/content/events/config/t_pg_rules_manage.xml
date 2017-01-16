@@ -5,8 +5,7 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-  xmlns:db="http://docbook.org/ns/docbook"
-  xml:id= "manage_program_rule">
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="manage_program_rule">
   <title>Manage program
     <?oxy_comment_start author="cecilia" timestamp="20161003T204753+0200" comment="Add next revision: add workflow"?>rules<?oxy_comment_end?></title>
   <?oxy_comment_start author="cecilia" timestamp="20161003T210419+0200" comment="Consider adding something like this for every section:
@@ -294,7 +293,8 @@
       <para>Each program rule has a single expression that determines whether rules action should be
         triggered, if the expression evaluates to true. If the expression is true the program rule
         is in effect and the actions will be executed. If the expression is false, the program rule
-        is no longer in effect and the actions will no longer be applied. </para>
+        is no longer in effect and the actions will no longer be applied. The expression length is
+        limited to 255 characters.</para>
       <para>As a simple example, an expression is defined below using a single user-define static
         value, source fields(see previous chapter) and/or operators. Expressions can be typed into
         the edit expression text box, but buttons are available for inserting operators and source

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8'?>
+      <chapter version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook">
+  <title>Using Data Quality functionality</title>
+  <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+  <para>The data quality module provides means to improve the accuracy and reliability of the data
+    in the system. This can be done through validation rules and various statistical checks. All the
+    functionality described below can be accessed from the left side menu in the Services-&gt;Data
+    Quality module.</para>
+  <section>
+    <title>Overview of data quality checks</title>
+    <para>Ensuring data quality is a key concern in building an effective HMIS. Data quality has
+      different dimensions including:</para>
+    <itemizedlist>
+      <listitem>
+        <para><emphasis>Correctness:</emphasis> Data should be within the normal range for data
+          collected at that facility. There should be no gross discrepancies when compared with data
+          from related data elements.</para>
+      </listitem>
+      <listitem>
+        <para><emphasis>Completeness:</emphasis> Data for all data elements for all health
+          facilities should have been submitted.</para>
+      </listitem>
+      <listitem>
+        <para><emphasis>Consistency:</emphasis> Data should be consistent with data entered during
+          earlier months and years while allowing for changes with reorganization, increased work
+          load, etc. and consistent with other similar facilities.</para>
+      </listitem>
+      <listitem>
+        <para><emphasis>Timeliness:</emphasis> All data from all reporting orgunits should be
+          submitted at the appointed time.</para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section>
+    <title>Data quality checks</title>
+    <para>Data quality checking can be done through various means, including:</para>
+    <orderedlist>
+      <listitem>
+        <para>At point of data entry, the software can check the data entered to see if it falls
+          within the min-max ranges of that data element (based on all previous data
+          registered).</para>
+      </listitem>
+      <listitem>
+        <para>Defining various validation rules, which can be run once the user has finished data
+          entry. The user can also check the entered data for a particular period and Organization
+          Unit(s) against the validation rules, and display the violations for these validation
+          rules. </para>
+      </listitem>
+      <listitem>
+        <para>Analysis of data sets, i.e. examining gaps in data.</para>
+      </listitem>
+      <listitem>
+        <para>Data triangulation which is comparing the same data or indicator from different
+          sources.<?oxy_custom_end?></para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+  <section xml:id="validationRuleAnalysis">
+    <title>Running Validation Rule Analysis</title>
+    <para>You can access Validation Rule Analysis from the Apps-&gt;Data Quality menu.</para>
+    <para>A validation rule is based on an expression which defines a relationship between a number
+      of data elements. The expression has a left side and a right side and an operator which
+      defines whether the former must be less than, equal to or greater than the latter. The
+      expression forms a condition which should assert that certain logical criteria are met. For
+      instance, a validation rule could assert that the total number of vaccines given to infants is
+      less than or equal to the total number of infants.</para>
+    <para>The validation rule analysis function will test validation rules against the data
+      registered in the system. Validation violations will be reported in cases where the condition
+      defined through the validation rule expression is not met, i.e. the condition is false.</para>
+    <para><emphasis role="bold">Selecting what data to validate:</emphasis>
+    </para>
+    <para>First, enter a start date and an end date for which data should be included in the
+      analysis. The date picker widget may be used to select dates. </para>
+    <para>Second, choose between including all validation rules or all validation rules from a
+      single group. </para>
+    <para>Third, choose between including the selected organisation unit only or the selected
+      organisation unit with all children in the analysis. Fourth, select the organisation unit.
+      Finally, click <emphasis role="italic">validate</emphasis>.</para>
+    <screenshot>
+      <title>Run validation rule selection</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/dhis2UserManual/Validation Rule_Analysis.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para><emphasis role="bold">Validation results:</emphasis></para>
+    <para>The analysis process will run for a while depending on the amount of data that is being
+      analysed. If there were no violations of the validation rules a message saying <emphasis
+        role="italic">validation passed successfully</emphasis> is displayed. </para>
+    <para>If validation violations were found, they will be presented in a list. The organisation
+      unit, period, left side description and value, operator, and right side value and description
+      for each validation violation are displayed. </para>
+    <para>The show details icon can be clicked in order to get more information about a validation
+      violation. This will open a popup screen that provides information about the data elements
+      included in the validation rules and their corresponding data values. This information can be
+      used in order to fix incorrect data.</para>
+    <para>The validation violations can be exported to a PDF document by clicking on the Download as
+      PDF button, and to a Microsoft Excel workbook by clicking on the Download as Excel
+      button.</para>
+    <screenshot>
+      <title>Run validation rule results</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/dhis2UserManual/Validation Rule_Analysis Result.png"
+            format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+  </section>
+  <?oxy_custom_end?>
+  <section xml:id="stddevoutlierAnalysis">
+    <title>Std Dev Outlier Analysis</title>
+    <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+    <para>You can access Outlier analysis from the Apps-&gt;Data Quality menu.</para>
+    <para>The standard deviation based outlier analysis provides a mechanism for revealing values
+      that are numerically distant from the rest of the data. Outliers can occur by chance, but they
+      often indicate a measurement error or a heavy-tailed distribution (leading to very high
+      numbers). In the former case one wishes to discard them while in the latter case one should be
+      cautious in using tools or interpretations that assume a normal distribution. The analysis is
+      based on the standard normal distribution.</para>
+    <para><emphasis role="bold">Select what data to analyse:</emphasis></para>
+    <para>First, select the from and to date for the data to include in the analysis. </para>
+    <para>Second, select the data set from which to pick data elements from. </para>
+    <para>Third, select all or some of the data elements in the data set by double-clicking or
+      marking them and clicking the add/remove buttons. </para>
+    <para>Fourth, select the parent organisation unit to use. All children of the organisation unit
+      will be included. </para>
+    <para>Fifth, select the number of standard deviations. This refers to the number of standard
+      deviations the data is allowed to deviate from the mean before it is classified as an
+      outlier.</para>
+    <screenshot>
+      <title>Outlier analysis rule selection</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%"
+            fileref="resources/images/dhis2UserManual/Data Quality_Std Deviation Analysis.png"
+            format="PNG" align="center"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para><emphasis role="bold">Analysis result:</emphasis></para>
+    <para>The potential outlier values discovered will be presented in a list after the analysis
+      process is finished. The data element, organisation unit, period, minimum value, actual value,
+      and maximum value will be displayed for each outlier. The minimum and maximum values refer to
+      the border values derived from the number of standard deviations selected for the analysis. </para>
+    <para>Each outlier value can be modified directly in the analysis result page. The value can be
+      modified by clicking inside the corresponding field in the value column, entering a value and
+      then navigate away from that field either by clicking tab or anywhere outside the field. The
+      system will provide an alert if the value is still outside the defined minimum and maximum
+      values, but the value will saved in any case. The field will have a red background color if
+      the value is outside the range, and a green if inside. </para>
+    <para>Each outlier value can be marked for further follow-up by clicking the star icon.</para>
+    <?oxy_custom_end?>
+  </section>
+  <section xml:id="minmaxoutlierAnalysis">
+    <title>Min-Max Outlier Analysis</title>
+    <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+    <para>The min-max value based outlier analysis provides a mechanism for revealing values that
+      are outside the pre-defined minimum and maximum values. Minimum and maximum values can be
+      custom defined or automatically defined by the system in the data administration module. See
+      the section about Std dev outlier analysis for further details on usage.</para>
+    <?oxy_custom_end?>
+  </section>
+  <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+  <section xml:id="followupAnalysis">
+    <title>Follow-Up Analysis</title>
+    <para>The follow-up analysis function will list all data values which are marked for follow-up.
+      A data value can be marked for follow-up in the data entry module and in the other validation
+      analysis variants in this module.As can be seen in the screen shot below, simply select an
+      organisation unit from the tree. All data values with a follow-up status will be displayed
+      here for the descendants of the selected organisation unit. </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="90%" align="center"
+            fileref="resources/images/data_quality/data_quality_follow_up.png"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+  </section>
+  <?oxy_custom_end?>
+</chapter>
