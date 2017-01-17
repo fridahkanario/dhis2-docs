@@ -5,13 +5,9 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook">
-    <title>Create an attribute</title>
-    <para>To create a new metadata attribute and
-        <?oxy_comment_start author="cecilia" timestamp="20160627T111518+0200" comment="For SME: What is the exact action?
-Assign an attribute to an object?
-"?>add<?oxy_comment_end?>
-        it to an object:</para>
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_attribute">
+    <title>Create or edit an attribute</title>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis

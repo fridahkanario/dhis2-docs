@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_relationship_type">
-    <title>Create a relationship
+    <title>Create or edit a relationship
         <?oxy_comment_start author="cecilia" timestamp="20160926T153609+0200" comment="Add conceptual info about relationship types."?>type<?oxy_comment_end?></title>
     <orderedlist>
         <listitem>

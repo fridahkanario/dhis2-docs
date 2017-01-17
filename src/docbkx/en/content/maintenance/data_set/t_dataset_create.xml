@@ -6,17 +6,19 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="create_dataset">
-    <title>Create a data
+    xml:id="create_data_set">
+    <title>Create or edit a data
         <?oxy_comment_start author="cecilia" timestamp="20160701T142620+0200" comment="Screenshot renders correctly after build." flag="done"?>set<?oxy_comment_end?></title>
-    <screenshot>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="80%" align="center"
-                    fileref="resources/images/datasets/data_set_create.png" format="PNG"/>
-            </imageobject>
-        </mediaobject>
-    </screenshot>
+    <para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata width="80%" align="center"
+                        fileref="resources/images/datasets/data_set_create.png" format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis

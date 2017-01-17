@@ -5,8 +5,9 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook">
-    <title> Create a legend</title>
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_legend">
+    <title> Create or edit a legend</title>
     <note>
         <para>It is not allowed to have gaps in a legend.</para>
         <para>It is not allowed to have overlapping legend items.</para>

@@ -5,12 +5,13 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook">
-    <title>Create a constant</title>
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_constant">
+    <title>Create or edit a constant</title>
     <orderedlist>
         <listitem>
-            <para>Click <emphasis role="bold">Apps</emphasis> > <emphasis role="bold"
-                    >Maintenance</emphasis> > <emphasis role="bold">Constant</emphasis>.</para>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Other</emphasis> > <emphasis role="bold">Constant</emphasis>.</para>
         </listitem>
         <listitem>
             <para>Click the add button.</para>
