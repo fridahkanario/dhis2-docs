@@ -27,41 +27,37 @@
                 code.</para>
         </listitem>
         <listitem>
+            <para>Select <emphasis role="bold"
+                    ><?oxy_comment_start author="cecilia" timestamp="20170111T151533+0100" comment="Verify order in UI" flag="done"?>Validation<?oxy_comment_end?>
+                    rules</emphasis>.</para>
+        </listitem>
+        <listitem>
             <para>Select <emphasis role="bold">Recipient user groups</emphasis>.</para>
         </listitem>
         <listitem>
             <para>(Optional) Select <emphasis role="bold">Notify users in hierarchy
                 only</emphasis>.</para>
-            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            <para>If you select this option, each user in the user group(s) will be alerted only for
-                validation exceptions in an organisation unit to which the user has been assigned
-                through user management -- or for any lower-level organisation unit under the
-                assigned organisation unit. </para>
-            <?oxy_custom_end?>
-            <para>If you select this option, each user in the assigned user groups will receive
-                validation ….notifications are only send to users which are linked to organisation
-                units which are either ancestors or children of the organisation unit associated
-                with the validation violation.</para>
-            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+            <para>If you select this option, notifications are only send to users which are linked
+                to organisation units which are either ancestors or children of the organisation
+                unit associated with the validation
+                <?oxy_comment_start author="cecilia" timestamp="20170113T104010+0100" comment="Removed text:
+&quot;
+If you select this option, each user in the user group(s) will be alerted only for validation exceptions in an organisation unit to which the user has been assigned through user management -- or for any lower-level organisation unit under the assigned organisation unit. &quot;"?>violation<?oxy_comment_end?>.</para>
             <para>If you don't select this option, each user in the assigned user group(s) will
-                receive all validation exceptions send to the group, regardless of their assigned
+                receive all validation violations send to the group, regardless of their assigned
                 organisation units.</para>
-            <?oxy_custom_end?>
         </listitem>
         <listitem>
-            <para>Create the <emphasis role="bold">Subject template</emphasis>.</para>
+            <para>Create the <emphasis role="bold">Subject
+                    <?oxy_comment_start author="cecilia" timestamp="20170113T102252+0100" comment="Pending example from SME."?>template<?oxy_comment_end?></emphasis>.</para>
             <para>Double-click the parameters in the <emphasis role="bold">Template
                     variables</emphasis> field to add them to your subject.</para>
         </listitem>
         <listitem>
-            <para>Create the <emphasis role="bold">Message template</emphasis>.</para>
+            <para>Create the <emphasis role="bold">Message
+                    <?oxy_comment_start author="cecilia" timestamp="20170113T102302+0100" comment="Pending example from SME."?>template<?oxy_comment_end?></emphasis>.</para>
             <para>Double-click the parameter names in the <emphasis role="bold">Template
                     variables</emphasis> field to add them to your message.</para>
-        </listitem>
-        <listitem>
-            <para>Select <emphasis role="bold"
-                    ><?oxy_comment_start author="cecilia" timestamp="20170111T151533+0100" comment="Verify order in UI"?>Validation<?oxy_comment_end?>
-                    rules</emphasis>.</para>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>

@@ -7,11 +7,23 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook" xml:id="about_validation_rule">
     <title>About validation rules, validation rule groups and validation notifications </title>
-    <para>A validation rule is based on an expression which defines a relationship between a number
-        of data elements. The expression has a left side and a right side and an operator which
-        defines whether the former must be less than, equal to or greater than the latter. The
-        expression forms a condition which should assert that certain logical criteria are
-        met.</para>
+    <para>A validation rule is based on an expression which defines a relationship between data
+        element values. The expression forms a condition which should assert that certain logical
+        criteria are met.</para>
+    <para>The expression consist of:</para>
+    <itemizedlist>
+        <listitem>
+            <para>a left side</para>
+        </listitem>
+        <listitem>
+            <para>a right side</para>
+        </listitem>
+        <listitem>
+            <para>an operator </para>
+            <para>The operator defines whether the left side must be less than, equal to or greater
+                than the right side.</para>
+        </listitem>
+    </itemizedlist>
     <para>
         <example>
             <para>A validation rule could assert that the total number of vaccines given to infants
@@ -21,8 +33,7 @@
     <para>A validation rule group allows you to group related validation rules. When you then
         <?oxy_comment_start author="cecilia" timestamp="20170110T171721+0100" comment="When x-refs work, add link to Validation rule analysis section." flag="done"?>run<?oxy_comment_end?>
         a <emphasis>validation rule analysis</emphasis>, you can select whether to run all
-        validation rules in the system, or just the validation rules in one group. You can also run
-        the validation rules in a group as part of a scheduled validation rule analysis.</para>
+        validation rules in the system, or just the validation rules in one group.</para>
     <para>You can configure a validation rule analysis to automatically send out to information
         about validation violations to selected user groups. These messages are called
             <emphasis>validation notifications</emphasis> and are send via the internal DHIS2
@@ -30,7 +41,7 @@
     <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following
         validation rule objects:</para>
     <table frame="all">
-        <title>Attribute objects in the Maintenance app</title>
+        <title>Validation rule objects in the Maintenance app</title>
         <tgroup cols="2">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
