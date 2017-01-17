@@ -7,8 +7,8 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_indicator_type">
-    <title>Create an indicator type</title>
-    <section>
+    <title>Create or edit an indicator type</title>
+    <para>
         <screenshot>
             <mediaobject>
                 <imageobject>
@@ -20,45 +20,44 @@
                 </imageobject>
             </mediaobject>
         </screenshot>
-        <para>Indicator types define a factor that is applied during aggregation. Indicator values
-            that are calculated during a data mart export or report table generation process will
-            appear properly formatted, and will therefore not require an additional multiplier (for
-            example 100 in the case of percents) for the values to appear correctly
-            formatted.</para>
-        <note>
-            <para>As of version 2.4 of DHIS2, the &quot;Calculated data element&quot; object has
-                been deprecated. Instead, you can create a calculated data element by creating an
-                indicator type with a factor of &quot;1&quot; and by setting the &quot;Number&quot;
-                option to &quot;Yes&quot;. The effect of setting the &quot;Number&quot; option to
-                &quot;Yes&quot; will be that the indicator will effectively not have a denominator.
-                You will therefore only be able to define a numerator, which will serve as the
-                formula of the calculated data element.</para>
-        </note>
-        <orderedlist>
-            <listitem>
-                <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
-                        role="bold">Indicator</emphasis> > <emphasis role="bold">Indicator
-                        type</emphasis>.</para>
-            </listitem>
-            <listitem>
-                <para>Click the add button.</para>
-            </listitem>
-            <listitem>
-                <para>In the
-                        <?oxy_comment_start author="cecilia" timestamp="20160624T160524+0200" comment="At next releaase:
+    </para>
+    <para>Indicator types define a factor that is applied during aggregation. Indicator values that
+        are calculated during a data mart export or report table generation process will appear
+        properly formatted, and will therefore not require an additional multiplier (for example 100
+        in the case of percents) for the values to appear correctly formatted.</para>
+    <note>
+        <para>As of version 2.4 of DHIS2, the &quot;Calculated data element&quot; object has been
+            deprecated. Instead, you can create a calculated data element by creating an indicator
+            type with a factor of &quot;1&quot; and by setting the &quot;Number&quot; option to
+            &quot;Yes&quot;. The effect of setting the &quot;Number&quot; option to &quot;Yes&quot;
+            will be that the indicator will effectively not have a denominator. You will therefore
+            only be able to define a numerator, which will serve as the formula of the calculated
+            data element.</para>
+    </note>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Indicator</emphasis> > <emphasis role="bold">Indicator
+                    type</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add button.</para>
+        </listitem>
+        <listitem>
+            <para>In the
+                    <?oxy_comment_start author="cecilia" timestamp="20160624T160524+0200" comment="At next releaase:
 For SME: Must the name be unique?" flag="done"?><emphasis
-                        role="bold">Name</emphasis><?oxy_comment_end?> field, type the name of the
-                    indicator type, for example &quot;Per cent", "Per thousand", "Per ten
-                    thousand".</para>
-            </listitem>
-            <listitem>
-                <para>Type a <emphasis role="bold">Factor</emphasis>.</para>
-                <para>The factor is the numeric factor that will be multiplied by the indicator
-                    formula during the calculation of the indicator.</para>
-            </listitem>
-            <listitem>
-                <para>Click <emphasis role="bold">Save</emphasis>.</para>
-            </listitem>
-        </orderedlist>
-    </section>
+                    role="bold">Name</emphasis><?oxy_comment_end?> field, type the name of the
+                indicator type, for example &quot;Per cent", "Per thousand", "Per ten
+                thousand".</para>
+        </listitem>
+        <listitem>
+            <para>Type a <emphasis role="bold">Factor</emphasis>.</para>
+            <para>The factor is the numeric factor that will be multiplied by the indicator formula
+                during the calculation of the indicator.</para>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>
 </section>

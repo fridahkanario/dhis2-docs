@@ -96,9 +96,8 @@ https://github.com/dhis2/maintenance-app/issues/168
         <title>Edit multiple objects in an object group</title>
         <orderedlist>
             <listitem>
-                <para>Click <emphasis role="bold">Apps</emphasis> > <emphasis role="bold"
-                        >Maintenance</emphasis> > <emphasis role="bold">Metadata group
-                        editor</emphasis>.</para>
+                <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                        role="bold">Metadata group editor</emphasis>.</para>
             </listitem>
             <listitem>
                 <para>Click <emphasis role="bold">Manage items in group</emphasis>.</para>
@@ -126,9 +125,8 @@ https://github.com/dhis2/maintenance-app/issues/168
         <title>Edit an object in multiple object groups</title>
         <orderedlist>
             <listitem>
-                <para>Click <emphasis role="bold">Apps</emphasis> > <emphasis role="bold"
-                        >Maintenance</emphasis> > <emphasis role="bold">Metadata group
-                        editor</emphasis>.</para>
+                <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                        role="bold">Metadata group editor</emphasis>.</para>
             </listitem>
             <listitem>
                 <para>Click <emphasis role="bold">Manage groups for item</emphasis>.</para>
