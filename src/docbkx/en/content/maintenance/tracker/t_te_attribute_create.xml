@@ -57,6 +57,14 @@
                     <tbody>
                         <row>
                             <entry>
+                                <para>Age</para>
+                            </entry>
+                            <entry>
+                                <para>-</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
                                 <para>Coordinate</para>
                             </entry>
                             <entry>
@@ -403,8 +411,7 @@ Verify with SME: correct with org units in plural?
                 <emphasis role="bold">Display in list without program</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>Select <?oxy_comment_start author="cecilia" timestamp="20161004T120140+0200" comment="Add a note that you can add a legend here, click plus icon"?>a<?oxy_comment_end?>
-                <emphasis role="bold">Legend</emphasis>.</para>
+            <para>(Optional) Assign one or multiple <emphasis role="bold">Legends</emphasis>.</para>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
