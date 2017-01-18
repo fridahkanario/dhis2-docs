@@ -7,15 +7,17 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_indicator">
-    <title>Create an indicator</title>
-    <screenshot>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="80%" align="center"
-                    fileref="resources/images/maintainence/indicator_create.png" format="PNG"/>
-            </imageobject>
-        </mediaobject>
-    </screenshot>
+    <title>Create or edit an indicator</title>
+    <para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata width="80%" align="center"
+                        fileref="resources/images/maintainence/indicator_create.png" format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
@@ -68,10 +70,7 @@ For SME: Must the name be unique?" flag="done"?><emphasis
                 percentage.</para>
         </listitem>
         <listitem>
-            <para>(Optional) Select a <emphasis role="bold">Legend set</emphasis>.</para>
-            <para>For more information about legend sets, see section &quot;Using
-                <?oxy_comment_start author="cecilia" timestamp="20160624T162618+0200" comment="At next revision: add x-ref" flag="done"?>the<?oxy_comment_end?>
-                GIS app&quot;.</para>
+            <para>(Optional) Assign one or multiple <emphasis role="bold">Legends</emphasis>.</para>
         </listitem>
         <listitem>
             <para>In the <emphasis role="bold">URL</emphasis> field, enter a
@@ -80,6 +79,16 @@ Specify if this is recommended?" flag="done"?>link<?oxy_comment_end?>,
                 for example a link to an indicator registry, where a full metadata description of
                 the indicator can be made available.</para>
         </listitem>
+        <?oxy_comment_start author="cecilia" timestamp="20170117T154204+0100" comment="Pending info from SME. Don&apos;t know what thses settings do."?>
+        <listitem>
+            <para>Select a <emphasis role="bold">Category option combination for aggregate data
+                    export.</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Select an <emphasis role="bold">Attribute option combination for aggregate data
+                    export.</emphasis>.</para>
+        </listitem>
+        <?oxy_comment_end?>
         <listitem>
             <para>Select a <emphasis role="bold"
                     ><?oxy_comment_start author="cecilia" timestamp="20160624T163131+0200" comment="At next release:
@@ -130,6 +139,20 @@ Mandatory field does not contain a *" flag="done"?>description<?oxy_comment_end?
                         denominator.</para>
                 </listitem>
             </orderedlist>
+        </listitem>
+        <listitem>
+            <para>If applicable, select compulsory indicator group sets, for example <emphasis
+                    role="bold">Human resources</emphasis>.</para>
+            <para>
+                <note>
+                    <para>You'll only see indicator group sets in this form if you've created them
+                        and set them to <emphasis role="bold">Compulsory</emphasis>.</para>
+                    <para>You create indicator group sets in the <emphasis role="bold"
+                            >Maintenance</emphasis> app: <emphasis role="bold">Indicator</emphasis>
+                        > <emphasis role="bold">Indicator group
+                        set</emphasis><?oxy_comment_start author="cecilia" timestamp="20160518T114951+0200" comment="At next revsision, add x-ref here." flag="done"?>.<?oxy_comment_end?></para>
+                </note>
+            </para>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>

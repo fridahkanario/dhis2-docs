@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_organisation_unit_group_set">
-    <title>Create an organisation unit group set</title>
+    <title>Create or edit an organisation unit group set</title>
     <para>Organisation unit group sets allows you to create additional classifications of
         organisation units. The group sets create new dimensions so that you can make a more
         detailed data analysis. You an easily filter, organise or aggregate data by groups within a
@@ -44,7 +44,6 @@
             compulsory organisation unit group set.</para>
         <?oxy_comment_end?>
     </note>
-    <para>To create an organisation unit group set:</para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
@@ -106,18 +105,20 @@ Yes" flag="done"?>Compulsory<?oxy_comment_end?></emphasis>.</para>
     </orderedlist>
     <example>
         <title>Classify facilities based on ownership</title>
-        <?oxy_comment_start author="cecilia" timestamp="20160525T161530+0200" comment="At next revision, replace graphic.
+        <para>
+            <?oxy_comment_start author="cecilia" timestamp="20160525T161530+0200" comment="At next revision, replace graphic.
 Single source concept information in implmenter guide and user guide" flag="done"?>
-        <screenshot>
-            <mediaobject>
-                <imageobject>
-                    <imagedata format="png" align="center"
-                        fileref="resources/images/implementation_guide/organisation_unit_hiearchy.png"
-                        width="80%"/>
-                </imageobject>
-            </mediaobject>
-        </screenshot>
-        <?oxy_comment_end?>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata format="png" align="center"
+                            fileref="resources/images/implementation_guide/organisation_unit_hiearchy.png"
+                            width="80%"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+            <?oxy_comment_end?>
+        </para>
         <para>You want to analyse data based on the ownership of the facilities. All facilities have
             an owner so you need to make sure that all organisation units get this classification.
             To do that you can use the <emphasis role="bold">Compulsory</emphasis> option:</para>

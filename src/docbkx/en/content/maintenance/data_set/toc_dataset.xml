@@ -6,7 +6,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="manage_dataset">
+    xml:id="manage_data_set">
     <title><?oxy_comment_start author="cecilia" timestamp="20160603T100652+0200" comment="Verify with Lars:
 Do you use data sets somewhere else than in forms? (Custom form and Section form)
 - Data sets also used in data exchange (import)" flag="done"?>Manage<?oxy_comment_end?>
@@ -23,9 +23,7 @@ Added to term list" flag="done"?>data
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_defaultform_download.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_sectionform_manage.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_customform_manage.xml" encoding="UTF-8"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_edit.xml" encoding="UTF-8"/>
     
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_clone.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_share.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_delete.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_display.xml" encoding="UTF-8"/>

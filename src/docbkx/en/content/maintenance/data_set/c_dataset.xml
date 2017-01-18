@@ -191,7 +191,7 @@ No, it is the preferred form, selected by the system." flag="done"?>a<?oxy_comme
                         <para>Data set</para>
                     </entry>
                     <entry>
-                        <para>Create, assign to organisation units, edit, clone, share, delete, show
+                        <para>Create, assign to organisation units, edit, share, delete, show
                             details and translate</para>
                         <para>Edit compulsory data elements</para>
                         <para>Add and remove multiple data sets to organisation units at once</para>

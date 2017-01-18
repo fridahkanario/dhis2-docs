@@ -5,8 +5,9 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook">
-    <title>Create an option set</title>
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_option_set">
+    <title>Create or edit an option set</title>
     <important>
         <?oxy_comment_start author="cecilia" timestamp="20160627T102422+0200" comment="For SME: Still correct?
 - Yes
@@ -16,7 +17,6 @@
             names but you can't change the codes. Both names and codes of all options must be
             unique, even across different option sets.</para>
     </important>
-    <para>To create an option set:</para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
