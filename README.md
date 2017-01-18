@@ -17,5 +17,6 @@ mvn -f nameOfPom.xml package
 
 where nameOfPom.xml is your custom pom.
 
-For further information, contact the groups mailing list at
-https://launchpad.net/~dhis2-documenters
+To report a documentation bug, make a suggestion, or send us your feedback, please create an issue on JIRA:
+https://jira.dhis2.org. 
+For more details see, Using JIRA for DHIS2 issues:https://docs.dhis2.org/master/en/implementer/html/jira-gettingstarted.html
