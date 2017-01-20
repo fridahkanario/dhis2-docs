@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<chapter version="5.0"
+         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+          xmlns="http://docbook.org/ns/docbook"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:xl="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xhtml="http://www.w3.org/1999/xhtml"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:mth="http://www.w3.org/1998/Math/MathML"
+         xmlns:db="http://docbook.org/ns/docbook" >
+  <title>Which app do I use for
+    <?oxy_comment_start author="cecilia" timestamp="20170120T155840+0100" comment="What about tasks like:
+
+Configure the GIS app
+https://docs.dhis2.org/master/en/user/html/gis_creating.html"?>what<?oxy_comment_end?>?</title>
+  <table frame="all">
+    <title>Which app do I use for what?</title>
+    <tgroup cols="4">
+      <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+      <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+      <colspec colname="newCol3" colnum="3" colwidth="1*"/>
+      <colspec colname="c3" colnum="4" colwidth="1.0*"/>
+      <thead>
+        <row>
+          <entry>
+            <para>I want to</para>
+          </entry>
+          <entry>
+            <para>App's name</para>
+          </entry>
+          <entry>
+            <para>Description</para>
+          </entry>
+          <entry>
+            <para>Link</para>
+          </entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry>
+            <para>Configure the system</para>
+          </entry>
+          <entry>
+            <para>System Settings</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para>Maintenance</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/maintenance_app.html">Using
+                the Maintenance app</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para>Program</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/configure_program.html"
+                >Configuring programs</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para>Data Administration</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para>App Management</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para>Import-Export</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/ch18.html">Import and
+                export</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>Customize the system</para>
+          </entry>
+          <entry>
+            <para>Translations</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>Communicate with users</para>
+          </entry>
+          <entry>
+            <para>Dashboard</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/dashboards.html"
+                >Dashboards</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>
+            <para>Messaging</para>
+          </entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry>
+            <para>Manage users</para>
+          </entry>
+          <entry>
+            <para>Users</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para>Usage Analytics</para>
+          </entry>
+          <entry/>
+          <entry><link xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="https://docs.dhis2.org/master/en/user/html/ch16.html">Using the Usage
+              Analytics app</link></entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>Enter data</para>
+          </entry>
+          <entry>
+            <para>Data Entry</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/data_entry.html">Using the
+                Data Entry app</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para>Tracker Capture</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/tracker_capture_app.html"
+                >Using the Tracker Capture app</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>
+            <para>Event Capture</para>
+          </entry>
+          <entry/>
+          <entry><link xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="https://docs.dhis2.org/master/en/user/html/event_capture_app.html">Using
+              the Event Capture app</link></entry>
+        </row>
+        <row>
+          <entry>
+            <para>Control data quality</para>
+          </entry>
+          <entry>
+            <para>Data Quality</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/control_data_quality.html"
+                >Control data quality</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>Analyze and visualize data</para>
+          </entry>
+          <entry>
+            <para>Pivot Table</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/pivot.html">Using the Pivot
+                Table app</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>
+            <para>Data Visualizer</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/data_vis.html">Using the Data
+                Visualizer app</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para>Event Visualizer</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/ch24.html">Using the Event
+                Visualizer app</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para>GIS</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/using_gis.html">Using the GIS
+                app</link></para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>Create reports</para>
+          </entry>
+          <entry>
+            <para>Reports</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para>Event Reports</para>
+          </entry>
+          <entry>
+            <para/>
+          </entry>
+          <entry>
+            <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/ch23.html">Using the Event
+                Reports app</link></para>
+          </entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
+</chapter>
