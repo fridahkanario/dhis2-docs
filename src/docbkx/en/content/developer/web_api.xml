@@ -5087,11 +5087,11 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           <tbody>
             <row>
               <entry>dataSet</entry>
-              <entry>Data set identifier, can be specified multiple times</entry>
+              <entry>Data set identifier, multiple data sets are allowed</entry>
             </row>
             <row>
               <entry>period</entry>
-              <entry>PeriodType</entry>
+              <entry>Period identifier in ISO format. Multiple periods are allowed.</entry>
             </row>
             <row>
               <entry>startDate</entry>
@@ -5102,19 +5102,63 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>End date for the time span of the values to export</entry>
             </row>
             <row>
+              <entry>created</entry>
+              <entry>Include only registrations which were created since the given timestamp</entry>
+            </row>
+            <row>
+              <entry>createdDuration</entry>
+              <entry>Include only registrations which were created within the given duration. The
+                format is &lt;value>&lt;time-unit>, where the supported time units are "d", "h",
+                "m", "s" <emphasis role="italic">(days, hours, minutes, seconds).</emphasis> The
+                time unit is relative to the current time.</entry>
+            </row>
+            <row>
               <entry>orgUnit</entry>
-              <entry>Organisation unit identifier, can be specified multiple times</entry>
+              <entry>Organisation unit identifier, can be specified multiple times. Not applicable
+                if orgUnitGroup is given.</entry>
+            </row>
+            <row>
+              <entry>orgUnitGroup</entry>
+              <entry>Organisation unit group identifier, can be specified multiple times. Not
+                applicable if orgUnit is given.</entry>
             </row>
             <row>
               <entry>children</entry>
               <entry>Whether to include the children in the hierarchy of the organisation
                 units</entry>
             </row>
+            <row>
+              <entry>limit</entry>
+              <entry>The maximum number of registrations to include in the response.</entry>
+            </row>
+            <row>
+              <entry>idScheme</entry>
+              <entry>Identifier property used for meta data objects in the response.</entry>
+            </row>
+            <row>
+              <entry>dataSetIdScheme</entry>
+              <entry>Identifier property used for data sets in the response. Overrides
+                idScheme.</entry>
+            </row>
+            <row>
+              <entry>orgUnitIdScheme</entry>
+              <entry>Identifier property used for organisation units in the response. Overrides
+                idScheme.</entry>
+            </row>
+            <row>
+              <entry>attributeOptionComboIdScheme</entry>
+              <entry>Identifier property used for attribute option combos in the response. Overrides
+                idScheme.</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
       <para>The dataSet and orgUnit parameters can be repeated in order to include multiple data
-        sets and organisation units. An example request looks like
+        sets and organisation units. </para>
+      <para>The period, start/end date, created and createdDuration parameters provde multple ways
+        to set the time dimension for the request, thus only one can be used. For example, it
+        doesn't make sense to both set the start/end date and to set the periods.</para>
+      <para>An example request looks like
         this:<screen>curl &quot;https://play.dhis2.org/demo/api/26/completeDataSetRegistrations?dataSet=pBOMPrpg1QX&amp;dataSet=pBOMPrpg1QX
   &amp;startDate=2014-01-01&amp;endDate=2014-01-31&amp;orgUnit=YuQRtpLP10I&amp;orgUnit=vWbkYPRmKyS&amp;children=true&quot;
   -H &quot;Accept:application/xml&quot; -u admin:district -v</screen></para>
