@@ -25,8 +25,6 @@ Make sure the possibility to create a validation notification is mentioned is th
             </listitem>
             <listitem>
                 <para>an operator </para>
-                <para>The operator defines whether the left side must be less than, equal to or
-                    greater than the right side.</para>
             </listitem>
         </itemizedlist>
         <para>
@@ -41,7 +39,7 @@ Make sure the possibility to create a validation notification is mentioned is th
         <para>You can configure a validation rule analysis to automatically send out information
             about validation violations to selected user groups. These messages are called
                 <emphasis>validation notifications</emphasis> and you create them in the <emphasis
-                role="bold">Maintenance</emphasis> app. Validation notifications are send via the
+                role="bold">Maintenance</emphasis> app. Validation notifications are sent via the
             internal DHIS2 messaging system.</para>
     </section>
     <section>

@@ -79,20 +79,30 @@ Specify if this is recommended?" flag="done"?>link<?oxy_comment_end?>,
                 for example a link to an indicator registry, where a full metadata description of
                 the indicator can be made available.</para>
         </listitem>
-        <?oxy_comment_start author="cecilia" timestamp="20170117T154204+0100" comment="Pending info from SME. Don&apos;t know what thses settings do."?>
+        <?oxy_comment_start author="cecilia" timestamp="20170117T154204+0100" comment="Pending info from SME. Don&apos;t know what thses settings do.
+
+Lars[24/1-17]: shouldn&apos;t be a drop down list."?>
         <listitem>
-            <para>Select a <emphasis role="bold">Category option combination for aggregate data
+            <para>Enter a <emphasis role="bold">Category option combination for aggregate data
                     export.</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>Select an <emphasis role="bold">Attribute option combination for aggregate data
+            <para>Enter an <emphasis role="bold">Attribute option combination for aggregate data
                     export.</emphasis>.</para>
         </listitem>
         <?oxy_comment_end?>
         <listitem>
-            <para>Select a <emphasis role="bold"
-                    ><?oxy_comment_start author="cecilia" timestamp="20160624T163131+0200" comment="At next release:
-Add information about what this classification is." flag="done"?>Classification<?oxy_comment_end?></emphasis>.</para>
+            <para>If applicable, enter custom attributes values, for example <emphasis role="bold"
+                    >Classification</emphasis> or <emphasis role="bold">Collection
+                method</emphasis>.</para>
+            <para>
+                <note>
+                    <para>You create custom attributes in the <emphasis role="bold"
+                            >Maintenance</emphasis> app: <emphasis role="bold">Other</emphasis> >
+                            <emphasis role="bold"
+                        >Attributes</emphasis><?oxy_comment_start author="cecilia" timestamp="20160518T114951+0200" comment="At next revsision, add x-ref here." flag="done"?>.<?oxy_comment_end?></para>
+                </note>
+            </para>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Edit numerator</emphasis>.</para>
