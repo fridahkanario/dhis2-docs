@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="validation_rule_analysis">
-    <title>[Work in progress]Validation rule
+    <title>Validation rule
         <?oxy_comment_start author="cecilia" timestamp="20170106T150311+0100" comment="Also add link to Validation notification doc in Mtn app doc
 Make sure the possibility to create a validation notification is mentioned is this section." flag="done"?>analysis<?oxy_comment_end?></title>
     <section>

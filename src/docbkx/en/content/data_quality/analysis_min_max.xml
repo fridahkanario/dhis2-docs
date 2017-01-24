@@ -31,7 +31,9 @@ SME: system only checks raw data, maybe attribute option, verify with Lars." fla
 
 SME: system calculates average value based per org unit and data element, cat option and attribute option, then, based on the average, the system sets the min value to average - x number of std dev, max value to average + number or std deviations. You set this in Sytem Settings,  General, Data analysis std dev factor." flag="done"?>
             on the
-                <?oxy_comment_end?><?oxy_comment_start author="cecilia" timestamp="20170112T163557+0100" comment="Also relevant for other outlier analysis?"?><emphasis
+                <?oxy_comment_end?><?oxy_comment_start author="cecilia" timestamp="20170112T163557+0100" comment="Also relevant for other outlier analysis?
+
+According to SME: no." flag="done"?><emphasis
                 role="bold">Data analysis std dev factor</emphasis><?oxy_comment_end?> specified in
             the <emphasis role="bold">System Settings</emphasis> app.</para>
         <para>For data which is highly-skewed or zero inflated (as is often the case with aggregate
@@ -58,7 +60,7 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
         <orderedlist>
             <listitem>
                 <para>In the <emphasis role="bold">System Settings</emphasis> app, set the <emphasis
-                        role="bold">Data analysis std dev factor</emphasis>.The default value is
+                        role="bold">Data analysis std dev factor</emphasis>. The default value is
                     2.</para>
             </listitem>
             <listitem>
@@ -190,7 +192,7 @@ SME: no" flag="done"?>Entry<?oxy_comment_end?></emphasis>
                 </listitem>
                 <listitem>
                     <para>(Optional) Type a comment to explain the reason for the discrepancy,
-                        f<?oxy_comment_start author="cecilia" timestamp="20170109T150522+0100" comment="At next revision: Add better example"?>or
+                        f<?oxy_comment_start author="cecilia" timestamp="20170109T150522+0100" comment="At next revision: Add better example" flag="done"?>or
                         example an event at a facility which may have generated a large number of
                         clients.<?oxy_comment_end?></para>
                 </listitem>
