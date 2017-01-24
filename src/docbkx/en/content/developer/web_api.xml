@@ -5011,14 +5011,108 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     <para>This section is about complete data set registrations for data sets. A registration marks
       as a data set as completely captured.</para>
     <section>
-      <title>Completing and un-completing data sets</title>
-      <para>This section explains how you can register and un-register a data set as complete. To
-        complete or un-complete a data set you will interact with the completeDataSetRegistrations
+      <title>Completing data sets</title>
+      <para>This section explains how to register data sets as complete. This is achieved by
+        interactithe <emphasis role="italic">completeDataSetRegistrations</emphasis>
+        resource:<screen>/api/26/completeDataSetRegistrations</screen></para>
+      <para>The endpoint supports the <emphasis role="italic">POST</emphasis> method for registering
+        data set completions. The endpoint is functionally very similar to the <emphasis
+          role="italic">dataValueSets</emphasis> endpoint, with support for bulk import of complete
+        registrations.</para>
+      <para>Importing both <emphasis role="italic">XML</emphasis> and <emphasis role="italic"
+          >JSON</emphasis> formatted payloads are supported. The basic format of this payload, given
+        as <emphasis role="italic">XML</emphasis> in this example, is like
+        so:<programlisting>&lt;completeDataSetRegistrations xmlns="http://dhis2.org/schema/dxf/2.0">
+  &lt;completeDataSetRegistration period="200810" dataSet="eZDhcZi6FLP" organisationUnit="qhqAxPSTUXp" attributeOptionCombo="bRowv6yZOF2" storedBy="imported"/>
+  &lt;compelteDataSetRegistration ...> &lt;!-- Any number of elements allowed -->
+&lt;/completeDataSetRegistrations></programlisting></para>
+      <para>The <emphasis role="italic">storedBy</emphasis> attribute is optional (as it is a
+        nullable property on the complete registration object). You can also optionally set the
+          <emphasis role="italic">date</emphasis> property (time of registration) as an attribute.
+        It the time is not set, the current time will be used.</para>
+      <para>The import process supports the following query parameters:</para>
+      <table frame="all">
+        <title>Complete data set registrations query parameters</title>
+        <tgroup cols="3">
+          <colspec colnum="1" colname="c1" colwidth="1*"/>
+          <colspec colnum="2" colname="c2" colwidth="1.16*"/>
+          <colspec colnum="3" colname="c3" colwidth="3.96*"/>
+          <thead>
+            <row>
+              <entry>Parameter</entry>
+              <entry>Values</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>dataSetIdScheme</entry>
+              <entry>id | name | code | attribute:ID</entry>
+              <entry>Property of the data set to use to map the complete registrations.</entry>
+            </row>
+            <row>
+              <entry>orgUnitIdScheme</entry>
+              <entry>id | name | code | attribute:ID</entry>
+              <entry>Property of the organisation unit to use to map the complete
+                registrations.</entry>
+            </row>
+            <row>
+              <entry>attributeOptionComboIdScheme</entry>
+              <entry>id | name | code | attribute:ID</entry>
+              <entry>Property of the attribute option combos to use to map the complete
+                registrations.</entry>
+            </row>
+            <row>
+              <entry>idScheme</entry>
+              <entry>id | name | code | attribute:ID</entry>
+              <entry>Property of all objects including data sets, org units and attribute option
+                combos, to use to map the complete registrations.</entry>
+            </row>
+            <row>
+              <entry>preheatCache</entry>
+              <entry>false | true</entry>
+              <entry>Whether to save changes on the server or just return the import
+                summary.</entry>
+            </row>
+            <row>
+              <entry>dryRun</entry>
+              <entry>false | true</entry>
+              <entry>Whether registration applies to sub units</entry>
+            </row>
+            <row>
+              <entry>importStrategy</entry>
+              <entry>CREATE | UPDATE | CREATE_AND_UPDATE | DELETE</entry>
+              <entry>Save objects of all, new or update import status on the server.</entry>
+            </row>
+            <row>
+              <entry>skipExistingCheck</entry>
+              <entry>false | true</entry>
+              <entry>Skip checks for existing complete registrations. Improves performance. Only use
+                for empty databases or when the registrations to import do not exist
+                already.</entry>
+            </row>
+            <row>
+              <entry>async</entry>
+              <entry>false | true</entry>
+              <entry>Indicates whether the import should be done asynchronous or synchronous. The
+                former is suitable for very large imports as it ensures that the request does not
+                time out, although it has a significant performance overhead. The latter is faster
+                but requires the connection to persist until the process is finished.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </section>
+  <section>
+    <section>
+      <title>Un-completing data sets</title>
+      <para>This section explains how you can un-register the completeness of a data set. To
+        un-complete a data set you will interact with the completeDataSetRegistrations
         resource:</para>
       <screen>/api/26/completeDataSetRegistrations</screen>
-      <para>This resource supports the methods <emphasis role="italic">POST</emphasis> for
-        registration and <emphasis role="italic">DELETE</emphasis> for un-registration. The
-        following query parameters are supported:</para>
+      <para>This resource supports <emphasis role="italic">DELETE</emphasis> for un-registration.
+        The following query parameters are supported:</para>
       <table frame="all">
         <title>Complete data set registrations query parameters</title>
         <tgroup cols="3">
@@ -5087,11 +5181,11 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           <tbody>
             <row>
               <entry>dataSet</entry>
-              <entry>Data set identifier, can be specified multiple times</entry>
+              <entry>Data set identifier, multiple data sets are allowed</entry>
             </row>
             <row>
               <entry>period</entry>
-              <entry>PeriodType</entry>
+              <entry>Period identifier in ISO format. Multiple periods are allowed.</entry>
             </row>
             <row>
               <entry>startDate</entry>
@@ -5102,19 +5196,63 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>End date for the time span of the values to export</entry>
             </row>
             <row>
+              <entry>created</entry>
+              <entry>Include only registrations which were created since the given timestamp</entry>
+            </row>
+            <row>
+              <entry>createdDuration</entry>
+              <entry>Include only registrations which were created within the given duration. The
+                format is &lt;value>&lt;time-unit>, where the supported time units are "d", "h",
+                "m", "s" <emphasis role="italic">(days, hours, minutes, seconds).</emphasis> The
+                time unit is relative to the current time.</entry>
+            </row>
+            <row>
               <entry>orgUnit</entry>
-              <entry>Organisation unit identifier, can be specified multiple times</entry>
+              <entry>Organisation unit identifier, can be specified multiple times. Not applicable
+                if orgUnitGroup is given.</entry>
+            </row>
+            <row>
+              <entry>orgUnitGroup</entry>
+              <entry>Organisation unit group identifier, can be specified multiple times. Not
+                applicable if orgUnit is given.</entry>
             </row>
             <row>
               <entry>children</entry>
               <entry>Whether to include the children in the hierarchy of the organisation
                 units</entry>
             </row>
+            <row>
+              <entry>limit</entry>
+              <entry>The maximum number of registrations to include in the response.</entry>
+            </row>
+            <row>
+              <entry>idScheme</entry>
+              <entry>Identifier property used for meta data objects in the response.</entry>
+            </row>
+            <row>
+              <entry>dataSetIdScheme</entry>
+              <entry>Identifier property used for data sets in the response. Overrides
+                idScheme.</entry>
+            </row>
+            <row>
+              <entry>orgUnitIdScheme</entry>
+              <entry>Identifier property used for organisation units in the response. Overrides
+                idScheme.</entry>
+            </row>
+            <row>
+              <entry>attributeOptionComboIdScheme</entry>
+              <entry>Identifier property used for attribute option combos in the response. Overrides
+                idScheme.</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
       <para>The dataSet and orgUnit parameters can be repeated in order to include multiple data
-        sets and organisation units. An example request looks like
+        sets and organisation units. </para>
+      <para>The period, start/end date, created and createdDuration parameters provde multple ways
+        to set the time dimension for the request, thus only one can be used. For example, it
+        doesn't make sense to both set the start/end date and to set the periods.</para>
+      <para>An example request looks like
         this:<screen>curl &quot;https://play.dhis2.org/demo/api/26/completeDataSetRegistrations?dataSet=pBOMPrpg1QX&amp;dataSet=pBOMPrpg1QX
   &amp;startDate=2014-01-01&amp;endDate=2014-01-31&amp;orgUnit=YuQRtpLP10I&amp;orgUnit=vWbkYPRmKyS&amp;children=true&quot;
   -H &quot;Accept:application/xml&quot; -u admin:district -v</screen></para>
