@@ -23,9 +23,10 @@ For example when you&apos;ve selected the wrong org unit and the analysis takes 
             values for a given
             <?oxy_comment_start author="cecilia" timestamp="20170109T141245+0100" comment="Do it for them separately?
 
-SME: system only checks raw data, maybe attribute option, verify with Lars."?>data
-            element /category option/organisation unit combination.<?oxy_comment_end?> Then the
-            system will calculate the minimum maximum value range
+SME: system only checks raw data, maybe attribute option, verify with Lars." flag="done"?>data
+            element, category option, organisation unit and attribute
+            combination.<?oxy_comment_end?> Then the system will calculate the minimum maximum value
+            range
             based<?oxy_comment_start author="cecilia" timestamp="20170106T154550+0100" comment="end of phrase missing in legacy content. Based on what?
 
 SME: system calculates average value based per org unit and data element, cat option and attribute option, then, based on the average, the system sets the min value to average - x number of std dev, max value to average + number or std deviations. You set this in Sytem Settings,  General, Data analysis std dev factor." flag="done"?>
@@ -57,7 +58,8 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
         <orderedlist>
             <listitem>
                 <para>In the <emphasis role="bold">System Settings</emphasis> app, set the <emphasis
-                        role="bold">Data analysis std dev factor</emphasis>.</para>
+                        role="bold">Data analysis std dev factor</emphasis>.The default value is
+                    2.</para>
             </listitem>
             <listitem>
                 <para>Create a minimum maximum value range, either automatically or manually.</para>
@@ -93,7 +95,7 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
                     <?oxy_comment_start author="cecilia" timestamp="20170112T163812+0100" comment="Copied from System settings app doc." flag="done"?>
                     <para>This sets the number of standard deviations to use in the outlier
                         analysis. The default value is
-                        <?oxy_comment_start author="cecilia" timestamp="20170112T163845+0100" comment="Still correct?"?>2<?oxy_comment_end?>.
+                        <?oxy_comment_start author="cecilia" timestamp="20170112T163845+0100" comment="Still correct?" id="r2r_w3g_sy"?><?oxy_comment_start author="cecilia" timestamp="20170124T215430+0100" comment="Yes according to Lars." parentID="r2r_w3g_sy" flag="done" mid="10"?>2<?oxy_comment_end mid="10"?><?oxy_comment_end?>.
                         A high value will catch less outlier values than a low value.</para>
                     <?oxy_comment_end?>
                 </listitem>
@@ -113,7 +115,7 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
             </para>
             <para>
                 <note>
-                    <?oxy_comment_start author="cecilia" timestamp="20170109T141658+0100" comment="Verify with SME that the statement is correct."?>
+                    <?oxy_comment_start author="cecilia" timestamp="20170109T141658+0100" comment="Verify with SME that the statement is correct." flag="done"?>
                     <para>Auto-generated minimum maximum value ranges can be useful for many
                         situations, but it's recommended to verify that the data is actually
                         normally distributed prior to using this function.</para>
@@ -131,8 +133,7 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
                     <para>Select data set(s).</para>
                 </listitem>
                 <listitem>
-                    <para>Select <?oxy_comment_start author="cecilia" timestamp="20170106T152437+0100" comment="Should it be possible to select several org units?"?>an<?oxy_comment_end?>
-                        <emphasis role="bold">Organisation unit</emphasis>.</para>
+                    <para>Select an <emphasis role="bold">Organisation unit</emphasis>.</para>
                 </listitem>
                 <listitem>
                     <para>Click <emphasis role="bold">Generate</emphasis>.</para>
@@ -151,15 +152,17 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
         </section>
         <section>
             <title>Create minimum maximum value range manually </title>
-            <screenshot>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata align="center"
-                            fileref="resources/images/data_quality/set_min_max_manually.png"
-                            format="PNG" width="30%"/>
-                    </imageobject>
-                </mediaobject>
-            </screenshot>
+            <para>
+                <screenshot>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata align="center"
+                                fileref="resources/images/data_quality/set_min_max_manually.png"
+                                format="PNG" width="30%"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
             <orderedlist>
                 <listitem>
                     <para>In the <emphasis role="bold">Data
@@ -187,7 +190,7 @@ SME: no" flag="done"?>Entry<?oxy_comment_end?></emphasis>
                 </listitem>
                 <listitem>
                     <para>(Optional) Type a comment to explain the reason for the discrepancy,
-                        f<?oxy_comment_start author="cecilia" timestamp="20170109T150522+0100" comment="Add better example"?>or
+                        f<?oxy_comment_start author="cecilia" timestamp="20170109T150522+0100" comment="At next revision: Add better example"?>or
                         example an event at a facility which may have generated a large number of
                         clients.<?oxy_comment_end?></para>
                 </listitem>

@@ -13,9 +13,11 @@
         <title>About standard deviation outlier analysis</title>
         <para>The standard deviation outlier analysis identifies values that are numerically distant
             from the rest of the data. The analysis is based on the standard normal distribution.
-            Outliers can occur by chance but often indicate a measurement error or a heavy-tailed
-            distribution which leads to very high numbers. You should investigate measurement errors
-            and try to correct them before you discard them from the analysis.</para>
+            The system calculates the average based on all data in the system, since the beginning
+            of time. Outliers can occur by chance but often indicate a measurement error or a
+            heavy-tailed distribution which leads to very high numbers. You should investigate
+            measurement errors and try to correct them before you discard them from the
+            analysis.</para>
         <para>
             <note>
                 <para>Be
@@ -90,6 +92,17 @@ Average based on which time? 2 year, all history?? Follow-up with Lars."?>organi
 SME couldn&apos;t create one in Trainingland or Demo, neither I.
 Have asked Lars.
 Verify if you can download the result list."?>list<?oxy_comment_end?>.</para>
+                <para>
+                    <screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata width="80%" align="center"
+                                    fileref="resources/images/data_quality/std-dev-outlier-analysis-result.png"
+                                    format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot>
+                </para>
                 <?oxy_comment_start author="cecilia" timestamp="20170113T084502+0100" comment="Haven&apos;t been able to verify this since I haven&apos;t been able to create a outlier list."?>
                 <para>For each outlier, you'll see the data element, organisation unit, period,
                     minimum value, actual value, and maximum value. The minimum and maximum values
