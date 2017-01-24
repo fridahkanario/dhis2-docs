@@ -11266,6 +11266,11 @@ interval=WEEK" -u admin:district</screen>
               <entry>Cache strategy. Default: "CACHE_6AM_TOMORROW"</entry>
             </row>
             <row>
+              <entry>keyCacheability</entry>
+              <entry>PUBLIC or PRIVATE. Determines if proxy servers are allowed to cache data or
+                not.</entry>
+            </row>
+            <row>
               <entry>phoneNumberAreaCode</entry>
               <entry>Phonenumber area code</entry>
             </row>
@@ -11298,8 +11303,19 @@ interval=WEEK" -u admin:district</screen>
               <entry>Allow users to grant own user roles. Default: "false"</entry>
             </row>
             <row>
-              <entry>keyHideUnapprovedDataInAnalytics</entry>
-              <entry>Hide unapproved data in analytics. Default: "false"</entry>
+              <entry>keyRespectMetaDataStartEndDatesInAnalyticsTableExport</entry>
+              <entry>When "true", analytics will skip data not within category option's start and
+                end dates. Default: "false"</entry>
+            </row>
+            <row>
+              <entry>keyCacheAnalyticsDataYearThreshold</entry>
+              <entry>Analytics data older than this value (in years) will always be cached. "0"
+                disabled this setting. Default: 0</entry>
+            </row>
+            <row>
+              <entry>keyIgnoreAnalyticsApprovalYearThreshold</entry>
+              <entry>"0" check approval for all data. "-1" disable approval checking. "1" or higher
+                checks approval for all data that is newer than "1" year.</entry>
             </row>
             <row>
               <entry>keyAnalyticsMaxLimit</entry>
