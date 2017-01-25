@@ -132,7 +132,7 @@
                     <mediaobject>
                       <imageobject>
                         <imagedata fileref="resources/images/gis/gis_coordinates.png" format="png"
-                          width="40%" align="left"/>
+                          width="80%" align="left"/>
                       </imageobject>
                     </mediaobject>
                   </screenshot></para>
