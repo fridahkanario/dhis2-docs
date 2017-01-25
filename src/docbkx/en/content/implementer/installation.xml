@@ -858,7 +858,7 @@ sudo /etc/init.d/nginx stop</screen></para>
       <screen>http {
   # ...
   root              /home/dhis/tomcat/webapps/ROOT; # Update path!
-  proxy_cache_path  /var/cache/nginx  keys_zone=dhis:250m  inactive=1d;
+  proxy_cache_path  /var/cache/nginx  levels=1:2  keys_zone=dhis:250m  inactive=1d;
 
   gzip on; # Enables compression, incl Web API content-types
   gzip_types
@@ -868,11 +868,11 @@ sudo /etc/init.d/nginx stop</screen></para>
     "text/css;charset=utf-8" text/css
     "text/plain;charset=utf-8" text/plain;
 
-  <![CDATA[# HTTP server - rewrite to force use of HTTPS
+  # HTTP server - rewrite to force use of HTTPS
 
   server {
     listen     80;
-    rewrite    ^ https://<server-ip>$request_uri? permanent;
+    rewrite    ^ https://www.domain.com/$request_uri? permanent;
   }
 
   # HTTPS server
@@ -912,7 +912,7 @@ sudo /etc/init.d/nginx stop</screen></para>
       proxy_busy_buffers_size   256k;
       proxy_cache               dhis;
     }
-  }]]>
+  }
 }
 
 </screen>

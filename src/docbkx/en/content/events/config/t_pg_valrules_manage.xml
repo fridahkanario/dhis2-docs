@@ -25,8 +25,6 @@ Add information about translate, delete, edit etc..."?>rules<?oxy_comment_end?><
             </listitem>
             <listitem>
                 <para>an operator </para>
-                <para>The operator defines whether the left side must be less than, equal to or
-                    greater than the right side.</para>
             </listitem>
         </itemizedlist>
         <example>

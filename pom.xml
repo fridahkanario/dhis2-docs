@@ -106,6 +106,8 @@
 							<sectionAutolabel>1</sectionAutolabel>
 							<sectionLabelIncludesComponentLabel>1</sectionLabelIncludesComponentLabel>
 							<chunkedOutput>true</chunkedOutput>
+							<chunkFirstSections>true</chunkFirstSections>
+							<chunkSectionDepth>3</chunkSectionDepth>
 							<useEmbedForSvg>1</useEmbedForSvg>
 							<collectXrefTargets>yes</collectXrefTargets>
 							<targetsFilename>${docbook.target}/en/user/html/dhis2_user_manual_en.html.target.db</targetsFilename>

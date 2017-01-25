@@ -7,16 +7,18 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_indicator_group_set">
-    <title>Create an indicator group set</title>
-    <screenshot>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="80%" align="center"
-                    fileref="resources/images/maintainence/indicator_group_set_create.png"
-                    format="PNG"/>
-            </imageobject>
-        </mediaobject>
-    </screenshot>
+    <title>Create or edit an indicator group set</title>
+    <para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata width="80%" align="center"
+                        fileref="resources/images/maintainence/indicator_group_set_create.png"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </para>
     <para>Indicator group sets create combined groups of similar indicators. For example, you might
         have a group of indicators called &quot;Malaria&quot; and &quot;Leishmaniasis&quot;. Both of
         these groups could be combined into a group set called &quot;Vector-borne diseases&quot;.
