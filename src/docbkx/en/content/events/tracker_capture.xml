@@ -17,16 +17,18 @@ What does it do?
 Print the empty form? The filled out form?"?>Capture<?oxy_comment_end?>
     <?oxy_comment_start author="cecilia" timestamp="20160830T134627+0200" comment="Add workflow section and commonc concept information about event vs. tracked event
 Also add info about search results, that you can download the list. What is the list called? Participants in a program?"?>app<?oxy_comment_end?></title>
-  <section>
-    <title>[Review ongoing] About the Tracker Capture app</title>
-    <screenshot>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="resources/images/tracker_capture/tracker-capture-tei-list.png"
-            format="PNG" align="center" width="80%"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
+  <section xml:id="about_tracker_capture_app">
+    <title>About the Tracker Capture app</title>
+    <para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="resources/images/tracker_capture/tracker-capture-tei-list.png"
+              format="PNG" align="center" width="80%"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
     <para>The <emphasis role="bold">Tracker Capture</emphasis> app is an advanced version of the
         <emphasis role="bold">Event Capture</emphasis>
       <?oxy_comment_start author="cecilia" timestamp="20161005T160724+0200" comment="Removed content:
@@ -74,16 +76,18 @@ Could also effect TEIs."?>to<?oxy_comment_end?>
       </listitem>
     </itemizedlist>
   </section>
-  <section>
+        <section xml:id="about_tracked_entity_instance_dashboard">
     <title>About tracked entity instance (TEI) dashboards</title>
-    <screenshot>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="resources/images/tracker_capture/tei_dashboard.png" format="PNG"
-            align="center" width="90%"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
+    <para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="resources/images/tracker_capture/tei_dashboard.png" format="PNG"
+              align="center" width="90%"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
     <para>You manage a TEI from the
       <?oxy_comment_start author="cecilia" timestamp="20160912T101716+0200" comment="TEI dashboard or
 TEI&apos;s dashboard?"?>TEI's
@@ -134,19 +138,21 @@ TEI&apos;s dashboard?"?>TEI's
       </listitem>
     </itemizedlist>
   </section>
-  <section>
+   <section xml:id="workflow_tracker_capture">
     <title>Workflow</title>
     <example>
       <para>Working process of Mother and child health program</para>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="70%"
-              fileref="resources/images/patients_programs/name_based_information_tracking_process.png"
-              format="PNG"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="70%"
+                fileref="resources/images/patients_programs/name_based_information_tracking_process.png"
+                format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
       <orderedlist>
         <listitem>
           <para>Create new or find existing TEI.</para>
@@ -169,7 +175,7 @@ TEI&apos;s dashboard?"?>TEI's
       </orderedlist>
     </example>
   </section>
-  <section>
+        <section xml:id="create_tracked_entity_instance">
     <title>Cr<?oxy_comment_start author="cecilia" timestamp="20160830T135151+0200" comment="Create a TEI?
 Register a TEI?"?>eate<?oxy_comment_end?>
       a TEI</title>
@@ -225,8 +231,8 @@ Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy
           <emphasis role="bold">Tracker</emphasis> > <emphasis role="bold">Tracked entity
           attribute</emphasis>.</para>
     </note>
-  </section>
-  <section>
+  </section >
+  <section  xml:id="create_and_enroll_tracked_entity_instance">
     <title>Create a TEI and enroll it in a program</title>
     <para>You can create a TEI and enroll that TEI to a program in one operation:</para>
     <orderedlist>
@@ -267,7 +273,7 @@ Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy
       </listitem>
     </orderedlist>
   </section>
-  <section>
+  <section  xml:id="open_existing_tracked_entity_instance_dashboard">
     <title>Open an
       <?oxy_comment_start author="cecilia" timestamp="20160912T113234+0200" comment="Verify with SME: 
 Select of org unit optional?
@@ -275,18 +281,20 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
       TEI dashboard</title>
     <para>There are two ways to find a TEI: simple and advanced search. You can also modify the
       search results list's layout and download the search results list in several formats.</para>
-    <screenshot>
-      <?oxy_comment_start author="cecilia" timestamp="20160830T135408+0200" comment="Replace with new screenshot or remove completely."?>
-      <title>Example: searching/registration</title>
-      <?oxy_comment_end?>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="resources/images/tracker_capture/search_register.png" format="PNG"
-            width="90%" align="center"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
-    <section>
+    <para>
+      <screenshot>
+        <?oxy_comment_start author="cecilia" timestamp="20160830T135408+0200" comment="Replace with new screenshot or remove completely."?>
+        <title>Example: searching/registration</title>
+        <?oxy_comment_end?>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="resources/images/tracker_capture/search_register.png" format="PNG"
+              width="90%" align="center"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
+    <section  xml:id="simple_tracked_entity_instance_search">
       <title>Simple TEI
         <?oxy_comment_start author="cecilia" timestamp="20161007T100209+0200" comment="Searches on TEI attributes"?>search<?oxy_comment_end?></title>
       <orderedlist>
@@ -335,7 +343,7 @@ enrollment or enrollments?"?>status<?oxy_comment_end?>: <itemizedlist>
         </listitem>
       </orderedlist>
     </section>
-    <section>
+    <section xml:id="advanced_tracked_entity_instance_search">
       <title>Advanced TEI search</title>
       <para>Advanced search is conducted for the organisation units you select in the
         <?oxy_comment_start author="cecilia" timestamp="20160913T101533+0200" comment="Verify with SMe if the node itself is part of the search and not only the children."?>organisation<?oxy_comment_end?>
@@ -424,7 +432,7 @@ enrollment or enrollments?"?>status<?oxy_comment_end?>: <itemizedlist>
         </listitem>
       </orderedlist>
     </section>
-    <section>
+    <section xml:id="find_tracked_entity_instance_outside_your_organisation_unit">
       <title>Find a TEI outside your organisation
         <?oxy_comment_start author="cecilia" timestamp="20160913T133501+0200" comment="At next revision: Review if this task should have it&apos;s on section or not." flag="done"?>unit<?oxy_comment_end?></title>
       <para>You can search for a TEI from another organisation unit, outside your assigned
@@ -445,7 +453,7 @@ Where do you set it?"?>All<?oxy_comment_end?>
         </listitem>
       </itemizedlist>
     </section>
-    <section>
+    <section xml:id="download_tracked_entity_instance_search_result">
       <title>Download TEI search results list</title>
       <orderedlist>
         <listitem>
@@ -469,7 +477,7 @@ Where do you set it?"?>All<?oxy_comment_end?>
         </listitem>
       </orderedlist>
     </section>
-    <section>
+    <section xml:id="modify_tracked_entity_instance_search_result_layout">
       <title>Modify TEI search results list's
         <?oxy_comment_start author="cecilia" timestamp="20160912T164009+0200" comment="Revise wording."?>layout<?oxy_comment_end?></title>
       <para>You can select which columns to show or hide in a TEI search result list. Once you've
@@ -490,7 +498,7 @@ Where do you set it?"?>All<?oxy_comment_end?>
       </orderedlist>
     </section>
   </section>
-  <section>
+    <section xml:id="enroll_existing_tracked_entity_instance_in_program">
     <title>Enroll an existing TEI in a program</title>
     <orderedlist>
       <listitem>
@@ -512,7 +520,7 @@ Where do you set it?"?>All<?oxy_comment_end?>
       </listitem>
     </orderedlist>
   </section>
-  <section>
+  <section xml:id="enter_event_data_for_tracked_entity_instance">
     <title>Enter event data for a
       <?oxy_comment_start author="cecilia" timestamp="20161005T164705+0200" comment="At next release: Rewrite section and add more information," flag="done"?>TEI<?oxy_comment_end?></title>
     <para>In a TEI dashboard, you enter event data in the <emphasis role="bold">Timeline Data
@@ -575,13 +583,13 @@ Do the data entry widgets look different depending on the program?"?>widgets<?ox
       </tgroup>
     </table>
   </section>
-  <section>
+  <section xml:id="manage_tracked_entity_instance_enrollment">
     <title>Manage a
       <?oxy_comment_start author="cecilia" timestamp="20160906T161922+0200" comment="Verify that all widgets are documented.
 
 Add ino that you can switch between the different programs."?>TEI<?oxy_comment_end?>'s
       enrollments</title>
-    <section>
+    <section xml:id="deactivate_tracked_entity_instance_enrollment">
       <title><?oxy_comment_start author="cecilia" timestamp="20161007T164121+0200" comment="Does the GUI item change depending on the program?
 In Child porgram: &quot;Deactivate person&quot;
 
@@ -605,7 +613,7 @@ Admin only?"?>Deactivate<?oxy_comment_end?>
         </listitem>
       </orderedlist>
     </section>
-    <section>
+    <section xml:id="activate_tracked_entity_instance_enrollment">
       <title>Activate a TEI's enrollment</title>
       <orderedlist>
         <listitem>
@@ -623,7 +631,7 @@ Admin only?"?>Deactivate<?oxy_comment_end?>
         </listitem>
       </orderedlist>
     </section>
-    <section>
+    <section xml:id="mark_tracked_entity_instance_enrollment_complete">
       <title>Mark TEI's
         <?oxy_comment_start author="cecilia" timestamp="20160906T162346+0200" comment="Verify with SME that title is correct."?>enrollment<?oxy_comment_end?>
         as complete</title>
@@ -643,7 +651,7 @@ Admin only?"?>Deactivate<?oxy_comment_end?>
         </listitem>
       </orderedlist>
     </section>
-    <section>
+    <section xml:id="reopen_complete_tracked_entity_instance_enrollment">
       <title>Reopen completed enrollment</title>
       <orderedlist>
         <listitem>
@@ -661,7 +669,7 @@ Admin only?"?>Deactivate<?oxy_comment_end?>
         </listitem>
       </orderedlist>
     </section>
-    <section>
+    <section xml:id="display_tracked_entity_instance_enrollment_history">
       <title>Display TEI's
         <?oxy_comment_start author="cecilia" timestamp="20160906T162632+0200" comment="For SME: Verify that that you mean Audit history.
 Add example"?>enrollment<?oxy_comment_end?>
@@ -679,7 +687,7 @@ Add example"?>enrollment<?oxy_comment_end?>
         </listitem>
       </orderedlist>
     </section>
-    <section>
+    <section xml:id="create_tracked_entity_instance_enrollment_note">
       <title>Create a TEI enrollment note</title>
       <para>An enrollment note is useful to record information about for example why an enrollment
         was cancelled.</para>
@@ -697,7 +705,7 @@ Add example"?>enrollment<?oxy_comment_end?>
       </orderedlist>
     </section>
   </section>
-  <section>
+   <section xml:id="send_message_to_tracked_entity_instance">
     <title>Send a message to a
       <?oxy_comment_start author="cecilia" timestamp="20161007T164912+0200" comment="At next release: Verify that prereq is documented
 In user app, the user must set up to recieve notifications" flag="done"?>TEI<?oxy_comment_end?></title>
@@ -725,7 +733,7 @@ In user app, the user must set up to recieve notifications" flag="done"?>TEI<?ox
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="mark_tracked_entity_instance_for_follow_up">
     <title>Mark a TEI for follow-up</title>
     <para>You can use mark a TEI's enrollment for follow-up and then use this status as a filter
       when you create <emphasis role="bold">Upcoming events</emphasis> and <emphasis role="bold"
@@ -744,7 +752,7 @@ In user app, the user must set up to recieve notifications" flag="done"?>TEI<?ox
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="edit_tracked_entity_instance_profile">
     <title>Edit a TEI's profile</title>
     <para>You edit a TEI's profile or tracked entity attributes in the <emphasis role="bold"
         >Profile</emphasis> widget. </para>
@@ -764,7 +772,7 @@ In user app, the user must set up to recieve notifications" flag="done"?>TEI<?ox
       </listitem>
     </orderedlist>
   </section>
-  <section>
+  <section xml:id="add_relationship_to_tracked_entity_instance">
     <title>Add a
       <?oxy_comment_start author="cecilia" timestamp="20161007T163127+0200" comment="At next release, add x-ref to Mtn app, relationships" flag="done"?>relationship<?oxy_comment_end?>
       to a TEI</title>
@@ -802,7 +810,7 @@ In user app, the user must set up to recieve notifications" flag="done"?>TEI<?ox
       </listitem>
     </orderedlist>
   </section>
-  <section>
+  <section xml:id="share_tracked_entity_instance_dashboard">
     <title>Share a TEI
       <?oxy_comment_start author="cecilia" timestamp="20160701T113624+0200" comment="Before release: make sure link works."?>dashboard<?oxy_comment_end?></title>
     <para>You can share a
@@ -833,7 +841,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="deactivate_tracked_entity_instance">
     <title>Deactivate a TEI</title>
     <para>If you deactivate a TEI, the TEI becomes 'read-only'. Data associated with the TEI is not
       deleted.</para>
@@ -856,7 +864,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="activate_tracked_entity_instance">
     <title>Activate a TEI</title>
     <orderedlist>
       <listitem>
@@ -877,7 +885,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="delete_tracked_entity_instance">
     <title>Delete a TEI</title>
     <para>
       <warning>
@@ -905,9 +913,9 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </listitem>
     </orderedlist>
   </section>
-  <section>
+  <section xml:id="configure_tracked_entity_instance_dashboard">
     <title>Configure the TEI dashboard</title>
-    <section>
+    <section  xml:id="tracked_entity_instance_dashboard_show_hide_widget">
       <title>Show or hide widgets</title>
       <orderedlist>
         <listitem>
@@ -928,7 +936,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         </listitem>
       </orderedlist>
     </section>
-    <section>
+    <section  xml:id="tracked_entity_instance_dashboard_save_layout">
       <title>Save the dashboard's layout as default</title>
       <para>You can save the dashboard's layout as default for a program.</para>
       <orderedlist>
@@ -945,7 +953,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </orderedlist>
     </section>
   </section>
-  <section>
+    <section  xml:id="create_report_tracker_capture">
     <title>Create
       <?oxy_comment_start author="cecilia" timestamp="20161007T155325+0200" comment="At next release: rework section" flag="done"?>reports<?oxy_comment_end?></title>
     <orderedlist>
@@ -958,7 +966,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       <listitem>
         <para>Select a report type.</para>
         <table frame="all">
-          <title>Report types in Tracker Capture</title>
+          <title>Report types in the Tracker Capture app</title>
           <tgroup cols="2">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
@@ -1022,21 +1030,25 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         </table>
       </listitem>
     </orderedlist>
-    <example>
-      <title>Program summary report</title>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="resources/images/tracker_capture/program_summary_report.png"
-              format="PNG" align="center" width="90%"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-      <para>The summary report displays a list of TEIs and their records for "MNCH/PNC (Adult
-        Woman)" program. The records are organized in the form of tabs where each tab is a program
-        stage. The columns in the table are data elements which are configured to be
-        di<?oxy_comment_start author="cecilia" timestamp="20160906T151948+0200" comment="Add link to correct section."?>splayed
-        in reports under program stage definition.<?oxy_comment_end?></para>
-    </example>
+    <para>
+      <example>
+        <title>Program summary report</title>
+        <para>
+          <screenshot>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="resources/images/tracker_capture/program_summary_report.png"
+                  format="PNG" align="center" width="90%"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </para>
+        <para>The summary report displays a list of TEIs and their records for "MNCH/PNC (Adult
+          Woman)" program. The records are organized in the form of tabs where each tab is a program
+          stage. The columns in the table are data elements which are configured to be
+          di<?oxy_comment_start author="cecilia" timestamp="20160906T151948+0200" comment="Add link to correct section."?>splayed
+          in reports under program stage definition.<?oxy_comment_end?></para>
+      </example>
+    </para>
   </section>
 </chapter>
