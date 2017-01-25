@@ -17,60 +17,93 @@
 - Explain the pre-req, you need to create a program
 - Explain that in Event Capture you register events without registration, (in one single program stage?)
 Within a porgram you can create an event with registreation or without registration -  what&apos;s the third option?"?>app<?oxy_comment_end?></title>
-  <section>
-    <title>[Review ongoing] About the Event
+    <section xml:id="about_event_capture_app">
+    <title>About the Event
       <?oxy_comment_start author="cecilia" timestamp="20160826T105748+0200" comment="For tech writer:
 Add definitions of: event, event without registration, ..."?>Capture<?oxy_comment_end?>
       app</title>
-    <screenshot>
-      <title>Example event list</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="resources/images/event_capture/event_list.png" format="PNG"
-            width="70%" align="center"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
+    <para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="resources/images/event_capture/event_list.png" format="PNG"
+              width="70%" align="center"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
     <para>In the <emphasis role="bold">Event Capture</emphasis> app you register events that
       occurred at a particular time and place. An event can happen at any given point in time.
       T<?oxy_comment_start author="cecilia" timestamp="20160829T095328+0200" comment="Rewrite
 "?>his
       stands in contrast to routine<?oxy_comment_end?> data, which can be captured for predefined,
-      regular intervals. Events are sometimes called cases or records. In DHIS2
+      regular intervals. Events are sometimes called cases or records. In DHIS2,
       e<?oxy_comment_start author="cecilia" timestamp="20160829T095359+0200" comment="Can an event be registered without a program?"?>vents<?oxy_comment_end?>
-      are linked to a program. The Event Capture app lets you select the organisation unit and
-      program and specify a date when a event happened, before entering information for the
-      event.</para>
+      are linked to a program. The <emphasis role="bold">Event Capture</emphasis> app lets you
+      select the organisation unit and program and specify a date when a event happened, before
+      entering information for the event.</para>
     <para>The <emphasis role="bold">Event Capture</emphasis> app works online and offline. If the
       Internet connectivity drops, you can continue to capture events. The events will be stored
       locally in your web browser (client). When connectivity has returned, the system will ask you
       to upload the locally stored data. The system then sends the data to the server where the data
       is stored.</para>
-    <note>
-      <para>When you close an organisation unit, you can't register or edit events
-        <?oxy_comment_start author="cecilia" timestamp="20170102T105411+0100" comment="Related to this organisation unit?
+    <para>
+      <note>
+        <?oxy_comment_start author="cecilia" timestamp="20160829T140850+0200" comment="Verify with SME if this is still correct.
+So data is saved on the local machine but not accessible in the newly reopened web browser?"?>
+        <para>If you close the web browser while in offline mode, it is not possible to reopen a new
+          web browser window and continue the working session. However the data will still be saved
+          locally and can be uploaded to the server the next time the machine is online and the you
+          have logged into the server.</para>
+        <?oxy_comment_end?>
+      </note>
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para>You only see programs associated with the organisation unit you've selected and
+          programs you've access to view through your user role.</para>
+      </listitem>
+      <listitem>
+        <?oxy_comment_start author="cecilia" timestamp="20160905T160429+0200" comment="For SME: What does this mean?"?>
+        <para>Both
+          s<?oxy_comment_start author="cecilia" timestamp="20170125T163435+0100" comment="Removed the following text (more for implementer or program config section):
+&quot;Another feature available in the Event Capture app is skip-logic and validation functionality. Using program rules engine it is possible to put some rules for a program and take some actions when the rules are met. Currently supported actions are skipping/hiding a data element or an entire section, display warning for some soft-validations or display error for hard-validations. For example if a rule defined says &quot;DataElementA &gt; 100&quot; and has action as &quot;show warning&quot; and message &quot;Datalelement A can not have value more than 100&quot;. What will happen during data entry is - the moment a value greater than 100 is entered for data element A, the warning message will be displayed. Because, it is just a warning it is still possible to keep the value more than 100. However, if the action is &quot;Show error&quot;, the error message will be displayed and the system will also ignore the value - i.e. it is not possible to store a value that violates the rule.&quot;"?>kip-logic
+          <?oxy_comment_end?>and validation error/warning messages are supported during
+          registration.</para>
+        <?oxy_comment_end?>
+      </listitem>
+      <listitem>
+        <para>When you close an organisation unit, you can't register or edit events
+          <?oxy_comment_start author="cecilia" timestamp="20170102T105411+0100" comment="Related to this organisation unit?
 
 Pending info from SME. 
 Could also effect TEIs."?>to<?oxy_comment_end?>
-        this organisation unit in the <emphasis role="bold">Event Capture</emphasis> and <emphasis
-          role="bold">Tracker Capture</emphasis> apps.</para>
-    </note>
-    <note>
-      <?oxy_comment_start author="cecilia" timestamp="20160829T140850+0200" comment="Verify with SME if this is still correct.
-So data is saved on the local machine but not accessible in the newly reopened web browser?"?>
-      <para>If you close the web browser while in offline mode, it is not possible to reopen a new
-        web browser window and continue the working session. However the data will still be saved
-        locally and can be uploaded to the server the next time the machine is online and the you
-        have logged into the server.</para>
-      <?oxy_comment_end?>
-    </note>
-    <itemizedlist>
+          this organisation unit in the <emphasis role="bold">Event Capture</emphasis> and <emphasis
+            role="bold">Tracker Capture</emphasis> apps.</para>
+      </listitem>
+      <listitem>
+        <para>On-the-fly indicator expression evaluation is supported. If a program has indicators
+          defined for it and the moment all values related to the indicator expression are filled,
+          the system will calculate indicator and display the result.</para>
+        <para>
+          <screenshot>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="resources/images/event_capture/event_editing.png" format="PNG"
+                  width="70%" align="center"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </para>
+      </listitem>
+      <?oxy_comment_start author="cecilia" timestamp="20170125T162904+0100" comment="Verify if this info is still valid."?>
       <listitem>
         <para><emphasis role="bold">Sorting:</emphasis> this can be done by clicking the sorting
           icon of each column header. A red sorting icon implies the current sorting column.
           However, the sorting functionality works only within the page displayed. Currently, it is
           not possible to do sorting from serverside.</para>
       </listitem>
+      <?oxy_comment_end?>
       <listitem>
         <para><emphasis role="bold">Filtering:</emphasis> this is done by clicking the small search
           icon shown to the right of each column header. Clicking them provides an input field to
@@ -79,45 +112,13 @@ So data is saved on the local machine but not accessible in the newly reopened w
           elements and lower and upper limits for number types. Server side filtering is not-support
           at the moment.</para>
       </listitem>
-      <listitem>
-        <para><emphasis role="bold">Paging:</emphasis> The list of events can be paged by using the
-          paging section at the bootom of the list. Paging allows you to quickly move between pages
-          of events and to change the page size, i.e. the number of events per page.</para>
-      </listitem>
     </itemizedlist>
-    <?oxy_comment_start author="cecilia" timestamp="20160829T161102+0200" comment="Verify with SME:
-Is this relevant for the user? Of more implementer information?"?>
-    <para>Another feature available in the <emphasis role="bold">Event Capture</emphasis> app is
-      skip-logic and validation functionality. Using program rules engine it is possible to put some
-      rules for a program and take some actions when the rules are met. Currently supported actions
-      are skipping/hiding a data element or an entire section, display warning for some
-      soft-validations or display error for hard-validations. For example if a rule defined says
-      "DataElementA > 100" and has action as "show warning" and message "Datalelement A can not have
-      value more than 100". What will happen during data entry is - the moment a value greater than
-      100 is entered for data element A, the warning message will be displayed. Because, it is just
-      a warning it is still possible to keep the value more than 100. However, if the action is
-      "Show error", the error message will be displayed and the system will also ignore the value -
-      i.e. it is not possible to store a value that violates the rule.</para>
-    <para>Together with the rules engine expression evaluation, on-the-fly indicator expression
-      evaluation is also supported. If a program has indicators defined for it and the moment all
-      values related to the indicator expression are filled, the system will calcualte indicator and
-      display the result. A figure below demonstrates this.</para>
-    <?oxy_comment_end?>
-    <screenshot>
-      <title>Example event list</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="resources/images/event_capture/event_editing.png" format="PNG"
-            width="70%" align="center"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
   </section>
   <!--<section>
     <title><?oxy_comment_start author="cecilia" timestamp="20161005T145658+0200" comment="At next release: add workflow section"?>Workflow<?oxy_comment_end?></title>
     <para/>
   </section>-->
-  <section>
+    <section xml:id="event_capture_register_event">
     <title><?oxy_comment_start author="cecilia" timestamp="20160826T111244+0200" comment="Or Create an event?
 Add an event?"?>Register<?oxy_comment_end?>
       an
@@ -163,7 +164,7 @@ Add an event?"?>Register<?oxy_comment_end?>
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="event_capture_edit_event">
     <title>Edit an event</title>
     <orderedlist>
       <listitem>
@@ -188,7 +189,7 @@ Add an event?"?>Register<?oxy_comment_end?>
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="event_capture_edit_event_grid">
     <title>Edit events in
       <?oxy_comment_start author="cecilia" timestamp="20160826T110418+0200" comment="Verify name, is grid correct?
 Maybe grid format?
@@ -228,7 +229,7 @@ Verify with SME how it should work, how you close edit mode"?>
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="event_capture_share_event_edit_mode">
     <title>Share events in edit
       <?oxy_comment_start author="cecilia" timestamp="20161005T170648+0200" comment="Verify with SME that descriptions is correct."?>mode<?oxy_comment_end?></title>
     <para>You can share an event in edit mode via its web address.</para>
@@ -255,7 +256,7 @@ Verify with SME how it should work, how you close edit mode"?>
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="event_capture_view_event_audit_history">
     <title>View an event
       <?oxy_comment_start author="cecilia" timestamp="20160826T105907+0200" comment="is audit history really necessary? Why not history? or log?"?>audit<?oxy_comment_end?>
       history </title>
@@ -282,7 +283,7 @@ It looks like only changes to an event are logged. Suggest to log also the creat
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="event_capture_delete_event">
     <title>Delete an event</title>
     <orderedlist>
       <listitem>
@@ -309,7 +310,7 @@ If not, add WARNING!"?>deletion<?oxy_comment_end?>.</para>
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="event_capture_modify_event_list_layout">
     <title>Modify an event list's
       <?oxy_comment_start author="cecilia" timestamp="20160826T110022+0200" comment="Verify the word display, can it be replaced?
 Look?
@@ -342,7 +343,7 @@ Doesn&apos;t seem to work though..."?>click<?oxy_comment_end?>
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="event_capture_print_event_list">
     <title>Print an
       <?oxy_comment_start author="cecilia" timestamp="20160826T105933+0200" comment="Events list?
 Event list?
@@ -370,7 +371,7 @@ In old doc:
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="event_capture_download_event_list">
     <title>Download an event list</title>
     <orderedlist>
       <listitem>
