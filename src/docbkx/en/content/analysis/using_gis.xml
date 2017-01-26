@@ -64,7 +64,7 @@
         </imageobject>
       </mediaobject>
     </screenshot>
-    <section xml:id="gis_use_event_layer">
+    <section xml:id="gis_create_event_layer">
       <title>Create or modify event layer</title> 
       <orderedlist>
         <listitem>
