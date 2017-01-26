@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="enter_data_offline">
+  <title>Enter data offline</title>
+  <para>The <emphasis role="bold">Data Entry</emphasis> app works even if you don't have a stable
+    Internet connectivity during data entry. In order to utilize this functionality, you must login
+    to the server while Internet connectivity is present, but if during data entry, the Internet
+    link between your computer and the server becomes unstable, data can still be entered into the
+    data entry form, saved to your local computer, and then pushed to the server once the Internet
+    connectivity has been restored. Data can be entered and stored locally while being off-line and
+    uploaded to the central server when on-line. This means that the on-line deployment strategy
+    will be more viable in areas with unstable Internet connectivity. The total bandwidth usage is
+    greatly reduced since forms no longer are retrieved from the server for each rendering.</para>
+  <section xml:id="data_entry_with_dhis2">
+    <section>
+      <para>When the server is able to be reached through the Internet connection, a message is
+        displayed at the top of the data entry screen below. </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="80%" align="center"
+              fileref="resources/images/data_entry/data_entry_online1.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>If the Internet connection should disconnect for some reason during the data entry
+        process, this will be detected by the application, and you will be informed that your data
+        will be stored locally. </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="80%" align="center"
+              fileref="resources/images/data_entry/data_entry_offline1.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Data entry can proceed as normal. Once you have entered all of the necessary data, and
+        the application detects that the server is back on-line, you will be informed that you have
+        data which needs to be synchronized with the server. </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="80%" align="center"
+              fileref="resources/images/data_entry/data_entry_offline_upload.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Once the data has successfully synchronized with the server, you will receive a
+        confirmation message that the data has been successfully uploaded to the server. </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="80%" align="center"
+              fileref="resources/images/data_entry/data_entry_offline_upload_success1.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </section>
+  </section>
+</section>

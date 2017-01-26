@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="data_entry_multiple_organisation_units">
+  <title>Multi-organisation unit data entry</title>
+  <para>In some scenarios it is beneficial to enter data for multiple organisation units in the same
+    data entry form, for instance if there are few data elements in the form and a huge number of
+    organisation units in the hierarchy. In that case you can enable multi-organisation unit data
+    entry by going to &quot;System settings&quot; and tick the &quot;Enable multi organisation unit
+    forms&quot; setting. Then, in data entry, select the organisation unit immediately above the
+    organisation unit you want to enter for in the hierarchy. Note that this only work for the
+    &quot;section&quot; based forms. You should now see the data elements appearing as columns and
+    the organisation units appearing as rows in the form. Note that the data entry forms should
+    still be assigned to the facilities that you actually enter data for, i.e. the organisation
+    units now appearing in the form.</para>
+</section>
