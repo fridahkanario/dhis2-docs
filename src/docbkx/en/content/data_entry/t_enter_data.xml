@@ -5,59 +5,123 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-  xmlns:db="http://docbook.org/ns/docbook" xml:id="enter_data">
-  <title>Enter data</title>
-  <para>To open the data entry window hover over the Apps button. A drop down menu will appear
-    listing the apps provided by DHIS2. Click on the <guibutton>Data Entry</guibutton>
-    option.</para>
-  <para>Start entering data by clicking inside the first field and type in the value. Move to the
-    next field using the Tab button. Shift+Tab will take you back one step. You can also use the
-    &quot;up&quot; and &quot;down&quot; arrow keys, as well as the Enter key, to navigate between
-    the form cells. The values are saved immediately and do not require to be saved at a later
-    stage. A green field indicates that the value has been saved in the system (on the
-    server).</para>
-  <para><emphasis role="bold">Input validation:</emphasis> If you type in an invalid value, e.g. a
-    character in a field that only accepts numeric values you will get a pop-up that explains the
-    problem and the field will be coloured yellow (not saved) until you have corrected the value. If
-    you have defined a min/max range for the field (data element+organisation unit combination) a
-    pop-up message will notify you when the value is out of range, and the value will remain unsaved
-    until you have changed the value (or updated the range and then re-entered the value). </para>
-  <para><emphasis role="bold">Disabled fields:</emphasis> If a field is disabled (grey) it means
-    that the field can and should not be filled. The cursor will automatically jump to the next open
-    field. </para>
-  <para><emphasis role="bold">Data history:</emphasis> By double-clicking on any input field in the
-    form a data history window opens showing the last 12 values registered for the current field
-    (organisation unit+data element+categoryoptioncombo) in a bar chart. This window also shows the
-    min and max range and allows for adjusting the range for the specific organisation unit and data
-    element combination. </para>
-  <para>
-    <screenshot>
-      <title>Data entry section form with history pop-up</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata width="50%" align="center"
-            fileref="resources/images/data_entry/data_entry_section_history.png" format="PNG"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
-  </para>
-  <para><emphasis role="bold">Follow Up:</emphasis> In the data history window there is also a
-    feature to tag or star a value. E.g. a suspicious value that needs further investigation can be
-    kept in the system, but marked for Follow-Up. In the Data Quality module you can run a Follow-Up
-    analysis and view all values marked for Follow-Up, and then later edit the values if proved
-    incorrect. </para>
-  <para><emphasis role="bold">Audit trail: </emphasis>The audit trail allows you to view other data
-    values which have been entered prior to the current value. As an example, the following data
-    element was changed from its original value to 120. The audit trail shows when the data value
-    was altered along with which user made the changes.</para>
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="enter_data_in_data_entry_app">
+  <title>Enter data in a data entry form</title>
+  <?oxy_comment_start author="cecilia" timestamp="20170126T145238+0100" comment="Update with new screen grab"?>
   <para>
     <screenshot>
       <mediaobject>
         <imageobject>
-          <imagedata width="40%" align="center"
-            fileref="resources/images/data_entry/data_entry_audit_trail.png" format="PNG"/>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/data_entry/data_entry_overview.png" format="PNG"/>
         </imageobject>
       </mediaobject>
     </screenshot>
   </para>
+  <?oxy_comment_end?>
+  <orderedlist>
+    <listitem>
+      <para>Open the <emphasis role="bold">Data Entry</emphasis> app.</para>
+    </listitem>
+    <listitem>
+      <para>In the organisation unit tree to the left, select an organisation unit.</para>
+      <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+      <para>Expand and close branches by clicking on the +/- symbols. A quick way to find an
+        organisation unit is to use the search box just above the tree (the green symbol), but you
+        need to write in the full name to get a match.</para>
+      <?oxy_custom_end?>
+    </listitem>
+    <listitem>
+      <para>Select a <emphasis role="bold">Data set</emphasis>.</para>
+    </listitem>
+    <listitem>
+      <para>Select a <emphasis role="bold">Period</emphasis>. </para>
+      <para>The available periods are controlled by the period type of the data set (reporting
+        frequency). You can jump a year back or forward by clicking <emphasis role="bold">Prev
+          year</emphasis> or  <emphasis role="bold">Next year</emphasis>.</para>
+      <para>
+        <note>
+          <?oxy_comment_start author="cecilia" timestamp="20170126T155433+0100" comment="Verify with SME that this statement is correct."?>
+          <para>Depending on how you've configured the data entry form, you might have to enter
+            additional information before you can open the date entry
+            <?oxy_comment_start author="cecilia" timestamp="20170126T155211+0100" comment="Only category combinations? Or other setting too?"?>form<?oxy_comment_end?>.
+            This can for example be a project derived from a category combination.</para>
+          <?oxy_comment_end?>
+        </note>
+      </para>
+    </listitem>
+    <listitem>
+      <para>Enter data in the data entry form.</para>
+      <itemizedlist>
+        <listitem>
+          <para>A green field means that the system has saved the value.</para>
+        </listitem>
+        <listitem>
+          <para>A grey field means that the field is disabled and you can't enter a value. The
+            cursor will automatically jump to the next open field.</para>
+        </listitem>
+        <listitem>
+          <para>To move to the next field, press the Tab key or the Down Arrow key.</para>
+        </listitem>
+        <listitem>
+          <para>To move back to the previous field, press Shift+Tab or the Up Arrow key.</para>
+        </listitem>
+        <listitem>
+          <para>If you type in an invalid value, for example a character in a field that only
+            accepts numeric values, you'll get a pop-up that explains the problem and the field will
+            be coloured yellow (not saved) until you have corrected the value.</para>
+        </listitem>
+        <listitem>
+          <para>If you have defined a minimum maximum value range for the field and you enter a
+            value that is outside this range, you'll get a pop-up message that says the value is out
+            of range. The value remains
+            <?oxy_comment_start author="cecilia" timestamp="20170126T165111+0100" comment="Looks like the field becomes orange.Why not yellow? Are there four colors?"?>unsaved<?oxy_comment_end?>
+            until you've changed the value or updated the value range and then re-entered the
+            value.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>When you've filled in the form, click <emphasis role="bold">Run validation</emphasis> in
+        the top right corner or below the data entry form.</para>
+      <para>All validation rules which involves data elements in the current data entry form (data
+        set) are then run against the new data. If there are no violations of the validation rules,
+        you'll see a message saying <emphasis role="italic">The data entry screen successfully
+          passed validation</emphasis>. If there are validation violations, they will be presented
+        in a list.</para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/dhis2UserManual/Validation Rule_Result.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
+    </listitem>
+    <listitem>
+      <para>(Optional) Correct data values found by the validation.</para>
+      <para>
+        <note>
+          <?oxy_comment_start author="cecilia" timestamp="20170126T180125+0100" comment="Still correct?"?>
+          <para>If you want to delete a data value completely, you should select the value, and
+            press the Delete key on your keyboard. If you enter a zero and the data element has been
+            configured to not store zeros, the previous data value (that is, the one you wish to
+            modify) will not be overwritten with the new value. Therefore, it's recommended to
+            delete the data value completely (waiting for the cell to turn green) and then to enter
+            the new value.</para>
+          <?oxy_comment_end?>
+        </note>
+      </para>
+    </listitem>
+    <listitem>
+      <para>When you've corrected errors and you're done with data entry, click <emphasis
+          role="bold">Complete</emphasis>.</para>
+      <?oxy_comment_start author="cecilia" timestamp="20170126T165812+0100" comment="Also for other areas?"?>
+      <para>The system uses this information when generating completeness reports for district,
+        county, province or the national level.</para>
+      <?oxy_comment_end?>
+    </listitem>
+  </orderedlist>
 </section>
