@@ -7419,6 +7419,23 @@ ORDER BY oul.level, par.name, ou.name</screen>
       <para>The variable parameter must contain alphanumeric characters only. The variables must
         contain alphanumeric, dash, underscore and whitespace characters only.</para>
     </section>
+    <section>
+      <title>Filtering</title>
+      <para>The SQL view api supports data filtering, equal to the <link
+          xmlns:xlink="http://www.w3.org/1999/xlink" linkend="webapi_metadata_object_filter"
+          >metadata object filter</link>. For a complete list of filter operators you can look at
+        the documentation for <link xmlns:xlink="http://www.w3.org/1999/xlink"
+          linkend="webapi_metadata_object_filter">metadata object filter</link>.</para>
+      <para>To use filters, simply add them as parameters at the end of the request url for your SQL
+        view like
+        this:<screen>/api/sqlViews/w3UxFykyHFy/data.json?filter=orgunit_level:eq:2&amp;filter=orgunit_name:ilike:bo</screen></para>
+      <para>This request will return a result including org units with "bo" in the name and which
+        has org unit level 2.</para>
+      <para>The following example will return all org units with orgunit_level 2 or
+        4:<screen>/api/sqlViews/w3UxFykyHFy/data.json?filter=orgunit_level:in:[2,4]</screen></para>
+      <para>And last, an example to return all org units that does not start with
+        "Bo"<screen>/api/sqlViews/w3UxFykyHFy/data.json?filter=orgunit_name:!like:Bo</screen></para>
+    </section>
   </section>
   <section xml:id="webapi_dashboard">
     <title>Dashboard</title>
