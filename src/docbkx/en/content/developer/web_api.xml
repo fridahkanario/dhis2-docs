@@ -3235,6 +3235,10 @@ http://server/api/26/constants/ID</screen></para>
               <entry>Property of the category option combo and attribute option combo objects to use
                 for data values in response.</entry>
             </row>
+            <row>
+              <entry>dataSetIdScheme</entry>
+              <entry>Property of the data set object to use in the response.</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
@@ -5010,7 +5014,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     <title>Complete data set registrations</title>
     <para>This section is about complete data set registrations for data sets. A registration marks
       as a data set as completely captured.</para>
-    <section>
+    <section xml:id="webapi_completing_data_sets">
       <title>Completing data sets</title>
       <para>This section explains how to register data sets as complete. This is achieved by
         interactithe <emphasis role="italic">completeDataSetRegistrations</emphasis>
@@ -5103,66 +5107,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         </tgroup>
       </table>
     </section>
-  </section>
-  <section>
-    <section>
-      <title>Un-completing data sets</title>
-      <para>This section explains how you can un-register the completeness of a data set. To
-        un-complete a data set you will interact with the completeDataSetRegistrations
-        resource:</para>
-      <screen>/api/26/completeDataSetRegistrations</screen>
-      <para>This resource supports <emphasis role="italic">DELETE</emphasis> for un-registration.
-        The following query parameters are supported:</para>
-      <table frame="all">
-        <title>Complete data set registrations query parameters</title>
-        <tgroup cols="3">
-          <colspec colnum="1" colname="c1" colwidth="1*"/>
-          <colspec colnum="2" colname="c2" colwidth="1.16*"/>
-          <colspec colnum="3" colname="c3" colwidth="3.96*"/>
-          <thead>
-            <row>
-              <entry>Query parameter</entry>
-              <entry>Required</entry>
-              <entry>Description</entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry>ds</entry>
-              <entry>Yes</entry>
-              <entry>Data set identifier</entry>
-            </row>
-            <row>
-              <entry>pe</entry>
-              <entry>Yes</entry>
-              <entry>Period identifier</entry>
-            </row>
-            <row>
-              <entry>ou</entry>
-              <entry>Yes</entry>
-              <entry>Organisation unit identifier</entry>
-            </row>
-            <row>
-              <entry>cc</entry>
-              <entry>No (must combine with cp)</entry>
-              <entry>Attribute combo identifier (for locking check)</entry>
-            </row>
-            <row>
-              <entry>cp</entry>
-              <entry>No (must combine with cp)</entry>
-              <entry>Attribute option identifiers, separated with ; for multiple values (for locking
-                check)</entry>
-            </row>
-            <row>
-              <entry>multiOu</entry>
-              <entry>No (default false)</entry>
-              <entry>Whether registration applies to sub units</entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-    </section>
-    <section>
+    <section xml:id="webapi_reading_complete_data_sets">
       <title>Reading complete data set registrations</title>
       <para>This section explains how to retrieve data set completeness registrations. We will be
         using the <emphasis role="italic">completeDataSetRegistrations</emphasis> resource. The
@@ -5262,6 +5207,63 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         For xml you use <emphasis role="italic">application/xml</emphasis>; for json you use
           <emphasis role="italic">application/json</emphasis>.</para>
     </section>
+    <section xml:id="webapi_uncompleting_data_sets">
+        <title>Un-completing data sets</title>
+        <para>This section explains how you can un-register the completeness of a data set. To
+          un-complete a data set you will interact with the completeDataSetRegistrations
+          resource:</para>
+        <screen>/api/26/completeDataSetRegistrations</screen>
+        <para>This resource supports <emphasis role="italic">DELETE</emphasis> for un-registration.
+          The following query parameters are supported:</para>
+        <table frame="all">
+          <title>Complete data set registrations query parameters</title>
+          <tgroup cols="3">
+            <colspec colnum="1" colname="c1" colwidth="1*"/>
+            <colspec colnum="2" colname="c2" colwidth="1.16*"/>
+            <colspec colnum="3" colname="c3" colwidth="3.96*"/>
+            <thead>
+              <row>
+                <entry>Query parameter</entry>
+                <entry>Required</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>ds</entry>
+                <entry>Yes</entry>
+                <entry>Data set identifier</entry>
+              </row>
+              <row>
+                <entry>pe</entry>
+                <entry>Yes</entry>
+                <entry>Period identifier</entry>
+              </row>
+              <row>
+                <entry>ou</entry>
+                <entry>Yes</entry>
+                <entry>Organisation unit identifier</entry>
+              </row>
+              <row>
+                <entry>cc</entry>
+                <entry>No (must combine with cp)</entry>
+                <entry>Attribute combo identifier (for locking check)</entry>
+              </row>
+              <row>
+                <entry>cp</entry>
+                <entry>No (must combine with cp)</entry>
+                <entry>Attribute option identifiers, separated with ; for multiple values (for
+                  locking check)</entry>
+              </row>
+              <row>
+                <entry>multiOu</entry>
+                <entry>No (default false)</entry>
+                <entry>Whether registration applies to sub units</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+  </section>
   </section>
   <section xml:id="webapi_data_approval">
     <title>Data approval</title>
@@ -11615,6 +11617,18 @@ interval=WEEK" -u admin:district</screen>
               <entry>integer</entry>
               <entry>Organisation units at the given max level or levels higher up in the
                 hierarchy.</entry>
+            </row>
+            <row>
+              <entry>memberCollection</entry>
+              <entry>string</entry>
+              <entry>For displaying count of members within a collection, refers to the name of the
+                collection associated with organisation units.</entry>
+            </row>
+            <row>
+              <entry>memberObject</entry>
+              <entry>UID</entry>
+              <entry>For displaying count of members within a collection, refers to the identifier
+                of the object member of the collection.</entry>
             </row>
           </tbody>
         </tgroup>

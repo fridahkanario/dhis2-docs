@@ -5,7 +5,7 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-  xmlns:db="http://docbook.org/ns/docbook">
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="manage_program_indicator">
   <title>Manage program
     <?oxy_comment_start author="cecilia" timestamp="20160930T095313+0200" comment="Done by whom? Admin? Super user?
 Which are the prereqs?
@@ -16,6 +16,9 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
       entities which can be used to calculate values based on a formula.</para>
     <para>Program indicators consist of:</para>
     <itemizedlist>
+      <listitem>
+        <para>an analytics type</para>
+      </listitem>
       <listitem>
         <para>an aggregation type</para>
       </listitem>
@@ -78,6 +81,17 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
         </tbody>
       </tgroup>
     </table>
+    <section>
+      <title>About analytics types</title>
+      <para>The available analytics types are <emphasis>events</emphasis> and
+          <emphasis>enrollments</emphasis>. The analytics type defines whether the program indicator
+        is calculated based on events or program enrollments. This has an impact on what type of
+        calculations can be made. Events implies a data source where each event exists as an
+        independent row. This is suitable for performing aggregations such as counts and sums.
+        Enrollments implies a data source where all events for a single enrollment is combined on
+        the same row. This allows for calculations which can compare event data from various program
+        stages within a program enrollment.</para>
+    </section>
     <section>
       <title>About <?oxy_comment_start author="cecilia" timestamp="20161012T101505+0200" comment="At next revision, review section"?>aggregation<?oxy_comment_end?>
         <?oxy_comment_start author="cecilia" timestamp="20161003T154705+0200" comment="Same as the other aggregation types used in DHIS2?"?>types<?oxy_comment_end?></title>
