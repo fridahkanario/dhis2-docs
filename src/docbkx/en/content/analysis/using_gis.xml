@@ -48,13 +48,13 @@
   </section>
   <section xml:id="using_gis_event_layer">
     <title>Manage event layers</title>
-    <para>The purpose of the event layer is to display the geographical location of events
-      registered in the DHIS2 tracker. Provided that events have associated GPS coordinates, you can
-      use this layer to drill down from the aggregated data displayed in the thematic layers to the
-      underlying individual events or cases. </para>
+    <para>The event layer displays the geographical location of events registered in the DHIS2
+      tracker. Provided that events have associated GPS coordinates, you can use this layer to drill
+      down from the aggregated data displayed in the thematic layers to the underlying individual
+      events or cases. </para>
     <para>You can also display aggregated events at the facility or at the boundary level. You do
       this through a thematic layer using event data items. This is useful when you only have the
-      coordinates for the OrgUnit under which the events are recorded.</para>
+      coordinates for the Org Unit under which the events are recorded.</para>
     <screenshot>
       <title>Event layer</title>
       <mediaobject>
@@ -64,8 +64,8 @@
         </imageobject>
       </mediaobject>
     </screenshot>
-    <section>
-      <title>Create or modify event layer</title>
+    <section xml:id="gis_use_event_layer">
+      <title>Create or modify event layer</title> 
       <orderedlist>
         <listitem>
           <para>In the top menu, click the event layer icon.</para>
@@ -123,8 +123,31 @@
             organisation units you want to include in the query.</para>
         </listitem>
         <listitem>
-          <para>In the <emphasis role="bold">Options</emphasis> section, select if you want group
-            nearby events and change style of the cluster points.</para>
+          <para>In the <emphasis role="bold">Options</emphasis> section, you can:<itemizedlist>
+              <listitem>
+                <para>Select a value from the <emphasis role="bold">Coordinate field</emphasis> for
+                  the positions shown on the map. By default, "Event location" is selected.
+                  Depending on the data elements or attributes that belong to a program, other
+                  coordinates such as "Household position" are available.<screenshot>
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="resources/images/gis/gis_coordinates.png" format="png"
+                          width="80%" align="left"/>
+                      </imageobject>
+                    </mediaobject>
+                  </screenshot></para>
+              </listitem>
+              <listitem>
+                <para>Select or clear <emphasis role="bold">Clustering</emphasis> to group nearby
+                  events.</para>
+              </listitem>
+              <listitem>
+                <para>Go to <emphasis role="bold">Style</emphasis> to select a color for the cluster
+                  points or change the radius of clusters (between 1 and 20).</para>
+              </listitem>
+            </itemizedlist>
+            <emphasis role="bold">Clustering</emphasis> if you want to group nearby events and
+            change the style of the cluster points.</para>
         </listitem>
         <listitem>
           <para>Click <emphasis role="bold">Update</emphasis>.</para>
