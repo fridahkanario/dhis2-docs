@@ -71,8 +71,9 @@ Also add info about search results, that you can download the list. What is the 
 
 Pending info from SME. 
 Could also effect TEIs."?>to<?oxy_comment_end?>
-          this organisation unit in the <emphasis role="bold">Event Capture</emphasis> and <emphasis
-            role="bold">Tracker Capture</emphasis> apps.</para>
+          this organisation unit in the <emphasis role="bold">Tracker Capture</emphasis> app. You
+          can still search for TEIs and filter the search results. You can also view the dashboard
+          of a particular TEI.</para>
       </listitem>
     </itemizedlist>
   </section>

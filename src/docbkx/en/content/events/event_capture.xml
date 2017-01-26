@@ -78,8 +78,8 @@ So data is saved on the local machine but not accessible in the newly reopened w
 
 Pending info from SME. 
 Could also effect TEIs."?>to<?oxy_comment_end?>
-          this organisation unit in the <emphasis role="bold">Event Capture</emphasis> and <emphasis
-            role="bold">Tracker Capture</emphasis> apps.</para>
+          this organisation unit in the <emphasis role="bold">Event Capture</emphasis> app. You can
+          still view and filter the event list and view the details of an event.</para>
       </listitem>
       <listitem>
         <para>On-the-fly indicator expression evaluation is supported. If a program has indicators
