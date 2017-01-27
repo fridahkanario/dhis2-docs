@@ -5,7 +5,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook" xml:id="program_notifications">
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="manage_program_notification">
     <title><?oxy_comment_start author="cecilia" timestamp="20161006T141346+0200" comment="At next release: verify the scheduling section if the content is up to date.."?>Manage<?oxy_comment_end?>
         <?oxy_comment_start author="cecilia" timestamp="20161005T123636+0200" comment="At next revision, add doc about how you delete and edit "?>program<?oxy_comment_end?>
         notifications</title>
