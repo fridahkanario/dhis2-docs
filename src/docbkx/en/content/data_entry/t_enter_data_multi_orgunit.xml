@@ -8,16 +8,6 @@
   xmlns:db="http://docbook.org/ns/docbook" xml:id="data_entry_multiple_organisation_units">
   <title>Enable multi-organisation unit data
     <?oxy_comment_start author="cecilia" timestamp="20170126T181827+0100" comment="Add screen shot"?>entry<?oxy_comment_end?></title>
-  <para>It can be useful to enter data for multiple organisation units in the same data entry form,
-    for instance if there are few data elements in the form and a huge number of organisation units
-    in the hierarchy. In that case, you can enable multi-organisation unit data entry.</para>
-  <para>
-    <note>
-      <para>Multi-organisation unit data entry only works for
-        <?oxy_comment_start author="cecilia" timestamp="20170126T181800+0100" comment="Still correct?"?>section<?oxy_comment_end?>
-        forms.</para>
-    </note>
-  </para>
   <para>
     <screenshot>
       <mediaobject>
@@ -27,6 +17,16 @@
         </imageobject>
       </mediaobject>
     </screenshot>
+  </para>
+  <para>It can be useful to enter data for multiple organisation units in the same data entry form,
+    for instance if there are few data elements in the form and a huge number of organisation units
+    in the hierarchy. In that case, you can enable multi-organisation unit data entry.</para>
+  <para>
+    <note>
+      <para>Multi-organisation unit data entry only works for
+        <?oxy_comment_start author="cecilia" timestamp="20170126T181800+0100" comment="Still correct?"?>section<?oxy_comment_end?>
+        forms.</para>
+    </note>
   </para>
   <orderedlist>
     <listitem>

@@ -100,7 +100,7 @@
       <para>
         <note>
           <para>Zero (0) will delete the value if the data element has been configured to not store
-            zeros,</para>
+            zeros.</para>
         </note>
       </para>
     </listitem>
