@@ -26,10 +26,6 @@
           <imagedata width="80%" align="center"
             fileref="resources/images/data_entry/data_entry_online1.png"/>
         </imageobject>
-        <textobject>
-          <para>When you're connected to the Internet, the app displays this message at the top of
-            the data entry form.</para>
-        </textobject>
         <caption>When you're connected to the Internet, the app displays this message at the top of
           the data entry form.</caption>
       </mediaobject>
@@ -42,11 +38,6 @@
           <imagedata width="80%" align="center"
             fileref="resources/images/data_entry/data_entry_offline1.png"/>
         </imageobject>
-        <textobject>
-          <para>If your Internet connection breaks during data entry, the app detects it and
-            displays this message. Now your data will be stored locally. You can continue to enter
-            data as normal.</para>
-        </textobject>
         <caption>
           <para>If your Internet connection breaks during data entry, the app detects it and
             displays this message. Now your data will be stored locally. You can continue to enter
@@ -62,26 +53,19 @@
           <imagedata width="80%" align="center"
             fileref="resources/images/data_entry/data_entry_offline_upload.png"/>
         </imageobject>
-        <textobject>
-          <para>Once you have entered all necessary data and the app detects that the Internet
-            connection is back, you'll see this message. Click <emphasis role="bold"
-              >Upload</emphasis> to synchronize data with the server.</para>
-        </textobject>
       </mediaobject>
     </screenshot>
   </para>
-  <para>
-    <screenshot>
+  <para>Once you have entered all necessary data and the app detects that the Internet connection is
+    back, you'll see this message. Click <emphasis role="bold">Upload</emphasis> to synchronize data
+    with the server.</para>
+  <para><screenshot>
       <mediaobject>
         <imageobject>
           <imagedata width="80%" align="center"
             fileref="resources/images/data_entry/data_entry_offline_upload_success1.png"/>
         </imageobject>
-        <textobject>
-          <para>When the data has successfully synchronized with the server, you'll see this
-            confirmation message.</para>
-        </textobject>
       </mediaobject>
-    </screenshot>
-  </para>
+    </screenshot>When the data has successfully synchronized with the server, you'll see this
+    confirmation message.</para>
 </section>
