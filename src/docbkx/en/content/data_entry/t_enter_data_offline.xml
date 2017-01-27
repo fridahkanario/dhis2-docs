@@ -19,6 +19,28 @@
         connection.</para>
     </note>
   </para>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/data_entry/data_entry_online1.png"
+            ><?When you're connected to the Internet, the app displays this message at the top of the data entry form.?></imagedata>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+  </para>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/data_entry/data_entry_offline1.png"/>
+        </imageobject>
+      </mediaobject>
+      <?If your Internet connection breaks during data entry, the app detects this and displays this message. Now your data will be stored locally. You can continue to enter data as normal.?>
+    </screenshot>
+  </para>
   <informaltable frame="all">
     <tgroup cols="2">
       <colspec colname="c1" colnum="1" colwidth="2.51*"/>
@@ -35,36 +57,14 @@
       </thead>
       <tbody>
         <row>
-          <entry>
-            <para>
-              <screenshot>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata width="80%" align="center"
-                      fileref="resources/images/data_entry/data_entry_online1.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
-            </para>
-          </entry>
+          <entry/>
           <entry>
             <para>When you're connected to the Internet, the app displays this message at the top of
               the data entry form.</para>
           </entry>
         </row>
         <row>
-          <entry>
-            <para>
-              <screenshot>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata width="80%" align="center"
-                      fileref="resources/images/data_entry/data_entry_offline1.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
-            </para>
-          </entry>
+          <entry/>
           <entry>
             <para>If your Internet connection breaks during data entry, the app detects this and
               displays this message. Now your data will be stored locally. You can continue to enter
