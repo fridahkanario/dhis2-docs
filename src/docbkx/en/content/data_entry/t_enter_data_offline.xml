@@ -12,7 +12,7 @@
     Internet connection during data entry. When you don't have an internet connection, the data you
     enter is saved to your local computer. When the Internet connection is back, the app will push
     the data to the server. The total bandwidth usage is reduced since data entry forms no longer
-    area&lt;sq retrieved from the server for each rendering.</para>
+    are retrieved from the server for each rendering.</para>
   <para>
     <note>
       <para>To use this functionality, you must login to the server while you've an Internet
@@ -38,11 +38,9 @@
           <imagedata width="80%" align="center"
             fileref="resources/images/data_entry/data_entry_offline1.png"/>
         </imageobject>
-        <caption>
-          <para>If your Internet connection breaks during data entry, the app detects it and
-            displays this message. Now your data will be stored locally. You can continue to enter
-            data as normal.</para>
-        </caption>
+        <caption>If your Internet connection breaks during data entry, the app detects it and
+          displays this message. Now your data will be stored locally. You can continue to enter
+          data as normal.</caption>
       </mediaobject>
     </screenshot>
   </para>
@@ -53,19 +51,22 @@
           <imagedata width="80%" align="center"
             fileref="resources/images/data_entry/data_entry_offline_upload.png"/>
         </imageobject>
+        <caption>Once you have entered all necessary data and the app detects that the Internet
+          connection is back, you'll see this message. Click Upload to synchronize data with the
+            server.<para>.</para></caption>
       </mediaobject>
     </screenshot>
   </para>
-  <para>Once you have entered all necessary data and the app detects that the Internet connection is
-    back, you'll see this message. Click <emphasis role="bold">Upload</emphasis> to synchronize data
-    with the server.</para>
-  <para><screenshot>
+  <para>
+    <screenshot>
       <mediaobject>
         <imageobject>
           <imagedata width="80%" align="center"
             fileref="resources/images/data_entry/data_entry_offline_upload_success1.png"/>
         </imageobject>
+        <caption>When the data has successfully synchronized with the server, you'll see this
+          confirmation message.</caption>
       </mediaobject>
-    </screenshot>When the data has successfully synchronized with the server, you'll see this
-    confirmation message.</para>
+    </screenshot>
+  </para>
 </section>
