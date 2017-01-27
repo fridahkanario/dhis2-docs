@@ -8,63 +8,107 @@
   xmlns:db="http://docbook.org/ns/docbook" xml:id="enter_data_offline">
   <title>Enter data
     <?oxy_comment_start author="cecilia" timestamp="20170126T181344+0100" comment="Are screenshots still correct?"?>offline<?oxy_comment_end?></title>
-  <?oxy_comment_start author="cecilia" timestamp="20170126T181116+0100" comment="Reword"?>
   <para>The <emphasis role="bold">Data Entry</emphasis> app works even if you don't have a stable
-    Internet connectivity during the data entry. To use this functionality, you must login to the
-    server while you've an Internet connection. If you loose the internet connection during data
-    entry, you can still enter data into the data entry form. The data you enter is saved to your
-    local computer, and then pushed to the server once you're connected to the Internet again. The
-    total bandwidth usage is greatly reduced since forms no longer are retrieved from the server for
-    each rendering.</para>
-  <?oxy_comment_end?>
-  <para>When the server is able to be reached through the Internet connection, a message is
-    displayed at the top of the data entry screen:</para>
+    Internet connection during data entry. When you don't have an internet connection, the data you
+    enter is saved to your local computer. When the Internet connection is back, the app will push
+    the data to the server. The total bandwidth usage is reduced since data entry forms no longer
+    are retrieved from the server for each rendering.</para>
   <para>
-    <screenshot>
-      <mediaobject>
-        <imageobject>
-          <imagedata width="80%" align="center"
-            fileref="resources/images/data_entry/data_entry_online1.png"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
+    <note>
+      <para>To use this functionality, you must login to the server while you've an Internet
+        connection.</para>
+    </note>
   </para>
-  <para>If the Internet connection should disconnect for some reason during the data entry process,
-    this will be detected by the app, and you will be informed that your data will be stored
-    locally:</para>
-  <para>
-    <screenshot>
-      <mediaobject>
-        <imageobject>
-          <imagedata width="80%" align="center"
-            fileref="resources/images/data_entry/data_entry_offline1.png"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
-  </para>
-  <para>Data entry can proceed as normal. Once you have entered all of the necessary data, and the
-    app detects that the server is back on-line, you'll be informed that you have data which needs
-    to be synchronized with the server:</para>
-  <para>
-    <screenshot>
-      <mediaobject>
-        <imageobject>
-          <imagedata width="80%" align="center"
-            fileref="resources/images/data_entry/data_entry_offline_upload.png"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
-  </para>
-  <para>Once the data has successfully synchronized with the server, you'll receive a confirmation
-    message that the data has been successfully uploaded to the server:</para>
-  <para>
-    <screenshot>
-      <mediaobject>
-        <imageobject>
-          <imagedata width="80%" align="center"
-            fileref="resources/images/data_entry/data_entry_offline_upload_success1.png"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
-  </para>
+  <informaltable frame="all">
+    <tgroup cols="2">
+      <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+      <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+      <thead>
+        <row>
+          <entry>
+            <para>Message</para>
+          </entry>
+          <entry>
+            <para>Description</para>
+          </entry>
+        </row>
+      </thead>
+      <tbody>
+        <row>
+          <entry>
+            <para>
+              <screenshot>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata width="80%" align="center"
+                      fileref="resources/images/data_entry/data_entry_online1.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </para>
+          </entry>
+          <entry>
+            <para>When you're connected to the Internet, the app displays this message at the top of
+              the data entry form.</para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>
+              <screenshot>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata width="80%" align="center"
+                      fileref="resources/images/data_entry/data_entry_offline1.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </para>
+          </entry>
+          <entry>
+            <para>If your Internet connection breaks during data entry, the app detects this and
+              displays this message. Now your data will be stored locally. You can continue to enter
+              data as normal. </para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>
+              <screenshot>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata width="80%" align="center"
+                      fileref="resources/images/data_entry/data_entry_offline_upload.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </para>
+          </entry>
+          <entry>
+            <para>Once you have entered all necessary data and the app detects that the Internet
+              connection is back, you'll see this message. Click <emphasis role="bold"
+                >Upload</emphasis> to synchronize data with the server.</para>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <para>
+              <screenshot>
+                <mediaobject>
+                  <imageobject>
+                    <imagedata width="80%" align="center"
+                      fileref="resources/images/data_entry/data_entry_offline_upload_success1.png"/>
+                  </imageobject>
+                </mediaobject>
+              </screenshot>
+            </para>
+          </entry>
+          <entry>
+            <para>When the data has successfully synchronized with the server, you'll see this
+              confirmation message.</para>
+          </entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
 </section>

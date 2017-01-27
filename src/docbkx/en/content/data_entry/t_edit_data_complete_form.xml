@@ -17,20 +17,14 @@
       <para>Open an existing data entry form.</para>
     </listitem>
     <listitem>
-      <para>If applicable, click <emphasis role="bold">Incomplete</emphasis>.</para>
+      <para>Click <emphasis role="bold">Incomplete</emphasis>.</para>
     </listitem>
     <listitem>
       <para>Change the relevant data values.</para>
       <para>
         <note>
-          <?oxy_comment_start author="cecilia" timestamp="20170126T180125+0100" comment="Still correct?"?>
-          <para>If you want to delete a data value completely, you should select the value, and
-            press the Delete key on your keyboard. If you enter a zero and the data element has been
-            configured to not store zeros, the previous data value (that is, the one you wish to
-            modify) will not be overwritten with the new value. Therefore, it's recommended to
-            delete the data value completely (waiting for the cell to turn green) and then to enter
-            the new value.</para>
-          <?oxy_comment_end?>
+          <para>Zero (0) will delete the value if the data element has been configured to not store
+            zeros,</para>
         </note>
       </para>
     </listitem>
