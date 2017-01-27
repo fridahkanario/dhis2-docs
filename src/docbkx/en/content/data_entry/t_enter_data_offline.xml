@@ -30,6 +30,8 @@
           <para>When you're connected to the Internet, the app displays this message at the top of
             the data entry form.</para>
         </textobject>
+        <caption>When you're connected to the Internet, the app displays this message at the top of
+          the data entry form.</caption>
       </mediaobject>
     </screenshot>
   </para>
@@ -45,6 +47,11 @@
             displays this message. Now your data will be stored locally. You can continue to enter
             data as normal.</para>
         </textobject>
+        <caption>
+          <para>If your Internet connection breaks during data entry, the app detects it and
+            displays this message. Now your data will be stored locally. You can continue to enter
+            data as normal.</para>
+        </caption>
       </mediaobject>
     </screenshot>
   </para>
