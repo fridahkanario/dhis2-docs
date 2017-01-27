@@ -4166,10 +4166,15 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                 <entry>string</entry>
                 <entry>false</entry>
                 <entry>The order of which to retreive the events from the API. Usage:
-                  order=(property):asc/desc - Ascending order is default. Properties: event |
-                  program | programStage | enrollment | enrollmentStatus | orgUnit | orgUnitName |
-                  trackedEntityInstance | eventDate | followup | status | dueDate | storedBy |
-                  created | lastUpdated | completedBy | completedDate </entry>
+                  order=&lt;property>:asc/desc - Ascending order is default. <para>Properties: event
+                    | program | programStage | enrollment | enrollmentStatus | orgUnit | orgUnitName
+                    | trackedEntityInstance | eventDate | followup | status | dueDate | storedBy |
+                    created | lastUpdated | completedBy | completedDate </para><para>
+                    <example>
+                      <screen>order=orgUnitName:DESC</screen>
+                      <screen>order=lastUpdated:ASC</screen>
+                    </example>
+                  </para></entry>
               </row>
               <row>
                 <entry>event</entry>
