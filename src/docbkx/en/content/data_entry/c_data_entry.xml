@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="about_data_entry_app">
+  <title>About the Data Entry app</title>
+  <para>The <emphasis role="bold">Data Entry</emphasis> app is where you manually enter aggregated
+    data in DHIS2. You register data for an organisation unit, a period, and a set of data elements
+    (data set) at a time. A data set often corresponds to a paper-based data collection tool. You
+    configure the data sets in the <emphasis role="bold">Maintenance</emphasis> app.</para>
+  <para>
+    <note>
+      <title>A data set can have both section and custom forms</title>
+      <para>If a data set has both a section form and a custom form, the system displays the custom
+        form during data entry. Users who enter data can't select which form they want to use. In
+        web-based data entry the order of display preference is:</para>
+      <orderedlist>
+        <listitem>
+          <para>Custom form (if it exists)</para>
+        </listitem>
+        <listitem>
+          <para>Section form (if it exists)</para>
+        </listitem>
+        <listitem>
+          <para>Default form</para>
+        </listitem>
+      </orderedlist>
+      <para>Mobile devices do not support custom forms. In mobile-based data entry the order of
+        display preference is:</para>
+      <orderedlist>
+        <listitem>
+          <para>Section form (if it exists)</para>
+        </listitem>
+        <listitem>
+          <para>Default form</para>
+        </listitem>
+      </orderedlist>
+    </note>
+  </para>
+  <para>When you close an organisation unit, you can't register or edit data to this organisation
+    unit in the <emphasis role="bold">Data Entry</emphasis>
+    <?oxy_comment_start author="cecilia" timestamp="20170126T174644+0100" comment="Can you still view and search? Pending info from SME.
+
+&quot;You can still search for TEIs and filter the search results. You can also view the dashboard of a particular TEI.&quot;"?>app<?oxy_comment_end?>.</para>
+</section>

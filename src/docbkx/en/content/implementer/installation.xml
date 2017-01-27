@@ -236,6 +236,10 @@ encryption.password = xxxx</screen></para>
         changed once it has been set and data has been encrypted as the data can then no longer be
         decrypted. Remember to set a strong password of at least <emphasis role="bold">24
           characters</emphasis>.</para>
+      <para>Note that the configuration file supports environment variables. This means that you can
+        set certain properties as environment variables and have them resolved by DHIS 2, e.g. like
+        this where <emphasis>DB_PASSWD</emphasis> is the name of the environment
+        variable:<screen>connection.password = ${DB_PASSWD}</screen></para>
       <para>A common mistake is to have a white-space after the last property value so make sure
         there is no white-space at the end of any line. Also remember that this file contains the
         clear text password for your DHIS2 database so it needs to be protected from unauthorized
