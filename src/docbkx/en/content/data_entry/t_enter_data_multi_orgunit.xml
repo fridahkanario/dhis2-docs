@@ -13,10 +13,20 @@
     in the hierarchy. In that case, you can enable multi-organisation unit data entry.</para>
   <para>
     <note>
-      <para>Multi-organisation unit data entry only works for the
+      <para>Multi-organisation unit data entry only works for
         <?oxy_comment_start author="cecilia" timestamp="20170126T181800+0100" comment="Still correct?"?>section<?oxy_comment_end?>
         forms.</para>
     </note>
+  </para>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/data_entry/data_entry_multiple_org_unit.png"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
   </para>
   <orderedlist>
     <listitem>

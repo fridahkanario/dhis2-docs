@@ -5,7 +5,7 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-  xmlns:db="http://docbook.org/ns/docbook" xml:id="enter_data_in_data_entry_app">
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="enter_data_in_data_entry_form">
   <title>Enter data in a data entry form</title>
   <?oxy_comment_start author="cecilia" timestamp="20170126T145238+0100" comment="Update with new screen grab"?>
   <para>
@@ -25,11 +25,6 @@
     </listitem>
     <listitem>
       <para>In the organisation unit tree to the left, select an organisation unit.</para>
-      <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-      <para>Expand and close branches by clicking on the +/- symbols. A quick way to find an
-        organisation unit is to use the search box just above the tree (the green symbol), but you
-        need to write in the full name to get a match.</para>
-      <?oxy_custom_end?>
     </listitem>
     <listitem>
       <para>Select a <emphasis role="bold">Data set</emphasis>.</para>
@@ -101,17 +96,11 @@
       </para>
     </listitem>
     <listitem>
-      <para>(Optional) Correct data values found by the validation.</para>
+      <para>(Optional) Correct validation violations.</para>
       <para>
         <note>
-          <?oxy_comment_start author="cecilia" timestamp="20170126T180125+0100" comment="Still correct?"?>
-          <para>If you want to delete a data value completely, you should select the value, and
-            press the Delete key on your keyboard. If you enter a zero and the data element has been
-            configured to not store zeros, the previous data value (that is, the one you wish to
-            modify) will not be overwritten with the new value. Therefore, it's recommended to
-            delete the data value completely (waiting for the cell to turn green) and then to enter
-            the new value.</para>
-          <?oxy_comment_end?>
+          <para>Zero (0) will delete the value if the data element has been configured to not store
+            zeros,</para>
         </note>
       </para>
     </listitem>
