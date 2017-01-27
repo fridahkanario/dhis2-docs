@@ -164,22 +164,29 @@
         Organisation unit group to the appropriate group set. </para>
     </section>
     <section>
-      <title>Validation rules without groups</title>
-      <para>All validation rules must be assigned to a group. Go to <command>Data
-          quality-&gt;Validation rule group</command> and assign the offending validation rule to a
-        group. </para>
+      <title>Validation rules without
+        <?oxy_comment_start author="cecilia" timestamp="20170127T154109+0100" comment="At next revision, review content, maybe move to Maintenance section"?>groups<?oxy_comment_end?></title>
+      <para>All validation rules must be assigned to a group. Go to <emphasis role="bold"
+          >Maintenance</emphasis> app > <emphasis role="bold">Validation rule group</emphasis> and
+        assign the offending validation rule to a group.</para>
     </section>
     <section>
-      <title>Invalid validation rule left side expressions</title>
-      <para>An error exists in the left-side validation rule definition. Go to <command>Data
-          quality-&gt;Validation rule</command> and click the &quot;Edit&quot; icon on the offending
-        rule. Press &quot;Edit left side&quot; and make the corrections that are required. </para>
+      <title>Invalid validation rule
+        <?oxy_comment_start author="cecilia" timestamp="20170127T154115+0100" comment="At next revision, review content, maybe move to Maintenance section"?>left<?oxy_comment_end?>
+        side expressions</title>
+      <para>An error exists in the left-side validation rule definition. Go to <emphasis role="bold"
+          >Maintenance</emphasis> app > <emphasis role="bold">Validation rule</emphasis> and click
+          <emphasis role="bold">Edit</emphasis> on the offending rule. Click <emphasis role="bold"
+          >Left side</emphasis> and make the required corrections.</para>
     </section>
     <section>
-      <title>Invalid validation rule right side expressions</title>
-      <para>An error exists in the left-side validation rule definition. Go to <command>Data
-          quality-&gt;Validation rule</command> and click the &quot;Edit&quot; icon on the offending
-        rule. Press &quot;Edit right side&quot; and make the corrections that are required.</para>
+      <title>Invalid validation rule
+        <?oxy_comment_start author="cecilia" timestamp="20170127T154121+0100" comment="At next revision, review content, maybe move to Maintenance section"?>right<?oxy_comment_end?>
+        side expressions</title>
+      <para>An error exists in the right-side validation rule definition. Go to <emphasis
+          role="bold">Maintenance</emphasis> app > <emphasis role="bold">Validation rule</emphasis>
+        and click <emphasis role="bold">Edit</emphasis> on the offending rule. Click <emphasis
+          role="bold">Right side</emphasis> and make the required corrections.</para>
     </section>
   </section>
   <section xml:id="data_admin_maintenance">
