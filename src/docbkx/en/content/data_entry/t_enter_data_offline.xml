@@ -12,10 +12,10 @@
     Internet connection during data entry. When you don't have an internet connection, the data you
     enter is saved to your local computer. When the Internet connection is back, the app will push
     the data to the server. The total bandwidth usage is reduced since data entry forms no longer
-    are retrieved from the server for each rendering.</para>
+    area&lt;sq retrieved from the server for each rendering.</para>
   <para>
     <note>
-      <para>To use this functionality, you must login to the server while you've an Internet
+      <para>'To use this functionality, you must login to the server while you've an Internet
         connection.</para>
     </note>
   </para>
@@ -24,9 +24,10 @@
       <mediaobject>
         <imageobject>
           <imagedata width="80%" align="center"
-            fileref="resources/images/data_entry/data_entry_online1.png"
-            ><?When you're connected to the Internet, the app displays this message at the top of the data entry form.?></imagedata>
+            fileref="resources/images/data_entry/data_entry_online1.png"/>
         </imageobject>
+        <caption>When you're connected to the Internet, the app displays this message at the top of
+          the data entry form.</caption>
       </mediaobject>
     </screenshot>
   </para>
@@ -37,78 +38,37 @@
           <imagedata width="80%" align="center"
             fileref="resources/images/data_entry/data_entry_offline1.png"/>
         </imageobject>
+        <caption>If your Internet connection breaks during data entry, the app detects this and
+          displays this message. Now your data will be stored locally. You can continue to enter
+          data as normal.</caption>
       </mediaobject>
-      <?If your Internet connection breaks during data entry, the app detects this and displays this message. Now your data will be stored locally. You can continue to enter data as normal.?>
     </screenshot>
   </para>
-  <informaltable frame="all">
-    <tgroup cols="2">
-      <colspec colname="c1" colnum="1" colwidth="2.51*"/>
-      <colspec colname="c2" colnum="2" colwidth="1*"/>
-      <thead>
-        <row>
-          <entry>
-            <para>Message</para>
-          </entry>
-          <entry>
-            <para>Description</para>
-          </entry>
-        </row>
-      </thead>
-      <tbody>
-        <row>
-          <entry/>
-          <entry>
-            <para>When you're connected to the Internet, the app displays this message at the top of
-              the data entry form.</para>
-          </entry>
-        </row>
-        <row>
-          <entry/>
-          <entry>
-            <para>If your Internet connection breaks during data entry, the app detects this and
-              displays this message. Now your data will be stored locally. You can continue to enter
-              data as normal. </para>
-          </entry>
-        </row>
-        <row>
-          <entry>
-            <para>
-              <screenshot>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata width="80%" align="center"
-                      fileref="resources/images/data_entry/data_entry_offline_upload.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
-            </para>
-          </entry>
-          <entry>
-            <para>Once you have entered all necessary data and the app detects that the Internet
-              connection is back, you'll see this message. Click <emphasis role="bold"
-                >Upload</emphasis> to synchronize data with the server.</para>
-          </entry>
-        </row>
-        <row>
-          <entry>
-            <para>
-              <screenshot>
-                <mediaobject>
-                  <imageobject>
-                    <imagedata width="80%" align="center"
-                      fileref="resources/images/data_entry/data_entry_offline_upload_success1.png"/>
-                  </imageobject>
-                </mediaobject>
-              </screenshot>
-            </para>
-          </entry>
-          <entry>
-            <para>When the data has successfully synchronized with the server, you'll see this
-              confirmation message.</para>
-          </entry>
-        </row>
-      </tbody>
-    </tgroup>
-  </informaltable>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/data_entry/data_entry_offline_upload.png"/>
+        </imageobject>
+        <caption>
+          <para>Once you have entered all necessary data and the app detects that the Internet
+            connection is back, you'll see this message. Click <emphasis role="bold"
+              >Upload</emphasis> to synchronize data with the server.</para>
+        </caption>
+      </mediaobject>
+    </screenshot>
+  </para>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/data_entry/data_entry_offline_upload_success1.png"/>
+        </imageobject>
+        <caption>When the data has successfully synchronized with the server, you'll see this
+          confirmation message.</caption>
+      </mediaobject>
+    </screenshot>
+  </para>
 </section>
