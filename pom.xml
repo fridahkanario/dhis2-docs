@@ -107,7 +107,7 @@
 							<sectionLabelIncludesComponentLabel>1</sectionLabelIncludesComponentLabel>
 							<chunkedOutput>true</chunkedOutput>
 							<chunkFirstSections>true</chunkFirstSections>
-							<chunkSectionDepth>2</chunkSectionDepth>
+							<chunkSectionDepth>1</chunkSectionDepth>
 							
 							<generateTOC>true</generateTOC>
 							<tocSectionDepth>3</tocSectionDepth>
