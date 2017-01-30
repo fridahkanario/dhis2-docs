@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="change_min_max_range_manually">
+  <title>Create minimum maximum value range
+    <?oxy_comment_start author="cecilia" timestamp="20170126T172952+0100" comment="This task is the same as in Data Quality seciton.
+Must be single-source!!"?>manually<?oxy_comment_end?>
+  </title>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="resources/images/data_quality/set_min_max_manually.png"
+            format="PNG" width="30%"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+  </para>
+  <orderedlist>
+    <listitem>
+      <para>In the <emphasis role="bold">Data
+          <?oxy_comment_start author="cecilia" timestamp="20170109T144747+0100" comment="Can you do it in any other app too?
+
+SME: no" flag="done"?>Entry<?oxy_comment_end?></emphasis>
+        app, open a data entry form.</para>
+    </listitem>
+    <listitem>
+      <?oxy_comment_start author="cecilia" timestamp="20170109T150432+0100" comment="Reword"?>
+      <para>Double-click the field for which you want to set the minimum maximum value range.</para>
+      <?oxy_comment_end?>
+    </listitem>
+    <listitem>
+      <para>Enter <emphasis role="bold">Min limit</emphasis> and <emphasis role="bold">Max
+          limit</emphasis>.</para>
+    </listitem>
+    <listitem>
+      <para>Click <emphasis role="bold">Save</emphasis>.</para>
+      <?oxy_comment_start author="cecilia" timestamp="20170109T150509+0100" comment="Reword." flag="done"?>
+      <para>If values don't fall within the new value range the next time you enter data, the data
+        entry cell will appear with an orange background. </para>
+      <?oxy_comment_end?>
+    </listitem>
+    <listitem>
+      <para>(Optional) Type a comment to explain the reason for the discrepancy,
+        f<?oxy_comment_start author="cecilia" timestamp="20170109T150522+0100" comment="At next revision: Add better example" flag="done"?>or
+        example an event at a facility which may have generated a large number of
+        clients.<?oxy_comment_end?></para>
+    </listitem>
+    <listitem>
+      <para>(Optional) Click <emphasis role="bold">Save comment</emphasis>.</para>
+    </listitem>
+  </orderedlist>
+  <para>
+    <tip>
+      <para>Click the star icon to mark the value for further follow-up.</para>
+    </tip>
+  </para>
+</section>

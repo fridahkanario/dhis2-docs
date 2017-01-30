@@ -64,8 +64,8 @@
         </imageobject>
       </mediaobject>
     </screenshot>
-    <section>
-      <title>Create or modify event layer</title>
+    <section xml:id="gis_create_event_layer">
+      <title>Create or modify event layer</title> 
       <orderedlist>
         <listitem>
           <para>In the top menu, click the event layer icon.</para>

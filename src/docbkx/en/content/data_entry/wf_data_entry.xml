@@ -5,22 +5,22 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook" xml:id="tracker_program_workflow">
-    <title>[Work in progress]Tracker program workflow</title>
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="workflow_indicator">
+    <title>Workflow</title>
     <orderedlist>
         <listitem>
-            <para>Create program</para>
+            <para>In the <emphasis role="bold">Data Entry</emphasis> app, select an organisation
+                unit. </para>
         </listitem>
         <listitem>
-            <para>Create program stage</para>
+            <para>Open a data set.</para>
         </listitem>
         <listitem>
-            <para>Create program rules</para>
+            <para>Enter data.</para>
         </listitem>
         <listitem>
-            <para>Create program indicators</para>
+            <para>Run validation.</para>
         </listitem>
     </orderedlist>
-    <para>Now you can register an event with our without registration in Event Capture or Tracker
-        Capture apps.</para>
- </section>
+</section>

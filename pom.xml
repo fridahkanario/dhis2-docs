@@ -107,7 +107,12 @@
 							<sectionLabelIncludesComponentLabel>1</sectionLabelIncludesComponentLabel>
 							<chunkedOutput>true</chunkedOutput>
 							<chunkFirstSections>true</chunkFirstSections>
-							<chunkSectionDepth>3</chunkSectionDepth>
+							<chunkSectionDepth>1</chunkSectionDepth>
+							
+							<generateTOC>true</generateTOC>
+							<tocSectionDepth>3</tocSectionDepth>
+							<generateSectionTocLevel>1</generateSectionTocLevel>
+							
 							<useEmbedForSvg>1</useEmbedForSvg>
 							<collectXrefTargets>yes</collectXrefTargets>
 							<targetsFilename>${docbook.target}/en/user/html/dhis2_user_manual_en.html.target.db</targetsFilename>
@@ -485,25 +490,35 @@
 							<goal>generate-webhelp</goal>
 						</goals>
 						<configuration>
+							<webhelpCustomization>src/docbkx/xsl/webhelp.xsl</webhelpCustomization>
+							<chapterAutolabel>false</chapterAutolabel>
+							<sectionAutolabel>false</sectionAutolabel>
 							<webhelpIndexerLanguage>en</webhelpIndexerLanguage>
 							<webhelpIncludeSearchTab>1</webhelpIncludeSearchTab>
+							<useIdAsFilename>true</useIdAsFilename>							
 							<includes>dhis2_user_manual_en.xml</includes>
+							
 							<sourceDirectory>${docbook.source}/en/</sourceDirectory>
+							<targetDirectory>${docbook.target}/en/user-manual/webhelp</targetDirectory>
+							<postProcess>
+								<copy todir="${docbook.target}/en/user-manual/webhelp/resources/images">
+									<fileset dir="src/docbkx/en/resources/images">
+										<include name="**/*.png" />
+										<include name="**/*.PNG" />
+										<include name="**/*.gif" />
+										<include name="**/*.jpg" />
+										<include name="**/*.svg" />
+									</fileset>
+								</copy>
+								<copy todir="${docbook.target}/en/user-manual/webhelp/resources/css">
+									<fileset dir="src/docbkx/en/resources/css">
+										<include name="**/*.css" />
+									</fileset>
+								</copy>
+							</postProcess>
 						</configuration>
-					</execution>
-					<execution>
-						<id>epub-docs-en</id>
-						<phase>package</phase>
-						<goals>
-							<goal>generate-epub</goal>
-						</goals>
-						<configuration>
-							<htmlStylesheet>resources/css/docbook_bsd.css</htmlStylesheet>
-							<chunkQuietly>true</chunkQuietly>
-							<includes>dhis2_user_manual_en.xml</includes>
-							<sourceDirectory>${docbook.source}/en/</sourceDirectory>
-						</configuration>
-					</execution> --> 
+					</execution> -->
+					 
 				</executions>
 				<dependencies>
 					<dependency>

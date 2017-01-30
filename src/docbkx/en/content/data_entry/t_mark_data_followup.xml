@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="mark_data_for_followup_in_data_entry_form">
+  <title>Mark a data value for follow-up</title>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="50%" align="center"
+            fileref="resources/images/data_entry/data_entry_section_history.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+  </para>
+  <para>If you for example have a suspicious value that you need to investigate further, you can
+    keep it the system, but mark it for follow-up. In the <emphasis role="bold">Data
+      Quality</emphasis> app you can then run a follow-up analysis to view and correct all marked
+    values.</para>
+  <orderedlist>
+    <listitem>
+      <para>Open the <emphasis role="bold">Data Entry</emphasis> app.</para>
+    </listitem>
+    <listitem>
+      <para>Open an existing data entry form.</para>
+    </listitem>
+    <listitem>
+      <para>Double-click the field with the value you want to mark for follow-up.</para>
+    </listitem>
+    <listitem>
+      <para>Click the star icon.</para>
+    </listitem>
+  </orderedlist>
+</section>
