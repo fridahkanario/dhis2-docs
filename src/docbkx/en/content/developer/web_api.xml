@@ -7705,7 +7705,8 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <row>
                 <entry>preAggregationMeasureCriteria</entry>
                 <entry>No</entry>
-                <entry>Filters for the date/measure before aggregation</entry>
+                <entry>Filters for the data/measure, applied before aggregation is
+                  performed.</entry>
                 <entry>EQ | GT | GE | LT | LE</entry>
               </row>
               <row>
