@@ -1074,6 +1074,9 @@ connection.schema = update
 # System mode for database read operations only, can be 'off', 'on'
 # system.read_only_mode = off
 
+# Session timeout in seconds, default is 3600
+# system.session.timeout = 3600
+
 # ----------------------------------------------------------------------
 # Encryption
 # ----------------------------------------------------------------------

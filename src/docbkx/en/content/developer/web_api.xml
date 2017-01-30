@@ -10496,16 +10496,16 @@ interval=WEEK" -u admin:district</screen>
       <para>The Web API exposes resources which provide a way to configure and update SMS gateway
         configurations.</para>
       <para>The list of different gateways configured can be retrieved using a GET method.</para>
-      <screen>GET /api/26/sms/gateways</screen>
+      <screen>GET /api/26/gateways</screen>
       <para>Configurations can also be retrieved for a specific gateway type using GET
         method.</para>
-      <screen>GET /api/26/sms/gateways/{uid}</screen>
+      <screen>GET /api/26/gateways/{uid}</screen>
       <para>Configurations can be removed for specific gateway type using DELETE method.</para>
-      <screen>DELETE /api/26/sms/gateways/{uid}</screen>
+      <screen>DELETE /api/26/gateways/{uid}</screen>
       <para>Default gateway can be retrieved with the GET method.</para>
-      <screen>GET /api/26/sms/gateways/default</screen>
+      <screen>GET /api/26/gateways/default</screen>
       <para>Default gateway can be set using the PUT method.</para>
-      <screen>PUT /api/26/sms/gateways/default/{uid}</screen>
+      <screen>PUT /api/26/gateways/default/{uid}</screen>
     </section>
     <section>
       <title>Gateway configuration</title>
@@ -10565,17 +10565,17 @@ interval=WEEK" -u admin:district</screen>
             <row>
               <entry>Clickatell</entry>
               <entry>POST/PUT</entry>
-              <entry>/api/sms/gateways/clickatell</entry>
+              <entry>/api/26/gateways/clickatell</entry>
             </row>
             <row>
               <entry>Bulksms</entry>
               <entry>POST/PUT</entry>
-              <entry>/api/sms/gateways/bulksms</entry>
+              <entry>/api/26/gateways/bulksms</entry>
             </row>
             <row>
               <entry>Generichttp</entry>
               <entry>POST/PUT</entry>
-              <entry>/api/sms/gateways/generichttp</entry>
+              <entry>/api/26/gateways/generichttp</entry>
             </row>
           </tbody>
         </tgroup>
