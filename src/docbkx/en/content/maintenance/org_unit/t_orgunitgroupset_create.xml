@@ -84,6 +84,19 @@ Yes" flag="done"?>Compulsory<?oxy_comment_end?></emphasis>.</para>
         <listitem>
             <para>(Optional) Select <emphasis role="bold">Include subhierarchy in
                     <?oxy_comment_start author="cecilia" timestamp="20170130T163107+0100" comment="Add explanation here."?>analytics<?oxy_comment_end?></emphasis>.</para>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+            <para>If you select this, a sub-organisation unit will inherit the organisation unit
+                group property from its closest "parent" organisation unit. Any property on the
+                sub-organisation unit will override the inherit value.</para>
+            <?oxy_custom_end?>
+            <para>If an organisation unit have no associated organisation unit group, the
+                organisation unit can inherit its closest parent's organisation unit group. If none
+                of the parent organisation unit groups have an organisation unit group for a given
+                org unit group set, the result will still be "blank", but if at least one parent has
+                an organisation unit group, sub-organisation unit will inherit it.</para>
+            <para>include subhierarchy in analytics" is enabled, which means the org units inherit
+                their closest parents org unit group IF the org unit is white (no org unit group
+                associated with it). </para>
         </listitem>
         <listitem>
             <para>Select organisation unit groups and assign them.</para>
