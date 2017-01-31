@@ -224,10 +224,36 @@
     <para>  When designing reports at higher levels with data aggregated at the district or province level,  DHIS2 will use the hierarchy structure to aggregate all the health facilities&apos; data for any given unit at any level. The organisation unit  level capturing the data always represents the lowest level of detail that is possible to use in data analysis, and the organisational levels define the available levels of aggregation along a geographical dimension.</para>
     <section>
       <title>Organisation unit group sets and groups</title>
-      <para>While facility level is typically the lowest geographical level for disaggregation in DHIS2, there are ways to flexibly group organisation units into any number of dimensions by using the organisation unit groups and group set functionality.  As an example,  if all facilities are given an official type like &quot;Community health center&quot; or &quot;District Hospital,  it is possible to create an organisation unit group set called &quot;Type&quot; and add groups with the names of the  types mentioned above.In order for the group sets to function properly in analysis, each organisation unit should be a member of a single group (compulsory and exclusive) within a group set. Stated somewhat differently, a facility should not be both a &quot;Community health center&quot; as well as a &quot;District hospital&quot;. </para>
+      <para>While facility level is typically the lowest geographical level for disaggregation in
+        DHIS2, there are ways to flexibly group organisation units into any number of dimensions by
+        using the organisation unit groups and group set functionality. As an example, if all
+        facilities are given an official type like &quot;Community health center&quot; or
+        &quot;District Hospital, it is possible to create an organisation unit group set called
+        &quot;Type&quot; and add groups with the names of the types mentioned above. In order for
+        the group sets to function properly in analysis, each organisation unit should be a member
+        of a single group (compulsory and exclusive) within a group set. Stated somewhat
+        differently, a facility should not be both a &quot;Community health center&quot; as well as
+        a &quot;District hospital&quot;. </para>
       <section>
-        <title>Alternative orgunit hierarchies - advanced use of group sets and groups</title>
-        <para>A more advanced use of organisation unit group sets  is to create alternative hierarchies e.g. use administrative borders from other ministries. In Sierra Leone that could mean an alternative hierarchy of 1:MoHS, 2:Districts, and 3: Local councils,  instead of the four-level hierarchy with  chiefdoms and PHUs. For instance, if all PHUs are  linked to a specific local council, it would be possible to look at data aggregated by local council instead of chiefdom. Then you would first need to create a group set called &quot;Local council&quot; and then create one orgunit group for every local council, and finally link all PHUs to their corresponding local council group.</para>
+        <title>Inherit the values of an organisation unit group set</title>
+        <para>You can improve the completeness of your aggregated data by inheriting the settings of
+          a "parent" organisation unit in your organisation unit hierarchy. This is particularly
+          helpful if you are aggregating the data of more than 100 organisation units. See the <link
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="https://docs.dhis2.org/master/en/user/html/manage_organisation_unit.html#create_organisation_unit_group_set"
+            >Maintenance</link> app documentation for more details.</para>
+      </section>
+      <section>
+        <title>Alternative organisation unit hierarchies - advanced use of group sets and
+          groups</title>
+        <para>A more advanced use of organisation unit group sets is to create alternative
+          hierarchies e.g. use administrative borders from other ministries. In Sierra Leone that
+          could mean an alternative hierarchy of 1:MoHS, 2:Districts, and 3: Local councils, instead
+          of the four-level hierarchy with chiefdoms and PHUs. For instance, if all PHUs are linked
+          to a specific local council, it would be possible to look at data aggregated by local
+          council instead of chiefdom. Then you would first need to create a group set called
+          &quot;Local council&quot; and then create one organisation unit group for every local
+          council, and finally link all PHUs to their corresponding local council group.</para>
         <para><table frame="all">
             <title/>
             <tgroup cols="5">
