@@ -49,12 +49,6 @@ OAuth2 clients
             source.</para>
         </listitem>
         <listitem>
-          <para>Default relative period for analysis: Defines the relative period to use by default
-            in analytics apps such as pivot table, charts and GIS. This relative period will be
-            automatically selected when the apps are opened, and should likely be the most commonly
-            used relative period among your users.</para>
-        </listitem>
-        <listitem>
           <para>Feedback recipients: This setting defines a user group where the members will
             receive all messages being sent through the function for writing feedback in the
             dashboard module. This will typically be members of the super user team who are able to
@@ -83,13 +77,6 @@ OAuth2 clients
             will include datasets that are assigned to the children of that parent.</para>
         </listitem>
         <listitem>
-          <para>Put analytics in maintenance mode: Puts the analytics engine / Web API resource in
-            maintenance mode, implying that 503 Service Unavailable will be returned for all
-            requests. This is useful when you need to perform maintenance on the server like
-            rebuilding indexes while the server is running in production, in order to reduce load
-            and more efficiently carry out the maintenance.</para>
-        </listitem>
-        <listitem>
           <para>Days after period end to qualify for timely data submission: Sets the number of days after the end of a period in which a data entry form must be marked as complete in order to be considered timely. This affects the &quot;reporting rate&quot; tool in the reporting module which lists forms marked as complete as well as marked as complete in time. The default value is 15.</para>
         </listitem>
         <listitem>
@@ -108,25 +95,58 @@ OAuth2 clients
       <title>Analytics settings</title>
       <itemizedlist>
         <listitem>
+          <para>Default relative period for analysis: Defines the relative period to use by default
+            in analytics apps such as pivot table, charts and GIS. This relative period will be
+            automatically selected when the apps are opened, and should likely be the most commonly
+            used relative period among your users.</para>
+        </listitem>
+        <listitem>
+          <para>Cacheability: Indicates whether analytics data responses should be served with
+            public or private visibility. <emphasis>Private</emphasis> implies that intermediary
+            proxies and caches are not allowed to store a copy of the response; only the client
+            itself such as web browsers can cache the response. <emphasis>Public</emphasis> implies
+            that both intermediary caches and clients can store a copy.</para>
+        </listitem>
+        <listitem>
+          <para>Cache strategy: Decides for how long reports and responses related to analysis
+            should be cached. If you are using the scheduled, nightly analytics tables update it
+            makes sense to set this to &quot;Cache until 6 AM tomorrow&quot;. This is because we
+            know that data in reports change at that time, and you can safely cache data up to the
+            moment when the analytics tables are updated. If you are loading data continuously into
+            the analytics tables you should set it to &quot;No cache&quot;.</para>
+        </listitem>
+        <listitem>
+          <para>Max number of years to hide unapproved data in analytics: Indicates whether and for
+            how long back in time the analytics engine should hide unapproved data. "Never check
+            approval" implies that no data will be hidden, irrespective of its data approval status.
+            "Check approval for all data" implies that approval status will always be checked. Other
+            options, i.e. "Last 3 years" implies that approval status will be checked for data which
+            is newer than 3 years old; older data will not be checked.</para>
+        </listitem>
+        <listitem>
           <para>Threshold for analytics data caching: Indicates whether to enable caching data older
             than the specified number of years only. This allows for returning the most recent data
             directly with no caching, while serving cached version of older data for performance
             concerns.</para>
+        </listitem>
+        <listitem>
+          <para>Respect category option start and end date in analytics table export: Indicates
+            whether aggregate data values where the data period falls outside the start and end date
+            of the category options of the data attribute category option combo should be filtered
+            out of the analytics tables when generated.</para>
+        </listitem>
+        <listitem>
+          <para>Put analytics in maintenance mode: Puts the analytics engine / Web API resource in
+            maintenance mode, implying that 503 Service Unavailable will be returned for all
+            requests. This is useful when you need to perform maintenance on the server like
+            rebuilding indexes while the server is running in production, in order to reduce load
+            and more efficiently carry out the maintenance.</para>
         </listitem>
       </itemizedlist>
     </section>
     <section xml:id="system_server_settings">
       <title>Server settings</title>
       <itemizedlist>
-        <listitem>
-          <para>Cache strategy: Decides for how long reports and responses related to analysis
-            should be cached. If you are using the scheduled, nightly data mart tasks it makes sense
-            to put this on &quot;Cache until 6 AM tomorrow&quot;. This is because we know that data
-            in reports change at that time, and you can safely cache data up to the moment when the
-            data mart is updated. If you are loading data continuously into the datamart you should
-            set it to &quot;No cache&quot;. If you load data very infrequently into data mart you
-            should consider setting it to &quot;Cache for two weeks&quot;.</para>
-        </listitem>
         <listitem>
           <para>Number of database server CPUs: The number of CPU cores of your database server can
             be configured as a system setting. This allows the system to perform optimally when the
@@ -262,7 +282,13 @@ OAuth2 clients
             desktop to change passwords.</para>
         </listitem>
         <listitem>
-          <para>OpenID provider: Defines the OpenId provider.</para>
+          <para>Lock user account temporarily after multiple failed login attempts: Defines whether
+            the system should lock user accounts after five successive failed login attempts over a
+            timespan of 15 minutes. The account will be locked for 15 minutes after which a new
+            login can be attempted.</para>
+        </listitem>
+        <listitem>
+          <para>OpenID provider: Defines the OpenID provider.</para>
         </listitem>
         <listitem>
           <para>OpenID provider label: Defines the label to display for the specified OpenID
