@@ -7,11 +7,10 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_organisation_unit_group">
-     <title>Create an organisation unit group</title>
+     <title>Create or edit an organisation unit group</title>
         <para>Organisation unit groups allow you to classify related organisation units into a
             common theme. You can for example group all organisation units that are hospitals in an
                 <emphasis role="bold">Hospital</emphasis> group.</para>
-        <para>To create a new organisation unit group:</para>
         <orderedlist>
             <listitem>
                 <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis

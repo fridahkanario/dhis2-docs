@@ -6,7 +6,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="validation_rules_manage">
+    xml:id="manage_program_validation_rule">
     <title>Manage program validation
         <?oxy_comment_start author="cecilia" timestamp="20161005T102726+0200" comment="At next revision: perform complete editorial review
 Add information about translate, delete, edit etc..."?>rules<?oxy_comment_end?></title>
@@ -25,8 +25,6 @@ Add information about translate, delete, edit etc..."?>rules<?oxy_comment_end?><
             </listitem>
             <listitem>
                 <para>an operator </para>
-                <para>The operator defines whether the left side must be less than, equal to or
-                    greater than the right side.</para>
             </listitem>
         </itemizedlist>
         <example>

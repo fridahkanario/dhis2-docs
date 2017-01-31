@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="enter_data_in_data_entry_form">
+  <title>Enter data in a data entry form</title>
+  <?oxy_comment_start author="cecilia" timestamp="20170126T145238+0100" comment="Update with new screen grab"?>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/data_entry/data_entry_overview.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+  </para>
+  <?oxy_comment_end?>
+  <orderedlist>
+    <listitem>
+      <para>Open the <emphasis role="bold">Data Entry</emphasis> app.</para>
+    </listitem>
+    <listitem>
+      <para>In the organisation unit tree to the left, select an organisation unit.</para>
+    </listitem>
+    <listitem>
+      <para>Select a <emphasis role="bold">Data set</emphasis>.</para>
+    </listitem>
+    <listitem>
+      <para>Select a <emphasis role="bold">Period</emphasis>. </para>
+      <para>The available periods are controlled by the period type of the data set (reporting
+        frequency). You can jump a year back or forward by clicking <emphasis role="bold">Prev
+          year</emphasis> or  <emphasis role="bold">Next year</emphasis>.</para>
+      <para>
+        <note>
+          <?oxy_comment_start author="cecilia" timestamp="20170126T155433+0100" comment="Verify with SME that this statement is correct."?>
+          <para>Depending on how you've configured the data entry form, you might have to enter
+            additional information before you can open the date entry
+            <?oxy_comment_start author="cecilia" timestamp="20170126T155211+0100" comment="Only category combinations? Or other setting too?"?>form<?oxy_comment_end?>.
+            This can for example be a project derived from a category combination.</para>
+          <?oxy_comment_end?>
+        </note>
+      </para>
+    </listitem>
+    <listitem>
+      <para>Enter data in the data entry form.</para>
+      <itemizedlist>
+        <listitem>
+          <para>A green field means that the system has saved the value.</para>
+        </listitem>
+        <listitem>
+          <para>A grey field means that the field is disabled and you can't enter a value. The
+            cursor will automatically jump to the next open field.</para>
+        </listitem>
+        <listitem>
+          <para>To move to the next field, press the Tab key or the Down Arrow key.</para>
+        </listitem>
+        <listitem>
+          <para>To move back to the previous field, press Shift+Tab or the Up Arrow key.</para>
+        </listitem>
+        <listitem>
+          <para>If you type in an invalid value, for example a character in a field that only
+            accepts numeric values, you'll get a pop-up that explains the problem and the field will
+            be coloured yellow (not saved) until you have corrected the value.</para>
+        </listitem>
+        <listitem>
+          <para>If you have defined a minimum maximum value range for the field and you enter a
+            value that is outside this range, you'll get a pop-up message that says the value is out
+            of range. The value remains
+            <?oxy_comment_start author="cecilia" timestamp="20170126T165111+0100" comment="Looks like the field becomes orange.Why not yellow? Are there four colors?"?>unsaved<?oxy_comment_end?>
+            until you've changed the value or updated the value range and then re-entered the
+            value.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>When you've filled in the form, click <emphasis role="bold">Run validation</emphasis> in
+        the top right corner or below the data entry form.</para>
+      <para>All validation rules which involves data elements in the current data entry form (data
+        set) are then run against the new data. If there are no violations of the validation rules,
+        you'll see a message saying <emphasis role="italic">The data entry screen successfully
+          passed validation</emphasis>. If there are validation violations, they will be presented
+        in a list.</para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/dhis2UserManual/Validation Rule_Result.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
+    </listitem>
+    <listitem>
+      <para>(Optional) Correct validation violations.</para>
+      <para>
+        <note>
+          <para>Zero (0) will delete the value if the data element has been configured to not store
+            zeros.</para>
+        </note>
+      </para>
+    </listitem>
+    <listitem>
+      <para>When you've corrected errors and you're done with data entry, click <emphasis
+          role="bold">Complete</emphasis>.</para>
+      <?oxy_comment_start author="cecilia" timestamp="20170126T165812+0100" comment="Also for other areas?"?>
+      <para>The system uses this information when generating completeness reports for district,
+        county, province or the national level.</para>
+      <?oxy_comment_end?>
+    </listitem>
+  </orderedlist>
+</section>

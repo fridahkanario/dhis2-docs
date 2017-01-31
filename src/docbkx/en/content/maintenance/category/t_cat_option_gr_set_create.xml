@@ -7,14 +7,13 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_category_option_group_set">
-    <title>Create a category option group set</title>
+    <title>Create or edit a category option group set</title>
     <para>You can group category option groups in category option group sets. The main purpose of
         the category option group set is to add more
         <?oxy_comment_start author="cecilia" timestamp="20160512T141945+0200" comment="At next revision:
 Verify if dimensionality is a recognized term." flag="done"?>dimensionality<?oxy_comment_end?>
         to your captured data for analysis in for example the <emphasis role="bold">Pivot
             table</emphasis> or <emphasis role="bold">Data Visualizer</emphasis> apps.</para>
-    <para>To create a category option group set:</para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis

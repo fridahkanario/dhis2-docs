@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_organisation_unit_group_set">
-    <title>Create an organisation unit group set</title>
+    <title>Create or edit an organisation unit group set</title>
     <para>Organisation unit group sets allows you to create additional classifications of
         organisation units. The group sets create new dimensions so that you can make a more
         detailed data analysis. You an easily filter, organise or aggregate data by groups within a
@@ -44,7 +44,6 @@
             compulsory organisation unit group set.</para>
         <?oxy_comment_end?>
     </note>
-    <para>To create an organisation unit group set:</para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
@@ -83,6 +82,23 @@ Yes" flag="done"?>Compulsory<?oxy_comment_end?></emphasis>.</para>
                     dimension<?oxy_comment_end?></emphasis>.</para>
         </listitem>
         <listitem>
+            <para>(Optional) Select <emphasis role="bold">Include subhierarchy in
+                    <?oxy_comment_start author="cecilia" timestamp="20170130T163107+0100" comment="Add explanation here."?>analytics<?oxy_comment_end?></emphasis>.</para>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+            <para>If you select this, a sub-organisation unit will inherit the organisation unit
+                group property from its closest "parent" organisation unit. Any property on the
+                sub-organisation unit will override the inherit value.</para>
+            <?oxy_custom_end?>
+            <para>If an organisation unit have no associated organisation unit group, the
+                organisation unit can inherit its closest parent's organisation unit group. If none
+                of the parent organisation unit groups have an organisation unit group for a given
+                org unit group set, the result will still be "blank", but if at least one parent has
+                an organisation unit group, sub-organisation unit will inherit it.</para>
+            <para>include subhierarchy in analytics" is enabled, which means the org units inherit
+                their closest parents org unit group IF the org unit is white (no org unit group
+                associated with it). </para>
+        </listitem>
+        <listitem>
             <para>Select organisation unit groups and assign them.</para>
             <para>In the left-hand list, you find the available organisation unit groups. Use the
                 arrows to move selected groups between the two lists.</para>
@@ -104,39 +120,77 @@ Yes" flag="done"?>Compulsory<?oxy_comment_end?></emphasis>.</para>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
         </listitem>
     </orderedlist>
-    <example>
-        <title>Classify facilities based on ownership</title>
-        <?oxy_comment_start author="cecilia" timestamp="20160525T161530+0200" comment="At next revision, replace graphic.
+    <para>
+        <example>
+            <title>Classify facilities based on ownership</title>
+            <para>
+                <?oxy_comment_start author="cecilia" timestamp="20160525T161530+0200" comment="At next revision, replace graphic.
 Single source concept information in implmenter guide and user guide" flag="done"?>
-        <screenshot>
-            <mediaobject>
-                <imageobject>
-                    <imagedata format="png" align="center"
-                        fileref="resources/images/implementation_guide/organisation_unit_hiearchy.png"
-                        width="80%"/>
-                </imageobject>
-            </mediaobject>
-        </screenshot>
-        <?oxy_comment_end?>
-        <para>You want to analyse data based on the ownership of the facilities. All facilities have
-            an owner so you need to make sure that all organisation units get this classification.
-            To do that you can use the <emphasis role="bold">Compulsory</emphasis> option:</para>
-        <orderedlist>
-            <listitem>
-                <para>Create a group for each ownership type, for example "MoH", "Private" and
-                    "Faith-based".</para>
-            </listitem>
-            <listitem>
-                <para>Assign all facilities in the database to one of these groups.</para>
-            </listitem>
-            <listitem>
-                <para>Create an organisation unit group set called "Ownership" and select <emphasis
-                        role="bold">Compulsory</emphasis>.</para>
-            </listitem>
-            <listitem>
-                <para>Assign the organisation unit groups "MoH", "Private" and "Faith-based" to the
-                    "Ownership" organisation group set.</para>
-            </listitem>
-        </orderedlist>
-    </example>
+                <screenshot>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata format="png" align="center"
+                                fileref="resources/images/implementation_guide/organisation_unit_hiearchy.png"
+                                width="80%"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+                <?oxy_comment_end?>
+            </para>
+            <para>You want to analyse data based on the ownership of the facilities. All facilities
+                have an owner so you need to make sure that all organisation units get this
+                classification. To do that you can use the <emphasis role="bold"
+                    >Compulsory</emphasis> option:</para>
+            <orderedlist>
+                <listitem>
+                    <para>Create a group for each ownership type, for example "MoH", "Private" and
+                        "Faith-based".</para>
+                </listitem>
+                <listitem>
+                    <para>Assign all facilities in the database to one of these groups.</para>
+                </listitem>
+                <listitem>
+                    <para>Create an organisation unit group set called "Ownership" and select
+                            <emphasis role="bold">Compulsory</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Assign the organisation unit groups "MoH", "Private" and "Faith-based" to
+                        the "Ownership" organisation group set.</para>
+                </listitem>
+            </orderedlist>
+        </example>
+    </para>
+    <para><example>
+            <title>Create parallel dynamic administrative organisation unit structure</title>
+            <para>
+                <screenshot>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata format="png" align="center"
+                                fileref="resources/images/maintainence/analytics-include-org-unit-subhierarchy.png"
+                                width="80%"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
+            <para>
+                <screenshot>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata format="png" align="center"
+                                fileref="resources/images/maintainence/include-subhierarchy-analytics.png"
+                                width="80%"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
+            <para>Group you organisation unit in two ways and aggregate data on these two parallel
+                hierarchies</para>
+            <para>Use to aggregate data (only in analytics apps)</para>
+            <para>An additional setting to the organisation unit group set, creates a dynamic
+                "membership" to a organisation unit group set.</para>
+        </example>You don't change the organisation unit hierarchy</para>
+    <para>Scalable and dynamic</para>
+    <para>Dynamic inclusion of hierarchy</para>
+    <para>Dynamic additional classification</para>
 </section>

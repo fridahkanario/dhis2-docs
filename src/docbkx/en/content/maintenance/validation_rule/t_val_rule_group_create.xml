@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_validation_rule_group">
-    <title> Create a validation rule
+    <title> Create or edit a validation rule
         <?oxy_comment_start author="cecilia" timestamp="20170110T172731+0100" comment="Add screen shot when SME has removed user groups to alert funtionality"?>group<?oxy_comment_end?></title>
     <orderedlist>
         <listitem>

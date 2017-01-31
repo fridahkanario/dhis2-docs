@@ -7,16 +7,18 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_indicator_group">
-    <title>Create an indicator group</title>
-    <screenshot>
-        <mediaobject>
-            <imageobject>
-                <imagedata align="center" width="80%"
-                    fileref="resources/images/maintainence/indicator_group_create.png" format="PNG"
-                />
-            </imageobject>
-        </mediaobject>
-    </screenshot>
+    <title>Create or edit an indicator group</title>
+    <para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata align="center" width="80%"
+                        fileref="resources/images/maintainence/indicator_group_create.png"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis

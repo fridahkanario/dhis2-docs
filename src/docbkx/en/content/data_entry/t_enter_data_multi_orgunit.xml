@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="data_entry_multiple_organisation_units">
+  <title>Enable multi-organisation unit data
+    <?oxy_comment_start author="cecilia" timestamp="20170126T181827+0100" comment="Add screen shot"?>entry<?oxy_comment_end?></title>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/data_entry/data_entry_multiple_org_unit.png"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+  </para>
+  <para>It can be useful to enter data for multiple organisation units in the same data entry form,
+    for instance if there are few data elements in the form and a huge number of organisation units
+    in the hierarchy. In that case, you can enable multi-organisation unit data entry.</para>
+  <para>
+    <note>
+      <para>Multi-organisation unit data entry only works for
+        <?oxy_comment_start author="cecilia" timestamp="20170126T181800+0100" comment="Still correct?"?>section<?oxy_comment_end?>
+        forms.</para>
+    </note>
+  </para>
+  <orderedlist>
+    <listitem>
+      <para>Open the <emphasis role="bold">System Settings</emphasis> app.</para>
+    </listitem>
+    <listitem>
+      <para>Select <emphasis role="bold">Enable multi-organisation unit forms</emphasis>.</para>
+    </listitem>
+    <listitem>
+      <para>In the <emphasis role="bold">Data Entry</emphasis> app, select the organisation unit
+        immediately above the organisation unit you want to enter data for in the organisation unit
+        <?oxy_comment_start author="cecilia" timestamp="20170126T182148+0100" comment="Do you also need to select a data set?"?>hierarchy<?oxy_comment_end?>.</para>
+      <para>Data elements will appear as columns and organisation units as rows in the form.</para>
+      <para>
+        <note>
+          <?oxy_comment_start author="cecilia" timestamp="20170126T182039+0100" comment="Is this still correct and relevant?"?>
+          <para>The data entry forms should still be assigned to the facilities that you actually
+            enter data for, that is the organisation units now appearing in the form.</para>
+          <?oxy_comment_end?>
+        </note>
+      </para>
+    </listitem>
+  </orderedlist>
+</section>

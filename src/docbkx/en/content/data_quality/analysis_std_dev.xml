@@ -13,9 +13,11 @@
         <title>About standard deviation outlier analysis</title>
         <para>The standard deviation outlier analysis identifies values that are numerically distant
             from the rest of the data. The analysis is based on the standard normal distribution.
-            Outliers can occur by chance but often indicate a measurement error or a heavy-tailed
-            distribution which leads to very high numbers. You should investigate measurement errors
-            and try to correct them before you discard them from the analysis.</para>
+            The system calculates the average based on all data in the system, since the beginning
+            of time. Outliers can occur by chance but often indicate a measurement error or a
+            heavy-tailed distribution which leads to very high numbers. You should investigate
+            measurement errors and try to correct them before you discard them from the
+            analysis.</para>
         <para>
             <note>
                 <para>Be
@@ -85,17 +87,22 @@ Average based on which time? 2 year, all history?? Follow-up with Lars."?>organi
                         ><?oxy_comment_start author="cecilia" timestamp="20170109T133644+0100" comment="UI: Why Start here? Generate and Create are also used for other analysis forms." flag="done"?>Start<?oxy_comment_end?></emphasis>.</para>
                 <para>The analysis process duration depends on the amount of data that is being
                     analysed. If there are potential standard deviations outliers, they will be
-                    presented in a
-                    <?oxy_comment_start author="cecilia" timestamp="20170113T084355+0100" comment="Add screenshot of list.
-SME couldn&apos;t create one in Trainingland or Demo, neither I.
-Have asked Lars.
-Verify if you can download the result list."?>list<?oxy_comment_end?>.</para>
-                <?oxy_comment_start author="cecilia" timestamp="20170113T084502+0100" comment="Haven&apos;t been able to verify this since I haven&apos;t been able to create a outlier list."?>
+                    presented in a list.</para>
+                <para>
+                    <screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata width="80%" align="center"
+                                    fileref="resources/images/data_quality/std-dev-outlier-analysis-result.png"
+                                    format="PNG"/>
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot>
+                </para>
                 <para>For each outlier, you'll see the data element, organisation unit, period,
                     minimum value, actual value, and maximum value. The minimum and maximum values
                     refer to the border values derived from the number of standard deviations
                     selected for the analysis.</para>
-                <?oxy_comment_end?>
             </listitem>
         </orderedlist>
         <para>
@@ -105,10 +112,7 @@ Verify if you can download the result list."?>list<?oxy_comment_end?>.</para>
         </para>
     </section>
     <section>
-        <title>Modify a standard deviation outlier
-            <?oxy_comment_start author="cecilia" timestamp="20170109T135758+0100" comment="Add screen shot of list
-
-SME: couldn&apos;t create on on training land."?>value<?oxy_comment_end?></title>
+        <title>Modify a standard deviation outlier value</title>
         <para>You can modify an outlier value directly in the analysis result list:</para>
         <orderedlist>
             <listitem>

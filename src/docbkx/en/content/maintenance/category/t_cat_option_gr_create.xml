@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_category_option_group">
-    <title>Create a category option group</title>
+    <title>Create or edit a category option group</title>
     <para>You can group and classify category options by using category option groups. The main
         purpose of the category option group set is to add more
         <?oxy_comment_start author="cecilia" timestamp="20160512T141945+0200" comment="At next revision:

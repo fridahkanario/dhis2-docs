@@ -6,17 +6,19 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="create_dataset">
-    <title>Create a data
+    xml:id="create_data_set">
+    <title>Create or edit a data
         <?oxy_comment_start author="cecilia" timestamp="20160701T142620+0200" comment="Screenshot renders correctly after build." flag="done"?>set<?oxy_comment_end?></title>
-    <screenshot>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="80%" align="center"
-                    fileref="resources/images/datasets/data_set_create.png" format="PNG"/>
-            </imageobject>
-        </mediaobject>
-    </screenshot>
+    <para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata width="80%" align="center"
+                        fileref="resources/images/datasets/data_set_create.png" format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
@@ -114,7 +116,7 @@ Create this task under Reporting section (QC)" flag="done"?>
         <listitem>
             <para>In the <emphasis role="bold">Complete notification recipients</emphasis> list,
                 select a user group that should receive a message when the data set is marked as
-                complete in the <emphasis role="bold">Data entry</emphasis> app.</para>
+                complete in the <emphasis role="bold">Data Entry</emphasis> app.</para>
             <para>The message is delivered through the DHIS2 messaging system.</para>
         </listitem>
         <listitem>
@@ -164,14 +166,7 @@ Do you mean in the Data entry app? Or just normal data entry?" flag="done"?>
                     on complete</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>(Optional) Select a <emphasis role="bold">Legend</emphasis>.</para>
-            <tip>
-                <?oxy_comment_start author="cecilia" timestamp="20160526T104008+0200" comment="At next revision, ad x-ref." flag="done"?>
-                <para>Click <emphasis role="bold">Add new</emphasis> to create legends that you're
-                    missing. In the form that opens, create the legends you need. When you're done,
-                    click <emphasis role="bold">Refresh values</emphasis>.</para>
-                <?oxy_comment_end?>
-            </tip>
+            <para>(Optional) Assign one or multiple <emphasis role="bold">Legends</emphasis>.</para>
         </listitem>
         <listitem>
             <para>If applicable, select <emphasis role="bold">Skip offline</emphasis>. </para>
@@ -229,13 +224,6 @@ Before release, verify that this works."?>
             <?oxy_comment_start author="cecilia" timestamp="20160602T141441+0200" comment="At next release: add explanation." flag="done"?>
             <para>Select indicators and assign them.</para>
             <?oxy_comment_end?>
-            <tip>
-                <?oxy_comment_start author="cecilia" timestamp="20160526T104008+0200" comment="At next revision, ad x-ref." flag="done"?>
-                <para>Click <emphasis role="bold">Add new</emphasis> to create indicators that
-                    you're missing. In the form that opens, create the indicators you need. When
-                    you're done, click <emphasis role="bold">Refresh values</emphasis>.</para>
-                <?oxy_comment_end?>
-            </tip>
         </listitem>
         <listitem>
             <para>In the organisation unit tree, select the organisation units you want to
@@ -264,7 +252,7 @@ Select an Organisation unit level and click Select to select all organisation un
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
         </listitem>
     </orderedlist>
-    <para>You can now use the data set in the <emphasis role="bold">Data entry</emphasis> app for
+    <para>You can now use the data set in the <emphasis role="bold">Data Entry</emphasis> app for
         the organisation units that you have assigned to and for periods according to the selected
         frequency (period type).</para>    
 </section>

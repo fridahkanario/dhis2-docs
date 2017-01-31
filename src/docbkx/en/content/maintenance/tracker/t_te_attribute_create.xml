@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_tracked_entity_attribute">
-    <title>Create a tracked entity attribute</title>
+    <title>Create or edit a tracked entity attribute</title>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
@@ -55,6 +55,14 @@
                         </row>
                     </thead>
                     <tbody>
+                        <row>
+                            <entry>
+                                <para>Age</para>
+                            </entry>
+                            <entry>
+                                <para>-</para>
+                            </entry>
+                        </row>
                         <row>
                             <entry>
                                 <para>Coordinate</para>
@@ -403,8 +411,7 @@ Verify with SME: correct with org units in plural?
                 <emphasis role="bold">Display in list without program</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>Select <?oxy_comment_start author="cecilia" timestamp="20161004T120140+0200" comment="Add a note that you can add a legend here, click plus icon"?>a<?oxy_comment_end?>
-                <emphasis role="bold">Legend</emphasis>.</para>
+            <para>(Optional) Assign one or multiple <emphasis role="bold">Legends</emphasis>.</para>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>

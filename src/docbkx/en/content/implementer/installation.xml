@@ -199,10 +199,13 @@ sudo locale-gen nb_NO.UTF-8</screen>
     <section xml:id="install_postgis_installation">
       <title>PostGIS installation</title>
       <para>In order to take advantage of the GIS clustering functionality introduced in version
-        2.23 you need to install the PostGIS extender on the server. After installing the extender,
-        PostGIS will be installed in the database automatically when DHIS2 is started. Install
-        PostGIS on the server by invoking:</para>
+        2.23 you need to install the PostGIS extender on the server. Install PostGIS on the server
+        by invoking:</para>
       <screen>sudo apt-get install postgresql-9.4 postgresql-contrib-9.4 postgresql-9.4-postgis-2.2</screen>
+      <para>DHIS 2 will attempt to install the PostGIS extension during startup. If the DHIS 2
+        database user does not have permission to create extensions you can create it from the
+        console using the postgres user with the following command:</para>
+      <screen>create extension postgis;</screen>
     </section>
     <section xml:id="install_database_configuration">
       <title>Database configuration</title>
@@ -236,6 +239,10 @@ encryption.password = xxxx</screen></para>
         changed once it has been set and data has been encrypted as the data can then no longer be
         decrypted. Remember to set a strong password of at least <emphasis role="bold">24
           characters</emphasis>.</para>
+      <para>Note that the configuration file supports environment variables. This means that you can
+        set certain properties as environment variables and have them resolved by DHIS 2, e.g. like
+        this where <emphasis>DB_PASSWD</emphasis> is the name of the environment
+        variable:<screen>connection.password = ${DB_PASSWD}</screen></para>
       <para>A common mistake is to have a white-space after the last property value so make sure
         there is no white-space at the end of any line. Also remember that this file contains the
         clear text password for your DHIS2 database so it needs to be protected from unauthorized
@@ -858,7 +865,7 @@ sudo /etc/init.d/nginx stop</screen></para>
       <screen>http {
   # ...
   root              /home/dhis/tomcat/webapps/ROOT; # Update path!
-  proxy_cache_path  /var/cache/nginx  keys_zone=dhis:250m  inactive=1d;
+  proxy_cache_path  /var/cache/nginx  levels=1:2  keys_zone=dhis:250m  inactive=1d;
 
   gzip on; # Enables compression, incl Web API content-types
   gzip_types
@@ -868,11 +875,11 @@ sudo /etc/init.d/nginx stop</screen></para>
     "text/css;charset=utf-8" text/css
     "text/plain;charset=utf-8" text/plain;
 
-  <![CDATA[# HTTP server - rewrite to force use of HTTPS
+  # HTTP server - rewrite to force use of HTTPS
 
   server {
     listen     80;
-    rewrite    ^ https://<server-ip>$request_uri? permanent;
+    rewrite    ^ https://www.domain.com/$request_uri? permanent;
   }
 
   # HTTPS server
@@ -912,7 +919,7 @@ sudo /etc/init.d/nginx stop</screen></para>
       proxy_busy_buffers_size   256k;
       proxy_cache               dhis;
     }
-  }]]>
+  }
 }
 
 </screen>
@@ -1066,6 +1073,9 @@ connection.schema = update
 
 # System mode for database read operations only, can be 'off', 'on'
 # system.read_only_mode = off
+
+# Session timeout in seconds, default is 3600
+# system.session.timeout = 3600
 
 # ----------------------------------------------------------------------
 # Encryption

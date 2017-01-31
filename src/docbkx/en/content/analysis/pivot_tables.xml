@@ -390,6 +390,16 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                     are being used.</para>
                 </entry>
               </row>
+              <row>
+                <entry>
+                  <para><emphasis role="bold">Legend display style</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Color the text or background of cells in pivot tables based on legend sets.
+                    You can use this option for scorecards to identify high and low values at a
+                    glance.</para>
+                </entry>
+              </row>
             </tbody>
           </tgroup>
         </table>

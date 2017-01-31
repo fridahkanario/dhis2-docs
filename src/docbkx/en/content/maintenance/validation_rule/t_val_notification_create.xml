@@ -6,7 +6,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook" xml:id="create_validation_notification">
-    <title>Create a validation
+    <title>Create or edit a validation
         <?oxy_comment_start author="cecilia" timestamp="20170111T132427+0100" comment="Sned via DHIS2 internal messaging system" flag="done"?>notification<?oxy_comment_end?></title>
     <orderedlist>
         <listitem>
@@ -27,41 +27,39 @@
                 code.</para>
         </listitem>
         <listitem>
+            <para>Select <emphasis role="bold"
+                    ><?oxy_comment_start author="cecilia" timestamp="20170111T151533+0100" comment="Verify order in UI" flag="done"?>Validation<?oxy_comment_end?>
+                    rules</emphasis>.</para>
+        </listitem>
+        <listitem>
             <para>Select <emphasis role="bold">Recipient user groups</emphasis>.</para>
         </listitem>
         <listitem>
             <para>(Optional) Select <emphasis role="bold">Notify users in hierarchy
                 only</emphasis>.</para>
-            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            <para>If you select this option, each user in the user group(s) will be alerted only for
-                validation exceptions in an organisation unit to which the user has been assigned
-                through user management -- or for any lower-level organisation unit under the
-                assigned organisation unit. </para>
-            <?oxy_custom_end?>
-            <para>If you select this option, each user in the assigned user groups will receive
-                validation ….notifications are only send to users which are linked to organisation
-                units which are either ancestors or children of the organisation unit associated
-                with the validation violation.</para>
-            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            <para>If you don't select this option, each user in the assigned user group(s) will
-                receive all validation exceptions send to the group, regardless of their assigned
-                organisation units.</para>
-            <?oxy_custom_end?>
+            <para>If you select this option, the system will filter the recipient users. (The system
+                derives the recipient users from the recipient user groups.) The filter is based on
+                which organisation unit the recipient user belongs to. The users linked to
+                organisation units which are ancestors of the organisation unit where the violation
+                took place will receive validation notifications. The system will ignore other users
+                and these users won't receive validation notifications.</para>
         </listitem>
         <listitem>
-            <para>Create the <emphasis role="bold">Subject template</emphasis>.</para>
-            <para>Double-click the parameters in the <emphasis role="bold">Template
-                    variables</emphasis> field to add them to your subject.</para>
-        </listitem>
-        <listitem>
-            <para>Create the <emphasis role="bold">Message template</emphasis>.</para>
-            <para>Double-click the parameter names in the <emphasis role="bold">Template
-                    variables</emphasis> field to add them to your message.</para>
-        </listitem>
-        <listitem>
-            <para>Select <emphasis role="bold"
-                    ><?oxy_comment_start author="cecilia" timestamp="20170111T151533+0100" comment="Verify order in UI"?>Validation<?oxy_comment_end?>
-                    rules</emphasis>.</para>
+            <para>Create the message template:</para>
+            <orderedlist>
+                <listitem>
+                    <para>Create the <emphasis role="bold">Subject
+                            <?oxy_comment_start author="cecilia" timestamp="20170113T102252+0100" comment="Pending example from SME."?>template<?oxy_comment_end?></emphasis>.</para>
+                    <para>Double-click the parameters in the <emphasis role="bold">Template
+                            variables</emphasis> field to add them to your subject.</para>
+                </listitem>
+                <listitem>
+                    <para>Create the <emphasis role="bold">Message
+                            <?oxy_comment_start author="cecilia" timestamp="20170113T102302+0100" comment="Pending example from SME."?>template<?oxy_comment_end?></emphasis>.</para>
+                    <para>Double-click the parameter names in the <emphasis role="bold">Template
+                            variables</emphasis> field to add them to your message.</para>
+                </listitem>
+            </orderedlist>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>

@@ -43,14 +43,16 @@
             value, is assigned a specific combination of these categories as an attribute. These
             attributes (when specified as a dimension) can be used in the analysis applications
             similar to other dimensions, for example the period and organisation unit.</para>
-        <screenshot>
-            <mediaobject>
-                <imageobject>
-                    <imagedata width="80%" align="center"
-                        fileref="resources/images/maintainence/categories_dataset_attributes.png"
-                        format="PNG"/>
-                </imageobject>
-            </mediaobject>
-        </screenshot>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="resources/images/maintainence/categories_dataset_attributes.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
     </example>
 </section>
