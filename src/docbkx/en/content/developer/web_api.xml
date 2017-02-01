@@ -3201,6 +3201,10 @@ http://server/api/26/constants/ID</screen></para>
               <entry>Organisation unit group identifier. Can be repeated any number of times.</entry>
             </row>
             <row>
+              <entry>attributeOptionCombo</entry>
+              <entry>Attribute option combo identifier. Can be repeated any number of times.</entry>
+            </row>
+            <row>
               <entry>includeDeleted</entry>
               <entry>Whether to include deleted data values.</entry>
             </row>

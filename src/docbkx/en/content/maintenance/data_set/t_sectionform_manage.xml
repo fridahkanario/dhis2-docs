@@ -37,6 +37,14 @@
                     of the section.</para>
             </listitem>
             <listitem>
+                <para>If you want to display totals for rows in the section form during data
+                    entry, select <emphasis role="bold">Show row totals</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>If you want to display totals for columns in the section form during data
+                    entry, select <emphasis role="bold">Show column totals</emphasis>.</para>
+            </listitem>
+            <listitem>
                 <para>Select a <emphasis role="bold">Category
                         <?oxy_comment_start author="cecilia" timestamp="20160629T150155+0200" comment="For SMe: Only default to choose... What does default mean?
 - Depends on the cat combo, not always default." flag="done"?>combination<?oxy_comment_end?></emphasis>.</para>
