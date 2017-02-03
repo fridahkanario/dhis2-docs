@@ -9,23 +9,25 @@
     xml:id="user_story_kurdistan">
     <title>DHIS2 in the Autonomous Region of Kurdistan</title>
     <para><emphasis>For the thousands of refugees stranded in camps across the war-torn Autonomous
-            Region of Iraqi Kurdistan, getting access to regular health care hasn’t always been
-            straightforward.</emphasis><screenshot>
-        <mediaobject>
-            <imageobject>
-                <imagedata fileref="resources/images/use_cases/kurdistan_map.png"
-                    format="PNG" align="left" width="70%"/>
-            </imageobject>
-        </mediaobject>
-        </screenshot></para>
+            Region of Iraqi Kurdistan, getting access to regular health care is not a
+            straightforward procedure.</emphasis><screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resources/images/use_cases/kurdistan_map.png" format="PNG"
+                        align="left" width="70%"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>Image: Created with DHIS2 GIS app, UiO 2016 </para>
     <section><para><emphasis role="bold">In June 2015, a DHIS2 Health Information System</emphasis> was set up to
             assist the Kurdish health authorities in collecting population data and improving the
             access and quality of public health care.</para></section>
     <section>
         <para>A KRG-DHIS2 pilot project led by the University of Tor Vergata, Rome, and realized by
-            <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="http://ipro.orgipro-it.eu/">I-PRO</link> and Euresist was deployed across a set of pilot health centers and hospitals in the
-            Kurdish directorates of Erbil, Duhok and Slemani.<screenshot>
+                <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://ipro.orgipro-it.eu/">I-PRO</link> and <link
+                xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.euresist.org/"
+                >EuResist</link> was deployed across a set of pilot health centers and hospitals in
+            the Kurdish directorates of Duhok, Erbil, and Slemani.<screenshot>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_ui.png"
