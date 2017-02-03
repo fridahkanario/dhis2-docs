@@ -29,19 +29,19 @@
                 <para>Click the add button.</para>
             </listitem>
             <listitem>
-                <para>In the <emphasis role="bold">Name</emphasis> field, type the name of the
-                    section.</para>
-            </listitem>
-            <listitem>
-                <para>In the <emphasis role="bold">Description</emphasis> field, type a description
+                <para>(Optional) In the <emphasis role="bold">Name</emphasis> field, type the name
                     of the section.</para>
             </listitem>
             <listitem>
-                <para>If you want to display totals for rows in the section form during data
-                    entry, select <emphasis role="bold">Show row totals</emphasis>.</para>
+                <para>(Optional) In the <emphasis role="bold">Description</emphasis> field, type a
+                    description of the section.</para>
             </listitem>
             <listitem>
-                <para>If you want to display totals for columns in the section form during data
+                <para>(Optional) To display totals for rows in the section form during data entry,
+                    select <emphasis role="bold">Show row totals</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>(Optional) To display totals for columns in the section form during data
                     entry, select <emphasis role="bold">Show column totals</emphasis>.</para>
             </listitem>
             <listitem>
