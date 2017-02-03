@@ -17,4 +17,5 @@
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_display.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_translate.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./t_legend_assignde.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./r_legend.xml" encoding="UTF-8"/>
 </section>
