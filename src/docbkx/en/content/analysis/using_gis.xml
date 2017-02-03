@@ -1099,5 +1099,17 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       </orderedlist>
     </section>
   </section>
+  <section>
+    <title>See also</title>
+    <para>
+      <itemizedlist>
+        <listitem>
+          <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="https://docs.dhis2.org/master/en/user/html/manage_legend.html">Manage
+              legends</link></para>
+        </listitem>
+      </itemizedlist>
+    </para>
+  </section>
         
 </chapter>
