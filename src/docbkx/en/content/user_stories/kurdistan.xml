@@ -77,40 +77,47 @@
         <para>With a small time frame to get a DHIS2 epidemiological surveillance pilot project
             implemented and deployed in the whole Kurdish region of Iraq, many challenges lay ahead
             for the teams involved.</para>
-        <para><emphasis role="bold">Racing against the clock. </emphasis>The first challenge lay in
-            building a solution that would work in a short time; one that would satisfy the basic
-            needs of the regional health system in collecting data. A subset of the regional health
+        <para><emphasis role="bold">Racing against the clock. </emphasis>  The first challenge lies
+            in building a solution that works in a short time and satisfies the basic needs of the
+            regional health system in collecting data. So far, a subset of the regional health
             centers, approximately 30 establishments, made up of rural and urban centers, family
-            health centers, hospitals, hospital colleges and general health centers were involved in
-            testing the system.</para>
-        <para><emphasis role="bold">Pulling in data from other systems. </emphasis>Another challenge
-            lay in importing existing data already used in hospitals in to DHIS2; making it possible
-            to enter data from mobile devices; preparing reports equal to those requested from the
-            health centers by the health directorates; and building a DHIS2 system to be used by
-            people without a background in health. </para>
-        <para><emphasis role="bold">Testing using a small, live version of DHIS2.</emphasis> The
-            testing phase was centered around two areas: data sets with aggregate data entry, and
+            health centers, hospitals, hospital colleges, and general health centers have been
+            involved in testing the system.</para>
+        <para><emphasis role="bold">Pulling in data from other systems. </emphasis>  Another
+            challenge lies in making it possible to import existing data from hospitals into DHIS2
+            while also making it achievable to enter data from mobile devices. Additional challenges
+            lie in preparing reports equal to those requested by the health authorities, and
+            building a DHIS2 system for people who don’t necessarily have a background in
+            health.</para>
+        <para><emphasis role="bold">Testing using a small, live version of DHIS2.</emphasis>  The
+            testing phase covered two areas: creating data sets with aggregate data entry and making
             programs with disaggregate event data capture. After analyzing the data reports produced
             by the tests, the project managers decided to use programs without registration using
             the Event Capture app.</para>
-        <para><emphasis role="bold">Capturing data with the Event Capture app.</emphasis> In this
+        <para><emphasis role="bold">Capturing data with the Event Capture app.</emphasis>  In this
             region of Iraq, people do not have identification numbers. It's therefore almost
             impossible to follow patients' visits to different health centers. Bearing this in mind,
-            we decided to build a system to record basic health events such as births, deaths,
-            immunizations, disease diagnoses and hospital discharges using the Event Capture app.
-            Using this app, you can import existing data from hospital databases while adhering to
-            the same data structure, which is extremely helpful. Physicians or other health
-            technicians are able to enter data in real-time while a visitation is taking place,
-            without having to complete further data aggregation operations. </para>
+            the team built a system to record basic health events such as births, deaths,
+            immunizations, disease diagnoses and hospital discharges using the Event Capture app. </para>
+        <para><emphasis role="bold">Why the Event Capture app?</emphasis>   On the one hand, this
+            app allows you to import existing data from hospital databases, while adhering to the
+            same data structure. On the other hand, physicians or health technicians can enter data
+            in real-time during a visit, without having to complete further data aggregation tasks.
+            These two key areas combined were very helpful to our teams.</para>
         <para><emphasis role="bold">Hosting.</emphasis> Without the means to implement a dedicated
             server, we chose to use an outsourced hosting solution through a recommended company
             called <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="https://baosystems.com/">BAO Systems</link>. With this solution we will
-            be able to scale up our DHIS2 instance in the future.</para>
+                xlink:href="https://baosystems.com/">BAO Systems</link>. With this solution, it will
+            be possible to scale up the DHIS2 instance in the future.</para>
         <para><emphasis role="bold">Translating the UI into Kurdish-Sorani.</emphasis> With the help
-            of the DHIS2 community and its developers and translation team, we were able to
-            translate the DHIS2 user interface into Kurdish-Sorani, a language which is spoken by 6
-            million people in Iraq.</para>
+            of the DHIS2 community, DHIS2 developers and a translation team, the DHIS2 user
+            interface is now available in Kurdish-Sorani, a language spoken by 6 million people in
+            Iraq. </para>
+        <para>Some parts of the data model do not have translations. For example, the description of
+            report dates were added in English, Arabic and Kurdish-Sorani consecutively: "Date of
+            birth / تاريخ الولادة / بةرواري لة دايك بوون". Another problem is the lack of <emphasis
+                role="bold">ISO 639-3 ckb</emphasis>, or the Kurdish-Sorani language, in the
+            underlying Java library. </para>
         <para>The screen captures here show how the user interface looks in both English and Kurdish-Sorani:<screenshot>
                 <mediaobject>
                     <imageobject>
