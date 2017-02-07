@@ -14,7 +14,7 @@ Mimimum maximum value range? (This one!)"?>Minimum maximum<?oxy_comment_end?>
         <?oxy_comment_start author="cecilia" timestamp="20170106T150550+0100" comment="UI suggestion: add a Stop button.
 For example when you&apos;ve selected the wrong org unit and the analysis takes too long." flag="done"?>analysis<?oxy_comment_end?></title>
     <section>
-        <title>About minimum maximum outlier analysis</title>
+        <title>About minimum maximum value based outlier analysis</title>
         <para>You can verify the data quality at the point of data entry by setting a minimum
             maximum value range for each data element. You create the value ranges manually or
             generate them automatically.</para>
@@ -48,21 +48,18 @@ Malaria seasons: max value could be lower than the max value during high season.
             can lead to excessive false violations<?oxy_comment_end?>, for example if you analyse
             values related to seasonal diseases.</para>
         <note>
-            <para>C<?oxy_comment_start author="cecilia" timestamp="20170106T151747+0100" comment="Still correct?
+            <para><?oxy_comment_start author="cecilia" timestamp="20170106T151747+0100" comment="Still correct?
 
-SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
-                minimum maximum value ranges are calculated across all attribute combination options
-                for a given data element /category option / organisation unit combination.</para>
+SME: Yes" id="vsw_gy5_vy"?><?oxy_comment_start author="cecilia" timestamp="20170206T152951+0100" comment="Feedback from SME (Olav P):
+&quot;Not sure what this means..?&quot;" parentID="vsw_gy5_vy" mid="9"?><?oxy_comment_start author="cecilia" timestamp="20170206T153012+0100" comment="At next release: review note and make it clearer." parentID="vsw_gy5_vy" mid="8"?>Minimum
+                <?oxy_comment_end mid="8"?><?oxy_comment_end mid="9"?><?oxy_comment_end?>maximum
+                value ranges are calculated across all attribute combination options for a given
+                data element, category option and organisation unit combination.</para>
         </note>
     </section>
     <section>
         <title>Workflow</title>
         <orderedlist>
-            <listitem>
-                <para>In the <emphasis role="bold">System Settings</emphasis> app, set the <emphasis
-                        role="bold">Data analysis std dev factor</emphasis>. The default value is
-                    2.</para>
-            </listitem>
             <listitem>
                 <para>Create a minimum maximum value range, either automatically or manually.</para>
                 <itemizedlist>
@@ -71,8 +68,8 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
                             can generate value ranges automatically.</para>
                     </listitem>
                     <listitem>
-                        <para>In the <emphasis role="bold">Data Quality</emphasis> app, you can set
-                            value ranges manually for each field. </para>
+                        <para>In the <emphasis role="bold">Data Entry</emphasis> app, you can set
+                            value ranges manually for each field.</para>
                     </listitem>
                 </itemizedlist>
             </listitem>
@@ -84,25 +81,6 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
     </section>
     <section>
         <title>Configure a minimum maximum outlier analysis</title>
-        <section>
-            <title>Set 'Data analysis std dev factor'</title>
-            <orderedlist>
-                <listitem>
-                    <para>Open the <emphasis role="bold">System Settings</emphasis> app, and click
-                            <emphasis role="bold">General</emphasis>.</para>
-                </listitem>
-                <listitem>
-                    <para>In the <emphasis role="bold">Data analysis std dev factor</emphasis>
-                        field, enter a value.</para>
-                    <?oxy_comment_start author="cecilia" timestamp="20170112T163812+0100" comment="Copied from System settings app doc." flag="done"?>
-                    <para>This sets the number of standard deviations to use in the outlier
-                        analysis. The default value is
-                        <?oxy_comment_start author="cecilia" timestamp="20170112T163845+0100" comment="Still correct?" id="r2r_w3g_sy"?><?oxy_comment_start author="cecilia" timestamp="20170124T215430+0100" comment="Yes according to Lars." parentID="r2r_w3g_sy" flag="done" mid="10"?>2<?oxy_comment_end mid="10"?><?oxy_comment_end?>.
-                        A high value will catch less outlier values than a low value.</para>
-                    <?oxy_comment_end?>
-                </listitem>
-            </orderedlist>
-        </section>
         <section>
             <title>Create minimum maximum value range automatically</title>
             <para>
@@ -124,9 +102,32 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
                     <?oxy_comment_end?>
                 </note>
             </para>
-            <para>You generate and remove the minimum maximum value ranges calculated by data set in
-                the <emphasis role="bold">Data Administration</emphasis> app.</para>
+            <para>You generate minimum maximum value ranges calculated by data set in the <emphasis
+                    role="bold">Data Administration</emphasis>
+                app.<?oxy_comment_start author="cecilia" timestamp="20170207T112542+0100" comment="7 Feb 2017: This behaviour has been verified with Lars." flag="done"?>
+                The new value ranges override any value ranges that the system has calculated
+                previously.<?oxy_comment_end?></para>
             <orderedlist>
+                <listitem>
+                    <para>Set the <emphasis role="bold">Data analysis std dev
+                        factor</emphasis>:</para>
+                    <orderedlist>
+                        <listitem>
+                            <para>Open the <emphasis role="bold">System Settings</emphasis> app, and
+                                click <emphasis role="bold">General</emphasis>.</para>
+                        </listitem>
+                        <listitem>
+                            <para>In the <emphasis role="bold">Data analysis std dev
+                                    factor</emphasis> field, enter a value.</para>
+                            <?oxy_comment_start author="cecilia" timestamp="20170112T163812+0100" comment="Copied from System settings app doc." flag="done"?>
+                            <para>This sets the number of standard deviations to use in the outlier
+                                analysis. The default value is
+                                <?oxy_comment_start author="cecilia" timestamp="20170112T163845+0100" comment="Still correct?" id="r2r_w3g_sy" flag="done" mid="14"?><?oxy_comment_start author="cecilia" timestamp="20170124T215430+0100" comment="Yes according to Lars." parentID="r2r_w3g_sy" flag="done"?>2<?oxy_comment_end?><?oxy_comment_end mid="14"?>.
+                                A high value will catch less outlier values than a low value.</para>
+                            <?oxy_comment_end?>
+                        </listitem>
+                    </orderedlist>
+                </listitem>
                 <listitem>
                     <para>Open the <emphasis role="bold">Data Administration</emphasis> app and
                         click <emphasis role="bold">Min-max value generation</emphasis>.</para>
@@ -144,16 +145,40 @@ SME: Yes" flag="done"?>urrently<?oxy_comment_end?>,
                         organisation units are generated.</para>
                 </listitem>
             </orderedlist>
-            <para>
-                <tip>
-                    <para>Click <emphasis role="bold">Remove</emphasis> to permanently delete all
-                        minimum maximum value ranges for the selected data sets and organisation
-                        units.</para>
-                </tip>
-            </para>
         </section>
         <section>
-            <title>Create minimum maximum value range manually </title>
+            <title>Delete minimum maximum value range </title>
+            <para>
+                <screenshot>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata align="center" width="40%"
+                                fileref="resources/images/data_quality/generate_min_max.png"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
+            <para>You can permanently delete all minimum maximum value ranges for selected data sets
+                and organisation units in the <emphasis role="bold">Data Administration</emphasis>
+                app.</para>
+            <orderedlist>
+                <listitem>
+                    <para>Open the <emphasis role="bold">Data Administration</emphasis> app and
+                        click <emphasis role="bold">Min-max value generation</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Select data set(s).</para>
+                </listitem>
+                <listitem>
+                    <para>Select an <emphasis role="bold">Organisation unit</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">Remove</emphasis>.</para>
+                </listitem>
+            </orderedlist>
+        </section>
+        <section>
+            <title>Create minimum maximum value range manually</title>
             <para>
                 <screenshot>
                     <mediaobject>
@@ -208,12 +233,21 @@ SME: no" flag="done"?>Entry<?oxy_comment_end?></emphasis>
         </section>
     </section>
     <section>
-        <title>Run a minimum maximum outlier
-            <?oxy_comment_start author="cecilia" timestamp="20170113T085551+0100" comment="Add screenshot when validation rules have been removed from UI."?>analysis<?oxy_comment_end?></title>
+        <title>Run a minimum maximum outlier analysis</title>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="resources/images/data_quality/min_max_analysis.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
         <orderedlist>
             <listitem>
-                <para>Verify that you've created minimum maximum value ranges and set the <emphasis
-                        role="bold">Data analysis std dev factor</emphasis>.</para>
+                <para>Verify that you've created minimum maximum value ranges.</para>
             </listitem>
             <listitem>
                 <para>Open the <emphasis role="bold">Data Quality</emphasis> app and click <emphasis
@@ -228,10 +262,12 @@ SME: could be same" flag="done"?>To<?oxy_comment_end?>
                         date</emphasis>.</para>
             </listitem>
             <listitem>
-                <para>Select which data sets you want to include in the analysis.</para>
+                <para>Select which data set(s) you want to include in the analysis.</para>
             </listitem>
             <listitem>
                 <para>Select a <emphasis role="bold">Parent organisation unit</emphasis>.</para>
+                <para>All children of the organisation unit will be included. The analysis is made
+                    on raw data "under" the parent organisation unit, not on aggregated data.</para>
             </listitem>
             <listitem>
                 <para>Click <emphasis role="bold"

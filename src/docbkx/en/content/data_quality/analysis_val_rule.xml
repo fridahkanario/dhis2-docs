@@ -29,8 +29,8 @@ Make sure the possibility to create a validation notification is mentioned is th
         </itemizedlist>
         <para>
             <example>
-                <para>A validation rule could assert that the total number of vaccines given to
-                    infants is less than or equal to the total number of infants.</para>
+                <para>A validation rule could assert that "Suspected malaria cases tested" >=
+                    "Confirmed malaria cases".</para>
             </example>
         </para>
         <para>The validation rule analysis tests validation rules against the data registered in the
@@ -59,8 +59,10 @@ Make sure the possibility to create a validation notification is mentioned is th
                     <listitem>
                         <para>In the <emphasis role="bold">Data Administration</emphasis> app, you
                             schedule the validation rule analysis to run automatically for all
-                            validation rules. After the system has run the analysis, you'll see the
-                            validation violations (if any) in the validation notifications.</para>
+                            validation rules  included in one or several validation notifications.
+                            After the system has run the analysis, you'll see the validation
+                            violations (if any) in the validation notifications sent via the
+                            internal DHIS2 messaging system.</para>
                     </listitem>
                     <listitem>
                         <para>In the <emphasis role="bold">Data Quality</emphasis> app, you run the
@@ -139,7 +141,7 @@ Make sure the possibility to create a validation notification is mentioned is th
             </listitem>
             <listitem>
                 <para>(Optional) Select <emphasis role="bold">Send notifications</emphasis> to
-                    trigger automatic validation notifications.</para>
+                    trigger validation notifications.</para>
                 <note>
                     <para>If you want to send out validation notifications, you must first create
                         them in the <emphasis role="bold">Maintenance</emphasis> app.</para>
@@ -166,18 +168,13 @@ Make sure the possibility to create a validation notification is mentioned is th
                         </mediaobject>
                     </screenshot>
                 </para>
-                <para> For each validation violation, you'll see the organisation unit, period, left
-                    side description and value, operator, and right side value and
-                    description</para>
             </listitem>
             <listitem>
                 <para>(Optional) Click the show details icon to get more information about a
                     validation violation. In the pop-up window you'll find information about the
                     data elements included in the validation rules and their corresponding data
-                    values. You can use this information to
-                    <?oxy_comment_start author="cecilia" timestamp="20170109T163522+0100" comment="Can you fix incorrect data here?
-SME: no, you need to do further investigation" flag="done"?>fix<?oxy_comment_end?>
-                    incorrect data.</para>
+                    values. You can use this information to identify the source of the validation
+                    rule violation.</para>
             </listitem>
             <listitem>
                 <para>(Optional) Click <emphasis role="bold">Download as PDF</emphasis>, <emphasis

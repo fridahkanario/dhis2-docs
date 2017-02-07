@@ -13,18 +13,19 @@
         <title>About standard deviation outlier analysis</title>
         <para>The standard deviation outlier analysis identifies values that are numerically distant
             from the rest of the data. The analysis is based on the standard normal distribution.
-            The system calculates the average based on all data in the system, since the beginning
-            of time. Outliers can occur by chance but often indicate a measurement error or a
-            heavy-tailed distribution which leads to very high numbers. You should investigate
-            measurement errors and try to correct them before you discard them from the
-            analysis.</para>
+            The system calculates the average, based on values since the beginning of time, for one
+            particular combination of organisation unit, data element, category option combination
+            and attribute option combination. Outliers can occur by chance but often indicate a
+            measurement error or a heavy-tailed distribution which leads to very high numbers. You
+            should investigate measurement errors and try to correct them before you discard them
+            from the analysis.</para>
         <para>
-            <note>
-                <para>Be
-                    <?oxy_comment_start author="cecilia" timestamp="20170112T154953+0100" comment="Replace with &quot;it&apos;s not recommended&quot;?"?>cautious<?oxy_comment_end?>
-                    to use tools or interpretations that assume a normal distribution for
-                    heavy-tailed distributions.</para>
-            </note>
+            <warning>
+                <para>It's not recommended to use tools or interpretations that assume a normal
+                    distribution for heavy-tailed distributions.</para>
+                <para>For example: the standard deviation outlier analysis is not an appropriate
+                    tool when you expect huge seasonal variations in the data.</para>
+            </warning>
         </para>
     </section>
     <section>
@@ -32,13 +33,11 @@
         <para>
             <screenshot>
                 <mediaobject>
-                    <?oxy_comment_start author="cecilia" timestamp="20170109T133828+0100" comment="Update screenshot when Validation rule have been removed."?>
                     <imageobject>
                         <imagedata width="80%"
                             fileref="resources/images/dhis2UserManual/Data Quality_Std Deviation Analysis.png"
                             format="PNG" align="center"/>
                     </imageobject>
-                    <?oxy_comment_end?>
                 </mediaobject>
             </screenshot>
         </para>
@@ -48,7 +47,7 @@
                         role="bold">Std dev outlier analysis</emphasis>.</para>
             </listitem>
             <listitem>
-                <para>Select a <emphasis role="bold">From date</emphasis> and an <emphasis
+                <para>Select a <emphasis role="bold">From date</emphasis> and a <emphasis
                         role="bold">To date</emphasis>.</para>
             </listitem>
             <listitem>
@@ -86,8 +85,9 @@ Average based on which time? 2 year, all history?? Follow-up with Lars."?>organi
                 <para>Click <emphasis role="bold"
                         ><?oxy_comment_start author="cecilia" timestamp="20170109T133644+0100" comment="UI: Why Start here? Generate and Create are also used for other analysis forms." flag="done"?>Start<?oxy_comment_end?></emphasis>.</para>
                 <para>The analysis process duration depends on the amount of data that is being
-                    analysed. If there are potential standard deviations outliers, they will be
-                    presented in a list.</para>
+                    analysed. If there are
+                    <?oxy_comment_start author="cecilia" timestamp="20170207T135848+0100" comment="Info from SME: an outlier is a potential data quality error." flag="done"?>standard
+                    deviations outliers<?oxy_comment_end?>, they will be presented in a list.</para>
                 <para>
                     <screenshot>
                         <mediaobject>
@@ -122,13 +122,15 @@ Average based on which time? 2 year, all history?? Follow-up with Lars."?>organi
             <listitem>
                 <para>Enter a value and then navigate away from that field either by clicking tab or
                     anywhere outside the field.</para>
-                <?oxy_comment_start author="cecilia" timestamp="20170113T084655+0100" comment="Haven&apos;t been able to verify this since no list."?>
+                <?oxy_comment_start author="cecilia" timestamp="20170113T084655+0100" comment="Haven&apos;t been able to verify this since no list." id="wyq_zcc_wy"?>
+                <?oxy_comment_start author="cecilia" timestamp="20170207T151158+0100" comment="Pending dev work, something wrong with the functionality" parentID="wyq_zcc_wy" mid="11"?>
                 <para>The system provides an alert if the value is still outside the defined minimum
-                    and maximum values, but the value will saved in any case.
+                    and maximum values, but the value will be saved in any case.
                     <?oxy_comment_start author="cecilia" timestamp="20170109T140119+0100" comment="Apply for all values or just the outlier ones?"?>The
                     field will have a red background color if the value is outside the range, and a
                     green if inside.<?oxy_comment_end?></para>
                 <?oxy_comment_end?>
+                <?oxy_comment_end mid="11"?>
             </listitem>
         </orderedlist>
     </section>
