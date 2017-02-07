@@ -13,8 +13,8 @@
 Typical user: users on national level." flag="done"?>checks<?oxy_comment_end?></title>
     <para>The <emphasis role="bold">Data Quality</emphasis> app contains tools to validate the
         accuracy and reliability of the data in the system. You can verify the data quality with the
-        help of validation rules and various statistical checks.</para>
-    <para>Data quality has different dimensions including:</para>
+        help of validation rules and various statistical checks. Data quality has different
+        dimensions including:</para>
     <informaltable frame="all">
         <tgroup cols="2">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>

@@ -130,8 +130,8 @@ Make sure the possibility to create a validation notification is mentioned is th
                         role="bold">Validation rule analysis</emphasis>.</para>
             </listitem>
             <listitem>
-                <para>Select a <emphasis role="bold">Start date</emphasis> and an <emphasis
-                        role="bold">End date</emphasis>.</para>
+                <para>Select <emphasis role="bold">Start date</emphasis> and <emphasis role="bold"
+                        >End date</emphasis>.</para>
             </listitem>
             <listitem>
                 <para>Select which <emphasis role="bold">Validation rule group</emphasis> you want

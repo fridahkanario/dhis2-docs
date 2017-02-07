@@ -65,11 +65,11 @@ SME: Yes" id="vsw_gy5_vy"?><?oxy_comment_start author="cecilia" timestamp="20170
                 <itemizedlist>
                     <listitem>
                         <para>In the <emphasis role="bold">Data Administration</emphasis> app, you
-                            can generate value ranges automatically.</para>
+                            generate value ranges automatically.</para>
                     </listitem>
                     <listitem>
-                        <para>In the <emphasis role="bold">Data Entry</emphasis> app, you can set
-                            value ranges manually for each field.</para>
+                        <para>In the <emphasis role="bold">Data Entry</emphasis> app, you set value
+                            ranges manually for each field.</para>
                     </listitem>
                 </itemizedlist>
             </listitem>
@@ -147,37 +147,6 @@ SME: Yes" id="vsw_gy5_vy"?><?oxy_comment_start author="cecilia" timestamp="20170
             </orderedlist>
         </section>
         <section>
-            <title>Delete minimum maximum value range </title>
-            <para>
-                <screenshot>
-                    <mediaobject>
-                        <imageobject>
-                            <imagedata align="center" width="40%"
-                                fileref="resources/images/data_quality/generate_min_max.png"/>
-                        </imageobject>
-                    </mediaobject>
-                </screenshot>
-            </para>
-            <para>You can permanently delete all minimum maximum value ranges for selected data sets
-                and organisation units in the <emphasis role="bold">Data Administration</emphasis>
-                app.</para>
-            <orderedlist>
-                <listitem>
-                    <para>Open the <emphasis role="bold">Data Administration</emphasis> app and
-                        click <emphasis role="bold">Min-max value generation</emphasis>.</para>
-                </listitem>
-                <listitem>
-                    <para>Select data set(s).</para>
-                </listitem>
-                <listitem>
-                    <para>Select an <emphasis role="bold">Organisation unit</emphasis>.</para>
-                </listitem>
-                <listitem>
-                    <para>Click <emphasis role="bold">Remove</emphasis>.</para>
-                </listitem>
-            </orderedlist>
-        </section>
-        <section>
             <title>Create minimum maximum value range manually</title>
             <para>
                 <screenshot>
@@ -231,6 +200,37 @@ SME: no" flag="done"?>Entry<?oxy_comment_end?></emphasis>
                 </tip>
             </para>
         </section>
+        <section>
+            <title>Delete minimum maximum value range </title>
+            <para>
+                <screenshot>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata align="center" width="40%"
+                                fileref="resources/images/data_quality/generate_min_max.png"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
+            <para>You can permanently delete all minimum maximum value ranges for selected data sets
+                and organisation units in the <emphasis role="bold">Data Administration</emphasis>
+                app.</para>
+            <orderedlist>
+                <listitem>
+                    <para>Open the <emphasis role="bold">Data Administration</emphasis> app and
+                        click <emphasis role="bold">Min-max value generation</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Select data set(s).</para>
+                </listitem>
+                <listitem>
+                    <para>Select an <emphasis role="bold">Organisation unit</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">Remove</emphasis>.</para>
+                </listitem>
+            </orderedlist>
+        </section>
     </section>
     <section>
         <title>Run a minimum maximum outlier analysis</title>
@@ -254,8 +254,7 @@ SME: no" flag="done"?>Entry<?oxy_comment_end?></emphasis>
                         role="bold">Min-max outlier analysis</emphasis>.</para>
             </listitem>
             <listitem>
-                <para>Select a <emphasis role="bold">From date</emphasis> and a <emphasis
-                        role="bold"
+                <para>Select <emphasis role="bold">From date</emphasis> and <emphasis role="bold"
                         ><?oxy_comment_start author="cecilia" timestamp="20170106T145720+0100" comment="UI: Why not Start and End date as in Validation rule analysis?
 
 SME: could be same" flag="done"?>To<?oxy_comment_end?>
@@ -265,7 +264,7 @@ SME: could be same" flag="done"?>To<?oxy_comment_end?>
                 <para>Select which data set(s) you want to include in the analysis.</para>
             </listitem>
             <listitem>
-                <para>Select a <emphasis role="bold">Parent organisation unit</emphasis>.</para>
+                <para>Select <emphasis role="bold">Parent organisation unit</emphasis>.</para>
                 <para>All children of the organisation unit will be included. The analysis is made
                     on raw data "under" the parent organisation unit, not on aggregated data.</para>
             </listitem>
@@ -286,8 +285,6 @@ SME: could be same" flag="done"?>To<?oxy_comment_end?>
                         </mediaobject>
                     </screenshot>
                 </para>
-                <para> For each outlier, you'll see the data element, organisation unit, period,
-                    minimum value, value and maximum value.</para>
             </listitem>
             <listitem>
                 <para>(Optional) Click <emphasis role="bold">Download as PDF</emphasis>, <emphasis

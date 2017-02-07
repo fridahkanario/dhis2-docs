@@ -47,8 +47,8 @@
                         role="bold">Std dev outlier analysis</emphasis>.</para>
             </listitem>
             <listitem>
-                <para>Select a <emphasis role="bold">From date</emphasis> and a <emphasis
-                        role="bold">To date</emphasis>.</para>
+                <para>Select <emphasis role="bold">From date</emphasis> and <emphasis role="bold">To
+                        date</emphasis>.</para>
             </listitem>
             <listitem>
                 <?oxy_comment_start author="cecilia" timestamp="20170109T134523+0100" comment="Verify with SME that this phrase is correct. Then, copy to other analysis topics." flag="done"?>
@@ -63,9 +63,7 @@ Should only be data sets" flag="done"?>set<?oxy_comment_end?>(s).</para>
                 <?oxy_comment_end?>
             </listitem>
             <listitem>
-                <para>Select <?oxy_comment_start author="cecilia" timestamp="20170106T152437+0100" comment="SHould it be possible to select several org units?
-SME: no" flag="done"?>a<?oxy_comment_end?>
-                    <emphasis role="bold"><?oxy_comment_start author="cecilia" timestamp="20170109T134301+0100" comment="UI: &quot;Select&quot; should be removed from UI" flag="done"?>Parent<?oxy_comment_end?>
+                <para>Select <emphasis role="bold"><?oxy_comment_start author="cecilia" timestamp="20170109T134301+0100" comment="UI: &quot;Select&quot; should be removed from UI" flag="done"?>Parent<?oxy_comment_end?>
                         <?oxy_comment_start author="cecilia" timestamp="20170109T133526+0100" comment="Why Parent organisation unit here and only Oranisation unit in other analysis forms?
 
 SME: Analysis is made on raw data &quot;under&quot; the parent org unit, not on aggregated data. Take todays value, and generate std avations per org unit back in history.
@@ -100,7 +98,7 @@ Average based on which time? 2 year, all history?? Follow-up with Lars."?>organi
                     </screenshot>
                 </para>
                 <para>For each outlier, you'll see the data element, organisation unit, period,
-                    minimum value, actual value, and maximum value. The minimum and maximum values
+                    minimum value, actual value and maximum value. The minimum and maximum values
                     refer to the border values derived from the number of standard deviations
                     selected for the analysis.</para>
             </listitem>
