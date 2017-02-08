@@ -8,9 +8,7 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="user_story_kurdistan">
     <title>DHIS2 in the Autonomous Region of Kurdistan, Iraq</title>
-    <para><emphasis>For the thousands of refugees stranded in camps across the war-torn Autonomous
-            Region of Iraqi Kurdistan, getting access to regular health care is not a
-            straightforward procedure.</emphasis><screenshot>
+    <para><emphasis>For the citizens of war-torn Iraq, as well as for the thousands of refugees stranded in camps across the Autonomous Region of Iraqi Kurdistan, getting access to regular health care is not a straightforward procedure.</emphasis><screenshot>
             <mediaobject>
                 <imageobject>
                     <imagedata fileref="resources/images/use_cases/kurdistan_map.png" format="PNG"
@@ -70,27 +68,27 @@
                 </listitem>
                 <listitem>
                     <para>Making data comparisons in the same location across different time
-                        periods</para>
+                        periods.</para>
                 </listitem>
             </itemizedlist> </para>
     </section>
     <section>
         <title>Key implementation challenges</title>
-        <para>With a small time frame to get a DHIS2 epidemiological surveillance pilot project
-            implemented and deployed in the whole Kurdish region of Iraq, many challenges are ahead
-            for the teams involved.</para>
+        <para>With such a small time-frame to implement and deploy a DHIS2 epidemiological
+            surveillance pilot project across the entire Kurdish region of Iraq, there are still
+            many challenges ahead for the teams involved.</para>
         <para><emphasis role="bold">Racing against the clock. </emphasis>  The first challenge lies
             in building a solution that works in a short time and satisfies the basic needs of the
             regional health system in collecting data. So far, a subset of the regional health
             centers, approximately 30 establishments, made up of rural and urban centers, family
             health centers, hospitals, hospital colleges, and general health centers have been
             involved in testing the system.</para>
-        <para><emphasis role="bold">Pulling in data from other systems. </emphasis>  Another
+        <para><emphasis role="bold">Pulling in data from other systems. </emphasis> Another
             challenge lies in making it possible to import existing data from hospitals into DHIS2
             while also making it achievable to enter data from mobile devices. Additional challenges
             lie in preparing reports equal to those requested by the health authorities, and
-            building a DHIS2 system for people who don’t necessarily have a background in
-            health.</para>
+            building a DHIS2 system for people who don’t necessarily have a background in health
+            matters.</para>
         <para><emphasis role="bold">Testing using a small, live version of DHIS2.</emphasis>  The
             testing phase covered two areas: creating data sets with aggregate data entry and making
             programs with disaggregate event data capture. After analyzing the data reports produced
@@ -180,17 +178,17 @@
                         >http://www.informapro.it/krg-dhis.html</link></para>
             </listitem>
             <listitem>
-                <para>KRG-DHIS2 Health Monitoring System documentation</para>
+                <para>KRG-DHIS2 Health Monitoring System documentation:</para>
                 <itemizedlist>
                     <listitem>
                         <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
                                 xlink:href="https://krg-dhis.ipro-it.eu/api/documents/b8Uobi3Hqri/data"
-                                >User Manual</link>, version February 2016</para>
+                                >User Manual</link>, version February 2016.</para>
                     </listitem>
                     <listitem>
                         <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
                                 xlink:href="https://krg-dhis.ipro-it.eu/api/documents/tLCQli1uX2K/data"
-                                >How To</link></para>
+                                >How To</link> documentation.</para>
                     </listitem>
                 </itemizedlist>
             </listitem>
@@ -212,37 +210,37 @@
                         xlink:href="mailto:leonardo.emberti.gialloreti@uniroma2.it">Mr. Leonardo
                         Emberti Gialloreti</link></para>
                 <para>Project leader and medical supervisor at University of Tor Vergata, Rome,
-                    Italy </para>
+                    Italy. </para>
             </listitem>
             <listitem>
                 <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
                         xlink:href="mailto:dario.corsini@informa.pro">Mr. Dario Corsini
                     </link></para>
-                <para>Project Management and team coordinator at IPRO, Rome, Italy </para>
+                <para>Project management and team coordinator at IPRO, Rome, Italy. </para>
             </listitem>
             <listitem>
                 <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
                         xlink:href="mailto:antonia.bezenchek@informa.pro">Ms. Antonia
                         Bezenchek</link></para>
                 <para>IT management, DHIS2 implementation, translation, IT support at IPRO, Rome,
-                    Italy </para>
+                    Italy. </para>
             </listitem>
             <listitem>
                 <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
                         xlink:href="mailto:iuri.fanti@informa.pro">Mr. Iuri Fanti</link>
                 </para>
-                <para>DHIS2 implementation and statistics at IPRO, Rome, Italy</para>
+                <para>DHIS2 implementation and statistics at IPRO, Rome, Italy.</para>
             </listitem>
             <listitem>
                 <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
                         xlink:href="mailto:faiqbasa@yahoo.com">Mr. Faiq Basa </link></para>
-                <para>Kurdish local management and medical supervision </para>
+                <para>Kurdish local management and medical supervision. </para>
             </listitem>
             <listitem>
                 <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
                         xlink:href="mailto:revan.khorany@informa.pro">Mr. Revan Khorany</link>
                 </para>
-                <para>Kurdish local management, DHIS2 implementation and translation</para>
+                <para>Kurdish local management, DHIS2 implementation and translation.</para>
             </listitem>
             <listitem>
                 <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -250,13 +248,13 @@
                         Incadona</link>
                 </para>
                 <para>International relations and documentation at EuResist Network GEIE, Rome,
-                    Italy </para>
+                    Italy. </para>
             </listitem>
             <listitem>
                 <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
                         xlink:href="mailto:marco.jorio@informa.pro">Mr. Vincenzo Jorio
                     </link></para>
-                <para>International and government relations at Ital Consult, Rome, Italy </para>
+                <para>International and government relations at Ital Consult, Rome, Italy. </para>
             </listitem>
         </itemizedlist>
         <screenshot>
