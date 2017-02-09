@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="user_story_kurdistan">
-    <title>DHIS2 in the Autonomous Region of Kurdistan</title>
+    <title>DHIS2 in the Autonomous Region of Kurdistan, Iraq</title>
     <para><emphasis>For the thousands of refugees stranded in camps across the war-torn Autonomous
             Region of Iraqi Kurdistan, getting access to regular health care is not a
             straightforward procedure.</emphasis><screenshot>
@@ -22,12 +22,13 @@
             assist the Kurdish health authorities in collecting population data and improving the
             access and quality of public health care.</para></section>
     <section>
-        <para>A KRG-DHIS2 pilot project led by the University of Tor Vergata, Rome, and realized by
-                <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="http://ipro.orgipro-it.eu/">I-PRO</link> and <link
-                xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.euresist.org/"
-                >EuResist</link> was deployed across a set of pilot health centers and hospitals in
-            the Kurdish directorates of Duhok, Erbil, and Slemani.<screenshot>
+        <para>A KRG-DHIS2 pilot project led by the <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://web.uniroma2.it/home/newlang/english">University of Tor
+                Vergata</link>, Rome, and realized by <link
+                xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.informapro.it/"
+                >I-PRO</link> and <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.euresist.org/">EuResist</link> was deployed across a set of
+            pilot health centers and hospitals in the Kurdish directorates of Duhok, Erbil, and Slemani.<screenshot>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_ui.png"
@@ -41,10 +42,11 @@
             hospitals, and 14 general health centers. There are currently 10 health centers in rural
             areas such as small towns or villages, and there are 20 health centers in major
             towns.</para>
-        <para><emphasis role="bold">110,000 cases</emphasis> have been imported via periodic uploads
-            from existing and running databases, and 70,000 cases have been recorded by DHIS2 users.
-            This great progress is enabling health professionals to gather statistics for disease
-            diagnoses, hospital discharges, and registrations of births, deaths and immunizations. <screenshot>
+        <para><emphasis role="bold">Since January 2017, 110,000 cases</emphasis> have been imported
+            via periodic uploads from existing and running databases, and 70,000 cases have been
+            recorded by DHIS2 users. This great progress is enabling health professionals to gather
+            statistics for disease diagnoses, hospital discharges, and registrations of births,
+            deaths and immunizations. <screenshot>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_ipro_screen1.png"
@@ -75,7 +77,7 @@
     <section>
         <title>Key implementation challenges</title>
         <para>With a small time frame to get a DHIS2 epidemiological surveillance pilot project
-            implemented and deployed in the whole Kurdish region of Iraq, many challenges lay ahead
+            implemented and deployed in the whole Kurdish region of Iraq, many challenges are ahead
             for the teams involved.</para>
         <para><emphasis role="bold">Racing against the clock. </emphasis>  The first challenge lies
             in building a solution that works in a short time and satisfies the basic needs of the
@@ -158,7 +160,8 @@
             government and Italian Ministry of foreign Affairs, here’s a recent <link
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 xlink:href="https://www.youtube.com/watch?v=-jIOUJkVGJw&amp;amp;feature=em-uploademail"
-                >video</link>.<screenshot>
+                >video</link>.
+            <screenshot>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_ipro_video.png"
@@ -173,7 +176,7 @@
         <itemizedlist>
             <listitem>
                 <para>Project web page: <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xlink:href="https://www.youtube.com/watch?v=-jIOUJkVGJw&amp;amp;feature=em-uploademail"
+                    xlink:href="http://www.informapro.it/krg-dhis.html"
                         >http://www.informapro.it/krg-dhis.html</link></para>
             </listitem>
             <listitem>
@@ -260,7 +263,7 @@
             <mediaobject>
                 <imageobject>
                     <imagedata fileref="resources/images/use_cases/kurdistan_opening_training_center.png" format="PNG"
-                        align="left" width="70%"/>
+                        align="left" width="80%"/>
                 </imageobject>
             </mediaobject>
         </screenshot>
