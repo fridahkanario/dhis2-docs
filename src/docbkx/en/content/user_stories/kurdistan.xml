@@ -26,9 +26,10 @@
                 xlink:href="http://web.uniroma2.it/home/newlang/english">University of Tor
                 Vergata</link>, Rome, and realized by <link
                 xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.informapro.it/"
-                >I-PRO</link> and <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="http://www.euresist.org/">EuResist</link> was deployed across a set of
-            pilot health centers and hospitals in the Kurdish directorates of Duhok, Erbil, and Slemani.<screenshot>
+                >I-PRO</link> and the <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.euresist.org/">EuResist</link> network was deployed across a
+            set of pilot health centers and hospitals in the Kurdish directorates of Duhok, Erbil,
+            and Slemani.<screenshot>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_ui.png"
