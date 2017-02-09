@@ -9,8 +9,8 @@
   <title>Manage program
     <?oxy_comment_start author="cecilia" timestamp="20160930T095313+0200" comment="Done by whom? Admin? Super user?
 Which are the prereqs?
-Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comment_end?></title>
-  <section>
+Functionality will move into the Maintenance app for 2.27"?>indicators<?oxy_comment_end?></title>
+  <section xml:id="about_program_indicator">
     <title>About program indicators</title>
     <para>Program indicators are expressions based on data elements and attributes of tracked
       entities which can be used to calculate values based on a formula.</para>
@@ -86,11 +86,18 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
       <para>The available analytics types are <emphasis>events</emphasis> and
           <emphasis>enrollments</emphasis>. The analytics type defines whether the program indicator
         is calculated based on events or program enrollments. This has an impact on what type of
-        calculations can be made. Events implies a data source where each event exists as an
-        independent row. This is suitable for performing aggregations such as counts and sums.
-        Enrollments implies a data source where all events for a single enrollment is combined on
-        the same row. This allows for calculations which can compare event data from various program
-        stages within a program enrollment.</para>
+        calculations can be made.</para>
+      <itemizedlist>
+        <listitem>
+          <para><emphasis>Events</emphasis> implies a data source where each event exists as an
+            independent row. This is suitable for performing aggregations such as counts and sums. </para>
+        </listitem>
+        <listitem>
+          <para><emphasis>Enrollments</emphasis> implies a data source where all events for a single
+            enrollment is combined on the same row. This allows for calculations which can compare
+            event data from various program stages within a program enrollment.</para>
+        </listitem>
+      </itemizedlist>
     </section>
     <section>
       <title>About <?oxy_comment_start author="cecilia" timestamp="20161012T101505+0200" comment="At next revision, review section"?>aggregation<?oxy_comment_end?>
@@ -339,76 +346,185 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
       <title>About
         <?oxy_comment_start author="cecilia" timestamp="20161012T101533+0200" comment="At next revision, review section"?>variables<?oxy_comment_end?></title>
       <para>The indicator expression and filter support a range of variables:</para>
-      <table frame="all">
-        <title>Variables</title>
-        <tgroup cols="2">
-          <colspec colnum="1" colname="c1" colwidth="1*"/>
-          <colspec colnum="2" colname="c2" colwidth="3.55*"/>
-          <thead>
-            <row>
-              <entry>Variable</entry>
-              <entry>Description</entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry>event_date</entry>
-              <entry>The date of when the event took place.</entry>
-            </row>
-            <row>
-              <entry>due_date</entry>
-              <entry>The date of when an event is due.</entry>
-            </row>
-            <row>
-              <entry>incident_date</entry>
-              <entry>The date of the incidence of the event.</entry>
-            </row>
-            <row>
-              <entry>enrollment_date</entry>
-              <entry>The date of when the tracked entity instance was enrolled in the
-                program.</entry>
-            </row>
-            <row>
-              <entry>current_date</entry>
-              <entry>The current date.</entry>
-            </row>
-            <row>
-              <entry>value_count</entry>
-              <entry>The number of non-null values in the expression part of the event.</entry>
-            </row>
-            <row>
-              <entry>zero_pos_value_count</entry>
-              <entry>The number of numeric positive values in the expression part of the
-                event.</entry>
-            </row>
-            <row>
-              <entry>event_count</entry>
-              <entry>The count of events (useful in combination with filters).</entry>
-            </row>
-            <row>
-              <entry>enrollment_count</entry>
-              <entry>The count of enrollments (useful in combination with filters).</entry>
-            </row>
-            <row>
-              <entry>tei_count</entry>
-              <entry>The count of tracked entity instances (useful in combination with
-                filters).</entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-      <example>
-        <para>An expression that uses the &quot;value count&quot; variable looks like
-          this:<screen>(#{A03MvHHogjR.a3kGcGDCuk6} + #{A03MvHHogjR.wQLfBvPrXqq}) / V{value_count}</screen></para>
-      </example>
-      <example>
-        <para>An expression that uses the "event_date" and "incident_date" variables looks like
-          this:<screen>d2:daysBetween(V{incident_date},V{event_date})</screen>
-        </para>
-      </example>
+      <para>
+        <table frame="all">
+          <title>Variables for analytics type events</title>
+          <tgroup cols="3">
+            <colspec colnum="1" colname="c1" colwidth="1*"/>
+            <colspec colname="newCol1" colnum="2" colwidth="1*"/>
+            <colspec colnum="3" colname="c2" colwidth="3.55*"/>
+            <thead>
+              <row>
+                <entry>
+                  <para>Variable</para>
+                </entry>
+                <entry>
+                  <para>Used for analytics type</para>
+                </entry>
+                <entry>
+                  <para>Description</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{completed_date}</screen>
+                  </para>
+                </entry>
+                <entry>
+                  <para>Events</para>
+                  <para>Enrollments</para>
+                </entry>
+                <entry>NEW<para>Analytics type: Enrollment: for enrollment analytics er dette den
+                    datoen som er satt som enddate, men bare dersom status er "completed
+                    </para><para>Events: For events er dette datoen for når eventen ble satt
+                    completed</para></entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{current_date}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>
+                  <para>The current date.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{due_date}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>
+                  <para>The date when an event is due.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{enrollment_count}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>
+                  <para>The count of enrollments (useful in combination with filters).</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{enrollment_date}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>
+                  <para>The date of when the tracked entity instance was enrolled in the
+                    program.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{enrollment_status}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>
+                  <para>inneholder status for enrollmenten</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{event_count}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>
+                  <para>The count of events (useful in combination with filters).</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{event_date}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>Enrollment mode: for enrollment analytics er dette den datoen når den siste
+                  eventen fant sted<para>The date of when the event took place.</para><para>Event:
+                    as before "The date of when the event took place."</para><para>This variable was
+                    previously called:<screen>V{excecution_date}</screen></para></entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{incident_date}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>
+                  <para>The date of the incidence of the event.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{tei_count}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>
+                  <para>The count of tracked entity instances (useful in combination with
+                    filters).</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{value_count}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>
+                  <para>The number of non-null values in the expression part of the event.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para>
+                    <screen>V{zero_pos_value_count}</screen>
+                  </para>
+                </entry>
+                <entry/>
+                <entry>The number of numeric positive values in the expression part of the
+                  event.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </para>
+      <para>
+        <example>
+          <para>An expression that uses the &quot;value count&quot; variable looks like
+            this:<screen>(#{A03MvHHogjR.a3kGcGDCuk6} + #{A03MvHHogjR.wQLfBvPrXqq}) / V{value_count}</screen></para>
+        </example>
+      </para>
+      <para>
+        <example>
+          <para>An expression that uses the "event_date" and "incident_date" variables looks like
+            this:<screen>d2:daysBetween(V{incident_date},V{event_date})</screen>
+          </para>
+        </example>
+      </para>
     </section>
   </section>
-  <section>
+  <section xml:id="create_program_indicator">
     <title>Create a program indicator</title>
     <note>
       <para>A program indicator belongs to exactly one program.</para>
@@ -448,11 +564,15 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
         <para>Select number of <emphasis role="bold">Decimals in data output</emphasis>.</para>
       </listitem>
       <listitem>
-        <para>Select an <emphasis role="bold">Aggregation type</emphasis>.</para>
+        <para>Select <emphasis role="bold">Analytics type</emphasis>: <emphasis role="bold"
+            >Events</emphasis> or <emphasis role="bold">Enrollments</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Select <emphasis role="bold">Aggregation type</emphasis>.</para>
       </listitem>
       <listitem>
         <para>Select a <emphasis role="bold">Legend
-            <?oxy_comment_start author="cecilia" timestamp="20161003T153449+0200" comment="Feedback to SME: change UI, new term is &quot;Legend&quot;, no longer &quot;Legend set&quot;:"?>set<?oxy_comment_end?></emphasis>.</para>
+            <?oxy_comment_start author="cecilia" timestamp="20161003T153449+0200" comment="Feedback to SME: change UI, new term is &quot;Legend&quot;, no longer &quot;Legend set&quot;:" id="ggt_zk3_wy"?><?oxy_comment_start author="cecilia" timestamp="20170208T120104+0100" comment="Jira issue created" parentID="ggt_zk3_wy" mid="8"?>set<?oxy_comment_end mid="8"?><?oxy_comment_end?></emphasis>.</para>
       </listitem>
       <listitem>
         <para>Select a if you want to <emphasis role="bold">Display in form</emphasis>.</para>
@@ -475,7 +595,7 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
       </listitem>
     </orderedlist>
   </section>
-  <section>
+  <section xml:id="create_program_indicator_group">
     <title>Create a program indicator group</title>
     <orderedlist>
       <listitem>
