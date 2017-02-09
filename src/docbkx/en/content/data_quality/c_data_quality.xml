@@ -11,10 +11,10 @@
         <?oxy_comment_start author="cecilia" timestamp="20170109T161157+0100" comment="At next release, review section again.
 
 Typical user: users on national level." flag="done"?>checks<?oxy_comment_end?></title>
-    <para>The <emphasis role="bold">Data Quality</emphasis> app contains tools to improve the
+    <para>The <emphasis role="bold">Data Quality</emphasis> app contains tools to validate the
         accuracy and reliability of the data in the system. You can verify the data quality with the
-        help of validation rules and various statistical checks.</para>
-    <para>Data quality has different dimensions including:</para>
+        help of validation rules and various statistical checks. Data quality has different
+        dimensions including:</para>
     <informaltable frame="all">
         <tgroup cols="2">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
@@ -25,19 +25,22 @@ Typical user: users on national level." flag="done"?>checks<?oxy_comment_end?></
                         <para>Dimension</para>
                     </entry>
                     <entry>
-                        <para>Discription</para>
+                        <para>Description</para>
                     </entry>
                 </row>
             </thead>
             <tbody>
                 <row>
                     <entry>
-                        <para>Correctness</para>
+                        <para><?oxy_comment_start author="cecilia" timestamp="20170206T142906+0100" comment="At next release, consider removing this dimension as per feedback from SME."?>Correctness<?oxy_comment_end?></para>
                     </entry>
                     <entry>
+                        <?oxy_comment_start author="cecilia" timestamp="20170206T142846+0100" comment="Feedback from SME (Olav P):
+&quot;I’m not sure about this dimension, as we don’t have any checks for this that I can think of - even the «min max» is based on previously reported data and is more of a «consistency over time» check. &quot;"?>
                         <para>Data should be within the normal range for data collected at that
                             facility. There should be no gross discrepancies when compared with data
                             from related data elements.</para>
+                        <?oxy_comment_end?>
                     </entry>
                 </row>
                 <row>
@@ -85,11 +88,14 @@ Typical user: users on national level." flag="done"?>checks<?oxy_comment_end?></
                 these validation rules.</para>
         </listitem>
         <listitem>
+            <?oxy_comment_start author="cecilia" timestamp="20170206T143001+0100" comment="Feedback from SME (Olav P):
+&quot;I’m not sure about these two - they’re data quality checks, but there is no functionality in DHIS 2 to do this so I guess they are not discussed any further in the manual.&quot;"?>
             <para>By analysing data sets, that is, examine gaps in the data.</para>
         </listitem>
         <listitem>
             <para>By data triangulation, that is, comparing the same data or indicator from
                 different sources.</para>
+            <?oxy_comment_end?>
         </listitem>
     </itemizedlist>
 </section>
