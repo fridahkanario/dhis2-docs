@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_category_option">
-    <title>Create a category option</title>
+    <title>Create or edit a category option</title>
     <?oxy_comment_start author="cecilia" timestamp="20160512T160707+0200" comment="At next release:
 For SME: A task for admin? Implementer?" flag="done"?>
     <para>When possible, recycle category options. For instance, there might be two categories which

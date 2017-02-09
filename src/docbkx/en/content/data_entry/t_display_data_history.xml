@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="display_data_value_history">
+  <title>Display a data value's history</title>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="50%" align="center"
+            fileref="resources/images/data_entry/data_entry_section_history.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+  </para>
+  <para>You can display the last 12 values registered for a
+    fiel<?oxy_comment_start author="cecilia" timestamp="20170126T173806+0100" comment="Removed text:
+&quot;(organisation unit+data element+categoryoptioncombo)&quot;
+
+What does this mean? You look at the data element history but the removed text mentions for example org units...."?>d<?oxy_comment_end?>.</para>
+  <orderedlist>
+    <listitem>
+      <para>Open the <emphasis role="bold">Data Entry</emphasis> app.</para>
+    </listitem>
+    <listitem>
+      <para>Open an existing data entry form.</para>
+    </listitem>
+    <listitem>
+      <para>Double-click the field with the value you want to view the history for.</para>
+    </listitem>
+    <listitem>
+      <para>Click <emphasis role="bold">Data element history</emphasis>.</para>
+    </listitem>
+  </orderedlist>
+</section>

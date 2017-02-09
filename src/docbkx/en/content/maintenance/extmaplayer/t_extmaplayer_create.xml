@@ -5,8 +5,9 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook">
-    <title>Create an external map layer</title>
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_external_map_layer">
+    <title>Create or edit an external map layer</title>
     <note>
         <para>DHIS 2 only supports the Web Mercator projection (<link
                 xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://epsg.io/3857"

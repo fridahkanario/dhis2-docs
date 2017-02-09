@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_data_element_group">
-    <title>Create a data element group</title>
+    <title>Create or edit a data element group</title>
     <para>Data element groups lets you classify related data elements into a common theme. For
         example, two data elements &quot;Measles immunisation&quot; and &quot;BCG Immunisation&quot;
         might be grouped together into a data element group &quot;Childhood

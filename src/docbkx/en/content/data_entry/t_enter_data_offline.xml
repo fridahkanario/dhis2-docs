@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="enter_data_offline">
+  <title>Enter data
+    <?oxy_comment_start author="cecilia" timestamp="20170126T181344+0100" comment="Are screenshots still correct?"?>offline<?oxy_comment_end?></title>
+  <para>The <emphasis role="bold">Data Entry</emphasis> app works even if you don't have a stable
+    Internet connection during data entry. When you don't have an internet connection, the data you
+    enter is saved to your local computer. When the Internet connection is back, the app will push
+    the data to the server. The total bandwidth usage is reduced since data entry forms no longer
+    are retrieved from the server for each rendering.</para>
+  <para>
+    <note>
+      <para>To use this functionality, you must login to the server while you've an Internet
+        connection.</para>
+    </note>
+  </para>
+  <itemizedlist>
+    <listitem>
+      <para>When you're connected to the Internet, the app displays this message at the top of the
+        data entry form:</para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/data_entry/data_entry_online1.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
+    </listitem>
+    <listitem>
+      <para>If your Internet connection breaks during data entry, the app detects it and displays
+        this message:</para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/data_entry/data_entry_offline1.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
+      <para>Now your data will be stored locally. You can continue to enter data as normal.</para>
+    </listitem>
+    <listitem>
+      <para>Once you have entered all necessary data and the app detects that the Internet
+        connection is back, you'll see this message:</para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/data_entry/data_entry_offline_upload.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
+      <para>Click <emphasis role="bold">Upload</emphasis> to synchronize data with the
+        server.</para>
+    </listitem>
+    <listitem>
+      <para>When the data has successfully synchronized with the server, you'll see this
+        confirmation message:</para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/data_entry/data_entry_offline_upload_success1.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
+    </listitem>
+  </itemizedlist>
+</section>

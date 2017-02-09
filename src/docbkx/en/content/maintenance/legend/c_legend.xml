@@ -5,10 +5,12 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook">
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="about_legend">
     <title>About legends</title>
     <para>You can create, edit, clone, delete, show details and translate legends to make the maps
-        you're setting up for your users meaningful.</para>
+        you're setting up for your users meaningful. You create maps in the <emphasis role="bold"
+            >GIS</emphasis> app.</para>
     <note>
         <para>Continuous legends must consist of legend items that end and start with the same
             value, for example: 0-50 and 50-80. Do not set legend items like this: 0-50 and 51-80.

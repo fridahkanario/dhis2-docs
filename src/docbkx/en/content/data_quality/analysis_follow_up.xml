@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="follow_up_analysis">
+    <title>Follow-up
+        <?oxy_comment_start author="cecilia" timestamp="20170112T165059+0100" comment="You don&apos;t need to configure anything." flag="done"?>analysis<?oxy_comment_end?></title>
+    <section>
+        <title>About follow-up analysis</title>
+        <para>The follow-up analysis creates a list of all data values marked for follow-up. You can
+            mark a data value for follow-up in the <emphasis role="bold">Data Entry</emphasis> app
+            and in the result list you get from a standard deviation outlier or minimum maximum
+            <?oxy_comment_start author="cecilia" timestamp="20170106T144757+0100" comment="Verify with SME: what does this phrase mean?
+
+In all report types, but not validation rule analysis. Could be due to one validation rule could have multiple values, the others one value that is marked." flag="done"?>outlier
+            analysis.<?oxy_comment_end?></para>
+    </section>
+    <section>
+        <title><?oxy_comment_start author="cecilia" timestamp="20170109T140545+0100" comment="Do you analyse them in any way?
+
+SME: open data entry, download list....
+
+Would be good to have a link to corresponding data entry form. (JIRA)" flag="done"?>Create<?oxy_comment_end?>
+            list of data values marked for
+            <?oxy_comment_start author="cecilia" timestamp="20170113T085608+0100" comment="Add screenshot when validation rules have been removed from UI."?>follow<?oxy_comment_end?>-up</title>
+        <orderedlist>
+            <listitem>
+                <para>Open the <emphasis role="bold">Data Quality</emphasis> app and click <emphasis
+                        role="bold">Follow-up analysis</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>Select an <emphasis role="bold">Organisation unit</emphasis>.</para>
+                <para>The analysis process duration depends on the amount of data that is being
+                    analysed. If there are data values marked for follow-up, they will be presented
+                    in a list.</para>
+                <para>
+                    <screenshot>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata width="90%" align="center"
+                                    fileref="resources/images/data_quality/data_quality_follow_up.png"
+                                />
+                            </imageobject>
+                        </mediaobject>
+                    </screenshot>
+                </para>
+            </listitem>
+            <listitem>
+                <para>(Optional) Click <emphasis role="bold">Download as PDF</emphasis>, <emphasis
+                        role="bold">Download as Excel</emphasis> or <emphasis role="bold">Download
+                        as CSV</emphasis> to download the validation violations list in PDF, Excel
+                    or CSV formats.</para>
+            </listitem>
+        </orderedlist>
+        <para>
+            <tip>
+                <para>Click the star icon to remove the follow-up tag from the data value.</para>
+            </tip>
+        </para>
+    </section>
+</section>
+

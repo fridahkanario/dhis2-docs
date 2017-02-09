@@ -7,7 +7,13 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="workflow_indicator">
-    <title>Workflow</title>
+    <title><?oxy_comment_start author="cecilia" timestamp="20170117T145901+0100" comment="E-mail send to Lars 17 Jan 2017:
+Need more info from SME.
+You need to have indicators to create indicator groups, you need to have indicator groups to create indicator group sets
+hence, you need to create indicators first
+BUT
+you need to have created compulsory indicator group sets BEFORE you create indicators.
+Doesn&apos;t make sense..."?>Workflow<?oxy_comment_end?></title>
     <orderedlist>
         <listitem>
             <para>Create indicator types.</para>

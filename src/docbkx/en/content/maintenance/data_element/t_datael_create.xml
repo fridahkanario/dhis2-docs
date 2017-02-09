@@ -7,18 +7,21 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_data_element">
-    <title>Create a
+    <title>Create or edit a
         d<?oxy_comment_start author="cecilia" timestamp="20160510T101140+0200" comment="At next revision:
 Find out who does this? Admin? Implementer? User? " flag="done"?>ata<?oxy_comment_end?>
         element</title>
-    <screenshot>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="80%" align="center"
-                    fileref="resources/images/maintainence/create_data_element.png" format="PNG"/>
-            </imageobject>
-        </mediaobject>
-    </screenshot>
+    <para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata width="80%" align="center"
+                        fileref="resources/images/maintainence/create_data_element.png" format="PNG"
+                    />
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
@@ -89,6 +92,14 @@ Is this optional? Recommended?" flag="done"?><emphasis
                     <tbody>
                         <row>
                             <entry>
+                                <para>Age</para>
+                            </entry>
+                            <entry>
+                                <para>-</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
                                 <para>Coordinate</para>
                             </entry>
                             <entry>
@@ -111,12 +122,12 @@ Is this optional? Recommended?" flag="done"?><emphasis
                                 <para>Date &amp; time</para>
                             </entry>
                             <entry>
-                                <para/>
+                                <para>-</para>
                             </entry>
                         </row>
                         <row>
                             <entry>
-                                <para>E-mail</para>
+                                <para>Email</para>
                             </entry>
                             <entry>
                                 <para>Email.</para>
@@ -284,9 +295,9 @@ Is this optional? Recommended?" flag="done"?><emphasis
         <listitem>
             <para>In the <emphasis role="bold">Aggregation type</emphasis> field, select the default
                 aggregation operation that will be used on the data element.</para>
-            <para>Most data elements should have the <emphasis role="bold">Sum</emphasis> option
-                set. This includes all data elements which should be added together. Other data
-                elements, such as staffing levels, should be set to use the <emphasis role="bold"
+            <para>Most data elements should have the <emphasis role="bold">Sum</emphasis> operator.
+                This includes all data elements which should be added together. Other data elements,
+                such as staffing levels, should be set to use the <emphasis role="bold"
                     >Average</emphasis> operator, when values along the time dimension should not be
                 added together, but rather averaged.</para>
             <table frame="all">
@@ -436,10 +447,11 @@ Used in which way?" flag="done"?>used<?oxy_comment_end?>
                 specify standardized comments for data values in data entry.</para>
         </listitem>
         <listitem>
-            <para>Select a <emphasis role="bold">Legend set</emphasis>.</para>
-            <para><?oxy_comment_start author="cecilia" timestamp="20160510T135614+0200" comment="At next revision, add link to GIS app topic." flag="done"?>Legend
-                sets<?oxy_comment_end?> are used in the <emphasis role="bold">GIS</emphasis> app to
-                display certain data elements with certain icons.</para>
+            <para>Assign one or multiple <emphasis role="bold">Legends</emphasis>.</para>
+            <para><?oxy_comment_start author="cecilia" timestamp="20160510T135614+0200" comment="At next revision, add link to GIS app topic." flag="done"?>Legend<?oxy_comment_end?>s
+                are used in for example the <emphasis role="bold">GIS</emphasis>
+                <?oxy_comment_start author="cecilia" timestamp="20170117T103527+0100" comment="Also to create cell color in the Pivot Table app - confirm with SME."?>app<?oxy_comment_end?>
+                to display certain data elements with certain icons.</para>
         </listitem>
         <listitem>
             <para>Set the <emphasis role="bold"
@@ -462,8 +474,6 @@ Couldn&apos;t find this section." flag="done"?>Aggregation<?oxy_comment_end?>
                     <para>Click the right arrow to assign the aggregation levels.</para>
                 </listitem>
             </orderedlist>
-            <para>The aggregation levels option allows the data element to be aggregated at one or
-                more levels.</para>
             <?oxy_comment_start author="cecilia" timestamp="20160510T142955+0200" comment="At next revision: 
 For SME: Is this information still relevant?
 Ask Lars" flag="done"?>
@@ -481,26 +491,29 @@ Ask Lars" flag="done"?>
             <para>If applicable, enter custom attributes values, for example <emphasis role="bold"
                     >Classification</emphasis> or <emphasis role="bold">Collection
                 method</emphasis>.</para>
-            <para>You set custom attributes in <emphasis role="bold">Data administration</emphasis>
-                > <emphasis role="bold">Attribute</emphasis>.
-                <?oxy_comment_start author="cecilia" timestamp="20160518T114951+0200" comment="At next revsision, add x-ref here." flag="done"?>For
-                more information about how to use attributes, refer to the &quot;Attributes&quot;
-                section.<?oxy_comment_end?></para>
+            <para>
+                <note>
+                    <para>You create custom attributes in the <emphasis role="bold"
+                            >Maintenance</emphasis> app: <emphasis role="bold">Other</emphasis> >
+                            <emphasis role="bold"
+                        >Attributes</emphasis><?oxy_comment_start author="cecilia" timestamp="20160518T114951+0200" comment="At next revsision, add x-ref here." flag="done"?>.<?oxy_comment_end?></para>
+                </note>
+            </para>
         </listitem>
         <listitem>
-            <para>Select a <emphasis role="bold">Main data element group</emphasis>.</para>
-            <?oxy_comment_start author="cecilia" timestamp="20160622T135018+0200" comment="At next revision:
-Revise para and define where you set this." flag="done"?>
-            <para>Data element group sets are only applicable if they have been defined. If data
-                element group sets have been defined, they will appear in the <emphasis role="bold"
-                    >Main data element group</emphasis> list. Select each data element group from
-                the list of group sets provided. Groups can be selected based on if the data element
-                is of aggregate or tracker type.</para>
-            <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-            <para><?oxy_comment_start author="cecilia" timestamp="20160628T133732+0200" comment="At next revision: Add info about what this option means." flag="done"?>Select<?oxy_comment_end?>
-                <emphasis role="bold">Tracker-based data</emphasis>.</para>
+            <para>If applicable, select compulsory data element group sets, for example <emphasis
+                    role="bold">Main data element group</emphasis> or <emphasis role="bold"
+                    >Tracker-based data</emphasis>.</para>
+            <para>
+                <note>
+                    <para>You'll only see data element group sets in this form if you've created
+                        them and set them to <emphasis role="bold">Compulsory</emphasis>.</para>
+                    <para>You create data element group sets in the <emphasis role="bold"
+                            >Maintenance</emphasis> app: <emphasis role="bold">Data
+                            element</emphasis> > <emphasis role="bold">Date element group
+                            set</emphasis><?oxy_comment_start author="cecilia" timestamp="20160518T114951+0200" comment="At next revsision, add x-ref here." flag="done"?>.<?oxy_comment_end?></para>
+                </note>
+            </para>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>

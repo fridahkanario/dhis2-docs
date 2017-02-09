@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_validation_rule_group">
+    <title> Create or edit a validation rule
+        <?oxy_comment_start author="cecilia" timestamp="20170110T172731+0100" comment="Add screen shot when SME has removed user groups to alert funtionality"?>group<?oxy_comment_end?></title>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Validation</emphasis> > <emphasis role="bold">Validation rule
+                    group</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add
+                <?oxy_comment_start author="cecilia" timestamp="20160510T112410+0200" comment="Do not refer to the FAB as an icon, according to MS Manual of Style." flag="done"?>button<?oxy_comment_end?>.</para>
+        </listitem>
+        <listitem>
+            <para>Type a <emphasis role="bold"
+                    ><?oxy_comment_start author="cecilia" timestamp="20170110T171331+0100" comment="Unique name required?"?>Name<?oxy_comment_end?></emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) In the <emphasis role="bold">Code</emphasis> field, assign a
+                code.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Type a <emphasis role="bold">Description</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Double-click the <emphasis role="bold">Validation rules</emphasis> you want to
+                assign to the group.</para>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>    
+</section>

@@ -13,15 +13,24 @@
         visualize catchment areas for each facility. You can add labels to areas and points, and
         search and filter using various criteria. You can move points and set locations on the fly.
         Maps can be saved as favorites and shared with other people.</para>
-    <screenshot>
-        <title>Here's an overview of the GIS app workspace</title>
-        <mediaobject>
-            <imageobject>
-                <imagedata fileref="resources/images/gis/gis_main.png" align="center" width="90%"
-                    format="PNG"/>
-            </imageobject>
-        </mediaobject>
-    </screenshot>
+    <para>
+        <note>
+            <para>To use predefined legends in the <emphasis role="bold">GIS</emphasis> app, you
+                need to create them first in the <emphasis role="bold">Maintenance</emphasis>
+                app.</para>
+        </note>
+    </para>
+    <para>
+        <screenshot>
+            <title>Here's an overview of the GIS app workspace</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resources/images/gis/gis_main.png" align="center"
+                        width="90%" format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </para>
     <itemizedlist>
         <listitem>
             <para>The icons in the top left of the workspace represent the map layers. They are the

@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="create_validation_rule">
+    <title>Create or edit a validation rule</title>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Validation</emphasis> > <emphasis role="bold">Validation
+                    rule</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add
+                <?oxy_comment_start author="cecilia" timestamp="20160510T112410+0200" comment="Do not refer to the FAB as an icon, according to MS Manual of Style." flag="done"?>button<?oxy_comment_end?>.</para>
+        </listitem>
+        <listitem>
+            <para>Type a <emphasis role="bold">Name</emphasis>.</para>
+            <para>The name must be unique among the validation rules.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) In the <emphasis role="bold">Code</emphasis> field, assign a
+                code.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Type a <emphasis role="bold">Description</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Select an <emphasis role="bold"
+                    ><?oxy_comment_start author="cecilia" timestamp="20170110T093917+0100" comment="Which implications does this have?"?>Importance<?oxy_comment_end?></emphasis>:
+                    <emphasis role="bold">High</emphasis>, <emphasis role="bold">Medium</emphasis>
+                or <emphasis role="bold">Low</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Select a <emphasis role="bold"
+                    ><?oxy_comment_start author="cecilia" timestamp="20170110T093957+0100" comment="What does this mean? Further info needed."?>Period<?oxy_comment_end?>
+                    type</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Select an <emphasis role="bold"
+                    ><?oxy_comment_start author="cecilia" timestamp="20170110T161537+0100" comment="At next revision: single-source list of operators."?>Operator<?oxy_comment_end?></emphasis>:
+                    <emphasis role="bold">Compulsory pair</emphasis>, <emphasis role="bold">Equal
+                    to</emphasis>, <emphasis role="bold">Exclusive pair</emphasis>, <emphasis
+                    role="bold">Greater than</emphasis>, <emphasis role="bold">Greater than or equal
+                    to</emphasis> or <emphasis role="bold">Not equal to</emphasis>.</para>
+            <?oxy_comment_start author="cecilia" timestamp="20170110T094259+0100" comment="Reword"?>
+            <para>The <emphasis role="bold">Compulsory pair</emphasis> operator allows to require
+                that data values must be entered for a form for both left and right sides of the
+                expression, or for neither side. This means that you can require that if one field
+                in a form is filled, then one or more other fields must also be filled.</para>
+            <?oxy_comment_end?>
+            <?oxy_comment_start author="cecilia" timestamp="20170110T094326+0100" comment="Reword"?>
+            <para>The <emphasis role="bold">Exclusive pair</emphasis> allows to assert that if any
+                value exist on the left side then there should be no values on the right side (or
+                vice versa). This means that data elements which compose the rule on either side
+                should be mutually exclusive from each other, for a given time period / organisation
+                unit /attribute option combo.</para>
+            <?oxy_comment_end?>
+        </listitem>
+        <listitem>
+            <para>Create the left side of the expression:</para>
+            <orderedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">Left side</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Select a <emphasis role="bold">Missing value strategy</emphasis>. This
+                        selection sets how the system evaluates a validation rule if data is
+                        missing.</para>
+                    <informaltable frame="all">
+                        <tgroup cols="2">
+                            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                            <thead>
+                                <row>
+                                    <entry>
+                                        <para>Option</para>
+                                    </entry>
+                                    <entry>
+                                        <para>Description</para>
+                                    </entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry>
+                                        <para>Skip if any value is missing</para>
+                                    </entry>
+                                    <entry>
+                                        <para>The validation rule will be skipped if any of the
+                                            values which compose the expression are missing. This is
+                                            the default option.</para>
+                                        <?oxy_comment_start author="cecilia" timestamp="20170110T161913+0100" comment="Is this enforced in the UI?"?>
+                                        <para>Always select this option you use the <emphasis
+                                                role="bold">Exclusive pair</emphasis> or <emphasis
+                                                role="bold">Compulsory pair</emphasis>
+                                            operator.</para>
+                                        <?oxy_comment_end?>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>
+                                        <para>Skip if all values are missing</para>
+                                    </entry>
+                                    <entry>
+                                        <para>The validation rule will be skipped only if all of the
+                                            <?oxy_comment_start author="cecilia" timestamp="20170110T163942+0100" comment="Operators? Values?"?>operands<?oxy_comment_end?>
+                                            which compose it are missing. </para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>
+                                        <para>Never skip</para>
+                                    </entry>
+                                    <entry>
+                                        <para>The validation rule will never be skipped in case of
+                                            missing data, and all missing operands will be treated
+                                            effectively as a zero.</para>
+                                    </entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </informaltable>
+                </listitem>
+                <listitem>
+                    <para>Type a <emphasis role="bold">Description</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Build an expression based on the available data elements, program objects,
+                        organisation units, counts and constants.</para>
+                    <para>In the right pane, double-click the data objects you want to include in
+                        the expression. Combine with the mathematical operators located below the
+                        left pane.</para>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">Save</emphasis>.</para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <para>Create the right side of the expression:</para>
+            <orderedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">Right side</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Select a <emphasis role="bold">Missing value strategy</emphasis>. This
+                        selection sets how the system evaluates a validation rule if data is
+                        missing.</para>
+                    <informaltable frame="all">
+                        <tgroup cols="2">
+                            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                            <thead>
+                                <row>
+                                    <entry>
+                                        <para>Option</para>
+                                    </entry>
+                                    <entry>
+                                        <para>Description</para>
+                                    </entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry>
+                                        <para>Skip if any value is missing</para>
+                                    </entry>
+                                    <entry>
+                                        <para>The validation rule will be skipped if any of the
+                                            values which compose the expression are missing. This is
+                                            the default option.</para>
+                                        <?oxy_comment_start author="cecilia" timestamp="20170110T161913+0100" comment="Is this enforced in the UI?"?>
+                                        <para>Always select this option you use the <emphasis
+                                                role="bold">Exclusive pair</emphasis> or <emphasis
+                                                role="bold">Compulsory pair</emphasis>
+                                            operator.</para>
+                                        <?oxy_comment_end?>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>
+                                        <para>Skip if all values are missing</para>
+                                    </entry>
+                                    <entry>
+                                        <para>The validation rule will be skipped only if all of the
+                                            <?oxy_comment_start author="cecilia" timestamp="20170110T163942+0100" comment="Operators? Values?"?>operands<?oxy_comment_end?>
+                                            which compose it are missing. </para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>
+                                        <para>Never skip</para>
+                                    </entry>
+                                    <entry>
+                                        <para>The validation rule will never be skipped in case of
+                                            missing data, and all missing operands will be treated
+                                            effectively as a zero.</para>
+                                    </entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </informaltable>
+                </listitem>
+                <listitem>
+                    <para>Type a <emphasis role="bold">Description</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Build an expression based on the available data elements, program objects,
+                        organisation units, counts and constants.</para>
+                    <para>In the right pane, double-click the data objects you want to include in
+                        the expression. Combine with the mathematical operators located below the
+                        left pane.</para>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">Save</emphasis>.</para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>
+</section>

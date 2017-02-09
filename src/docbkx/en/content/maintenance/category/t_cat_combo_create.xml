@@ -6,8 +6,8 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="create_category_combo">
-    <title>Create a category
+    xml:id="create_category_combination">
+    <title>Create or edit a category
         <?oxy_comment_start author="cecilia" timestamp="20161009T111936+0200" comment="At next revision: review concept infor and example"?>combination<?oxy_comment_end?></title>
     <para>Category combinations lets you combine multiple categories into a related set.</para>
     <example>

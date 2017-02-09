@@ -6,7 +6,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="manage_sectionform">
+    xml:id="manage_section_form">
     <title>Manage section forms</title>
     <section>
         <title>Create a section form</title>
@@ -29,12 +29,20 @@
                 <para>Click the add button.</para>
             </listitem>
             <listitem>
-                <para>In the <emphasis role="bold">Name</emphasis> field, type the name of the
-                    section.</para>
+                <para>(Optional) In the <emphasis role="bold">Name</emphasis> field, type the name
+                    of the section.</para>
             </listitem>
             <listitem>
-                <para>In the <emphasis role="bold">Description</emphasis> field, type a description
-                    of the section.</para>
+                <para>(Optional) In the <emphasis role="bold">Description</emphasis> field, type a
+                    description of the section.</para>
+            </listitem>
+            <listitem>
+                <para>(Optional) To display totals for rows in the section form during data entry,
+                    select <emphasis role="bold">Show row totals</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>(Optional) To display totals for columns in the section form during data
+                    entry, select <emphasis role="bold">Show column totals</emphasis>.</para>
             </listitem>
             <listitem>
                 <para>Select a <emphasis role="bold">Category
