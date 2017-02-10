@@ -14,7 +14,7 @@
             <mediaobject>
                 <imageobject>
                     <imagedata fileref="resources/images/use_cases/kurdistan_refugee_camp_roofs.png"
-                        format="PNG" align="left" width="70%"/>
+                        format="PNG" align="left" width="90%"/>
                 </imageobject>
             </mediaobject>
         </screenshot><emphasis>Refugee camps in the Christian Ankawa suburb of Erbil © IPRO, Oct.
@@ -292,10 +292,6 @@
                                     xlink:href="mailto:marco.jorio@informa.pro"
                                     >marco.jorio@informa.pro </link><para>Ital Consult, Rome, Italy
                                 </para></entry>
-                        </row>
-                        <row>
-                            <entry/>
-                            <entry/>
                         </row>
                     </tbody>
                 </tgroup>
