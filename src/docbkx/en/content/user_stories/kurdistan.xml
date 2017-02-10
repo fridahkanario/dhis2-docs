@@ -9,30 +9,38 @@
     xml:id="user_story_kurdistan">
     <title>DHIS2 in the Autonomous Region of Kurdistan, Iraq</title>
     <para><emphasis>For the thousands of refugees stranded in camps across the war-torn Autonomous
-        Region of Iraqi Kurdistan, getting access to regular health care is not a
-        straightforward procedure.</emphasis><screenshot>
+            Region of Iraqi Kurdistan, getting access to regular health care is not a
+            straightforward procedure.</emphasis><screenshot>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="resources/images/use_cases/kurdistan_map.png" format="PNG"
-                        align="left" width="70%"/>
+                    <imagedata fileref="resources/images/use_cases/kurdistan_refugee_camp_roofs.png"
+                        format="PNG" align="left" width="70%"/>
                 </imageobject>
             </mediaobject>
-        </screenshot>Image: Created with DHIS2 GIS app, UiO 2016 </para>
+        </screenshot><emphasis>Refugee camps in the Christian Ankawa suburb of Erbil © IPRO, Oct.
+            2016</emphasis></para>
     <section><para><emphasis role="bold">In June 2015, a DHIS2 Health Information System</emphasis> was set up to
-        assist the Kurdish health authorities in collecting population data and improving the
-        access and quality of public health care.</para></section>
-    <section>
-        <para>A KRG-DHIS2 pilot project led by the <link xmlns:xlink="http://www.w3.org/1999/xlink"
-            xlink:href="http://web.uniroma2.it/home/newlang/english">University of Tor
-            Vergata</link>, Rome, and realized by <link
-                xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.informapro.it/"
-                >I-PRO</link> and the <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="http://www.euresist.org/">EuResist</link> network was deployed across a
-            set of pilot health centers and hospitals in the Kurdish directorates of Duhok, Erbil,
-            and Slemani.<screenshot>
+            assist the Kurdish health authorities in collecting population data and improving the
+            access and quality of public health care.<screenshot>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_ui.png"
+                            format="PNG" align="left" width="70%"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot></para></section>
+    <section>
+        <para>A KRG-DHIS2 pilot project led by the <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://web.uniroma2.it/home/newlang/english">University of Tor
+                Vergata</link>, Rome, and realized by <link
+                xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.informapro.it/"
+                >I-PRO</link> and <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="http://www.euresist.org/">EuResist</link> Network was deployed across a
+            set of pilot health centers and hospitals in the Kurdish governorates of Duhok, Erbil,
+            and Slemani.<screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="resources/images/use_cases/kurdistan_map.png"
                             format="PNG" align="left" width="70%"/>
                     </imageobject>
                 </mediaobject>
@@ -71,7 +79,7 @@
                 </listitem>
                 <listitem>
                     <para>Making data comparisons in the same location across different time
-                        periods</para>
+                        periods.</para>
                 </listitem>
             </itemizedlist> </para>
     </section>
@@ -117,35 +125,38 @@
             interface is now available in Kurdish-Sorani, a language spoken by 6 million people in
             Iraq. </para>
         <para>Some parts of the data model do not have translations. For example, the description of
-            report dates were added in English, Arabic and Kurdish-Sorani consecutively: "Date of
-            birth / تاريخ الولادة / بةرواري لة دايك بوون". Another problem is the lack of <emphasis
+            report dates were added in English, Arabic and Kurdish-Sorani consecutively: Date of
+            birth / تاريخ الولادة / بةرواري لة دايك بوون. Another problem is the lack of <emphasis
                 role="bold">ISO 639-3 ckb</emphasis>, or the Kurdish-Sorani language, in the
             underlying Java library. </para>
-        <para>The screen captures here show how the user interface looks in both English and Kurdish-Sorani:<screenshot>
-            <mediaobject>
-                <imageobject>
-                    <imagedata fileref="resources/images/use_cases/kurdistan_ipro_screen2.png"
-                        format="PNG" align="left" width="90%"/>
-                </imageobject>
-            </mediaobject>
-        </screenshot>
-            <screenshot>
+        <para>The screen captures here show the DHIS2-KRG Health Monitoring System user interface in
+            both English and Kurdish-Sorani:<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/use_cases/kurdistan_ipro_screen3.png"
+                        <imagedata
+                            fileref="resources/images/use_cases/kurdistan_ipro_screens2_3.png"
                             format="PNG" align="left" width="90%"/>
                     </imageobject>
                 </mediaobject>
-            </screenshot></para>            
+            </screenshot>
+        </para>            
     </section>
     <section><title>What's ahead?</title>
         <para>
             <emphasis role="bold">Creating national health numbers for all citizens of the
-                Autonomous Region of Iraqi Kurdistan.</emphasis>  The first focus for the upcoming
+                Autonomous Region of Iraqi Kurdistan.</emphasis> The first focus for the upcoming
             years is to introduce a national health identity (HNID) for each citizen accessing
             health services provided by the hospitals and health centers monitored by and
             coordinated with the MOH of the KRG. Once this is in place, the HNID will be integrated
-            into the Kurdish DHIS2 platform. </para>
+            into the Kurdish DHIS2 platform.<screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="resources/images/use_cases/kurdistan_parade_small.png"
+                            format="PNG" align="left" width="90%"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
         <para><emphasis role="bold">Expanding the system for a complete coverage of the Autonomous
             Region of Kurdistan.</emphasis>  The second major goal set for 2021 is to involve at
             least 300 health centers in the KRG-DHIS2 platform, in order to reach a complete
@@ -161,37 +172,37 @@
             government and Italian Ministry of foreign Affairs, here’s a recent <link
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 xlink:href="https://www.youtube.com/watch?v=-jIOUJkVGJw&amp;amp;feature=em-uploademail"
-                >video</link>.
-            <screenshot>
+                >video</link>. <screenshot>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_ipro_video.png"
                             format="PNG" align="left" width="90%"/>
                     </imageobject>
                 </mediaobject>
-            </screenshot>Video source: Kurdistan Region, DHIS2 Health Monitoring System, © IPRO
-            Research, Oct. 2016</para>
+            </screenshot><emphasis>Kurdistan Region, DHIS2 Health Monitoring System, © IPRO
+                Research, Oct. 2016</emphasis></para>
     </section>
     <section>
         <title>Handy resources</title>
         <itemizedlist>
             <listitem>
-                <para>Project web page: <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="http://www.informapro.it/krg-dhis.html"
-                    >http://www.informapro.it/krg-dhis.html</link></para>
+                <para>Find out more about KRG-DHIS2 on the <link
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="http://www.informapro.it/krg-dhis.html">project web
+                    page</link>.</para>
             </listitem>
             <listitem>
-                <para>KRG-DHIS2 Health Monitoring System documentation</para>
+                <para>Read the KRG-DHIS2 HMS documentation:</para>
                 <itemizedlist>
                     <listitem>
                         <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="https://krg-dhis.ipro-it.eu/api/documents/b8Uobi3Hqri/data"
-                            >User Manual</link>, version February 2016</para>
+                                xlink:href="https://krg-dhis.ipro-it.eu/api/documents/b8Uobi3Hqri/data"
+                                >User Manual</link>, version February 2016.</para>
                     </listitem>
                     <listitem>
                         <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="https://krg-dhis.ipro-it.eu/api/documents/tLCQli1uX2K/data"
-                            >How To</link></para>
+                                xlink:href="https://krg-dhis.ipro-it.eu/api/documents/tLCQli1uX2K/data"
+                                >How To</link> documentation.</para>
                     </listitem>
                 </itemizedlist>
             </listitem>
@@ -204,62 +215,91 @@
     </section>
     <section>
         <title>Contact us!</title>
-        <para>We are very keen to give feedback about the progress we are making with our KRG-DHIS2
-            project. If you’d like to ask us questions about our work you can reach out to us as
-            follows:</para>
-        <itemizedlist>
-            <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="mailto:leonardo.emberti.gialloreti@uniroma2.it">Mr. Leonardo
-                    Emberti Gialloreti</link></para>
-                <para>Project leader and medical supervisor at University of Tor Vergata, Rome,
-                    Italy </para>
-            </listitem>
-            <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="mailto:dario.corsini@informa.pro">Mr. Dario Corsini
-                </link></para>
-                <para>Project Management and team coordinator at IPRO, Rome, Italy </para>
-            </listitem>
-            <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="mailto:antonia.bezenchek@informa.pro">Ms. Antonia
-                    Bezenchek</link></para>
-                <para>IT management, DHIS2 implementation, translation, IT support at IPRO, Rome,
-                    Italy </para>
-            </listitem>
-            <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="mailto:iuri.fanti@informa.pro">Mr. Iuri Fanti</link>
-                </para>
-                <para>DHIS2 implementation and statistics at IPRO, Rome, Italy</para>
-            </listitem>
-            <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="mailto:faiqbasa@yahoo.com">Mr. Faiq Basa </link></para>
-                <para>Kurdish local management and medical supervision </para>
-            </listitem>
-            <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="mailto:revan.khorany@informa.pro">Mr. Revan Khorany</link>
-                </para>
-                <para>Kurdish local management, DHIS2 implementation and translation</para>
-            </listitem>
-            <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="mailto:francesca.incardona@informa.pro">Ms. Francesca
-                    Incadona</link>
-                </para>
-                <para>International relations and documentation at EuResist Network GEIE, Rome,
-                    Italy </para>
-            </listitem>
-            <listitem>
-                <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="mailto:marco.jorio@informa.pro">Mr. Vincenzo Jorio
-                </link></para>
-                <para>International and government relations at Ital Consult, Rome, Italy </para>
-            </listitem>
-        </itemizedlist>
+        <para>We're very keen to give feedback about the progress we're making with our KRG-DHIS2
+            project. If you’d like to ask us questions about our work, please reach out to us as
+            follows: <informaltable frame="all">
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                    <thead>
+                        <row>
+                            <entry>Title</entry>
+                            <entry>Contact details</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Mr. Leonardo Emberti Gialloreti<para>Project leader and medical
+                                    supervisor </para></entry>
+                            <entry><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="mailto:leonardo.emberti.gialloreti@uniroma2.it"
+                                    >leonardo.emberti.gialloreti@uniroma2.it</link>
+                                <para>University of Tor Vergata, Rome, Italy </para></entry>
+                        </row>
+                        <row>
+                            <entry>Mr. Dario Corsini <para>Project management and team
+                                    coordinator</para></entry>
+                            <entry><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="mailto:dario.corsini@informa.pro"
+                                    >dario.corsini@informa.pro</link><para>IPRO – Informapro, Rome,
+                                    Italy </para></entry>
+                        </row>
+                        <row>
+                            <entry>Ms. Antonia Bezenchek<para>IT management, DHIS2 implementation,
+                                    translation, IT support </para></entry>
+                            <entry><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="mailto:antonia.bezenchek@informa.pro"
+                                    >antonia.bezenchek@informa.pro </link><para>IPRO – Informapro,
+                                    Rome, Italy </para></entry>
+                        </row>
+                        <row>
+                            <entry>Mr. Iuri Fanti <para>DHIS2 implementation and statistics
+                                </para></entry>
+                            <entry><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="mailto:iuri.fanti@informa.pro"
+                                    >iuri.fanti@informa.pro</link>
+                                <para>IPRO - Informapro, Rome, Italy </para></entry>
+                        </row>
+                        <row>
+                            <entry>Mr. Faiq Basa <para>Kurdish local management and medical
+                                    supervision</para>
+                            </entry>
+                            <entry><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="mailto:faiqbasa@yahoo.com"
+                                >faiqbasa@yahoo.com</link></entry>
+                        </row>
+                        <row>
+                            <entry>Mr. Revan Khorany <para>Kurdish local management, DHIS2
+                                    implementation and translation</para>
+                            </entry>
+                            <entry><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="mailto:revan.khorany@informa.pro"
+                                    >revan.khorany@informa.pro</link></entry>
+                        </row>
+                        <row>
+                            <entry>Ms. Francesca Incadona <para>International relations and
+                                    documentation</para>
+                            </entry>
+                            <entry><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="mailto:francesca.incardona@informa.pro"
+                                    >francesca.incardona@informa.pro</link>
+                                <para>Euresist Network GEIE, Rome, Italy </para></entry>
+                        </row>
+                        <row>
+                            <entry>Mr. Vincenzo Jorio <para>International and government relations
+                                </para></entry>
+                            <entry><link xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="mailto:marco.jorio@informa.pro"
+                                    >marco.jorio@informa.pro </link><para>Ital Consult, Rome, Italy
+                                </para></entry>
+                        </row>
+                        <row>
+                            <entry/>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable></para>
         <screenshot>
             <mediaobject>
                 <imageobject>
@@ -268,6 +308,6 @@
                 </imageobject>
             </mediaobject>
         </screenshot>
-        <para>Image source: Opening a DHIS2 training center in KRG. © IPRO 2016.</para>
+        <para><emphasis>Opening a DHIS2 training center in KRG. © IPRO 2016.</emphasis></para>
     </section>
 </chapter>
