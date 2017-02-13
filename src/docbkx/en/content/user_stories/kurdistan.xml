@@ -8,17 +8,16 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="user_story_kurdistan">
     <title>DHIS2 in the Autonomous Region of Kurdistan, Iraq</title>
-    <para><emphasis>For the thousands of refugees stranded in camps across the war-torn Autonomous
-            Region of Iraqi Kurdistan, getting access to regular health care is not a
-            straightforward procedure.</emphasis><screenshot>
+    <para><emphasis>For the citizens of war-torn Iraq, as well as for the hundreds of thousands of
+            refugees stranded in camps and sheltered by the Autonomous Region of Kurdistan, getting
+            access to regular health care is not a straightforward procedure.</emphasis><screenshot>
             <mediaobject>
                 <imageobject>
                     <imagedata fileref="resources/images/use_cases/kurdistan_refugee_camp_roofs.png"
                         format="PNG" align="left" width="90%"/>
                 </imageobject>
             </mediaobject>
-        </screenshot><emphasis>Refugee camps in the Christian Ankawa suburb of Erbil © IPRO, Oct.
-            2016</emphasis></para>
+        </screenshot><emphasis>Refugee camp in Iraqi Kurdistan © IPRO, Oct. 2016</emphasis></para>
     <section><para><emphasis role="bold">In June 2015, a DHIS2 Health Information System</emphasis> was set up to
             assist the Kurdish health authorities in collecting population data and improving the
             access and quality of public health care.<screenshot>
@@ -30,14 +29,11 @@
                 </mediaobject>
             </screenshot></para></section>
     <section>
-        <para>A KRG-DHIS2 pilot project led by the <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="http://web.uniroma2.it/home/newlang/english">University of Tor
-                Vergata</link>, Rome, and realized by <link
+        <para>A KRG-DHIS2 pilot project, funded by the Italian Ministry of Foreign Affairs and International Cooperation, led by the <link xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="http://web.uniroma2.it/home/newlang/english">University of Rome Tor Vergata</link> in cooperation with the Ministry of Health of the Kurdistan Regional Government, and realized by <link
                 xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.informapro.it/"
                 >I-PRO</link> and <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="http://www.euresist.org/">EuResist</link> Network was deployed across a
-            set of pilot health centers and hospitals in the Kurdish governorates of Duhok, Erbil,
-            and Slemani.<screenshot>
+                    xlink:href="http://www.euresist.org/">EuResist Network</link> was deployed across a set of pilot health centers and hospitals in the Kurdish governorates of Duhok, Erbil and Slemani.<screenshot>
                 <mediaobject>
                     <imageobject>
                         <imagedata fileref="resources/images/use_cases/kurdistan_map.png"
@@ -151,7 +147,7 @@
             into the Kurdish DHIS2 platform.<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/use_cases/kurdistan_parade_small.png"
+                        <imagedata fileref="resources/images/use_cases/kurdistan_parade.png"
                             format="PNG" align="left" width="90%"/>
                     </imageobject>
                 </mediaobject>
