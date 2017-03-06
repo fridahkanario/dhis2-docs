@@ -85,6 +85,20 @@
 							<embedFile>${project.basedir}/src/fonts/DejaVuSans.ttf</embedFile>
 							<metricsFile>${project.basedir}/target/fonts/DejaVuSans-metrics.xml</metricsFile>
 						</font>
+						<font>
+							<name>DejaVu Sans</name>
+							<style>normal</style>
+							<weight>bold</weight>
+							<embedFile>${project.basedir}/src/fonts/DejaVuSans-Bold.ttf</embedFile>
+							<metricsFile>${project.basedir}/target/fonts/DejaVuSans-Bold-metrics.xml</metricsFile>
+						</font>
+						<font>
+							<name>DejaVu Sans</name>
+							<style>italic</style>
+							<weight>normal</weight>
+							<embedFile>${project.basedir}/src/fonts/DejaVuSans-Italic.ttf</embedFile>
+							<metricsFile>${project.basedir}/target/fonts/DejaVuSans-Italic-metrics.xml</metricsFile>
+						</font>
 					</fonts>
 					<useIdAsFilename>true</useIdAsFilename>
 				</configuration>

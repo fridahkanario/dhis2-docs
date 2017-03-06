@@ -158,6 +158,7 @@
                       Header
     ################################################### -->  
 
+    <xsl:param name="header.column.widths">3 2 3</xsl:param>
     <!-- More space in the center header for long text -->
     <xsl:attribute-set name="header.content.properties">
         <xsl:attribute name="font-family">DejaVu Sans</xsl:attribute>
@@ -172,13 +173,14 @@
         <xsl:attribute name="margin-right">-5em</xsl:attribute>
 -->
     </xsl:attribute-set>
-
+    
 
 	<xsl:template name="header.content">
 	  <xsl:param name="pageclass" select="''"/>
 	  <xsl:param name="sequence" select="''"/>
 	  <xsl:param name="position" select="''"/>
 	  <xsl:param name="gentext-key" select="''"/>
+          
 <!--
 	  <fo:block>
 	    <xsl:value-of select="$pageclass"/>
