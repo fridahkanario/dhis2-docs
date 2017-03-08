@@ -1918,12 +1918,6 @@ http://server/api/26/constants/ID</screen></para>
               <entry>Free text description.</entry>
             </row>
             <row>
-              <entry>UUID</entry>
-              <entry>No</entry>
-              <entry/>
-              <entry>UUID. Max 36 char.</entry>
-            </row>
-            <row>
               <entry>Opening date</entry>
               <entry>No</entry>
               <entry>1970-01-01</entry>

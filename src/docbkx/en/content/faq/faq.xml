@@ -33,5 +33,17 @@
         </itemizedlist>
       </answer>
     </qandaentry>
+    <qandaentry>
+      <question>
+        <para> I have downloaded DHIS 2 from  <link xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="https://www.dhis2.org/downloads">https://www.dhis2.org/downloads</link> but
+          when i try to enter the system it needs a username and password. Which should I
+          use?</para>
+      </question>
+      <answer>
+        <para>By default, the username will be "admin" and the password "district". Usernames and
+          passwords are case sensitive. </para>
+      </answer>
+    </qandaentry>
   </qandaset>
 </chapter>

@@ -140,17 +140,19 @@ Come up with a better title. What is the real task you do?" flag="done"?>Manage<
         <?oxy_comment_start author="cecilia" timestamp="20160630T180433+0200" comment="Before release: Verify that para is correct.
 - Ok in output." flag="done"?>
         <para>You can disable data elements and category options for data entry. That means it won’t
-            be possible to enter data into these fields during data entry.</para>
+            be possible to enter data into these fields during data entry. </para>
         <?oxy_comment_end?>
-        <screenshot>
-            <mediaobject>
-                <imageobject>
-                    <imagedata width="80%" align="center"
-                        fileref="resources/images/datasets/section_form_grey_fields.png"
-                        format="PNG"/>
-                </imageobject>
-            </mediaobject>
-        </screenshot>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="resources/images/datasets/section_form_grey_fields.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
         <orderedlist>
             <listitem>
                 <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
@@ -173,6 +175,13 @@ Come up with a better title. What is the real task you do?" flag="done"?>Manage<
             </listitem>
             <listitem>
                 <para>Select which fields you want to disable.</para>
+                <para>
+                    <note>
+                        <para>If you've sections that contain data elements assigned to multiple
+                            category combinations, switch between the category combinations to view
+                            all fields.</para>
+                    </note>
+                </para>
             </listitem>
             <listitem>
                 <para>Click <emphasis role="bold">Save</emphasis>.</para>
