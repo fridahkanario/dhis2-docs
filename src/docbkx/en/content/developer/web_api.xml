@@ -10245,10 +10245,6 @@ interval=WEEK" -u admin:district</screen>
               <entry>Tracked entity attribute</entry>
             </row>
             <row>
-              <entry>TrackedEntityAttributeGroup</entry>
-              <entry>Tracked entity attribute group</entry>
-            </row>
-            <row>
               <entry>TrackedEntity</entry>
               <entry>Tracked entity</entry>
             </row>
