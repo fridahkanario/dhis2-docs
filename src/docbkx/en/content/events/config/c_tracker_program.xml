@@ -236,18 +236,6 @@ WIll move into Mtn app for 2.26"?>section<?oxy_comment_end?></para>
                 </row>
                 <row>
                     <entry>
-                        <para>Tracked entity attribute group</para>
-                    </entry>
-                    <entry>
-                        <para>Used to display attributes in default registration form by
-                            groups.</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, clone, delete, show details and translate</para>
-                    </entry>
-                </row>
-                <row>
-                    <entry>
                         <para>Relationship type</para>
                     </entry>
                     <entry>
