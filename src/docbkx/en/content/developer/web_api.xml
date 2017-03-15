@@ -1393,8 +1393,11 @@ http://server/api/26/constants/ID</screen></para>
       <para>In order to add or remove objects to or from a collection of objects you can use the
           following
           pattern:<screen>/api/26/{collection-object}/{collection-object-id}/{collection-name}/{object-id}</screen></para>
-      <para>You should use the POST method to add, and the DELETE method to remove an object. The
-        components of the pattern are:</para>
+      <para>You should use the POST method to add, and the DELETE method to remove an object.
+      When there is a many-to-many relationship between objects, you first need to determine which object
+      owns the relationship. If it isn't clear which object this is, you may wish to try the call
+      both ways to see which works.</para>
+      <para>The components of the pattern are:</para>
       <itemizedlist>
         <listitem>
           <para>collection object: The type of objects that owns the collection you want to
