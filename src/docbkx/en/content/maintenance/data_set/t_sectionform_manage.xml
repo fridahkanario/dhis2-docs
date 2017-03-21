@@ -45,9 +45,7 @@
                     entry, select <emphasis role="bold">Show column totals</emphasis>.</para>
             </listitem>
             <listitem>
-                <para>Select a <emphasis role="bold">Category
-                        <?oxy_comment_start author="cecilia" timestamp="20160629T150155+0200" comment="For SMe: Only default to choose... What does default mean?
-- Depends on the cat combo, not always default." flag="done"?>combination<?oxy_comment_end?></emphasis>.</para>
+                <para>Assign data elements to the section:</para>
                 <para>
                     <note>
                         <?oxy_comment_start author="cecilia" timestamp="20160629T150351+0200" comment="For SME: Still correct?
@@ -56,9 +54,65 @@
                         <?oxy_comment_end?>
                     </note>
                 </para>
-            </listitem>
-            <listitem>
-                <para>Select data elements and assign them.</para>
+                <orderedlist>
+                    <listitem>
+                        <para>(Optional) Select a <emphasis role="bold">Category
+                                <?oxy_comment_start author="cecilia" timestamp="20160629T150155+0200" comment="For SMe: Only default to choose... What does default mean?
+- Depends on the cat combo, not always default." flag="done"?>combination<?oxy_comment_end?>
+                                filter</emphasis>.</para>
+                        <para>
+                            <informaltable frame="all">
+                                <tgroup cols="2">
+                                    <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                                    <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                                    <thead>
+                                        <row>
+                                            <entry>
+                                                <para>Option</para>
+                                            </entry>
+                                            <entry>
+                                                <para>Description</para>
+                                            </entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry>
+                                                <para><emphasis role="bold">None</emphasis></para>
+                                            </entry>
+                                            <entry>
+                                                <para>Displays all data elements that don't have a
+                                                  category combination.</para>
+                                            </entry>
+                                        </row>
+                                        <row>
+                                            <entry>
+                                                <para><emphasis role="bold">&lt;No
+                                                  filter></emphasis></para>
+                                            </entry>
+                                            <entry>
+                                                <para>Displays all data elements.</para>
+                                            </entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </informaltable>
+                        </para>
+                        <itemizedlist>
+                            <listitem>
+                                <para>Select <emphasis role="bold">None</emphasis> to display all
+                                    data elements that don't have a category combination.</para>
+                            </listitem>
+                            <listitem>
+                                <para> Select <emphasis role="bold">&lt;No filter></emphasis> to
+                                    display all data elements.</para>
+                            </listitem>
+                        </itemizedlist>
+                    </listitem>
+                    <listitem>
+                        <para>Select data elements and assign them.</para>
+                    </listitem>
+                </orderedlist>
             </listitem>
             <listitem>
                 <para>(Optional) Sort the data elements within the section by using the up and down
@@ -72,7 +126,7 @@
                     <?oxy_comment_start author="cecilia" timestamp="20160630T172809+0200" comment="At next release: Add x-refs to the steps to claify." flag="done"?>add<?oxy_comment_end?>
                     section steps for each section you want to have in your section form.</para>
                 <?oxy_comment_start author="cecilia" timestamp="20160630T173012+0200" comment="At next release: Rewrite para." flag="done"?>
-                <para>In the <emphasis role="bold">Data entry</emphasis> app you can now use the
+                <para>In the <emphasis role="bold">Data Entry</emphasis> app you can now use the
                     section form. The section form appears automatically when sections are available
                     for the selected data set. Data sets which have section forms will automatically
                     display the section form.</para>
