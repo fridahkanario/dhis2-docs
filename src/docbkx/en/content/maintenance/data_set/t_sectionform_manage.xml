@@ -46,20 +46,20 @@
             </listitem>
             <listitem>
                 <para>Assign data elements to the section:</para>
-                <para>
-                    <note>
-                        <?oxy_comment_start author="cecilia" timestamp="20160629T150351+0200" comment="For SME: Still correct?
- - Yes, for now. " flag="done"?>
-                        <para>You can only use one category combination per section.</para>
-                        <?oxy_comment_end?>
-                    </note>
-                </para>
                 <orderedlist>
                     <listitem>
                         <para>(Optional) Select a <emphasis role="bold">Category
                                 <?oxy_comment_start author="cecilia" timestamp="20160629T150155+0200" comment="For SMe: Only default to choose... What does default mean?
 - Depends on the cat combo, not always default." flag="done"?>combination<?oxy_comment_end?>
                                 filter</emphasis>.</para>
+                        <para>
+                            <note>
+                                <?oxy_comment_start author="cecilia" timestamp="20160629T150351+0200" comment="For SME: Still correct?
+ - Yes, for now. " flag="done"?>
+                                <para>You can only use one category combination per section.</para>
+                                <?oxy_comment_end?>
+                            </note>
+                        </para>
                         <para>
                             <informaltable frame="all">
                                 <tgroup cols="2">
@@ -98,16 +98,6 @@
                                 </tgroup>
                             </informaltable>
                         </para>
-                        <itemizedlist>
-                            <listitem>
-                                <para>Select <emphasis role="bold">None</emphasis> to display all
-                                    data elements that don't have a category combination.</para>
-                            </listitem>
-                            <listitem>
-                                <para> Select <emphasis role="bold">&lt;No filter></emphasis> to
-                                    display all data elements.</para>
-                            </listitem>
-                        </itemizedlist>
                     </listitem>
                     <listitem>
                         <para>Select data elements and assign them.</para>
