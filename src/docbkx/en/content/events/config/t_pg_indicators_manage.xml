@@ -518,6 +518,18 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
               <entry>The count of tracked entity instances (useful in combination with
                 filters).</entry>
             </row>
+            <row>
+              <entry>program_stage_name</entry>
+              <entry>Can be used in filters for including only certain program stages in a filter
+                for tracker programs. Uses the name of the program stage:
+                <screen>V{program_stage_name} == 'ANC first visit'</screen></entry>
+            </row>
+            <row>
+              <entry>program_stage_id</entry>
+              <entry>Can be used in filters for including only certain program stages in a filter
+                for tracker programs. Uses the unique identifier of the program stage:
+                <screen>V{program_stage_id} == 'YPSSfbmAtt1'</screen></entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
