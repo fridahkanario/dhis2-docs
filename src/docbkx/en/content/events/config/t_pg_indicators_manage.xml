@@ -158,8 +158,12 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
           </listitem>
         </itemizedlist></para>
       <para>The expression is a mathematical expression that can contain operators which include
-        multiply, divide, plus and minus. The expression will be evaluated <emphasis role="italic"
-          >per event</emphasis>, then aggregated according to its aggregation type.</para>
+        multiply, divide, plus and minus. For single event programs and tracker programs with
+        analytics type <emphasis role="italic">event</emphasis>, the expression will be evaluated
+          <emphasis role="italic">per event </emphasis>, then aggregated according to its
+        aggregation type. For tracker programs with analytics type <emphasis role="italic"
+          >enrollment</emphasis>, the expression will be evaluated <emphasis role="italic">per
+          enrollment</emphasis>, then aggregated according to its aggregation type.</para>
       <screenshot>
         <title>Program indicator list with context menu</title>
         <mediaobject>
@@ -179,6 +183,126 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
           this:<screen>(sum(#{mCXR7u4kNBW.K0A4BauXJDl} * #{mCXR7u4kNBW.NFkjsNiQ9PH}) / sum(#{mCXR7u4kNBW.NFkjsNiQ9PH})) * 100</screen></para>
         <para>Note how the "sum" aggregation operator is used inside the expression itself.</para>
       </example>
+    </section>
+    <section>
+      <title>Data element and attribute value types</title>
+      <para>The table below shows how to write expressions and filters for each of the different
+        data element and attribute value types:</para>
+      <table frame="all">
+        <title>Examples per value type</title>
+        <tgroup cols="2">
+          <colspec colnum="1" colname="c1" colwidth="250"/>
+          <colspec colnum="2" colname="c2" colwidth="*"/>
+          <thead>
+            <row>
+              <entry>Value types</entry>
+              <entry>Example syntax</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>Integer</para>
+                  </listitem>
+                  <listitem>
+                    <para>Negative integer</para>
+                  </listitem>
+                  <listitem>
+                    <para>Positive or zero integer</para>
+                  </listitem>
+                  <listitem>
+                    <para>Positive integer</para>
+                  </listitem>
+                  <listitem>
+                    <para> Number</para>
+                  </listitem>
+                  <listitem>
+                    <para> Percentage</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>Numeric fields, can be used for aggregation as an expression, or in filters:
+                <screen>#{mCXR7u4kNBW.K0A4BauXJDl} >= 3</screen>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>Yes/No</para>
+                  </listitem>
+                  <listitem>
+                    <para>Yes only</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>Boolean fields. Yes is translated to numeric 1, No to numeric 0. Can be used
+                for aggregation as an expression, or in filters:
+                <screen>#{mCXR7u4kNBW.Popa3BauXJss} == 1</screen>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>Text</para>
+                  </listitem>
+                  <listitem>
+                    <para>Long text</para>
+                  </listitem>
+                  <listitem>
+                    <para>Phone number</para>
+                  </listitem>
+                  <listitem>
+                    <para>Email</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>Text fields. Can be checked for equality in filters:
+                <screen>#{mCXR7u4kNBW.L8K4BauIKsl} == 'LiteralValue'</screen>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>Date</para>
+                  </listitem>
+                  <listitem>
+                    <para>Age</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>Date fields. Most useful when combined with a d2:daysBetween function, which
+                produces a number that can be aggregated as an expression or used in filters:
+                <screen>d2:daysBetween(#{mCXR7u4kNBW.JKJKBausssl},V{enrollment_date}) > 100</screen>
+                Can also directly be checked for equality in filters:
+                <screen>#{mCXR7u4kNBW.JKJKBausssl} == '2011-10-28'</screen>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>Date</para>
+                  </listitem>
+                  <listitem>
+                    <para>Age</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>Date fields. Most useful when combined with a d2:daysBetween function, which
+                produces a number that can be aggregated as an expression or used in filters:
+                <screen>d2:daysBetween(#{mCXR7u4kNBW.JKJKBausssl},V{enrollment_date}) > 100</screen>
+                Can also directly be checked for equality in filters:
+                <screen>#{mCXR7u4kNBW.JKJKBausssl} == '2011-10-28'</screen>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
     </section>
     <section>
       <title>About
@@ -723,4 +847,3 @@ Marks: something to do with edit rights, verify with Lars." flag="done"?>s<?oxy_
     </orderedlist>
   </section>
 </section>
-
