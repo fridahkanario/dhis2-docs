@@ -166,7 +166,7 @@ OAuth2 clients
                 default value is 50,000.</para>
               <para>
                 <warning>
-                  <para>Use the setting <emphasis role="bold">Unlimited</emphasis> with care, it
+                  <para>Use the setting <emphasis role="bold">Unlimited</emphasis> carefully, it
                     might result in a very high load on your server.</para>
                 </warning>
               </para>
@@ -180,13 +180,14 @@ OAuth2 clients
               <para>Defines an indicator group where the member indicators should describe data
                 about the organisation units' infrastructure.</para>
               <para>You can view the infrastructural data in the <emphasis role="bold"
-                  >GIS</emphasis> app
-                in<?oxy_comment_start author="cecilia" timestamp="20170322T111813+0100" comment="What is this?
+                  >GIS</emphasis> app: right-click a
+                <?oxy_comment_start author="cecilia" timestamp="20170322T111813+0100" comment="What is this?
 
 Show information in GIS app, when clicking on an org unit.
 
-Used anywhere else? - Check with Jan."?>
-                the facility information sheet.<?oxy_comment_end?></para>
+Used anywhere else? - Check with Jan."?>facility
+                and click <emphasis role="bold">Show
+                information</emphasis>.<?oxy_comment_end?></para>
             </entry>
           </row>
           <row>
@@ -198,14 +199,19 @@ Used anywhere else? - Check with Jan."?>
                 about the organisation units' infrastructure.</para>
               <para>
                 <example>
-                  <para>Examples of  infrastructural data elements are population, doctors, beds,
-                    Internet connectivity and climate.</para>
+                  <para>Infrastructural data elements can be population, doctors, beds, Internet
+                    connectivity and climate.</para>
                 </example>
               </para>
               <para>You can view the infrastructural data in the <emphasis role="bold"
-                  >GIS</emphasis> app
-                in<?oxy_comment_start author="cecilia" timestamp="20170322T111813+0100" comment="What is this?"?>
-                the facility information sheet.<?oxy_comment_end?></para>
+                  >GIS</emphasis> app: right-click a
+                <?oxy_comment_start author="cecilia" timestamp="20170322T111813+0100" comment="What is this?
+
+Show information in GIS app, when clicking on an org unit.
+
+Used anywhere else? - Check with Jan."?>facility
+                and click <emphasis role="bold">Show
+                information</emphasis>.<?oxy_comment_end?></para>
             </entry>
           </row>
           <row>
@@ -214,27 +220,40 @@ Used anywhere else? - Check with Jan."?>
             </entry>
             <entry>
               <para>Sets the frequency for which the data elements in the infrastructural data
-                elements group are captured. </para>
+                elements group are
+                <?oxy_comment_start author="cecilia" timestamp="20170331T140801+0200" comment="Do you means &quot;diplayed&quot;?
+You don&apos;t really &quot;capture&quot; data in the GIS app."?>captured<?oxy_comment_end?>.</para>
               <para>This will typically be yearly. When viewing the infrastructural data you will be
                 able to select the time period of the data source.</para>
+              <para>You can view the infrastructural data in the <emphasis role="bold"
+                  >GIS</emphasis> app: right-click a
+                <?oxy_comment_start author="cecilia" timestamp="20170322T111813+0100" comment="What is this?
+
+Show information in GIS app, when clicking on an org unit.
+
+Used anywhere else? - Check with Jan."?>facility
+                and click <emphasis role="bold">Show
+                information</emphasis>.<?oxy_comment_end?></para>
             </entry>
           </row>
           <row>
             <entry>
               <para><emphasis role="bold">Default relative period for analysis</emphasis></para>
             </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
             <entry>
               <para>TBA</para>
             </entry>
+            <?oxy_custom_end?>
           </row>
           <row>
             <entry>
-              <para><emphasis role="bold">Feedback recipients</emphasis></para>
+              <para><emphasis role="bold">Feedback
+                  <?oxy_comment_start author="cecilia" timestamp="20170331T140828+0200" comment="Setting should be moved into Messaging section in app."?>recipients<?oxy_comment_end?></emphasis></para>
             </entry>
             <entry>
-              <para>Defines a user group where the members will receive all messages being sent
-                through the function for writing feedback in the <emphasis role="bold"
-                  >Dashboard</emphasis> app.</para>
+              <para>Defines a user group where the members will receive all messages sent via  the
+                feedback function in the <emphasis role="bold">Dashboard</emphasis> app.</para>
               <para>This will typically be members of the super user team who are able to support
                 and answer questions coming from end-users.</para>
             </entry>
@@ -246,8 +265,8 @@ Used anywhere else? - Check with Jan."?>
             <entry>
               <para>Defines how many levels in the organisation unit hierarchy will be available
                 offline in the organisation unit tree widget. </para>
-              <para>Under normal circumstances you can leaves this on the lowest level, which is
-                default behavior. </para>
+              <para>Under normal circumstances you can leave this on the lowest level, which is
+                default is the default setting.</para>
               <para>It can be useful to set it to a higher level to reduce initial load time in
                 cases where you have a large number of organisation units, typically more than 30
                 000.</para>
@@ -258,22 +277,24 @@ Used anywhere else? - Check with Jan."?>
               <para><emphasis role="bold">Data analysis std dev factor</emphasis></para>
             </entry>
             <entry>
-              <para>Sets the number of standard deviations  used in the outlier analysis performed
-                on the captured data in the <emphasis role="bold">Data Entry</emphasis> app.</para>
+              <para>Sets the number of standard deviations used in the outlier analysis performed on
+                the captured data in the <emphasis role="bold">Data Entry</emphasis> app.</para>
               <para>The default value is 2. A high value will catch less outlier values than a low
                 value.</para>
             </entry>
           </row>
           <row>
             <entry>
-              <para><emphasis role="bold">Phone number area code</emphasis></para>
+              <para><?oxy_comment_start author="cecilia" timestamp="20170331T141034+0200" comment="Setting should be moved into Messaging section in app."?><emphasis
+                  role="bold">Phone number area code</emphasis><?oxy_comment_end?></para>
             </entry>
             <entry>
-              <para>The area code for the area in which your deployment is located. Used for sending
-                and receiving SMS. Typically, this would be a country code.</para>
+              <para>The area code for the area in which your deployment is located.</para>
+              <para>Used for sending and receiving SMS. Typically, this would be a country
+                code.</para>
               <para>
                 <example>
-                  <para>+260, the country code for Zambia</para>
+                  <para>+260 - country code for Zambia</para>
                 </example>
               </para>
             </entry>
@@ -283,26 +304,37 @@ Used anywhere else? - Check with Jan."?>
               <para><emphasis role="bold">Enable multi-organisation unit forms</emphasis></para>
             </entry>
             <entry>
-              <para>Enables support for entering data forms for multiple organisation units at the
-                same time.</para>
-              <para>In the <emphasis role="bold">Data Entry</emphasis> app, click on the parent
-                organisation unit for the children that you want to enter data for, and the data set
-                list will include data sets that are assigned to the children of that parent.</para>
+              <para>Enables support to enter data forms for multiple organisation units at the same
+                time in the <emphasis role="bold">Data Entry</emphasis> app.</para>
+              <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+              <para>If you've enabled this setting, you can in the <emphasis role="bold">Data
+                  Entry</emphasis> app, click on the parent organisation unit for the children that
+                you want to enter data for, and the data set list will include data sets that are
+                assigned to the children of that parent.</para>
+              <?oxy_custom_end?>
             </entry>
           </row>
           <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          <?oxy_comment_start author="cecilia" timestamp="20170331T143209+0200" comment="No longer in UI, still relevant?" mid="11"?>
           <row>
+            <?oxy_custom_end?>
             <entry>
               <para><emphasis role="bold">Days after period end to qualify for timely data
                   submission</emphasis></para>
             </entry>
             <entry>
               <para>Sets the number of days after the end of a period in which a data entry form
-                must be marked as complete in order to be considered timely. This affects the
-                &quot;reporting rate&quot; tool in the reporting module which lists forms marked as
-                complete as well as marked as complete in time. The default value is 15.</para>
+                must be marked as complete in order to be considered timely.</para>
+              <para>The setting affects the <emphasis role="bold">Reporting rate summary</emphasis>
+                report you create in the <emphasis role="bold">Reports</emphasis> app. This report
+                lists data entry forms marked as complete as well as data entry forms marked as
+                completed on time.</para>
+              <para>The default value is 15.</para>
             </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230" mid="12"?>
           </row>
+          <?oxy_comment_end mid="11"?>
+          <?oxy_comment_start author="cecilia" timestamp="20170331T143100+0200" comment="No longer in UI, still relevant?" mid="13"?>
           <row>
             <?oxy_comment_start author="cecilia" timestamp="20170321T114612+0100" comment="Not in UI anymore, functionality removed or moved?"?>
             <entry>
@@ -311,16 +343,19 @@ Used anywhere else? - Check with Jan."?>
             </entry>
             <?oxy_comment_end?>
             <entry>
-              <para> Defines whether aggregated indicator values with zero as the numerator value
-                should be written to the indicator data mart table. Having such values written is
-                required for instance when connecting Excel pivot tables to the data mart as Excel
-                will need the numerator data to correctly aggregate up in the organisation unit
-                hierarchy. If third-party tools like Excel are not used with the application this
-                will reduce the total number of values written to the data mart (which again will
-                improve performance) and could safely be set to omit.</para>
+              <para>Defines whether aggregated indicator values with zero as the numerator value
+                should be written to the indicator data mart table.</para>
+              <para>You must write such values for example when connecting Excel pivot tables to the
+                data mart since Excel will need the numerator data to correctly aggregate up in the
+                organisation unit hierarchy.</para>
+              <para>If third-party tools are not used with DHIS2, this will reduce the total number
+                of values written to the data mart (which again will improve performance) and could
+                safely<?oxy_comment_start author="cecilia" timestamp="20170331T142953+0200" comment="What do you set to &quot;omit&quot;? Do you select the setting or not?"?>
+                be set to omit.<?oxy_comment_end?></para>
             </entry>
           </row>
-          <?oxy_custom_end?>
+          <?oxy_custom_end mid="12"?>
+          <?oxy_comment_end mid="13"?>
         </tbody>
       </tgroup>
     </table>
@@ -348,11 +383,13 @@ Used anywhere else? - Check with Jan."?>
               <para><emphasis role="bold">Default relative period for analysis</emphasis></para>
             </entry>
             <entry>
-              <para>Defines the relative period to use by default in analytics apps, for example the
-                  <emphasis role="bold">Pivot Table</emphasis> and <emphasis role="bold"
-                  >GIS</emphasis> app. </para>
-              <para>This relative period will be automatically selected when the apps are opened,
-                and should likely be the most commonly used relative period among your users.</para>
+              <para>Defines the relative period to use by default in analytics app: <emphasis
+                  role="bold">Data Visualizer</emphasis>, <emphasis role="bold">Event
+                  Reports</emphasis>, <emphasis role="bold">Event Visualizer</emphasis>, <emphasis
+                  role="bold">GIS</emphasis> and <emphasis role="bold">Pivot Table</emphasis> apps.
+                The relative period will be automatically selected when you open these apps.</para>
+              <para>Recommended setting: the most commonly used relative period among your
+                users.</para>
             </entry>
           </row>
           <row>
@@ -360,15 +397,15 @@ Used anywhere else? - Check with Jan."?>
               <para><emphasis role="bold">Cacheability</emphasis></para>
             </entry>
             <entry>
-              <para>Indicates whether analytics data responses should be
+              <para>Sets whether analytics data responses should be
                 <?oxy_comment_start author="cecilia" timestamp="20170322T163146+0100" comment="What does this mean?"?>served<?oxy_comment_end?>
                 with public or private visibility.</para>
               <para>
-                <emphasis>Private</emphasis>: intermediary proxies and caches are not allowed to
-                store a copy of the response; only the client itself such as web browsers can cache
-                the response.</para>
-              <para><emphasis>Public</emphasis>: both intermediary caches and clients can store a
-                copy.</para>
+                <emphasis role="bold">Private</emphasis>: intermediary proxies and caches are not
+                allowed to store a copy of the response; only the client itself such as web browsers
+                can cache the response.</para>
+              <para><emphasis role="bold">Public</emphasis>: both intermediary caches and clients
+                can store a copy.</para>
             </entry>
           </row>
           <row>
@@ -376,14 +413,21 @@ Used anywhere else? - Check with Jan."?>
               <para><emphasis role="bold">Cache strategy</emphasis></para>
             </entry>
             <entry>
-              <para>Decides for how long reports and responses related to analysis should be cached. </para>
-              <para>If you are using the scheduled, nightly analytics tables update it makes sense
-                to set this to &quot;Cache until 6 AM tomorrow&quot;. This is because
-                <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>we<?oxy_custom_end?>
-                know that data in reports change at that time, and you can safely cache data up to
-                the moment when the analytics tables are updated. </para>
-              <para>If you are loading data continuously into the analytics tables you should set it
-                to &quot;No cache&quot;.</para>
+              <para>Decides for how long reports and responses related to
+                <?oxy_comment_start author="cecilia" timestamp="20170403T103239+0200" comment="Analytics?"?>analysis<?oxy_comment_end?>
+                should be cached.</para>
+              <para>If you use the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T103436+0200" comment="What is the &quot;scheduled, nightly analytics tables update&quot;? In which app do you set this?"?>scheduled,
+                nightly
+                <?oxy_comment_start author="cecilia" timestamp="20170403T103009+0200" comment="What is an analytics table? Reports?"?>analytics
+                tables<?oxy_comment_end?> updat<?oxy_comment_end?>e, select <emphasis role="bold"
+                  >Cache until 6 AM tomorrow</emphasis>. This is because data in reports change at
+                that time, and you can safely cache data up to the moment when the
+                <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>analytics
+                tables<?oxy_custom_end?> are updated.</para>
+              <para>If you are loading data continuously into
+                the<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?> analytics
+                tables, <?oxy_custom_end?>select <emphasis role="bold">No cache</emphasis>.</para>
             </entry>
           </row>
           <row>
@@ -392,8 +436,9 @@ Used anywhere else? - Check with Jan."?>
                   analytics</emphasis></para>
             </entry>
             <entry>
-              <para>Indicates whether and for how long back in time the analytics engine should hide
-                unapproved data. </para>
+              <para>Sets whether and for how long back in time
+                the<?oxy_comment_start author="cecilia" timestamp="20170403T103504+0200" comment="What&apos;s the &quot;analytics&quot; engine?"?>
+                analytics engine <?oxy_comment_end?>should hide unapproved data.</para>
               <para><emphasis role="bold">Never check approval</emphasis>: no data will be hidden,
                 irrespective of its data approval status. </para>
               <para><emphasis role="bold">Check approval for all data</emphasis>: approval status
@@ -408,9 +453,10 @@ Used anywhere else? - Check with Jan."?>
               <para><emphasis role="bold">Threshold for analytics data caching</emphasis></para>
             </entry>
             <entry>
-              <para>Indicates whether to enable caching data older than the specified number of
-                years only. This allows for returning the most recent data directly with no caching,
-                while serving cached version of older data for performance concerns.</para>
+              <para>Sets whether to enable caching data older than the specified number of years
+                only.</para>
+              <para>This allows for returning the most recent data directly with no caching, while
+                serving cached version of older data for performance concerns.</para>
             </entry>
           </row>
           <row>
@@ -420,9 +466,11 @@ Used anywhere else? - Check with Jan."?>
             </entry>
             <entry>
               <?oxy_comment_start author="cecilia" timestamp="20170322T163946+0100" comment="Reword"?>
-              <para>Indicates whether aggregate data values where the data period falls outside the
-                start and end date of the category options of the data attribute category option
-                combo should be filtered out of the analytics tables when generated.</para>
+              <para>Sets whether aggregate data values where the data period falls outside the start
+                and end date of the category options of the data attribute category option
+                combination should be filtered out of the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T103811+0200" comment="What&apos;s an &quot;analytics table&quot;?"?>analytics
+                tables<?oxy_comment_end?> when generated.</para>
               <?oxy_comment_end?>
             </entry>
           </row>
@@ -431,9 +479,11 @@ Used anywhere else? - Check with Jan."?>
               <para><emphasis role="bold">Put analytics in maintenance mode</emphasis></para>
             </entry>
             <entry>
-              <para>Puts the analytics engine / Web API resource in maintenance mode, implying that
-                503 Service Unavailable will be returned for all requests. </para>
-              <para>This is useful when you need to perform maintenance on the server like
+              <para>Puts the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T110222+0200" comment="What&apos;s an &quot;analytics engine&quot;?"?>analytics
+                engine<?oxy_comment_end?> and web API resource in maintenance mode. This means that
+                "503 Service Unavailable" will be returned for all requests.</para>
+              <para>This is useful when you need to perform maintenance on the server, for example
                 rebuilding indexes while the server is running in production, in order to reduce
                 load and more efficiently carry out the maintenance.</para>
             </entry>
@@ -479,8 +529,9 @@ Used anywhere else? - Check with Jan."?>
             <entry>
               <para>Sets the number of CPU cores of your database server.</para>
               <para>This allows the system to perform optimally when the database is hosted on a
-                different server than the application server, as the analytics engine scales
-                linearly on the number of available cores.</para>
+                different server than the application server, as the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T110602+0200" comment="What&apos;s an &quot;analytics engine&quot;?"?>analytics
+                engine<?oxy_comment_end?> scales linearly on the number of available cores.</para>
             </entry>
           </row>
           <row>
@@ -488,9 +539,15 @@ Used anywhere else? - Check with Jan."?>
               <para><emphasis role="bold">System notifications email address</emphasis></para>
             </entry>
             <entry>
-              <para>Defines the email address which will receive system notifications.</para>
-              <para>Notifications about failures in processes such as analytics table generation
-                will be sent here. This is useful for application monitoring.</para>
+              <para>Defines the email address which will receive system
+                <?oxy_comment_start author="cecilia" timestamp="20170403T110705+0200" comment="Which notifications? 
+From DHIS2 messaging?
+Some type of server maintenance?
+Program notifications??"?>notifications<?oxy_comment_end?>.</para>
+              <para>Notifications about failures in processes such
+                as<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?> analytics
+                table<?oxy_custom_end?> generation will be sent here. This is useful for application
+                monitoring.</para>
             </entry>
           </row>
           <row>
@@ -499,19 +556,19 @@ Used anywhere else? - Check with Jan."?>
             </entry>
             <entry>
               <para>Defines the full, externally accessible base URL for your server.</para>
-              <para>
-                <example>
-                  <para><emphasis>https://apps.dhis2.org/demo</emphasis> is the server base URL for
-                    the DHIS2 demo server.</para>
-                </example>
-              </para>
-              <para>The URL is used to provide links to this server from external locations such as
-                in emails sent from the system. </para>
+              <para>The URL is used to provide links to your server from external locations such as
+                emails sent from the system.</para>
               <para>
                 <note>
                   <para>If you don't specify a server base URL, emails sent from the DHIS2 messaging
                     system will not contain a reply link.</para>
                 </note>
+              </para>
+              <para>
+                <example>
+                  <para><emphasis>https://apps.dhis2.org/demo</emphasis> is the server base URL for
+                    the DHIS2 demo server.</para>
+                </example>
               </para>
             </entry>
           </row>
@@ -557,7 +614,8 @@ Used anywhere else? - Check with Jan."?>
           <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
           <row>
             <entry>
-              <para><emphasis role="bold">Select language</emphasis></para>
+              <para><?oxy_comment_start author="cecilia" timestamp="20170403T111440+0200" comment="At next revision, add graphic that illustrates the different settings."?><emphasis
+                  role="bold">Select language</emphasis><?oxy_comment_end?></para>
             </entry>
             <entry>
               <para>Sets the language for which you can then enter translations of the following settings:<itemizedlist>
@@ -638,10 +696,8 @@ Used anywhere else? - Check with Jan."?>
               <para>
                 <note>
                   <para>Due to technical reasons, it's not possible to change the color of the
-                    newest version of the header bar. This effects the following apps: <emphasis
-                      role="bold">App Management</emphasis>, <emphasis role="bold"
-                      >Maintenance</emphasis> and <emphasis role="bold">System Settings</emphasis>.
-                    These apps will retain the blue header bar.</para>
+                    newest version of the header bar. The apps with the newest header bar will
+                    retain the blue header bar.</para>
                 </note>
               </para>
             </entry>
@@ -651,9 +707,8 @@ Used anywhere else? - Check with Jan."?>
               <para><emphasis role="bold">Start page</emphasis></para>
             </entry>
             <entry>
-              <para>Sets the page or app which the user will be redirected to after log in. The
-                  <emphasis role="bold">Dashboard</emphasis> app is the recommended start
-                page.</para>
+              <para>Sets the page or app which the user will be redirected to after log in. </para>
+              <para>Recommended setting: the <emphasis role="bold">Dashboard</emphasis> app.</para>
             </entry>
           </row>
           <row>
@@ -731,9 +786,13 @@ Used anywhere else? - Check with Jan."?>
                 lists</emphasis></para>
             </entry>
             <entry>
+              <?oxy_comment_start author="cecilia" timestamp="20170403T111553+0200" comment="Reword
+
+At next revision, consider adding graphic."?>
               <para>If you select this option, you'll hide menu and index page items and links to
                 lists of objects if the current user doesn't have the authority to create the type
                 of objects (privately or publicly).</para>
+              <?oxy_comment_end?>
             </entry>
           </row>
           <row>
@@ -842,7 +901,9 @@ Used anywhere else? - Check with Jan."?>
             </entry>
             <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
             <entry>
-              <para>Sends out a test email to??.</para>
+              <para>Sends out a test
+                email<?oxy_comment_start author="cecilia" timestamp="20170403T115205+0200" comment="Who do you send a test email to? The logged in user?"?>
+                to??<?oxy_comment_end?>.</para>
             </entry>
             <?oxy_custom_end?>
           </row>
@@ -856,7 +917,16 @@ Used anywhere else? - Check with Jan."?>
 
 Question: why isn&apos;t the email setting in the &quot;Email&quot; tab?
 
-Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller ikke"?>settings<?oxy_comment_end?></title>
+Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller ikke
+
+About what? When the user recievs a DHIS2 message withing the messaging system? Or has this something to do with validation notificaitons, program notifications etc?
+
+SME:
+- A general seetting, if user doesn&apos;t have hes/hers &quot;own&quot; motifiacation settings.
+- Used in internal DHIS2 messaging system: System message (generated by the ssytem, can be many things, something has gone wrong), private message, ticket message, validation result message (result of validation analysis) (4 type of messages right now)
+- Push analysis don&apos;t go through internal DHIS2 messaging system, alwyas send via email
+- Can also send despite all settings (force send)"?>settings<?oxy_comment_end?></title>
+    <para>A message that something happened internallly that you have to investigate.</para>
     <table frame="all">
       <title>Messaging settings</title>
       <tgroup cols="2">
@@ -899,7 +969,8 @@ Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller
     <para/>
   </section>
   <section xml:id="system_access_settings">
-    <title>Access settings</title>
+    <title>Access
+      <?oxy_comment_start author="cecilia" timestamp="20170403T140544+0200" comment="Add link to new topics about managing users passwords."?>settings<?oxy_comment_end?></title>
     <table frame="all">
       <title>Access settings</title>
       <tgroup cols="2">
@@ -944,7 +1015,8 @@ Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller
                 users.</para>
               <para>
                 <note>
-                  <para>You must select one organisation unit to enable self-registration.</para>
+                  <para>To enable self-registration, you must also select a <emphasis role="bold"
+                      >Self registration account user role</emphasis>.</para>
                 </note>
               </para>
             </entry>
@@ -963,10 +1035,9 @@ Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller
               <para><emphasis role="bold">Enable user account recovery</emphasis></para>
             </entry>
             <entry>
-              <para>Defines whether users are allowed to restore the password of their account if
-                they've forgotten it. </para>
-              <para>When enabled, a link to the account recovery form will be displayed on the front
-                page. </para>
+              <para>Defines whether users can restore their passwords.</para>
+              <para>When this setting is enabled, a link to the account recovery form will be
+                displayed on the front page.</para>
               <para>
                 <note>
                   <para>User account recovery requires that you have configured email settings
@@ -992,8 +1063,8 @@ Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller
               <para><emphasis role="bold">Allow users to grant own user roles</emphasis></para>
             </entry>
             <entry>
-              <para>Defines whether users should be allowed to grant the user roles they are granted
-                themselves to others.</para>
+              <para>Defines whether users can grant the user roles they've themselves to
+                others.</para>
             </entry>
           </row>
           <row>
@@ -1002,8 +1073,10 @@ Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller
                   update</emphasis></para>
             </entry>
             <entry>
+              <?oxy_comment_start author="cecilia" timestamp="20170403T150846+0200" comment="At next release, add graphic."?>
               <para>Defines whether users should be allowed to assign an object to a related object
                 when they create or edit metadata objects.</para>
+              <?oxy_comment_end?>
               <para>
                 <example>
                   <para>You can allow users to assign an organisation unit to data sets and
@@ -1018,7 +1091,7 @@ Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller
               <para><emphasis role="bold">Require user account password change</emphasis></para>
             </entry>
             <entry>
-              <para>Defines whether users should be forced to change their passwords every 3,6 or12
+              <para>Defines whether users should be forced to change their passwords every 3,6 or 12
                 months.</para>
               <para>If you don't want to force users to change password, select <emphasis
                   role="bold">Never</emphasis>.</para>
@@ -1029,8 +1102,8 @@ Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller
               <para><emphasis role="bold">Minimum characters in password</emphasis></para>
             </entry>
             <entry>
-              <para>Defines the minimum number of characters users must have in their passwords. You
-                can select 8 (default), 10, 12 or 14.</para>
+              <para>Defines the minimum number of characters users must have in their passwords. </para>
+              <para>You can select 8 (default), 10, 12 or 14.</para>
             </entry>
           </row>
           <row>
@@ -1050,14 +1123,15 @@ Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller
             </entry>
           </row>
           <?oxy_comment_start author="cecilia" timestamp="20170321T135649+0100" comment="Descriptions missing"?>
-          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230" mid="26"?>
+          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230" mid="51"?>
           <row>
             <entry>
               <para><emphasis role="bold">CORS whitelist</emphasis></para>
             </entry>
             <?oxy_comment_start author="cecilia" timestamp="20170330T161125+0200" comment="Must be reviewed by SME."?>
             <entry>
-              <para>Defines which clients that can use the API. Enter one URL per line</para>
+              <para>Defines which clients that can use the API. </para>
+              <para>Enter one URL per line</para>
             </entry>
             <?oxy_comment_end?>
           </row>
@@ -1078,7 +1152,7 @@ Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller
               <para>TBA</para>
             </entry>
           </row>
-          <?oxy_custom_end mid="26"?>
+          <?oxy_custom_end mid="51"?>
         </tbody>
       </tgroup>
     </table>
@@ -1087,7 +1161,9 @@ Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller
     <title>Approval
       <?oxy_comment_start author="cecilia" timestamp="20170321T135850+0100" comment="You can add approval levels and approval workflows. 
 What&apos;s the purpose with this?
-These tasks must be documented."?>settings<?oxy_comment_end?></title>
+These tasks must be documented.
+
+Verify with Lars"?>settings<?oxy_comment_end?></title>
     <table frame="all">
       <title>Approval settings</title>
       <tgroup cols="2">
@@ -1115,32 +1191,26 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
           </row>
           <row>
             <entry>
-              <para><emphasis role="bold"/></para>
+              <para><?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?><emphasis
+                  role="bold">Hide unapproved data in analytics</emphasis><?oxy_custom_end?></para>
             </entry>
             <entry>
+              <?oxy_comment_start author="cecilia" timestamp="20170321T140001+0100" comment="Is this setting still valid?"?>
+              <para>Defines whether unapproved data should be visible or hidden in analytics.</para>
+              <?oxy_comment_end?>
               <para/>
             </entry>
           </row>
         </tbody>
       </tgroup>
     </table>
-    <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-    <itemizedlist>
-      <listitem>
-        <?oxy_comment_start author="cecilia" timestamp="20170321T140001+0100" comment="Is this setting still valid?"?>
-        <para>Hide unapproved data in analytics: Defines whether unapproved data should be visible
-          or hidden in analytics.</para>
-        <?oxy_comment_end?>
-      </listitem>
-    </itemizedlist>
-    <?oxy_custom_end?>
     <section>
       <title>Create an approval level</title>
-      <para/>
+      <para>TBA</para>
     </section>
     <section>
       <title>Create an approval workflow</title>
-      <para/>
+      <para>TBA</para>
     </section>
   </section>
   <section xml:id="system_calendar_settings">
@@ -1191,9 +1261,9 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
   </section>
   <section xml:id="system_data_import_settings">
     <title>Data import settings</title>
-    <para>These settings apply to the data import process, and provide optional constraints on what
-      should be considered a conflict during import. The constraints are applied to each individual
-      data value in the import.</para>
+    <para>The data import settings apply to the data import process. They provide optional
+      constraints on what should be considered a conflict during import. The constraints are applied
+      to each individual data value in the import.</para>
     <table frame="all">
       <title>Data import settings</title>
       <tgroup cols="2">
@@ -1217,7 +1287,9 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
             </entry>
             <entry>
               <para>Require period of data value to be of the same period type as the data sets for
-                which the data element of data value is assigned to.</para>
+                which the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T152506+0200" comment="What does &quot;data element of data value&quot; mean?"?>data
+                element of data value<?oxy_comment_end?> is assigned to.</para>
             </entry>
           </row>
           <row>
@@ -1227,7 +1299,10 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
             </entry>
             <entry>
               <para>Require category option combination of data value to be part of the category
-                combination of the data element of the data value.</para>
+                combination of
+                the<?oxy_comment_start author="cecilia" timestamp="20170403T152528+0200" comment="What does &quot;data element of data value&quot; mean?
+"?>
+                data element of the data value.<?oxy_comment_end?></para>
             </entry>
           </row>
           <row>
@@ -1237,7 +1312,9 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
             </entry>
             <entry>
               <para>Require organisation unit of data value to be assigned to one or more of the
-                data sets which the data element of data value is assigned to.</para>
+                data sets which the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T152536+0200" comment="What does &quot;data element of data value&quot; mean?"?>data
+                element of data value<?oxy_comment_end?> is assigned to.</para>
             </entry>
           </row>
           <row>
@@ -1247,8 +1324,9 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
             </entry>
             <entry>
               <para>Require attribute option combination of data value to be part of the category
-                combination of the data set which the data element of data value is assigned
-                to.</para>
+                combination of the data set which the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T152543+0200" comment="What does &quot;data element of data value&quot; mean?"?>data
+                element of data value <?oxy_comment_end?>is assigned to.</para>
             </entry>
           </row>
           <row>
@@ -1257,8 +1335,9 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
                 specified</emphasis></para>
             </entry>
             <entry>
-              <para>Require category option combination of data value to be specified. By default it
-                will fall back to default category option combination if not specified.</para>
+              <para>Require category option combination of data value to be specified.</para>
+              <para>By default it will fall back to default category option combination if not
+                specified.</para>
             </entry>
           </row>
           <row>
@@ -1267,8 +1346,9 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
                 specified</emphasis></para>
             </entry>
             <entry>
-              <para>Require attribute option combination of data value to be specified. By default
-                it will fall back to default attribute option combination if not specified.</para>
+              <para>Require attribute option combination of data value to be specified.</para>
+              <para>By default it will fall back to default attribute option combination if not
+                specified.</para>
             </entry>
           </row>
         </tbody>
@@ -1282,13 +1362,14 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
     <para>DHIS2 provides a feature for synchronizing metadata and data. Given two instances in a
       central-local deployment strategy, metadata created at the
       <?oxy_comment_start author="cecilia" timestamp="20160704T123350+0200" comment="Central what? Central level?"?>central<?oxy_comment_end?>
-      system can be synched to the local system and the data created at local can be synced to the
-      central. This can be useful when there are multiple stand-alone instances of DHIS2 and a
-      global metadata needs to be created at all the local instances. If metadata creation and
-      update happens at the central instance and if the metadata sync task is enabled, the metadata
-      gets synced down to all the local instances which are bound to the given central instance.
-      These local instances will in turn push data values to that central instance. The following
-      settings are used for both data and metadata synchronization.</para>
+      system can be synchronized with the local system and the data created at local system can be
+      synchronized with the central system. This can be useful when you've multiple stand-alone
+      instances of DHIS2 and global metadata needs to be created at all the local instances.</para>
+    <para>If metadata creation and update take place at the central system and if the metadata
+      synchronisation task is enabled, the metadata gets synchronized down to all the local
+      instances which are bound to the central instance. These local instances will in turn push
+      data values to the central instance.</para>
+    <para>The following settings are used for both data and metadata synchronization.</para>
     <table frame="all">
       <title>Synchronization settings</title>
       <tgroup cols="2">
@@ -1312,10 +1393,10 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
             <entry>
               <para>Defines the URL of the remote server running DHIS2 to upload data values
                 to.</para>
-              <para>The system will use this setting for metadata synchronization too.</para>
               <para>It is recommended to use of SSL/HTTPS since user name and password are sent with
                 the request (using basic authentication). </para>
               <para>The system will attempt to synchronize data once every minute.</para>
+              <para>The system will use this setting for metadata synchronization too.</para>
               <para>
                 <note>
                   <para>To enable data and metadata synchronization, you must also enable <emphasis
@@ -1402,7 +1483,7 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
       </tgroup>
     </table>
     <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-    <?oxy_comment_start author="cecilia" timestamp="20170330T154612+0200" comment="Is this information still valid?" mid="35"?>
+    <?oxy_comment_start author="cecilia" timestamp="20170330T154612+0200" comment="Is this information still valid?" mid="59"?>
     <para>
       <itemizedlist>
         <listitem>
@@ -1472,7 +1553,7 @@ These tasks must be documented."?>settings<?oxy_comment_end?></title>
       </screenshot>
     </para>
     <?oxy_custom_end?>
-    <?oxy_comment_end mid="35"?>
+    <?oxy_comment_end mid="59"?>
   </section>
   <section>
     <title>System
