@@ -11106,6 +11106,13 @@ interval=WEEK" -u admin:district</screen>
     <screen>/api/me/dashboard</screen>
     <para>Lists all messages and interpretations in the inbox (including replies):</para>
     <screen>/api/me/inbox</screen>
+    <para>In order to change password, this end point can be used to validate newly entered
+      password. Password validation will be done based on PasswordValidationRules configured in the
+      system. This end point support POST and password string should be sent in POST body.</para>
+    <screen>/api/me/validatePassword</screen>  
+    <para>While changing password, this end point (support POST) can be used to verify old password.
+      Password string should be sent in POST body.</para>
+    <screen>/api/me/verifyPassword</screen>  
     <para>Gives the full profile information for current user. This endpoint support both <emphasis
         role="italic">GET</emphasis> to retrieve profile and <emphasis role="italic">POST</emphasis>
       to update profile (the exact same format is used):</para>
