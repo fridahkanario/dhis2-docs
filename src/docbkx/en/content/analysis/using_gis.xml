@@ -403,6 +403,13 @@
                       select a period.</para>
                   </listitem>
                 </orderedlist>
+                <para>
+                  <note>
+                    <para>You configure the displayed infrastructural data in the <emphasis
+                        role="bold">System Settings</emphasis>
+                      <?oxy_comment_start author="cecilia" timestamp="20170331T140226+0200" comment="When x.refs work, add link to System Settings topic."?>app<?oxy_comment_end?>.</para>
+                  </note>
+                </para>
               </entry>
             </row>
           </tbody>
