@@ -114,7 +114,7 @@ sudo locale-gen nb_NO.UTF-8</screen>
     <section xml:id="install_postgresql_installation">
       <title>PostgreSQL installation</title>
       <para>Install PostgreSQL by invoking:</para>
-      <screen>sudo apt-get install postgresql-9.4 postgresql-contrib-9.4 postgresql-9.4-postgis-2.2 </screen>
+      <screen>sudo apt-get install postgresql-9.5 postgresql-contrib-9.5 postgresql-9.5-postgis-2.2</screen>
       <para><emphasis>Note:</emphasis> Alternatively you can consult the PostgreSQL documentation to
         install the latest version from the PostgreSQL APT repository:
           <link>http://www.postgresql.org/download/linux/ubuntu/</link>.</para>
