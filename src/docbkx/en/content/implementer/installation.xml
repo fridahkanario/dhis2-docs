@@ -59,7 +59,7 @@
   </section>
   <section xml:id="install_server_setup">
     <title>Server setup</title>
-    <para>This section describes how to set up a server instance of DHIS2 on Ubuntu 14.04 64 bit
+    <para>This section describes how to set up a server instance of DHIS2 on Ubuntu 16.04 64 bit
       with PostgreSQL as database system and Tomcat as Servlet container. This guide is not meant to
       be a step-by-step guide per se, but rather to serve as a reference to how DHIS2 can be
       deployed on a server. There are many possible deployment strategies, which will differ
