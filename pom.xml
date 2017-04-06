@@ -4,7 +4,7 @@
 	<groupId>org.hisp.dhis</groupId>
 	<artifactId>dhis-documentation-docbook</artifactId>
 	<name>DHIS2 Documentation</name>
-	<version>2.26</version>
+	<version>2.27</version>
 	<description>DHIS2 Documentation</description>
 	<packaging>pom</packaging>
 	<prerequisites>
@@ -84,6 +84,20 @@
 							<weight>normal</weight>
 							<embedFile>${project.basedir}/src/fonts/DejaVuSans.ttf</embedFile>
 							<metricsFile>${project.basedir}/target/fonts/DejaVuSans-metrics.xml</metricsFile>
+						</font>
+						<font>
+							<name>DejaVu Sans</name>
+							<style>normal</style>
+							<weight>bold</weight>
+							<embedFile>${project.basedir}/src/fonts/DejaVuSans-Bold.ttf</embedFile>
+							<metricsFile>${project.basedir}/target/fonts/DejaVuSans-Bold-metrics.xml</metricsFile>
+						</font>
+						<font>
+							<name>DejaVu Sans</name>
+							<style>italic</style>
+							<weight>normal</weight>
+							<embedFile>${project.basedir}/src/fonts/DejaVuSans-Italic.ttf</embedFile>
+							<metricsFile>${project.basedir}/target/fonts/DejaVuSans-Italic-metrics.xml</metricsFile>
 						</font>
 					</fonts>
 					<useIdAsFilename>true</useIdAsFilename>

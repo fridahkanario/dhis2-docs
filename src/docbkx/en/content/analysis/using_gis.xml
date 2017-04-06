@@ -60,7 +60,7 @@
       <mediaobject>
         <imageobject>
           <imagedata width="80%" fileref="resources/images/gis/gis_event_layer.png" format="png"
-            align="center"/>
+            align="left"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -207,7 +207,7 @@
         <mediaobject>
           <imageobject>
             <imagedata fileref="resources/images/gis/gis_eventlayer_eventinfopopup.png" format="png"
-              width="40%" align="center"/>
+              width="40%" align="left"/>
           </imageobject>
         </mediaobject>
       </screenshot>
@@ -266,7 +266,7 @@
       <mediaobject>
         <imageobject>
           <imagedata width="100%" fileref="resources/images/gis/gis_facility_layer.png" format="png"
-            align="center"/>
+            align="left"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -403,6 +403,13 @@
                       select a period.</para>
                   </listitem>
                 </orderedlist>
+                <para>
+                  <note>
+                    <para>You configure the displayed infrastructural data in the <emphasis
+                        role="bold">System Settings</emphasis>
+                      <?oxy_comment_start author="cecilia" timestamp="20170331T140226+0200" comment="When x.refs work, add link to System Settings topic."?>app<?oxy_comment_end?>.</para>
+                  </note>
+                </para>
               </entry>
             </row>
           </tbody>
@@ -425,7 +432,7 @@
       <mediaobject>
         <imageobject>
           <imagedata width="100%" fileref="resources/images/gis/gis_thematic_mapping.png"
-            format="png" align="center"/>
+            format="png" align="left"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -576,8 +583,8 @@
       <title>Boundary layer</title>
       <mediaobject>
         <imageobject>
-          <imagedata width="80%" fileref="resources/images/gis/gis_boundary_layers.png" format="png"
-            align="center"/>
+          <imagedata width="80%" fileref="resources/images/gis/gis_bound_layers.png" format="png"
+            align="left"/>
 
         </imageobject>
       </mediaobject>
@@ -662,8 +669,8 @@
       <mediaobject>
         <imageobject>
           <?oxy_comment_start author="cecilia" timestamp="20160630T212009+0200" comment="Before release: Update screenshot: Select layer has changed to Select data set" flag="done"?>
-          <imagedata width="80%" fileref="resources/images/gis/gis_earth_engine_layer.png"
-            format="png" align="center"/>
+          <imagedata width="80%" fileref="resources/images/gis/gis_earth_eng_layer.png" format="png"
+            align="left"/>
           <?oxy_comment_end?>
         </imageobject>
       </mediaobject>
@@ -692,7 +699,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
             <mediaobject>
               <imageobject>
                 <imagedata width="50%" fileref="resources/images/gis/gis-temperature-landcover4.png"
-                  format="png" align="center"/>
+                  format="png" align="left"/>
               </imageobject>
             </mediaobject>
           </screenshot>
@@ -734,7 +741,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
                 <mediaobject>
                   <imageobject>
                     <imagedata width="50%" fileref="resources/images/gis/gis_external_layers1.png"
-                format="png" align="center"/>
+                format="png" align="left"/>
                   </imageobject>
                 </mediaobject>
               </screenshot>
@@ -752,7 +759,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <mediaobject>
         <imageobject>
           <imagedata width="50%" fileref="resources/images/gis/gis_administrative_boundaries.png"
-            format="png" align="center"/>
+            format="png" align="left"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -761,7 +768,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <mediaobject>
         <imageobject>
           <imagedata width="50%" fileref="resources/images/gis/gis_aerial_imagery.png" format="png"
-            align="center"/>
+            align="left"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -771,7 +778,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
         <imageobject>
           <imagedata width="50%"
             fileref="resources/images/gis/gis_black_basemap_and_nighttime_lights.png" format="png"
-            align="center"/>
+            align="left"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -780,7 +787,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <mediaobject>
         <imageobject>
           <imagedata width="50%" fileref="resources/images/gis/gis_world_time_zones.png"
-            format="png" align="center"/>
+            format="png" align="left"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -797,7 +804,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <mediaobject>
         <imageobject>
           <imagedata width="50%" fileref="resources/images/gis/gis_favorites.png" format="png"
-            align="center"/>
+            align="left"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -1027,7 +1034,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
     <screenshot>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="resources/images/gis/gis_place_search.png" align="center" width="75%"
+          <imagedata fileref="resources/images/gis/gis_place_search.png" align="left" width="75%"
             format="png"/>
         </imageobject>
       </mediaobject>
@@ -1068,7 +1075,7 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
       <mediaobject>
         <imageobject>
           <imagedata width="50%" fileref="resources/images/gis/gis-latitude-longitude.png"
-            format="png" align="center"/>
+            format="png" align="left"/>
         </imageobject>
       </mediaobject>
     </screenshot>
@@ -1098,6 +1105,18 @@ Also, data set not written correctly. Ticket submitted."?>layer<?oxy_comment_end
         </listitem>
       </orderedlist>
     </section>
+  </section>
+  <section>
+    <title>See also</title>
+    <para>
+      <itemizedlist>
+        <listitem>
+          <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="https://docs.dhis2.org/master/en/user/html/manage_legend.html">Manage
+              legends</link></para>
+        </listitem>
+      </itemizedlist>
+    </para>
   </section>
         
 </chapter>

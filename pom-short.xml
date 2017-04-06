@@ -5,8 +5,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 	<groupId>org.hisp.dhis</groupId>
 	<artifactId>dhis-documentation-docbook</artifactId>
 	<name>DHIS2 Documentation</name>
-	<version>2.25</version>
-	<description>DHIS 2 Documentation</description>
+	<version>2.27</version>
+	<description>DHIS2 Documentation</description>
 	<packaging>pom</packaging>
 	<prerequisites>
       <maven>3.0.0</maven>
