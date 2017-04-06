@@ -12,7 +12,7 @@ Removed empty section
 OAuth2 clients
 " flag="done"?>Configuring
     the system<?oxy_comment_end?></title>
-  <para>In the <emphasis role="bold">System Settings</emphasis> app you can configure the following
+  <!--  <para>In the <emphasis role="bold">System Settings</emphasis> app you can configure the following
     settings:</para>
   <para>
     <informaltable frame="all">
@@ -137,7 +137,7 @@ OAuth2 clients
         </tbody>
       </tgroup>
     </informaltable>
-  </para>
+  </para>-->
   <section xml:id="system_general_settings">
     <title>General settings</title>
     <table frame="all">
@@ -147,23 +147,23 @@ OAuth2 clients
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
         </thead>
         <tbody>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Maximum number of analytics records</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para><?oxy_comment_start author="cecilia" timestamp="20170322T111445+0100" comment="From where? Analytics apps?"?>Increase
-                this number to provide more records from the analytics<?oxy_comment_end?>. The
-                default value is 50,000.</para>
+                this number to provide more records from the analytics<?oxy_comment_end?>.</para>
+              <para>The default value is 50,000.</para>
               <para>
                 <warning>
                   <para>Use the setting <emphasis role="bold">Unlimited</emphasis> carefully, it
@@ -173,10 +173,10 @@ OAuth2 clients
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Infrastructural indicators</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines an indicator group where the member indicators should describe data
                 about the organisation units' infrastructure.</para>
               <para>You can view the infrastructural data in the <emphasis role="bold"
@@ -191,10 +191,10 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Infrastructural data elements</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines a data element group where the member data elements should describe data
                 about the organisation units' infrastructure.</para>
               <para>
@@ -215,10 +215,10 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Infrastructural period type</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the frequency for which the data elements in the infrastructural data
                 elements group are
                 <?oxy_comment_start author="cecilia" timestamp="20170331T140801+0200" comment="Do you means &quot;diplayed&quot;?
@@ -237,32 +237,32 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Default relative period for analysis</emphasis></para>
             </entry>
             <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            <entry>
+            <entry valign="top">
               <para>TBA</para>
             </entry>
             <?oxy_custom_end?>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Feedback
                   <?oxy_comment_start author="cecilia" timestamp="20170331T140828+0200" comment="Setting should be moved into Messaging section in app."?>recipients<?oxy_comment_end?></emphasis></para>
             </entry>
-            <entry>
-              <para>Defines a user group where the members will receive all messages sent via  the
+            <entry valign="top">
+              <para>Defines a user group where the members will receive all messages sent via the
                 feedback function in the <emphasis role="bold">Dashboard</emphasis> app.</para>
               <para>This will typically be members of the super user team who are able to support
                 and answer questions coming from end-users.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Max offline organisation unit levels</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines how many levels in the organisation unit hierarchy will be available
                 offline in the organisation unit tree widget. </para>
               <para>Under normal circumstances you can leave this on the lowest level, which is
@@ -273,10 +273,10 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Data analysis std dev factor</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the number of standard deviations used in the outlier analysis performed on
                 the captured data in the <emphasis role="bold">Data Entry</emphasis> app.</para>
               <para>The default value is 2. A high value will catch less outlier values than a low
@@ -284,26 +284,25 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><?oxy_comment_start author="cecilia" timestamp="20170331T141034+0200" comment="Setting should be moved into Messaging section in app."?><emphasis
                   role="bold">Phone number area code</emphasis><?oxy_comment_end?></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>The area code for the area in which your deployment is located.</para>
-              <para>Used for sending and receiving SMS. Typically, this would be a country
-                code.</para>
+              <para>Used for sending and receiving SMS. Typically, this is a country code.</para>
               <para>
                 <example>
-                  <para>+260 - country code for Zambia</para>
+                  <para><emphasis>+260</emphasis> (country code for Zambia)</para>
                 </example>
               </para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Enable multi-organisation unit forms</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Enables support to enter data forms for multiple organisation units at the same
                 time in the <emphasis role="bold">Data Entry</emphasis> app.</para>
               <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
@@ -318,11 +317,11 @@ Used anywhere else? - Check with Jan."?>facility
           <?oxy_comment_start author="cecilia" timestamp="20170331T143209+0200" comment="No longer in UI, still relevant?" mid="11"?>
           <row>
             <?oxy_custom_end?>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Days after period end to qualify for timely data
                   submission</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the number of days after the end of a period in which a data entry form
                 must be marked as complete in order to be considered timely.</para>
               <para>The setting affects the <emphasis role="bold">Reporting rate summary</emphasis>
@@ -337,12 +336,12 @@ Used anywhere else? - Check with Jan."?>facility
           <?oxy_comment_start author="cecilia" timestamp="20170331T143100+0200" comment="No longer in UI, still relevant?" mid="13"?>
           <row>
             <?oxy_comment_start author="cecilia" timestamp="20170321T114612+0100" comment="Not in UI anymore, functionality removed or moved?"?>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Omit indicator values with zero numerator value in data
                   mart:</emphasis></para>
             </entry>
             <?oxy_comment_end?>
-            <entry>
+            <entry valign="top">
               <para>Defines whether aggregated indicator values with zero as the numerator value
                 should be written to the indicator data mart table.</para>
               <para>You must write such values for example when connecting Excel pivot tables to the
@@ -369,20 +368,20 @@ Used anywhere else? - Check with Jan."?>facility
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
         </thead>
         <tbody>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Default relative period for analysis</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines the relative period to use by default in analytics app: <emphasis
                   role="bold">Data Visualizer</emphasis>, <emphasis role="bold">Event
                   Reports</emphasis>, <emphasis role="bold">Event Visualizer</emphasis>, <emphasis
@@ -393,26 +392,31 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Cacheability</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets whether analytics data responses should be
                 <?oxy_comment_start author="cecilia" timestamp="20170322T163146+0100" comment="What does this mean?"?>served<?oxy_comment_end?>
                 with public or private visibility.</para>
               <para>
-                <emphasis role="bold">Private</emphasis>: intermediary proxies and caches are not
-                allowed to store a copy of the response; only the client itself such as web browsers
-                can cache the response.</para>
-              <para><emphasis role="bold">Public</emphasis>: both intermediary caches and clients
-                can store a copy.</para>
+                <emphasis role="bold">Private</emphasis>: Any node or server between the DHIS2
+                server and the end user which has the ability to cache can NOT cache the web page.
+                This is useful if the page served can or do contain sensitive information. This
+                means that each time you want a web page, either you get a new page from the DHIS2
+                server, or the DHIS2 server caches the page. No other server than the DHIS2 server
+                are allowed to cache the page.</para>
+              <para><emphasis role="bold">Public</emphasis>: Any node or server between the DHIS2
+                server and the end user which has the ability to cache can cache the web page. This
+                relives the traffic to the DHIS2 server and potentially speeds up the subsequent
+                page loading speed.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Cache strategy</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Decides for how long reports and responses related to
                 <?oxy_comment_start author="cecilia" timestamp="20170403T103239+0200" comment="Analytics?"?>analysis<?oxy_comment_end?>
                 should be cached.</para>
@@ -431,11 +435,11 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Max number of years to hide unapproved data in
                   analytics</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets whether and for how long back in time
                 the<?oxy_comment_start author="cecilia" timestamp="20170403T103504+0200" comment="What&apos;s the &quot;analytics&quot; engine?"?>
                 analytics engine <?oxy_comment_end?>should hide unapproved data.</para>
@@ -449,10 +453,10 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Threshold for analytics data caching</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets whether to enable caching data older than the specified number of years
                 only.</para>
               <para>This allows for returning the most recent data directly with no caching, while
@@ -460,25 +464,27 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Respect category option start and end date in analytics
                   table export</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <?oxy_comment_start author="cecilia" timestamp="20170322T163946+0100" comment="Reword"?>
               <para>Sets whether aggregate data values where the data period falls outside the start
                 and end date of the category options of the data attribute category option
                 combination should be filtered out of the
-                <?oxy_comment_start author="cecilia" timestamp="20170403T103811+0200" comment="What&apos;s an &quot;analytics table&quot;?"?>analytics
+                <?oxy_comment_start author="cecilia" timestamp="20170403T103811+0200" comment="What&apos;s an &quot;analytics table&quot;?
+
+Refer to JIRA issue https://jira.dhis2.org/browse/DHIS2-262"?>analytics
                 tables<?oxy_comment_end?> when generated.</para>
               <?oxy_comment_end?>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Put analytics in maintenance mode</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Puts the
                 <?oxy_comment_start author="cecilia" timestamp="20170403T110222+0200" comment="What&apos;s an &quot;analytics engine&quot;?"?>analytics
                 engine<?oxy_comment_end?> and web API resource in maintenance mode. This means that
@@ -501,10 +507,10 @@ Used anywhere else? - Check with Jan."?>facility
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
@@ -512,21 +518,21 @@ Used anywhere else? - Check with Jan."?>facility
         <tbody>
           <?oxy_comment_start author="cecilia" timestamp="20170321T133740+0100" comment="Description missing"?>
           <row>
-            <entry>
+            <entry valign="top">
               <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
               <para><emphasis role="bold">Cache strategy</emphasis></para>
               <?oxy_custom_end?>
             </entry>
-            <entry>
+            <entry valign="top">
               <para><?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>TBA<?oxy_custom_end?></para>
             </entry>
           </row>
           <?oxy_comment_end?>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Number of database server CPUs</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the number of CPU cores of your database server.</para>
               <para>This allows the system to perform optimally when the database is hosted on a
                 different server than the application server, as the
@@ -535,10 +541,10 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">System notifications email address</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines the email address which will receive system
                 <?oxy_comment_start author="cecilia" timestamp="20170403T110705+0200" comment="Which notifications? 
 From DHIS2 messaging?
@@ -551,10 +557,10 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Server base URL</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines the full, externally accessible base URL for your server.</para>
               <para>The URL is used to provide links to your server from external locations such as
                 emails sent from the system.</para>
@@ -573,11 +579,11 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Google Analytics (Universal Analytics)
                 key</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the Google UA key to provide
                 <?oxy_comment_start author="cecilia" timestamp="20170330T095421+0200" comment="What kind of analytics? DHIS2 analytics or Google analytics?"?>analytics<?oxy_comment_end?>
                 for your DHIS2 instance.</para>
@@ -602,10 +608,10 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
@@ -613,11 +619,11 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
         <tbody>
           <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
           <row>
-            <entry>
+            <entry valign="top">
               <para><?oxy_comment_start author="cecilia" timestamp="20170403T111440+0200" comment="At next revision, add graphic that illustrates the different settings."?><emphasis
                   role="bold">Select language</emphasis><?oxy_comment_end?></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the language for which you can then enter translations of the following settings:<itemizedlist>
                   <listitem>
                     <para><emphasis role="bold">Application introduction</emphasis></para>
@@ -641,52 +647,52 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
           <?oxy_comment_start author="cecilia" timestamp="20170321T133908+0100" comment="Description missing"?>
           <row>
             <?oxy_comment_end?>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Application title</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the application title on the top menu.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Application introduction</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets an introduction of the system which will be visible on the top-left part of
                 the login page.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Application notification</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets a notification which will be visible on the front page under the login
                 area.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Application left-side footer</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets a text in the left-side footer area of the login page.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Application right-side footer</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets a text in the right-side footer area of the login page.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Style</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the
                 <?oxy_comment_start author="cecilia" timestamp="20170330T104727+0200" comment="https://jira.dhis2.org/browse/DHIS2-1299"?>style<?oxy_comment_end?>
                 (look-and-feel) of the system. </para>
@@ -703,37 +709,37 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Start page</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the page or app which the user will be redirected to after log in. </para>
               <para>Recommended setting: the <emphasis role="bold">Dashboard</emphasis> app.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Help page link</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines the URL which users will see when they click <emphasis role="bold"
                   >Profile</emphasis> &gt;<emphasis role="bold">Help</emphasis>.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Flag</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the flag which is displayed in the left menu of the <emphasis role="bold"
                   >Dashboard</emphasis> app.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Interface language</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the language used in the user interface.</para>
               <para>The user can override this setting in the <emphasis role="bold"
                   >Settings</emphasis> app: <emphasis role="bold">User settings</emphasis> >
@@ -741,10 +747,10 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Database language</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the language used in the database.</para>
               <para>The user can override this setting in the <emphasis role="bold"
                   >Settings</emphasis> app: <emphasis role="bold">User settings</emphasis> >
@@ -752,11 +758,11 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Property to display in analysis
                   <?oxy_comment_start author="cecilia" timestamp="20170321T134337+0100" comment="apps?"?>modules<?oxy_comment_end?></emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets whether you want to display the metadata objects' names or short names in
                 the analytics apps: <emphasis role="bold">Data Visualizer</emphasis>, <emphasis
                   role="bold">Event Reports</emphasis>, <emphasis role="bold">Event
@@ -768,11 +774,11 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Default digit group separator to display in analysis
                   <?oxy_comment_start author="cecilia" timestamp="20170321T134337+0100" comment="apps?"?>modules<?oxy_comment_end?></emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the default digit group separator in the analytics apps: <emphasis
                   role="bold">Data Visualizer</emphasis>, <emphasis role="bold">Event
                   Reports</emphasis>, <emphasis role="bold">Event Visualizer</emphasis>, <emphasis
@@ -781,11 +787,11 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Require authority to add to view object
                 lists</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <?oxy_comment_start author="cecilia" timestamp="20170403T111553+0200" comment="Reword
 
 At next revision, consider adding graphic."?>
@@ -796,19 +802,19 @@ At next revision, consider adding graphic."?>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Custom login page logo</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Select this option and upload an image to add your logo to the login
                 page.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Custom top menu logo</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Select this option and upload an image to add your logo to the left in the top
                 menu.</para>
             </entry>
@@ -827,20 +833,20 @@ At next revision, consider adding graphic."?>
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
         </thead>
         <tbody>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Host name</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the host name of the SMTP server.</para>
               <para>
                 <example>
@@ -851,18 +857,18 @@ At next revision, consider adding graphic."?>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Port</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Sets the port to connect to the SMTP server.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">User name</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>The user name of the user account with the SMTP server.</para>
               <para>
                 <example>
@@ -872,38 +878,38 @@ At next revision, consider adding graphic."?>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Password</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>The password of the user account with the SMTP server.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">TLS</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Select this option if the SMPT server requires TLS for connections.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Email sender</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>The email address to use as sender when sending out emails.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Send me a test email</emphasis></para>
             </entry>
             <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            <entry>
-              <para>Sends out a test
-                email<?oxy_comment_start author="cecilia" timestamp="20170403T115205+0200" comment="Who do you send a test email to? The logged in user?"?>
-                to??<?oxy_comment_end?>.</para>
+            <entry valign="top">
+              <para>Sends out a
+                test<?oxy_comment_start author="cecilia" timestamp="20170403T115205+0200" comment="Who do you send a test email to? The logged in user?"?>
+                to email<?oxy_comment_end?>.</para>
             </entry>
             <?oxy_custom_end?>
           </row>
@@ -926,7 +932,7 @@ SME:
 - Used in internal DHIS2 messaging system: System message (generated by the ssytem, can be many things, something has gone wrong), private message, ticket message, validation result message (result of validation analysis) (4 type of messages right now)
 - Push analysis don&apos;t go through internal DHIS2 messaging system, alwyas send via email
 - Can also send despite all settings (force send)"?>settings<?oxy_comment_end?></title>
-    <para>A message that something happened internallly that you have to investigate.</para>
+    <para>A message that something happened internally that you have to investigate.</para>
     <table frame="all">
       <title>Messaging settings</title>
       <tgroup cols="2">
@@ -934,31 +940,31 @@ SME:
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
         </thead>
         <tbody>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Enable message email notifications</emphasis></para>
             </entry>
             <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            <entry>
+            <entry valign="top">
               <para>TBA</para>
             </entry>
             <?oxy_custom_end?>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Enable message SMS notifications</emphasis></para>
             </entry>
             <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            <entry>
+            <entry valign="top">
               <para>TBA</para>
             </entry>
             <?oxy_custom_end?>
@@ -978,20 +984,20 @@ SME:
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
         </thead>
         <tbody>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Self registration account user role</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines which user role should be given to self-registered user accounts.</para>
               <para>To enable self-registration of users: select any user role from the list. A link
                 to the self-registration form will be displayed on the login page.</para>
@@ -1006,11 +1012,11 @@ SME:
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Self registration account organisation
                 unit</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines which organisation unit should be associated with self-registered
                 users.</para>
               <para>
@@ -1022,20 +1028,20 @@ SME:
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Do not require recaptcha for self
                 registration</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines whether you want to use reCAPTCHA for user registration.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Enable user account recovery</emphasis></para>
             </entry>
-            <entry>
-              <para>Defines whether users can restore their passwords.</para>
+            <entry valign="top">
+              <para>Defines whether users can restore their own passwords.</para>
               <para>When this setting is enabled, a link to the account recovery form will be
                 displayed on the front page.</para>
               <para>
@@ -1047,11 +1053,11 @@ SME:
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Lock user account temporarily after multiple failed login
                   attempts</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines whether the system should lock user accounts after five successive
                 failed login attempts over a timespan of 15 minutes.</para>
               <para>The account will be locked for 15 minutes, then the user can try and log in
@@ -1059,20 +1065,20 @@ SME:
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Allow users to grant own user roles</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines whether users can grant the user roles they've themselves to
                 others.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Allow assigning object to related objects during add or
                   update</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <?oxy_comment_start author="cecilia" timestamp="20170403T150846+0200" comment="At next release, add graphic."?>
               <para>Defines whether users should be allowed to assign an object to a related object
                 when they create or edit metadata objects.</para>
@@ -1087,49 +1093,49 @@ SME:
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Require user account password change</emphasis></para>
             </entry>
-            <entry>
-              <para>Defines whether users should be forced to change their passwords every 3,6 or 12
-                months.</para>
+            <entry valign="top">
+              <para>Defines whether users should be forced to change their passwords every 3, 6 or
+                12 months.</para>
               <para>If you don't want to force users to change password, select <emphasis
                   role="bold">Never</emphasis>.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Minimum characters in password</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines the minimum number of characters users must have in their passwords. </para>
               <para>You can select 8 (default), 10, 12 or 14.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">OpenID provider</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines the OpenID provider.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">OpenID provider label</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines the label to display for the specified OpenID provider.</para>
             </entry>
           </row>
           <?oxy_comment_start author="cecilia" timestamp="20170321T135649+0100" comment="Descriptions missing"?>
           <?oxy_custom_start type="oxy_content_highlight" color="235,192,230" mid="51"?>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">CORS whitelist</emphasis></para>
             </entry>
             <?oxy_comment_start author="cecilia" timestamp="20170330T161125+0200" comment="Must be reviewed by SME."?>
-            <entry>
+            <entry valign="top">
               <para>Defines which clients that can use the API. </para>
               <para>Enter one URL per line</para>
             </entry>
@@ -1137,18 +1143,18 @@ SME:
           </row>
           <?oxy_comment_end?>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Mapzen search API key</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>TBA</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Google Maps API key</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>TBA</para>
             </entry>
           </row>
@@ -1171,34 +1177,22 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
         </thead>
         <tbody>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Acceptance required before approval</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines whether to include an acceptance step before the approval step in the
                 approval workflow.</para>
-            </entry>
-          </row>
-          <row>
-            <entry>
-              <para><?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?><emphasis
-                  role="bold">Hide unapproved data in analytics</emphasis><?oxy_custom_end?></para>
-            </entry>
-            <entry>
-              <?oxy_comment_start author="cecilia" timestamp="20170321T140001+0100" comment="Is this setting still valid?"?>
-              <para>Defines whether unapproved data should be visible or hidden in analytics.</para>
-              <?oxy_comment_end?>
-              <para/>
             </entry>
           </row>
         </tbody>
@@ -1222,20 +1216,20 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
         </thead>
         <tbody>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Calendar</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines which calendar the system will use.</para>
               <para>The system supports the following calendars: Coptic, Ethiopian, Gregorian,
                 Islamic, ISO 8601, Julian, Nepali and Thai.</para>
@@ -1248,10 +1242,10 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Date format</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Defines which date format the system will use.</para>
             </entry>
           </row>
@@ -1271,21 +1265,21 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
         </thead>
         <tbody>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Require periods to match period type of data
                   set</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Require period of data value to be of the same period type as the data sets for
                 which the
                 <?oxy_comment_start author="cecilia" timestamp="20170403T152506+0200" comment="What does &quot;data element of data value&quot; mean?"?>data
@@ -1293,11 +1287,11 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Require category option combos to match category combo of
                   data element</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Require category option combination of data value to be part of the category
                 combination of
                 the<?oxy_comment_start author="cecilia" timestamp="20170403T152528+0200" comment="What does &quot;data element of data value&quot; mean?
@@ -1306,11 +1300,11 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Require organisation units to match assignment of data
                   set</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Require organisation unit of data value to be assigned to one or more of the
                 data sets which the
                 <?oxy_comment_start author="cecilia" timestamp="20170403T152536+0200" comment="What does &quot;data element of data value&quot; mean?"?>data
@@ -1318,11 +1312,11 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Require attribute option combos to match category combo of
                   data set</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Require attribute option combination of data value to be part of the category
                 combination of the data set which the
                 <?oxy_comment_start author="cecilia" timestamp="20170403T152543+0200" comment="What does &quot;data element of data value&quot; mean?"?>data
@@ -1330,22 +1324,22 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Require category option combo to be
                 specified</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Require category option combination of data value to be specified.</para>
               <para>By default it will fall back to default category option combination if not
                 specified.</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">Require attribute option combo to be
                 specified</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Require attribute option combination of data value to be specified.</para>
               <para>By default it will fall back to default attribute option combination if not
                 specified.</para>
@@ -1361,8 +1355,8 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
     <?oxy_comment_end?>
     <section>
       <title>About data and metadata synchronization</title>
-      <para>With DHIS2 you can synchronize metadata and data. Given two instances in a central-local
-        deployment strategy, metadata created at the
+      <para>You can synchronize data and metadata between different DHIS2 instances. Given two
+        instances in a central-local deployment strategy, metadata created at the
         <?oxy_comment_start author="cecilia" timestamp="20160704T123350+0200" comment="Central what? Central level?"?>central<?oxy_comment_end?>
         system can be synchronized with the local system and the data created at local system can be
         synchronized with the central system. This can be useful when you've multiple stand-alone
@@ -1385,23 +1379,18 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
         <listitem>
           <para>Go to the <emphasis role="bold">Metadata versioning</emphasis> section and select
               <emphasis role="bold">Enable versioning for metadata sync</emphasis>.</para>
+        </listitem>
+        <listitem>
           <para>(Optional) Select <emphasis role="bold">Don't sync metadata if DHIS versions
               <?oxy_comment_start author="cecilia" timestamp="20170405T143758+0200" comment="What exactly does this imply? Why would you do this?"?>differ<?oxy_comment_end?></emphasis>.</para>
         </listitem>
         <listitem>
           <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-          <para>Select ??:</para>
+          <?oxy_comment_start author="cecilia" timestamp="20170406T133813+0200" comment="Add info about what this is." mid="65"?>
+          <para>Select <emphasis role="bold">Best effort</emphasis> or <emphasis role="bold"
+              >Atomic</emphasis>.</para>
           <?oxy_custom_end?>
-          <?oxy_comment_start author="cecilia" timestamp="20170405T143849+0200" comment="Add expl."?>
-          <itemizedlist>
-            <listitem>
-              <para><emphasis role="bold">Best effort</emphasis>: </para>
-            </listitem>
-            <listitem>
-              <para><emphasis role="bold">Atomic</emphasis>: </para>
-            </listitem>
-          </itemizedlist>
-          <?oxy_comment_end?>
+          <?oxy_comment_end mid="65"?>
         </listitem>
         <listitem>
           <para>Click <emphasis role="bold">Create new version</emphasis>. The new version is added
@@ -1411,7 +1400,7 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
       <para>
         <example>
           <title>Versioning table for a central instance</title>
-          <para>When system is a <emphasis role="italics">central instance</emphasis>, then you will
+          <para>When the system is a <emphasis role="italics">central instance</emphasis>, you'll
             see three columns in the versioning table:</para>
           <para>
             <screenshot>
@@ -1428,48 +1417,48 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
               <colspec colname="c1" colnum="1" colwidth="1.0*"/>
               <colspec colname="c2" colnum="2" colwidth="1.0*"/>
               <thead>
-                <row>
-                  <entry>
+                <row valign="top">
+                  <entry valign="top">
                     <para>Object</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>Description</para>
                   </entry>
                 </row>
               </thead>
               <tbody>
-                <row>
-                  <entry>
+                <row valign="top">
+                  <entry valign="top">
                     <para>Master version</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>The latest
                       <?oxy_comment_start author="cecilia" timestamp="20170405T152617+0200" comment="The latest version of what?"?>version<?oxy_comment_end?>
                       in the system.</para>
                   </entry>
                 </row>
-                <row>
-                  <entry>
+                <row valign="top">
+                  <entry valign="top">
                     <para>Version</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>Name of the version. The name is automatically generated by system.</para>
                   </entry>
                 </row>
-                <row>
-                  <entry>
+                <row valign="top">
+                  <entry valign="top">
                     <para>When</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>The timestamp of the metadata version creation at the central
                       instance.</para>
                   </entry>
                 </row>
-                <row>
-                  <entry>
+                <row valign="top">
+                  <entry valign="top">
                     <para>Type</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>Type of metadata
                       <?oxy_comment_start author="cecilia" timestamp="20160704T115615+0200" comment="At next release: Add link to Concept in Settings chapter.
 2.24: Linking doesn&apos;t work, removed link:
@@ -1503,21 +1492,21 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
               <colspec colname="c2" colnum="2" colwidth="1.0*"/>
               <thead>
                 <row>
-                  <entry>
+                  <entry valign="top">
                     <para>Object</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>Description</para>
                   </entry>
                 </row>
               </thead>
               <tbody>
                 <row>
-                  <entry>
+                  <entry valign="top">
                     <para>Master version</para>
                   </entry>
-                  <entry>
-                    <para>The latest version of the central instance. </para>
+                  <entry valign="top">
+                    <para>The latest version of the central instance.</para>
                     <para>
                       <note>
                         <?oxy_comment_start author="cecilia" timestamp="20170405T152858+0200" comment="Does this note add any value?"?>
@@ -1530,35 +1519,35 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry valign="top">
                     <para>Last sync attempt</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>If the last sync attempt is a failure, this will be displayed.</para>
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry valign="top">
                     <para>Version</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>Name of the version. The name is automatically generated by system.</para>
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry valign="top">
                     <para>When</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>The timestamp of the metadata version creation at the central
                       instance.</para>
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry valign="top">
                     <para>Type</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>Type of metadata
                       <?oxy_comment_start author="cecilia" timestamp="20160704T115615+0200" comment="At next release: Add link to Concept in Settings chapter.
 2.24: Linking doesn&apos;t work, removed link:
@@ -1566,12 +1555,12 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry valign="top">
                     <para>Last sync</para>
                   </entry>
-                  <entry>
+                  <entry valign="top">
                     <para>Timestamp of when the last sync happened for this version in this
-                      system</para>
+                      system.</para>
                   </entry>
                 </row>
               </tbody>
@@ -1590,20 +1579,20 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
           <colspec colname="c2" colnum="2" colwidth="1.0*"/>
           <thead>
             <row>
-              <entry>
+              <entry valign="top">
                 <para>Setting</para>
               </entry>
-              <entry>
+              <entry valign="top">
                 <para>Description</para>
               </entry>
             </row>
           </thead>
           <tbody>
             <row>
-              <entry>
+              <entry valign="top">
                 <para><emphasis role="bold">Remote server URL</emphasis></para>
               </entry>
-              <entry>
+              <entry valign="top">
                 <para>Defines the URL of the remote server running DHIS2 to upload data values
                   to.</para>
                 <para>It is recommended to use of SSL/HTTPS since user name and password are sent
@@ -1622,10 +1611,10 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
               </entry>
             </row>
             <row>
-              <entry>
+              <entry valign="top">
                 <para><emphasis role="bold">Remote server username</emphasis></para>
               </entry>
-              <entry>
+              <entry valign="top">
                 <para>The user name of the DHIS2 user account on the remote server to use for data
                   synchronization.</para>
                 <para>
@@ -1638,45 +1627,45 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
             </row>
             <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
             <row>
-              <entry>
+              <entry valign="top">
                 <para><emphasis role="bold">Remote server password</emphasis></para>
               </entry>
-              <entry>
+              <entry valign="top">
                 <para>The password of the DHIS2 user account on the remote server. The password will
                   be stored encrypted.</para>
               </entry>
             </row>
             <row>
-              <entry>
+              <entry valign="top">
                 <para><emphasis role="bold">Enable versioning for metadata sync</emphasis></para>
               </entry>
-              <entry>
+              <entry valign="top">
                 <para>Defines whether to create versions of metadata when you syncrhonize metadata
                   between central and local instances.</para>
               </entry>
             </row>
             <row>
-              <entry>
+              <entry valign="top">
                 <para><emphasis role="bold">Don't sync metadata if DHIS versions
                   differ</emphasis></para>
               </entry>
-              <entry>
+              <entry valign="top">
                 <para>TBA</para>
               </entry>
             </row>
             <row>
-              <entry>
-                <para><emphasis role="bold">Create new version - Best effort</emphasis></para>
+              <entry valign="top">
+                <para><emphasis role="bold">Best effort</emphasis></para>
               </entry>
-              <entry>
+              <entry valign="top">
                 <para>TBA</para>
               </entry>
             </row>
             <row>
-              <entry>
-                <para><emphasis role="bold">Create new version - Atomic</emphasis></para>
+              <entry valign="top">
+                <para><emphasis role="bold">Atomic</emphasis></para>
               </entry>
-              <entry>
+              <entry valign="top">
                 <para>TBA</para>
               </entry>
             </row>
@@ -1701,36 +1690,36 @@ According to SME: Disse brukes for å gjøre en kall mot URL med username og pas
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
         <thead>
           <row>
-            <entry>
+            <entry valign="top">
               <para>Setting</para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>Description</para>
             </entry>
           </row>
         </thead>
         <tbody>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">System monitoring URL</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>TBA</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">System monitoring user name</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>TBA</para>
             </entry>
           </row>
           <row>
-            <entry>
+            <entry valign="top">
               <para><emphasis role="bold">System monitoring password</emphasis></para>
             </entry>
-            <entry>
+            <entry valign="top">
               <para>TBA</para>
             </entry>
           </row>
@@ -1769,36 +1758,36 @@ Vet ikke akkurat hvordan oauth2 brukes i settings her, men Zubair mener å huske
             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
             <thead>
               <row>
-                <entry>
+                <entry valign="top">
                   <para>Grant type</para>
                 </entry>
-                <entry>
+                <entry valign="top">
                   <para>Description</para>
                 </entry>
               </row>
             </thead>
             <tbody>
               <row>
-                <entry>
+                <entry valign="top">
                   <para><emphasis role="bold">Password</emphasis></para>
                 </entry>
-                <entry>
+                <entry valign="top">
                   <para>TBA</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry valign="top">
                   <para><emphasis role="bold">Refresh token</emphasis></para>
                 </entry>
-                <entry>
+                <entry valign="top">
                   <para>TBA</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry valign="top">
                   <para><emphasis role="bold">Authorization code</emphasis></para>
                 </entry>
-                <entry>
+                <entry valign="top">
                   <para>TBA</para>
                 </entry>
               </row>
