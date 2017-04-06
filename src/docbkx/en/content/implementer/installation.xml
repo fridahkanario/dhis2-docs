@@ -128,13 +128,18 @@ sudo locale-gen nb_NO.UTF-8</screen>
       <para>Return to your session by invoking <code>exit</code> You now have a PostgreSQL user
         called <emphasis role="italic">dhis</emphasis> and a database called <emphasis role="italic"
           >dhis2</emphasis>.</para>
-      <para><emphasis>Note:</emphasis> The <emphasis>PostGIS</emphasis> extension is not strictly
-        required for the system to operate, but is needed for several GIS (mapping) features
-        to work. DHIS 2 will attempt to install the PostGIS extension during startup. If the 
-        DHIS 2 database user does not have permission to create extensions you can create it 
-        from the console using the <emphasis role="italic">postgres</emphasis> user with the 
-        following command:</para>
-      <screen>create extension postgis;</screen>
+      <para><emphasis>Note:</emphasis> The <emphasis>PostGIS</emphasis> extension is needed 
+        for several GIS (mapping) features to work. DHIS 2 will attempt to install the PostGIS 
+        extension during startup. If the DHIS 2 database user does not have permission to create 
+        extensions you can create it from the console using the <emphasis role="italic">postgres</emphasis> 
+        user with the following commands:</para>
+      <screen>
+		sudo su postgres
+		psql
+		create extension postgis;
+		\q
+		exit
+	  </screen>
     </section>
     <section xml:id="install_postgresql_performance_tuning">
       <title>PostgreSQL performance tuning</title>
