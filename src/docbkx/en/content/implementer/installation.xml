@@ -137,9 +137,9 @@ sudo locale-gen nb_NO.UTF-8</screen>
 		sudo su postgres
 		psql
 		create extension postgis;
-		\q
-		exit
 	  </screen>
+	  <para>Exit the console and return to your previous user with <emphasis role="italic">\q</emphasis>
+	    followed by <emphasis role="italic">exit</emphasis>.</para>
     </section>
     <section xml:id="install_postgresql_performance_tuning">
       <title>PostgreSQL performance tuning</title>
