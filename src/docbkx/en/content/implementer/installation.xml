@@ -128,16 +128,14 @@ sudo locale-gen nb_NO.UTF-8</screen>
       <para>Return to your session by invoking <code>exit</code> You now have a PostgreSQL user
         called <emphasis role="italic">dhis</emphasis> and a database called <emphasis role="italic"
           >dhis2</emphasis>.</para>
-      <para><emphasis>Note:</emphasis> The <emphasis>PostGIS</emphasis> extension is needed 
-        for several GIS (mapping) features to work. DHIS 2 will attempt to install the PostGIS 
+      <para>The <emphasis>PostGIS</emphasis> extension is needed 
+        for several GIS/mapping features to work. DHIS 2 will attempt to install the PostGIS 
         extension during startup. If the DHIS 2 database user does not have permission to create 
         extensions you can create it from the console using the <emphasis role="italic">postgres</emphasis> 
         user with the following commands:</para>
-      <screen>
-		sudo su postgres
-		psql
-		create extension postgis;
-	  </screen>
+      <screen>sudo su postgres
+psql
+create extension postgis;</screen>
 	  <para>Exit the console and return to your previous user with <emphasis role="italic">\q</emphasis>
 	    followed by <emphasis role="italic">exit</emphasis>.</para>
     </section>
