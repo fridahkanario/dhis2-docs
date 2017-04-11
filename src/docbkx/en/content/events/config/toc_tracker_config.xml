@@ -19,7 +19,6 @@ Create a program?"?>programs<?oxy_comment_end?></title>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_stages_manage.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_indicators_manage.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_rules_manage.xml" encoding="UTF-8"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_valrules_manage.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_notifications_manage.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_customregform_manage.xml" encoding="UTF-8"/>
     <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../maintenance/tracker/toc_mtn_tracker.xml" encoding="UTF-8"/> -->

@@ -12,7 +12,6 @@
         <?oxy_comment_start author="cecilia" timestamp="20160926T105910+0200" comment="Is there a workflow for this?"?>metadata<?oxy_comment_end?></title>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="c_program.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_te_attribute_create.xml" encoding="UTF-8"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_te_attributegr_create.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_reltype_create.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_te_create.xml" encoding="UTF-8"/>
     

@@ -1393,8 +1393,11 @@ http://server/api/26/constants/ID</screen></para>
       <para>In order to add or remove objects to or from a collection of objects you can use the
           following
           pattern:<screen>/api/26/{collection-object}/{collection-object-id}/{collection-name}/{object-id}</screen></para>
-      <para>You should use the POST method to add, and the DELETE method to remove an object. The
-        components of the pattern are:</para>
+      <para>You should use the POST method to add, and the DELETE method to remove an object.
+      When there is a many-to-many relationship between objects, you must first determine which object
+      owns the relationship. If it isn't clear which object this is, try the call
+      both ways to see which works.</para>
+      <para>The components of the pattern are:</para>
       <itemizedlist>
         <listitem>
           <para>collection object: The type of objects that owns the collection you want to
@@ -10245,10 +10248,6 @@ interval=WEEK" -u admin:district</screen>
               <entry>Tracked entity attribute</entry>
             </row>
             <row>
-              <entry>TrackedEntityAttributeGroup</entry>
-              <entry>Tracked entity attribute group</entry>
-            </row>
-            <row>
               <entry>TrackedEntity</entry>
               <entry>Tracked entity</entry>
             </row>
@@ -11107,6 +11106,13 @@ interval=WEEK" -u admin:district</screen>
     <screen>/api/me/dashboard</screen>
     <para>Lists all messages and interpretations in the inbox (including replies):</para>
     <screen>/api/me/inbox</screen>
+    <para>In order to change password, this end point can be used to validate newly entered
+      password. Password validation will be done based on PasswordValidationRules configured in the
+      system. This end point support POST and password string should be sent in POST body.</para>
+    <screen>/api/me/validatePassword</screen>  
+    <para>While changing password, this end point (support POST) can be used to verify old password.
+      Password string should be sent in POST body.</para>
+    <screen>/api/me/verifyPassword</screen>  
     <para>Gives the full profile information for current user. This endpoint support both <emphasis
         role="italic">GET</emphasis> to retrieve profile and <emphasis role="italic">POST</emphasis>
       to update profile (the exact same format is used):</para>

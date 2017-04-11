@@ -59,7 +59,7 @@
   </section>
   <section xml:id="install_server_setup">
     <title>Server setup</title>
-    <para>This section describes how to set up a server instance of DHIS2 on Ubuntu 14.04 64 bit
+    <para>This section describes how to set up a server instance of DHIS2 on Ubuntu 16.04 64 bit
       with PostgreSQL as database system and Tomcat as Servlet container. This guide is not meant to
       be a step-by-step guide per se, but rather to serve as a reference to how DHIS2 can be
       deployed on a server. There are many possible deployment strategies, which will differ
@@ -114,13 +114,10 @@ sudo locale-gen nb_NO.UTF-8</screen>
     <section xml:id="install_postgresql_installation">
       <title>PostgreSQL installation</title>
       <para>Install PostgreSQL by invoking:</para>
-      <screen>sudo apt-get install postgresql-9.4 postgresql-contrib-9.4 postgresql-9.4-postgis-2.2 </screen>
+      <screen>sudo apt-get install postgresql-9.5 postgresql-contrib-9.5 postgresql-9.5-postgis-2.2</screen>
       <para><emphasis>Note:</emphasis> Alternatively you can consult the PostgreSQL documentation to
         install the latest version from the PostgreSQL APT repository:
           <link>http://www.postgresql.org/download/linux/ubuntu/</link>.</para>
-      <para><emphasis>Note:</emphasis> The <emphasis>PostGIS</emphasis> extension is not strictly
-        required for the system to operate, but is needed for several mapping visualization features
-        to work.</para>
       <para>Switch to the postgres user by invoking:</para>
       <screen>sudo su postgres</screen>
       <para>Create a non-privileged user called <emphasis role="italic">dhis</emphasis> by
@@ -131,6 +128,16 @@ sudo locale-gen nb_NO.UTF-8</screen>
       <para>Return to your session by invoking <code>exit</code> You now have a PostgreSQL user
         called <emphasis role="italic">dhis</emphasis> and a database called <emphasis role="italic"
           >dhis2</emphasis>.</para>
+      <para>The <emphasis>PostGIS</emphasis> extension is needed 
+        for several GIS/mapping features to work. DHIS 2 will attempt to install the PostGIS 
+        extension during startup. If the DHIS 2 database user does not have permission to create 
+        extensions you can create it from the console using the <emphasis role="italic">postgres</emphasis> 
+        user with the following commands:</para>
+      <screen>sudo su postgres
+psql
+create extension postgis;</screen>
+	  <para>Exit the console and return to your previous user with <emphasis role="italic">\q</emphasis>
+	    followed by <emphasis role="italic">exit</emphasis>.</para>
     </section>
     <section xml:id="install_postgresql_performance_tuning">
       <title>PostgreSQL performance tuning</title>
@@ -195,17 +202,6 @@ sudo locale-gen nb_NO.UTF-8</screen>
         improve performance on write-heavy systems since potentially many write operations can be
         executed within a single flush to disk.</para>
       <para>Restart PostgreSQL by invoking <code>sudo /etc/init.d/postgresql restart</code></para>
-    </section>
-    <section xml:id="install_postgis_installation">
-      <title>PostGIS installation</title>
-      <para>In order to take advantage of the GIS clustering functionality introduced in version
-        2.23 you need to install the PostGIS extender on the server. Install PostGIS on the server
-        by invoking:</para>
-      <screen>sudo apt-get install postgresql-9.4 postgresql-contrib-9.4 postgresql-9.4-postgis-2.2</screen>
-      <para>DHIS 2 will attempt to install the PostGIS extension during startup. If the DHIS 2
-        database user does not have permission to create extensions you can create it from the
-        console using the postgres user with the following command:</para>
-      <screen>create extension postgis;</screen>
     </section>
     <section xml:id="install_database_configuration">
       <title>Database configuration</title>
