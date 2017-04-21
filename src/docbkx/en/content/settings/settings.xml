@@ -1368,9 +1368,9 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
         <warning>
           <title>Don't create new metadata versions on local instances</title>
           <para dir="ltr">Each instance of DHIS2, whether central or local, can create metadata
-            versions. If a new metadata version is created on the local instance, this will stop
-            that instance’s ability to receive new metadata versions from the central instance, as
-            the metadata version contents will be out of synchronization.</para>
+            versions. If a new metadata version is created on the local instance, this instance
+            can't receive new metadata versions from the central instance, since the content of the
+            metadata versions will be out of synchronization.</para>
           <para dir="ltr">If you've created metadata versions on a local instance, you must manually
             deleted these versions from the database before you can synchronize with the central
             instance.</para>
@@ -1389,11 +1389,11 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
       <title>Workflow</title>
       <orderedlist>
         <listitem>
-          <para>On central instance, configure metadata versioning. (once the central instance
+          <para>On the central instance, configure metadata versioning. (once the central instance
             contains metadata)</para>
         </listitem>
         <listitem>
-          <para>Connect local instance(s) to central instance.</para>
+          <para>Connect local instance(s) to the central instance.</para>
         </listitem>
         <listitem>
           <para>On central instance, create metadata version.(?)</para>
@@ -1693,7 +1693,7 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
             </row>
             <row>
               <entry valign="top">
-                <para><emphasis role="bold">Remote server username</emphasis></para>
+                <para><emphasis role="bold">Remote server user name</emphasis></para>
               </entry>
               <entry valign="top">
                 <para>The user name of the DHIS2 user account on the remote server to use for data
@@ -1730,16 +1730,24 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
                 <para><emphasis role="bold">Don't sync metadata if DHIS versions
                   differ</emphasis></para>
               </entry>
-              <entry valign="top">
-                <para>TBA</para>
-              </entry>
+              <entry valign="top">Defines whether to not allow metadata synchronization<para>When
+                  enabled, this option will not allow metadata sync to occur, both via the user
+                  interface, and the API. The metadata schema changes across versions of DHIS2 in
+                  ways that make metadata across versions incompatible.</para><para>The only time it
+                  might be valuable to disable this option is when syncing basic entities such as
+                  data elements, that have not changed across DHIS2 versions.</para></entry>
             </row>
             <row>
               <entry valign="top">
                 <para><emphasis role="bold">Best effort</emphasis></para>
               </entry>
               <entry valign="top">
-                <para>TBA</para>
+                <para dir="ltr">While generating new metadata snapshots, users can select a type of
+                  metadata snapshot. The type governs how the importer of the decentralized
+                  instances will treat the version. There are two types:</para>
+                <para>If the metadata import encounters missing references (for example missing data
+                  elements on a data element group import) it ignores the errors and continues the
+                  import.</para>
               </entry>
             </row>
             <row>
@@ -1747,7 +1755,8 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
                 <para><emphasis role="bold">Atomic</emphasis></para>
               </entry>
               <entry valign="top">
-                <para>TBA</para>
+                <para dir="ltr">All or nothing - the metadata import will fail if any of the
+                  references do not exist</para>
               </entry>
             </row>
             <?oxy_custom_end?>
