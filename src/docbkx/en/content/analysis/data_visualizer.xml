@@ -8,24 +8,26 @@
   xmlns:db="http://docbook.org/ns/docbook" xml:id="data_vis">
   <title>Using the Data Visualizer app</title>
   <section xml:id="data_vis_intro">
-    <title>Data Visualizer
-      <?oxy_comment_start author="CPersson" timestamp="20160422T124514+0200" comment="Same concept information as in Pivot table app doc?"?>overview<?oxy_comment_end?></title>
-    <screenshot>
-      <info>
-        <title>Data visualizer module displaying a column chart.</title>
-      </info>
-      <mediaobject>
-        <imageobject>
-          <imagedata width="100%" align="center"
-            fileref="resources/images/visualizer/column_chart.png" format="PNG"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
-    <para>With the
-      D<?oxy_comment_start author="CPersson" timestamp="20160421T133120+0200" comment="Which type of data? What&apos;s the difference to the Event Visualizer?"?>ata<?oxy_comment_end?>
-      Visualizer app, you can select content, for example indicators, data elements, periods and
-      organisation units, for an analysis. The app works well over poor Internet connections and
-      generates charts in the web browser.</para>
+    <title><?oxy_comment_start author="CPersson" timestamp="20160422T124514+0200" comment="Same concept information as in Pivot table app doc?"?>About<?oxy_comment_end?>
+      the Data Visualizer app</title>
+    <para>
+      <screenshot>
+        <info>
+          <title>Data visualizer module displaying a column chart.</title>
+        </info>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="100%" align="center"
+              fileref="resources/images/visualizer/column_chart.png" format="PNG"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
+    <para>With the <emphasis role="bold"
+        >D<?oxy_comment_start author="CPersson" timestamp="20160421T133120+0200" comment="Which type of data? What&apos;s the difference to the Event Visualizer?"?>ata<?oxy_comment_end?>
+        Visualizer </emphasis>app, you can select content, for example indicators, data elements,
+      periods and organisation units, for an analysis. The app works well over poor Internet
+      connections and generates charts in the web browser.</para>
     <itemizedlist>
       <listitem>
         <para>You can hide and show individual data series in the chart by clicking directly on the
@@ -487,7 +489,8 @@ Also standardize which section it belongs in."?>A
     </example>
   </section>
   <section xml:id="datavis_change_display">
-    <title>Change the display of your chart</title>
+    <title>Change the display of your
+      <?oxy_comment_start author="cecilia" timestamp="20170425T131841+0200" comment="Must add example grapch with callouts"?>chart<?oxy_comment_end?></title>
     <screenshot>
       <mediaobject>
         <imageobject>
@@ -504,27 +507,61 @@ Also standardize which section it belongs in."?>A
         <para>Set the options as required.</para>
         <table frame="all">
           <title>Chart options</title>
-          <tgroup cols="2">
-            <colspec colname="c1" colnum="1" colwidth="1*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.5*"/>
+          <tgroup cols="3">
+            <colspec colname="newCol1" colnum="1" colwidth="1*"/>
+            <colspec colname="c1" colnum="2" colwidth="1*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.5*"/>
             <thead>
               <row>
-                <entry>Option</entry>
-                <entry>Description</entry>
+                <entry>
+                  <para>Section</para>
+                </entry>
+                <entry>
+                  <para>Option</para>
+                </entry>
+                <entry>
+                  <para>Description</para>
+                </entry>
               </row>
             </thead>
             <tbody>
               <row>
+                <entry><emphasis role="bold">Data</emphasis></entry>
                 <entry>
                   <para><emphasis role="bold">Show values</emphasis></para>
                 </entry>
                 <entry>
-                  <para>Shows the values above the series in the chart.</para>
+                  <para>Displays the values above the series in the chart.</para>
                 </entry>
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Hide empty category items</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Use 100% stacked values</emphasis></para>
+                </entry>
+                <entry>
+                  <para/>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Use cumulative values</emphasis></para>
+                </entry>
+                <entry>
+                  <para/>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Hide empty categories</emphasis></para>
                 </entry>
                 <entry>
                   <para>Hides the category items with no data from the chart.</para>
@@ -532,7 +569,10 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Show trend lines</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Trend line</emphasis></para>
                 </entry>
                 <entry>
                   <para>Displays the trend line which visualizes how your data evolves over time.
@@ -542,8 +582,11 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Target value /
-                      <?oxy_comment_start author="CPersson" timestamp="20160422T121457+0200" comment="Suggest to dev to remove &quot;:&quot; in UI."?>title<?oxy_comment_end?>:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Target
+                      value/<?oxy_comment_start author="CPersson" timestamp="20160422T121457+0200" comment="Suggest to dev to remove &quot;:&quot; in UI."?>title<?oxy_comment_end?></emphasis></para>
                 </entry>
                 <entry>
                   <para>Displays a horizontal line at the given domain value. Useful for example
@@ -552,7 +595,10 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Base value / title:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Base value/title</emphasis></para>
                 </entry>
                 <entry>
                   <para>Displays a horizontal line at the given domain value. Useful for example
@@ -562,7 +608,10 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Sort order:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Sort order</emphasis></para>
                 </entry>
                 <entry>
                   <para>Allows you to sort the values on your chart from either low to high or high
@@ -571,7 +620,10 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Aggregation type:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Aggregation type</emphasis></para>
                 </entry>
                 <entry>
                   <para>Defines how the data elements or indicators will be aggregated within the
@@ -581,6 +633,10 @@ Also standardize which section it belongs in."?>A
                 </entry>
               </row>
               <row>
+                <entry>
+                  <para><emphasis role="bold"
+                      ><?oxy_comment_start author="cecilia" timestamp="20170425T112638+0200" comment="Why &quot;events&quot; in a Data Visualizer app? Events relate to programs?"?>Events<?oxy_comment_end?></emphasis></para>
+                </entry>
                 <entry>
                   <para><emphasis role="bold">Include only completed events</emphasis></para>
                 </entry>
@@ -592,7 +648,10 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Range axis min/max:</emphasis></para>
+                  <para><emphasis role="bold">Axes</emphasis></para>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Range axis min/max</emphasis></para>
                 </entry>
                 <entry>
                   <para>Defines the maximum and minimum value which will be visible on the range
@@ -601,7 +660,10 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Range axis tick steps:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Range axis tick steps</emphasis></para>
                 </entry>
                 <entry>
                   <para>Defines the number of ticks which will be visible on the range axis.</para>
@@ -609,7 +671,10 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Range axis decimals:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Range axis decimals</emphasis></para>
                 </entry>
                 <entry>
                   <para>Defines the number of decimals which will be used for range axis
@@ -618,7 +683,10 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Range axis title:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Range axis title</emphasis></para>
                 </entry>
                 <entry>
                   <para>Type a title here to display a label next to the range axis (also referred
@@ -628,7 +696,10 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Domain axis title:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Domain axis title</emphasis></para>
                 </entry>
                 <entry>
                   <para> Type a title here to display a label below the domain axis (also referred
@@ -638,6 +709,31 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
+                  <para><emphasis role="bold">General</emphasis></para>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Chart title</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Type any title here to display it above the chart.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Chart subtitle</emphasis></para>
+                </entry>
+                <entry>
+                  <para/>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry>
                   <para><emphasis role="bold">Hide chart legend</emphasis></para>
                 </entry>
                 <entry>
@@ -645,6 +741,9 @@ Also standardize which section it belongs in."?>A
                 </entry>
               </row>
               <row>
+                <entry>
+                  <para/>
+                </entry>
                 <entry>
                   <para><emphasis role="bold">Hide chart title</emphasis></para>
                 </entry>
@@ -654,10 +753,13 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Chart title:</emphasis></para>
+                  <para/>
                 </entry>
                 <entry>
-                  <para>Type any title here to display it above the chart.</para>
+                  <para><emphasis role="bold">Hide chart subtitle</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Hides the subtitle of your chart.</para>
                 </entry>
               </row>
             </tbody>

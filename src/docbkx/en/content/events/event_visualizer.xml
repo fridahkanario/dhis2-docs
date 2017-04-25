@@ -8,17 +8,20 @@
   xmlns:db="http://docbook.org/ns/docbook" xml:id="event_visualizer_app">
   <title>Using the Event Visualizer app</title>
   <section>
-    <title>Event Visualizer
-      <?oxy_comment_start author="CPersson" timestamp="20160428T092619+0200" comment="At next revision, develop overview concept content."?>overview<?oxy_comment_end?></title>
-    <screenshot>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="resources/images/event_visualizer/event_visualizer.png" format="PNG"
-            align="center" width="100%"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
-    <para>With the Event Visualizer app, you can create charts based on event data.</para>
+    <title><?oxy_comment_start author="CPersson" timestamp="20160428T092619+0200" comment="At next revision, develop overview concept content."?>About<?oxy_comment_end?>
+      the Event Visualizer app</title>
+    <para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="resources/images/event_visualizer/event_visualizer.png" format="PNG"
+              align="center" width="100%"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
+    <para>With the <emphasis role="bold">Event Visualizer</emphasis> app, you can create charts
+      based on event data.</para>
   </section>
   <section>
     <title>Create a chart</title>
@@ -330,6 +333,14 @@
   <section>
     <title>Change the display of your chart</title>
     <para>You can customize the display of an event report. </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="50%" align="center" scale="100"
+            fileref="resources/images/visualizer/chart_options.png"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
     <orderedlist>
       <listitem>
         <para>Click <emphasis role="bold">Options</emphasis>.</para>
@@ -338,17 +349,22 @@
         <para>Set the options as required.</para>
         <table frame="all">
           <title>Chart options</title>
-          <tgroup cols="2">
-            <colspec colname="c1" colnum="1" colwidth="1*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.5*"/>
+          <tgroup cols="3">
+            <colspec colname="newCol1" colnum="1" colwidth="1*"/>
+            <colspec colname="c1" colnum="2" colwidth="1*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.5*"/>
             <thead>
               <row>
+                <entry>
+                  <para/>
+                </entry>
                 <entry>Option</entry>
                 <entry>Description</entry>
               </row>
             </thead>
             <tbody>
               <row>
+                <entry><emphasis role="bold">Data</emphasis></entry>
                 <entry>
                   <para><emphasis role="bold">Show values</emphasis></para>
                 </entry>
@@ -357,6 +373,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Show trend lines</emphasis></para>
                 </entry>
@@ -367,6 +384,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Hide empty category items</emphasis></para>
                 </entry>
@@ -375,6 +393,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Hide n/a data</emphasis></para>
                 </entry>
@@ -383,6 +402,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Include only completed events</emphasis></para>
                 </entry>
@@ -393,6 +413,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Target value /
                       <?oxy_comment_start author="CPersson" timestamp="20160422T121457+0200" comment="Suggest to dev to remove &quot;:&quot; in UI."?>title<?oxy_comment_end?>:</emphasis></para>
@@ -403,6 +424,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Base value / title:</emphasis></para>
                 </entry>
@@ -413,6 +435,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Sort order:</emphasis></para>
                 </entry>
@@ -422,11 +445,12 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Output type:</emphasis></para>
                 </entry>
                 <entry>
-                  <para>Defines the output type. The output types are  <emphasis role="bold"
+                  <para>Defines the output type. The output types are <emphasis role="bold"
                       >Event</emphasis>, <emphasis role="bold"
                       ><?oxy_comment_start author="CPersson" timestamp="20160427T163926+0200" comment="In GUI: &quot;Enrollment&quot;
 
@@ -436,6 +460,7 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Range axis min/max:</emphasis></para>
                 </entry>
@@ -445,6 +470,7 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Range axis tick steps:</emphasis></para>
                 </entry>
@@ -453,6 +479,7 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Range axis decimals:</emphasis></para>
                 </entry>
@@ -462,6 +489,7 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Range axis title:</emphasis></para>
                 </entry>
@@ -472,6 +500,7 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Domain axis title:</emphasis></para>
                 </entry>
@@ -482,6 +511,7 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Hide chart legend</emphasis></para>
                 </entry>
@@ -490,6 +520,7 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Hide chart title</emphasis></para>
                 </entry>
@@ -498,6 +529,7 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Chart title:</emphasis></para>
                 </entry>
