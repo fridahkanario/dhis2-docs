@@ -8159,11 +8159,16 @@ ORDER BY oul.level, par.name, ou.name</screen>
       <screen>/api/26/analytics.json
   ?dimension=dx:DE_GROUP-qfxEYY9xAl6;IN_GROUP-oehv9EO3vP7;BfMAe6Itzgt.REPORTING_RATE
   &amp;dimension=pe:LAST_12_MONTHS&amp;filter=ou:ImspTQPwCqd</screen>
-      <para>Data element operands can optionally specify attribut option combinations and use
-        wildcards e.g. to specify all category option combination
-        values:<screen>/api/26/analytics.json
-  ?dimension=dx:Uvn6LCg7dVU.*j8vBiBqGf6O;Uvn6LCg7dVU.Z4oQs46iTeR;Uvn6LCg7dVU.Z4oQs46iTeR.j8vBiBqGf6O
-  &amp;dimension=pe:LAST_12_MONTHS&amp;filter=ou:ImspTQPwCqd</screen></para>
+      <para>Data element operands specifies a data element and either one or both of category option
+        combination and attribute option combination:</para>
+      <screen>/api/26/analytics.json
+  ?dimension=dx:Uvn6LCg7dVU.Z4oQs46iTeR;iuMEqnwpwnO.dnwYujSTTxd.j8vBiBqGf6O
+  &amp;dimension=pe:LAST_4_QUARTERS&amp;filter=ou:ImspTQPwCqd</screen>
+      <para>Data element operands can use wildcards e.g. to specify all category option combination
+        values:</para>
+      <screen>/api/26/analytics.json
+  ?dimension=dx:Uvn6LCg7dVU.*.j8vBiBqGf6O
+  &amp;dimension=pe:LAST_4_QUARTERS&amp;filter=ou:ImspTQPwCqd</screen>
       <tip>
         <para>A great way to learn how to use the analytics API is to use the DHIS2 <emphasis>pivot
             table</emphasis> app. You can play around with pivot tables using the various dimensions
