@@ -4894,10 +4894,11 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
             </thead>
             <tbody>
               <row>
-                <entry>#{&lt;dataelement-id&gt;.&lt;catoptcombo-id&gt;}</entry>
+                <entry>#{&lt;dataelement-id&gt;.&lt;categoryoptcombo-id&gt;.&lt;attributeoptcombo-id>}</entry>
                 <entry>Data element operand</entry>
                 <entry>Refers to a combination of an aggregate data element and a category option
-                  combination.</entry>
+                  combination. Both category and attribute option combo ids are optional, and a
+                  wilcard "*" symbol can be used to indicate any value.</entry>
               </row>
               <row>
                 <entry>#{&lt;dataelement-id&gt;}</entry>
@@ -4942,6 +4943,9 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>Note that for data element variables the category option combo identifier can be
         omitted. The variable will then represent the total for the data element, e.g. across all
         category option combos. Example:<screen>#{P3jJH5Tu5VC} + 2</screen></para>
+      <para>Data element operands can include any of category option combination and attribute
+        option combination, and use wildcards to indicate any
+        value:<screen>#{P3jJH5Tu5VC.S34ULMcHMca} + #{P3jJH5Tu5VC.*.j8vBiBqGf6O} + #{P3jJH5Tu5VC.S34ULMcHMca.*}</screen></para>
       <para>An example which use a program data element and a program
         attribute:<screen>( D{eBAyeGv0exc.vV9UWAZohSf} * A{IpHINAT79UW.cejWyOfXge6} ) / D{eBAyeGv0exc.GieVkTxp4HH}</screen></para>
       <para>An example which combines program indicators and aggregate
@@ -8092,7 +8096,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Aggregated data</entry>
             </row>
             <row>
-              <entry>Indicator</entry>
+              <entry>Indicator grop</entry>
               <entry>IN_GROUP-&lt;indicatorgroup-id></entry>
               <entry>Keyword followed by indicator group identifier. Will include all indicators in
                 the group in the response.</entry>
@@ -8105,11 +8109,20 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Aggregated data</entry>
             </row>
             <row>
-              <entry>Data element</entry>
+              <entry>Data element group</entry>
               <entry>DE_GROUP-&lt;dataelementgroup-id&gt;</entry>
               <entry>Keyword followed by data element group identifier. Will include all data
                 elements in the group in the response.</entry>
               <entry>Aggregated data</entry>
+            </row>
+            <row>
+              <entry>Data element operand</entry>
+              <entry>&lt;dataelement-id>.&lt;categoryoptcombo-id>.&lt;attributeoptcombo-id></entry>
+              <entry>Data element identifer followed by one or both of category option combination
+                and attribute option combo identifier. Wildcard "*" symbol can be used to indicate
+                any option combination value. The attribute option combination identifier can be
+                completely left out.</entry>
+              <entry>Aggregate data</entry>
             </row>
             <row>
               <entry>Data set</entry>
@@ -8117,7 +8130,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Data set identifier followed by reporting rate metric. Can be REPORTING_RATE |
                 REPORTING_RATE_ON_TIME | ACTUAL_REPORTS | ACTUAL_REPORTS_ON_TIME |
                 EXPECTED_REPORTS.</entry>
-              <entry>Aggregated data</entry>
+              <entry>Data set completeness registrations</entry>
             </row>
             <row>
               <entry>Program data element</entry>
@@ -8146,6 +8159,11 @@ ORDER BY oul.level, par.name, ou.name</screen>
       <screen>/api/26/analytics.json
   ?dimension=dx:DE_GROUP-qfxEYY9xAl6;IN_GROUP-oehv9EO3vP7;BfMAe6Itzgt.REPORTING_RATE
   &amp;dimension=pe:LAST_12_MONTHS&amp;filter=ou:ImspTQPwCqd</screen>
+      <para>Data element operands can optionally specify attribut option combinations and use
+        wildcards e.g. to specify all category option combination
+        values:<screen>/api/26/analytics.json
+  ?dimension=dx:Uvn6LCg7dVU.*j8vBiBqGf6O;Uvn6LCg7dVU.Z4oQs46iTeR;Uvn6LCg7dVU.Z4oQs46iTeR.j8vBiBqGf6O
+  &amp;dimension=pe:LAST_12_MONTHS&amp;filter=ou:ImspTQPwCqd</screen></para>
       <tip>
         <para>A great way to learn how to use the analytics API is to use the DHIS2 <emphasis>pivot
             table</emphasis> app. You can play around with pivot tables using the various dimensions
