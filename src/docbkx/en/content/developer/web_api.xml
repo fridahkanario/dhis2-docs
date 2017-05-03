@@ -1582,7 +1582,7 @@ http://server/api/26/constants/ID</screen></para>
       <para>Export id and displayName for all data elements, ordered by
         displayName:<screen>curl -u user:pass http://server/api/26/metadata?dataElements:fields=id,name&amp;dataElements:order=displayName:desc</screen></para>
       <para>Export data elements and indicators where name starts with
-        "ANC":<screen>curl -u user:pass http://server/api/26/metadata?defaultFilter=name:^like:ANC&amp;dataElements=true&amp;indicators=true</screen></para>
+        "ANC":<screen>curl -u user:pass http://server/api/26/metadata?filter=name:^like:ANC&amp;dataElements=true&amp;indicators=true</screen></para>
     </section>
     <section xml:id="webapi_dataset_program_export_dependencies">
       <title>Metadata export with dependencies</title>

@@ -410,6 +410,13 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
           </thead>
           <tbody>
             <row>
+              <entry>d2:hasValue</entry>
+              <entry>(object)</entry>
+              <entry>Returns true if the data element/attribute has a value. Can be used in filters
+                to distinguish between the number 0 and no value, and to distinguish between exlicit
+                "No" and no selection for a Yes/No field.</entry>
+            </row>
+            <row>
               <entry>d2:daysBetween</entry>
               <entry>(date, date)</entry>
               <entry>Produces the number of days between two data elements/attributes of type date.
@@ -442,6 +449,10 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
           </tbody>
         </tgroup>
       </table>
+      <example>
+        <para>A filter that uses the &quot;hasValue&quot; function looks like this:
+          this:<screen>d2:hasValue(#{mCXR7u4kNBW.NFkjsNiQ9PH})</screen></para>
+      </example>
       <example>
         <para>An expression that uses the &quot;zing&quot; and &quot;oizp&quot; functions looks like
           this:<screen>d2:zing(A{GPkGfbmArby}) + d2:oizp(#{mCXR7u4kNBW.NFkjsNiQ9PH}))</screen></para>
