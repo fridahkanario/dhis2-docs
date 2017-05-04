@@ -490,7 +490,11 @@ Also standardize which section it belongs in."?>A
   </section>
   <section xml:id="datavis_change_display">
     <title>Change the display of your
-      <?oxy_comment_start author="cecilia" timestamp="20170425T131841+0200" comment="Must add example grapch with callouts"?>chart<?oxy_comment_end?></title>
+      <?oxy_comment_start author="cecilia" timestamp="20170425T131841+0200" comment="Must add example graph with callouts
+
+ANC 1st visit, a lot of org units
+
+last 12 months."?>chart<?oxy_comment_end?></title>
     <screenshot>
       <mediaobject>
         <imageobject>
@@ -715,7 +719,15 @@ Also standardize which section it belongs in."?>A
                   <para><emphasis role="bold">Chart title</emphasis></para>
                 </entry>
                 <entry>
+                  <?oxy_comment_start author="cecilia" timestamp="20170426T104407+0200" comment="A custom title
+If you&apos;ve a lot of filters, otherwise all filter names will be the default title on DV.
+Visible in both DV and on dasbhboard
+If there&apos;s a custom title, that will be visible on dashboard
+If no custom title, favorite&apos;s name is dipslayed on dashboard.
+
+Same subtitle. If you specify one, it will be displayed on dashboard. If you don&apos;t, no subtitle on dashboard."?>
                   <para>Type any title here to display it above the chart.</para>
+                  <?oxy_comment_end?>
                 </entry>
               </row>
               <row>
