@@ -86,15 +86,15 @@ error_occurred=Une erreur s&apos;est produite</programlisting>
       </listitem>
     </itemizedlist>
   </important>
-    <para>There are a number of tools which can be user to support the localization of the user
+    <para>There are a number of tools which can be used to support the localization of the user
       interface as well as the database content, which will be discussed below.</para>
  </section>
   <section xml:id="dhis2-i18n-translations-tool">
     <title>DHIS2 i18n tool</title>
     <para>The i18n resource editor is Java desktop application which can be downloaded from
       http://www.dhis2.org/downloads . It requires that you have checked out the DHIS2 source code
-      from Bazaar (check out http://www.dhis2.org/development if necessary) and have a Java Runtime
-      Environment installed on your computer. On Windows, simly unpack the ZIP archvie and click the
+      from Github (check out http://www.dhis2.org/development if necessary) and have a Java Runtime
+      Environment installed on your computer. On Windows, simly unpack the ZIP archive and click the
       executable file. On Linux, extract the archive, navigate inside the extracted directory and
       invoke the following:</para>
     <screen>java -jar dhis-i18n-resourceeditor.jar</screen>
@@ -162,11 +162,11 @@ error_occurred=Une erreur s&apos;est produite</programlisting>
     <para>The first time you login, you should select your settings, by clicking &quot;My
       account-&gt;Settings&quot;. Here you can select your interface language, the projects which
       you wish to work on, and the languages which you will translate into. Be sure to press
-      &quot;Save&quot; when have finished making your changes. </para>
+      &quot;Save&quot; when you have finished making your changes. </para>
     <para>To start translating, be sure you have logged in, and then press the &quot;Home&quot; link
       in the upper-right hand corner. Select a project (e.g. DHIS2) and then click on the language
       which you wish to translate. The number of words which need to be translated will be displayed
-      under the &quot;Summary&quot; field. Click on one of the modules (e.g. dhis-2) and the keep
+      under the &quot;Summary&quot; field. Click on one of the modules (e.g. dhis-2) and then keep
       drilling down through the folders to find a module which needs translation, (e.g.
       dhis-web-&gt;dhis-web-caseentry). Now click on the &quot;Summary&quot; text which will say
       something like &quot;194 words need attention&quot;. You will be directed to the string which
@@ -201,7 +201,7 @@ error_occurred=Une erreur s&apos;est produite</programlisting>
         <para>From the top of the app, choose the locale you wish to translate into.</para>
       </listitem>
       <listitem>
-        <para>Next, choose the type of obejct you wish to translate from the left-hand pane. </para>
+        <para>Next, choose the type of object you wish to translate from the left-hand pane. </para>
       </listitem>
       <listitem>
         <para>Choose the specific object you wish to translate, and translate each of the properties
