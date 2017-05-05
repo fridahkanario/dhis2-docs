@@ -1030,7 +1030,8 @@ SME:
                 registration</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>Defines whether you want to use reCAPTCHA for user registration.</para>
+              <para>Defines whether you want to use reCAPTCHA for user self-registration. This is
+                enabled by default.</para>
             </entry>
           </row>
           <row>
@@ -1057,7 +1058,7 @@ SME:
             <entry valign="top">
               <para>Defines whether the system should lock user accounts after five successive
                 failed login attempts over a timespan of 15 minutes.</para>
-              <para>The account will be locked for 15 minutes, then the user can try and log in
+              <para>The account will be locked for 15 minutes, then the user can attempt to log in
                 again.</para>
             </entry>
           </row>
@@ -1066,8 +1067,8 @@ SME:
               <para><emphasis role="bold">Allow users to grant own user roles</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>Defines whether users can grant the user roles they've themselves to
-                others.</para>
+              <para>Defines whether users can grant user roles which they have themselves to others
+                when creating new users.</para>
             </entry>
           </row>
           <row>
@@ -1125,26 +1126,25 @@ SME:
               <para>Defines the label to display for the specified OpenID provider.</para>
             </entry>
           </row>
-          <?oxy_comment_start author="cecilia" timestamp="20170321T135649+0100" comment="Descriptions missing"?>
-          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230" mid="51"?>
           <row>
             <entry valign="top">
               <para><emphasis role="bold">CORS whitelist</emphasis></para>
             </entry>
-            <?oxy_comment_start author="cecilia" timestamp="20170330T161125+0200" comment="Must be reviewed by SME."?>
             <entry valign="top">
-              <para>Defines which clients that can use the API. </para>
-              <para>Enter one URL per line</para>
+              <para>Whitelists a set of URLs which can access the DHIS 2 API from another domain.
+                Each URL should be entered on separate lines. Cross-origin resource sharing (CORS)
+                is a mechanism that allows restricted resources (e.g. javascript files) on a web
+                page to be requested from another domain outside the domain from which the first
+                resource was served.</para>
             </entry>
-            <?oxy_comment_end?>
           </row>
-          <?oxy_comment_end?>
           <row>
             <entry valign="top">
               <para><emphasis role="bold">Mapzen search API key</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>TBA</para>
+              <para>Defines the API key for the Mapzen API. This API is used to search addresses
+                globally within DHIS 2.</para>
             </entry>
           </row>
           <row>
@@ -1152,10 +1152,11 @@ SME:
               <para><emphasis role="bold">Google Maps API key</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>TBA</para>
+              <para>Defines the API key for the Google Maps API. This is used to display maps within
+                DHIS 2.</para>
             </entry>
           </row>
-          <?oxy_custom_end mid="51"?>
+          <?oxy_custom_end mid="49"?>
         </tbody>
       </tgroup>
     </table>
