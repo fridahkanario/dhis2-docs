@@ -257,13 +257,14 @@ curl -X POST -u demo:$SECRET -H &quot;Accept: application/json&quot; $SERVER/tok
     <screen>yyyy-MM-dd</screen>
     <para>For instance, if you want to express March 20, 2014 you must use <emphasis role="italic"
         >2014-03-20</emphasis>.</para>
-    <para>The period format is described in the following table. </para>
+    <para>The period format is described in the following table (also available on API endpoint
+        <emphasis>/api/periodTypes</emphasis>)</para>
     <table>
       <title>Period format</title>
       <tgroup cols="4">
-        <colspec colnum="1" colname="c1" colwidth="60pt"/>
-        <colspec colnum="2" colname="c2" colwidth="80pt"/>
-        <colspec colnum="3" colname="c3" colwidth="80pt"/>
+        <colspec colnum="1" colname="c1" colwidth="138.67pt"/>
+        <colspec colnum="2" colname="c2" colwidth="117.33pt"/>
+        <colspec colnum="3" colname="c3" colwidth="100.44pt"/>
         <colspec colnum="4" colname="c4" colwidth="200pt"/>
         <thead>
           <row>
@@ -287,6 +288,30 @@ curl -X POST -u demo:$SECRET -H &quot;Accept: application/json&quot; $SERVER/tok
             <entry><emphasis>yyyy</emphasis>W<emphasis>n</emphasis></entry>
             <entry>2004W10</entry>
             <entry>Week 10 2004</entry>
+          </row>
+          <row>
+            <entry>Week Wednesday</entry>
+            <entry><emphasis>yyyy</emphasis>WedW<emphasis>n</emphasis></entry>
+            <entry>2015WedW5</entry>
+            <entry>Week 5 with start Wednesday</entry>
+          </row>
+          <row>
+            <entry>Week Thursday</entry>
+            <entry><emphasis>yyyy</emphasis>ThuW<emphasis>n</emphasis></entry>
+            <entry>2015ThuW6</entry>
+            <entry>Week 6 with start Thursday</entry>
+          </row>
+          <row>
+            <entry>Week Saturday</entry>
+            <entry><emphasis>yyyy</emphasis>SatW<emphasis>n</emphasis></entry>
+            <entry>2015SatW7</entry>
+            <entry>Week 7 with start Saturday</entry>
+          </row>
+          <row>
+            <entry>Week Sunday</entry>
+            <entry><emphasis>yyyy</emphasis>SunW<emphasis>n</emphasis></entry>
+            <entry>2015SunW8</entry>
+            <entry>Week 8 with start Sunday</entry>
           </row>
           <row>
             <entry>Month</entry>
