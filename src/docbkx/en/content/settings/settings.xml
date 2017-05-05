@@ -952,7 +952,9 @@ SME:
             </entry>
             <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
             <entry valign="top">
-              <para>TBA</para>
+              <para>Defines whether DHIS 2 user messages should be delivered to the email address
+                associated with the user by default. This setting can be overridden by user
+                settings.</para>
             </entry>
             <?oxy_custom_end?>
           </row>
@@ -962,7 +964,9 @@ SME:
             </entry>
             <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
             <entry valign="top">
-              <para>TBA</para>
+              <para>Defines whether DHIS 2 user messages should be delivered as SMS to the mobile
+                phone number associated with the user by default. This setting can be overridden by
+                user settings.</para>
             </entry>
             <?oxy_custom_end?>
           </row>
