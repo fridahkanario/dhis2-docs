@@ -675,6 +675,31 @@ cluster.instance1.hostname = 193.157.199.131</screen></para>
         Consult the reverse proxy section for a detailed configuration guide.</para>
     </section>
   </section>
+  <section>
+    <title>Application cache providers</title>
+    <para>DHIS 2 user <emphasis>Ehcache</emphasis> as application cache provider by default. In
+      addition, DHIS 2 can be configured to use <emphasis>memcached</emphasis> as cache
+      provider.</para>
+    <para>Memcached is a high-performance, distributed memory object caching system. The memcached
+      server needs to be provided to DHIS 2. You can install memcached on Ubuntu using the following
+      command:<screen>sudo apt-get install memcached</screen></para>
+    <para>Memcached will start by default after being installed and is available on localhost port
+        <emphasis>11211</emphasis>. You can start, stop and view the status of the memcached service
+      using the following
+      command:<screen>sudo service memcached start | stop | status</screen></para>
+    <para>To use memcached as DHIS 2 application provider you can set the following properties in
+      the <emphasis>dhis.conf</emphasis> configuration
+      file:<screen># Cache provider, can be 'ehcache', 'memcached'
+cache.provider = memcached
+
+# Cache servers, default is 'localhost:11211'
+cache.servers = localhost:11211
+
+# Cache time in seconds, default is 600
+cache.time = 600</screen></para>
+    <para>Only the <emphasis>cache.provider</emphasis> setting is mandatory. You need to restart
+      DHIS 2 for the change to take effect.</para>
+  </section>
     <section xml:id="install_starting_tomcat_boot_time">
       <title>Starting Tomcat at boot time</title>
       <para>In certain situations a server might reboot unexpectedly. It is hence preferable to have
@@ -1128,7 +1153,21 @@ connection.schema = update
 # ldap.search.base = dc=hisp,dc=org
 
 # LDAP entry distinguished name filter
-# ldap.search.filter = (cn={0})</screen></para>
+# ldap.search.filter = (cn={0})
+
+# ----------------------------------------------------------------------
+# Application caching
+# ----------------------------------------------------------------------
+
+# Cache provider, can be 'ehcache', 'memcached', default is 'ehcache'
+# cache.provider = memcached
+
+# Cache servers, default is 'localhost:11211', applies to memcached
+# cache.servers = localhost:11211
+
+# Cache time in seconds, default is 600, applies to memcached
+# cache.time = 600
+</screen></para>
   </section>
   <section xml:id="install_application_logging">
     <title>Application logging</title>
