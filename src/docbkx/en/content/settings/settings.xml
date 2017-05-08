@@ -1351,477 +1351,143 @@ Verify with Lars"?>settings<?oxy_comment_end?></title>
       </tgroup>
     </table>
   </section>
-  <section xml:id="system_synchronization_settings">
-    <title><?oxy_comment_start author="cecilia" timestamp="20170421T075912+0200" comment="Does section really apply for data sync?"?>Data<?oxy_comment_end?>
-      and metadata synchronization</title>
-    <section>
-      <title>About data and metadata synchronization</title>
-      <para>You can synchronize data and metadata between different DHIS2 instances. Given two
-        instances in a central-local deployment strategy, metadata created at the
-        <?oxy_comment_start author="cecilia" timestamp="20160704T123350+0200" comment="Central what? Central level?"?>central<?oxy_comment_end?>
-        system can be synchronized with the local system and the data created at local system can be
-        synchronized with the central system. This can be useful when you've multiple stand-alone
-        instances of DHIS2 and global metadata needs to be created at all the local
-        instances.</para>
-      <para>If metadata creation and update take place at the central system and if the metadata
-        synchronisation task is enabled, the metadata gets synchronized down to all the local
-        instances which are bound to the central instance. These local instances will in turn push
-        data values to the central instance.</para>
-      <para>All metadata versions are maintained in the DHIS2 database and are available to all
-        local instances that connect to it. You can schedule each of the local instances to download
-        new metadata versions.</para>
-      <para>
-        <warning>
-          <title>Don't create new metadata versions on local instances</title>
-          <para dir="ltr">Each instance of DHIS2, whether central or local, can create metadata
-            versions. If a new metadata version is created on the local instance, this instance
-            can't receive new metadata versions from the central instance, since the content of the
-            metadata versions will be out of synchronization.</para>
-          <para dir="ltr">If you've created metadata versions on a local instance, you must manually
-            deleted these versions from the database before you can synchronize with the central
-            instance.</para>
-          <example>
-            <para>Assume the central and local DHIS2 instances have identical metadata snapshots
-              until version 10. Then the local instance creates a new snapshot called version 11.
-              After that, the central instance creates a new snapshot called version 11. When the
-              local instance attempts to synchronize metadata, version 11 is not downloaded.
-              However, the content of version 11 on the local instance is not identical to the
-              content of version 11 on the central instance.</para>
-          </example>
-        </warning>
-      </para>
-    </section>
-    <section>
-      <title>Workflow</title>
-      <orderedlist>
-        <listitem>
-          <para>On the central instance, configure metadata versioning. You should do this once the
-            central instance contains metadata.</para>
-        </listitem>
-        <listitem>
-          <para>Connect local instance(s) to the central instance.</para>
-        </listitem>
-        <listitem>
-          <para>On local instance(s), configure automatic synchronization.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <?oxy_comment_start author="cecilia" timestamp="20170421T081339+0200" comment="Is this relevant? Do you need to actually create each metadata version manually on the central instance?"?>
-    <section>
-      <title>Configure metadata versioning on central instance</title>
-      <orderedlist>
-        <listitem>
-          <para>On the central instance, open the <emphasis role="bold">System Settings</emphasis>
-            app and click <emphasis role="bold">Synchronization</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Go to the <emphasis role="bold">Metadata versioning</emphasis> section and select
-              <emphasis role="bold">Enable versioning for metadata sync</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>(Optional) Select <emphasis role="bold">Don't sync metadata if DHIS versions
-              <?oxy_comment_start author="cecilia" timestamp="20170405T143758+0200" comment="What exactly does this imply? Why would you do this?"?>differ<?oxy_comment_end?></emphasis>.</para>
-        </listitem>
-        <listitem>
-          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-          <?oxy_comment_start author="cecilia" timestamp="20170406T133813+0200" comment="Add info about what this is." mid="61"?>
-          <para>Select <emphasis role="bold">Best effort</emphasis> or <emphasis role="bold"
-              >Atomic</emphasis>.</para>
-          <?oxy_custom_end?>
-          <?oxy_comment_end mid="61"?>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Create new version</emphasis>. The new version is added
-            to the versioning table.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <?oxy_comment_end?>
-    <section>
-      <title>Connect local instance to central instance</title>
-      <para>To enable metadata synchronization, you must configure the connection between the local
-        instance and the central instance.</para>
-      <orderedlist>
-        <listitem>
-          <para>On the local instance, open the <emphasis role="bold">System Settings</emphasis> app
-            and click <emphasis role="bold">Synchronization</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Add the central DHIS2 instance's details to the local instance:</para>
-          <itemizedlist>
-            <listitem>
-              <para><emphasis role="bold">Remote server URL</emphasis></para>
-            </listitem>
-            <listitem>
-              <para><emphasis role="bold">Remote server user name</emphasis></para>
-            </listitem>
-            <listitem>
-              <para><emphasis role="bold">Remote server password</emphasis></para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-        <listitem>
-          <para>Go to the <emphasis role="bold">Metadata versioning</emphasis> section and select
-              <emphasis role="bold">Enable versioning for metadata sync</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>(Optional) Select <emphasis role="bold">Don't sync metadata if DHIS versions
-              <?oxy_comment_start author="cecilia" timestamp="20170405T143758+0200" comment="What exactly does this imply? Why would you do this?"?>differ<?oxy_comment_end?></emphasis>.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section>
-      <title>Configure automatic metadata synchronization on local instance</title>
-      <orderedlist>
-        <listitem>
-          <para>On the local instance, open the <emphasis role="bold">Data Administration</emphasis>
-            app and click <emphasis role="bold">Scheduling</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>In the <emphasis role="bold">Metadata Synchronization</emphasis> section, select
-              <emphasis role="bold">Enabled</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Select a time period: <emphasis role="bold">Daily</emphasis>, <emphasis role="bold"
-              >Weekly</emphasis>, <emphasis role="bold">Monthly</emphasis> or <emphasis role="bold"
-              >Yearly</emphasis>. </para>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Start</emphasis>.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section>
-      <title>Create a new
-        <?oxy_comment_start author="cecilia" timestamp="20170405T140205+0200" comment="Only metadata versioning? Not data veroninig?"?>metadata<?oxy_comment_end?>
-        version manually on central or local instance</title>
-      <orderedlist>
-        <listitem>
-          <para>Open the <emphasis role="bold">System Settings</emphasis> app and click <emphasis
-              role="bold">Synchronization</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Go to the <emphasis role="bold">Metadata versioning</emphasis> section and select
-              <emphasis role="bold">Enable versioning for metadata sync</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>(Optional) Select <emphasis role="bold">Don't sync metadata if DHIS versions
-              <?oxy_comment_start author="cecilia" timestamp="20170405T143758+0200" comment="What exactly does this imply? Why would you do this?"?>differ<?oxy_comment_end?></emphasis>.</para>
-        </listitem>
-        <listitem>
-          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-          <?oxy_comment_start author="cecilia" timestamp="20170406T133813+0200" comment="Add info about what this is." mid="66"?>
-          <para>Select <emphasis role="bold">Best effort</emphasis> or <emphasis role="bold"
-              >Atomic</emphasis>.</para>
-          <?oxy_custom_end?>
-          <?oxy_comment_end mid="66"?>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Create new version</emphasis>. The new version is added
-            to the versioning table.</para>
-        </listitem>
-      </orderedlist>
-      <para>
-        <example>
-          <title>Versioning table for a central instance</title>
-          <para>When the system is a <emphasis role="italics">central instance</emphasis>, you'll
-            see three columns in the versioning table:</para>
-          <para>
-            <screenshot>
-              <mediaobject>
-                <imageobject>
-                  <imagedata width="80%" align="center"
-                    fileref="resources/images/settings/metadata_versioning_table.png" format="PNG"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-          </para>
-          <informaltable frame="all">
-            <tgroup cols="2">
-              <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-              <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-              <thead>
-                <row valign="top">
-                  <entry valign="top">
-                    <para>Object</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Description</para>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row valign="top">
-                  <entry valign="top">
-                    <para>Master version</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>The latest
-                      <?oxy_comment_start author="cecilia" timestamp="20170405T152617+0200" comment="The latest version of what?"?>version<?oxy_comment_end?>
-                      in the system.</para>
-                  </entry>
-                </row>
-                <row valign="top">
-                  <entry valign="top">
-                    <para>Version</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Name of the version. The name is automatically generated by system.</para>
-                  </entry>
-                </row>
-                <row valign="top">
-                  <entry valign="top">
-                    <para>When</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>The timestamp of the metadata version creation at the central
-                      instance.</para>
-                  </entry>
-                </row>
-                <row valign="top">
-                  <entry valign="top">
-                    <para>Type</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Type of metadata
-                      <?oxy_comment_start author="cecilia" timestamp="20160704T115615+0200" comment="At next release: Add link to Concept in Settings chapter.
-2.24: Linking doesn&apos;t work, removed link:
-&quot;For getting more details about how to create versions and how they are captured internally please see Concept&quot; " flag="done"?>version<?oxy_comment_end?>.</para>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </informaltable>
-        </example>
-      </para>
-      <para>
-        <example>
-          <title>Versioning table for a local instance</title>
-          <para>When system is a <emphasis role="italics">local instance</emphasis>, you'll see four
-            columns in the versioning table:</para>
-          <para>
-            <screenshot>
-              <mediaobject>
-                <imageobject>
-                  <imagedata width="80%" align="center"
-                    fileref="resources/images/settings/metadata_versioning_table_failure_case.png"
-                    format="PNG"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-          </para>
-          <informaltable frame="all">
-            <tgroup cols="2">
-              <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-              <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-              <thead>
-                <row>
-                  <entry valign="top">
-                    <para>Object</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Description</para>
-                  </entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <entry valign="top">
-                    <para>Master version</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>The latest version of the central instance.</para>
-                    <para>
-                      <note>
-                        <?oxy_comment_start author="cecilia" timestamp="20170405T152858+0200" comment="Does this note add any value?"?>
-                        <para>The master version information is the central instance&apos;s latest
-                          version. This is important to look at the difference between the versions
-                          of metadata that exist at central and at local.</para>
-                        <?oxy_comment_end?>
-                      </note>
-                    </para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>Last sync attempt</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>If the last sync attempt is a failure, this will be displayed.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>Version</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Name of the version. The name is automatically generated by system.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>When</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>The timestamp of the metadata version creation at the central
-                      instance.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>Type</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Type of metadata
-                      <?oxy_comment_start author="cecilia" timestamp="20160704T115615+0200" comment="At next release: Add link to Concept in Settings chapter.
-2.24: Linking doesn&apos;t work, removed link:
-&quot;For getting more details about how to create versions and how they are captured internally please see Concept&quot; " flag="done"?>version<?oxy_comment_end?>.</para>
-                  </entry>
-                </row>
-                <row>
-                  <entry valign="top">
-                    <para>Last sync</para>
-                  </entry>
-                  <entry valign="top">
-                    <para>Timestamp of when the last sync happened for this version in this
-                      system.</para>
-                  </entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </informaltable>
-        </example>
-      </para>
-    </section>
-    <section>
+  <section>
+    <title>Synchronization settings</title>
+    <para>The following settings are used for both data and metadata synchronization.</para>
+    <para>
+      <note>
+        <para>For more information about how you configure metadata synchronization, refer to
+            <?oxy_comment_start author="cecilia" timestamp="20170508T104959+0200" comment="Update link for each release"?><link
+            xlink:href="https://docs.dhis2.org/master/en/user/html/metadata_sync.html">Configuring
+            metadata synchronizing</link><?oxy_comment_end?>
+        </para>
+      </note>
+    </para>
+    <table frame="all">
       <title>Synchronization settings</title>
-      <para>The following settings are used for both data and metadata synchronization.</para>
-      <table frame="all">
-        <title>Synchronization settings</title>
-        <tgroup cols="2">
-          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-          <thead>
-            <row>
-              <entry valign="top">
-                <para>Setting</para>
-              </entry>
-              <entry valign="top">
-                <para>Description</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry valign="top">
-                <para><emphasis role="bold">Remote server URL</emphasis></para>
-              </entry>
-              <entry valign="top">
-                <para>Defines the URL of the remote server running DHIS2 to upload data values
-                  to.</para>
-                <para>It is recommended to use of SSL/HTTPS since user name and password are sent
-                  with the request (using basic authentication). </para>
-                <para>The system will attempt to synchronize data once every minute.</para>
-                <para>The system will use this setting for metadata synchronization too.</para>
-                <para>
-                  <note>
-                    <para>To enable data and metadata synchronization, you must also enable
-                        <emphasis role="bold">Data synchronization</emphasis> and <emphasis
-                        role="bold">Metadata synchronization</emphasis> in the <emphasis role="bold"
-                        >Data administration</emphasis> app &gt; <emphasis role="bold"
-                        >Scheduling</emphasis>.</para>
-                  </note>
-                </para>
-              </entry>
-            </row>
-            <row>
-              <entry valign="top">
-                <para><emphasis role="bold">Remote server user name</emphasis></para>
-              </entry>
-              <entry valign="top">
-                <para>The user name of the DHIS2 user account on the remote server to use for data
-                  synchronization.</para>
-                <para>
-                  <note>
-                    <para>If you've enabled metadata versioning, you must make sure that the
-                      configured user has the authority &quot;F_METADATA_MANAGE&quot;.</para>
-                  </note>
-                </para>
-              </entry>
-            </row>
-            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            <row>
-              <?oxy_custom_end?>
-              <entry valign="top">
-                <para><emphasis role="bold">Remote server password</emphasis></para>
-              </entry>
-              <entry valign="top">
-                <para>The password of the DHIS2 user account on the remote server. The password will
-                  be stored encrypted.</para>
-              </entry>
-              <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            </row>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Remote server URL</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the URL of the remote server running DHIS2 to upload data values
+                to.</para>
+              <para>It is recommended to use of SSL/HTTPS since user name and password are sent with
+                the request (using basic authentication). </para>
+              <para>The system will attempt to synchronize data once every minute.</para>
+              <para>The system will use this setting for metadata synchronization too.</para>
+              <para>
+                <note>
+                  <para>To enable data and metadata synchronization, you must also enable <emphasis
+                      role="bold">Data synchronization</emphasis> and <emphasis role="bold">Metadata
+                      synchronization</emphasis> in the <emphasis role="bold">Data
+                      administration</emphasis> app &gt; <emphasis role="bold"
+                    >Scheduling</emphasis>.</para>
+                </note>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Remote server user name</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>The user name of the DHIS2 user account on the remote server to use for data
+                synchronization.</para>
+              <para>
+                <note>
+                  <para>If you've enabled metadata versioning, you must make sure that the
+                    configured user has the authority &quot;F_METADATA_MANAGE&quot;.</para>
+                </note>
+              </para>
+            </entry>
+          </row>
+          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          <row>
             <?oxy_custom_end?>
-            <row>
-              <entry valign="top">
-                <para><emphasis role="bold">Enable versioning for metadata sync</emphasis></para>
-              </entry>
-              <entry valign="top">
-                <para>Defines whether to create versions of metadata when you synchronize metadata
-                  between central and local instances.</para>
-              </entry>
-            </row>
+            <entry valign="top">
+              <para><emphasis role="bold">Remote server password</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>The password of the DHIS2 user account on the remote server. The password will
+                be stored encrypted.</para>
+            </entry>
             <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            <row>
-              <?oxy_custom_end?>
-              <entry valign="top">
-                <para><emphasis role="bold">Don't sync metadata if DHIS versions
-                  differ</emphasis></para>
-              </entry>
-              <entry valign="top">
-                <para>The metadata schema changes between versions of DHIS2 which could make
-                  different metadata versions incompatible.</para>
-                <para>When enabled, this option will not allow metadata synchronization to occur if
-                  the central and local instance(s) have different DHIS2 versions. This apply to
-                  metadata synchronization done both via the user interface and the API.</para>
-                <para>The only time it might be valuable to disable this option is when
-                  synchronizing basic entities, for example data elements, that have not changed
-                  across DHIS2 versions.</para>
-              </entry>
-              <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            </row>
-            <row>
-              <?oxy_custom_end?>
-              <entry valign="top">
-                <para><emphasis role="bold">Best effort</emphasis></para>
-              </entry>
-              <entry valign="top">
-                <para dir="ltr">A type of metadata version which decides how the importer on local
-                  instance(s) will handle the metadata version.</para>
-                <para><emphasis>Best effort</emphasis> means that if the metadata import encounters
-                  missing references (for example missing data elements on a data element group
-                  import) it ignores the errors and continues the import.</para>
-              </entry>
-              <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            </row>
-            <row>
-              <?oxy_custom_end?>
-              <entry valign="top">
-                <para><emphasis role="bold">Atomic</emphasis></para>
-              </entry>
-              <entry valign="top">
-                <para dir="ltr">A type of metadata version which decides how the importer on local
-                  instance(s) will handle the metadata version.</para>
-                <para dir="ltr"><emphasis>Atomic</emphasis> means all or nothing - the metadata
-                  import will fail if any of the references do not exist.</para>
-              </entry>
-              <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-            </row>
+          </row>
+          <?oxy_custom_end?>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Enable versioning for metadata sync</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines whether to create versions of metadata when you synchronize metadata
+                between central and local instances.</para>
+            </entry>
+          </row>
+          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          <row>
             <?oxy_custom_end?>
-          </tbody>
-        </tgroup>
-      </table>
-    </section>
+            <entry valign="top">
+              <para><emphasis role="bold">Don't sync metadata if DHIS versions
+                differ</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>The metadata schema changes between versions of DHIS2 which could make different
+                metadata versions incompatible.</para>
+              <para>When enabled, this option will not allow metadata synchronization to occur if
+                the central and local instance(s) have different DHIS2 versions. This apply to
+                metadata synchronization done both via the user interface and the API.</para>
+              <para>The only time it might be valuable to disable this option is when synchronizing
+                basic entities, for example data elements, that have not changed across DHIS2
+                versions.</para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          </row>
+          <row>
+            <?oxy_custom_end?>
+            <entry valign="top">
+              <para><emphasis role="bold">Best effort</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para dir="ltr">A type of metadata version which decides how the importer on local
+                instance(s) will handle the metadata version.</para>
+              <para><emphasis>Best effort</emphasis> means that if the metadata import encounters
+                missing references (for example missing data elements on a data element group
+                import) it ignores the errors and continues the import.</para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          </row>
+          <row>
+            <?oxy_custom_end?>
+            <entry valign="top">
+              <para><emphasis role="bold">Atomic</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para dir="ltr">A type of metadata version which decides how the importer on local
+                instance(s) will handle the metadata version.</para>
+              <para dir="ltr"><emphasis>Atomic</emphasis> means all or nothing - the metadata import
+                will fail if any of the references do not exist.</para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          </row>
+          <?oxy_custom_end?>
+        </tbody>
+      </tgroup>
+    </table>
   </section>
   <section>
     <title>System
