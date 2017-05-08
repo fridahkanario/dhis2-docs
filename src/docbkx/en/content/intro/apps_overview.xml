@@ -192,7 +192,10 @@
                         <para>-</para>
                     </entry>
                     <entry>
-                        <para>TBA</para>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/user_account_preferences.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Setting user account
+                                preferences</link></para>
                     </entry>
                 </row>
                 <row>
@@ -274,7 +277,10 @@
                         <para><emphasis role="bold">Import-Export</emphasis></para>
                     </entry>
                     <entry>
-                        <para>TBA</para>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/import_export.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Importing and exporting
+                                data and metadata</link></para>
                     </entry>
                 </row>
                 <row>

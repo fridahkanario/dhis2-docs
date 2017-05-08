@@ -11,7 +11,7 @@
          xmlns:mth="http://www.w3.org/1998/Math/MathML"
          xmlns:db="http://docbook.org/ns/docbook"
          xml:id="import_export">
-  <title>Import and export</title>
+  <title>Importing and exporting data and metadata</title>
   <para>In a primary health system, the HMIS typically involves a distributed application, where the
     same application is running in different geographical locations (PHCs,CHCs, hospitals,
     districts, and state). Most of these physical locations do not have Internet connectivity, and
