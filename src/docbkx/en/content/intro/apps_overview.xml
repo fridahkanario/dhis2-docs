@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<chapter version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="apps_overview">
+    <title>[Work in progress] START HERE - apps overview</title>
+    <informaltable frame="all">
+        <tgroup cols="3">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>What do you want to do?</para>
+                    </entry>
+                    <entry>
+                        <para>Related apps</para>
+                    </entry>
+                    <entry>
+                        <para>Link to app documentation</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Enter data</para>
+                    </entry>
+                    <entry>
+                        <para>Data Entry</para>
+                        <para>Data Capture</para>
+                        <para>Event Capture</para>
+                        <para>Tracker Capture</para>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Analyse data</para>
+                    </entry>
+                    <entry>
+                        <para>Pivot Table</para>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Validate data</para>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Visualize data</para>
+                    </entry>
+                    <entry>
+                        <para>GIS</para>
+                        <para>Event Visualizer</para>
+                        <para>Data Visualizer</para>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Manage users and authorities</para>
+                    </entry>
+                    <entry>
+                        <para>Users</para>
+                        <para>Usage Analytics</para>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+                    <entry>
+                        <para>Customize the user interface</para>
+                    </entry>
+                    <entry>
+                        <para>User Settings</para>
+                    </entry>
+                    <?oxy_custom_end?>
+                    <entry/>
+                </row>
+                <row>
+                    <entry/>
+                    <entry/>
+                    <entry/>
+                </row>
+                <row>
+                    <entry>
+                        <para>Configure the system</para>
+                    </entry>
+                    <entry>
+                        <para>System Settings</para>
+                        <para>Maintenance</para>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Create and use a program</para>
+                    </entry>
+                    <entry>
+                        <para>Maintenance</para>
+                        <para>Program</para>
+                        <para>Tracker Capture</para>
+                        <para>Event Capture</para>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para/>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+</chapter>
