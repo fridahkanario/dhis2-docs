@@ -12,7 +12,7 @@
          xmlns:db="http://docbook.org/ns/docbook"
          xml:id="user_account_preferences">
   
-  <title>Setting user account preferences</title>
+  <title>Set user account preferences</title>
   <para>In <emphasis role="bold">User settings</emphasis>, you can change the display language of
         DHIS2 and the language of the database. The database language is the translated content of
         the metadata, such as data elements and indicators. You can also choose a display style, and

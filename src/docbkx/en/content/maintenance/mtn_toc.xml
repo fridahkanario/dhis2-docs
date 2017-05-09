@@ -7,7 +7,8 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="maintenance_app">
-    <title>Using the Maintenance app</title>
+    <title>Configure metadata</title>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./c_mtn.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./category/toc_category.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./data_element/toc_datael.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./data_set/toc_dataset.xml" encoding="UTF-8"/>

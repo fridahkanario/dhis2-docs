@@ -16,14 +16,15 @@
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/bookinfo/bookinfo.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/preface/preface.xml" encoding="UTF-8"/>
  
+  <!-- ug overview navigation help-->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/ug_overview.xml"/>
+ 
  <!-- About DHIS2 -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude"  href="content/intro/introduction.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/getting_started.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/data_dimensions.xml"/>
     
-  <!-- Apps overview -->
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/apps_overview.xml"/>
-  
+    
   <!-- Dashboard -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/dashboard/dashboard.xml" encoding="UTF-8"/>
   

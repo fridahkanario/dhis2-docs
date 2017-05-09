@@ -10,7 +10,7 @@
     <?oxy_comment_start author="cecilia" timestamp="20160704T115725+0200" comment="2.24:
 Removed empty section
 OAuth2 clients
-" flag="done"?>Configuring
+" flag="done"?>Configure
     the system<?oxy_comment_end?></title>
   <!--  <para>In the <emphasis role="bold">System Settings</emphasis> app you can configure the following
     settings:</para>

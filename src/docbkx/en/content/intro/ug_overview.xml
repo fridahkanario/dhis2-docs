@@ -11,22 +11,26 @@
     xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="apps_overview">
-    <title>[Work in progress] START HERE - apps overview</title>
+    <title>[Work in progress] START HERE - help to navigate through the user guide</title>
     <informaltable frame="all">
-        <tgroup cols="3">
+        <tgroup cols="4">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <colspec colname="newCol2" colnum="2" colwidth="1*"/>
             <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="4" colwidth="1*"/>
             <thead>
                 <row>
                     <entry>
                         <para>What do you want to do?</para>
                     </entry>
                     <entry>
-                        <para>Related apps</para>
+                        <para>What do you want to do in more detail</para>
                     </entry>
                     <entry>
                         <para>Link to documentation</para>
+                    </entry>
+                    <entry>
+                        <para>Related app(s)</para>
                     </entry>
                 </row>
             </thead>
@@ -36,7 +40,7 @@
                         <para>Enter data</para>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Data Entry</emphasis></para>
+                        <para>Enter aggregate data</para>
                     </entry>
                     <entry>
                         <para><link
@@ -44,13 +48,16 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Data Entry
                                 app</link></para>
                     </entry>
+                    <entry>
+                        <para><emphasis role="bold">Data Entry</emphasis></para>
+                    </entry>
                 </row>
                 <row>
                     <entry>
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Event Capture</emphasis></para>
+                        <para>Enter data for a program without registration (event program)</para>
                     </entry>
                     <entry>
                         <para><link
@@ -58,19 +65,25 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Event Capture
                                 app</link></para>
                     </entry>
+                    <entry>
+                        <para><emphasis role="bold">Event Capture</emphasis></para>
+                    </entry>
                 </row>
                 <row>
                     <entry>
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Tracker Capture</emphasis></para>
+                        <para>Enter data for a program with registration (tracker program)</para>
                     </entry>
                     <entry>
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/tracker_capture_app.html"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Tracker Capture
                                 app</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Tracker Capture</emphasis></para>
                     </entry>
                 </row>
                 <row>
@@ -78,7 +91,7 @@
                         <para>Analyze and visualize data</para>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Pivot Table</emphasis></para>
+                        <para>Analyze data in a table</para>
                     </entry>
                     <entry>
                         <para><link
@@ -86,13 +99,18 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Pivot Table
                                 app</link></para>
                     </entry>
+                    <entry>
+                        <para><emphasis role="bold">Pivot Table</emphasis></para>
+                    </entry>
                 </row>
                 <row>
                     <entry>
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Data Visualizer</emphasis></para>
+                        <para>Visualize
+                            <?oxy_comment_start author="cecilia" timestamp="20170509T133037+0200" comment="Both aggregate and tracker data?"?>data<?oxy_comment_end?>
+                            in a chart</para>
                     </entry>
                     <entry>
                         <para><link
@@ -100,13 +118,16 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Data Visualizer
                                 app</link></para>
                     </entry>
+                    <entry>
+                        <para><emphasis role="bold">Data Visualizer</emphasis></para>
+                    </entry>
                 </row>
                 <row>
                     <entry>
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">GIS</emphasis></para>
+                        <para>Visualize data in a map</para>
                     </entry>
                     <entry>
                         <para><link
@@ -114,13 +135,18 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the GIS
                             app</link></para>
                     </entry>
+                    <entry>
+                        <para><emphasis role="bold">GIS</emphasis></para>
+                    </entry>
                 </row>
                 <row>
                     <entry>
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Event Report</emphasis></para>
+                        <para>Analyze
+                            <?oxy_comment_start author="cecilia" timestamp="20170509T133037+0200" comment="Both aggregate and tracker data?"?>data<?oxy_comment_end?>
+                            in two types of reports.</para>
                     </entry>
                     <entry>
                         <para><link
@@ -128,19 +154,25 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Event Reports
                                 app</link></para>
                     </entry>
+                    <entry>
+                        <para><emphasis role="bold">Event Report</emphasis></para>
+                    </entry>
                 </row>
                 <row>
                     <entry>
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Event Visualizer</emphasis></para>
+                        <para>Visualize data from an event or tracker program in a chart</para>
                     </entry>
                     <entry>
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/event_visualizer_app.html"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Event
                                 Visualizer app</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Event Visualizer</emphasis></para>
                     </entry>
                 </row>
                 <row>
@@ -148,7 +180,7 @@
                         <para>Control data quality</para>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Data Quality</emphasis></para>
+                        <para/>
                     </entry>
                     <entry>
                         <para><link
@@ -156,18 +188,24 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Control data
                                 quality</link></para>
                     </entry>
+                    <entry>
+                        <para><emphasis role="bold">Data Quality</emphasis></para>
+                    </entry>
                 </row>
                 <row>
                     <entry>
                         <para>Manage users and authorities</para>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Users</emphasis></para>
+                        <para>Create or edit users, user roles or user groups</para>
                     </entry>
                     <entry>
                         <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/manage_user_role_group.html"
                                 >Manage users, user roles and user groups</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Users</emphasis></para>
                     </entry>
                 </row>
                 <row>
@@ -175,7 +213,29 @@
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Usage Analytics</emphasis></para>
+                        <para>Look up all user authorities</para>
+                    </entry>
+                    <entry>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/user_authorities.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Appendix A. User
+                                authorities</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Users</emphasis></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para>Visualize statistics about how users work with the <emphasis
+                                role="bold">Dashboard</emphasis>, <emphasis role="bold">Pivot
+                                Table</emphasis>, <emphasis role="bold">GIS</emphasis>, <emphasis
+                                role="bold">Event Visualizer</emphasis>, <emphasis role="bold">Data
+                                Visualizer</emphasis> and <emphasis role="bold">Event
+                                Reports</emphasis> apps.</para>
                     </entry>
                     <entry>
                         <para><link
@@ -183,19 +243,40 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Usage Analytics
                                 app</link></para>
                     </entry>
+                    <entry>
+                        <para><emphasis role="bold">Usage Analytics</emphasis></para>
+                    </entry>
                 </row>
                 <row>
                     <entry>
                         <para>Customize the user interface</para>
                     </entry>
-                    <entry>
-                        <para>-</para>
-                    </entry>
+                    <entry>Change your account preferences</entry>
                     <entry>
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/user_account_preferences.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Setting user account
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Set user account
                                 preferences</link></para>
+                    </entry>
+                    <entry>
+                        <para>-</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para>Create a dashboard</para>
+                    </entry>
+                    <entry>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/dashboard.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Manage
+                            dashboards</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Dashboard</emphasis></para>
                     </entry>
                 </row>
                 <row>
@@ -203,13 +284,17 @@
                         <para>Configure metadata</para>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Maintenance</emphasis></para>
+                        <para>Create metadata, for example organisation units and data
+                            elements</para>
                     </entry>
                     <entry>
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/maintenance_app.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Using the Maintenance
-                                app</link></para>
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure
+                            metadata</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Maintenance</emphasis></para>
                     </entry>
                 </row>
                 <row>
@@ -217,13 +302,16 @@
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Program</emphasis></para>
+                        <para>Create metadata to use in an event or tracker program</para>
                     </entry>
                     <entry>
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/configure_program.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Configuring
-                                programs</link></para>
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure
+                            programs</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Program</emphasis></para>
                     </entry>
                 </row>
                 <row>
@@ -231,7 +319,24 @@
                         <para>Configure the system</para>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Data Administration</emphasis></para>
+                        <para>Look up all system settings</para>
+                    </entry>
+                    <entry>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/settings.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure the
+                                system</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">System Settings</emphasis></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para>Maintain the database</para>
                     </entry>
                     <entry>
                         <para><link
@@ -239,19 +344,8 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Data
                                 administration</link></para>
                     </entry>
-                </row>
-                <row>
                     <entry>
-                        <para/>
-                    </entry>
-                    <entry>
-                        <para><emphasis role="bold">System Settings</emphasis></para>
-                    </entry>
-                    <entry>
-                        <para><link
-                                xlink:href="https://docs.dhis2.org/master/en/user/html/settings.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Configuring the
-                                system</link></para>
+                        <para><emphasis role="bold">Data Administration</emphasis></para>
                     </entry>
                 </row>
                 <row>
@@ -259,8 +353,8 @@
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">System Settings</emphasis>, <emphasis
-                                role="bold">Data Administration</emphasis></para>
+                        <para>Set up metadata synchronization between a central instance and
+                            multiple local instances</para>
                     </entry>
                     <entry>
                         <para><link
@@ -268,19 +362,26 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Configuring metadata
                                 synchronization</link></para>
                     </entry>
+                    <entry>
+                        <para><emphasis role="bold">System Settings</emphasis></para>
+                        <para><emphasis role="bold">Data Administration</emphasis></para>
+                    </entry>
                 </row>
                 <row>
                     <entry>
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Import-Export</emphasis></para>
+                        <para>Configure data and metadata import or export</para>
                     </entry>
                     <entry>
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/import_export.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Importing and exporting
-                                data and metadata</link></para>
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Import and export data
+                                and metadata</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Import-Export</emphasis></para>
                     </entry>
                 </row>
                 <row>
@@ -288,26 +389,16 @@
                         <para/>
                     </entry>
                     <entry>
-                        <para>-</para>
+                        <para>Learn more about sharing of objects</para>
                     </entry>
                     <entry>
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/sharing.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Sharing</link></para>
-                    </entry>
-                </row>
-                <row>
-                    <entry>
-                        <para>Create  a program</para>
+                                xmlns:xlink="http://www.w3.org/1999/xlink">About sharing of
+                                objects</link></para>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Maintenance</emphasis></para>
-                    </entry>
-                    <entry>
-                        <para><link
-                                xlink:href="https://docs.dhis2.org/master/en/user/html/maintenance_app.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Using the Maintenance
-                                app</link></para>
+                        <para>-</para>
                     </entry>
                 </row>
                 <row>
@@ -315,21 +406,72 @@
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Program</emphasis></para>
+                        <para>Import coordinates and configure the <emphasis role="bold"
+                                >GIS</emphasis> app</para>
                     </entry>
                     <entry>
                         <para><link
-                                xlink:href="https://docs.dhis2.org/master/en/user/html/configure_program.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Configuring
-                                programs</link></para>
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/gis_creating.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure the GIS
+                                app</link></para>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/manage_legend.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Manage
+                            legends</link></para>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/manage_external_maplayer.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Manage external map
+                                layers</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Maintenance</emphasis></para>
                     </entry>
                 </row>
                 <row>
                     <entry>
-                        <para>Enter data for a program</para>
+                        <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Tracker Capture</emphasis></para>
+                        <para>Set up report functionality</para>
+                    </entry>
+                    <entry>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/setting_up_reporting.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure report
+                                functionality</link></para>
+                    </entry>
+                    <entry>
+                        <para>-</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Learn about event and tracker programs</para>
+                    </entry>
+                    <entry>
+                        <para>Create a program</para>
+                    </entry>
+                    <entry>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/maintenance_app.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure
+                            metadata</link></para>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/configure_program.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure
+                            programs</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Maintenance</emphasis></para>
+                        <para><emphasis role="bold">Program</emphasis></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para>Enter data for a program with registration (tracker program)</para>
                     </entry>
                     <entry>
                         <para><link
@@ -337,13 +479,16 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Tracker Capture
                                 app</link></para>
                     </entry>
+                    <entry>
+                        <para><emphasis role="bold">Tracker Capture</emphasis></para>
+                    </entry>
                 </row>
                 <row>
                     <entry>
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Event Capture</emphasis></para>
+                        <para>Enter data for a program without registration (event program)</para>
                     </entry>
                     <entry>
                         <para><link
@@ -351,19 +496,8 @@
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Event Capture
                                 app</link></para>
                     </entry>
-                </row>
-                <row>
                     <entry>
-                        <para>Analyze data from a program</para>
-                    </entry>
-                    <entry>
-                        <para><emphasis role="bold">Event Visualizer</emphasis></para>
-                    </entry>
-                    <entry>
-                        <para><link
-                                xlink:href="https://docs.dhis2.org/master/en/user/html/event_visualizer_app.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Using the Event
-                                Visualizer app</link></para>
+                        <para><emphasis role="bold">Event Capture</emphasis></para>
                     </entry>
                 </row>
                 <row>
@@ -371,13 +505,64 @@
                         <para/>
                     </entry>
                     <entry>
-                        <para><emphasis role="bold">Event Report</emphasis></para>
+                        <para>Analyze data from a program</para>
+                    </entry>
+                    <entry>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/event_visualizer_app.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Using the Event
+                                Visualizer app</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Event Visualizer</emphasis></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para/>
+                    </entry>
+                    <entry>
+                        <para>Analyze
+                            <?oxy_comment_start author="cecilia" timestamp="20170509T133037+0200" comment="Both aggregate and tracker data?"?>data<?oxy_comment_end?>
+                            from a program in two types of reports.</para>
                     </entry>
                     <entry>
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/event_reports_app.html"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">Using the Event Reports
                                 app</link></para>
+                    </entry>
+                    <entry>
+                        <para><emphasis role="bold">Event Report</emphasis></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Learn more about DHIS2</para>
+                    </entry>
+                    <entry>
+                        <para>What is DHIS2?</para>
+                    </entry>
+                    <entry>
+                        <para>TBA</para>
+                    </entry>
+                    <entry>
+                        <para>-</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry/>
+                    <entry>
+                        <para>Learn about the DHIS2 data dimensions</para>
+                    </entry>
+                    <entry>
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/data_dimensions.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Data dimensions in
+                                DHIS2</link></para>
+                    </entry>
+                    <entry>
+                        <para>-</para>
                     </entry>
                 </row>
             </tbody>
