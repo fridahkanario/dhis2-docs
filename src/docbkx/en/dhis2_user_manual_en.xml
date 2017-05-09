@@ -70,7 +70,6 @@
   <!-- Configure the system -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/sharing/sharing.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_admin/data_admin.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/settings/settings.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/creating_gis.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/creating_reporting.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/import_export/import_export.xml" encoding="UTF-8"/>
@@ -90,6 +89,7 @@
   
   <!-- Appendices -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/user_authorities/user_authorities_table.xml" encoding="UTF-8"/> 
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/settings/settings.xml" encoding="UTF-8"/>
  
   <!-- Back matter -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/glossary/glossary.xml" encoding="UTF-8"/>

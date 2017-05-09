@@ -6,7 +6,12 @@
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
   xmlns:db="http://docbook.org/ns/docbook" xml:id="data_approval">
-  <title>Data approval</title>
+  <title>Data
+    <?oxy_comment_start author="cecilia" timestamp="20170509T163151+0200" comment="Topic needs full editorial review and restructure + make topics task-oriented
+
+Add topics:
+Create an approval level - TBA
+Create an approval workflow - TBA"?>approval<?oxy_comment_end?></title>
   <para>DHIS2 has an optional feature that allows authorized users to approve data that has been
     entered. It allows data to be reviewed and approved at selected levels in the organisation unit
     hierarchy, so the approval follows the structure of the hierarchy from lower levels to higher

@@ -322,8 +322,8 @@
                     <entry align="left" valign="top">
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/settings.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure the
-                                system</link></para>
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Appendix B. System
+                                settings</link></para>
                     </entry>
                     <entry align="left" valign="top">
                         <para><emphasis role="bold">System Settings</emphasis></para>
@@ -357,12 +357,29 @@
                     <entry align="left" valign="top">
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/metadata_sync.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Configuring metadata
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure metadata
                                 synchronization</link></para>
                     </entry>
                     <entry align="left" valign="top">
                         <para><emphasis role="bold">System Settings</emphasis></para>
                         <para><emphasis role="bold">Data Administration</emphasis></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Configure data approval</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/data_approval.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Data
+                            approval</link></para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para><emphasis role="bold">System Settings</emphasis></para>
                     </entry>
                 </row>
                 <row>
