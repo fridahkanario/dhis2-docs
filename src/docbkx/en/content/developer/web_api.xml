@@ -4110,10 +4110,16 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                   |&#160;SKIPPED</entry>
               </row>
               <row>
-                <entry>lastUpdated</entry>
+                <entry>lastUpdatedStartDate</entry>
                 <entry>date</entry>
                 <entry>false</entry>
                 <entry>Filter for events which were updated after this date.</entry>
+              </row>
+              <row>
+                <entry>lastUpdatedEndDate</entry>
+                <entry>date</entry>
+                <entry>false</entry>
+                <entry>Filter for events which were updated up until this date.</entry>
               </row>
               <row>
                 <entry>skipMeta</entry>
