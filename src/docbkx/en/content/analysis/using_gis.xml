@@ -65,7 +65,7 @@
       </mediaobject>
     </screenshot>
     <section xml:id="gis_create_event_layer">
-      <title>Create or modify event layer</title> 
+      <title>Create or an modify event layer</title> 
       <orderedlist>
         <listitem>
           <para>In the top menu, click the event layer icon.</para>
@@ -576,7 +576,7 @@
       <title>Boundary layer</title>
       <mediaobject>
         <imageobject>
-          <imagedata width="80%" fileref="resources/images/gis/gis_bound_layers.png" format="png"
+          <imagedata width="80%" fileref="resources/images/gis/gis_boundary_layers.png" format="png"
             align="left"/>
 
         </imageobject>
@@ -662,8 +662,8 @@
       <mediaobject>
         <imageobject>
           <?oxy_comment_start author="cecilia" timestamp="20160630T212009+0200" comment="Before release: Update screenshot: Select layer has changed to Select data set" flag="done"?>
-          <imagedata width="80%" fileref="resources/images/gis/gis_earth_eng_layer.png" format="png"
-            align="left"/>
+          <imagedata width="80%" fileref="resources/images/gis/gis_earth_engine_layer.png"
+            format="png" align="left"/>
           <?oxy_comment_end?>
         </imageobject>
       </mediaobject>
