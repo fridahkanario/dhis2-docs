@@ -6,7 +6,7 @@
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
   xmlns:db="http://docbook.org/ns/docbook" xml:id="metadata_sync">
-  <title>[Review ongoing] Configure
+  <title>Configure
     <?oxy_comment_start author="cecilia" timestamp="20160704T114426+0200" comment="At next release: verify if content exist.
 
 For 2.24: 
@@ -18,11 +18,10 @@ Do full editorial review of content." flag="done"?>ynchronizing<?oxy_comment_end
   <section>
     <title>About data and metadata synchronization</title>
     <para>You can synchronize data and metadata between different DHIS2 instances. Given two
-      instances in a central-local deployment strategy, metadata created at the
-      <?oxy_comment_start author="cecilia" timestamp="20160704T123350+0200" comment="Central what? Central level?"?>central<?oxy_comment_end?>
-      system can be synchronized with the local system and the data created at local system can be
-      synchronized with the central system. This can be useful when you've multiple stand-alone
-      instances of DHIS2 and global metadata needs to be created at all the local instances.</para>
+      instances in a central-local deployment strategy, metadata created at the central system can
+      be synchronized with the local system and the data created at local system can be synchronized
+      with the central system. This can be useful when you've multiple stand-alone instances of
+      DHIS2 and global metadata needs to be created at all the local instances.</para>
     <para>
       <screenshot>
         <mediaobject>
@@ -131,11 +130,9 @@ Do full editorial review of content." flag="done"?>ynchronizing<?oxy_comment_end
       </listitem>
       <listitem>
         <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-        <?oxy_comment_start author="cecilia" timestamp="20170406T133813+0200" comment="Add info about what this is." mid="7"?>
-        <para>Select  a type of metadata version: <emphasis role="bold">Best effort</emphasis> or
+        <para>Select a type of metadata version: <emphasis role="bold">Best effort</emphasis> or
             <emphasis role="bold">Atomic</emphasis>.</para>
         <?oxy_custom_end?>
-        <?oxy_comment_end mid="7"?>
         <itemizedlist>
           <listitem>
             <para><emphasis>Best effort</emphasis> means that if the metadata import encounters
@@ -295,11 +292,9 @@ Do full editorial review of content." flag="done"?>ynchronizing<?oxy_comment_end
       </listitem>
       <listitem>
         <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-        <?oxy_comment_start author="cecilia" timestamp="20170406T133813+0200" comment="Add info about what this is." mid="11"?>
         <para>Select <emphasis role="bold">Best effort</emphasis> or <emphasis role="bold"
             >Atomic</emphasis>.</para>
         <?oxy_custom_end?>
-        <?oxy_comment_end mid="11"?>
       </listitem>
       <listitem>
         <para>Click <emphasis role="bold">Create new version</emphasis>. The new version is added to
@@ -457,10 +452,7 @@ Do full editorial review of content." flag="done"?>ynchronizing<?oxy_comment_end
                   <para>Type</para>
                 </entry>
                 <entry valign="top">
-                  <para>Type of metadata
-                    <?oxy_comment_start author="cecilia" timestamp="20160704T115615+0200" comment="At next release: Add link to Concept in Settings chapter.
-2.24: Linking doesn&apos;t work, removed link:
-&quot;For getting more details about how to create versions and how they are captured internally please see Concept&quot; " flag="done"?>version<?oxy_comment_end?>.</para>
+                  <para>Type of metadata version.</para>
                 </entry>
               </row>
               <row>
