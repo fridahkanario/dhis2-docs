@@ -1,473 +1,1627 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<chapter version="5.0"
-         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
-          xmlns="http://docbook.org/ns/docbook"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xs="http://www.w3.org/2001/XMLSchema"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-         xmlns:svg="http://www.w3.org/2000/svg"
-         xmlns:mth="http://www.w3.org/1998/Math/MathML"
-         xmlns:db="http://docbook.org/ns/docbook"
-         xml:id="settings">
-  <title><?oxy_comment_start author="cecilia" timestamp="20160704T115725+0200" comment="2.24:
-Removed empty section
-OAuth2 clients
-" flag="done"?>Settings<?oxy_comment_end?></title>
-  <para>The settings module provides a set of application configuration options. There are two main
-    groups of settings: the <emphasis role="italic">system settings</emphasis> apply to the whole
-    system and all its users while the <emphasis role="italic">user settings</emphasis> apply to the
-    environment of the currently logged in user. The system settings can be accessed from the
-    maintenance menu, settings module. The user settings can be accessed under the profile menu,
-    settings page.</para>
-  <section xml:id="system_settings">
-    <title>System settings</title>
-    <para>The system settings section provides general configuration options and options specifically for appearance and email.</para>
-    <section xml:id="system_general_settings">
+<appendix version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="settings">
+  <title>[Review ongoing] System settings</title>
+  <!--  <para>In the <emphasis role="bold">System Settings</emphasis> app you can configure the following
+    settings:</para>
+  <para>
+    <informaltable frame="all">
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>
+              <para>Name</para>
+            </entry>
+            <entry>
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>
+              <para>General </para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Analytics</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Server</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Appearance</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Email</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Messaging</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Access</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Approval</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Calendar</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Data import</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>Synchronization</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>System monitoring</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>OAuth2 Clients</para>
+            </entry>
+            <entry>
+              <para/>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </para>-->
+  <section xml:id="system_general_settings">
+    <title>General settings</title>
+    <table frame="all">
       <title>General settings</title>
-      <itemizedlist>
-        <listitem>
-          <para>Maximum number of analytics records: This number can be increased to provide more
-            records from the analytics. The default is 50,000 and can be increased. Note that
-            setting the maximum number of analytics records to "unlimited" should be used with
-            caution as it might result in very high load on your server.</para>
-        </listitem>
-        <listitem>
-          <para>Infrastructural indicators: This setting defines an indicator group where the member
-            indicators should describe data about the infrastructure of organisation units. This
-            infrastructural data can currently be viewed in the GIS module in the facility
-            information sheet.</para>
-        </listitem>
-        <listitem>
-          <para>Infrastructural data elements: This setting defines a data element group where the member data elements should describe data about the infrastructure of organisation units. Examples of such infrastructural data elements could be population, doctors, beds, Internet connectivity and climate. This infrastructural data can currently be viewed in the GIS module in the facility information sheet.</para>
-        </listitem>
-        <listitem>
-          <para>Infrastructural period type: Sets the frequency for which the data elements in the
-            infrastructural data elements group are captured. This will typically be yearly. When
-            viewing the infrastructural data you will be able to select the time period of the data
-            source.</para>
-        </listitem>
-        <listitem>
-          <para>Feedback recipients: This setting defines a user group where the members will
-            receive all messages being sent through the function for writing feedback in the
-            dashboard module. This will typically be members of the super user team who are able to
-            support and answer questions coming from end-users.</para>
-        </listitem>
-        <listitem>
-          <para>Maximum offline organisation unit levels: This setting defines how many levels in
-            the organisation unit hierarchy will be available offline in the organisation unit tree
-            widget. Under normal circumstances you can leaves this on the lowest level, which is
-            default behavior. Setting it to a higher level might be useful in order to reduce
-            initial load time in cases where you have a large number of organisation units, typically
-            more than 30 000.</para>
-        </listitem>
-        <listitem>
-          <para>Data analysis std dev factor: Sets the number of standard deviations for use in the outlier analysis performed on the captured data in the data entry module. The default value is 2; a high value will catch less outlier values than a low value.</para>
-        </listitem>
-        <listitem>
-          <para>Phone number area code: The area code for the area in which your deployment is
-            located. Used for sending and receiving SMS.Typically, this would be a country code, for
-            instance , +260 , which is the country code for Zambia. </para>
-        </listitem>
-        <listitem>
-          <para>Enable multi-organisation unit forms: Enable support for entering data forms for
-            multiple organisation units at the same time, in data entry, click on the parent
-            organisation unit for the children that you want to enter data for, and the dataset list
-            will include datasets that are assigned to the children of that parent.</para>
-        </listitem>
-        <listitem>
-          <para>Days after period end to qualify for timely data submission: Sets the number of days after the end of a period in which a data entry form must be marked as complete in order to be considered timely. This affects the &quot;reporting rate&quot; tool in the reporting module which lists forms marked as complete as well as marked as complete in time. The default value is 15.</para>
-        </listitem>
-        <listitem>
-          <para>Omit indicator values with zero numerator value in data mart: Defines whether
-            aggregated indicator values with zero as the numerator value should be written to the
-            indicator data mart table. Having such values written is required for instance when
-            connecting Excel pivot tables to the data mart as Excel will need the numerator data to
-            correctly aggregate up in the organisation unit hierarchy. If third-party tools like
-            Excel are not used with the application this will reduce the total number of values
-            written to the data mart (which again will improve performance) and could safely be set
-            to omit.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section xml:id="system_analytics_settings">
-      <title>Analytics settings</title>
-      <itemizedlist>
-        <listitem>
-          <para>Default relative period for analysis: Defines the relative period to use by default
-            in analytics apps such as pivot table, charts and GIS. This relative period will be
-            automatically selected when the apps are opened, and should likely be the most commonly
-            used relative period among your users.</para>
-        </listitem>
-        <listitem>
-          <para>Cacheability: Indicates whether analytics data responses should be served with
-            public or private visibility. <emphasis>Private</emphasis> implies that intermediary
-            proxies and caches are not allowed to store a copy of the response; only the client
-            itself such as web browsers can cache the response. <emphasis>Public</emphasis> implies
-            that both intermediary caches and clients can store a copy.</para>
-        </listitem>
-        <listitem>
-          <para>Cache strategy: Decides for how long reports and responses related to analysis
-            should be cached. If you are using the scheduled, nightly analytics tables update it
-            makes sense to set this to &quot;Cache until 6 AM tomorrow&quot;. This is because we
-            know that data in reports change at that time, and you can safely cache data up to the
-            moment when the analytics tables are updated. If you are loading data continuously into
-            the analytics tables you should set it to &quot;No cache&quot;.</para>
-        </listitem>
-        <listitem>
-          <para>Max number of years to hide unapproved data in analytics: Indicates whether and for
-            how long back in time the analytics engine should hide unapproved data. "Never check
-            approval" implies that no data will be hidden, irrespective of its data approval status.
-            "Check approval for all data" implies that approval status will always be checked. Other
-            options, i.e. "Last 3 years" implies that approval status will be checked for data which
-            is newer than 3 years old; older data will not be checked.</para>
-        </listitem>
-        <listitem>
-          <para>Threshold for analytics data caching: Indicates whether to enable caching data older
-            than the specified number of years only. This allows for returning the most recent data
-            directly with no caching, while serving cached version of older data for performance
-            concerns.</para>
-        </listitem>
-        <listitem>
-          <para>Respect category option start and end date in analytics table export: Indicates
-            whether aggregate data values where the data period falls outside the start and end date
-            of the category options of the data attribute category option combo should be filtered
-            out of the analytics tables when generated.</para>
-        </listitem>
-        <listitem>
-          <para>Put analytics in maintenance mode: Puts the analytics engine / Web API resource in
-            maintenance mode, implying that 503 Service Unavailable will be returned for all
-            requests. This is useful when you need to perform maintenance on the server like
-            rebuilding indexes while the server is running in production, in order to reduce load
-            and more efficiently carry out the maintenance.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section xml:id="system_server_settings">
-      <title>Server settings</title>
-      <itemizedlist>
-        <listitem>
-          <para>Number of database server CPUs: The number of CPU cores of your database server can
-            be configured as a system setting. This allows the system to perform optimally when the
-            database is hosted on a different server than the application server, as the analytics
-            engine scales linearly on the number of available cores. </para>
-        </listitem>
-        <listitem>
-          <para>System notifications email address: An email address can be specified to receive
-            system notifications. Notifications about failures in processes such as analytics table
-            generation will be sent here. This is useful for application monitoring.</para>
-        </listitem>
-        <listitem>
-          <para>Server base URL: The full, externally accessible base URL for this server. Example:
-            https://apps.dhis2.org/demo is the server base URL for the DHIS2 demo server. The URL
-            is used to provide links to this server from external locations such as in emails sent
-            from the system. Note that if this URL is not present, emails sent from the messaging
-            system will not contain a reply link.</para>
-        </listitem>
-        <listitem>
-          <para>Google Analytics (Universal Analytics) Key: Set your Google UA key here to provide
-            analytics for your DHIS2 instance. Most places are covered, but it will not be provided
-            for custom apps. You can read more about Google Analytics at <link
-              xlink:href="http://google.com/analytics">http://google.com/analytics</link>.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section xml:id="system_appearance_settings">
-      <title>Appearance settings</title>
-      <itemizedlist>
-        <listitem>
-          <para>Application title: Sets the application title on the top menu.</para>
-        </listitem>
-        <listitem>
-          <para>Application introduction: Sets an introduction of the system which will be visible
-            on the top-left part of the login page.</para>
-        </listitem>
-        <listitem>
-          <para>Application notification: Sets a notification which should be displayed to users.
-            Will be visible on the front page under the login area.</para>
-        </listitem>
-        <listitem>
-          <para>Application left-side footer: Sets a text in the left-side footer area of the login
-            page.</para>
-        </listitem>
-        <listitem>
-          <para>Application right-side footer: Sets a text in the right-side footer area of the
-            login page.</para>
-        </listitem>
-        <listitem>
-          <para>Style: Sets the style / look-and-feel of the system. The corresponding user style setting overrides this.</para>
-        </listitem>
-        <listitem>
-          <para>Start page: Sets page / module which the user will be redirected to after logging
-            in. The dashboard module is the recommended start module.</para>
-        </listitem>
-        <listitem>
-          <para>Help page link: A URL can be provided for an alternative help source. This defines
-            the URL which users will see when selecting Profile-&gt;Help. </para>
-        </listitem>
-        <listitem>
-          <para>Flag: Sets the flag which is displayed in the left menu of the dashboard module.</para>
-        </listitem>
-        <listitem>
-          <para>Require authority to add to view object lists: Will hide menu and index page items /
-            links to lists of objects if the current user does not have the authority to create the
-            type of objects (privately or publicly).</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section xml:id="system_email_settings">
-      <title>Email settings</title>
-      <itemizedlist>
-        <listitem>
-          <para>Host name: Refers to the host name of the SMTP server. For instance when using
-            Google SMTP services this should be smtp.gmail.com.</para>
-        </listitem>
-        <listitem>
-          <para>Port: The port to connect to the SMTP server.</para>
-        </listitem>
-        <listitem>
-          <para>User name: The user name of the user account with the SMTP server. For instance mail@dhis2.org.</para>
-        </listitem>
-        <listitem>
-          <para>Password: The password of the user account with the SMTP server.</para>
-        </listitem>
-        <listitem>
-          <para>TLS: Refers to whether the SMPT server requires TLS for connections.</para>
-        </listitem>
-        <listitem>
-          <para>Email sender: The email address to use as sender when sending out emails.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section xml:id="system_messaging_settings">
-      <title>Messaging settings</title>
-      <para></para>
-    </section>
-    <section xml:id="system_access_settings">
-      <title>Access settings</title>
-      <itemizedlist>
-        <listitem>
-          <para>Self registration account user role: Defines which user role should be given to self-registered user accounts. To enable
-            self-registration of users, select any user role from the list. To disable it, select &quot;Do not allow self registration&quot;. When
-            enabled, a link to the self-registration form will be displayed on the login page.</para>
-        </listitem>
-        <listitem>
-          <para>Do not require recaptcha for self registration: Whether or not to use reCAPTCHA for user registration.</para>
-        </listitem>
-        <listitem>
-          <para>Self registration account organisation unit: Defines which organisation unit should
-            be associated with self-registered users. Any organisation unit must be selected in
-            order to enable self registration.</para>
-        </listitem>
-        <listitem>
-          <para>Enable user account recovery: Defines whether users are allowed to restore the
-            password of their account if they forgotten it. When enabled, a link to the account
-            recovery form will be displayed on the front page. User account recovery requires that
-            you have configured email settings (SMTP).</para>
-        </listitem>
-        <listitem>
-          <para>Allow users to grant own user roles: Defines whether users should be allowed to
-            grant the user roles they are granted themselves to others.</para>
-        </listitem>
-        <listitem>
-          <para>Allow assigning object to related objects during add or update: Defines whether to
-            allow users to assign an object to a related object in the add or updated object
-            screens. As an example, you can allow users to assign an organisation unit to data sets
-            and org unit group sets when creating or updating the org unit.</para>
-        </listitem>
-        <listitem>
-          <para>Require user account password change: Require that users change their password every
-            3,6,12 months. Please note that for 2.14 release, they will have to login through the
-            desktop to change passwords.</para>
-        </listitem>
-        <listitem>
-          <para>Lock user account temporarily after multiple failed login attempts: Defines whether
-            the system should lock user accounts after five successive failed login attempts over a
-            timespan of 15 minutes. The account will be locked for 15 minutes after which a new
-            login can be attempted.</para>
-        </listitem>
-        <listitem>
-          <para>OpenID provider: Defines the OpenID provider.</para>
-        </listitem>
-        <listitem>
-          <para>OpenID provider label: Defines the label to display for the specified OpenID
-            provider.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section xml:id="system_approval_settings">
-      <title>Approval settings</title>
-      <itemizedlist>
-        <listitem>
-          <para>Hide unapproved data in analytics: Defines whether unapproved data should be visible
-            or hidden in analytics.</para>
-        </listitem>
-        <listitem>
-          <para>Acceptance required before approval: Defines whether to include an acceptance step
-            before the approval step in the approval workflow.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section xml:id="system_calendar_settings">
-      <title>Calendar settings</title>
-      <itemizedlist>
-        <listitem>
-          <para>Calendar: Defines which calendar system should be used throughout the system.</para>
-          <para>There are currently eight calendar systems which are supported, namely Coptic, Ethiopic, Gregorian, Julian, Islamic, ISO, Nepal and Thai. Note that this is a system wide setting. It is not possible to have multiple calendars within a single DHIS2 instance.  </para>
-        </listitem>
-        <listitem>
-          <para>Date format: Defines which date format should be used throughout the system.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section xml:id="system_data_import_settings">
-      <title>Data import</title>
-      <para>These settings apply to the data import process, and provide optional constraints on
-        what should be considered a conflict during import. The constraints are applied to each
-        individual data value in the import.</para>
-      <itemizedlist>
-        <listitem>
-          <para>Require periods to match period type of  data set: Require period of data value to
-            be of the same period type as the data sets for which the data element of data value is
-            assigned to.</para>
-        </listitem>
-        <listitem>
-          <para>Require category option combos to match category combo of data element: Require
-            category option combo of data value to be part of the category combo of the data element
-            of the data value.</para>
-        </listitem>
-        <listitem>
-          <para>Require organisation units to match assignment of data set: Require organisation
-            unit of data value to be assigned to one or more of the data sets which the data element
-            of data value is assigned to.</para>
-        </listitem>
-        <listitem>
-          <para>Require attribute option combos to match category combo of data set: Require
-            attribute option combo of data value to be part of the category combo of the data set
-            which the data element of data value is assigned to.</para>
-        </listitem>
-        <listitem>
-          <para>Require category option combo to be specified: Require category option combo of data
-            value to be specified. By default it will fall back to default category option combo if
-            not specified.</para>
-        </listitem>
-        <listitem>
-          <para>Require attribute option combo to be specified: Require attribute option combo of
-            data value to be specified. By default it will fall back to default attribute option
-            combo if not specified.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section xml:id="system_synchronization_settings">
-      <title>Synchronization settings</title>
-      <para>DHIS2 provides a feature for synchronizing metadata and data. Given two instances in a
-        central-local deployment strategy, metadata created at the
-        <?oxy_comment_start author="cecilia" timestamp="20160704T123350+0200" comment="Central what? Central level?"?>central<?oxy_comment_end?>
-        system can be synched to the local system and the data created at local can be synced to the
-        central. This can be useful when there are multiple stand-alone instances of DHIS2 and a
-        global metadata needs to be created at all the local instances. So, metadata creation and
-        update happens at the central and if the metadata sync task is enabled, the metadata gets
-        synced down to all the local instances which are bound to the given central instance. These
-        local instances will in turn push data values to that central instance. The following
-        settings are used for both data and metadata synchronization.</para>
-      <itemizedlist>
-        <listitem>
-          <para>Remote server URL: The URL of the remote server running DHIS2 to upload data values to. Use of
-            SSL/HTTPS is recommended since username and password is sent with the request (using basic
-            authentication). The system will attempt to synchronize data once every minute. Note that you must
-            enable data sync from Data administration &gt; Scheduling.</para>
-          <note>
-            <para>The system will use this setting for metadata synchronization as well. Note that
-              the metadata synchronization needs to be enabled from Data Administration app &gt;
-              Scheduling.</para>
-          </note>
-        </listitem>
-        <listitem>
-          <para>Remote server username: The username of the DHIS2 user account on the remote server to use for data
-            synchronization. Whilst metadata versioning is enabled, there is a need to ensure that the configured
-            user has the authority &quot;F_METADATA_MANAGE&quot;.</para>
-        </listitem>
-        <listitem>
-          <para>Remote server password: The password of the DHIS2 user account on the remote server. The password
-            will be stored encrypted.</para>
-        </listitem>
-      </itemizedlist>
-      <para>If you are syncing metadata also, then see the below settings.
-        <itemizedlist>
-        <listitem>
-          <para>Enable Versioning for Metadata Sync: This is a new feature added in 2.24. If you are following model
-            as mentioned above, then enable this setting. Otherwise you can ignore it.</para>
-            <screenshot>
-              <mediaobject>
-                <imageobject>
-                  <imagedata width="80%" align="center"
-                    fileref="resources/images/settings/metadata_versioning_table.png" format="PNG"/>
-                </imageobject>
-              </mediaobject>
-            </screenshot>
-        </listitem>
-        <listitem>
-          <para>If metadata versioning is enabled, the user gets the option to create metadata versions.</para>
-        <itemizedlist>
-          <listitem>
-            <para>When system is a <emphasis role="bold">central instance</emphasis>, then you will see three columns in the Versioning table</para>
-          <itemizedlist>
-            <listitem>
-              <para>Version: Name of the Version which is automatically generated by system.</para>
-            </listitem>
-            <listitem>
-              <para>When: The timestamp of metadata version creation at central instance.</para>
-            </listitem>
-            <listitem>
-              <para>Type: Type of metadata
-                      <?oxy_comment_start author="cecilia" timestamp="20160704T115615+0200" comment="At next release: Add link to Concept in Settings chapter.
-2.24: Linking doesn&apos;t work, removed link:
-&quot;For getting more details about how to create versions and how they are captured internally please see Concept&quot; " flag="done"?>version<?oxy_comment_end?>.</para>
-            </listitem>
-          </itemizedlist>
-          <para>Additionally you will see the following label on top of the table:</para>
-          <para><emphasis role="bold">Master Version</emphasis> - this is the latest version in the system.</para>
-          </listitem>
-          <listitem>
-            <para>When system is <emphasis role="bold">field instance</emphasis>, then you will see four columns in the Versioning table</para>
-          <itemizedlist>
-            <listitem>
-              <para>Version: Name of the Version which is automatically generated by system.</para>
-            </listitem>
-            <listitem>
-              <para>When: The timestamp of metadata version creation at central instance.</para>
-            </listitem>
-            <listitem>
-              <para>Type: Type of metadata version</para>
-            </listitem>
-            <listitem>
-              <para>Last Sync: Timestamp of when the last sync happened for this version in this system</para>
-            </listitem>
-          </itemizedlist>
-          <para>Additionally you will see the following labels on top of the table:</para>
-          <para><emphasis role="bold">Master Version</emphasis> - the latest version of central instance. This is
-            important to understand that the master version information is the central instance&apos;s latest
-            version. This is important to look at the difference between the versions of metadata that exist at
-            central and at local.</para>
-          <para><emphasis role="bold">Last sync attempt</emphasis> - If the last sync attempt is a failure, this will
-            be shown.</para>
-          </listitem>
-        </itemizedlist>
-        </listitem>
-      </itemizedlist>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata width="80%" align="center" fileref="resources/images/settings/metadata_versioning_table_failure_case.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </para>
-    </section>
-    <section xml:id="system_oauth2_settings">
-      <title>OAuth2 clients</title>
-      <para/>
-    </section>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Maximum number of analytics records</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para><?oxy_comment_start author="cecilia" timestamp="20170322T111445+0100" comment="From where? Analytics apps?"?>Increase
+                this number to provide more records from the analytics<?oxy_comment_end?>.</para>
+              <para>The default value is 50,000.</para>
+              <para>
+                <warning>
+                  <para>Use the setting <emphasis role="bold">Unlimited</emphasis> carefully, it
+                    might result in a very high load on your server.</para>
+                </warning>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Infrastructural indicators</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines an indicator group where the member indicators should describe data
+                about the organisation units' infrastructure.</para>
+              <para>You can view the infrastructural data in the <emphasis role="bold"
+                  >GIS</emphasis> app: right-click a
+                <?oxy_comment_start author="cecilia" timestamp="20170322T111813+0100" comment="What is this?
+
+Show information in GIS app, when clicking on an org unit.
+
+Used anywhere else? - Check with Jan."?>facility
+                and click <emphasis role="bold">Show
+                information</emphasis>.<?oxy_comment_end?></para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Infrastructural data elements</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines a data element group where the member data elements should describe data
+                about the organisation units' infrastructure.</para>
+              <para>
+                <example>
+                  <para>Infrastructural data elements can be population, doctors, beds, Internet
+                    connectivity and climate.</para>
+                </example>
+              </para>
+              <para>You can view the infrastructural data in the <emphasis role="bold"
+                  >GIS</emphasis> app: right-click a
+                <?oxy_comment_start author="cecilia" timestamp="20170322T111813+0100" comment="What is this?
+
+Show information in GIS app, when clicking on an org unit.
+
+Used anywhere else? - Check with Jan."?>facility
+                and click <emphasis role="bold">Show
+                information</emphasis>.<?oxy_comment_end?></para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Infrastructural period type</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the frequency for which the data elements in the infrastructural data
+                elements group are
+                <?oxy_comment_start author="cecilia" timestamp="20170331T140801+0200" comment="Do you means &quot;diplayed&quot;?
+You don&apos;t really &quot;capture&quot; data in the GIS app."?>captured<?oxy_comment_end?>.</para>
+              <para>This will typically be yearly. When viewing the infrastructural data you will be
+                able to select the time period of the data source.</para>
+              <para>You can view the infrastructural data in the <emphasis role="bold"
+                  >GIS</emphasis> app: right-click a
+                <?oxy_comment_start author="cecilia" timestamp="20170322T111813+0100" comment="What is this?
+
+Show information in GIS app, when clicking on an org unit.
+
+Used anywhere else? - Check with Jan."?>facility
+                and click <emphasis role="bold">Show
+                information</emphasis>.<?oxy_comment_end?></para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Default relative period for analysis</emphasis></para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+            <entry valign="top">
+              <para>TBA</para>
+            </entry>
+            <?oxy_custom_end?>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Feedback
+                  <?oxy_comment_start author="cecilia" timestamp="20170331T140828+0200" comment="Setting should be moved into Messaging section in app."?>recipients<?oxy_comment_end?></emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines a user group where the members will receive all messages sent via the
+                feedback function in the <emphasis role="bold">Dashboard</emphasis> app.</para>
+              <para>This will typically be members of the super user team who are able to support
+                and answer questions coming from end-users.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Max offline organisation unit levels</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines how many levels in the organisation unit hierarchy will be available
+                offline in the organisation unit tree widget. </para>
+              <para>Under normal circumstances you can leave this on the lowest level, which is
+                default is the default setting.</para>
+              <para>It can be useful to set it to a higher level to reduce initial load time in
+                cases where you have a large number of organisation units, typically more than 30
+                000.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Data analysis std dev factor</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the number of standard deviations used in the outlier analysis performed on
+                the captured data in the <emphasis role="bold">Data Entry</emphasis> app.</para>
+              <para>The default value is 2. A high value will catch less outlier values than a low
+                value.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><?oxy_comment_start author="cecilia" timestamp="20170331T141034+0200" comment="Setting should be moved into Messaging section in app."?><emphasis
+                  role="bold">Phone number area code</emphasis><?oxy_comment_end?></para>
+            </entry>
+            <entry valign="top">
+              <para>The area code for the area in which your deployment is located.</para>
+              <para>Used for sending and receiving SMS. Typically, this is a country code.</para>
+              <para>
+                <example>
+                  <para><emphasis>+260</emphasis> (country code for Zambia)</para>
+                </example>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Enable multi-organisation unit forms</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Enables support to enter data forms for multiple organisation units at the same
+                time in the <emphasis role="bold">Data Entry</emphasis> app.</para>
+              <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+              <para>If you've enabled this setting, you can in the <emphasis role="bold">Data
+                  Entry</emphasis> app, click on the parent organisation unit for the children that
+                you want to enter data for, and the data set list will include data sets that are
+                assigned to the children of that parent.</para>
+              <?oxy_custom_end?>
+            </entry>
+          </row>
+          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          <?oxy_comment_start author="cecilia" timestamp="20170331T143209+0200" comment="No longer in UI, still relevant?" mid="11"?>
+          <row>
+            <?oxy_custom_end?>
+            <entry valign="top">
+              <para><emphasis role="bold">Days after period end to qualify for timely data
+                  submission</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the number of days after the end of a period in which a data entry form
+                must be marked as complete in order to be considered timely.</para>
+              <para>The setting affects the <emphasis role="bold">Reporting rate summary</emphasis>
+                report you create in the <emphasis role="bold">Reports</emphasis> app. This report
+                lists data entry forms marked as complete as well as data entry forms marked as
+                completed on time.</para>
+              <para>The default value is 15.</para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230" mid="12"?>
+          </row>
+          <?oxy_comment_end mid="11"?>
+          <?oxy_comment_start author="cecilia" timestamp="20170331T143100+0200" comment="No longer in UI, still relevant?" mid="13"?>
+          <row>
+            <?oxy_comment_start author="cecilia" timestamp="20170321T114612+0100" comment="Not in UI anymore, functionality removed or moved?"?>
+            <entry valign="top">
+              <para><emphasis role="bold">Omit indicator values with zero numerator value in data
+                  mart:</emphasis></para>
+            </entry>
+            <?oxy_comment_end?>
+            <entry valign="top">
+              <para>Defines whether aggregated indicator values with zero as the numerator value
+                should be written to the indicator data mart table.</para>
+              <para>You must write such values for example when connecting Excel pivot tables to the
+                data mart since Excel will need the numerator data to correctly aggregate up in the
+                organisation unit hierarchy.</para>
+              <para>If third-party tools are not used with DHIS2, this will reduce the total number
+                of values written to the data mart (which again will improve performance) and could
+                safely<?oxy_comment_start author="cecilia" timestamp="20170331T142953+0200" comment="What do you set to &quot;omit&quot;? Do you select the setting or not?"?>
+                be set to omit.<?oxy_comment_end?></para>
+            </entry>
+          </row>
+          <?oxy_custom_end mid="12"?>
+          <?oxy_comment_end mid="13"?>
+        </tbody>
+      </tgroup>
+    </table>
   </section>
-</chapter>
+  <section xml:id="system_analytics_settings">
+    <title>Analytics settings</title>
+    <table frame="all">
+      <title>Analytics settings</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Default relative period for analysis</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the relative period to use by default in analytics app: <emphasis
+                  role="bold">Data Visualizer</emphasis>, <emphasis role="bold">Event
+                  Reports</emphasis>, <emphasis role="bold">Event Visualizer</emphasis>, <emphasis
+                  role="bold">GIS</emphasis> and <emphasis role="bold">Pivot Table</emphasis> apps.
+                The relative period will be automatically selected when you open these apps.</para>
+              <para>Recommended setting: the most commonly used relative period among your
+                users.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Cacheability</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets whether analytics data responses should be
+                <?oxy_comment_start author="cecilia" timestamp="20170322T163146+0100" comment="What does this mean?"?>served<?oxy_comment_end?>
+                with public or private visibility.</para>
+              <para>
+                <emphasis role="bold">Private</emphasis>: Any node or server between the DHIS2
+                server and the end user which has the ability to cache can NOT cache the web page.
+                This is useful if the page served can or do contain sensitive information. This
+                means that each time you want a web page, either you get a new page from the DHIS2
+                server, or the DHIS2 server caches the page. No other server than the DHIS2 server
+                are allowed to cache the page.</para>
+              <para><emphasis role="bold">Public</emphasis>: Any node or server between the DHIS2
+                server and the end user which has the ability to cache can cache the web page. This
+                relives the traffic to the DHIS2 server and potentially speeds up the subsequent
+                page loading speed.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Cache strategy</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Decides for how long reports and responses related to
+                <?oxy_comment_start author="cecilia" timestamp="20170403T103239+0200" comment="Analytics?"?>analysis<?oxy_comment_end?>
+                should be cached.</para>
+              <para>If you use the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T103436+0200" comment="What is the &quot;scheduled, nightly analytics tables update&quot;? In which app do you set this?"?>scheduled,
+                nightly
+                <?oxy_comment_start author="cecilia" timestamp="20170403T103009+0200" comment="What is an analytics table? Reports?"?>analytics
+                tables<?oxy_comment_end?> updat<?oxy_comment_end?>e, select <emphasis role="bold"
+                  >Cache until 6 AM tomorrow</emphasis>. This is because data in reports change at
+                that time, and you can safely cache data up to the moment when the
+                <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>analytics
+                tables<?oxy_custom_end?> are updated.</para>
+              <para>If you are loading data continuously into
+                the<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?> analytics
+                tables, <?oxy_custom_end?>select <emphasis role="bold">No cache</emphasis>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Max number of years to hide unapproved data in
+                  analytics</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets whether and for how long back in time
+                the<?oxy_comment_start author="cecilia" timestamp="20170403T103504+0200" comment="What&apos;s the &quot;analytics&quot; engine?"?>
+                analytics engine <?oxy_comment_end?>should hide unapproved data.</para>
+              <para><emphasis role="bold">Never check approval</emphasis>: no data will be hidden,
+                irrespective of its data approval status. </para>
+              <para><emphasis role="bold">Check approval for all data</emphasis>: approval status
+                will always be checked.</para>
+              <para> Other options, for example <emphasis role="bold">Last 3 years</emphasis>:
+                approval status will be checked for data which is newer than 3 years old; older data
+                will not be checked.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Threshold for analytics data caching</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets whether to enable caching data older than the specified number of years
+                only.</para>
+              <para>This allows for returning the most recent data directly with no caching, while
+                serving cached version of older data for performance concerns.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Respect category option start and end date in analytics
+                  table export</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <?oxy_comment_start author="cecilia" timestamp="20170322T163946+0100" comment="Reword"?>
+              <para>Sets whether aggregate data values where the data period falls outside the start
+                and end date of the category options of the data attribute category option
+                combination should be filtered out of the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T103811+0200" comment="What&apos;s an &quot;analytics table&quot;?
+
+Refer to JIRA issue https://jira.dhis2.org/browse/DHIS2-262"?>analytics
+                tables<?oxy_comment_end?> when generated.</para>
+              <?oxy_comment_end?>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Put analytics in maintenance mode</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Puts the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T110222+0200" comment="What&apos;s an &quot;analytics engine&quot;?"?>analytics
+                engine<?oxy_comment_end?> and web API resource in maintenance mode. This means that
+                "503 Service Unavailable" will be returned for all requests.</para>
+              <para>This is useful when you need to perform maintenance on the server, for example
+                rebuilding indexes while the server is running in production, in order to reduce
+                load and more efficiently carry out the maintenance.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </section>
+  <section xml:id="system_server_settings">
+    <title>Server settings</title>
+    <table frame="all">
+      <title>Server settings</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Number of database server CPUs</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the number of CPU cores of your database server.</para>
+              <para>This allows the system to perform optimally when the database is hosted on a
+                different server than the application server, as the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T110602+0200" comment="What&apos;s an &quot;analytics engine&quot;?"?>analytics
+                engine<?oxy_comment_end?> scales linearly on the number of available cores.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">System notifications email address</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the email address which will receive system
+                <?oxy_comment_start author="cecilia" timestamp="20170403T110705+0200" comment="Which notifications? 
+From DHIS2 messaging?
+Some type of server maintenance?
+Program notifications??"?>notifications<?oxy_comment_end?>.</para>
+              <para>Notifications about failures in processes such
+                as<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?> analytics
+                table<?oxy_custom_end?> generation will be sent here. This is useful for application
+                monitoring.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Server base URL</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the full, externally accessible base URL for your server.</para>
+              <para>The URL is used to provide links to your server from external locations such as
+                emails sent from the system.</para>
+              <para>
+                <note>
+                  <para>If you don't specify a server base URL, emails sent from the DHIS2 messaging
+                    system will not contain a reply link.</para>
+                </note>
+              </para>
+              <para>
+                <example>
+                  <para><emphasis>https://apps.dhis2.org/demo</emphasis> is the server base URL for
+                    the DHIS2 demo server.</para>
+                </example>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Google Analytics (Universal Analytics)
+                key</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the Google UA key to provide
+                <?oxy_comment_start author="cecilia" timestamp="20170330T095421+0200" comment="What kind of analytics? DHIS2 analytics or Google analytics?"?>analytics<?oxy_comment_end?>
+                for your DHIS2 instance.</para>
+              <para><?oxy_comment_start author="cecilia" timestamp="20170330T095332+0200" comment="What does this mean?"?>Most
+                places are covered<?oxy_comment_end?>, but it will not be provided for custom apps.
+                You can read more about Google Analytics at <link
+                  xlink:href="http://google.com/analytics"
+                >http://google.com/analytics</link>.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </section>
+  <section xml:id="system_appearance_settings">
+    <title><?oxy_comment_start author="cecilia" timestamp="20170330T095709+0200" comment="At next release, should turn modifying title etc in other languages into a task."?>Appearance<?oxy_comment_end?>
+      settings</title>
+    <table frame="all">
+      <title>Appearance settings</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          <row>
+            <entry valign="top">
+              <para><?oxy_comment_start author="cecilia" timestamp="20170403T111440+0200" comment="At next revision, add graphic that illustrates the different settings."?><emphasis
+                  role="bold">Select language</emphasis><?oxy_comment_end?></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the language for which you can then enter translations of the following settings:<itemizedlist>
+                  <listitem>
+                    <para><emphasis role="bold">Application introduction</emphasis></para>
+                  </listitem>
+                  <listitem>
+                    <para><emphasis role="bold">Application title</emphasis></para>
+                  </listitem>
+                  <listitem>
+                    <para><emphasis role="bold">Application notification</emphasis></para>
+                  </listitem>
+                  <listitem>
+                    <para><emphasis role="bold">Application left-side footer</emphasis></para>
+                  </listitem>
+                  <listitem>
+                    <para><emphasis role="bold">Application right-side footer</emphasis></para>
+                  </listitem>
+                </itemizedlist></para>
+            </entry>
+          </row>
+          <?oxy_custom_end?>
+          <?oxy_comment_start author="cecilia" timestamp="20170321T133908+0100" comment="Description missing"?>
+          <row>
+            <?oxy_comment_end?>
+            <entry valign="top">
+              <para><emphasis role="bold">Application title</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the application title on the top menu.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Application introduction</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets an introduction of the system which will be visible on the top-left part of
+                the login page.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Application notification</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets a notification which will be visible on the front page under the login
+                area.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Application left-side footer</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets a text in the left-side footer area of the login page.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Application right-side footer</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets a text in the right-side footer area of the login page.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Style</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the
+                <?oxy_comment_start author="cecilia" timestamp="20170330T104727+0200" comment="https://jira.dhis2.org/browse/DHIS2-1299"?>style<?oxy_comment_end?>
+                (look-and-feel) of the system. </para>
+              <para>The user can override this setting in the <emphasis role="bold"
+                  >Settings</emphasis> app: <emphasis role="bold">User settings</emphasis> >
+                  <emphasis role="bold">Style</emphasis>.</para>
+              <para>
+                <note>
+                  <para>Due to technical reasons, it's not possible to change the color of the
+                    newest version of the header bar. The apps with the newest header bar will
+                    retain the blue header bar.</para>
+                </note>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Start page</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the page or app which the user will be redirected to after log in. </para>
+              <para>Recommended setting: the <emphasis role="bold">Dashboard</emphasis> app.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Help page link</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the URL which users will see when they click <emphasis role="bold"
+                  >Profile</emphasis> &gt;<emphasis role="bold">Help</emphasis>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Flag</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the flag which is displayed in the left menu of the <emphasis role="bold"
+                  >Dashboard</emphasis> app.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Interface language</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the language used in the user interface.</para>
+              <para>The user can override this setting in the <emphasis role="bold"
+                  >Settings</emphasis> app: <emphasis role="bold">User settings</emphasis> >
+                  <emphasis role="bold">Interface language</emphasis>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Database language</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the language used in the database.</para>
+              <para>The user can override this setting in the <emphasis role="bold"
+                  >Settings</emphasis> app: <emphasis role="bold">User settings</emphasis> >
+                  <emphasis role="bold">Database language</emphasis>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Property to display in analysis
+                  <?oxy_comment_start author="cecilia" timestamp="20170321T134337+0100" comment="apps?"?>modules<?oxy_comment_end?></emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets whether you want to display the metadata objects' names or short names in
+                the analytics apps: <emphasis role="bold">Data Visualizer</emphasis>, <emphasis
+                  role="bold">Event Reports</emphasis>, <emphasis role="bold">Event
+                  Visualizer</emphasis>, <emphasis role="bold">GIS</emphasis> and <emphasis
+                  role="bold">Pivot Table</emphasis> apps.</para>
+              <para>The user can override this setting in the <emphasis role="bold"
+                  >Settings</emphasis> app: <emphasis role="bold">User settings</emphasis> >
+                  <emphasis role="bold">Property to display in analysis modules</emphasis>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Default digit group separator to display in analysis
+                  <?oxy_comment_start author="cecilia" timestamp="20170321T134337+0100" comment="apps?"?>modules<?oxy_comment_end?></emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the default digit group separator in the analytics apps: <emphasis
+                  role="bold">Data Visualizer</emphasis>, <emphasis role="bold">Event
+                  Reports</emphasis>, <emphasis role="bold">Event Visualizer</emphasis>, <emphasis
+                  role="bold">GIS</emphasis> and <emphasis role="bold">Pivot Table</emphasis>
+                apps.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Require authority to add to view object
+                lists</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <?oxy_comment_start author="cecilia" timestamp="20170403T111553+0200" comment="Reword
+
+At next revision, consider adding graphic."?>
+              <para>If you select this option, you'll hide menu and index page items and links to
+                lists of objects if the current user doesn't have the authority to create the type
+                of objects (privately or publicly).</para>
+              <?oxy_comment_end?>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Custom login page logo</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Select this option and upload an image to add your logo to the login
+                page.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Custom top menu logo</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Select this option and upload an image to add your logo to the left in the top
+                menu.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </section>
+  <section xml:id="system_email_settings">
+    <title>Email
+      <?oxy_comment_start author="cecilia" timestamp="20170330T115834+0200" comment="Need more concept info here. Do youconfigure DHIS2 messging? To whom do you send emails?"?>settings<?oxy_comment_end?></title>
+    <table frame="all">
+      <title>Email settings</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Host name</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the host name of the SMTP server.</para>
+              <para>
+                <example>
+                  <para>When you use Google SMTP services, the host name should be
+                      <emphasis>smtp.gmail.com</emphasis>.</para>
+                </example>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Port</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Sets the port to connect to the SMTP server.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">User name</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>The user name of the user account with the SMTP server.</para>
+              <para>
+                <example>
+                  <para>mail@dhis2.org</para>
+                </example>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Password</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>The password of the user account with the SMTP server.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">TLS</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Select this option if the SMPT server requires TLS for connections.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Email sender</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>The email address to use as sender when sending out emails.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Send me a test email</emphasis></para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+            <entry valign="top">
+              <para>Sends out a
+                test<?oxy_comment_start author="cecilia" timestamp="20170403T115205+0200" comment="Who do you send a test email to? The logged in user?"?>
+                to email<?oxy_comment_end?>.</para>
+            </entry>
+            <?oxy_custom_end?>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </section>
+  <section xml:id="system_messaging_settings">
+    <title>Messaging
+      <?oxy_comment_start author="cecilia" timestamp="20170330T140415+0200" comment="Add info about settings. Pending answer from SME.
+
+Question: why isn&apos;t the email setting in the &quot;Email&quot; tab?
+
+Info from SME: Dette betyr at at brukeren skal få SMS/email notifications eller ikke
+
+About what? When the user recievs a DHIS2 message withing the messaging system? Or has this something to do with validation notificaitons, program notifications etc?
+
+SME:
+- A general seetting, if user doesn&apos;t have hes/hers &quot;own&quot; notifiacation settings.
+- Used in internal DHIS2 messaging system: System message (generated by the sytem, can be many things, something has gone wrong), private message, ticket message, validation result message (result of validation analysis) (4 type of messages right now)
+- Push analysis don&apos;t go through internal DHIS2 messaging system, always send via email
+- Can also send despite all settings (force send)"?>settings<?oxy_comment_end?></title>
+    <para>A message that something happened internally that you have to investigate.</para>
+    <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+    <para>- A general seetting, if user doesn't have hes/hers "own" notification settings.</para>
+    <para>- Used in internal DHIS2 messaging system: System message (generated by the system, can be
+      many things, something has gone wrong), private message, ticket message, validation result
+      message (result of validation analysis) (4 type of messages right now)</para>
+    <para>- Push analysis don't go through internal DHIS2 messaging system, always send via
+      email</para>
+    <para>- Can also send despite all settings (force send)</para>
+    <?oxy_custom_end?>
+    <table frame="all">
+      <title>Messaging settings</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Enable message email notifications</emphasis></para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+            <entry valign="top">
+              <para>Defines whether DHIS 2 user messages should be delivered to the email address
+                associated with the user by default. This setting can be overridden by user
+                settings.</para>
+            </entry>
+            <?oxy_custom_end?>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Enable message SMS notifications</emphasis></para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+            <entry valign="top">
+              <para>Defines whether DHIS 2 user messages should be delivered as SMS to the mobile
+                phone number associated with the user by default. This setting can be overridden by
+                user settings.</para>
+            </entry>
+            <?oxy_custom_end?>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para/>
+  </section>
+  <section xml:id="system_access_settings">
+    <title>Access
+      <?oxy_comment_start author="cecilia" timestamp="20170403T140544+0200" comment="Add link to new topics about managing users passwords."?>settings<?oxy_comment_end?></title>
+    <table frame="all">
+      <title>Access settings</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Self registration account user role</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines which user role should be given to self-registered user accounts.</para>
+              <para>To enable self-registration of users: select any user role from the list. A link
+                to the self-registration form will be displayed on the login page.</para>
+              <para>
+                <note>
+                  <para>To enable self-registration, you must also select a <emphasis role="bold"
+                      >Self registration account organisation unit</emphasis>.</para>
+                </note>
+              </para>
+              <para>To disable self-registration of users: select <emphasis role="bold">Disable self
+                  registration</emphasis>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Self registration account organisation
+                unit</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines which organisation unit should be associated with self-registered
+                users.</para>
+              <para>
+                <note>
+                  <para>To enable self-registration, you must also select a <emphasis role="bold"
+                      >Self registration account user role</emphasis>.</para>
+                </note>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Do not require recaptcha for self
+                registration</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines whether you want to use reCAPTCHA for user self-registration. This is
+                enabled by default.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Enable user account recovery</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines whether users can restore their own passwords.</para>
+              <para>When this setting is enabled, a link to the account recovery form will be
+                displayed on the front page.</para>
+              <para>
+                <note>
+                  <para>User account recovery requires that you have configured email settings
+                    (SMTP).</para>
+                </note>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Lock user account temporarily after multiple failed login
+                  attempts</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines whether the system should lock user accounts after five successive
+                failed login attempts over a timespan of 15 minutes.</para>
+              <para>The account will be locked for 15 minutes, then the user can attempt to log in
+                again.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Allow users to grant own user roles</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines whether users can grant user roles which they have themselves to others
+                when creating new users.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Allow assigning object to related objects during add or
+                  update</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <?oxy_comment_start author="cecilia" timestamp="20170403T150846+0200" comment="At next release, add graphic."?>
+              <para>Defines whether users should be allowed to assign an object to a related object
+                when they create or edit metadata objects.</para>
+              <?oxy_comment_end?>
+              <para>
+                <example>
+                  <para>You can allow users to assign an organisation unit to data sets and
+                    organisation unit group sets when creating or editing the organisation
+                    unit.</para>
+                </example>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Require user account password change</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines whether users should be forced to change their passwords every 3, 6 or
+                12 months.</para>
+              <para>If you don't want to force users to change password, select <emphasis
+                  role="bold">Never</emphasis>.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Minimum characters in password</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the minimum number of characters users must have in their passwords. </para>
+              <para>You can select 8 (default), 10, 12 or 14.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">OpenID provider</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the OpenID provider.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">OpenID provider label</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the label to display for the specified OpenID provider.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">CORS whitelist</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Whitelists a set of URLs which can access the DHIS 2 API from another domain.
+                Each URL should be entered on separate lines. Cross-origin resource sharing (CORS)
+                is a mechanism that allows restricted resources (e.g. javascript files) on a web
+                page to be requested from another domain outside the domain from which the first
+                resource was served.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Mapzen search API key</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the API key for the Mapzen API. This API is used to search addresses
+                globally within DHIS 2.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Google Maps API key</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the API key for the Google Maps API. This is used to display maps within
+                DHIS 2.</para>
+            </entry>
+          </row>
+          <?oxy_custom_end mid="49"?>
+        </tbody>
+      </tgroup>
+    </table>
+  </section>
+  <section xml:id="system_approval_settings">
+    <title>Approval settings</title>
+    <para>
+      <note>
+        <para>For more information about how you configure data approvals, refer to <link
+            xlink:href="https://docs.dhis2.org/master/en/user/html/data_approval.html">Data
+            approval</link>
+        </para>
+      </note>
+    </para>
+    <table frame="all">
+      <title>Approval settings</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para>Approval level</para>
+            </entry>
+            <entry valign="top">
+              <para>The levels at which you want to approve data in the system.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para>Approval workflow</para>
+            </entry>
+            <entry valign="top">
+              <para>The workflows that the system will use to approve data. Each workflow can be
+                associated with one or more approval levels.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Acceptance required before approval</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines whether to include an acceptance step before the approval step in the
+                approval workflow.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </section>
+  <section xml:id="system_calendar_settings">
+    <title>Calendar settings</title>
+    <table frame="all">
+      <title>Calendar settings</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Calendar</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines which calendar the system will use.</para>
+              <para>The system supports the following calendars: Coptic, Ethiopian, Gregorian,
+                Islamic, ISO 8601, Julian, Nepali and Thai.</para>
+              <para>
+                <note>
+                  <para>This is a s system wide setting. It is not possible to have multiple
+                    calendars within a single DHIS2 instance.</para>
+                </note>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Date format</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines which date format the system will use.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </section>
+  <section xml:id="system_data_import_settings">
+    <title>Data import settings</title>
+    <para>The data import settings apply to the data import process. They provide optional
+      constraints on what should be considered a conflict during import. The constraints are applied
+      to each individual data value in the import.</para>
+    <table frame="all">
+      <title>Data import settings</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Require periods to match period type of data
+                  set</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Require period of data value to be of the same period type as the data sets for
+                which the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T152506+0200" comment="What does &quot;data element of data value&quot; mean?"?>data
+                element of data value<?oxy_comment_end?> is assigned to.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Require category option combos to match category combo of
+                  data element</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Require category option combination of data value to be part of the category
+                combination of
+                the<?oxy_comment_start author="cecilia" timestamp="20170403T152528+0200" comment="What does &quot;data element of data value&quot; mean?
+"?>
+                data element of the data value.<?oxy_comment_end?></para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Require organisation units to match assignment of data
+                  set</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Require organisation unit of data value to be assigned to one or more of the
+                data sets which the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T152536+0200" comment="What does &quot;data element of data value&quot; mean?"?>data
+                element of data value<?oxy_comment_end?> is assigned to.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Require attribute option combos to match category combo of
+                  data set</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Require attribute option combination of data value to be part of the category
+                combination of the data set which the
+                <?oxy_comment_start author="cecilia" timestamp="20170403T152543+0200" comment="What does &quot;data element of data value&quot; mean?"?>data
+                element of data value <?oxy_comment_end?>is assigned to.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Require category option combo to be
+                specified</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Require category option combination of data value to be specified.</para>
+              <para>By default it will fall back to default category option combination if not
+                specified.</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Require attribute option combo to be
+                specified</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Require attribute option combination of data value to be specified.</para>
+              <para>By default it will fall back to default attribute option combination if not
+                specified.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </section>
+  <section>
+    <title>Synchronization settings</title>
+    <para>The following settings are used for both data and metadata synchronization.</para>
+    <para>
+      <note>
+        <para>For more information about how you configure metadata synchronization, refer to
+            <?oxy_comment_start author="cecilia" timestamp="20170508T104959+0200" comment="Update link for each release"?><link
+            xlink:href="https://docs.dhis2.org/master/en/user/html/metadata_sync.html">Configure
+            metadata synchronizing</link><?oxy_comment_end?>
+        </para>
+      </note>
+    </para>
+    <table frame="all">
+      <title>Synchronization settings</title>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Remote server URL</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines the URL of the remote server running DHIS2 to upload data values
+                to.</para>
+              <para>It is recommended to use of SSL/HTTPS since user name and password are sent with
+                the request (using basic authentication). </para>
+              <para>The system will attempt to synchronize data once every minute.</para>
+              <para>The system will use this setting for metadata synchronization too.</para>
+              <para>
+                <note>
+                  <para>To enable data and metadata synchronization, you must also enable <emphasis
+                      role="bold">Data synchronization</emphasis> and <emphasis role="bold">Metadata
+                      synchronization</emphasis> in the <emphasis role="bold">Data
+                      administration</emphasis> app &gt; <emphasis role="bold"
+                    >Scheduling</emphasis>.</para>
+                </note>
+              </para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Remote server user name</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>The user name of the DHIS2 user account on the remote server to use for data
+                synchronization.</para>
+              <para>
+                <note>
+                  <para>If you've enabled metadata versioning, you must make sure that the
+                    configured user has the authority &quot;F_METADATA_MANAGE&quot;.</para>
+                </note>
+              </para>
+            </entry>
+          </row>
+          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          <row>
+            <?oxy_custom_end?>
+            <entry valign="top">
+              <para><emphasis role="bold">Remote server password</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>The password of the DHIS2 user account on the remote server. The password will
+                be stored encrypted.</para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          </row>
+          <?oxy_custom_end?>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">Enable versioning for metadata sync</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>Defines whether to create versions of metadata when you synchronize metadata
+                between central and local instances.</para>
+            </entry>
+          </row>
+          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          <row>
+            <?oxy_custom_end?>
+            <entry valign="top">
+              <para><emphasis role="bold">Don't sync metadata if DHIS versions
+                differ</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>The metadata schema changes between versions of DHIS2 which could make different
+                metadata versions incompatible.</para>
+              <para>When enabled, this option will not allow metadata synchronization to occur if
+                the central and local instance(s) have different DHIS2 versions. This apply to
+                metadata synchronization done both via the user interface and the API.</para>
+              <para>The only time it might be valuable to disable this option is when synchronizing
+                basic entities, for example data elements, that have not changed across DHIS2
+                versions.</para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          </row>
+          <row>
+            <?oxy_custom_end?>
+            <entry valign="top">
+              <para><emphasis role="bold">Best effort</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para dir="ltr">A type of metadata version which decides how the importer on local
+                instance(s) will handle the metadata version.</para>
+              <para><emphasis>Best effort</emphasis> means that if the metadata import encounters
+                missing references (for example missing data elements on a data element group
+                import) it ignores the errors and continues the import.</para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          </row>
+          <row>
+            <?oxy_custom_end?>
+            <entry valign="top">
+              <para><emphasis role="bold">Atomic</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para dir="ltr">A type of metadata version which decides how the importer on local
+                instance(s) will handle the metadata version.</para>
+              <para dir="ltr"><emphasis>Atomic</emphasis> means all or nothing - the metadata import
+                will fail if any of the references do not exist.</para>
+            </entry>
+            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+          </row>
+          <?oxy_custom_end?>
+        </tbody>
+      </tgroup>
+    </table>
+  </section>
+  <section>
+    <title>System
+      <?oxy_comment_start author="cecilia" timestamp="20170321T145618+0100" comment="Add content.
+Why would you use this?
+How do you set it up?
+
+According to SME: Disse brukes for å gjøre en kall mot URL med username og password."?>monitoring<?oxy_comment_end?></title>
+    <table frame="all">
+      <title>System monitoring settings</title>
+      <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+      <tgroup cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry valign="top">
+              <para>Setting</para>
+            </entry>
+            <entry valign="top">
+              <para>Description</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">System monitoring URL</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>TBA</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">System monitoring user name</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>TBA</para>
+            </entry>
+          </row>
+          <row>
+            <entry valign="top">
+              <para><emphasis role="bold">System monitoring password</emphasis></para>
+            </entry>
+            <entry valign="top">
+              <para>TBA</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+      <?oxy_custom_end?>
+    </table>
+  </section>
+  <section xml:id="system_oauth2_settings">
+    <title><?oxy_comment_start author="cecilia" timestamp="20170321T112513+0100" comment="What is this?
+Info from SME: 
+Når det gjelder Oauth2 så er det et bruker-autentiseringprotokoll for å autentisere gjennom en tredjepart. F.eks når du ser “Logg inn med Facebook / Google” så er det oauth2 det er snakk om (som oftest)
+
+Vet ikke akkurat hvordan oauth2 brukes i settings her, men Zubair mener å huske at han så Morten hadde jobbet med koden, så du kan jo evnt høre med han"?>OAuth2
+      clients<?oxy_comment_end?></title>
+    <para>You create, edit and delete OAuth2 clients in the <emphasis role="bold">System
+        Settings</emphasis> app.</para>
+    <orderedlist>
+      <listitem>
+        <para>Open the <emphasis role="bold">System Settings</emphasis> apps and click <emphasis
+            role="bold">OAuth2 clients</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click the add button.</para>
+      </listitem>
+      <listitem>
+        <para>Enter <emphasis role="bold">Name</emphasis>, <emphasis role="bold">Client
+            ID</emphasis> and <emphasis role="bold">Client secret</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Select <emphasis role="bold">Grant types</emphasis>.</para>
+        <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+        <informaltable frame="all">
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry valign="top">
+                  <para>Grant type</para>
+                </entry>
+                <entry valign="top">
+                  <para>Description</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry valign="top">
+                  <para><emphasis role="bold">Password</emphasis></para>
+                </entry>
+                <entry valign="top">
+                  <para>TBA</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para><emphasis role="bold">Refresh token</emphasis></para>
+                </entry>
+                <entry valign="top">
+                  <para>TBA</para>
+                </entry>
+              </row>
+              <row>
+                <entry valign="top">
+                  <para><emphasis role="bold">Authorization code</emphasis></para>
+                </entry>
+                <entry valign="top">
+                  <para>TBA</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <?oxy_custom_end?>
+      </listitem>
+      <listitem>
+        <para>Enter <emphasis role="bold">Redirect
+            <?oxy_comment_start author="cecilia" timestamp="20170330T155124+0200" comment="Says &quot;URIs&quot; in UI, create JIRA issue."?>URLs<?oxy_comment_end?></emphasis>.
+          If you've multiple URLs, separate them with a line.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+</appendix>

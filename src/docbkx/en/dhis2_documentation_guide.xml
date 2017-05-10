@@ -47,11 +47,11 @@
       of these programs support editing DocBook XML. </para>
 
     <para>One of the key concepts to keep in mind when authoring documentation in DocBook, or other
-      presentation neutral formats, is that the <emphasis role="bold">content</emphasis>of the
-      document should be considered first. The <emphasis role="bold">presentation</emphasis>of the
+      presentation neutral formats, is that the <emphasis role="bold">content</emphasis> of the
+      document should be considered first. The <emphasis role="bold">presentation</emphasis> of the
       document will take place in a separate transformation step, whereby the source XML will be
       rendered into different formats, such as HTML and PDF.  It is therefore important that the
-      document is will organised and structured, with appropriate tags and structural elements being
+      document is well organised and structured, with appropriate tags and structural elements being
       considered.</para>
     <para>It is good practice to break your document in to various sections using the
         <tag>sect</tag> tag. It is easy to make use of the modular nature of DocBook, and split very
@@ -105,7 +105,7 @@
         xlink:href="https://help.github.com/articles/getting-started-with-github-for-windows"
         >here</link>. Alternatively, if you are comfortable using the command line, you can download
       git from <link xmlns:xlink="http://www.w3.org/1999/xlink"
-        xlink:href="http://git-scm.com/download/win">this page</link>If you are using Linux, you
+        xlink:href="http://git-scm.com/download/win">this page</link> If you are using Linux, you
       will need to install git on your system through your package manager, or from source code. A
       very thorough reference for how git is used is available in a number of different formats
         <link xl:href="http://git-scm.com/book">here</link>.</para>

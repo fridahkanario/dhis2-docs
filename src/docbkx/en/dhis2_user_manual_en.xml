@@ -12,45 +12,88 @@
   xmlns:ns="http://docbook.org/ns/docbook"
   xmlns:date="http://exslt.org/dates-and-times">
   <title>DHIS2 User guide</title>
+  <!-- Front matter -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/bookinfo/bookinfo.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/preface/preface.xml" encoding="UTF-8"/>
+ 
+  <!-- ug overview navigation help-->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/ug_overview.xml"/>
+ 
+ <!-- About DHIS2 -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude"  href="content/intro/introduction.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/getting_started.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/data_dimensions.xml"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/user_management/toc_user_mgt.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/sharing/sharing.xml" encoding="UTF-8"/>
+    
+    
+  <!-- Dashboard -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/dashboard/dashboard.xml" encoding="UTF-8"/>
+  
+    
+  <!-- Enter data -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_entry/toc_data_entry.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_quality/toc_data_quality.xml" encoding="UTF-8"/>
-  <!-- <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_quality/using_data_quality.xml" encoding="UTF-8"/>-->
-  <!-- <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_quality/creating_data_quality.xml" encoding="UTF-8"/>-->
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/maintenance/mtn_toc.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/using_reporting.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/event_capture.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/tracker_capture.xml" encoding="UTF-8"/>
+  
+  
+  <!-- Analyse data -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/pivot_tables.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/data_visualizer.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/using_gis.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/creating_gis.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/creating_reporting.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/usage_analytics.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/approvals/approvals.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/import_export/import_export.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_admin/data_admin.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/settings/settings.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/mobile/mobile_toc.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/event_capture.xml" encoding="UTF-8"/> 
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/event_reports.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/event_visualizer.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/tracker_capture.xml" encoding="UTF-8"/>
+  
+  <!-- Data quality -->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_quality/toc_data_quality.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/approvals/approvals.xml" encoding="UTF-8"/>
+  
+  
+  <!-- Reports -->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/using_reporting.xml" encoding="UTF-8"/> 
+  
+    
+ <!-- User settings --> 
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/profile/profile.xml" encoding="UTF-8"/>
+  
+  
+ <!-- Manage users -->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/user_management/toc_user_mgt.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/usage_analytics.xml" encoding="UTF-8"/>
+  
+  
+  <!-- Configure metadata -->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/maintenance/mtn_toc.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/config/toc_tracker_config.xml" encoding="UTF-8"/>
   <!-- <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/program_indicators.xml" encoding="UTF-8"/> -->
   <!-- <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/program_rules.xml" encoding="UTF-8"/> -->
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/profile/profile.xml" encoding="UTF-8"/>
+  
+  
+  <!-- Configure the system -->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/sharing/sharing.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_admin/data_admin.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/creating_gis.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/creating_reporting.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/import_export/import_export.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/metadata_sync/metadata_sync.xml" encoding="UTF-8"/>
+  
+  <!-- Mobile -->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/mobile/mobile_toc.xml" encoding="UTF-8"/>
+  
+  <!-- Tutorials -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/tutorials/dhis2_tutorial_toc.xml" encoding="UTF-8"/>
+  
+  <!-- FAQ -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/faq/faq.xml" encoding="UTF-8"/>
+  
+  <!-- Release notes -->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/release_notes/release_notes.xml" encoding="UTF-8"/>
+  
+  <!-- Appendices -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/user_authorities/user_authorities_table.xml" encoding="UTF-8"/> 
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/settings/settings.xml" encoding="UTF-8"/>
+ 
+  <!-- Back matter -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/glossary/glossary.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/bibliography/bibliography.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/release_notes/release_notes.xml" encoding="UTF-8"/>
+  
     <index/> 
 </book>

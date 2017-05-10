@@ -52,7 +52,7 @@
       </listitem>
     </orderedlist>
     The package remains a work in progress and there are a number of areas where it could and should
-    (and hopefully will be improved).  For example,
+    (and hopefully will) be improved.  For example,
       <orderedlist>
         <listitem><para>currently the tuning of the postgresql database is not covered. There are ways in which this
             could be at least semi automated;</para></listitem>

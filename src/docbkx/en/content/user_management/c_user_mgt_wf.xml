@@ -27,10 +27,11 @@
             <para>Assign user roles to the users.</para>
         </listitem>
         <listitem>
-            <para>Assign the users to organisation units.(?)</para>
+            <?oxy_comment_start author="cecilia" timestamp="20170412T092659+0200" comment="At next release, verify these two steps"?>
+            <para>Assign the users to organisation units.</para>
         </listitem>
         <listitem>
-            <para>Assign data sets to the user role(??)</para>
+            <para>Assign data sets to the user role.<?oxy_comment_end?></para>
         </listitem>
         <listitem>
             <para>(Optional) Group users in user groups.</para>
