@@ -17,18 +17,14 @@
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/preface/preface.xml" encoding="UTF-8"/>
  
   <!-- ug overview navigation help-->
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/ug_overview.xml"/>
- 
- <!-- About DHIS2 -->
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude"  href="content/intro/introduction.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/getting_started.xml" encoding="UTF-8"/>
-  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/data_dimensions.xml"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/ug_overview.xml"/> 
     
+  <!-- introduction to dhis2 -->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude"  href="content/intro/introduction.xml" encoding="UTF-8"/>  
     
   <!-- Dashboard -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/dashboard/dashboard.xml" encoding="UTF-8"/>
-  
-    
+   
   <!-- Enter data -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/data_entry/toc_data_entry.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/event_capture.xml" encoding="UTF-8"/>
@@ -80,6 +76,10 @@
   
   <!-- Tutorials -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/tutorials/dhis2_tutorial_toc.xml" encoding="UTF-8"/>
+  
+  <!-- Even more about DHIS2 -->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/database_demo_server.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/intro/data_dimensions.xml"/>
   
   <!-- FAQ -->
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/faq/faq.xml" encoding="UTF-8"/>
