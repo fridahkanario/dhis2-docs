@@ -6,7 +6,8 @@
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
   xmlns:db="http://docbook.org/ns/docbook" xml:id="setting_up_reporting">
-  <title>Setting up report functionality</title>
+  <title>Configure report
+    <?oxy_comment_start author="cecilia" timestamp="20170509T141819+0200" comment="Topic needs complete editorial review"?>functionality<?oxy_comment_end?></title>
   <section xml:id="reporting_data_sources">
     <title>Data sources for reporting</title>
     <section>

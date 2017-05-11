@@ -10,8 +10,8 @@
     <title>About user
         <?oxy_comment_start author="cecilia" timestamp="20161110T105014+0100" comment="Permissions or authorities?"?>management<?oxy_comment_end?></title>
     <para>Multiple users can access DHIS2 simultaneously and each user can have different
-        authorities. You can fine-tune these authorities so that certain users only can enter data,
-        while others only can generate reports.</para>
+        authorities. You can fine-tune these authorities so that certain users can only enter data,
+        while others can only generate reports.</para>
     <itemizedlist>
         <listitem>
             <para>You
@@ -39,10 +39,10 @@ You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
     </itemizedlist>
     <table frame="all">
         <title>User management terms and definitions</title>
-        <tgroup cols="3">
+        <tgroup cols="3" align="left">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-            <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="2.0*"/>
+            <colspec colname="c3" colnum="3" colwidth="2.0*"/>
             <thead>
                 <row>
                     <entry>
@@ -120,7 +120,7 @@ You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
         <title>Objects in the Users app</title>
         <tgroup cols="2">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="4.0*"/>
             <thead>
                 <row>
                     <entry>
@@ -181,7 +181,7 @@ Review the term&quot;associated&quot;, might be better with &quot;assigned&quot;
             <para>When you create a user account for a district record officer, you should assign
                 the district where he/she works as the organisation unit.</para>
         </example>
-        <para>The assigned organisation unit affect how the user can use DHIS2:</para>
+        <para>The assigned organisation unit affects how the user can use DHIS2:</para>
         <itemizedlist>
             <listitem>
                 <para>In the <emphasis role="bold">Data Entry</emphasis> app, a user can only enter
@@ -197,7 +197,7 @@ Review the term&quot;associated&quot;, might be better with &quot;assigned&quot;
             </listitem>
             <listitem>
                 <para>In the <emphasis role="bold">Reports</emphasis> app, a user can only view
-                    reports her organisation units and those below.
+                    reports for her organisation unit and those below.
                     <?oxy_comment_start author="cecilia" timestamp="20161109T134941+0100" comment="Verify with SME: still valid?"?>(This
                     is something we consider to open up to allow for comparison
                     reports.)<?oxy_comment_end?></para>
@@ -208,7 +208,7 @@ Review the term&quot;associated&quot;, might be better with &quot;assigned&quot;
             perform this task. The key principle is that a user can only grant authorities and
             access to data sets that the user itself has access to. The number of users at national,
             province and district level are often relatively few and can be created and managed by
-            the system administrators. If a large part of the facilities are entering data directly
+            the system administrators. If a large proportion of the facilities are entering data directly
             into the system, the number of users might become unwieldy. It is recommended to
             delegate and decentralize this task to the district officers, it  will make the process
             more efficient and support the facility users better.</para>

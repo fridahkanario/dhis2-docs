@@ -10,8 +10,9 @@
 	xmlns:svg="http://www.w3.org/2000/svg"
 	xmlns:mth="http://www.w3.org/1998/Math/MathML"
 	xmlns:db="http://docbook.org/ns/docbook" 
-	xml:id="getting_started">
-  <title>Getting started with DHIS2</title>
+	xml:id="moare_about_dhis2_server_database">
+  <title>About demo server, live package and database
+    <?oxy_comment_start author="cecilia" timestamp="20170510T133243+0200" comment="This section needs complete rework"?>design<?oxy_comment_end?></title>
   <section>
     <title>Using the DHIS2 demo server</title>
     <para>The DHIS2 team maintains a demonstration server at <link xl:href="https://play.dhis2.org/demo">https://play.dhis2.org/demo</link>. This is by far the easiest way to try out DHIS2. Simply open the link in your web browser and login with username = admin and password = district. </para>
