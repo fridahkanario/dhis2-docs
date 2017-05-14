@@ -675,7 +675,7 @@ cluster.instance1.hostname = 193.157.199.131</screen></para>
         Consult the reverse proxy section for a detailed configuration guide.</para>
     </section>
   </section>
-  <section>
+   <section xml:id="install_application_cache_providers">
     <title>Application cache providers</title>
     <para>DHIS 2 user <emphasis>Ehcache</emphasis> as application cache provider by default. In
       addition, DHIS 2 can be configured to use <emphasis>memcached</emphasis> as cache
