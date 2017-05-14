@@ -125,7 +125,14 @@
             <entry>Required</entry>
             <entry>Url Tempalte is only required in case of GenericHttpGateway . For example "http://smsgatewa1.com"</entry>
           </row>
-
+          <row>
+            <entry>Headers</entry>         
+            <entry>N/A</entry>
+            <entry>N/A</entry>
+            <entry>Optional</entry>
+            <entry>Header option can be checked to send selected parameter as http header. For example username/password/token can be sent in http header.</entry>
+          </row>
+          
         </tbody>
       </tgroup>
     </table>
