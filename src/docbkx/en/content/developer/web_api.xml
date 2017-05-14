@@ -10557,7 +10557,7 @@ interval=WEEK" -u admin:district</screen>
       <title>Gateway configuration</title>
       <para>The Web API lets you create and update gateway configurations. For each type of gateway
         there are different parameters in the JSON payload. Sample JSON payloads for each gateway
-        are given below. POST is used to create and PUT to update configurations. </para>
+        are given below. POST is used to create and PUT to update configurations. Header parameter can be used in case of GenericHttpGateway to send one or more parameter as http header.</para>
       <para><emphasis role="italic">Clickatell</emphasis></para>
       <screen>{
   &quot;name&quot; : &quot;clickatell&quot;,
@@ -10580,13 +10580,15 @@ interval=WEEK" -u admin:district</screen>
   &quot;parameters&quot;: [
     {
       &quot;key&quot;: &quot;username&quot;,
-      &quot;value&quot;: &quot;user12&quot;
-      &quot;classified&quot;: &quot;false&quot;
+      &quot;value&quot;: &quot;user12&quot;,
+      &quot;classified&quot;: &quot;false&quot;,
+      &quot;header&quot;: &quot;false&quot;
     },
     {
       &quot;key&quot;: &quot;password&quot;,
-      &quot;value&quot;: &quot;XXX&quot;
-      &quot;classified&quot;: &quot;true&quot;
+      &quot;value&quot;: &quot;XXX&quot;,
+      &quot;classified&quot;: &quot;true&quot;,
+            &quot;header&quot;: &quot;false&quot;
     }
   ]
 }</screen>
