@@ -123,8 +123,10 @@
 							<chunkFirstSections>true</chunkFirstSections>
 							<chunkSectionDepth>1</chunkSectionDepth>
 							
-							<generateTOC>true</generateTOC>
-							<tocSectionDepth>3</tocSectionDepth>
+							<generateTOC>
+								book      toc
+							</generateTOC>
+							<tocSectionDepth>2</tocSectionDepth>
 							<generateSectionTocLevel>1</generateSectionTocLevel>
 							
 							<useEmbedForSvg>1</useEmbedForSvg>

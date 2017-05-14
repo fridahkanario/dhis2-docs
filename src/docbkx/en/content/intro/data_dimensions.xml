@@ -11,7 +11,7 @@
 	xmlns:mth="http://www.w3.org/1998/Math/MathML"
 	xmlns:db="http://docbook.org/ns/docbook"
 	xml:id="data_dimensions">
-  <title>Data dimensions in DHIS2</title>
+  <title>About data dimensions in DHIS2</title>
   <section>
     <title>Data dimensions: Core building blocks in DHIS2</title>
     <para>A data value in DHIS2  is  described by at least three dimensions: 1) data element, 2) organisation unit, and 3) period. These dimensions  form the core building blocks of the data model. </para>

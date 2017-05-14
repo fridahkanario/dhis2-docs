@@ -6,8 +6,9 @@
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
   xmlns:db="http://docbook.org/ns/docbook" xml:id="dashboard">
-  <title><?oxy_comment_start author="cecilia" timestamp="20160623T081519+0200" comment="At next revision:
-Review topic completely. Consider moving message function to separate section." flag="done"?>Dashboards<?oxy_comment_end?></title>
+  <title>Manage
+    d<?oxy_comment_start author="cecilia" timestamp="20160623T081519+0200" comment="At next revision:
+Review topic completely. Consider moving message function to separate section." flag="done"?>ashboards<?oxy_comment_end?></title>
   <section>
     <title>About dashboards</title>
     <para>Dashboards are intended to provide quick access to different analytical objects (maps,
@@ -22,7 +23,7 @@ Review topic completely. Consider moving message function to separate section." 
     </example>
   </section>
   <section xml:id="dashboards_setup">
-    <title><?oxy_comment_start author="cecilia" timestamp="20161010T105714+0200" comment="Section should be reworked into a &quot;Create dashboard&quot; section."?>Setting<?oxy_comment_end?>
+    <title><?oxy_comment_start author="cecilia" timestamp="20161010T105714+0200" comment="Section should be reworked into a &quot;Create dashboard&quot; section."?>Set<?oxy_comment_end?>
       up the dashboard</title>
     <para>The dashboard can contain any number of objects (charts, maps, reports, tables, resources,
       etc). These can be freely arranged on the dashboard as you wish. Dashboard items can be
@@ -133,7 +134,7 @@ Review topic completely. Consider moving message function to separate section." 
     </orderedlist>
   </section>
   <section xml:id="dashboard_sharing">
-    <title>Dashboard Sharing</title>
+    <title>Dashboard sharing</title>
     <para>In order to share a dashboard with user groups, first select &quot;Share&quot; from the
       dashboard page. This will bring up the dashboard sharing settings options. To share the
       dashboard with specific user groups, type in their name in the sharing settings dialogue box

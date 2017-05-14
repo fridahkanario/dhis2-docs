@@ -8,5 +8,58 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="about_maintenance_app">
     <title>About the Maintenance app</title>
-    <para/>
+    <para>In the <emphasis role="bold">Maintenance</emphasis> app you configure all the metadata
+        objects you need to collect and analyze data:</para>
+    <itemizedlist>
+        <listitem>
+            <para>Categories</para>
+        </listitem>
+        <listitem>
+            <para>Data elements</para>
+        </listitem>
+        <listitem>
+            <para>Data sets and data entry forms</para>
+        </listitem>
+        <listitem>
+            <para>Indicators</para>
+        </listitem>
+        <listitem>
+            <para>Organisation units</para>
+        </listitem>
+        <listitem>
+            <para>Program metadata: tracked entity, tracked entity attribute and relationship
+                type</para>
+        </listitem>
+        <listitem>
+            <para>Validation rules</para>
+        </listitem>
+        <listitem>
+            <para>Attributes</para>
+        </listitem>
+        <listitem>
+            <para>Constants</para>
+        </listitem>
+        <listitem>
+            <para>Options sets</para>
+        </listitem>
+        <listitem>
+            <para>Legends</para>
+        </listitem>
+        <listitem>
+            <para>Predictors</para>
+        </listitem>
+        <listitem>
+            <para>Push reports</para>
+        </listitem>
+        <listitem>
+            <para>External map layers</para>
+        </listitem>
+    </itemizedlist>
+    <para>
+        <note>
+            <para>The functions you have access to depend on your
+                <?oxy_comment_start author="cecilia" timestamp="20160926T113321+0200" comment="Verify with SME: depends on user role?"?>user
+                role's access p<?oxy_comment_end?>ermissions.</para>
+        </note>
+    </para>
 </section>

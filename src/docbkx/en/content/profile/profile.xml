@@ -9,15 +9,17 @@
          xmlns:xhtml="http://www.w3.org/1999/xhtml"
          xmlns:svg="http://www.w3.org/2000/svg"
          xmlns:mth="http://www.w3.org/1998/Math/MathML"
-         xmlns:db="http://docbook.org/ns/docbook">
+         xmlns:db="http://docbook.org/ns/docbook"
+         xml:id="user_account_preferences">
   
-  <title>User account preferences</title>
-  <para>In <emphasis role="bold">User settings</emphasis>, users can change the display language of
-      DHIS2 and the language of the database.  The database language is the translated content of
-      the metadata, such as data elements and indicators. Users can also choose a display style, and
-      enable or disable SMS and email notifications. If they wish to, users can choose to display a
-      short name, such as "Joe" in the analysis modules, rather than their full name. </para>
-  <para>In <emphasis role="bold">User profile</emphasis>, users can add personal information to their profile such as their email address, mobile phone number, date of birth and more. When users send messages, the person receiving the message can see their profile details.</para> 
-  <para>In 
-    <emphasis role="bold">Account settings</emphasis>, users can reset their password. </para>
+  <title>Set user account preferences</title>
+  <para>In <emphasis role="bold">User settings</emphasis>, you can change the display language of
+        DHIS2 and the language of the database. The database language is the translated content of
+        the metadata, such as data elements and indicators. You can also choose a display style, and
+        enable or disable SMS and email notifications. If you wish to, you can choose to display a
+        short name, such as "Joe" in the analysis modules, rather than your full name. </para>
+  <para>In <emphasis role="bold">User profile</emphasis>, you can add personal information to your
+        profile such as your email address, mobile phone number, date of birth and more. When you
+        send messages, the person receiving the message can see these profile details.</para> 
+  <para>In <emphasis role="bold">Account settings</emphasis>, you can reset your password. </para>
  </chapter>

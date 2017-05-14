@@ -9,7 +9,8 @@
          xmlns:xhtml="http://www.w3.org/1999/xhtml"
          xmlns:svg="http://www.w3.org/2000/svg"
          xmlns:mth="http://www.w3.org/1998/Math/MathML"
-         xmlns:db="http://docbook.org/ns/docbook" >
+         xmlns:db="http://docbook.org/ns/docbook" 
+         xml:id="what_is_dhis2">
   <title>What is DHIS2?</title>
   <para>After reading this chapter you will be able to understand:</para>
   <itemizedlist>

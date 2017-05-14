@@ -11,7 +11,8 @@
          xmlns:mth="http://www.w3.org/1998/Math/MathML"
          xmlns:db="http://docbook.org/ns/docbook"
          xml:id="sharing">
-  <title>Sharing</title>
+  <title>About sharing of
+    <?oxy_comment_start author="cecilia" timestamp="20170509T142346+0200" comment="Must be completely reviewed for the 2.27 release, new sharing dialog."?>objects<?oxy_comment_end?></title>
   <para>This chapter discusses the sharing of entities feature in DHIS2.</para>
   <section>
     <title>Sharing of objects</title>
