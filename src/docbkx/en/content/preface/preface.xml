@@ -1,9 +1,15 @@
 <preface version="5.0"
   xmlns="http://docbook.org/ns/docbook"
-  xmlns:xl="http://www.w3.org/1999/xlink">
+  xmlns:xl="http://www.w3.org/1999/xlink"
+  xml:id="about_this_guide_">
   <title>About this guide</title>
   <para>The DHIS2 documentation is a collective effort and has been developed by the development team and users. While the guide strives to be complete, there may be certain functionalities which have been omitted or which have yet to be documented. This section explains some of the conventions which are used throughout the document. </para>
-  <para>DHIS2 is a browser-based application. In many cases, screenshots have been included for enhanced clarity. Shortcuts to various functionalities are displayed such as &quot;Maintenance-&gt;Data administration&quot;. The &quot;-&gt;&quot; character indicates that you should choose &quot;Maintenance&quot; and then click on &quot;Data administration&quot; in the menu which appears through the browser. </para>
+  <para>DHIS2 is a browser-based application. In many cases, screenshots have been included for
+    enhanced clarity. Shortcuts to various functionalities are displayed such as <emphasis
+      role="bold">Data element</emphasis> &gt; <emphasis role="bold">Data element group</emphasis>.
+    The &quot;&gt;&quot; symbol indicates that you should click <emphasis role="bold">Data
+      element</emphasis> and then click <emphasis role="bold">Data element group</emphasis> in the
+    user interface.</para>
   <para>Different styles of text have been used to highlight important parts of the text or particular types of text, such as source code. Each of the conventions used in the document are explained below.</para>
   <note>
     <para>A note contains additional information which should be considered or a reference to more information which may be helpful.</para>
