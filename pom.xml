@@ -123,9 +123,7 @@
 							<chunkFirstSections>true</chunkFirstSections>
 							<chunkSectionDepth>1</chunkSectionDepth>
 							
-							<generateTOC>
-								book      toc
-							</generateTOC>
+							<generateTOC>true</generateTOC>
 							<tocSectionDepth>2</tocSectionDepth>
 							<generateSectionTocLevel>1</generateSectionTocLevel>
 							
