@@ -1496,7 +1496,7 @@ SME:
       </tgroup>
     </table>
   </section>
-  <section>
+  <section xml:id="system_monitoring_settings">
     <title>System
       <?oxy_comment_start author="cecilia" timestamp="20170321T145618+0100" comment="Add content.
 Why would you use this?
