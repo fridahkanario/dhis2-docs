@@ -1496,16 +1496,17 @@ SME:
       </tgroup>
     </table>
   </section>
-  <section>
+  <section xml:id="system_monitoring_settings">
     <title>System
       <?oxy_comment_start author="cecilia" timestamp="20170321T145618+0100" comment="Add content.
 Why would you use this?
 How do you set it up?
 
-According to SME: Disse brukes for å gjøre en kall mot URL med username og password."?>monitoring<?oxy_comment_end?></title>
+According to SME: Disse brukes for å gjøre en kall mot URL med username og password." flag="done"?>monitoring<?oxy_comment_end?></title>
+    <para>Use the system monitoring settings when you want to make a call to a URL with user name
+      and password.</para>
     <table frame="all">
       <title>System monitoring settings</title>
-      <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
       <tgroup cols="2">
         <colspec colname="c1" colnum="1" colwidth="1.0*"/>
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
@@ -1525,7 +1526,7 @@ According to SME: Disse brukes for å gjøre en kall mot URL med username og pas
               <para><emphasis role="bold">System monitoring URL</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>TBA</para>
+              <para>The URL you want to make the call to.</para>
             </entry>
           </row>
           <row>
@@ -1533,7 +1534,7 @@ According to SME: Disse brukes for å gjøre en kall mot URL med username og pas
               <para><emphasis role="bold">System monitoring user name</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>TBA</para>
+              <para>The user name you want to use in the call.</para>
             </entry>
           </row>
           <row>
@@ -1541,12 +1542,11 @@ According to SME: Disse brukes for å gjøre en kall mot URL med username og pas
               <para><emphasis role="bold">System monitoring password</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>TBA</para>
+              <para>The password for the user name you use in the call.</para>
             </entry>
           </row>
         </tbody>
       </tgroup>
-      <?oxy_custom_end?>
     </table>
   </section>
   <section xml:id="system_oauth2_settings">
