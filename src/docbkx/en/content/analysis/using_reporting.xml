@@ -6,7 +6,8 @@
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
   xmlns:db="http://docbook.org/ns/docbook" xml:id="using_reporting">
-  <title>Using reporting functionality</title>
+  <title>Using reporting
+    <?oxy_comment_start author="cecilia" timestamp="20170515T131449+0200" comment="This section need a full editorial review"?>functionality<?oxy_comment_end?></title>
   <section xml:id="using_reporting_intro">
     <title>Reporting functionality in DHIS2</title>
     <para>The reporting module in DHIS2 provides a range of reporting alternatives, and this section
@@ -207,5 +208,53 @@
         </imageobject>
       </mediaobject>
     </screenshot>
+  </section>
+  <section xml:id="generate_analytics_tables">
+    <title>Generate analytics tables</title>
+    <para>DHIS2 generates database tables which the system then uses as basis for various analytics
+      functions. These tables are also valuable if you write advanced SQL reports. In the <emphasis
+        role="bold">Reports</emphasis> app, you can execute the tables immediately or schedule them
+      to be executed at regular intervals. This means that you can refresh recent analytics on
+      demand and see updated pivot tables without waiting for all of the past years data to
+      re-process.</para>
+    <para>
+      <note>
+        <para>You can also generate the tables through the web API. This task is typically performed
+          by a system administrator.</para>
+      </note>
+    </para>
+    <orderedlist>
+      <listitem>
+        <para>Open the <emphasis role="bold">Reports</emphasis> app and click <emphasis role="bold"
+            >Analytics</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Select the parts of the analytics process you want to skip:</para>
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">Skip generation of
+                <?oxy_comment_start author="cecilia" timestamp="20170515T131432+0200" comment="What&apos;s a resource table?"?>resource<?oxy_comment_end?>
+                tables</emphasis></para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Skip generation of aggregate data and completeness
+                data</emphasis></para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Skip generation of event data</emphasis></para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Skip generation of enrollment data</emphasis></para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para>Select <emphasis role="bold">Number of last years of data to
+          include</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Start export</emphasis>.</para>
+      </listitem>
+    </orderedlist>
   </section>
 </chapter>
