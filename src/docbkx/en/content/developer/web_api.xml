@@ -12330,6 +12330,14 @@ interval=WEEK" -u admin:district</screen>
               <entry>Indicates whether paging should be ignored and all rows should be
                 returned.</entry>
             </row>
+            <row>
+              <entry>lastUpdatedStartDate</entry>
+              <entry>Filter for events which were updated after this date.</entry>
+            </row>
+            <row>
+              <entry>lastUpdatedEndDate</entry>
+              <entry>Filter for events which were updated up until this date.</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
