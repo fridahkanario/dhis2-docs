@@ -7,8 +7,15 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <title>Change sharing settings for metadata objects</title>
-    <para>You can assign different rights to the  for example a data set based on user groups and
-        user roles.</para>
+    <para>You can assign different sharing settings to metadata objects, for example organisation
+        units and tracked entity attributes. These sharing settings control which users and users
+        groups that can view or edit a metadata object.</para>
+    <para>
+        <note>
+            <para>The default setting is that everyone (<emphasis role="bold">Public
+                    access</emphasis>) can find, view and edit metadata objects.</para>
+        </note>
+    </para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and find the type of
@@ -19,29 +26,26 @@
                     >Sharing settings</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>(Optional) Search for a user group and select it. The user group is added to the
-                list.</para>
+            <para>(Optional) Add users or user groups: search for a user or a user group and select
+                it. The user group is added to the list.</para>
         </listitem>
         <listitem>
-            <?oxy_comment_start author="cecilia" timestamp="20160527T113739+0200" comment="Before release, verify GUI. Options GUI will change.
-- Not in 2.24" flag="done"?>
-            <para>Change the settings for the user
-                group<?oxy_comment_start author="cecilia" timestamp="20160510T161804+0200" comment="For SME: More information needed. What does External access mean?
-Marks: something to do with edit rights, verify with Lars." flag="done"?>s<?oxy_comment_end?>
-                you want to modify.</para>
-            <?oxy_comment_end?>
+            <para>Change sharing settings for the users and user groups you want to modify.</para>
             <itemizedlist>
                 <listitem>
-                    <para><emphasis role="bold">Can view</emphasis>: Everyone in the user group can
-                        view the object</para>
+                    <para><emphasis role="bold">Can edit and view</emphasis>: Everyone can view and
+                        edit the object.</para>
                 </listitem>
                 <listitem>
-                    <para><emphasis role="bold">Can edit</emphasis>: Everyone in the user group can
-                        view and edit the object</para>
+                    <para><emphasis role="bold">Can view only</emphasis>: Everyone can view the
+                        object.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">No access</emphasis>: The public won't have access
+                        to the object. This setting is only applicable to <emphasis role="bold"
+                            >Public access</emphasis>.  </para>
                 </listitem>
             </itemizedlist>
-            <para>The default setting is that everyone (<emphasis role="bold">Public
-                    access</emphasis>) can view and edit objects.</para>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Close</emphasis>.</para>
