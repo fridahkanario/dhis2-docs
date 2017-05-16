@@ -423,6 +423,24 @@ Functionality will move into the Maintenance app for 2.26"?>indicators<?oxy_comm
                 The static date format is &apos;yyyy-MM-dd&apos;.</entry>
             </row>
             <row>
+              <entry>d2:weeksBetween</entry>
+              <entry>(date, date)</entry>
+              <entry>Produces the number of full weeks between two data elements/attributes of type
+                date. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+            </row>
+            <row>
+              <entry>d2:monthsBetween</entry>
+              <entry>(date, date)</entry>
+              <entry>Produces the number of full months between two data elements/attributes of type
+                date. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+            </row>
+            <row>
+              <entry>d2:yearsBetween</entry>
+              <entry>(date, date)</entry>
+              <entry>Produces the number of full years between two data elements/attributes of type
+                date. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+            </row>
+            <row>
               <entry>d2:condition</entry>
               <entry>(boolean-expr, true-val, false-val)</entry>
               <entry>Evaluates the conditional expression and if true returns the true value, if
