@@ -2024,6 +2024,17 @@ http://server/api/26/constants/ID</screen></para>
 &quot;Female&quot;,,&quot;FEMALE&quot;</screen>
     </section>
   </section>
+  <section>
+    <title>Deleted objects</title>
+    <para>Whenever a object of type metadata is deleted, a log is being kept of  the uid, code, the
+      type (klass), and when it was deleted. This API is availble at
+        <emphasis>/api/deletedObjects</emphasis> field filtering and object filtering works as with
+      any other metadata.</para>
+    <para><emphasis>Get deleted objects of klass data
+      elements:</emphasis><screen>GET /api/deletedObjects.json?klass=DataElement</screen></para>
+    <para><emphasis>Get deleted object of klass indicator which was deleted in 2015 and
+        forward:</emphasis><screen>GET /api/deletedObjects.json?klass=Indicator&amp;deletedAt=2015-01-01</screen></para>
+  </section>
   <section xml:id="webapi_file_resources">
     <title>File resources</title>
     <para><emphasis role="italic">File resources</emphasis> are objects used to represent and store
