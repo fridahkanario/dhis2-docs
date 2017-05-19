@@ -2767,6 +2767,32 @@ http://server/api/26/constants/ID</screen></para>
         performance. For small import files, leaving it to false will be fast. For large import
         files which contain a large number of distint data elements and organisation units, setting
         it to true will be orders of magnitude faster.</para>
+      <section xml:id="webapi_data_values_import_requirement">
+        <title>Data value requirements</title>
+          <para>Data value import supports a set of value types. For each value type there is a special requirement.
+          The following table lists the edge cases for value types. For information about all other cases, see <xref linkend="webapi_csv_data_elements"/>.
+              <table>
+                  <title>Value type requirements</title>
+                  <tgroup cols="3">
+                      <thead>
+                          <row>
+                              <entry>Value type</entry>
+                              <entry>Requirements</entry>
+                              <entry>Comment</entry>
+                          </row>
+                      </thead>
+                      <tbody>
+                          <row>
+                              <entry>BOOLEAN</entry>
+                              <entry>true | false | 1 | 0 | t | f |</entry>
+                              <entry>Used when the value is a boolean, true or false value. The import service does
+                                not care if the input has upper or lower case intial.</entry>
+                          </row>
+                      </tbody>
+                  </tgroup>
+              </table>
+          </para>
+      </section>
       <section xml:id="webapi_data_values_identifier_schemes">
         <title>Identifier schemes</title>
         <para>Regarding the id schemes, by default the identifiers used in the XML messages uses the
