@@ -2024,6 +2024,17 @@ http://server/api/26/constants/ID</screen></para>
 &quot;Female&quot;,,&quot;FEMALE&quot;</screen>
     </section>
   </section>
+  <section>
+    <title>Deleted objects</title>
+    <para>Whenever a object of type metadata is deleted, a log is being kept of  the uid, code, the
+      type (klass), and when it was deleted. This API is availble at
+        <emphasis>/api/deletedObjects</emphasis> field filtering and object filtering works as with
+      any other metadata.</para>
+    <para><emphasis>Get deleted objects of klass data
+      elements:</emphasis><screen>GET /api/deletedObjects.json?klass=DataElement</screen></para>
+    <para><emphasis>Get deleted object of klass indicator which was deleted in 2015 and
+        forward:</emphasis><screen>GET /api/deletedObjects.json?klass=Indicator&amp;deletedAt=2015-01-01</screen></para>
+  </section>
   <section xml:id="webapi_file_resources">
     <title>File resources</title>
     <para><emphasis role="italic">File resources</emphasis> are objects used to represent and store
@@ -2756,6 +2767,32 @@ http://server/api/26/constants/ID</screen></para>
         performance. For small import files, leaving it to false will be fast. For large import
         files which contain a large number of distint data elements and organisation units, setting
         it to true will be orders of magnitude faster.</para>
+      <section xml:id="webapi_data_values_import_requirement">
+        <title>Data value requirements</title>
+          <para>Data value import supports a set of value types. For each value type there is a special requirement.
+          The following table lists the edge cases for value types. For information about all other cases, see <xref linkend="webapi_csv_data_elements"/>.
+              <table>
+                  <title>Value type requirements</title>
+                  <tgroup cols="3">
+                      <thead>
+                          <row>
+                              <entry>Value type</entry>
+                              <entry>Requirements</entry>
+                              <entry>Comment</entry>
+                          </row>
+                      </thead>
+                      <tbody>
+                          <row>
+                              <entry>BOOLEAN</entry>
+                              <entry>true | false | 1 | 0 | t | f |</entry>
+                              <entry>Used when the value is a boolean, true or false value. The import service does
+                                not care if the input has upper or lower case intial.</entry>
+                          </row>
+                      </tbody>
+                  </tgroup>
+              </table>
+          </para>
+      </section>
       <section xml:id="webapi_data_values_identifier_schemes">
         <title>Identifier schemes</title>
         <para>Regarding the id schemes, by default the identifiers used in the XML messages uses the
@@ -13091,9 +13128,9 @@ interval=WEEK" -u admin:district</screen>
     <section>
       <title>Outbound emails</title>
       <para>You can also send a general email notification by posting to the notification resource as mentioned below. "F_SEND_EMAIL" or "All" authority has to be in the system to make use of this 
-        api. Subject parameter is optional. "DHIS 2" string will be sent as default subject if it is not provided in url.
+        api. Subject parameter is optional. "DHIS 2" string will be sent as default subject if it is not provided in url. Url should be encoded in order to use this api.
       </para>
-      <screen>curl &quot;localhost/api/26/email/notification?recipients=xyz@abc.com&amp;message=sample email&amp;subject=Test Email&quot; -X POST -u admin:district -v</screen>
+      <screen>curl &quot;localhost/api/26/email/notification?recipients=xyz%40abc.com&amp;message=sample%20email&amp;subject=Test%20Email&quot; -X POST -u admin:district -v</screen>
     </section>
     <section xml:id="webapi_email_test_message">
       <title>Test message</title>
