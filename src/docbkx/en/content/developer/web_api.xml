@@ -13128,9 +13128,9 @@ interval=WEEK" -u admin:district</screen>
     <section>
       <title>Outbound emails</title>
       <para>You can also send a general email notification by posting to the notification resource as mentioned below. "F_SEND_EMAIL" or "All" authority has to be in the system to make use of this 
-        api. Subject parameter is optional. "DHIS 2" string will be sent as default subject if it is not provided in url.
+        api. Subject parameter is optional. "DHIS 2" string will be sent as default subject if it is not provided in url. Url should be encoded in order to use this api.
       </para>
-      <screen>curl &quot;localhost/api/26/email/notification?recipients=xyz@abc.com&amp;message=sample email&amp;subject=Test Email&quot; -X POST -u admin:district -v</screen>
+      <screen>curl &quot;localhost/api/26/email/notification?recipients=xyz%40abc.com&amp;message=sample%20email&amp;subject=Test%20Email&quot; -X POST -u admin:district -v</screen>
     </section>
     <section xml:id="webapi_email_test_message">
       <title>Test message</title>
