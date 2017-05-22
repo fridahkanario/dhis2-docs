@@ -494,13 +494,20 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Parameters</emphasis></para>
+                  <para><emphasis role="bold">Parameters (for standard reports
+                    only)</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Reporting period</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
                   <para/>
+                  <para>
+                    <note>
+                      <para>You create standard reports in the <emphasis role="bold"
+                          >Reports</emphasis> app.</para>
+                    </note>
+                  </para>
                 </entry>
               </row>
               <row>
