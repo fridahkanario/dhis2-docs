@@ -690,240 +690,6 @@ LAST_FINANCIAL_YEAR, LAST_5_FINANCIAL_YEARS</screen>
         release notes.</para>
     </section>
   </section>
-  <section xml:id="webapi_working_with_metadata_api">
-    <title>Working with the metadata API</title>
-    <para>The metadata resource can be accessed at <emphasis role="italic">/api/metadata</emphasis>.
-      This resource lets you read and write the full set of metadata. This section will give a basic
-      introduction to working with this API. For specific synchronization issues, please see the
-      integration chapter.</para>
-    <para>By default, interacting with<emphasis role="italic"> /api/metadata</emphasis> using the
-      GET HTTP method will give you all metadata rendered as XML. You can also be more specific
-      about the metadata elements you are interested in.</para>
-    <section xml:id="webapi_content_types">
-      <title>Content types</title>
-      <para>The Web API offers several content types for metadata.</para>
-      <para>
-        <table>
-          <title>Available Content-Types</title>
-          <tgroup cols="3">
-            <colspec colnum="1" colname="c1" colwidth="1*"/>
-            <colspec colnum="2" colname="newCol2" colwidth="1*"/>
-            <colspec colnum="3" colname="c2" colwidth="2.7*"/>
-            <thead>
-              <row>
-                <entry> Content-Type </entry>
-                <entry>URL extension</entry>
-                <entry> Description </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry>application/xml</entry>
-                <entry>.xml</entry>
-                <entry>Returns the metadata in XML representation</entry>
-              </row>
-              <row>
-                <entry>application/json</entry>
-                <entry>.json</entry>
-                <entry>Returns the metadata in JSON representation</entry>
-              </row>
-              <row>
-                <entry>application/pdf</entry>
-                <entry>.pdf</entry>
-                <entry>Returns the metadata as a PDF document</entry>
-              </row>
-              <row>
-                <entry>application/csv</entry>
-                <entry>.csv</entry>
-                <entry>Returns the metadata as a CSV file</entry>
-              </row>
-              <row>
-                <entry>application/vnd.ms-excel</entry>
-                <entry>.xls | .xlsx</entry>
-                <entry>Returns the metadata as an Excel workbook</entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
-      </para>
-    </section>
-    <section xml:id="webapi_query_parameters">
-      <title>Query parameters</title>
-      <para>The following query parameters are available for customizing your request.</para>
-      <para>
-        <table>
-          <title>Available Query Filters</title>
-          <tgroup cols="5">
-            <thead>
-              <row>
-                <entry> Param </entry>
-                <entry> Type </entry>
-                <entry> Required </entry>
-                <entry> Options (default first) </entry>
-                <entry> Description </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry>assumeTrue</entry>
-                <entry>boolean</entry>
-                <entry>false</entry>
-                <entry>true | false</entry>
-                <entry>Indicates whether to get all resources or no resources by default.</entry>
-              </row>
-              <row>
-                <entry>viewClass</entry>
-                <entry>enum</entry>
-                <entry>false</entry>
-                <entry>export | basic | detailed</entry>
-                <entry>Alternative views of the metadata. Please note that only metadata exported
-                  with viewClass=export or detailed can be used for import.</entry>
-              </row>
-              <row>
-                <entry>dryRun</entry>
-                <entry>boolean</entry>
-                <entry>false</entry>
-                <entry>false | true</entry>
-                <entry>If you set this to true, the actual import will not happen. Instead the
-                  system will generate a summary of what would have been done.</entry>
-              </row>
-              <row>
-                <entry>{resources}</entry>
-                <entry>boolean</entry>
-                <entry>false</entry>
-                <entry>true | false (default depends on assumeTrue)</entry>
-                <entry>See <emphasis role="italic">/api</emphasis> for available resources.
-                  Indicates which resources to include in the response.</entry>
-              </row>
-              <row>
-                <entry>lastUpdated</entry>
-                <entry>date</entry>
-                <entry>false</entry>
-                <entry>Several formats are available: yyyy, yyyy-MM, yyyy-MM-dd, yyyyMM,
-                  yyyyMMdd</entry>
-                <entry>Filters the metadata based on the lastUpdated field.</entry>
-              </row>
-              <row>
-                <entry>preheatCache</entry>
-                <entry>boolean</entry>
-                <entry>false</entry>
-                <entry>true | false</entry>
-                <entry>Turn cache-map preheating on/off. This is on by default, turning this off
-                  will make initial load time for importer much shorter (but will make the import
-                  itself slower). This is mostly used for cases where you have a small XML/JSON file
-                  you want to import, and don&apos;t want to wait for cache-map preheating.</entry>
-              </row>
-              <row>
-                <entry>strategy</entry>
-                <entry>enum</entry>
-                <entry>false</entry>
-                <entry>CREATE_AND_UPDATE | CREATE | UPDATE | DELETE</entry>
-                <entry>Import strategy to use, see below for more information.</entry>
-              </row>
-              <row>
-                <entry>sharing</entry>
-                <entry>boolean</entry>
-                <entry>false</entry>
-                <entry>false |&#160;true</entry>
-                <entry>Should sharing be supported or not. The default is false, which is the old
-                  behavior. You can set this to true to allow updating user, publicAccess and
-                  userGroupAccesses fields (if not they are cleared out on create, and not touched
-                  on update).</entry>
-              </row>
-              <row>
-                <entry>mergeMode</entry>
-                <entry>enum</entry>
-                <entry>false</entry>
-                <entry>REPLACE, MERGE</entry>
-                <entry>Strategy for merging of objects when doing updates. REPLACE will just
-                  overwrite the propery with the new value provided, MERGE will only set the
-                  property if its not null (only if the property was provided).</entry>
-              </row>
-              <row>
-                <entry>async</entry>
-                <entry>boolean</entry>
-                <entry>false</entry>
-                <entry>false |&#160;true</entry>
-                <entry>Indicates wether the import should be done async or not, the default is false
-                  which means the client will wait until the import is done, this is probably what
-                  you want for small imports (as you will get the import summary directly back to
-                  you). For large imports, the client might time out, so async=true is recommended,
-                  and the client connection will be dropped when the payload is uploaded.</entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
-      </para>
-    </section>
-    <section xml:id="webapi_import_strategies">
-      <title>Available strategies for import</title>
-      <para>When importing data using the metadata resource you can define various strategies for
-        import.</para>
-      <para>
-        <table>
-          <title>Available Strategies</title>
-          <tgroup cols="2">
-            <thead>
-              <row>
-                <entry> Type </entry>
-                <entry> Description </entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry>CREATE_AND_UPDATE</entry>
-                <entry>Allows creation and updating of objects.</entry>
-              </row>
-              <row>
-                <entry>CREATE</entry>
-                <entry>Allows creation of objects only.</entry>
-              </row>
-              <row>
-                <entry>UPDATE</entry>
-                <entry>Allows update of objects only.</entry>
-              </row>
-              <row>
-                <entry>DELETE</entry>
-                <entry>Allows deletes of objects only.</entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
-      </para>
-    </section>
-    <section xml:id="webapi_metadata_import_examples">
-      <title>Metadata import examples</title>
-      <para>
-        <emphasis role="bold">Example: Get a filtered set of metadata that was updated since August
-          1, 2014</emphasis>
-      </para>
-      <para>As described in the last section, there is a number of options you can apply to
-          <emphasis role="italic">/api/metadata</emphasis> to give you a filtered view. The use-case
-        we will be looking into here is where you want a nightly job that synchronizes organisation
-        units. We will be using <emphasis role="italic">cURL</emphasis> as the HTTP
-        client.<screen>curl -H &quot;Accept: application/xml&quot; -u admin:district
-  &quot;https://play.dhis2.org/demo/api/metadata?assumeTrue=false&amp;organisationUnits=true&amp;lastUpdated=2014-08-01&quot;</screen></para>
-      <para><emphasis role="bold">Example: Get metadata that was updated since February
-          2014</emphasis></para>
-      <para>This example will just the default <emphasis role="italic">assumeTrue</emphasis>
-        setting, along with getting the last updates from February 2014. This means that every
-        single type that has been updated will be
-        retrieved.<screen>curl -H &quot;Accept: application/xml&quot; -u admin:district 
-  &quot;https://play.dhis2.org/demo/api/metadata?lastUpdated=2014-02&quot;</screen></para>
-      <para><emphasis role="bold">Example: Create metadata</emphasis></para>
-      <para>The metadata resource can also be used to create or update metadata by using the POST
-        HTTP method. The metadata content can be both XML and JSON, using
-        &quot;application/xml&quot; and &quot;application/json&quot; content type respectively. The
-        request payload content will be accepted in several formats, including plain text, zipped
-        and gzipped. POSTing a metadata payload can be done for example like this, where
-        metadata.xml is a file in the same directory with the metadata content:</para>
-      <screen>curl -H &quot;Content-Type: application/xml&quot; -u admin:district -d @metadata.xml 
-  &quot;https://play.dhis2.org/demo/api/metadata&quot; -X POST -v</screen>
-      <para>The import will happen in a asyncronous process which implies that the response will
-        return as soon as the process is started. The response status code to be expected is 204 No
-        Content.</para>
-    </section>
-  </section>
   <section xml:id="webapi_metadata_object_filter">
     <title>Metadata object filter</title>
     <para>To filter the metadata there are several filter operations that can be applied to the
@@ -2258,6 +2024,17 @@ http://server/api/26/constants/ID</screen></para>
 &quot;Female&quot;,,&quot;FEMALE&quot;</screen>
     </section>
   </section>
+  <section>
+    <title>Deleted objects</title>
+    <para>Whenever a object of type metadata is deleted, a log is being kept of  the uid, code, the
+      type (klass), and when it was deleted. This API is availble at
+        <emphasis>/api/deletedObjects</emphasis> field filtering and object filtering works as with
+      any other metadata.</para>
+    <para><emphasis>Get deleted objects of klass data
+      elements:</emphasis><screen>GET /api/deletedObjects.json?klass=DataElement</screen></para>
+    <para><emphasis>Get deleted object of klass indicator which was deleted in 2015 and
+        forward:</emphasis><screen>GET /api/deletedObjects.json?klass=Indicator&amp;deletedAt=2015-01-01</screen></para>
+  </section>
   <section xml:id="webapi_file_resources">
     <title>File resources</title>
     <para><emphasis role="italic">File resources</emphasis> are objects used to represent and store
@@ -2990,6 +2767,32 @@ http://server/api/26/constants/ID</screen></para>
         performance. For small import files, leaving it to false will be fast. For large import
         files which contain a large number of distint data elements and organisation units, setting
         it to true will be orders of magnitude faster.</para>
+      <section xml:id="webapi_data_values_import_requirement">
+        <title>Data value requirements</title>
+          <para>Data value import supports a set of value types. For each value type there is a special requirement.
+          The following table lists the edge cases for value types. For information about all other cases, see <xref linkend="webapi_csv_data_elements"/>.
+              <table>
+                  <title>Value type requirements</title>
+                  <tgroup cols="3">
+                      <thead>
+                          <row>
+                              <entry>Value type</entry>
+                              <entry>Requirements</entry>
+                              <entry>Comment</entry>
+                          </row>
+                      </thead>
+                      <tbody>
+                          <row>
+                              <entry>BOOLEAN</entry>
+                              <entry>true | false | 1 | 0 | t | f |</entry>
+                              <entry>Used when the value is a boolean, true or false value. The import service does
+                                not care if the input has upper or lower case intial.</entry>
+                          </row>
+                      </tbody>
+                  </tgroup>
+              </table>
+          </para>
+      </section>
       <section xml:id="webapi_data_values_identifier_schemes">
         <title>Identifier schemes</title>
         <para>Regarding the id schemes, by default the identifiers used in the XML messages uses the
@@ -13325,9 +13128,9 @@ interval=WEEK" -u admin:district</screen>
     <section>
       <title>Outbound emails</title>
       <para>You can also send a general email notification by posting to the notification resource as mentioned below. "F_SEND_EMAIL" or "All" authority has to be in the system to make use of this 
-        api. Subject parameter is optional. "DHIS 2" string will be sent as default subject if it is not provided in url.
+        api. Subject parameter is optional. "DHIS 2" string will be sent as default subject if it is not provided in url. Url should be encoded in order to use this api.
       </para>
-      <screen>curl &quot;localhost/api/26/email/notification?recipients=xyz@abc.com&amp;message=sample email&amp;subject=Test Email&quot; -X POST -u admin:district -v</screen>
+      <screen>curl &quot;localhost/api/26/email/notification?recipients=xyz%40abc.com&amp;message=sample%20email&amp;subject=Test%20Email&quot; -X POST -u admin:district -v</screen>
     </section>
     <section xml:id="webapi_email_test_message">
       <title>Test message</title>
