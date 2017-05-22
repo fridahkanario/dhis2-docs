@@ -6,26 +6,26 @@
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
   xmlns:db="http://docbook.org/ns/docbook" xml:id="pivot">
-  <title>Using the Pivot Table app</title>
+  <title>Analyze data in pivot tables</title>
   <section xml:id="pivot_about">
     <title>About the Pivot table app</title>
-    <para>With the Pivot Table app, you can create pivot tables based on all available data
-      dimensions in DHIS2. A pivot table is a dynamic tool for data analysis which lets you
-      summarize and arrange data according to its dimensions. Examples of data dimensions in DHIS2 are:<itemizedlist>
+    <para>With the <emphasis role="bold">Pivot Table</emphasis> app, you can create pivot tables
+      based on all available data dimensions in DHIS2. A pivot table is a dynamic tool for data
+      analysis which lets you summarize and arrange data according to its dimensions. Examples of
+      data dimensions in DHIS2 are:<itemizedlist>
         <listitem>
           <para>data dimension itself (for example data elements, indicators and events)</para>
         </listitem>
         <listitem>
-          <para>periods (representing the time period for which the data
-            <?oxy_comment_start author="Home" timestamp="20160406T133122+0200" comment="What does &quot;represents&quot; mean here? Clarification needed."?>represents<?oxy_comment_end?>)</para>
+          <para>periods (representing the time period for the data)</para>
         </listitem>
         <listitem>
           <para><?oxy_comment_start author="rachaelb" timestamp="20160414T151427+0200" comment="organization rather than organizational (cf terminilogy entry for &quot;organization unit&quot;)"?>organisation<?oxy_comment_end?>
             hierarchy (representing the geographical location of the data)</para>
         </listitem>
       </itemizedlist></para>
-    <para>From these dimensions you can freely select dimension <emphasis role="italic"
-        >items</emphasis> to include in the pivot table. You can create additional dimensions in
+    <para>From these dimensions you can freely select <emphasis role="italic">dimension
+        items</emphasis> to include in the pivot table. You can create additional dimensions in
       DHIS2 with the
       <?oxy_comment_start author="Home" timestamp="20160406T133539+0200" comment="What is the exact name of this function in the UI?"?>group
       set functionality<?oxy_comment_end?>.
@@ -44,13 +44,38 @@ Revise phrase to &quot;A pivot table arranges data...&quot; = correct?"?>can
       on rows, the pivot table displays one row per dimension item in a similar fashion. The
       dimensions you select as filters will not be included in the pivot table, but will aggregate
       and filter the table data based on the selected filter items.</para>
+    <para>
+      <tip>
+        <title>Constraints and tips</title>
+        <itemizedlist>
+          <listitem>
+            <para>You must select at least one dimension on columns or rows.</para>
+          </listitem>
+          <listitem>
+            <para>You must include at least one period.</para>
+          </listitem>
+          <listitem>
+            <?oxy_comment_start author="cecilia" timestamp="20170519T085258+0200" comment="Still correct?"?>
+            <para>Data element group sets and reporting rates can't appear in the same pivot
+              table.</para>
+            <?oxy_comment_end?>
+          </listitem>
+          <listitem>
+            <para>A pivot table can't contain more than the maximum number of analytic records which
+              have been specified in the system settings. The maximum number of records could also
+              be constrained by the maximum RAM which is available to your browser. Consider making
+              smaller tables instead of one table which displays all of your data elements and
+              indicators together.</para>
+          </listitem>
+        </itemizedlist>
+      </tip>
+    </para>
   </section>
   <section xml:id="pivot_create">
     <title>Create a pivot table</title>
     <orderedlist>
       <listitem>
-        <para>In the <emphasis role="bold">Apps</emphasis> menu, click <emphasis role="bold">Pivot
-            Table</emphasis>.</para>
+        <para>Open the <emphasis role="bold">Pivot Table</emphasis> app.</para>
       </listitem>
       <listitem>
         <para>In the
@@ -69,21 +94,22 @@ Revise phrase to &quot;A pivot table arranges data...&quot; = correct?"?>can
         <para>Click <emphasis role="bold">Update</emphasis>.</para>
       </listitem>
     </orderedlist>
-    <example>
-      <title>Pivot table based on the demo database.</title>
-      <para>In this example, indicators are listed as columns and periods as rows.</para>
-      <screenshot>
-        <?oxy_comment_start author="rachaelb" timestamp="20160414T151841+0200" comment="As we have the example text &quot;Pivot table based on the demo...&quot; maybe we can remove this line of text and/or merge it with the other one?"?>
-        <title>Example pivot table with data elements on columns and periods as
-          <?oxy_comment_start author="CPersson" timestamp="20160419T133613+0200" comment="Line not visible in output."?>rows<?oxy_comment_end?>.<?oxy_comment_end?></title>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="80%" align="center"
-              fileref="resources/images/pivot_table/basic_pivot.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-    </example>
+    <para>
+      <example>
+        <title>Example pivot table with data elements as columns and periods as rows.</title>
+        <para>In this example, indicators are listed as columns and periods as rows.</para>
+        <para>
+          <screenshot>
+            <mediaobject>
+              <imageobject>
+                <imagedata width="80%" align="center"
+                  fileref="resources/images/pivot_table/basic_pivot.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </para>
+      </example>
+    </para>
     <section>
       <title>Select dimension
         <?oxy_comment_start author="Home" timestamp="20160406T163208+0200" comment="Review this section.
@@ -253,78 +279,106 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
     <title>Change the display of your pivot table</title>
     <orderedlist>
       <listitem>
+        <para>Open the <emphasis role="bold">Pivot Table</emphasis> app.</para>
+      </listitem>
+      <listitem>
+        <para>Create a new pivot table or open a favorite.</para>
+      </listitem>
+      <listitem>
         <para>Click <emphasis role="bold">Options</emphasis>.</para>
       </listitem>
       <listitem>
         <para>Set the options as required.</para>
         <table frame="all">
-          <title>Table options</title>
-          <tgroup cols="2">
-            <colspec colname="c1" colnum="1" colwidth="1*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.5*"/>
+          <title>Pivot table options</title>
+          <tgroup cols="3" align="left">
+            <colspec colname="newCol1" colnum="1" colwidth="1*"/>
+            <colspec colname="c1" colnum="2" colwidth="1*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.5*"/>
             <thead>
               <row>
-                <entry><?oxy_comment_start author="Home" timestamp="20160406T170516+0200" comment="Must update this list. More settings in GUI under Parameters&quot;."?>Option<?oxy_comment_end?></entry>
-                <entry>Description</entry>
+                <entry namest="newCol1" nameend="c1">
+                  <para><?oxy_comment_start author="Home" timestamp="20160406T170516+0200" comment="Must update this list. More settings in GUI under Parameters&quot;."?>Option<?oxy_comment_end?></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Description</para>
+                </entry>
               </row>
             </thead>
             <tbody>
               <row>
                 <entry>
+                  <para><emphasis role="bold">Data</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Show column totals</emphasis></para>
                   <para><emphasis role="bold">Show row totals</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Displays total values in the table for each row and column, as well as a
-                    grand total for all values in the table.</para>
+                    total for all values in the table.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry/>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Show column sub-totals</emphasis></para>
                   <para><emphasis role="bold">Show row sub-totals</emphasis></para>
                 </entry>
-                <entry>
-                  <para>Displays subtotals in the table for each dimension. In the screenshot above,
-                    notice how subtotals are generated for each of the periods in the period
-                    dimension. If you only select one dimension, subtotals will be hidden for those
-                    columns or rows. This is because the values will be equal to the
-                    subtotals.</para>
+                <entry align="left" valign="top">
+                  <para>Displays subtotals in the table for each dimension.</para>
+                  <para>If you only select one dimension, subtotals will be hidden for those columns
+                    or rows. This is because the values will be equal to the subtotals.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry/>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Show dimension labels</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Shows the dimension names as part of the pivot tables.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry/>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Hide empty rows</emphasis></para>
                 </entry>
-                <entry>
-                  <para>Hides empty rows from the table, which is useful when looking at large
-                    tables where a big part of the dimension items do not have data in order to keep
+                <entry align="left" valign="top">
+                  <para>Hides empty rows from the table. This is useful when you look at large
+                    tables where a big part of the dimension items don't have data in order to keep
                     the table more readable.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry/>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Hide empty columns</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Hides empty columns from the table. This is useful when you look at large
+                    tables where a big part of the dimension items don't have data in order to keep
+                    the table more readable.</para>
+                </entry>
+              </row>
+              <row>
+                <entry/>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Skip rounding</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Skips the rounding of data values, offering the full precision of data
                     values. Can be useful for finance data where the full dollar amount is
                     required.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry/>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Aggregation type</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>The default aggregation operator can be over-ridden here, by selecting a
                     different aggregation operator. Some of the aggregation types are <emphasis
                       role="bold">Count</emphasis>, <emphasis role="bold">Min</emphasis> and
@@ -332,72 +386,187 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry>
-                  <para><emphasis role="bold">Show hierarchy</emphasis></para>
+                <entry/>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Number type</emphasis></para>
                 </entry>
-                <entry>
-                  <para>Shows the name of all ancestors for organisation units, for example "Sierra
-                    Leone / Bombali / Tamabaka / Sanya CHP&quot; for Sanya CHP. The organisation
-                    units are then sorted alphabetically which will order the organisation units
-                    perfectly according to the hierarchy.</para>
+                <entry align="left" valign="top">
+                  <para/>
                 </entry>
               </row>
               <row>
                 <entry>
+                  <para><emphasis role="bold">Events</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Include only completed events</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Includes only completed events in the aggregation process. This is useful
                     for example to exclude partial events in indicator calculations.</para>
                 </entry>
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Display density</emphasis></para>
+                  <para><emphasis role="bold">Organisation units</emphasis></para>
                 </entry>
-                <entry>
-                  <para>Controls the size of the cells in the table. You can set it to
-                    &quot;comfortable&quot;, &quot;normal&quot; and &quot;compact&quot;. </para>
-                  <para>The &quot;compact&quot; option is handy in order to fit large tables into
-                    the browser screen.</para>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Show hierarchy</emphasis></para>
                 </entry>
-              </row>
-              <row>
-                <entry>
-                  <para><emphasis role="bold">Font size</emphasis></para>
-                </entry>
-                <entry>
-                  <para>Controls the size of the table text font. Can be set to &quot;large&quot;,
-                    &quot;normal&quot; and &quot;small&quot;.</para>
+                <entry align="left" valign="top">
+                  <para>Shows the name of all ancestors for organisation units, for example "Sierra
+                    Leone / Bombali / Tamabaka / Sanya CHP&quot; for Sanya CHP.</para>
+                  <para>The organisation units are then sorted alphabetically which will order the
+                    organisation units according to the hierarchy.</para>
                 </entry>
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Digit group separator</emphasis></para>
+                  <para><emphasis role="bold">Legend</emphasis></para>
                 </entry>
-                <entry>
-                  <para>Controls which character to separate groups of digits or
-                    &quot;thousands&quot;. Can be set to &quot;comma&quot;, &quot;space&quot; and
-                    &quot;none&quot;.</para>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Apply legend</emphasis></para>
                 </entry>
-              </row>
-              <row>
-                <entry>
-                  <para><emphasis role="bold">Legend set</emphasis></para>
-                </entry>
-                <entry>
-                  <para>Shows a colour indicator next to the values. Currently the GIS legend sets
-                    are being used.</para>
+                <entry align="left" valign="top">
+                  <para>Shows a colour indicator next to the values. Currently the GIS legend  are
+                    being used.</para>
                 </entry>
               </row>
               <row>
-                <entry>
-                  <para><emphasis role="bold">Legend display style</emphasis></para>
+                <entry/>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Style</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Color the text or background of cells in pivot tables based on legend sets.
                     You can use this option for scorecards to identify high and low values at a
                     glance.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para><emphasis role="bold">Style</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Display density</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Controls the size of the cells in the table. You can set it to <emphasis
+                      role="bold">Comfortable</emphasis>, <emphasis role="bold">Normal</emphasis> or
+                      <emphasis role="bold">Compact</emphasis>. </para>
+                  <para><emphasis role="bold">Compact</emphasis> is useful when you want to fit
+                    large tables into the browser screen.</para>
+                </entry>
+              </row>
+              <row>
+                <entry/>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Font size</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Controls the size of the table text font. You can set it to <emphasis
+                      role="bold">Large</emphasis>, <emphasis role="bold">Normal</emphasis> or
+                      <emphasis role="bold">Small</emphasis>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry/>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Digit group separator</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Controls which character to separate groups of digits or
+                    &quot;thousands&quot;. You can set it to <emphasis role="bold">Comma</emphasis>,
+                      <emphasis role="bold">Space</emphasis> or <emphasis role="bold"
+                      >None</emphasis>.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para><emphasis role="bold">General</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Table title</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para><emphasis role="bold">Parameters</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Reporting period</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Organisation unit</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Parent organisation unit</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Include regression</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Include cumulative</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Sort order</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Top limit</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para/>
                 </entry>
               </row>
             </tbody>
@@ -613,7 +782,7 @@ Refer to: https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/
     </para>
   </section>
   <section xml:id="pivot_integration">
-    <title>Visualize a pivot table data as a chart or a map</title>
+    <title>Visualize pivot table data as a chart or a map</title>
     <para>When you have made a pivot table you can switch between pivot table, chart and map
       visualization of your data. </para>
     <section>
@@ -687,43 +856,5 @@ Refer to: https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/
         </listitem>
       </orderedlist>
     </section>
-  </section>
-  <section xml:id="pivot_tips">
-    <title>Constraints and tips</title>
-    <para>When selecting and arranging dimensions there are a few
-      <?oxy_comment_start author="Home" timestamp="20160407T165212+0200" comment="Consider moving to beginning of section. If there are any constraints the user must know them before he/she starts working with the app."?>constraints<?oxy_comment_end?>
-      that apply. All of these constraints are
-      <?oxy_comment_start author="Home" timestamp="20160407T165324+0200" comment="Validated when?"?>validated<?oxy_comment_end?>
-      and the pivot table module will provide feedback if any constraint is violated.</para>
-    <itemizedlist>
-      <listitem>
-        <para>At least one dimension must be selected on columns or rows.</para>
-      </listitem>
-      <listitem>
-        <para>At least one period must be included in the pivot table.</para>
-      </listitem>
-      <listitem>
-        <para>Data element group sets and reporting rates cannot appear in the same pivot
-          table.</para>
-      </listitem>
-      <listitem>
-        <para>A table cannot contain more than the maximum number of analytic records which have
-          been specified through the system settings. The maximum number of records could also be
-          constrained by the maximum RAM which is available to your browser. Consider making smaller
-          tables instead of one table which displays all of your data elements and indicators
-          together. </para>
-      </listitem>
-    </itemizedlist>
-    <tip>
-      <?oxy_comment_start author="Home" timestamp="20160407T165406+0200" comment="Looks a lot like the information in the last bullet point above, can it be merged?"?>
-      <para>Pivot tables in DHIS2 are limited to a system set parameter, which controls the number
-        of data values which can be returned. The reason for this is two fold. First, it would be
-        easy to overwhelm the server with a very complicated request for a large pivot table.
-        Second, the amount of data which is able to be rendered in a browser is fairly limited. If
-        you are having problems with very large or complex tables, consider to try and reduce the
-        number of items. It is usually more useful to have smaller, concise tables which are easier
-        to understand and which address a particular analysis. </para>
-      <?oxy_comment_end?>
-    </tip>
   </section>
 </chapter>
