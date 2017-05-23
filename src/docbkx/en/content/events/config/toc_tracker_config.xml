@@ -6,12 +6,21 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook" 
-    xml:id="configure_program">
+    xml:id="configure_programs_in_legacy_app">
     <title>Configure
         <?oxy_comment_start author="cecilia" timestamp="20160829T162813+0200" comment="Maybe title should be:
 Configuring a program?
 or
-Create a program?"?>programs<?oxy_comment_end?></title>
+Create a program?"?>programs<?oxy_comment_end?>
+        in legacy Programs/Attributes app</title>
+    <para>
+        <note>
+            <para>From release 2.27, you create event programs (programs without registration) in
+                the <emphasis role="bold">Maintenance</emphasis> app. However, the old version of
+                this functionality is also available in the legacy <emphasis role="bold">Program /
+                    Attributes</emphasis> app.</para>
+        </note>
+    </para>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="c_tracker_program.xml"
         encoding="UTF-8"/>
     <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tracker_config_workflow.xml" encoding="UTF-8"/>-->
