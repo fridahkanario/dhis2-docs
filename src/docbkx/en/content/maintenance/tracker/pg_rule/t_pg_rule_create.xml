@@ -6,8 +6,8 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="create_event_program">
-    <title>[Work in progress] Create or edit an event program</title>
+    xml:id="create_program_rule">
+    <title>[Work in progress] Create or edit an program rule</title>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
