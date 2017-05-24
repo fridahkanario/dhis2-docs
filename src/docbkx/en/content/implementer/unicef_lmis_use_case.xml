@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <chapter version="5.0"
+         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+          xmlns="http://docbook.org/ns/docbook"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:xl="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xhtml="http://www.w3.org/1999/xhtml"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:mth="http://www.w3.org/1998/Math/MathML"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <title>Unicef lmis use case</title>
+  <para/>
+  <section>
+    <title>Integration concepts</title>
+    <para>DHIS2 is an open platform and its implementers are active contributors to interoperability
+      initiatives, such as openHIE. The DHIS2 application database is designed with flexibility in
+      mind. Data structures such as data elements, organisation units, forms and user roles can be
+      defined completely freely through the application user interface. This makes it possible for
+      the system to be adapted to a multitude of local contexts and use-cases. DHIS2 supports many
+      requirements for routine data capture and analysis emerging in country implementations. It
+      also makes it possible for DHIS2 to serve as a basic management system in domains such as
+        <emphasis role="underline">logistics, laboratory management and finance</emphasis>.</para>
+    <section>
+      <title>Integration</title>
+      <para>Based on its platform approach, DHIS2 is able to receive and host data from different
+        data sources and share it to other systems and reporting mechanisms. An important
+        distinction of integration concepts is the difference between data integration and systems
+        interoperability:</para>
+      <itemizedlist>
+        <listitem>
+          <para>When talking about <emphasis role="bold">integration</emphasis>, we think about the
+            process of making different information systems appear as one, making data available to
+            all relevant users as well as the harmonization of definitions and dimensions so that it
+            is possible to combine the data in useful ways.</para>
+        </listitem>
+        <listitem>
+          <para>A related concept is <emphasis role="bold">interoperability</emphasis>, which is one
+            strategy to achieve integration. We consider DHIS2 interoperable with other software
+            applications because of its capability to exchange data. For example, DHIS2 and OpenMRS
+            are interoperable, because they allow to share data definitions and data with each
+            other. Interoperability depends on standards for data formats, interfaces and codes and
+            terminologies. These would ideally be internationally balloted standards, but in
+            practice may also consist of de facto standards</para>
+          <para>and other more local agreements within a particular context. A de facto standard is
+            something which has wide acceptance and usage but not necessarily formally balloted in a
+            standards development organisation</para>
+          <para/>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </section>
+</chapter>
