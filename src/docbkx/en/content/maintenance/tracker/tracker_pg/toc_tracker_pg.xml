@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="configure_tracker_program_in_Maintenance_app">
+      <title>Configure tracker programs in the
+    <?oxy_comment_start author="cecilia" timestamp="20170524T142847+0200" comment="Add x-ref to correct chapter."?>Maintenance<?oxy_comment_end?>
+    app</title>
+  <para>
+    <note>
+      <para>From release 2.27, you create event programs (programs without registration) in the
+          <emphasis role="bold">Maintenance</emphasis> app. You still create tracker programs
+        (programs with registration)  in the <emphasis role="bold">Program / Attributes</emphasis>
+        app.</para>
+    </note>
+  </para>
+  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="c_tracker_pg.xml" encoding="UTF-8"/> -->
+  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_tracker_pg_create.xml" encoding="UTF-8"/> -->  
+      
+   </section>
