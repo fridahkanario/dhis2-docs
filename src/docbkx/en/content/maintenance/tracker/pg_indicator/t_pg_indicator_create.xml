@@ -7,7 +7,8 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_program_indicator">
-    <title>Create or edit a program indicator</title>
+    <title>Create or edit a program
+        <?oxy_comment_start author="cecilia" timestamp="20170525T115648+0200" comment="Need better explainations on these settings, verify in indicator doc."?>indicator<?oxy_comment_end?></title>
     <para>
         <note>
             <para>A program indicator belongs to exactly one program.</para>
@@ -23,64 +24,20 @@
             <para>Click the add button.</para>
         </listitem>
         <listitem>
-            <para>Select a <emphasis role="bold">Program</emphasis> and enter the program indicator
-                details:</para>
-            <informaltable frame="all">
-                <tgroup cols="2" align="left">
-                    <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-                    <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-                    <thead>
-                        <row>
-                            <entry>
-                                <para>Field</para>
-                            </entry>
-                            <entry>
-                                <para>Description</para>
-                            </entry>
-                        </row>
-                    </thead>
-                    <tbody>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Name</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para>The name of the program indicator.</para>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Short name</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para>The abbreviated name of the program indicator.</para>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Code</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para/>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Description</emphasis></para>
-                            </entry>
-                            <entry/>
-                        </row>
-                        <row>
-                            <entry/>
-                            <entry/>
-                        </row>
-                        <row>
-                            <entry/>
-                            <entry/>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </informaltable>
+            <para>Select a <emphasis role="bold">Program</emphasis> and enter:<itemizedlist>
+                    <listitem>
+                        <para><emphasis role="bold">Name</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Short name</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Code</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Description</emphasis></para>
+                    </listitem>
+                </itemizedlist></para>
         </listitem>
         <listitem>
             <para>Select number of <emphasis role="bold">Decimals in data output</emphasis>.</para>
@@ -103,24 +60,17 @@
                     aggregate data export</emphasis>.</para>
         </listitem>
         <listitem>
+            <?oxy_comment_start author="cecilia" timestamp="20170525T115713+0200" comment="More info needed"?>
             <para>Create the expression.</para>
+            <?oxy_comment_end?>
         </listitem>
         <listitem>
+            <?oxy_comment_start author="cecilia" timestamp="20170525T115721+0200" comment="More info needed."?>
             <para>Create the filter.</para>
+            <?oxy_comment_end?>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
-        </listitem>
-    </orderedlist>
-    <orderedlist>
-        <listitem>
-            <para>Create an <emphasis role="bold"
-                    ><?oxy_comment_start author="cecilia" timestamp="20161004T161801+0200" comment="More info needed."?>Expression<?oxy_comment_end?></emphasis>.</para>
-            <para>In the <emphasis role="bold">Data elements</emphasis> tab, click <emphasis
-                    role="bold">Select program stage</emphasis> to load the data elements which
-                belong to the selected program.</para>
-            <para>Double-click on a data element to display the formula of the selected data element
-                in the <emphasis role="bold">Expression</emphasis> field.</para>
         </listitem>
     </orderedlist>    
 </section>
