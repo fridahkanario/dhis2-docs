@@ -5,8 +5,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="about_program_rules">
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="about_program_rules">
     <title>About program rules</title>
     <note>
         <para>The functions you have access to depend on your
@@ -14,7 +13,7 @@
             role's access p<?oxy_comment_end?>ermissions.</para>
     </note>
     <table frame="all">
-        <title>Program metadata objects in the Maintenance app</title>
+        <title>Program rule metadata objects in the Maintenance app</title>
         <tgroup cols="2">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
@@ -31,7 +30,7 @@
             <tbody>
                 <row>
                     <entry>
-                        <para>Tracked entity</para>
+                        <para>Program rule</para>
                     </entry>
                     <entry>
                         <para>Create, edit, clone, delete, show details and translate</para>
@@ -39,21 +38,832 @@
                 </row>
                 <row>
                     <entry>
-                        <para>Tracked entity attribute</para>
+                        <para>Program rule variable</para>
                     </entry>
                     <entry>
                         <para>Create, edit, clone, share, delete, show details and translate</para>
                     </entry>
                 </row>
-                <row>
-                    <entry>
-                        <para>Relationship type</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, clone, delete, show details and translate</para>
-                    </entry>
-                </row>
             </tbody>
         </tgroup>
     </table>
+    <?oxy_comment_start author="cecilia" timestamp="20161003T210419+0200" comment="Consider adding something like this for every section:
+&quot;This chapter covers how to configure and use program rules.&quot;"?>
+    <section>
+        <?oxy_comment_end?>
+        <title>About program rules</title>
+        <itemizedlist>
+            <listitem>
+                <para>Program rules allows you to create and control dynamic behavior of the user
+                    interface in the <emphasis role="bold">Tracker Capture</emphasis> and <emphasis
+                        role="bold">Event Capture</emphasis> apps.</para>
+            </listitem>
+            <listitem>
+                <para>Program rules consist of:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para>an expression</para>
+                    </listitem>
+                    <listitem>
+                        <para>one or several actions that are triggered in the user interface when
+                            the expression is true</para>
+                    </listitem>
+                </itemizedlist>
+            </listitem>
+            <listitem>
+                <para>An expression is built from operators, user-defined static values and source
+                    fields. The source fields represent attribute and data element values which will
+                    be evaluated as part of the expression.</para>
+            </listitem>
+            <listitem>
+                <para>During data entry, program rules expressions are evaluated each time the user
+                    interface is displayed, and each time a data element is changed. Most types of
+                    actions will take effect immediately when the user enters values in <emphasis
+                        role="bold">Tracker Capture</emphasis> and <emphasis role="bold">Event
+                        Capture</emphasis> apps.</para>
+            </listitem>
+            <listitem>
+                <para>The<?oxy_comment_start author="cecilia" timestamp="20161003T211719+0200" comment="Clarification needed: what does this mean?"?>
+                    behaviors you can configure are skip logic and validation
+                    rules.<?oxy_comment_end?></para>
+            </listitem>
+        </itemizedlist>
+        <para>In the <emphasis role="bold">Programs / Attributes</emphasis> app, you manage the
+            following program rule objects:</para>
+        <table frame="all">
+            <title>Program rule objects in the Programs / Attributes app</title>
+            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                <thead>
+                    <row>
+                        <entry>
+                            <para>Object type</para>
+                        </entry>
+                        <entry>
+                            <para>Available functions</para>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Program rule</para>
+                        </entry>
+                        <entry>
+                            <para>Create, edit, delete, show details and translate</para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
+    <section>
+        <section>
+            <title>Add source
+                <?oxy_comment_start author="cecilia" timestamp="20161005T104203+0200" comment="At next revision: perfrom full editorial review."?>fields<?oxy_comment_end?></title>
+            <para> Source fields represent a uniform way to include data values and attribute values
+                in expressions. The source fields is defined as needed when creating expressions.
+                When creating your first expression, you will typically have to define one or more
+                source fields first, as expressions usually contain at least one data element or
+                attribute value to be meaningful. The source fields is shared between all rules in
+                your program, and by creating several rules, these will share the same library of
+                source fields. </para>
+            <para> To add a source field, click the &quot;+ Add source field&quot; button under the
+                source fields list. This will open the following dialog: </para>
+            <screenshot>
+                <title>Add source field dialog</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="50%"
+                            fileref="resources/images/program_rules/program-rule-source-field.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            <emphasis role="bold"> Source type:</emphasis> The source types is
+                            determining how the source field is populated with a value: <itemizedlist>
+                                <listitem>
+                                    <para>
+                                        <emphasis role="bold"> Data element in current event:
+                                        </emphasis>Source fields with this source type will contain
+                                        the data value from the same event that the user currently
+                                        has open. This is the most commonly used source type,
+                                        especially for skip logic(hide actions) and warning/error
+                                        rules.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>
+                                        <emphasis role="bold"> Data element in the newest event in
+                                            program: </emphasis> This source type is used when a
+                                        source field needs to reflect the newest known value of a
+                                        data element, regardless of what event the user currently
+                                        has open.</para>
+                                    <para> The source type is slightly differently populated in
+                                        tracker capture and event capture. </para>
+                                    <para>Tracker capture: This source field will be populated with
+                                        the newest data value collected for the given data element
+                                        within the enrollment. </para>
+                                    <para>Event capture: This source field will be populated with
+                                        the newest data value found within the 10 newest events in
+                                        the same organisation unit.</para>
+                                    <para>The newest data value is determined with event date.
+                                    </para>
+                                </listitem>
+                                <listitem>
+                                    <para>
+                                        <emphasis role="bold"> Data element newest event program
+                                            stage:</emphasis> This source type works the same way as
+                                            <emphasis role="bold">Data element in the newest event
+                                            in program</emphasis>, except that it only evaluates
+                                        values from one program stage. Can be useful in rules where
+                                        the same data element is used in several program stages, and
+                                        a rule needs to evaluate the newest data value from within
+                                        one specific stage.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>
+                                        <emphasis role="bold"> Data element from previous
+                                            event:</emphasis> This source field will contain the
+                                        value from a specified data element from a previous event.
+                                        Only older events is evaluated, not including the event that
+                                        the user currently has open. This source type is commonly
+                                        used when a data element only should be collected once
+                                        during an enrollment, and should be hidden in subsequent
+                                        events. Another use case is making rules for validating
+                                        input where there is an expected progression from one event
+                                        to the next - a rule can evaluate whether the previous value
+                                        is higher/lower and give a warning if an unexpected value is
+                                        entered.</para>
+                                    <para> The source type is slightly differently populated in
+                                        tracker capture and event capture. </para>
+                                    <para>Tracker capture: This source field will be populated with
+                                        the newest data value collected for the given data element
+                                        within the enrollment - but only evaluating the events that
+                                        comes before the current event date.</para>
+                                    <para>Event capture: This source field will be populated with
+                                        the newest data value collected within the 10 events
+                                        preceding the current event date - not including the current
+                                        event.</para>
+                                    <para>The newest data value is determined with event
+                                        date.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>
+                                        <emphasis role="bold"> Tracked entity attribute:</emphasis>
+                                        Populates the source field with a specified tracked entity
+                                        attribute for the current enrollment. This is the source
+                                        type used when creating rules that should evaluate the data
+                                        values entered during registration. It is also useful when
+                                        creating rules that compares data in events to data entered
+                                        during registration.</para>
+                                    <para> When selecting this option, fields for selecting program
+                                        stage and data element is hidden, and a field for selecting
+                                        tracked entity attribute is displayed instead. </para>
+                                    <para>This source type is only used for tracker capture(programs
+                                        with registration)</para>
+                                </listitem>
+                            </itemizedlist>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <emphasis role="bold"> Source program stage</emphasis>: In case of
+                            retrieving data value from a specific program stage, this field is used
+                            to define what program stage to retrieve data from. </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <emphasis role="bold"> Source data element:</emphasis> Used to select
+                            which data element to retrieve data value for. </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <emphasis role="bold"> Variable name</emphasis>: Specifying the name
+                            that is used for the source field when writing expressions. It is
+                            encouraged to use a name that makes the expressions readable. </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <emphasis role="bold"> Use code for option sets</emphasis>: Only
+                            effective when the data element or tracked entity attribute is connected
+                            to an option set. If left unchecked, the source field will be populated
+                            with the options name. If checked, the source field will be populated
+                            with the code instead.</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Define
+                <?oxy_comment_start author="cecilia" timestamp="20161005T104210+0200" comment="At next revision: perfrom full editorial review."?>expressions<?oxy_comment_end?></title>
+            <para>Each program rule has a single expression that determines whether rules action
+                should be triggered, if the expression evaluates to true. If the expression is true
+                the program rule is in effect and the actions will be executed. If the expression is
+                false, the program rule is no longer in effect and the actions will no longer be
+                applied. The expression length is limited to 255 characters.</para>
+            <para>As a simple example, an expression is defined below using a single user-define
+                static value, source fields(see previous chapter) and/or operators. Expressions can
+                be typed into the edit expression text box, but buttons are available for inserting
+                operators and source fields at the cursors position. To insert source fields, click
+                the source field name within the list at the left.</para>
+            <screenshot>
+                <title>Expression text box</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="50%"
+                            fileref="resources/images/program_rules/program-rule-expression.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+            <para>The following list provides a comprehensive list of operators which can be used to
+                define an expression. </para>
+            <table frame="all">
+                <title><?oxy_comment_start author="cecilia" timestamp="20161003T221629+0200" comment="No OR operator?
+
+Not same operators as for program indicators? Verify. If yes, why?"?>Operators<?oxy_comment_end?></title>
+                <tgroup cols="2">
+                    <colspec colnum="1" colname="c1" colwidth="1*"/>
+                    <colspec colnum="2" colname="c2" colwidth="5.11*"/>
+                    <thead>
+                        <row>
+                            <entry>Operator</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <para>+</para>
+                            </entry>
+                            <entry>
+                                <para>Add numbers together</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>-</para>
+                            </entry>
+                            <entry>
+                                <para>Subtract numbers from each other</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>*</para>
+                            </entry>
+                            <entry>
+                                <para>Multiply two numbers</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>/</para>
+                            </entry>
+                            <entry>
+                                <para>Divide two numbers </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>%</para>
+                            </entry>
+                            <entry>
+                                <para>The modulus of two numbers </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>&amp;&amp;</para>
+                            </entry>
+                            <entry>
+                                <para>Logical AND. True only when the expression on the left and
+                                    right side is true. The left and right side can be yes/no, yes
+                                    only or a subexpression in parenthesis. </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>||</para>
+                            </entry>
+                            <entry>
+                                <para>Logical OR. True when either the expression on the left or the
+                                    expression on the right side is true. The left and right side
+                                    can be yes/no, yes only or a subexpression in parenthesis.
+                                </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>></para>
+                            </entry>
+                            <entry>
+                                <para>Left number greater than right number </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>>=</para>
+                            </entry>
+                            <entry>
+                                <para>Left number greater than or equal to right number</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>&lt;</para>
+                            </entry>
+                            <entry>
+                                <para>Left number less than right number </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>&lt;=</para>
+                            </entry>
+                            <entry>
+                                <para>Left number less than or equal to right number.</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>==</para>
+                            </entry>
+                            <entry>
+                                <para>Left side equal to right side. Supports numbers, text, yes/no
+                                    and yes only.</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>!=</para>
+                            </entry>
+                            <entry>
+                                <para>Left side not equal to right side. Supports numbers, text,
+                                    yes/no and yes only. </para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>!</para>
+                            </entry>
+                            <entry>
+                                <para>Negates the following value. Can be used for yes/no, yes only
+                                    or a sub-expression in parenthesis.</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>()</para>
+                            </entry>
+                            <entry>
+                                <para>Parenthesis is used to group sub-expressions.</para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <para>In addition to the standard mathematical operators, a number of custom functions
+                are also available.</para>
+            <table frame="all">
+                <title>Functions</title>
+                <tgroup cols="3">
+                    <colspec colnum="1" colname="c1" colwidth="1*"/>
+                    <colspec colnum="2" colname="newCol2" colwidth="2*"/>
+                    <colspec colnum="3" colname="c2" colwidth="3.61*"/>
+                    <thead>
+                        <row>
+                            <entry>Function</entry>
+                            <entry>Arguments</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>d2:ceil</entry>
+                            <entry>(number)</entry>
+                            <entry>Rounds the input argument <emphasis role="bold">up</emphasis> to
+                                the nearest whole number. <para> Example:
+                                    <screen>d2:ceil(#{hemoglobinValue})</screen>
+                                </para></entry>
+                        </row>
+                        <row>
+                            <entry>d2:floor</entry>
+                            <entry>(number)</entry>
+                            <entry>Rounds the input argument <emphasis role="bold">down</emphasis>
+                                to the nearest whole number. <para> An example producing the number
+                                    of weeks the woman is pregnant. Notice that the subexpression
+                                    #{gestationalAgeDays}/7 is evaluated before the floor function
+                                    is executed: <screen>d2:floor(#{gestationalAgeDays}/7)</screen>
+                                </para></entry>
+                        </row>
+                        <row>
+                            <entry>d2:round</entry>
+                            <entry>(number)</entry>
+                            <entry>Rounds the input argument to the nearest whole number.</entry>
+                        </row>
+                        <row>
+                            <entry>d2:modulus</entry>
+                            <entry>(number,number)</entry>
+                            <entry>Produces the modulus when dividing the first with the second
+                                argument. <para> An example producing the number of days the woman
+                                    is into her current pregnancy week:
+                                    <screen>d2:modulus(#{gestationalAgeDays},7)</screen>
+                                </para></entry>
+                        </row>
+                        <row>
+                            <entry>d2:zing</entry>
+                            <entry>(number)</entry>
+                            <entry>Evaluates the argument of type number to zero if the value is
+                                negative, otherwise to the value itself.</entry>
+                        </row>
+                        <row>
+                            <entry>d2:oizp</entry>
+                            <entry>(number)</entry>
+                            <entry>Evaluates the argument of type number to one if the value is zero
+                                or positive, otherwise to zero. </entry>
+                        </row>
+                        <row>
+                            <entry>d2:concatenate</entry>
+                            <entry>(object, [,object, object,...])</entry>
+                            <entry>Produces a string concatenated string from the input parameters.
+                                Supports any number of parameters. Will mainly be in use in future
+                                action types, for example to display gestational age with
+                                d2:concatenate(&apos;weeks&apos;,&apos;+&apos;,&apos;gestationalageDays&apos;).
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>d2:daysBetween</entry>
+                            <entry>(date, date)</entry>
+                            <entry>Produces the number of days between the first and second
+                                argument. If the second argument date is before the first argument
+                                the return value will be the negative number of days between the two
+                                dates. The static date format is &apos;yyyy-MM-dd&apos;. <para>
+                                    Example, calculating the gestational age(in days) of a woman,
+                                    based on the last menstrual period and the current event date:
+                                    <screen>d2:daysBetween(#{lastMenstrualDate},V{event_date})</screen>
+                                </para></entry>
+                        </row>
+                        <row>
+                            <entry>d2:weeksBetween</entry>
+                            <entry>(date, date)</entry>
+                            <entry>Produces the number of full weeks between the first and second
+                                argument. If the second argument date is before the first argument
+                                the return value will be the negative number of weeks between the
+                                two dates. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+                        </row>
+                        <row>
+                            <entry>d2:monthsBetween</entry>
+                            <entry>(date, date)</entry>
+                            <entry>Produces the number of full months between the first and second
+                                argument. If the second argument date is before the first argument
+                                the return value will be the negative number of months between the
+                                two dates. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+                        </row>
+                        <row>
+                            <entry>d2:yearsBetween</entry>
+                            <entry>(date, date)</entry>
+                            <entry>Produces the number of years between the first and second
+                                argument. If the second argument date is before the first argument
+                                the return value will be the negative number of years between the
+                                two dates. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+                        </row>
+                        <row>
+                            <entry>d2:addDays</entry>
+                            <entry>(date, number)</entry>
+                            <entry>Produces a date based on the first argument date, adding the
+                                second argument number of days. <para> An example calculating the
+                                    pregnancy due date based on the last menstrual period:
+                                    <screen>d2:addDays(#{lastMenstrualDate},283)</screen>
+                                </para></entry>
+                        </row>
+                        <row>
+                            <entry>d2:count</entry>
+                            <entry>(sourcefield)</entry>
+                            <entry>Counts the number of values that is entered for the source field
+                                in the argument. The source field parameter is the name of one of
+                                the defined source fields in the program - see example <para>
+                                    Example usage where #{previousPregnancyOutcome} is one of the
+                                    source fields in a repeatable program stage &quot;previous
+                                    pregnancy&quot;:
+                                    <screen>d2:count(&apos;previousPregnancyOutcome&apos;)</screen>
+                                </para></entry>
+                        </row>
+                        <row>
+                            <entry>d2:countIfValue</entry>
+                            <entry>(sourcefield,text)</entry>
+                            <entry>Counts the number of matching values that is entered for the
+                                source field in the first argument. Only occurrences that matches
+                                the second argument is counted. The source field parameter is the
+                                name of one of the defined source fields in the program - see
+                                example. <para> Example usage where #{previousPregnancyOutcome} is
+                                    one of the source fields in a repeatable program stage
+                                    &quot;previous pregnancy&quot;. The following function will
+                                    produce the number of previous pregnancies that ended with
+                                    abortion:
+                                    <screen>d2:countIfValue(&apos;previousPregnancyOutcome&apos;,&apos;Abortion&apos;)
+                                    </screen>
+                                </para></entry>
+                        </row>
+                        <row>
+                            <entry>d2:countIfZeroPos</entry>
+                            <entry>(sourcefield)</entry>
+                            <entry>Counts the number of values that is zero or positive entered for
+                                the source field in the argument. The source field parameter is the
+                                name of one of the defined source fields in the program - see
+                                example. <para> Example usage where #{fundalHeightDiscrepancy} is
+                                    one of the source fields in program, and it can be either
+                                    positive or negative. The following function will produce the
+                                    number of positive occurrences:
+                                    <screen>d2:countIfZeroPos(&apos;fundalHeightDiscrepancy&apos;)
+                                    </screen>
+                                </para></entry>
+                        </row>
+                        <row>
+                            <entry>d2:hasValue</entry>
+                            <entry>(sourcefield)</entry>
+                            <entry>Evaluates to true of the argument source field contains a value,
+                                false if no value is entered. <para> Example usage, to find if the
+                                    source field #{currentPregnancyOutcome} is yet filled in:
+                                    <screen>d2:hasValue(&apos;currentPregnancyOutcome&apos;)
+                                    </screen>
+                                </para></entry>
+                        </row>
+                        <row>
+                            <entry>d2:zpvc</entry>
+                            <entry>(object, [,object, object,...])</entry>
+                            <entry>Returns the number of numeric zero and positive values among the
+                                given object arguments. Can be provided with any number of
+                                arguments.</entry>
+                        </row>
+                        <row>
+                            <entry>d2:validatePattern</entry>
+                            <entry>(text, regex-pattern)</entry>
+                            <entry>Evaluates to true if the input text is an exact match with the
+                                supplied regular expression pattern. The regular expression needs to
+                                be escaped.<para> Example expression, triggering actions if a number
+                                    is not on the pattern 9999/99/9:
+                                    <screen>!d2:validatePattern(A{nrc},'\\d{6}\/\\d{2}\/\\d')</screen></para>
+                                <para>Example expression, triggering actions that if the address is
+                                    not consisting of letters or white spaces, then a white space,
+                                    then a number:
+                                    <screen>!d2:validatePattern(A{registrationAddress},'[\\w ]+ \\d+')</screen></para>
+                                <para>Example, triggering actions if a name contains any numbers:
+                                    <screen>!d2:validatePattern(A{name},'[^\\d]*')</screen></para>
+                                <para>Example expression, triggering actions if a mobile number
+                                    contains the illegal number sequence 555:
+                                    <screen>d2:validatePattern(A{mobile} ,'.*555.*')</screen></para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>d2:left</entry>
+                            <entry>(text, num-chars)</entry>
+                            <entry>Evaluates to the left part of a text, num-chars from the first
+                                character. <para> The text can be quoted or evaluated from a
+                                    variable:
+                                    <screen>d2:left(#{variableWithText}, 3)</screen></para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>d2:right</entry>
+                            <entry>(text, num-chars)</entry>
+                            <entry>Evaluates to the right part of a text, num-chars from the last
+                                character. <para> The text can be quoted or evaluated from a
+                                    variable:
+                                    <screen>d2:right(#{variableWithText}, 2)</screen></para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>d2:substring</entry>
+                            <entry>(text, start-char-num, end-char-num)</entry>
+                            <entry>Evaluates to the part of a string specified by the start and end
+                                character number. <para> The text can be quoted or evaluated from a
+                                    variable:
+                                    <screen>d2:right(#{variableWithText}, 2, 4)</screen></para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>d2:split</entry>
+                            <entry>(text, delimiter, element-num)</entry>
+                            <entry>Split the text by delimiter, and keep the nth element(0 is the
+                                    first).<para> The text can be quoted or evaluated from a
+                                    variable, the delimiter must be quoted:
+                                    <screen>d2:split(#{variableWithText}, '-', 1)</screen> Note:
+                                    comma delimiter(,) is not supported.</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>d2:length</entry>
+                            <entry>(text)</entry>
+                            <entry>Find the length of a string. <para> Example:
+                                    <screen>d2:length(#{variableWithText})</screen></para></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <tip>
+                <para>Functions can be nested within each other and with subexpressions to form more
+                    complex conditions. An example that produces the gestational age in weeks, based
+                    on last menstrual date: </para>
+                <screen>d2:floor( d2:daysBetween(#{lastMenstrualDate},V{event_date}) / 7 )</screen>
+            </tip>
+            <para/>
+            <tip>
+                <para>The source type will determine how the d2: function calls will evaluate a
+                    (sourcefield) parameter.</para>
+                <para>Example: where #{hemoglobinCurrent} is set to source type <emphasis
+                        role="bold">Data element current event</emphasis>. The following function
+                    call with evaluate whether hemoglobin is entered in the current event.
+                    <screen>d2:hasValue( 'hemoglobinCurrent' )</screen></para>
+                <para>Example: where #{hemoglobin} is set to source type <emphasis role="bold">Data
+                        element in the newest event in program</emphasis>. The following function
+                    call with evaluate whether there exists a value for the hemoglobin in any event
+                    in the enrollment. <screen>d2:hasValue( 'hemoglobin' )</screen></para>
+                <para>Example: where #{hemoglobinPrevious} is set to source type <emphasis
+                        role="bold">Data element from previous event</emphasis>. The following
+                    function call with evaluate whether there exists a value for the hemoglobin
+                    among the events preceding the current event.
+                    <screen>d2:hasValue( 'hemoglobinPrevious' )</screen></para>
+            </tip>
+        </section>
+        <section>
+            <title>Define
+                <?oxy_comment_start author="cecilia" timestamp="20161005T104219+0200" comment="At next revision: perfrom full editorial review."?>actions<?oxy_comment_end?></title>
+            <para>Each program rule has one or more actions attached. These are the behaviors that
+                is triggered in the user interface when the expression(see previous chapter) is
+                true. Actions will be applied at once if the expression is true, and will be
+                reverted if the expression is no longer true.</para>
+            <para> To add a new action, click the &quot;+ add action&quot; button at the bottom of
+                the program rule page. Once actions has been added, they can be removed again by
+                clicking the - button at the right side of the actions row.</para>
+            <screenshot>
+                <title>Expression text box</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%"
+                            fileref="resources/images/program_rules/program-rule-add-action.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+            <para> There are several types of <emphasis role="bold">actions</emphasis>, and the type
+                is selected individually for each action row.</para>
+            <section>
+                <title> Hide field action</title>
+                <para> A <emphasis role="bold">hide field action</emphasis> is defined by selecting
+                    &quot;Hide field&quot; in the first column of the action row. </para>
+                <screenshot>
+                    <title>Hide field action</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%"
+                                fileref="resources/images/program_rules/program-rule-hide-field-action.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+                <para> The second column is optional, and it allows defining a custom message to the
+                    end user in case the rule hides and blanks out the field after the end user
+                    typed in or selected a value. </para>
+                <para>If a hide field action hides a field that contains a value, the field will
+                    always removed. If no message is defined, a standard message will be displayed
+                    to alert the user</para>
+                <para> The third column specifies which data element that the <emphasis role="bold"
+                        >hide field action</emphasis> should hide. </para>
+            </section>
+            <section>
+                <title> Hide section action</title>
+                <para> A hide field action is defined by selecting &quot;Hide section&quot; in the
+                    first column of the action row. </para>
+                <screenshot>
+                    <title>Expression text box</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%"
+                                fileref="resources/images/program_rules/program-rule-hide-section-action.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+                <para> The second column is optional, and it allows defining a custom message to the
+                    end user in case the rule hides a section that contains a field that again has a
+                    value. </para>
+                <para> If a hide section action hides a section with one or more fields that
+                    contains a value, these fields will always be removed. If no message is defined,
+                    a standard message will be displayed to alert the user. </para>
+                <para> The third column specifies which section that the hide section action should
+                    hide. </para>
+            </section>
+            <section>
+                <title> Show warning action</title>
+                <para> A <emphasis role="bold">show warning action</emphasis> is defined by
+                    selecting &quot;show warning&quot; in the first column of the action row. A show
+                    warning action is used to give the user a warning about the data being entered,
+                    but at the same time allowing the user to save and continue. Warnings can be
+                    used to help the user avoid errors in the data entered, while at the same time
+                    allowing the user to consciously disregard it and save a value that is outside
+                    preset expectations. </para>
+                <screenshot>
+                    <title>Show warning action</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%"
+                                fileref="resources/images/program_rules/program-rule-show-warning-action.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+                <para> The second column is mandatory, and is used to define the message shown to
+                    the user when the expression is true and the action is triggered. </para>
+                <para> The third column specifies which data element or attribute to link the
+                    warning to, and is meant to be a recommendation to the user regarding where the
+                    cause of the warning can be rectified. In case several data elements or
+                    attributes are involved, when defining the rule, you should choose the one that
+                    is most likely that the user would need to consider. </para>
+            </section>
+            <section>
+                <title> Show warning on completion action</title>
+                <para> A <emphasis role="bold">show warning on completing action</emphasis> is
+                    defined by selecting the corresponding option in the first column of the action
+                    row. A show warning on completion action is used to give the user a warning if
+                    trying to complete inconsistent data, but at the same time allowing the user to
+                    continue. The warning is shown in a dialog when completing the form.</para>
+                <screenshot>
+                    <title>Show warning on completion action</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%"
+                                fileref="resources/images/program_rules/program-rule-show-warning-on-completion-action.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+                <para> The second column is mandatory, and is used to define the message shown to
+                    the user when the expression is true and the action is triggered. </para>
+                <para> The third column specifies which data element to link the warning to, and can
+                    be used to tie the error to a specific data element. The default selection in
+                    the list is 'None', and this simply means that no single field is specifically
+                    linked to the error. When 'None' is selected, make sure to write a comprehensive
+                    error message that directs the user to where the error can be fixed. </para>
+            </section>
+            <section>
+                <title> Show error action</title>
+                <para> A <emphasis role="bold">show error action</emphasis> is defined by selecting
+                    &quot;show error&quot; in the first column of the action row. A show error
+                    action is used whenever there are rules which must strictly be adhered to. The
+                    show error action prevents the user from continuing until the error is resolved.
+                    Such a strict validation should only be used whenever it is certain that the
+                    evaluated expression is never true unless the user has made a mistake in data
+                    entry. </para>
+                <screenshot>
+                    <title>Show error action</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%"
+                                fileref="resources/images/program_rules/program-rule-show-error-action.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+                <para> The second column is mandatory, and is used to define the message shown to
+                    the user when the expression is true and the action is triggered. </para>
+                <para> The third column specifies which data element or attribute to link the error
+                    to, and is meant to be a cue for the user regarding where the cause of the error
+                    can be rectified. In case several data elements or attributes is involved,
+                    choose the one that is most likely that the user would need to change. </para>
+            </section>
+            <section>
+                <title> Show error preventing completion action</title>
+                <para> A <emphasis role="bold">show error preventing completion</emphasis> is
+                    defined by selecting the corresponding action in the first column of the action
+                    row. A show error action is used whenever there are cross-consistencies in the
+                    form that must be strictly adhered to. This action prevents the user from
+                    continuing until the error is resolved. Id differs from the regular <emphasis
+                        role="bold"> show error action</emphasis> in that the error is not shown
+                    until the user tries to actually complete the form.</para>
+                <screenshot>
+                    <title>Show error preventing completion action</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%"
+                                fileref="resources/images/program_rules/program-rule-show-error-on-completion-action.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+                <para> The second column is mandatory, and is used to define the message shown to
+                    the user when the expression is true and the action is triggered. </para>
+                <para> The third column specifies which data element to link the error to, and can
+                    be used to tie the error to a specific data element. The default selection in
+                    the list is 'None', and this simply means that no single field is specifically
+                    linked to the error. When 'None' is selected, make sure to write a comprehensive
+                    error message that directs the user to where the error can be fixed.</para>
+            </section>
+        </section>
+    </section>
 </section>

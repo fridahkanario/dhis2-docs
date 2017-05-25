@@ -56,4 +56,242 @@
             </tbody>
         </tgroup>
     </table>
+    <section>
+        <title>About program custom registration forms</title>
+        <para>You can create custom registration form for each available program in system or for
+            normal registration form which is used to register any entity without having program
+            information and this entity can enroll into a certain program after that.</para>
+        <note>
+            <para><?oxy_comment_start author="cecilia" timestamp="20161012T144548+0200" comment="Still valid info?"?>Check<?oxy_comment_end?>
+                    on<emphasis role="italic"> Auto save registration form</emphasis> check box in
+                    <emphasis role="italic">Design tracked entity form </emphasis>to save the custom
+                registration form to being designed automatically.</para>
+        </note>
+    </section>
+    <section>
+        <title>About program stage data entry forms</title>
+        <para>A program stage has three types of data entry
+            <?oxy_comment_start author="cecilia" timestamp="20161012T144622+0200" comment="Still correct info?"?>forms<?oxy_comment_end?>:</para>
+        <orderedlist>
+            <listitem>
+                <para><emphasis role="italic">Custom data entry form</emphasis>: Define a data entry
+                    form as HTML page. Click on the program stage which you would like and select to
+                    define custom data entry form. The system supports to define a custom entry form
+                    with multi stages. So this form can be re-used in other stages of the same
+                    program.</para>
+            </listitem>
+            <listitem>
+                <para><emphasis role="italic">Section data entry form</emphasis>: Group some data
+                    elements which belong to the program stage as sections and display data elements
+                    by each section. Click on the program stage which you would like and select
+                        <emphasis role="italic">Section management</emphasis> link to define section
+                    data entry form.</para>
+            </listitem>
+            <listitem>
+                <para><emphasis role="italic">Default data entry form</emphasis>: List all data
+                    elements which belong to the program stage.</para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>About program notifications</title>
+        <para>You can create program notifications for programs with registration and their program
+            stages. The notifications are sent either via the internal DHIS2 messaging system, via
+            e-mail or via text messages (SMS). You can use program notifications to, for example,
+            send an automatic reminder to a tracked entity 10 days before a scheduled appointment.
+            You use the program’s tracked entity attributes (for example first name) and program
+            parameters (for example enrollment date) to create a notification template.</para>
+        <para>In the <emphasis role="bold">Parameters</emphasis> field, you'll find a list of
+            available tracked entity attributes and the following program parameters:</para>
+        <table frame="all">
+            <title/>
+            <tgroup cols="3">
+                <colspec colname="newCol3" colnum="1" colwidth="1*"/>
+                <colspec colname="c1" colnum="2" colwidth="1.0*"/>
+                <colspec colname="c2" colnum="3" colwidth="1.0*"/>
+                <thead>
+                    <row>
+                        <entry>
+                            <para>Notification type</para>
+                        </entry>
+                        <entry>
+                            <para>Variable name</para>
+                        </entry>
+                        <entry>
+                            <para>Variable code</para>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>
+                            <para>Program</para>
+                        </entry>
+                        <entry>
+                            <para>Current date</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{current_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Days since enrollment date</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{days_since_enrollment_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Enrollment date</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{enrollment_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Incident date</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{incident_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Organisation unit name</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{org_unit_name}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Program name</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{program_name}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para>Program stage</para>
+                        </entry>
+                        <entry>
+                            <para>Current date</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{current_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Days since due date</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{days_since_due_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Days until due date</para>
+                        </entry>
+                        <entry>
+                            <screen>V{days_until_due_date}</screen>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Due date</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{due_date}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Organisation unit name</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{org_unit_name}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Program name</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{program_name}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>
+                            <para/>
+                        </entry>
+                        <entry>
+                            <para>Program stage name</para>
+                        </entry>
+                        <entry>
+                            <para>
+                                <screen>V{program_stage_name}</screen>
+                            </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </section>
 </section>
