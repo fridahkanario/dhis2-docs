@@ -7,198 +7,97 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_program_rule">
-    <title>[Work in progress] Create or edit an program rule</title>
+    <title>Create or edit a program rule</title>
+    <para>
+        <note>
+            <para>A program rule belongs to exactly one program.</para>
+        </note>
+    </para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
-                    role="bold">Program</emphasis> > <emphasis role="bold">Event
-                program</emphasis>.</para>
+                    role="bold">Program</emphasis> > <emphasis role="bold">Program
+                rule</emphasis>.</para>
         </listitem>
         <listitem>
             <para>Click the add button.</para>
         </listitem>
         <listitem>
-            <para>Enter program details, then click next.</para>
-            <informaltable frame="all">
-                <tgroup cols="2" align="left">
-                    <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-                    <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-                    <thead>
-                        <row>
-                            <entry>
-                                <para>Field</para>
-                            </entry>
-                            <entry>
-                                <para>Description</para>
-                            </entry>
-                        </row>
-                    </thead>
-                    <tbody>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Name</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para/>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Short name</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para/>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Description</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para/>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Version</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para/>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Category combination</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para/>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Data approval workflow</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para/>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Completed events expiry
-                                    date</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para/>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para><emphasis role="bold">Expiry days</emphasis></para>
-                            </entry>
-                            <entry>
-                                <para/>
-                            </entry>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </informaltable>
+            <para>Enter the program rule details:</para>
+            <itemizedlist>
+                <listitem>
+                    <para><emphasis role="bold">Program</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Name</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Description</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Priority</emphasis></para>
+                </listitem>
+            </itemizedlist>
+            <para>These fields are not shown to the end user, they are only meant for the program
+                administrator.</para>
         </listitem>
         <listitem>
-            <para>Assign data elements.</para>
+            <para><?oxy_comment_start author="cecilia" timestamp="20170525T122732+0200" comment="Suggest to SME to change UI to &quot;Create&quot; isntaead of &quot;define&quot;."?>Create<?oxy_comment_end?>
+                the program rule expression:</para>
+        </listitem>
+        <listitem>
+            <para>Define the program rule actions:</para>
             <orderedlist>
                 <listitem>
-                    <para>Double click...</para>
+                    <para>Click the add button and select an <emphasis role="bold"
+                        >Action</emphasis>.</para>
                 </listitem>
                 <listitem>
-                    <para>(Optional) For each data element, change the xx?? settings: </para>
-                    <informaltable frame="all">
-                        <tgroup cols="2" align="left">
-                            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-                            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-                            <thead>
-                                <row>
-                                    <entry>
-                                        <para>Setting</para>
-                                    </entry>
-                                    <entry>
-                                        <para>Description</para>
-                                    </entry>
-                                </row>
-                            </thead>
-                            <tbody>
-                                <row>
-                                    <entry>
-                                        <para><emphasis role="bold">Compulsory</emphasis></para>
-                                    </entry>
-                                    <entry>
-                                        <para/>
-                                    </entry>
-                                </row>
-                                <row>
-                                    <entry>
-                                        <para><emphasis role="bold">Allow provided
-                                                elsewhere</emphasis></para>
-                                    </entry>
-                                    <entry>
-                                        <para/>
-                                    </entry>
-                                </row>
-                                <row>
-                                    <entry>
-                                        <para><emphasis role="bold">Display in
-                                            reports</emphasis></para>
-                                    </entry>
-                                    <entry>
-                                        <para/>
-                                    </entry>
-                                </row>
-                                <row>
-                                    <entry>
-                                        <para><emphasis role="bold">Date in future</emphasis></para>
-                                    </entry>
-                                    <entry>
-                                        <para/>
-                                    </entry>
-                                </row>
-                                <row>
-                                    <entry>
-                                        <para><emphasis role="bold">Render option as
-                                                radio</emphasis></para>
-                                    </entry>
-                                    <entry>
-                                        <para/>
-                                    </entry>
-                                </row>
-                            </tbody>
-                        </tgroup>
-                    </informaltable>
+                    <para/>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
+        <listitem>
+            <para>(Optional) Add the source fields you need in your expression.</para>
+            <orderedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">Add source field</emphasis>.</para>
                 </listitem>
                 <listitem>
-                    <para>Click next.</para>
+                    <para>Select <emphasis role="bold">Source type</emphasis> and fill in the
+                        options.</para>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">Add</emphasis>.</para>
                 </listitem>
             </orderedlist>
         </listitem>
         <listitem>
-            <para>Create data entry form(s).</para>
-            <para>Basic, Section and Custom.</para>
+            <para>Create an <emphasis role="bold">Expression</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>Assign organisation units.</para>
-        </listitem>
-        <listitem>
-            <para>Create notifications.</para>
+            <para>Create the actions executed when the expression is true.</para>
             <orderedlist>
                 <listitem>
-                    <para>What?</para>
+                    <para>Click <emphasis role="bold">Add more action</emphasis>.</para>
                 </listitem>
                 <listitem>
-                    <para>When?</para>
+                    <para>Select an action, for example "Hide field".</para>
                 </listitem>
                 <listitem>
-                    <para>Who?</para>
+                    <?oxy_comment_start author="cecilia" timestamp="20161003T213351+0200" comment="Verify this para with SME."?>
+                    <para>(Optional) Enter text that is displayed.</para>
+                    <?oxy_comment_end?>
+                </listitem>
+                <listitem>
+                    <?oxy_comment_start author="cecilia" timestamp="20161003T213426+0200" comment="Verify with SME: What does this mean?"?>
+                    <para>Select a data element or program attribute.</para>
+                    <?oxy_comment_end?>
                 </listitem>
             </orderedlist>
         </listitem>
+        <?oxy_custom_end?>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
         </listitem>

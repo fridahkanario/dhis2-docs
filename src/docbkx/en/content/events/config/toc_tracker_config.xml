@@ -7,18 +7,24 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook" 
     xml:id="configure_programs_in_legacy_app">
-    <title>Configure
-        <?oxy_comment_start author="cecilia" timestamp="20160829T162813+0200" comment="Maybe title should be:
-Configuring a program?
-or
-Create a program?"?>programs<?oxy_comment_end?>
-        in legacy Programs/Attributes app</title>
+    <title>Configure programs in the Programs/Attributes app (legacy app)</title>
     <para>
         <note>
-            <para>From release 2.27, you create event programs (programs without registration) in
-                the <emphasis role="bold">Maintenance</emphasis> app. However, the old version of
-                this functionality is also available in the legacy <emphasis role="bold">Program /
-                    Attributes</emphasis> app.</para>
+            <title>Changes in how you configure programs from version 2.27</title>
+            <itemizedlist>
+                <listitem>
+                    <para>You create program indicators and program rules in the <emphasis
+                            role="bold">Maintenance</emphasis> app. It's no longer possible to
+                        create program indicators and program rules in the legacy <emphasis
+                            role="bold">Program / Attributes</emphasis> app.</para>
+                </listitem>
+                <listitem>
+                    <para>You can create event programs (programs without registration) in the
+                            <emphasis role="bold">Maintenance</emphasis> app. The old version of
+                        this functionality is also available in the legacy <emphasis role="bold"
+                            >Program / Attributes</emphasis> app.</para>
+                </listitem>
+            </itemizedlist>
         </note>
     </para>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="c_tracker_program.xml"
@@ -26,10 +32,13 @@ Create a program?"?>programs<?oxy_comment_end?>
     <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tracker_config_workflow.xml" encoding="UTF-8"/>-->
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_manage.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_stages_manage.xml" encoding="UTF-8"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_indicators_manage.xml" encoding="UTF-8"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_rules_manage.xml" encoding="UTF-8"/>
+    
+    <!-- functionality moved to Mtn app <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_indicators_manage.xml" encoding="UTF-8"/> -->
+    <!-- functionality moved to Mtn app <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_rules_manage.xml" encoding="UTF-8"/> -->
+   
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_notifications_manage.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_pg_customregform_manage.xml" encoding="UTF-8"/>
+    
     <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../maintenance/tracker/toc_mtn_tracker.xml" encoding="UTF-8"/> -->
     <!--<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tracker_config_ex.xml" encoding="UTF-8"/>  -->
 </chapter>

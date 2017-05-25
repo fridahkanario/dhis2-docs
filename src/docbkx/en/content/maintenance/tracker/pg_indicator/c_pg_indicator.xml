@@ -8,13 +8,44 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="about_program_indicators">
     <title>About program indicators</title>
-    <note>
-        <para>The functions you have access to depend on your
-            <?oxy_comment_start author="cecilia" timestamp="20160926T113321+0200" comment="Verify with SME: depends on user role?"?>user
-            role's access p<?oxy_comment_end?>ermissions.</para>
-    </note>
+    <para>Program indicators are expressions based on data elements and attributes of tracked
+        entities which can be used to calculate values based on a formula.</para>
+    <para>Program indicators consist of:</para>
+    <itemizedlist>
+        <listitem>
+            <para>an analytics type</para>
+        </listitem>
+        <listitem>
+            <para>an aggregation type</para>
+        </listitem>
+        <listitem>
+            <para>an expression</para>
+        </listitem>
+        <listitem>
+            <para>a filter</para>
+        </listitem>
+    </itemizedlist>
+    <para>Program indicators are evaluated based on the assigned aggregation type, expression and
+        filter. The order of evaluation is as follows:</para>
+    <orderedlist>
+        <listitem>
+            <para>The <emphasis role="italic">filter</emphasis> will filter the events which become
+                part of the evaluation / aggregation routine.</para>
+        </listitem>
+        <listitem>
+            <para>The <emphasis role="italic">expression</emphasis> will be evaluated per
+                event.</para>
+        </listitem>
+        <listitem>
+            <para>All evaluated expression values will be <emphasis role="italic"
+                    >aggregated</emphasis> according to the aggregation type of the program
+                indicator.</para>
+        </listitem>
+    </orderedlist>
+    <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following program
+        indicator objects:</para>
     <table frame="all">
-        <title>Program metadata objects in the Maintenance app</title>
+        <title>Program indicator objects in the Maintenance app</title>
         <tgroup cols="2">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
@@ -31,29 +62,407 @@
             <tbody>
                 <row>
                     <entry>
-                        <para>Tracked entity</para>
+                        <para>Program indicator</para>
                     </entry>
                     <entry>
-                        <para>Create, edit, clone, delete, show details and translate</para>
-                    </entry>
-                </row>
-                <row>
-                    <entry>
-                        <para>Tracked entity attribute</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                        <para>Create, edit, share, delete, show details and translate</para>
                     </entry>
                 </row>
                 <row>
                     <entry>
-                        <para>Relationship type</para>
+                        <para>Program indicator group</para>
                     </entry>
                     <entry>
-                        <para>Create, edit, clone, delete, show details and translate</para>
+                        <para>Create, edit, delete, show details and translate</para>
                     </entry>
                 </row>
             </tbody>
         </tgroup>
     </table>
+    <section>
+        <title>About analytics types</title>
+        <para>The available analytics types are <emphasis>events</emphasis> and
+                <emphasis>enrollments</emphasis>. The analytics type defines whether the program
+            indicator is calculated based on events or program enrollments. This has an impact on
+            what type of calculations can be made. Events implies a data source where each event
+            exists as an independent row. This is suitable for performing aggregations such as
+            counts and sums. Enrollments implies a data source where all events for a single
+            enrollment is combined on the same row. This allows for calculations which can compare
+            event data from various program stages within a program enrollment.</para>
+    </section>
+    <section>
+        <title>About <?oxy_comment_start author="cecilia" timestamp="20161012T101505+0200" comment="At next revision, review section"?>aggregation<?oxy_comment_end?>
+            <?oxy_comment_start author="cecilia" timestamp="20161003T154705+0200" comment="Same as the other aggregation types used in DHIS2?"?>types<?oxy_comment_end?></title>
+        <para>The aggregation type determines how the program indicator will be aggregated. The
+            following aggregation types are available:</para>
+        <itemizedlist>
+            <listitem>
+                <para>Average</para>
+            </listitem>
+            <listitem>
+                <para>Sum</para>
+            </listitem>
+            <listitem>
+                <para>Count</para>
+            </listitem>
+            <listitem>
+                <para>Standard Deviation</para>
+            </listitem>
+            <listitem>
+                <para>Variance</para>
+            </listitem>
+            <listitem>
+                <para>Min</para>
+            </listitem>
+            <listitem>
+                <para>Max</para>
+            </listitem>
+            <listitem>
+                <para>Custom</para>
+                <para>The "custom" aggregation type allows you to specify the aggregation type
+                    in-line in the expression. All other aggregation types are applied to the entire
+                    expression.</para>
+                <para>Using the "custom" aggregation type might lead to an exception of the order of
+                    evaluation described above where individual parts of the expression can be
+                    evaluated and aggregated, as opposed to the entire expression being evaluated
+                    prior to aggregation.</para>
+                <para>The following aggregation type operators can be used within expressions: sum,
+                    count, stddev, variance, min, max.</para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section>
+        <title>About
+            <?oxy_comment_start author="cecilia" timestamp="20161012T101510+0200" comment="At next revision, review section"?>expressions<?oxy_comment_end?></title>
+        <para>The expression defines how the indicator is being calculated. The expression can
+            contain references to various entities which will be substituted with a related values
+            when the indicator is calculated:<itemizedlist>
+                <listitem>
+                    <para>Data elements: Will be substituted with the value of the data element for
+                        the time period and organisation unit for which the calculation is done.
+                        Refers to both program stage and data element.</para>
+                </listitem>
+                <listitem>
+                    <para>Attributes: Will be substituted with the value of the attribute for the
+                        person / tracked entity for which the calculation is done.</para>
+                </listitem>
+                <listitem>
+                    <para>Variables: Will be substituted with special values linked to the program,
+                        including incident date and date of enrollment for the person, current date
+                        and count of values in the expression for the time period and organisation
+                        unit for which the calculation is done.</para>
+                </listitem>
+                <listitem>
+                    <para>Constants: Will be substituted with the value of the constant.</para>
+                </listitem>
+            </itemizedlist></para>
+        <para>The expression is a mathematical expression that can contain operators which include
+            multiply, divide, plus and minus. For single event programs and tracker programs with
+            analytics type <emphasis role="italic">event</emphasis>, the expression will be
+            evaluated <emphasis role="italic">per event </emphasis>, then aggregated according to
+            its aggregation type. For tracker programs with analytics type <emphasis role="italic"
+                >enrollment</emphasis>, the expression will be evaluated <emphasis role="italic">per
+                enrollment</emphasis>, then aggregated according to its aggregation type.</para>
+        <screenshot>
+            <title>Program indicator list with context menu</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata
+                        fileref="resources/images/program_indicator/program-indicator-expression.png"
+                        format="PNG" align="center" width="60%"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+        <example>
+            <para>An expression that includes both attributes, data elements and constants looks
+                like
+                this:<screen>(A{GPkGfbmArby} + #{mCXR7u4kNBW.NFkjsNiQ9PH}) * C{bCqvfPR02Im}</screen></para>
+        </example>
+        <example>
+            <para>An expression which uses the custom aggregation type and hence can use inline
+                aggregation types looks like
+                this:<screen>(sum(#{mCXR7u4kNBW.K0A4BauXJDl} * #{mCXR7u4kNBW.NFkjsNiQ9PH}) / sum(#{mCXR7u4kNBW.NFkjsNiQ9PH})) * 100</screen></para>
+            <para>Note how the "sum" aggregation operator is used inside the expression
+                itself.</para>
+        </example>
+    </section>
+    <section>
+        <title>About
+            <?oxy_comment_start author="cecilia" timestamp="20161012T101517+0200" comment="At next revision, review section"?>filters<?oxy_comment_end?></title>
+        <para>The filter is applied to events and filters the data source used for the calculation
+            of the indicator. I.e. the filter is applied to the set of events before the indicator
+            expression is being evaluated. The filter must evaluate to either true or false. It
+            filter is applied to each individual event. If the filter evaluates to true then the
+            event is included later in the expression evaluation, if not it is ignored. The filter
+            can, in a similar way as expressions, contain references to data elements, attributes
+            and constants.</para>
+        <para>The indicator filter can in addition use logical operators including the
+            following:</para>
+        <table frame="all">
+            <title>Operators</title>
+            <tgroup cols="2">
+                <colspec colnum="1" colname="c1" colwidth="1*"/>
+                <colspec colnum="2" colname="c2" colwidth="5.11*"/>
+                <thead>
+                    <row>
+                        <entry>Operator</entry>
+                        <entry>Description</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>and</entry>
+                        <entry>Logical AND</entry>
+                    </row>
+                    <row>
+                        <entry>or</entry>
+                        <entry>Logical OR</entry>
+                    </row>
+                    <row>
+                        <entry>==</entry>
+                        <entry>Equal to</entry>
+                    </row>
+                    <row>
+                        <entry>!=</entry>
+                        <entry>Not equal to</entry>
+                    </row>
+                    <row>
+                        <entry>&lt;</entry>
+                        <entry>Less than</entry>
+                    </row>
+                    <row>
+                        <entry>&lt;=</entry>
+                        <entry>Less than or equal to</entry>
+                    </row>
+                    <row>
+                        <entry>&gt;</entry>
+                        <entry>Greater than</entry>
+                    </row>
+                    <row>
+                        <entry>&gt;=</entry>
+                        <entry>Greater than or equal to</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <para>These operators can be used to form logical expressions which ultimately evaluate to
+            either true or false. For example you can assert that multiple data elements must be a
+            specific value, or that specific attributes must have numerical values less or greater
+            than a constant.</para>
+        <screenshot>
+            <title>Program indicator list with context menu</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata
+                        fileref="resources/images/program_indicator/program-indicator-filter.png"
+                        format="PNG" align="center" width="60%"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+        <para>You can switch between data elements, attributes, variables and constants by using the
+            tabs. You can include such items into expressions and filters by double-clicking in the
+            list. The buttons below the expression area can be used to insert operators.</para>
+        <example>
+            <para>A filter that uses both attributes and data elements looks like
+                this:<screen>A{cejWyOfXge6} == &apos;Female&apos; and #{A03MvHHogjR.a3kGcGDCuk6} &lt;= 2</screen></para>
+        </example>
+        <tip>
+            <para>DHIS2 is using the JEXL library for evaluating expressions which supports
+                additional syntax beyond what is covered in this documentation. See the reference at
+                the <link
+                    xl:href="http://commons.apache.org/proper/commons-jexl/reference/syntax.html"
+                    >project home page</link> to learn how you can create more sophisticated
+                expressions</para>
+        </tip>
+    </section>
+    <section>
+        <title>About
+            <?oxy_comment_start author="cecilia" timestamp="20161012T101528+0200" comment="At next revision, review section"?>functions<?oxy_comment_end?></title>
+        <para>The indicator expression and filter support a range of functions. The functions can be
+            applied to data elements and attributes:</para>
+        <table frame="all">
+            <title>Functions</title>
+            <tgroup cols="3">
+                <colspec colnum="1" colname="c1" colwidth="1*"/>
+                <colspec colnum="2" colname="newCol2" colwidth="2*"/>
+                <colspec colnum="3" colname="c2" colwidth="3.61*"/>
+                <thead>
+                    <row>
+                        <entry>Function</entry>
+                        <entry>Arguments</entry>
+                        <entry>Description</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>d2:hasValue</entry>
+                        <entry>(object)</entry>
+                        <entry>Returns true if the data element/attribute has a value. Can be used
+                            in filters to distinguish between the number 0 and no value, and to
+                            distinguish between exlicit "No" and no selection for a Yes/No
+                            field.</entry>
+                    </row>
+                    <row>
+                        <entry>d2:daysBetween</entry>
+                        <entry>(date, date)</entry>
+                        <entry>Produces the number of days between two data elements/attributes of
+                            type date. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+                    </row>
+                    <row>
+                        <entry>d2:weeksBetween</entry>
+                        <entry>(date, date)</entry>
+                        <entry>Produces the number of full weeks between two data
+                            elements/attributes of type date. The static date format is
+                            &apos;yyyy-MM-dd&apos;.</entry>
+                    </row>
+                    <row>
+                        <entry>d2:monthsBetween</entry>
+                        <entry>(date, date)</entry>
+                        <entry>Produces the number of full months between two data
+                            elements/attributes of type date. The static date format is
+                            &apos;yyyy-MM-dd&apos;.</entry>
+                    </row>
+                    <row>
+                        <entry>d2:yearsBetween</entry>
+                        <entry>(date, date)</entry>
+                        <entry>Produces the number of full years between two data
+                            elements/attributes of type date. The static date format is
+                            &apos;yyyy-MM-dd&apos;.</entry>
+                    </row>
+                    <row>
+                        <entry>d2:condition</entry>
+                        <entry>(boolean-expr, true-val, false-val)</entry>
+                        <entry>Evaluates the conditional expression and if true returns the true
+                            value, if false returns the false value. The conditional expression must
+                            be quoted.</entry>
+                    </row>
+                    <row>
+                        <entry>d2:zing</entry>
+                        <entry>(number)</entry>
+                        <entry>Evaluates the data element/attribute of type number to zero if the
+                            value is negative, otherwise to the value itself.</entry>
+                    </row>
+                    <row>
+                        <entry>d2:oizp</entry>
+                        <entry>(number)</entry>
+                        <entry>Evaluates the data element/attribute of type number to one if the
+                            value is zero or positive, otherwise to zero. </entry>
+                    </row>
+                    <row>
+                        <entry>d2:zpvc</entry>
+                        <entry>(object, [,object, object,...])</entry>
+                        <entry>Returns the number of numeric zero and positive values among the
+                            given object arguments. Can be provided any number of arguments.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <example>
+            <para>A filter that uses the &quot;hasValue&quot; function looks like this:
+                this:<screen>d2:hasValue(#{mCXR7u4kNBW.NFkjsNiQ9PH})</screen></para>
+        </example>
+        <example>
+            <para>An expression that uses the &quot;zing&quot; and &quot;oizp&quot; functions looks
+                like
+                this:<screen>d2:zing(A{GPkGfbmArby}) + d2:oizp(#{mCXR7u4kNBW.NFkjsNiQ9PH}))</screen></para>
+        </example>
+        <example>
+            <para>An expression that uses the &quot;daysBetween&quot; function looks like
+                this:<screen>d2:daysBetween(#{mCXR7u4kNBW.k8ja2Aif1Ae},&apos;2015-06-01&apos;)</screen></para>
+        </example>
+        <example>
+            <para>An expression that uses the &quot;condition&quot; function looks like
+                this:<screen>d2:condition(&apos;#{mCXR7u4kNBW.NFkjsNiQ9PH} &gt; 100&apos;,150,50)</screen></para>
+        </example>
+        <example>
+            <para>An expression that uses the &quot;zpvc&quot; function looks like
+                this:<screen>d2:zpvc(A{GPkGfbmArby}),#{mCXR7u4kNBW.NFkjsNiQ9PH}),4,-1)</screen></para>
+        </example>
+    </section>
+    <section>
+        <title>About
+            <?oxy_comment_start author="cecilia" timestamp="20161012T101533+0200" comment="At next revision, review section"?>variables<?oxy_comment_end?></title>
+        <para>The indicator expression and filter support a range of variables:</para>
+        <table frame="all">
+            <title>Variables</title>
+            <tgroup cols="2">
+                <colspec colnum="1" colname="c1" colwidth="1*"/>
+                <colspec colnum="2" colname="c2" colwidth="3.55*"/>
+                <thead>
+                    <row>
+                        <entry>Variable</entry>
+                        <entry>Description</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>event_date</entry>
+                        <entry>The date of when the event took place.</entry>
+                    </row>
+                    <row>
+                        <entry>due_date</entry>
+                        <entry>The date of when an event is due.</entry>
+                    </row>
+                    <row>
+                        <entry>incident_date</entry>
+                        <entry>The date of the incidence of the event.</entry>
+                    </row>
+                    <row>
+                        <entry>enrollment_date</entry>
+                        <entry>The date of when the tracked entity instance was enrolled in the
+                            program.</entry>
+                    </row>
+                    <row>
+                        <entry>current_date</entry>
+                        <entry>The current date.</entry>
+                    </row>
+                    <row>
+                        <entry>value_count</entry>
+                        <entry>The number of non-null values in the expression part of the
+                            event.</entry>
+                    </row>
+                    <row>
+                        <entry>zero_pos_value_count</entry>
+                        <entry>The number of numeric positive values in the expression part of the
+                            event.</entry>
+                    </row>
+                    <row>
+                        <entry>event_count</entry>
+                        <entry>The count of events (useful in combination with filters).</entry>
+                    </row>
+                    <row>
+                        <entry>enrollment_count</entry>
+                        <entry>The count of enrollments (useful in combination with
+                            filters).</entry>
+                    </row>
+                    <row>
+                        <entry>tei_count</entry>
+                        <entry>The count of tracked entity instances (useful in combination with
+                            filters).</entry>
+                    </row>
+                    <row>
+                        <entry>program_stage_name</entry>
+                        <entry>Can be used in filters for including only certain program stages in a
+                            filter for tracker programs. Uses the name of the program stage:
+                            <screen>V{program_stage_name} == 'ANC first visit'</screen></entry>
+                    </row>
+                    <row>
+                        <entry>program_stage_id</entry>
+                        <entry>Can be used in filters for including only certain program stages in a
+                            filter for tracker programs. Uses the unique identifier of the program
+                            stage: <screen>V{program_stage_id} == 'YPSSfbmAtt1'</screen></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <example>
+            <para>An expression that uses the &quot;value count&quot; variable looks like
+                this:<screen>(#{A03MvHHogjR.a3kGcGDCuk6} + #{A03MvHHogjR.wQLfBvPrXqq}) / V{value_count}</screen></para>
+        </example>
+        <example>
+            <para>An expression that uses the "event_date" and "incident_date" variables looks like
+                this:<screen>d2:daysBetween(V{incident_date},V{event_date})</screen>
+            </para>
+        </example>
+    </section>
 </section>
