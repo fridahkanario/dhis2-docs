@@ -35,69 +35,40 @@
                     <para><emphasis role="bold">Description</emphasis></para>
                 </listitem>
                 <listitem>
-                    <para><emphasis role="bold">Priority</emphasis></para>
+                    <para><emphasis role="bold"
+                            ><?oxy_comment_start author="cecilia" timestamp="20170528T180304+0200" comment="What does this setting mean?"?>Priority<?oxy_comment_end?></emphasis></para>
                 </listitem>
             </itemizedlist>
             <para>These fields are not shown to the end user, they are only meant for the program
                 administrator.</para>
         </listitem>
         <listitem>
-            <para><?oxy_comment_start author="cecilia" timestamp="20170525T122732+0200" comment="Suggest to SME to change UI to &quot;Create&quot; isntaead of &quot;define&quot;."?>Create<?oxy_comment_end?>
-                the program rule expression:</para>
+            <para>Click <emphasis role="bold">Enter program rule expression</emphasis> and
+                c<?oxy_comment_start author="cecilia" timestamp="20170525T122732+0200" comment="Suggest to SME to change UI to &quot;Create&quot; isntaead of &quot;define&quot;."?>reate<?oxy_comment_end?>
+                the program rule expression with the help of variables, functions and
+                operators.</para>
         </listitem>
         <listitem>
-            <para>Define the program rule actions:</para>
+            <para>Click <emphasis role="bold">Define program rule actions</emphasis> and create the
+                actions executed when the expression is true.</para>
             <orderedlist>
                 <listitem>
                     <para>Click the add button and select an <emphasis role="bold"
                         >Action</emphasis>.</para>
                 </listitem>
                 <listitem>
-                    <para/>
+                    <para>Enter the required information.</para>
+                    <para>Depending on the action type, you'll have to select different types of
+                        settings and in some cases enter free text or create expressions. </para>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">Save</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>(Optional) Repeat above steps to add more actions.</para>
                 </listitem>
             </orderedlist>
         </listitem>
-        <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-        <listitem>
-            <para>(Optional) Add the source fields you need in your expression.</para>
-            <orderedlist>
-                <listitem>
-                    <para>Click <emphasis role="bold">Add source field</emphasis>.</para>
-                </listitem>
-                <listitem>
-                    <para>Select <emphasis role="bold">Source type</emphasis> and fill in the
-                        options.</para>
-                </listitem>
-                <listitem>
-                    <para>Click <emphasis role="bold">Add</emphasis>.</para>
-                </listitem>
-            </orderedlist>
-        </listitem>
-        <listitem>
-            <para>Create an <emphasis role="bold">Expression</emphasis>.</para>
-        </listitem>
-        <listitem>
-            <para>Create the actions executed when the expression is true.</para>
-            <orderedlist>
-                <listitem>
-                    <para>Click <emphasis role="bold">Add more action</emphasis>.</para>
-                </listitem>
-                <listitem>
-                    <para>Select an action, for example "Hide field".</para>
-                </listitem>
-                <listitem>
-                    <?oxy_comment_start author="cecilia" timestamp="20161003T213351+0200" comment="Verify this para with SME."?>
-                    <para>(Optional) Enter text that is displayed.</para>
-                    <?oxy_comment_end?>
-                </listitem>
-                <listitem>
-                    <?oxy_comment_start author="cecilia" timestamp="20161003T213426+0200" comment="Verify with SME: What does this mean?"?>
-                    <para>Select a data element or program attribute.</para>
-                    <?oxy_comment_end?>
-                </listitem>
-            </orderedlist>
-        </listitem>
-        <?oxy_custom_end?>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
         </listitem>
