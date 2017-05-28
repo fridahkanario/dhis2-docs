@@ -8,99 +8,90 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="about_event_program">
     <title>About event programs</title>
-    <note>
-        <para>The functions you have access to depend on your
-            <?oxy_comment_start author="cecilia" timestamp="20160926T113321+0200" comment="Verify with SME: depends on user role?"?>user
-            role's access p<?oxy_comment_end?>ermissions.</para>
-    </note>
-    <table frame="all">
-        <title>Program metadata objects in the Maintenance app</title>
-        <tgroup cols="2">
-            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-            <thead>
-                <row>
-                    <entry>
-                        <para>Object type</para>
-                    </entry>
-                    <entry>
-                        <para>Available functions</para>
-                    </entry>
-                </row>
-            </thead>
-            <tbody>
-                <row>
-                    <entry>
-                        <para>Tracked entity</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, clone, delete, show details and translate</para>
-                    </entry>
-                </row>
-                <row>
-                    <entry>
-                        <para>Tracked entity attribute</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, clone, share, delete, show details and translate</para>
-                    </entry>
-                </row>
-                <row>
-                    <entry>
-                        <para>Relationship type</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, clone, delete, show details and translate</para>
-                    </entry>
-                </row>
-            </tbody>
-        </tgroup>
-    </table>
-    <section>
-        <title>About program custom registration forms</title>
-        <para>You can create custom registration form for each available program in system or for
-            normal registration form which is used to register any entity without having program
-            information and this entity can enroll into a certain program after that.</para>
+    <para>Single event <emphasis>without</emphasis> registration programs are called event programs.
+        You configure them in the <emphasis role="bold">Maintenance</emphasis> app.</para>
+    <para>
         <note>
-            <para><?oxy_comment_start author="cecilia" timestamp="20161012T144548+0200" comment="Still valid info?"?>Check<?oxy_comment_end?>
-                    on<emphasis role="italic"> Auto save registration form</emphasis> check box in
-                    <emphasis role="italic">Design tracked entity form </emphasis>to save the custom
-                registration form to being designed automatically.</para>
+            <para>The functions you have access to depend on your
+                <?oxy_comment_start author="cecilia" timestamp="20160926T113321+0200" comment="Verify with SME: depends on user role?"?>user
+                role's access p<?oxy_comment_end?>ermissions.</para>
         </note>
+    </para>
+    <section>
+        <title>About data entry forms for event programs</title>
+        <para>Event program can have three types of data entry forms:</para>
+        <table frame="all">
+            <title>Type of data entry forms for event programs</title>
+            <tgroup cols="2" align="left">
+                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                <thead>
+                    <row>
+                        <entry align="left" valign="top">
+                            <para>Form type</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Description</para>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry align="left" valign="top">
+                            <para>Basic</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Lists all data elements which belong to the program. You can
+                                change the order of the data elements.</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry align="left" valign="top">
+                            <para>Section</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>A section groups data elements. You can then arrange the order of
+                                the sections to create the desired layout of the data entry
+                                form.</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry align="left" valign="top">
+                            <para>Custom</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Defines the data entry form as HTML page. </para>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <para>
+            <note>
+                <itemizedlist>
+                    <listitem>
+                        <para>Custom forms takes precedence over section forms if both are
+                            present.</para>
+                    </listitem>
+                    <listitem>
+                        <para>If no custom or section form are defined, the basic form will be
+                            used.</para>
+                    </listitem>
+                    <listitem>
+                        <para>The Android apps only supports section forms.</para>
+                    </listitem>
+                </itemizedlist>
+            </note>
+        </para>
     </section>
     <section>
-        <title>About program stage data entry forms</title>
-        <para>A program stage has three types of data entry
-            <?oxy_comment_start author="cecilia" timestamp="20161012T144622+0200" comment="Still correct info?"?>forms<?oxy_comment_end?>:</para>
-        <orderedlist>
-            <listitem>
-                <para><emphasis role="italic">Custom data entry form</emphasis>: Define a data entry
-                    form as HTML page. Click on the program stage which you would like and select to
-                    define custom data entry form. The system supports to define a custom entry form
-                    with multi stages. So this form can be re-used in other stages of the same
-                    program.</para>
-            </listitem>
-            <listitem>
-                <para><emphasis role="italic">Section data entry form</emphasis>: Group some data
-                    elements which belong to the program stage as sections and display data elements
-                    by each section. Click on the program stage which you would like and select
-                        <emphasis role="italic">Section management</emphasis> link to define section
-                    data entry form.</para>
-            </listitem>
-            <listitem>
-                <para><emphasis role="italic">Default data entry form</emphasis>: List all data
-                    elements which belong to the program stage.</para>
-            </listitem>
-        </orderedlist>
-    </section>
-    <section>
-        <title>About program notifications</title>
-        <para>You can create program notifications for programs with registration and their program
-            stages. The notifications are sent either via the internal DHIS2 messaging system, via
-            e-mail or via text messages (SMS). You can use program notifications to, for example,
-            send an automatic reminder to a tracked entity 10 days before a scheduled appointment.
-            You use the program’s tracked entity attributes (for example first name) and program
-            parameters (for example enrollment date) to create a notification template.</para>
+        <title>About program notifications for event programs</title>
+        <para>You can create program notifications for event programs. The notifications are sent
+            either via the internal DHIS2 messaging system, via e-mail or via text messages (SMS).
+            You can use program notifications to, for example, send an automatic reminder to a
+            tracked entity 10 days before a scheduled appointment. You use the program’s tracked
+            entity attributes (for example first name) and program parameters (for example
+            enrollment date) to create a notification template.</para>
         <para>In the <emphasis role="bold">Parameters</emphasis> field, you'll find a list of
             available tracked entity attributes and the following program parameters:</para>
         <table frame="all">
@@ -111,180 +102,180 @@
                 <colspec colname="c2" colnum="3" colwidth="1.0*"/>
                 <thead>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Notification type</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Variable name</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Variable code</para>
                         </entry>
                     </row>
                 </thead>
                 <tbody>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Program</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Current date</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{current_date}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Days since enrollment date</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{days_since_enrollment_date}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Enrollment date</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{enrollment_date}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Incident date</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{incident_date}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Organisation unit name</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{org_unit_name}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Program name</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{program_name}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Program stage</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Current date</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{current_date}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Days since due date</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{days_since_due_date}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Days until due date</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <screen>V{days_until_due_date}</screen>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Due date</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{due_date}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Organisation unit name</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{org_unit_name}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Program name</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{program_name}</screen>
                             </para>
                         </entry>
                     </row>
                     <row>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para/>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>Program stage name</para>
                         </entry>
-                        <entry>
+                        <entry align="left" valign="top">
                             <para>
                                 <screen>V{program_stage_name}</screen>
                             </para>

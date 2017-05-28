@@ -61,10 +61,8 @@
                             </mediaobject>
                         </screenshot>
                     </para>
-                    <para>Full expression in <emphasis role="bold">Data</emphasis> field:</para>
-                    <para>
-                        <screen>d2:concatenate(d2:weeksBetween(#{lmp}, V{current_date}), '+', d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
-                    </para>
+                    <para>The full expression in the <emphasis role="bold">Data</emphasis>
+                        field:</para>
                     <para>
                         <screen>d2:concatenate(d2:weeksBetween(#{lmp}, V{current_date}), '+', 
 d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
