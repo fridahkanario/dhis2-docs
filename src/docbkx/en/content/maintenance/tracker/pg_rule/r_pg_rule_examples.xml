@@ -6,6 +6,121 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook" xml:id="program_rule_examples">
-    <title>Program rule examples</title>
-    <para/>
+    <title>Reference information: program rule examples</title>
+    <section>
+        <title>Display key/value pair</title>
+        <para>
+            <screenshot>
+                <title>Program rule details</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="../../../../resources/images/maintainence/pg_rule_ex/keyvaluepair_details.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <para>
+            <screenshot>
+                <title>Program rule expression</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="../../../../resources/images/maintainence/pg_rule_ex/keyvaluepair_expression.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <para>
+            <screenshot>
+                <title>Program rule action</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="60%" align="center"
+                            fileref="../../../../resources/images/maintainence/pg_rule_ex/keyvaluepair_action.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <para>Full expression in <emphasis role="bold">Data</emphasis>
+            field:<programlisting>d2:concatenate(d2:weeksBetween(#{lmp}, V{current_date}), '+', d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</programlisting></para>
+        <para>
+            <screenshot>
+                <title>Result of program rule in Tracker Capture or Event Capture apps</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="../../../../resources/images/maintainence/pg_rule_ex/keyvaluepair_result.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+    </section>
+    <section>
+        <title>Show display text in Feedback widget</title>
+        <para>
+            <screenshot>
+                <title>Program rule variable</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="../../../../resources/images/maintainence/pg_rule_ex/displaytext_pgrule_variable.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <para>
+            <screenshot>
+                <title>Program rule details</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="../../../../resources/images/maintainence/pg_rule_ex/displaytext_details.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <para>
+            <screenshot>
+                <title>Program rule expression</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="../../../../resources/images/maintainence/pg_rule_ex/displaytext_expression.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <para>
+            <screenshot>
+                <title>Program rule action</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="60%" align="center"
+                            fileref="../../../../resources/images/maintainence/pg_rule_ex/displaytext_action.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <para>
+            <screenshot>
+                <title>Result of program rule in Tracker Capture or Event Capture apps</title>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="../../../../resources/images/maintainence/pg_rule_ex/displaytext_result.png"
+                            format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+    </section>
 </section>

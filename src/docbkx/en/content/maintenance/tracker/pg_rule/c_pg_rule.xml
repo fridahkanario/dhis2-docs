@@ -866,4 +866,53 @@ Not same operators as for program indicators? Verify. If yes, why?"?>Operators<?
             </section>
         </section>
     </section>
+    <section>
+        <title>Actions (new info from Markus)</title>
+        <para>Actions: </para>
+        <para>Display text:Location: WidgetContent: Static textData: Expression to evaluate and
+            display(Det hadde vært _best_ om det var tydelig at data feltet er en expression, hvor
+            programRuleVariables og funksjoner of operatorer kan fylles inn på samme måte som i steg
+            2)</para>
+        <para>Display key/value pair:Location: WidgetContent: Key labelData: Expression to evaluate
+            and display as value(Det hadde vært _best_ om det var tydelig at data feltet er en
+            expression, hvor programRuleVariables og funksjoner of operatorer kan fylles inn på
+            samme måte som i steg 2)</para>
+        <para>Hide field:Data element: Data element to hideTracked entity attribute: Tracked entity
+            attribute to hideContent: Custom message given to user when field is blanked</para>
+        <para>Hide section:Program stage section: Program stage section to hide</para>
+        <para>Hide program stage:Program stage: Program stage to hide</para>
+        <para>Assign value:Data element: Data element to assign value toContent: Program rule
+            variable to assign value to Data: Expression to evaluate and assign(Det hadde vært
+            _best_ om det var tydelig at data feltet er en expression, hvor programRuleVariables og
+            funksjoner of operatorer kan fylles inn på samme måte som i steg 2)</para>
+        <para>Show warning:Data element: Data element to display warning next toTracked entity
+            attribute: Tracked entity attribute to display warning next toContent: Static warning
+            messageData: Expression to evaluate and display at the end of the message(Det hadde vært
+            _best_ om det var tydelig at data feltet er en expression, hvor programRuleVariables og
+            funksjoner of operatorer kan fylles inn på samme måte som i steg 2)</para>
+        <para>Show warning on completeData element: Data element to display warning next to<emphasis
+                role="bold">Tracked entity attribute: Tracked entity attribute to display warning
+                next to (Denne manglet, jeg har sikkert dokumentert feil i WebAPI docs, men kan du
+                legge den inn?)</emphasis>Content: Static warning messageData: Expression to
+            evaluate and display at the end of the message(Det hadde vært _best_ om det var tydelig
+            at data feltet er en expression, hvor programRuleVariables og funksjoner of operatorer
+            kan fylles inn på samme måte som i steg 2)</para>
+        <para>Show error:Data element: Data element to display error next toTracked entity
+            attribute: Tracked entity attribute to display error next toContent: Static error
+            messageData: Expression to evaluate and display at the end of the message(Det hadde vært
+            _best_ om det var tydelig at data feltet er en expression, hvor programRuleVariables og
+            funksjoner of operatorer kan fylles inn på samme måte som i steg 2)</para>
+        <para>Show error:Data element: Data element to display error next to<emphasis role="bold"
+                >Tracked entity attribute: Tracked entity attribute to display error next to (Denne
+                manglet, jeg har sikkert dokumentert feil i WebAPI docs, men kan du legge den
+                inn?)</emphasis>Content: Static error messageData: Expression to evaluate and
+            display at the end of the message(Det hadde vært _best_ om det var tydelig at data
+            feltet er en expression, hvor programRuleVariables og funksjoner of operatorer kan
+            fylles inn på samme måte som i steg 2)</para>
+        <para>Create event:Foreslår å skjule dette som en option i listen. Det hadde bare vært fint
+            om det gikk an å vise den slik du har konfigurert den dersom noen har postet en slik via
+            APIet og åpner den i UIet - men dette er ikke et must.</para>
+        <para>Make field mandatory:Data element: Data element to make mandatoryTracked entity
+            attribute: Tracked entity attribute to make mandatory</para>
+    </section>
 </section>

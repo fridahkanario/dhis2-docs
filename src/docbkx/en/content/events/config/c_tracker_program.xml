@@ -97,39 +97,11 @@ WIll move into Mtn app for 2.26"?>section<?oxy_comment_end?></para>
                 </row>
                 <row>
                     <entry>
-                        <para>Program
-                            <?oxy_comment_start author="cecilia" timestamp="20161004T162510+0200" comment="Documented" flag="done"?>indicator<?oxy_comment_end?></para>
-                    </entry>
-                    <entry>
-                        <para>An expression based on data elements and attributes of tracked
-                            entities which can be used to calculate values based on a
-                            formula.</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, share, delete, show details and translate</para>
-                    </entry>
-                </row>
-                <row>
-                    <entry>
                         <para>Program indicator
                             <?oxy_comment_start author="cecilia" timestamp="20161004T165334+0200" comment="Documented." flag="done"?>group<?oxy_comment_end?></para>
                     </entry>
                     <entry>
                         <para>A group of program indicators</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, delete, show details and translate</para>
-                    </entry>
-                </row>
-                <row>
-                    <entry>
-                        <para>Program
-                            <?oxy_comment_start author="cecilia" timestamp="20161004T162532+0200" comment="Documented" flag="done"?>rule<?oxy_comment_end?></para>
-                    </entry>
-                    <entry>
-                        <para>Allows you to create and control dynamic behavior of the user
-                            interface in the <emphasis role="bold">Tracker Capture</emphasis> and
-                                <emphasis role="bold">Event Capture</emphasis> apps.</para>
                     </entry>
                     <entry>
                         <para>Create, edit, delete, show details and translate</para>
@@ -207,6 +179,46 @@ WIll move into Mtn app for 2.26"?>section<?oxy_comment_end?></para>
             <tbody>
                 <row>
                     <entry>
+                        <para>Program
+                            <?oxy_comment_start author="cecilia" timestamp="20161004T162510+0200" comment="Documented" flag="done"?>indicator<?oxy_comment_end?></para>
+                    </entry>
+                    <entry>
+                        <para>An expression based on data elements and attributes of tracked
+                            entities which can be used to calculate values based on a
+                            formula.</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Program
+                            <?oxy_comment_start author="cecilia" timestamp="20161004T162532+0200" comment="Documented" flag="done"?>rule<?oxy_comment_end?></para>
+                    </entry>
+                    <entry>
+                        <para>Allows you to create and control dynamic behavior of the user
+                            interface in the <emphasis role="bold">Tracker Capture</emphasis> and
+                                <emphasis role="bold">Event Capture</emphasis> apps.</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Relationship type</para>
+                    </entry>
+                    <entry>
+                        <para>Defines the relationship between tracked entity A and tracked entity
+                            B, for example mother and child.</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
                         <para>Tracked entity</para>
                     </entry>
                     <entry>
@@ -234,23 +246,12 @@ WIll move into Mtn app for 2.26"?>section<?oxy_comment_end?></para>
                         <para>Create, edit, clone, share, delete, show details and translate</para>
                     </entry>
                 </row>
-                <row>
-                    <entry>
-                        <para>Relationship type</para>
-                    </entry>
-                    <entry>
-                        <para>Defines the relationship between tracked entity A and tracked entity
-                            B, for example mother and child.</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, clone, delete, show details and translate</para>
-                    </entry>
-                </row>
             </tbody>
         </tgroup>
     </table>
-    <para>To learn how you create program metadata in the Maintenance app, see <link
+    <para>To learn how you create program metadata in the Maintenance app, see
+            <?oxy_comment_start author="cecilia" timestamp="20170527T142059+0200" comment="Before release update link"?><link
             xmlns:xlink="http://www.w3.org/1999/xlink"
-            xlink:href="https://dhis2.github.io/dhis2-docs/master/en/user/html/manage_program_metadata.html"
-            >Manage program metadata</link></para>
+            xlink:href="https://docs.dhis2.org/master/en/user/html/configure_programs_in_Maintenance_app.html"
+            >Configure programs in the Maintenance app</link><?oxy_comment_end?></para>
 </section>
