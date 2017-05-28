@@ -51,28 +51,28 @@
             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
             <thead>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Object type</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Available functions</para>
                     </entry>
                 </row>
             </thead>
             <tbody>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program indicator</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, share, delete, show details and translate</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program indicator group</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, delete, show details and translate</para>
                     </entry>
                 </row>
@@ -84,11 +84,18 @@
         <para>The available analytics types are <emphasis>events</emphasis> and
                 <emphasis>enrollments</emphasis>. The analytics type defines whether the program
             indicator is calculated based on events or program enrollments. This has an impact on
-            what type of calculations can be made. Events implies a data source where each event
-            exists as an independent row. This is suitable for performing aggregations such as
-            counts and sums. Enrollments implies a data source where all events for a single
-            enrollment is combined on the same row. This allows for calculations which can compare
-            event data from various program stages within a program enrollment.</para>
+            what type of calculations can be made.</para>
+        <itemizedlist>
+            <listitem>
+                <para>Events implies a data source where each event exists as an independent row.
+                    This is suitable for performing aggregations such as counts and sums. </para>
+            </listitem>
+            <listitem>
+                <para>Enrollments implies a data source where all events for a single enrollment is
+                    combined on the same row. This allows for calculations which can compare event
+                    data from various program stages within a program enrollment.</para>
+            </listitem>
+        </itemizedlist>
     </section>
     <section>
         <title>About <?oxy_comment_start author="cecilia" timestamp="20161012T101505+0200" comment="At next revision, review section"?>aggregation<?oxy_comment_end?>
@@ -163,28 +170,22 @@
             its aggregation type. For tracker programs with analytics type <emphasis role="italic"
                 >enrollment</emphasis>, the expression will be evaluated <emphasis role="italic">per
                 enrollment</emphasis>, then aggregated according to its aggregation type.</para>
-        <screenshot>
-            <title>Program indicator list with context menu</title>
-            <mediaobject>
-                <imageobject>
-                    <imagedata
-                        fileref="resources/images/program_indicator/program-indicator-expression.png"
-                        format="PNG" align="center" width="60%"/>
-                </imageobject>
-            </mediaobject>
-        </screenshot>
-        <example>
-            <para>An expression that includes both attributes, data elements and constants looks
-                like
-                this:<screen>(A{GPkGfbmArby} + #{mCXR7u4kNBW.NFkjsNiQ9PH}) * C{bCqvfPR02Im}</screen></para>
-        </example>
-        <example>
-            <para>An expression which uses the custom aggregation type and hence can use inline
-                aggregation types looks like
-                this:<screen>(sum(#{mCXR7u4kNBW.K0A4BauXJDl} * #{mCXR7u4kNBW.NFkjsNiQ9PH}) / sum(#{mCXR7u4kNBW.NFkjsNiQ9PH})) * 100</screen></para>
-            <para>Note how the "sum" aggregation operator is used inside the expression
-                itself.</para>
-        </example>
+        <para>
+            <example>
+                <para>An expression that includes both attributes, data elements and constants looks
+                    like
+                    this:<screen>(A{GPkGfbmArby} + #{mCXR7u4kNBW.NFkjsNiQ9PH}) * C{bCqvfPR02Im}</screen></para>
+            </example>
+        </para>
+        <para>
+            <example>
+                <para>An expression which uses the custom aggregation type and hence can use inline
+                    aggregation types looks like
+                    this:<screen>(sum(#{mCXR7u4kNBW.K0A4BauXJDl} * #{mCXR7u4kNBW.NFkjsNiQ9PH}) / sum(#{mCXR7u4kNBW.NFkjsNiQ9PH})) * 100</screen></para>
+                <para>Note how the "sum" aggregation operator is used inside the expression
+                    itself.</para>
+            </example>
+        </para>
     </section>
     <section>
         <title>About
@@ -205,42 +206,78 @@
                 <colspec colnum="2" colname="c2" colwidth="5.11*"/>
                 <thead>
                     <row>
-                        <entry>Operator</entry>
-                        <entry>Description</entry>
+                        <entry align="left" valign="top">
+                            <para>Operator</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Description</para>
+                        </entry>
                     </row>
                 </thead>
                 <tbody>
                     <row>
-                        <entry>and</entry>
-                        <entry>Logical AND</entry>
+                        <entry align="left" valign="top">
+                            <para>and</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Logical AND</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>or</entry>
-                        <entry>Logical OR</entry>
+                        <entry align="left" valign="top">
+                            <para>or</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Logical OR</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>==</entry>
-                        <entry>Equal to</entry>
+                        <entry align="left" valign="top">
+                            <para>==</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Equal to</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>!=</entry>
-                        <entry>Not equal to</entry>
+                        <entry align="left" valign="top">
+                            <para>!=</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Not equal to</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>&lt;</entry>
-                        <entry>Less than</entry>
+                        <entry align="left" valign="top">
+                            <para>&lt;</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Less than</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>&lt;=</entry>
-                        <entry>Less than or equal to</entry>
+                        <entry align="left" valign="top">
+                            <para>&lt;=</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Less than or equal to</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>&gt;</entry>
-                        <entry>Greater than</entry>
+                        <entry align="left" valign="top">
+                            <para>&gt;</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Greater than</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>&gt;=</entry>
-                        <entry>Greater than or equal to</entry>
+                        <entry align="left" valign="top">
+                            <para>&gt;=</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Greater than or equal to</para>
+                        </entry>
                     </row>
                 </tbody>
             </tgroup>
@@ -249,23 +286,12 @@
             either true or false. For example you can assert that multiple data elements must be a
             specific value, or that specific attributes must have numerical values less or greater
             than a constant.</para>
-        <screenshot>
-            <title>Program indicator list with context menu</title>
-            <mediaobject>
-                <imageobject>
-                    <imagedata
-                        fileref="resources/images/program_indicator/program-indicator-filter.png"
-                        format="PNG" align="center" width="60%"/>
-                </imageobject>
-            </mediaobject>
-        </screenshot>
-        <para>You can switch between data elements, attributes, variables and constants by using the
-            tabs. You can include such items into expressions and filters by double-clicking in the
-            list. The buttons below the expression area can be used to insert operators.</para>
-        <example>
-            <para>A filter that uses both attributes and data elements looks like
-                this:<screen>A{cejWyOfXge6} == &apos;Female&apos; and #{A03MvHHogjR.a3kGcGDCuk6} &lt;= 2</screen></para>
-        </example>
+        <para>
+            <example>
+                <para>A filter that uses both attributes and data elements looks like
+                    this:<screen>A{cejWyOfXge6} == &apos;Female&apos; and #{A03MvHHogjR.a3kGcGDCuk6} &lt;= 2</screen></para>
+            </example>
+        </para>
         <tip>
             <para>DHIS2 is using the JEXL library for evaluating expressions which supports
                 additional syntax beyond what is covered in this documentation. See the reference at
@@ -288,96 +314,168 @@
                 <colspec colnum="3" colname="c2" colwidth="3.61*"/>
                 <thead>
                     <row>
-                        <entry>Function</entry>
-                        <entry>Arguments</entry>
-                        <entry>Description</entry>
+                        <entry align="left" valign="top">
+                            <para>Function</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Arguments</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Description</para>
+                        </entry>
                     </row>
                 </thead>
                 <tbody>
                     <row>
-                        <entry>d2:hasValue</entry>
-                        <entry>(object)</entry>
-                        <entry>Returns true if the data element/attribute has a value. Can be used
-                            in filters to distinguish between the number 0 and no value, and to
-                            distinguish between exlicit "No" and no selection for a Yes/No
-                            field.</entry>
+                        <entry align="left" valign="top">
+                            <para>d2:hasValue</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>(object)</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Returns true if the data element/attribute has a value. Can be
+                                used in filters to distinguish between the number 0 and no value,
+                                and to distinguish between exlicit "No" and no selection for a
+                                Yes/No field.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>d2:daysBetween</entry>
-                        <entry>(date, date)</entry>
-                        <entry>Produces the number of days between two data elements/attributes of
-                            type date. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+                        <entry align="left" valign="top">
+                            <para>d2:daysBetween</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>(date, date)</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Produces the number of days between two data elements/attributes
+                                of type date. The static date format is
+                                &apos;yyyy-MM-dd&apos;.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>d2:weeksBetween</entry>
-                        <entry>(date, date)</entry>
-                        <entry>Produces the number of full weeks between two data
-                            elements/attributes of type date. The static date format is
-                            &apos;yyyy-MM-dd&apos;.</entry>
+                        <entry align="left" valign="top">
+                            <para>d2:weeksBetween</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>(date, date)</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Produces the number of full weeks between two data
+                                elements/attributes of type date. The static date format is
+                                &apos;yyyy-MM-dd&apos;.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>d2:monthsBetween</entry>
-                        <entry>(date, date)</entry>
-                        <entry>Produces the number of full months between two data
-                            elements/attributes of type date. The static date format is
-                            &apos;yyyy-MM-dd&apos;.</entry>
+                        <entry align="left" valign="top">
+                            <para>d2:monthsBetween</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>(date, date)</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Produces the number of full months between two data
+                                elements/attributes of type date. The static date format is
+                                &apos;yyyy-MM-dd&apos;.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>d2:yearsBetween</entry>
-                        <entry>(date, date)</entry>
-                        <entry>Produces the number of full years between two data
-                            elements/attributes of type date. The static date format is
-                            &apos;yyyy-MM-dd&apos;.</entry>
+                        <entry align="left" valign="top">
+                            <para>d2:yearsBetween</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>(date, date)</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Produces the number of full years between two data
+                                elements/attributes of type date. The static date format is
+                                &apos;yyyy-MM-dd&apos;.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>d2:condition</entry>
-                        <entry>(boolean-expr, true-val, false-val)</entry>
-                        <entry>Evaluates the conditional expression and if true returns the true
-                            value, if false returns the false value. The conditional expression must
-                            be quoted.</entry>
+                        <entry align="left" valign="top">
+                            <para>d2:condition</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>(boolean-expr, true-val, false-val)</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Evaluates the conditional expression and if true returns the true
+                                value, if false returns the false value. The conditional expression
+                                must be quoted.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>d2:zing</entry>
-                        <entry>(number)</entry>
-                        <entry>Evaluates the data element/attribute of type number to zero if the
-                            value is negative, otherwise to the value itself.</entry>
+                        <entry align="left" valign="top">
+                            <para>d2:zing</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>(number)</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Evaluates the data element/attribute of type number to zero if the
+                                value is negative, otherwise to the value itself.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>d2:oizp</entry>
-                        <entry>(number)</entry>
-                        <entry>Evaluates the data element/attribute of type number to one if the
-                            value is zero or positive, otherwise to zero. </entry>
+                        <entry align="left" valign="top">
+                            <para>d2:oizp</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>(number)</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Evaluates the data element/attribute of type number to one if the
+                                value is zero or positive, otherwise to zero. </para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>d2:zpvc</entry>
-                        <entry>(object, [,object, object,...])</entry>
-                        <entry>Returns the number of numeric zero and positive values among the
-                            given object arguments. Can be provided any number of arguments.</entry>
+                        <entry align="left" valign="top">
+                            <para>d2:zpvc</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>(object, [,object, object,...])</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Returns the number of numeric zero and positive values among the
+                                given object arguments. Can be provided any number of
+                                arguments.</para>
+                        </entry>
                     </row>
                 </tbody>
             </tgroup>
         </table>
-        <example>
-            <para>A filter that uses the &quot;hasValue&quot; function looks like this:
-                this:<screen>d2:hasValue(#{mCXR7u4kNBW.NFkjsNiQ9PH})</screen></para>
-        </example>
-        <example>
-            <para>An expression that uses the &quot;zing&quot; and &quot;oizp&quot; functions looks
-                like
-                this:<screen>d2:zing(A{GPkGfbmArby}) + d2:oizp(#{mCXR7u4kNBW.NFkjsNiQ9PH}))</screen></para>
-        </example>
-        <example>
-            <para>An expression that uses the &quot;daysBetween&quot; function looks like
-                this:<screen>d2:daysBetween(#{mCXR7u4kNBW.k8ja2Aif1Ae},&apos;2015-06-01&apos;)</screen></para>
-        </example>
-        <example>
-            <para>An expression that uses the &quot;condition&quot; function looks like
-                this:<screen>d2:condition(&apos;#{mCXR7u4kNBW.NFkjsNiQ9PH} &gt; 100&apos;,150,50)</screen></para>
-        </example>
-        <example>
-            <para>An expression that uses the &quot;zpvc&quot; function looks like
-                this:<screen>d2:zpvc(A{GPkGfbmArby}),#{mCXR7u4kNBW.NFkjsNiQ9PH}),4,-1)</screen></para>
-        </example>
+        <para>
+            <example>
+                <para>A filter that uses the &quot;hasValue&quot; function looks like this:
+                    this:<screen>d2:hasValue(#{mCXR7u4kNBW.NFkjsNiQ9PH})</screen></para>
+            </example>
+        </para>
+        <para>
+            <example>
+                <para>An expression that uses the &quot;zing&quot; and &quot;oizp&quot; functions
+                    looks like
+                    this:<screen>d2:zing(A{GPkGfbmArby}) + d2:oizp(#{mCXR7u4kNBW.NFkjsNiQ9PH}))</screen></para>
+            </example>
+        </para>
+        <para>
+            <example>
+                <para>An expression that uses the &quot;daysBetween&quot; function looks like
+                    this:<screen>d2:daysBetween(#{mCXR7u4kNBW.k8ja2Aif1Ae},&apos;2015-06-01&apos;)</screen></para>
+            </example>
+        </para>
+        <para>
+            <example>
+                <para>An expression that uses the &quot;condition&quot; function looks like
+                    this:<screen>d2:condition(&apos;#{mCXR7u4kNBW.NFkjsNiQ9PH} &gt; 100&apos;,150,50)</screen></para>
+            </example>
+        </para>
+        <para>
+            <example>
+                <para>An expression that uses the &quot;zpvc&quot; function looks like
+                    this:<screen>d2:zpvc(A{GPkGfbmArby}),#{mCXR7u4kNBW.NFkjsNiQ9PH}),4,-1)</screen></para>
+            </example>
+        </para>
     </section>
     <section>
         <title>About
@@ -390,79 +488,141 @@
                 <colspec colnum="2" colname="c2" colwidth="3.55*"/>
                 <thead>
                     <row>
-                        <entry>Variable</entry>
-                        <entry>Description</entry>
+                        <entry align="left" valign="top">
+                            <para>Variable</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Description</para>
+                        </entry>
                     </row>
                 </thead>
                 <tbody>
                     <row>
-                        <entry>event_date</entry>
-                        <entry>The date of when the event took place.</entry>
+                        <entry align="left" valign="top">
+                            <para>event_date</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>The date of when the event took place.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>due_date</entry>
-                        <entry>The date of when an event is due.</entry>
+                        <entry align="left" valign="top">
+                            <para>due_date</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>The date of when an event is due.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>incident_date</entry>
-                        <entry>The date of the incidence of the event.</entry>
+                        <entry align="left" valign="top">
+                            <para>incident_date</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>The date of the incidence of the event.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>enrollment_date</entry>
-                        <entry>The date of when the tracked entity instance was enrolled in the
-                            program.</entry>
+                        <entry align="left" valign="top">
+                            <para>enrollment_date</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>The date of when the tracked entity instance was enrolled in the
+                                program.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>current_date</entry>
-                        <entry>The current date.</entry>
+                        <entry align="left" valign="top">
+                            <para>current_date</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>The current date.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>value_count</entry>
-                        <entry>The number of non-null values in the expression part of the
-                            event.</entry>
+                        <entry align="left" valign="top">
+                            <para>value_count</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>The number of non-null values in the expression part of the
+                                event.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>zero_pos_value_count</entry>
-                        <entry>The number of numeric positive values in the expression part of the
-                            event.</entry>
+                        <entry align="left" valign="top">
+                            <para>zero_pos_value_count</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>The number of numeric positive values in the expression part of
+                                the event.</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>event_count</entry>
-                        <entry>The count of events (useful in combination with filters).</entry>
+                        <entry align="left" valign="top">
+                            <para>event_count</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>The count of events (useful in combination with filters).</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>enrollment_count</entry>
-                        <entry>The count of enrollments (useful in combination with
-                            filters).</entry>
+                        <entry align="left" valign="top">
+                            <para>enrollment_count</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>The count of enrollments (useful in combination with
+                                filters).</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>tei_count</entry>
-                        <entry>The count of tracked entity instances (useful in combination with
-                            filters).</entry>
+                        <entry align="left" valign="top">
+                            <para>tei_count</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>The count of tracked entity instances (useful in combination with
+                                filters).</para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>program_stage_name</entry>
-                        <entry>Can be used in filters for including only certain program stages in a
-                            filter for tracker programs. Uses the name of the program stage:
-                            <screen>V{program_stage_name} == 'ANC first visit'</screen></entry>
+                        <entry align="left" valign="top">
+                            <para>program_stage_name</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Can be used in filters for including only certain program stages
+                                in a filter for tracker programs. Uses the name of the program
+                                stage: </para>
+                            <para>
+                                <screen>V{program_stage_name} == 'ANC first visit'</screen>
+                            </para>
+                        </entry>
                     </row>
                     <row>
-                        <entry>program_stage_id</entry>
-                        <entry>Can be used in filters for including only certain program stages in a
-                            filter for tracker programs. Uses the unique identifier of the program
-                            stage: <screen>V{program_stage_id} == 'YPSSfbmAtt1'</screen></entry>
+                        <entry align="left" valign="top">
+                            <para>program_stage_id</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Can be used in filters for including only certain program stages
+                                in a filter for tracker programs. Uses the unique identifier of the
+                                program stage: </para>
+                            <para>
+                                <screen>V{program_stage_id} == 'YPSSfbmAtt1'</screen>
+                            </para>
+                        </entry>
                     </row>
                 </tbody>
             </tgroup>
         </table>
-        <example>
-            <para>An expression that uses the &quot;value count&quot; variable looks like
-                this:<screen>(#{A03MvHHogjR.a3kGcGDCuk6} + #{A03MvHHogjR.wQLfBvPrXqq}) / V{value_count}</screen></para>
-        </example>
-        <example>
-            <para>An expression that uses the "event_date" and "incident_date" variables looks like
-                this:<screen>d2:daysBetween(V{incident_date},V{event_date})</screen>
-            </para>
-        </example>
+        <para>
+            <example>
+                <para>An expression that uses the &quot;value count&quot; variable looks like
+                    this:<screen>(#{A03MvHHogjR.a3kGcGDCuk6} + #{A03MvHHogjR.wQLfBvPrXqq}) / V{value_count}</screen></para>
+            </example>
+        </para>
+        <para>
+            <example>
+                <para>An expression that uses the "event_date" and "incident_date" variables looks
+                    like this:<screen>d2:daysBetween(V{incident_date},V{event_date})</screen>
+                </para>
+            </example>
+        </para>
     </section>
 </section>

@@ -11,8 +11,8 @@
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
-                    role="bold">Program</emphasis> > <emphasis role="bold">Event
-                program</emphasis>.</para>
+                    role="bold">Program</emphasis> > <emphasis role="bold"
+                >Program</emphasis>.</para>
         </listitem>
         <listitem>
             <para>Click the add button.</para>
@@ -25,77 +25,77 @@
                     <colspec colname="c2" colnum="2" colwidth="1.0*"/>
                     <thead>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para>Field</para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para>Description</para>
                             </entry>
                         </row>
                     </thead>
                     <tbody>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Name</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para/>
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Short name</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para/>
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Description</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para/>
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Version</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para/>
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Category combination</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para/>
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Data approval workflow</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para/>
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Completed events expiry
                                     date</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para/>
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Expiry days</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para/>
                             </entry>
                         </row>
@@ -107,65 +107,65 @@
             <para>Assign data elements.</para>
             <orderedlist>
                 <listitem>
-                    <para>Double click...</para>
+                    <para>Double click the data elements to assign them to the event program.</para>
                 </listitem>
                 <listitem>
-                    <para>(Optional) For each data element, change the xx?? settings: </para>
+                    <para>(Optional) For each data element, add additional settings: </para>
                     <informaltable frame="all">
                         <tgroup cols="2" align="left">
                             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
                             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
                             <thead>
                                 <row>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para>Setting</para>
                                     </entry>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para>Description</para>
                                     </entry>
                                 </row>
                             </thead>
                             <tbody>
                                 <row>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para><emphasis role="bold">Compulsory</emphasis></para>
                                     </entry>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para/>
                                     </entry>
                                 </row>
                                 <row>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para><emphasis role="bold">Allow provided
                                                 elsewhere</emphasis></para>
                                     </entry>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para/>
                                     </entry>
                                 </row>
                                 <row>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para><emphasis role="bold">Display in
                                             reports</emphasis></para>
                                     </entry>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para/>
                                     </entry>
                                 </row>
                                 <row>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para><emphasis role="bold">Date in future</emphasis></para>
                                     </entry>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para/>
                                     </entry>
                                 </row>
                                 <row>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para><emphasis role="bold">Render option as
                                                 radio</emphasis></para>
                                     </entry>
-                                    <entry>
+                                    <entry align="left" valign="top">
                                         <para/>
                                     </entry>
                                 </row>
@@ -180,13 +180,25 @@
         </listitem>
         <listitem>
             <para>Create data entry form(s).</para>
-            <para>Basic, Section and Custom.</para>
+            <itemizedlist>
+                <listitem>
+                    <para>Basic: Drag and drop the data elements in the order you want.</para>
+                </listitem>
+                <listitem>
+                    <para>Section: Create section(s) and add data elements. You can drag and drop
+                        the sections to change the order of them.</para>
+                </listitem>
+                <listitem>
+                    <para>Custom: Use the WYSIWYG editor to create a completely customized
+                        form.</para>
+                </listitem>
+            </itemizedlist>
         </listitem>
         <listitem>
             <para>Assign organisation units.</para>
         </listitem>
         <listitem>
-            <para>Create notifications.</para>
+            <para>Create program notification(s).</para>
             <orderedlist>
                 <listitem>
                     <para>What?</para>

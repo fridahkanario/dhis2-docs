@@ -54,21 +54,21 @@
                     <colspec colname="c2" colnum="2" colwidth="1.0*"/>
                     <thead>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para>Source type</para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para>Description</para>
                             </entry>
                         </row>
                     </thead>
                     <tbody>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Data element from the newest event for a
                                         program stage</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para>This source type works the same way as <emphasis role="bold"
                                         >Data element from the newest event in the current
                                         program</emphasis>, except that it only evaluates values
@@ -80,11 +80,11 @@
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Data element from the newest event in
                                         the current program</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para>This source type is used when a program rule variable needs to
                                     reflect the newest known value of a data element, regardless of
                                     what event the user currently has open.</para>
@@ -103,11 +103,11 @@
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Data element in current
                                     event</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para>Program rule variables with this source type will contain the
                                     data value from the same event that the user currently has
                                     open.</para>
@@ -116,11 +116,11 @@
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Data element from previous
                                         event</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para>Program rule variables with this source type will contain the
                                     value from a specified data element from a previous event. Only
                                     older events is evaluated, not including the event that the user
@@ -148,21 +148,21 @@
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Calculated value</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <?oxy_comment_start author="cecilia" timestamp="20170528T170814+0200" comment="Add missing info"?>
                                 <para>TBA</para>
                                 <?oxy_comment_end?>
                             </entry>
                         </row>
                         <row>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para><emphasis role="bold">Tracked entity
                                     attribute</emphasis></para>
                             </entry>
-                            <entry>
+                            <entry align="left" valign="top">
                                 <para>Populates the program rule variable with a specified tracked
                                     entity attribute for the current enrollment.</para>
                                 <para>Use this is the source type to create program rules that

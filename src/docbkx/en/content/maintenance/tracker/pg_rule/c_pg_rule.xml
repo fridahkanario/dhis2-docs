@@ -141,7 +141,7 @@ Create event:Foreslår å skjule dette som en option i listen. Det hadde bare v�
                 <tbody>
                     <row>
                         <entry align="left" valign="top">
-                            <para>Assign value</para>
+                            <para><emphasis role="bold">Assign value</emphasis></para>
                         </entry>
                         <entry align="left" valign="top">
                             <para><emphasis role="bold">Data element to assign value
@@ -157,7 +157,7 @@ Create event:Foreslår å skjule dette som en option i listen. Det hadde bare v�
                     </row>
                     <row>
                         <entry align="left" valign="top">
-                            <para>Display text</para>
+                            <para><emphasis role="bold">Display text</emphasis></para>
                         </entry>
                         <entry align="left" valign="top">
                             <para><emphasis role="bold">Display widget</emphasis></para>
@@ -171,7 +171,7 @@ Create event:Foreslår å skjule dette som en option i listen. Det hadde bare v�
                     </row>
                     <row>
                         <entry align="left" valign="top">
-                            <para>Display key/value pair</para>
+                            <para><emphasis role="bold">Display key/value pair</emphasis></para>
                         </entry>
                         <entry align="left" valign="top">
                             <para><emphasis role="bold">Display widget</emphasis></para>
@@ -308,7 +308,7 @@ Can&apos;t make it work in the UI."?>
                     </row>
                     <row>
                         <entry align="left" valign="top">
-                            <para>Show warning</para>
+                            <para><emphasis role="bold">Show warning</emphasis></para>
                         </entry>
                         <entry align="left" valign="top">
                             <para><emphasis role="bold">Data element to display warning next
@@ -338,7 +338,7 @@ Can&apos;t make it work in the UI."?>
                     </row>
                     <row>
                         <entry align="left" valign="top">
-                            <para>Warning on complete</para>
+                            <para><emphasis role="bold">Warning on complete</emphasis></para>
                         </entry>
                         <entry align="left" valign="top">
                             <para><emphasis role="bold">Data element to display warning next
