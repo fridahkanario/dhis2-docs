@@ -179,6 +179,17 @@ WIll move into Mtn app for 2.26"?>section<?oxy_comment_end?></para>
             <tbody>
                 <row>
                     <entry>
+                        <para>Event program</para>
+                    </entry>
+                    <entry>
+                        <para>A single event without registration program</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
                         <para>Program
                             <?oxy_comment_start author="cecilia" timestamp="20161004T162510+0200" comment="Documented" flag="done"?>indicator<?oxy_comment_end?></para>
                     </entry>

@@ -62,12 +62,18 @@
                         </screenshot>
                     </para>
                     <para>Full expression in <emphasis role="bold">Data</emphasis> field:</para>
-                    <screen>d2:concatenate(d2:weeksBetween(#{lmp}, V{current_date}), '+', d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
+                    <para>
+                        <screen>d2:concatenate(d2:weeksBetween(#{lmp}, V{current_date}), '+', d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
+                    </para>
+                    <para>
+                        <screen>d2:concatenate(d2:weeksBetween(#{lmp}, V{current_date}), '+', 
+d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
+                    </para>
                 </listitem>
             </orderedlist>
             <para>
                 <screenshot>
-                    <title>Result of program rule in Tracker Capture or Event Capture apps</title>
+                    <title>Result of program rule in Tracker Capture or Event Capture apps:</title>
                     <mediaobject>
                         <imageobject>
                             <imagedata width="80%" align="center"
@@ -82,6 +88,11 @@
     <para>
         <example>
             <title>Show display text in Feedback widget</title>
+            <para>This
+                <?oxy_comment_start author="cecilia" timestamp="20170528T102916+0200" comment="No variable?"?>example<?oxy_comment_end?>
+                shows how to configure a program rule to display text in the Feedback widget in the
+                    <emphasis role="bold">Tracker Capture</emphasis>
+                <?oxy_comment_start author="cecilia" timestamp="20170528T102830+0200" comment="Also Event Capture?"?>app<?oxy_comment_end?>.</para>
             <orderedlist>
                 <listitem>
                     <para>
@@ -142,7 +153,7 @@
             </orderedlist>
             <para>
                 <screenshot>
-                    <title>Result of program rule in Tracker Capture or Event Capture apps</title>
+                    <title>Result of program rule in Tracker Capture or Event Capture apps:</title>
                     <mediaobject>
                         <imageobject>
                             <imagedata width="80%" align="center"
@@ -227,7 +238,7 @@
             <para>
                 <screenshot>
                     <title>Medicine allergies recorded in first program stage in the Tracker Capture
-                        app</title>
+                        app:</title>
                     <mediaobject>
                         <imageobject>
                             <imagedata width="80%" align="center"
@@ -239,7 +250,7 @@
             </para>
             <para>
                 <screenshot>
-                    <title>Result of program rule in the Tracker Capture app</title>
+                    <title>Result of program rule in the Tracker Capture app:</title>
                     <mediaobject>
                         <imageobject>
                             <imagedata width="80%" align="center"
@@ -301,7 +312,7 @@
             </orderedlist>
             <para>
                 <screenshot>
-                    <title>Result of program rule in Tracker Capture or Event Capture apps</title>
+                    <title>Result of program rule in Tracker Capture or Event Capture apps:</title>
                     <mediaobject>
                         <imageobject>
                             <imagedata width="80%" align="center"
