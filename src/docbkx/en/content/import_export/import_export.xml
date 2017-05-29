@@ -11,7 +11,8 @@
          xmlns:mth="http://www.w3.org/1998/Math/MathML"
          xmlns:db="http://docbook.org/ns/docbook"
          xml:id="import_export">
-  <title>Import and export data and metadata</title>
+  <title>Import and export data and
+    <?oxy_comment_start author="cecilia" timestamp="20170529T135109+0200" comment="This section needs a complete restructure and editorial review."?>metadata<?oxy_comment_end?></title>
   <para>In a primary health system, the HMIS typically involves a distributed application, where the
     same application is running in different geographical locations (PHCs,CHCs, hospitals,
     districts, and state). Most of these physical locations do not have Internet connectivity, and
@@ -331,19 +332,64 @@
     </section>
     <section>
       <title>Event data export</title>
-      <para>Event (or tracker) data can be exported by accessing the &quot;Event data export&quot; function by choosing &quot;Services-&gt;Import-export-&gt;Event data export&quot; from the main menu. Choose the organisation unit of interest, along with the Programs and Program stages and start and end dates. The &quot;Inclusion&quot; option has three options.</para>
-      <itemizedlist>
+      <para>You can export event or tracker data in <emphasis role="bold">XML</emphasis>, <emphasis
+          role="bold">JSON</emphasis> or <emphasis role="bold">CSV</emphasis> formats.</para>
+      <orderedlist>
         <listitem>
-          <para>Selected organisation unit: Export event data only for the selected organisation unit</para>
+          <para>Open the <emphasis role="bold">Import-Export</emphasis> app.</para>
         </listitem>
         <listitem>
-          <para>Include children of organisation unit: Export event data for the children of the organisation unit as well as the selected organisation unit itself.</para>
+          <para>Click <emphasis role="bold">Event Export</emphasis>.</para>
         </listitem>
         <listitem>
-          <para>Include descendants of organisation unit:  Export event data for the descendants  of the organisation unit as well as the selected organisation unit itself.</para>
+          <para>Select an organisation unit.</para>
         </listitem>
-      </itemizedlist>
-      <para>Event data can be exported either as XML or JSON, and either compressed or uncompressed in a ZIP file. Once you have set all options, press <guibutton>&quot;Export&quot;</guibutton> . The export file will now by downloaded to your local computer. </para>
+        <listitem>
+          <para>Select a programs and a program stage (if applicable).</para>
+        </listitem>
+        <listitem>
+          <para>Select the <emphasis role="bold">ID scheme</emphasis> to use for export: <emphasis
+              role="bold">UID</emphasis> (default) or <emphasis role="bold">CODE</emphasis>.</para>
+          <para> If you select <emphasis role="bold">CODE</emphasis> but the object's attribute does
+            not have code, it will not be included in the return payload</para>
+        </listitem>
+        <listitem>
+          <para>Select <emphasis role="bold">Start date</emphasis> and <emphasis role="bold">End
+              date</emphasis>.</para>
+        </listitem>
+        <listitem>
+          <para>Select the <emphasis role="bold">Inclusion</emphasis>:</para>
+          <itemizedlist>
+            <listitem>
+              <para><emphasis role="bold">Selected organisation unit</emphasis>: Export event data
+                only for the selected organisation unit</para>
+            </listitem>
+            <listitem>
+              <para><emphasis role="bold">Include children of organisation unit</emphasis>: Export
+                event data for the children of the organisation unit as well as the selected
+                organisation unit itself.</para>
+            </listitem>
+            <listitem>
+              <para><emphasis role="bold">Include descendants of organisation unit</emphasis>:
+                Export event data for the descendants of the organisation unit as well as the
+                selected organisation unit itself.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+        <listitem>
+          <para>Select a format: <emphasis role="bold">XML</emphasis>, <emphasis role="bold"
+              >JSON</emphasis> or <emphasis role="bold">CSV</emphasis>.</para>
+        </listitem>
+        <listitem>
+          <para>Select <emphasis role="bold">Compression</emphasis>: <emphasis role="bold"
+              >Zip</emphasis>, <emphasis role="bold">Gzip</emphasis> or <emphasis role="bold"
+              >Uncompressed</emphasis>.</para>
+        </listitem>
+        <listitem>
+          <para>Click <emphasis role="bold">Export</emphasis>. The export file is downloaded to your
+            local computer.</para>
+        </listitem>
+      </orderedlist>
     </section>
     <section>
       <title>Export data to other systems</title>
