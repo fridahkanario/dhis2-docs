@@ -7,11 +7,11 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="reference_information_program_indicator">
-    <title>Reference information: Data element and attribute value types</title>
-    <para>The table below shows how to write expressions and filters the different data element and
-        attribute value types:</para>
+    <title>Reference information: Expression and filter examples per value type</title>
+    <para>The table below shows examples of how to write expressions and filters for different data
+        element and attribute value types:</para>
     <table>
-        <title>Examples per value type</title>
+        <title>Expression and filter examples per value type</title>
         <tgroup cols="2">
             <colspec colnum="1" colname="c1" colwidth="250"/>
             <colspec colnum="2" colname="c2" colwidth="*"/>
@@ -24,28 +24,12 @@
             <tbody>
                 <row>
                     <entry align="left" valign="top">
-                        <para>
-                            <itemizedlist>
-                                <listitem>
-                                    <para>Integer</para>
-                                </listitem>
-                                <listitem>
-                                    <para>Negative integer</para>
-                                </listitem>
-                                <listitem>
-                                    <para>Positive or zero integer</para>
-                                </listitem>
-                                <listitem>
-                                    <para>Positive integer</para>
-                                </listitem>
-                                <listitem>
-                                    <para> Number</para>
-                                </listitem>
-                                <listitem>
-                                    <para> Percentage</para>
-                                </listitem>
-                            </itemizedlist>
-                        </para>
+                        <para>Integer</para>
+                        <para>Negative integer</para>
+                        <para>Positive or zero integer</para>
+                        <para>Positive integer</para>
+                        <para>Number</para>
+                        <para>Percentage</para>
                     </entry>
                     <entry align="left" valign="top">
                         <para>Numeric fields, can be used for aggregation as an expression, or in
@@ -57,16 +41,8 @@
                 </row>
                 <row>
                     <entry align="left" valign="top">
-                        <para>
-                            <itemizedlist>
-                                <listitem>
-                                    <para>Yes/No</para>
-                                </listitem>
-                                <listitem>
-                                    <para>Yes only</para>
-                                </listitem>
-                            </itemizedlist>
-                        </para>
+                        <para>Yes/No</para>
+                        <para>Yes only</para>
                     </entry>
                     <entry align="left" valign="top">
                         <para>Boolean fields. Yes is translated to numeric 1, No to numeric 0. Can
@@ -78,22 +54,10 @@
                 </row>
                 <row>
                     <entry align="left" valign="top">
-                        <para>
-                            <itemizedlist>
-                                <listitem>
-                                    <para>Text</para>
-                                </listitem>
-                                <listitem>
-                                    <para>Long text</para>
-                                </listitem>
-                                <listitem>
-                                    <para>Phone number</para>
-                                </listitem>
-                                <listitem>
-                                    <para>Email</para>
-                                </listitem>
-                            </itemizedlist>
-                        </para>
+                        <para>Text</para>
+                        <para>Long text</para>
+                        <para>Phone number</para>
+                        <para>Email</para>
                     </entry>
                     <entry align="left" valign="top">
                         <para>Text fields. Can be checked for equality in filters: </para>
@@ -104,16 +68,8 @@
                 </row>
                 <row>
                     <entry align="left" valign="top">
-                        <para>
-                            <itemizedlist>
-                                <listitem>
-                                    <para>Date</para>
-                                </listitem>
-                                <listitem>
-                                    <para>Age</para>
-                                </listitem>
-                            </itemizedlist>
-                        </para>
+                        <para>Date</para>
+                        <para>Age</para>
                     </entry>
                     <entry align="left" valign="top">
                         <para>Date fields. Most useful when combined with a d2:daysBetween function,
@@ -130,16 +86,8 @@
                 </row>
                 <row>
                     <entry align="left" valign="top">
-                        <para>
-                            <itemizedlist>
-                                <listitem>
-                                    <para>Date</para>
-                                </listitem>
-                                <listitem>
-                                    <para>Age</para>
-                                </listitem>
-                            </itemizedlist>
-                        </para>
+                        <para>Date</para>
+                        <para>Age</para>
                     </entry>
                     <entry align="left" valign="top">
                         <para>Date fields. Most useful when combined with a d2:daysBetween function,

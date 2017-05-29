@@ -63,11 +63,29 @@
             <?oxy_comment_start author="cecilia" timestamp="20170525T115713+0200" comment="More info needed"?>
             <para>Create the expression.</para>
             <?oxy_comment_end?>
+            <orderedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">Edit expression</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Create the expression based on mathematical operators and the attributes,
+                        variables and constants listed to the right.</para>
+                </listitem>
+            </orderedlist>
         </listitem>
         <listitem>
             <?oxy_comment_start author="cecilia" timestamp="20170525T115721+0200" comment="More info needed."?>
             <para>Create the filter.</para>
             <?oxy_comment_end?>
+            <orderedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">Edit filter</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Create the expression based on mathematical operators and the attributes,
+                        variables and constants listed to the right.</para>
+                </listitem>
+            </orderedlist>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
