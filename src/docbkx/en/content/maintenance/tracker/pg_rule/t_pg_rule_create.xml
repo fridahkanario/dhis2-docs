@@ -37,6 +37,36 @@
                 <listitem>
                     <para><emphasis role="bold"
                             ><?oxy_comment_start author="cecilia" timestamp="20170528T180304+0200" comment="What does this setting mean?"?>Priority<?oxy_comment_end?></emphasis></para>
+                    <para>
+                        <example>
+                            <para>Let's say you have 16 program rules in your program. You configure
+                                the program rules with the following priority settings:</para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>Priority 1 for program rule A</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Priority 2 for program rules B - K</para>
+                                </listitem>
+                                <listitem>
+                                    <para>No priority for program rules L - P</para>
+                                </listitem>
+                            </itemizedlist>
+                        </example>
+                    </para>
+                    <para>Result: the system runs the program rules in the following order:</para>
+                    <orderedlist>
+                        <listitem>
+                            <para>Program rule A</para>
+                        </listitem>
+                        <listitem>
+                            <para>Program rules B - K (you can't know or configure in which order
+                                the system runs these program rules)</para>
+                        </listitem>
+                        <listitem>
+                            <para>Program rules L - P.</para>
+                        </listitem>
+                    </orderedlist>
                 </listitem>
             </itemizedlist>
             <para>These fields are not shown to the end user, they are only meant for the program
@@ -93,7 +123,22 @@ Create event:Foreslår å skjule dette som en option i listen. Det hadde bare v�
                                                 assign</emphasis></para>
                                     </entry>
                                     <entry align="left" valign="top">
-                                        <para>TBA</para>
+                                        <para>Used to help the user calculate and fill out fields in
+                                            the data entry form. The idea is that the user shouldn’t
+                                            have to fill in values that the system can calculate,
+                                            for example BMI.</para>
+                                        <para>When a field is assigned a value, the user sees the
+                                            value but the user can't edit it.</para>
+                                        <para>Example from Immunization stock card i Zambia: The
+                                            data element for vaccine stock outgoing balance is
+                                            calculated based on the data element for incoming stock
+                                            balance minus the data elements for consumption and
+                                            wastage.</para>
+                                        <para>Advanced use: configure an 'assign value' to do a part
+                                            of a calculation and then assign the result of the
+                                            calculation to a program rule variable. This is the
+                                            purpose with the "Calculated value" program rule
+                                            variable.</para>
                                     </entry>
                                 </row>
                                 <row>
@@ -107,7 +152,10 @@ Create event:Foreslår å skjule dette som en option i listen. Det hadde bare v�
                                                 display after static text</emphasis></para>
                                     </entry>
                                     <entry align="left" valign="top">
-                                        <para>TBA</para>
+                                        <para>Used to display information that is not an error or a
+                                            warning, for example feedback to the user. You can also
+                                            use this action to display important information, for
+                                            example the patient's allergies, to the user.</para>
                                     </entry>
                                 </row>
                                 <row>
@@ -122,7 +170,12 @@ Create event:Foreslår å skjule dette som en option i listen. Det hadde bare v�
                                                 display as value</emphasis></para>
                                     </entry>
                                     <entry align="left" valign="top">
-                                        <para>TBA</para>
+                                        <para>Used to display information that is not an error or a
+                                            warning.</para>
+                                        <para>Example: calculate number of weeks and days in a
+                                            pregnancy and display it in the format the clinician is
+                                            used to see it in. The calculation is based on previous
+                                            recorded data.</para>
                                     </entry>
                                 </row>
                                 <row>
