@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="program_rules_operators_functions">
+    <title>Reference information: operators and functions to use in program rule expression </title>
+    <para>
+        <tip>
+            <para>You can nest functions within each other and with subexpressions to form more
+                complex conditions. An example that produces the gestational age in weeks, based on
+                last menstrual date:</para>
+            <screen>d2:floor( d2:daysBetween(#{lastMenstrualDate},V{event_date}) / 7 )</screen>
+        </tip>
+    </para>
+    <para>
+        <tip>
+            <para>The source type will determine how the d2: function calls will evaluate a
+                (sourcefield) parameter.</para>
+            <para>Example: where #{hemoglobinCurrent} is set to source type <emphasis role="bold"
+                    >Data element in current event</emphasis>. The following function call with
+                evaluate whether hemoglobin is entered in the current event.
+                <screen>d2:hasValue( 'hemoglobinCurrent' )</screen></para>
+            <para>Example: where #{hemoglobin} is set to source type <emphasis role="bold">Data
+                    element from the newest event in the current program</emphasis>. The following
+                function call with evaluate whether there exists a value for the hemoglobin in any
+                event in the enrollment. <screen>d2:hasValue( 'hemoglobin' )</screen></para>
+            <para>Example: where #{hemoglobinPrevious} is set to source type <emphasis role="bold"
+                    >Data element from previous event</emphasis> . The following function call with
+                evaluate whether there exists a value for the hemoglobin among the events preceding
+                the current event. <screen>d2:hasValue( 'hemoglobinPrevious' )</screen></para>
+        </tip>
+    </para>
+    <table frame="all">
+        <title>Possible
+            o<?oxy_comment_start author="cecilia" timestamp="20161003T221629+0200" comment="No OR operator?
+
+Not same operators as for program indicators? Verify. If yes, why?"?>perators<?oxy_comment_end?>
+            to use in a program rule expression</title>
+        <tgroup cols="2">
+            <colspec colnum="1" colname="c1" colwidth="1*"/>
+            <colspec colnum="2" colname="c2" colwidth="5.11*"/>
+            <thead>
+                <row>
+                    <entry align="left" valign="top">Operator</entry>
+                    <entry align="left" valign="top">Description</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>+</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Add numbers together</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>-</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Subtract numbers from each other</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>*</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Multiply two numbers</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>/</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Divide two numbers </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>%</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>The modulus of two numbers </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>&amp;&amp;</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Logical AND. True only when the expression on the left and right side
+                            is true. The left and right side can be yes/no, yes only or a
+                            subexpression in parenthesis. </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>||</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Logical OR. True when either the expression on the left or the
+                            expression on the right side is true. The left and right side can be
+                            yes/no, yes only or a subexpression in parenthesis. </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>></para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Left number greater than right number </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>>=</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Left number greater than or equal to right number</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>&lt;</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Left number less than right number </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>&lt;=</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Left number less than or equal to right number.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>==</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Left side equal to right side. Supports numbers, text, yes/no and yes
+                            only.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>!=</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Left side not equal to right side. Supports numbers, text, yes/no and
+                            yes only. </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>!</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Negates the following value. Can be used for yes/no, yes only or a
+                            sub-expression in parenthesis.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>()</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Parenthesis is used to group sub-expressions.</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+    <table frame="all">
+        <title>Custom functions to use in a program rule expression</title>
+        <tgroup cols="3">
+            <colspec colnum="1" colname="c1" colwidth="1*"/>
+            <colspec colnum="2" colname="newCol2" colwidth="2*"/>
+            <colspec colnum="3" colname="c2" colwidth="3.61*"/>
+            <thead>
+                <row>
+                    <entry align="left" valign="top">Function</entry>
+                    <entry align="left" valign="top">Arguments</entry>
+                    <entry align="left" valign="top">Description</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry align="left" valign="top">d2:ceil</entry>
+                    <entry align="left" valign="top">(number)</entry>
+                    <entry align="left" valign="top">Rounds the input argument <emphasis role="bold"
+                            >up</emphasis> to the nearest whole number. <para> Example:
+                            <screen>d2:ceil(#{hemoglobinValue})</screen>
+                        </para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:floor</entry>
+                    <entry align="left" valign="top">(number)</entry>
+                    <entry align="left" valign="top">Rounds the input argument <emphasis role="bold"
+                            >down</emphasis> to the nearest whole number. <para> An example
+                            producing the number of weeks the woman is pregnant. Notice that the
+                            subexpression #{gestationalAgeDays}/7 is evaluated before the floor
+                            function is executed: <screen>d2:floor(#{gestationalAgeDays}/7)</screen>
+                        </para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:round</entry>
+                    <entry align="left" valign="top">(number)</entry>
+                    <entry align="left" valign="top">Rounds the input argument to the nearest whole
+                        number.</entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:modulus</entry>
+                    <entry align="left" valign="top">(number,number)</entry>
+                    <entry align="left" valign="top">Produces the modulus when dividing the first
+                        with the second argument. <para> An example producing the number of days the
+                            woman is into her current pregnancy week:
+                            <screen>d2:modulus(#{gestationalAgeDays},7)</screen>
+                        </para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:zing</entry>
+                    <entry align="left" valign="top">(number)</entry>
+                    <entry align="left" valign="top">Evaluates the argument of type number to zero
+                        if the value is negative, otherwise to the value itself.</entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:oizp</entry>
+                    <entry align="left" valign="top">(number)</entry>
+                    <entry align="left" valign="top">Evaluates the argument of type number to one if
+                        the value is zero or positive, otherwise to zero. </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:concatenate</entry>
+                    <entry align="left" valign="top">(object, [,object, object,...])</entry>
+                    <entry align="left" valign="top">Produces a string concatenated string from the
+                        input parameters. Supports any number of parameters. Will mainly be in use
+                        in future action types, for example to display gestational age with
+                        d2:concatenate(&apos;weeks&apos;,&apos;+&apos;,&apos;gestationalageDays&apos;).
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:daysBetween</entry>
+                    <entry align="left" valign="top">(date, date)</entry>
+                    <entry align="left" valign="top">Produces the number of days between the first
+                        and second argument. If the second argument date is before the first
+                        argument the return value will be the negative number of days between the
+                        two dates. The static date format is &apos;yyyy-MM-dd&apos;. <para> Example,
+                            calculating the gestational age(in days) of a woman, based on the last
+                            menstrual period and the current event date:
+                            <screen>d2:daysBetween(#{lastMenstrualDate},V{event_date})</screen>
+                        </para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:weeksBetween</entry>
+                    <entry align="left" valign="top">(date, date)</entry>
+                    <entry align="left" valign="top">Produces the number of full weeks between the
+                        first and second argument. If the second argument date is before the first
+                        argument the return value will be the negative number of weeks between the
+                        two dates. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:monthsBetween</entry>
+                    <entry align="left" valign="top">(date, date)</entry>
+                    <entry align="left" valign="top">Produces the number of full months between the
+                        first and second argument. If the second argument date is before the first
+                        argument the return value will be the negative number of months between the
+                        two dates. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:yearsBetween</entry>
+                    <entry align="left" valign="top">(date, date)</entry>
+                    <entry align="left" valign="top">Produces the number of years between the first
+                        and second argument. If the second argument date is before the first
+                        argument the return value will be the negative number of years between the
+                        two dates. The static date format is &apos;yyyy-MM-dd&apos;.</entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:addDays</entry>
+                    <entry align="left" valign="top">(date, number)</entry>
+                    <entry align="left" valign="top">Produces a date based on the first argument
+                        date, adding the second argument number of days. <para> An example
+                            calculating the pregnancy due date based on the last menstrual period:
+                            <screen>d2:addDays(#{lastMenstrualDate},283)</screen>
+                        </para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:count</entry>
+                    <entry align="left" valign="top">(sourcefield)</entry>
+                    <entry align="left" valign="top">Counts the number of values that is entered for
+                        the source field in the argument. The source field parameter is the name of
+                        one of the defined source fields in the program - see example <para> Example
+                            usage where #{previousPregnancyOutcome} is one of the source fields in a
+                            repeatable program stage &quot;previous pregnancy&quot;:
+                            <screen>d2:count(&apos;previousPregnancyOutcome&apos;)</screen>
+                        </para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:countIfValue</entry>
+                    <entry align="left" valign="top">(sourcefield,text)</entry>
+                    <entry align="left" valign="top">Counts the number of matching values that is
+                        entered for the source field in the first argument. Only occurrences that
+                        matches the second argument is counted. The source field parameter is the
+                        name of one of the defined source fields in the program - see example.
+                            <para> Example usage where #{previousPregnancyOutcome} is one of the
+                            source fields in a repeatable program stage &quot;previous
+                            pregnancy&quot;. The following function will produce the number of
+                            previous pregnancies that ended with abortion:
+                            <screen>d2:countIfValue(&apos;previousPregnancyOutcome&apos;,&apos;Abortion&apos;)
+                                    </screen>
+                        </para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:countIfZeroPos</entry>
+                    <entry align="left" valign="top">(sourcefield)</entry>
+                    <entry align="left" valign="top">Counts the number of values that is zero or
+                        positive entered for the source field in the argument. The source field
+                        parameter is the name of one of the defined source fields in the program -
+                        see example. <para> Example usage where #{fundalHeightDiscrepancy} is one of
+                            the source fields in program, and it can be either positive or negative.
+                            The following function will produce the number of positive occurrences:
+                            <screen>d2:countIfZeroPos(&apos;fundalHeightDiscrepancy&apos;)
+                                    </screen>
+                        </para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:hasValue</entry>
+                    <entry align="left" valign="top">(sourcefield)</entry>
+                    <entry align="left" valign="top">Evaluates to true of the argument source field
+                        contains a value, false if no value is entered. <para> Example usage, to
+                            find if the source field #{currentPregnancyOutcome} is yet filled in:
+                            <screen>d2:hasValue(&apos;currentPregnancyOutcome&apos;)
+                                    </screen>
+                        </para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:zpvc</entry>
+                    <entry align="left" valign="top">(object, [,object, object,...])</entry>
+                    <entry align="left" valign="top">Returns the number of numeric zero and positive
+                        values among the given object arguments. Can be provided with any number of
+                        arguments.</entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:validatePattern</entry>
+                    <entry align="left" valign="top">(text, regex-pattern)</entry>
+                    <entry align="left" valign="top">Evaluates to true if the input text is an exact
+                        match with the supplied regular expression pattern. The regular expression
+                        needs to be escaped.<para> Example expression, triggering actions if a
+                            number is not on the pattern 9999/99/9:
+                            <screen>!d2:validatePattern(A{nrc},'\\d{6}\/\\d{2}\/\\d')</screen></para>
+                        <para>Example expression, triggering actions that if the address is not
+                            consisting of letters or white spaces, then a white space, then a
+                            number:
+                            <screen>!d2:validatePattern(A{registrationAddress},'[\\w ]+ \\d+')</screen></para>
+                        <para>Example, triggering actions if a name contains any numbers:
+                            <screen>!d2:validatePattern(A{name},'[^\\d]*')</screen></para>
+                        <para>Example expression, triggering actions if a mobile number contains the
+                            illegal number sequence 555:
+                            <screen>d2:validatePattern(A{mobile} ,'.*555.*')</screen></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:left</entry>
+                    <entry align="left" valign="top">(text, num-chars)</entry>
+                    <entry align="left" valign="top">Evaluates to the left part of a text, num-chars
+                        from the first character. <para> The text can be quoted or evaluated from a
+                            variable: <screen>d2:left(#{variableWithText}, 3)</screen></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:right</entry>
+                    <entry align="left" valign="top">(text, num-chars)</entry>
+                    <entry align="left" valign="top">Evaluates to the right part of a text,
+                        num-chars from the last character. <para> The text can be quoted or
+                            evaluated from a variable:
+                            <screen>d2:right(#{variableWithText}, 2)</screen></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:substring</entry>
+                    <entry align="left" valign="top">(text, start-char-num, end-char-num)</entry>
+                    <entry align="left" valign="top">Evaluates to the part of a string specified by
+                        the start and end character number. <para> The text can be quoted or
+                            evaluated from a variable:
+                            <screen>d2:right(#{variableWithText}, 2, 4)</screen></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:split</entry>
+                    <entry align="left" valign="top">(text, delimiter, element-num)</entry>
+                    <entry align="left" valign="top">Split the text by delimiter, and keep the nth
+                        element(0 is the first).<para> The text can be quoted or evaluated from a
+                            variable, the delimiter must be quoted:
+                            <screen>d2:split(#{variableWithText}, '-', 1)</screen> Note: comma
+                            delimiter(,) is not supported.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:length</entry>
+                    <entry align="left" valign="top">(text)</entry>
+                    <entry align="left" valign="top">Find the length of a string. <para> Example:
+                            <screen>d2:length(#{variableWithText})</screen></para></entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+</section>

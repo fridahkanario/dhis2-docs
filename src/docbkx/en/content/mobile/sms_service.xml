@@ -86,21 +86,21 @@
           <row>
             <entry>User Name</entry>         
             <entry>Required</entry>
-            <entry>Required</entry>
+            <entry>Optional (if token is used)</entry>
             <entry>Required</entry>
             <entry>Used for API authentication</entry>
           </row>
           <row>
             <entry>Password</entry>         
             <entry>Required</entry>
-            <entry>Required</entry>
+            <entry>Optional (if token is used)</entry>
             <entry>Required</entry>
             <entry>Used for API authentication</entry>
           </row>
           <row>
             <entry>Auth-Token</entry>         
             <entry>N/A</entry>
-            <entry>Required</entry>
+            <entry>Optional (if password is used)</entry>
             <entry>N/A</entry>
             <entry>Used for API authentication</entry>
           </row>

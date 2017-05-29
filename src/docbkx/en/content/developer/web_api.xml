@@ -13846,4 +13846,111 @@ interval=WEEK" -u admin:district</screen>
   -d &quot;https://dhis2.org/metadata-repo/221/trainingland-org-units/metadata.json&quot;
   -H &quot;Content-Type:text/plain&quot; -u admin:district -v</screen></para>
   </section>
+  <section>
+    <title>MinMax DataElement</title>
+    <para>MinMaxDataElement allows user to set minimum and maximum value range for a data element.
+      It is unique by the combination of source, dataElement and optionCombo.</para>
+    <para>
+      <table frame="all">
+        <title>MinMaxDataElement data structure</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Item</entry>
+              <entry>Description</entry>
+              <entry>Data type</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>source</entry>
+              <entry>Id of Organisation unit</entry>
+              <entry>String</entry>
+            </row>
+            <row>
+              <entry>dataElement</entry>
+              <entry>Id of Data element</entry>
+              <entry>String</entry>
+            </row>
+            <row>
+              <entry>optionCombo</entry>
+              <entry>Id of Data element category option</entry>
+              <entry>String</entry>
+            </row>
+            <row>
+              <entry>min</entry>
+              <entry>Minimum value</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>max</entry>
+              <entry>Maximum value</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>generated</entry>
+              <entry>Indicate whether this object is generated using "Generate min-max" function in
+                DataEntry app</entry>
+              <entry>Boolean</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </para>
+    <para>To retrieve list of all MinMaxDataElement use the below uri</para>
+    <para>
+      <screen>GET api/minMaxDataElements.json</screen>
+    </para>
+    <para><emphasis role="bold">Use filter paremeter</emphasis></para>
+    <para><screen>GET api/minMaxDataElements.json?filter=dataElement.id:eq:UOlfIjgN8X6</screen></para>
+    <para><screen>GET api/minMaxDataElements.json?filter=dataElement.id:in:[UOlfIjgN8X6,xc8gmAKfO95]</screen></para>
+    <para>Currently, filter paramter for minMaxDataElement only supports two operators: eq,
+      in.</para>
+    <para><emphasis role="bold">Use fields paremeter</emphasis></para>
+    <para><screen>GET api/minMaxDataElements.json?fields=:all,dataElement[id,name]</screen></para>
+    <section>
+      <title>Add/Update MinMaxDataElement</title>
+      <para>To add new MinMaxDataElement, use POST request with a json file with below format</para>
+      <para><screen>POST api/minMaxDataElements.json</screen></para>
+      <para><screen>{
+  "min": 1,
+  "generated": false,
+  "max": 100,
+  "dataElement": { 
+    "id": "UOlfIjgN8X6" 
+   },
+  "source": { 
+    "id": "DiszpKrYNg8" 
+  },
+  "optionCombo": {
+    "id": "psbwp3CQEhs" 
+  }
+}</screen></para>
+      <para>If the combination of dataElement, source and optionCombo existed, the min-max value
+        will be updated.</para>
+      <para/>
+    </section>
+    <section>
+      <title>Delete MinMaxDataElement</title>
+      <para>To delete a MinMaxDataElement record, send a request with DELETE method and a json file with same format as above</para>
+      <para><screen>DELETE api/minMaxDataElements.json</screen></para>
+      <para><screen>{
+  "min": 1,
+  "generated": false,
+  "max": 100,
+  "dataElement": { 
+    "id": "UOlfIjgN8X6" 
+   },
+  "source": { 
+    "id": "DiszpKrYNg8" 
+  },
+  "optionCombo": {
+    "id": "psbwp3CQEhs" 
+  }
+}</screen></para>
+    </section>
+  </section>
 </chapter>
