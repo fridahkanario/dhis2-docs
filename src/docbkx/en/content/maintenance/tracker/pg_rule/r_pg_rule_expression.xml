@@ -7,6 +7,32 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook" xml:id="program_rules_operators_functions">
     <title>Reference information: operators and functions to use in program rule expression </title>
+    <para>
+        <tip>
+            <para>You can nest functions within each other and with subexpressions to form more
+                complex conditions. An example that produces the gestational age in weeks, based on
+                last menstrual date:</para>
+            <screen>d2:floor( d2:daysBetween(#{lastMenstrualDate},V{event_date}) / 7 )</screen>
+        </tip>
+    </para>
+    <para>
+        <tip>
+            <para>The source type will determine how the d2: function calls will evaluate a
+                (sourcefield) parameter.</para>
+            <para>Example: where #{hemoglobinCurrent} is set to source type <emphasis role="bold"
+                    >Data element in current event</emphasis>. The following function call with
+                evaluate whether hemoglobin is entered in the current event.
+                <screen>d2:hasValue( 'hemoglobinCurrent' )</screen></para>
+            <para>Example: where #{hemoglobin} is set to source type <emphasis role="bold">Data
+                    element from the newest event in the current program</emphasis>. The following
+                function call with evaluate whether there exists a value for the hemoglobin in any
+                event in the enrollment. <screen>d2:hasValue( 'hemoglobin' )</screen></para>
+            <para>Example: where #{hemoglobinPrevious} is set to source type <emphasis role="bold"
+                    >Data element from previous event</emphasis> . The following function call with
+                evaluate whether there exists a value for the hemoglobin among the events preceding
+                the current event. <screen>d2:hasValue( 'hemoglobinPrevious' )</screen></para>
+        </tip>
+    </para>
     <table frame="all">
         <title>Possible
             o<?oxy_comment_start author="cecilia" timestamp="20161003T221629+0200" comment="No OR operator?

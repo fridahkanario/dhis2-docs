@@ -23,7 +23,8 @@
             <para>Click the add button.</para>
         </listitem>
         <listitem>
-            <para>Enter the program rule details:</para>
+            <para>Enter the program rule details. These fields are not shown to the end user, they
+                are only meant for the program administrator.</para>
             <itemizedlist>
                 <listitem>
                     <para><emphasis role="bold">Program</emphasis></para>
@@ -52,25 +53,24 @@
                                     <para>No priority for program rules L - P</para>
                                 </listitem>
                             </itemizedlist>
+                            <para>Result: the system runs the program rules in the following
+                                order:</para>
+                            <orderedlist>
+                                <listitem>
+                                    <para>Program rule A</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Program rules B - K (you can't find out or configure in
+                                        which order the system runs these program rules)</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Program rules L - P.</para>
+                                </listitem>
+                            </orderedlist>
                         </example>
                     </para>
-                    <para>Result: the system runs the program rules in the following order:</para>
-                    <orderedlist>
-                        <listitem>
-                            <para>Program rule A</para>
-                        </listitem>
-                        <listitem>
-                            <para>Program rules B - K (you can't know or configure in which order
-                                the system runs these program rules)</para>
-                        </listitem>
-                        <listitem>
-                            <para>Program rules L - P.</para>
-                        </listitem>
-                    </orderedlist>
                 </listitem>
             </itemizedlist>
-            <para>These fields are not shown to the end user, they are only meant for the program
-                administrator.</para>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Enter program rule expression</emphasis> and
@@ -86,30 +86,34 @@
                     <para>Click the add button, select an <emphasis role="bold">Action</emphasis>
                         and enter the required information.</para>
                     <para>Depending on the action type, you'll have to perform different types of
-                        settings. For some action types, you must enter free text or create
+                        settings. For some action types, you must also enter free text or create
                         expressions.</para>
-                    <table frame="all">
-                        <title>Program rule
-                            <?oxy_comment_start author="cecilia" timestamp="20170528T201346+0200" comment="In email from Markus:
-Create event:Foreslår å skjule dette som en option i listen. Det hadde bare vært fint om det gikk an å vise den slik du har konfigurert den dersom noen har postet en slik via APIet og åpner den i UIet - men dette er ikke et must."?>actions<?oxy_comment_end?></title>
+                    <informaltable frame="all">
                         <tgroup cols="3" align="left">
                             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-                            <colspec colname="newCol3" colnum="2" colwidth="1*"/>
-                            <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+                            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                            <colspec colname="newCol3" colnum="3" colwidth="1*"/>
                             <thead>
                                 <row>
-                                    <entry align="left" valign="top">
-                                        <para>Action type</para>
+                                    <entry>
+                                        <para>Action
+                                            <?oxy_comment_start author="cecilia" timestamp="20170529T113358+0200" comment="In email from Markus:
+Create event:Foreslår å skjule dette som en option i listen. Det hadde bare vært fint om det gikk an å vise den slik du har konfigurert den dersom noen har postet en slik via APIet og åpner den i UIet - men dette er ikke et must."?>type<?oxy_comment_end?></para>
                                     </entry>
-                                    <entry align="left" valign="top">
+                                    <entry>
                                         <para>Required settings</para>
                                     </entry>
-                                    <entry align="left" valign="top">
+                                    <entry>
                                         <para>Description</para>
                                     </entry>
                                 </row>
                             </thead>
                             <tbody>
+                                <row>
+                                    <entry/>
+                                    <entry/>
+                                    <entry/>
+                                </row>
                                 <row>
                                     <entry align="left" valign="top">
                                         <para><emphasis role="bold">Assign value</emphasis></para>
@@ -380,7 +384,7 @@ Can&apos;t make it work in the UI."?>
                                 </row>
                             </tbody>
                         </tgroup>
-                    </table>
+                    </informaltable>
                 </listitem>
                 <listitem>
                     <para>Click <emphasis role="bold">Save</emphasis>.</para>
