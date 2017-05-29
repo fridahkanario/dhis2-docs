@@ -9,28 +9,111 @@
     <title>About program rules</title>
     <para>Program rules allows you to create and control dynamic behavior of the user interface in
         the <emphasis role="bold">Tracker Capture</emphasis> and <emphasis role="bold">Event
-            Capture</emphasis> apps. Program rules consist of:</para>
-    <itemizedlist>
-        <listitem>
-            <para>An expression</para>
-            <para>You build the expression with operators, user-defined static values and program
-                rule variables. The program rule variables represent attribute and data element
-                values which will be evaluated as part of the expression.</para>
-        </listitem>
-        <listitem>
-            <para>One or several actions that are triggered in the user interface when the
-                expression is true.</para>
-        </listitem>
-    </itemizedlist>
-    <para>During data entry, program rules expressions are evaluated each time the user interface is
-        displayed, and each time a data element is changed. Most types of actions will take effect
-        immediately when the user enters values in <emphasis role="bold">Tracker Capture</emphasis>
-        and <emphasis role="bold">Event Capture</emphasis> apps.</para>
+            Capture</emphasis> apps. During data entry, the program rules expressions are evaluated
+        each time the user interface is displayed, and each time a data element is changed. Most
+        types of actions will take effect immediately when the user enters values in the <emphasis
+            role="bold">Tracker Capture</emphasis> and <emphasis role="bold">Event
+            Capture</emphasis> apps.</para>
+    <table frame="all">
+        <title>Program rule components</title>
+        <tgroup cols="2" align="left">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>Program rule component</para>
+                    </entry>
+                    <entry>
+                        <para>Description</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Program rule action</para>
+                    </entry>
+                    <entry>
+                        <para>Each program rule contains one or multiple actions. These are the
+                            behaviors that are triggered in the user interface when the expression
+                            is true. Actions will be applied at once if the expression is true, and
+                            will be reverted if the expression is no longer true. There are several
+                            types of actions and you can have several actions in one program
+                            rule.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Program rule expression</para>
+                    </entry>
+                    <entry>
+                        <para>Each program rule has a single expression that determines whether the
+                            program rule actions should be triggered, if the expression evaluates to
+                            true. If the expression is true the program rule is in effect and the
+                            actions will be executed. If the expression is false, the program rule
+                            is no longer in effect and the actions will no longer be applied. </para>
+                        <para>You create the expression with standard mathematical operators, custom
+                            functions, user-defined static values and program rule variables. The
+                            program rule variables represent attribute and data element values which
+                            will be evaluated as part of the expression.</para>
+                        <para>
+                            <tip>
+                                <para>You can nest functions within each other and with
+                                    subexpressions to form more complex conditions. An example that
+                                    produces the gestational age in weeks, based on last menstrual
+                                    date:</para>
+                                <screen>d2:floor( d2:daysBetween(#{lastMenstrualDate},V{event_date}) / 7 )</screen>
+                            </tip>
+                        </para>
+                        <para>
+                            <tip>
+                                <para>The source type will determine how the d2: function calls will
+                                    evaluate a (sourcefield) parameter.</para>
+                                <para>Example: where #{hemoglobinCurrent} is set to source type
+                                        <emphasis role="bold">Data element in current
+                                        event</emphasis>. The following function call with evaluate
+                                    whether hemoglobin is entered in the current event.
+                                    <screen>d2:hasValue( 'hemoglobinCurrent' )</screen></para>
+                                <para>Example: where #{hemoglobin} is set to source type <emphasis
+                                        role="bold">Data element from the newest event in the
+                                        current program</emphasis>. The following function call with
+                                    evaluate whether there exists a value for the hemoglobin in any
+                                    event in the enrollment.
+                                    <screen>d2:hasValue( 'hemoglobin' )</screen></para>
+                                <para>Example: where #{hemoglobinPrevious} is set to source type
+                                        <emphasis role="bold">Data element from previous
+                                        event</emphasis> . The following function call with evaluate
+                                    whether there exists a value for the hemoglobin among the events
+                                    preceding the current event.
+                                    <screen>d2:hasValue( 'hemoglobinPrevious' )</screen></para>
+                            </tip>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Program rule variable</para>
+                    </entry>
+                    <entry>
+                        <para>Program rule variables lets you include data values and attribute
+                            values in program rule expressions. Typically, you'll have to create one
+                            or several program rule variables before creating a program rule. This
+                            is because program rules expressions usually contain at least one data
+                            element or attribute value to be meaningful.</para>
+                        <para>The program rule variables are shared between all rules in your
+                            program. When you create multiple program rules for the same program,
+                            these rules will share the same library of program rule
+                            variables.</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
     <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following program
         rule objects:</para>
-    <table frame="all">
-        <title>Program rule metadata objects in the Maintenance app</title>
-        <tgroup cols="2">
+    <informaltable frame="all">
+        <tgroup cols="2" align="left">
             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
             <thead>
@@ -62,7 +145,7 @@
                 </row>
             </tbody>
         </tgroup>
-    </table>
+    </informaltable>
     <section>
         <title>About program rule variables</title>
         <para>Program rule variables lets you include data values and attribute values in program

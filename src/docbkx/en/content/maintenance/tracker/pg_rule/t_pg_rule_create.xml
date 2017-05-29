@@ -53,13 +53,281 @@
                 actions executed when the expression is true.</para>
             <orderedlist>
                 <listitem>
-                    <para>Click the add button and select an <emphasis role="bold"
-                        >Action</emphasis>.</para>
-                </listitem>
-                <listitem>
-                    <para>Enter the required information.</para>
-                    <para>Depending on the action type, you'll have to select different types of
-                        settings and in some cases enter free text or create expressions. </para>
+                    <para>Click the add button, select an <emphasis role="bold">Action</emphasis>
+                        and enter the required information.</para>
+                    <para>Depending on the action type, you'll have to perform different types of
+                        settings. For some action types, you must enter free text or create
+                        expressions.</para>
+                    <table frame="all">
+                        <title>Program rule
+                            <?oxy_comment_start author="cecilia" timestamp="20170528T201346+0200" comment="In email from Markus:
+Create event:Foreslår å skjule dette som en option i listen. Det hadde bare vært fint om det gikk an å vise den slik du har konfigurert den dersom noen har postet en slik via APIet og åpner den i UIet - men dette er ikke et must."?>actions<?oxy_comment_end?></title>
+                        <tgroup cols="3" align="left">
+                            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                            <colspec colname="newCol3" colnum="2" colwidth="1*"/>
+                            <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+                            <thead>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para>Action type</para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>Required settings</para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>Description</para>
+                                    </entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Assign value</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Data element to assign value
+                                                to</emphasis></para>
+                                        <para><emphasis role="bold">Program rule variable to assign
+                                                value to</emphasis></para>
+                                        <para><emphasis role="bold">Expression to evaluate and
+                                                assign</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>TBA</para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Display text</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Display widget</emphasis></para>
+                                        <para><emphasis role="bold">Static text</emphasis></para>
+                                        <para><emphasis role="bold">Expression to evaluate and
+                                                display after static text</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>TBA</para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Display key/value
+                                                pair</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Display widget</emphasis></para>
+                                        <para><emphasis role="bold">Key label</emphasis></para>
+                                        <para><emphasis role="bold">Expression to evaluate and
+                                                display as value</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>TBA</para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Error on
+                                            complete</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Data element to display error
+                                                next to </emphasis></para>
+                                        <para><emphasis role="bold">Tracked entity attribute to
+                                                display error next to </emphasis></para>
+                                        <para><emphasis role="bold">Static text</emphasis></para>
+                                        <para><emphasis role="bold">Expression to evaluate and
+                                                display after static text</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>Used whenever you've cross-consistencies in the form
+                                            that must be strictly adhered to. This action prevents
+                                            the user from continuing until the error is
+                                            resolved.</para>
+                                        <para>This action differs from the regular <emphasis
+                                                role="bold">Show error</emphasis> since the error is
+                                            not shown until the user tries to actually complete the
+                                            form.</para>
+                                        <para>If you don't select a data element or a tracked entity
+                                            attribute to display the error next to, make sure you
+                                            write a comprehensive error message that helps the user
+                                            to fix the error.</para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Hide field</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Data element to
+                                            hide</emphasis></para>
+                                        <para><emphasis role="bold">Tracked entity attribute to
+                                                hide</emphasis></para>
+                                        <para><emphasis role="bold">Custom message for blanked
+                                                field</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>Used when you want to hide a field from the
+                                            user.</para>
+                                        <para><emphasis role="bold">Custom message for blanked
+                                                field</emphasis> allows you to define a custom
+                                            message displayed to the user in case the program rule
+                                            hides and blanks out the field after the user typed in
+                                            or selected a value.</para>
+                                        <?oxy_comment_start author="cecilia" timestamp="20170528T193313+0200" comment="Still correcte?"?>
+                                        <para>If a hide field action hides a field that contains a
+                                            value,
+                                            <?oxy_comment_start author="cecilia" timestamp="20170528T193545+0200" comment="Will the value be removed? Verify with SME."?>the
+                                            field will always removed.<?oxy_comment_end?> If no
+                                            message is defined, a standard message will be displayed
+                                            to alert the user.</para>
+                                        <?oxy_comment_end?>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <?oxy_comment_start author="cecilia" timestamp="20170528T193841+0200" comment="How does this work? 
+Can&apos;t make it work in the UI."?>
+                                        <para><emphasis role="bold">Hide section</emphasis></para>
+                                        <?oxy_comment_end?>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Program stage section to
+                                                hide</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>TBA</para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Hide program
+                                            stage</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <?oxy_comment_start author="cecilia" timestamp="20170528T194936+0200" comment="No custom message anymore? Was one in legacy app."?>
+                                        <para><emphasis role="bold">Program stage to
+                                            hide</emphasis></para>
+                                        <?oxy_comment_end?>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>Used when you want to hide a program stage section
+                                            from the user.</para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Make field
+                                            mandatory</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Data element to make
+                                                mandatory</emphasis></para>
+                                        <para><emphasis role="bold">Tracked entity attribute to make
+                                                mandatory</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>TBA</para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Show error</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Data element to display error
+                                                next to</emphasis></para>
+                                        <para><emphasis role="bold">Tracked entity attribute to
+                                                display error next to </emphasis></para>
+                                        <para><emphasis role="bold">Static text</emphasis></para>
+                                        <para><emphasis role="bold">Expression to evaluate and
+                                                display after static text</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>Used whenever there are rules which must strictly be
+                                            adhered to. The show error action prevents the user from
+                                            continuing until the error is resolved. </para>
+                                        <para>Such a strict validation should only be used when it's
+                                            certain that the evaluated expression is never true
+                                            unless the user has made a mistake in data entry. </para>
+                                        <para>It's mandatory to define a message that is shown to
+                                            the user when the expression is true and the action is
+                                            triggered.</para>
+                                        <para>You can select which data element or tracked entity
+                                            attribute to link the error to. This will help the user
+                                            to fix the error.</para>
+                                        <para>In case several data elements or attributes are
+                                            involved, select the one that is most likely that the
+                                            user would need to change. </para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Show warning</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Data element to display warning
+                                                next to</emphasis></para>
+                                        <para><emphasis role="bold">Tracked entity attribute to
+                                                display warning next to </emphasis></para>
+                                        <para><emphasis role="bold">Static text</emphasis></para>
+                                        <para><emphasis role="bold">Expression to evaluate and
+                                                display after static text</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>Used to give the user a warning about the entered
+                                            data, but at the same time to allow the user to save and
+                                            continue.</para>
+                                        <para>You can use warnings to help the user avoid errors in
+                                            the entered data, while at the same time allow the user
+                                            to consciously disregard the warnings and save a value
+                                            that is outside preset expectations.</para>
+                                        <para><emphasis role="bold">Static text</emphasis> defines
+                                            the message shown to the user when the expression is
+                                            true and the action is triggered.</para>
+                                        <para>You can select which data element or tracked entity
+                                            attribute to link the error to. This will help the user
+                                            to fix the error.</para>
+                                        <para>In case several data elements or attributes are
+                                            involved, select the one that is most likely that the
+                                            user would need to change. </para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Warning on
+                                            complete</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Data element to display warning
+                                                next to</emphasis></para>
+                                        <para><emphasis role="bold">Tracked entity attribute to
+                                                display warning next to </emphasis></para>
+                                        <para><emphasis role="bold">Static text</emphasis></para>
+                                        <para><emphasis role="bold">Expression to evaluate and
+                                                display after static text</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>Used to give the user a warning if he/she tries to
+                                            complete inconsistent data, but at the same time to
+                                            allow the user to continue. The warning is shown in a
+                                            dialog when the user completes the form.</para>
+                                        <para><emphasis role="bold">Static text</emphasis> defines
+                                            the message shown to the user when the expression is
+                                            true and the action is triggered. This field is
+                                            mandatory.</para>
+                                        <para>You can select which data element or tracked entity
+                                            attribute to link the error to. This will help the user
+                                            to fix the error.</para>
+                                        <para>If you don't select a data element or a tracked entity
+                                            attribute to display the error next to, make sure you
+                                            write a comprehensive error message that helps the user
+                                            to fix the error.</para>
+                                    </entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table>
                 </listitem>
                 <listitem>
                     <para>Click <emphasis role="bold">Save</emphasis>.</para>
