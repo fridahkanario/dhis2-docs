@@ -345,13 +345,13 @@
           <para>Select an organisation unit.</para>
         </listitem>
         <listitem>
-          <para>Select a programs and a program stage (if applicable).</para>
+          <para>Select a program and a program stage (if applicable).</para>
         </listitem>
         <listitem>
           <para>Select the <emphasis role="bold">ID scheme</emphasis> to use for export: <emphasis
               role="bold">UID</emphasis> (default) or <emphasis role="bold">CODE</emphasis>.</para>
           <para> If you select <emphasis role="bold">CODE</emphasis> but the object's attribute does
-            not have code, it will not be included in the return payload</para>
+            not have code, it will not be included in the return payload.</para>
         </listitem>
         <listitem>
           <para>Select <emphasis role="bold">Start date</emphasis> and <emphasis role="bold">End
