@@ -262,7 +262,9 @@ Can&apos;t make it work in the UI."?>
                                             stage</emphasis></para>
                                     </entry>
                                     <entry align="left" valign="top">
-                                        <?oxy_comment_start author="cecilia" timestamp="20170528T194936+0200" comment="No custom message anymore? Was one in legacy app."?>
+                                        <?oxy_comment_start author="cecilia" timestamp="20170528T194936+0200" comment="No custom message anymore? Was one in legacy app.
+
+Kolla med mArkus"?>
                                         <para><emphasis role="bold">Program stage to
                                             hide</emphasis></para>
                                         <?oxy_comment_end?>

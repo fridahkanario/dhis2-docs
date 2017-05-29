@@ -8,6 +8,22 @@
     xmlns:db="http://docbook.org/ns/docbook" xml:id="program_indicator_functions_variables_operators">
     <title>Reference information: functions, variables and operators to use in program indicator
         expressions and filters</title>
+    <para>
+        <example>
+            <para>An expression that includes both attributes, data elements and constants looks
+                like
+                this:<screen>(A{GPkGfbmArby} + #{mCXR7u4kNBW.NFkjsNiQ9PH}) * C{bCqvfPR02Im}</screen></para>
+        </example>
+    </para>
+    <para>
+        <example>
+            <para>An expression which uses the custom aggregation type and hence can use inline
+                aggregation types looks like
+                this:<screen>(sum(#{mCXR7u4kNBW.K0A4BauXJDl} * #{mCXR7u4kNBW.NFkjsNiQ9PH}) / sum(#{mCXR7u4kNBW.NFkjsNiQ9PH})) * 100</screen></para>
+            <para>Note how the "sum" aggregation operator is used inside the expression
+                itself.</para>
+        </example>
+    </para>
     <section>
         <title>Functions to use in a program indicator expression or filter</title>
         <para>The program indicator expression and filter support a range of functions. The

@@ -35,21 +35,21 @@
             <colspec colname="c2" colnum="2" colwidth="1.0*"/>
             <thead>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program rule component</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Description</para>
                     </entry>
                 </row>
             </thead>
             <tbody>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Aggregation
                             <?oxy_comment_start author="cecilia" timestamp="20170529T150343+0200" comment="Same as the other aggregation types used in DHIS2?"?>type<?oxy_comment_end?></para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>The aggregation type determines how the program indicator will be
                             aggregated. The following aggregation types are available:</para>
                         <para>
@@ -116,10 +116,10 @@
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Analytics type</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>The available analytics types are <emphasis>event</emphasis> and
                                 <emphasis>enrollment</emphasis>.</para>
                         <para>The analytics type defines whether the program indicator is calculated
@@ -143,10 +143,10 @@
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Expression</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>The expression defines how the indicator is being calculated. The
                             expression can contain references to various entities which will be
                             substituted with a related values when the indicator is
@@ -187,29 +187,13 @@
                                 >enrollment</emphasis>, the expression will be evaluated <emphasis
                                 role="italic">per enrollment</emphasis>, then aggregated according
                             to its aggregation type.</para>
-                        <para>
-                            <example>
-                                <para>An expression that includes both attributes, data elements and
-                                    constants looks like
-                                    this:<screen>(A{GPkGfbmArby} + #{mCXR7u4kNBW.NFkjsNiQ9PH}) * C{bCqvfPR02Im}</screen></para>
-                            </example>
-                        </para>
-                        <para>
-                            <example>
-                                <para>An expression which uses the custom aggregation type and hence
-                                    can use inline aggregation types looks like
-                                    this:<screen>(sum(#{mCXR7u4kNBW.K0A4BauXJDl} * #{mCXR7u4kNBW.NFkjsNiQ9PH}) / sum(#{mCXR7u4kNBW.NFkjsNiQ9PH})) * 100</screen></para>
-                                <para>Note how the "sum" aggregation operator is used inside the
-                                    expression itself.</para>
-                            </example>
-                        </para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Filter</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>The filter is applied to events and filters the data source used for
                             the calculation of the indicator. I.e. the filter is applied to the set
                             of events before the indicator expression is being evaluated. The filter
@@ -218,11 +202,10 @@
                             included later in the expression evaluation, if not it is ignored. The
                             filter can, in a similar way as expressions, contain references to data
                             elements, attributes and constants.</para>
-                        <para>The program indicator filter can in addition use logical operators
-                            including the following:</para>
-                        <para>These operators can be used to form logical expressions which
-                            ultimately evaluate to either true or false. For example you can assert
-                            that multiple data elements must be a specific value, or that specific
+                        <para>The program indicator filter can in addition use logical operators.
+                            These operators can be used to form logical expressions which ultimately
+                            evaluate to either true or false. For example you can assert that
+                            multiple data elements must be a specific value, or that specific
                             attributes must have numerical values less or greater than a
                             constant.</para>
                     </entry>
