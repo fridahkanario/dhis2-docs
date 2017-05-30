@@ -28,11 +28,11 @@
         </listitem></itemizedlist></para></section>
     
     <section><title>Edit namespaces or keys in the Datastore Manager</title>
-        <para>Use the <emphasis role="bold">Search</emphasis> tool to find namespaces or keys in your datastore. When you edit your content, you can toggle between the <emphasis role="bold">Tree</emphasis> view to get an overview of the contents of the Datastore, and the <emphasis role="bold">Code</emphasis> view to edit your code directly in the code editor. Remember to save your work by clicking the <emphasis role="bold">Save</emphasis> button.
+        <para>Use the <emphasis role="bold">Search</emphasis> tool to find namespaces or keys in your datastore. When you edit your content, you can toggle between the <emphasis role="bold">Tree</emphasis> view and the <emphasis role="bold">Code</emphasis> view. Use the <emphasis role="bold">Tree</emphasis> view to get an overview of the contents of the Datastore. Use the <emphasis role="bold">Code</emphasis> view to edit your code directly in the code editor. Remember to save your work by clicking the <emphasis role="bold">Save</emphasis> button.
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="80%"
+                        <imagedata width="40%"
                             fileref="resources/images/datastore_manager/datamgr_treeview.png"
                             format="png" align="left"/>
                     </imageobject>
@@ -41,7 +41,7 @@
             In the Code view, you can edit your code. When you edit a line of code, it is highlighted in yellow.  <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="80%"
+                        <imagedata width="40%"
                             fileref="resources/images/datastore_manager/datamgr_codeview.png"
                             format="png" align="left"/>
                     </imageobject>
@@ -51,7 +51,7 @@
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="80%"
+                        <imagedata width="40%"
                             fileref="resources/images/datastore_manager/datamgr_editcode_error.png"
                             format="png" align="left"/>
                     </imageobject>
