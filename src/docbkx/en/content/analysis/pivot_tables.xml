@@ -293,8 +293,8 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
           <title>Pivot table options</title>
           <tgroup cols="3" align="left">
             <colspec colname="newCol1" colnum="1" colwidth="1*"/>
-            <colspec colname="c1" colnum="2" colwidth="1*"/>
-            <colspec colname="c2" colnum="3" colwidth="1.5*"/>
+            <colspec colname="c1" colnum="2" colwidth="1.67*"/>
+            <colspec colname="c2" colnum="3" colwidth="2*"/>
             <thead>
               <row>
                 <entry namest="newCol1" nameend="c1" align="left" valign="top">
@@ -398,7 +398,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                   <para>The options <emphasis role="bold">Percentage of row</emphasis> and<emphasis
                       role="bold">Percentage of column</emphasis> mean that you'll display values as
                     percentages of row total or percentage of column total instead of the aggregated
-                    value. This is useful when you want  to see the contribution of data elements,
+                    value. This is useful when you want to see the contribution of data elements,
                     categories or organisation units to the total value.</para>
                 </entry>
               </row>
@@ -510,6 +510,8 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                   <para><emphasis role="bold"
                       ><?oxy_comment_start author="cecilia" timestamp="20170530T133530+0200" comment="These settings must be explained better. Does it work as expected?"?>Parameters<?oxy_comment_end?>
                       (for standard reports only)</emphasis></para>
+                </entry>
+                <entry align="left" valign="top" namest="c1" nameend="c2">
                   <para>
                     <note>
                       <para>You create standard reports in the <emphasis role="bold"
@@ -518,6 +520,11 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                         parameters the system should prompt the user for.</para>
                     </note>
                   </para>
+                </entry>
+              </row>
+              <row>
+                <entry align="left" valign="top">
+                  <para/>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Reporting period</emphasis></para>
@@ -589,7 +596,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                   <para><emphasis role="bold">Top limit</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para>Cotrols the maximum number of rows to include in the pivot table.</para>
+                  <para>Controls the maximum number of rows to include in the pivot table.</para>
                 </entry>
               </row>
             </tbody>
