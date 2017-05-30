@@ -32,7 +32,7 @@
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="80%"
+                        <imagedata width="40%"
                             fileref="resources/images/datastore_manager/datamgr_treeview.png"
                             format="png" align="left"/>
                     </imageobject>
@@ -41,7 +41,7 @@
             In the Code view, you can edit your code. When you edit a line of code, it is highlighted in yellow.  <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="80%"
+                        <imagedata width="40%"
                             fileref="resources/images/datastore_manager/datamgr_codeview.png"
                             format="png" align="left"/>
                     </imageobject>
@@ -51,7 +51,7 @@
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="80%"
+                        <imagedata width="40%"
                             fileref="resources/images/datastore_manager/datamgr_editcode_error.png"
                             format="png" align="left"/>
                     </imageobject>
