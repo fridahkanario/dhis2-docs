@@ -67,6 +67,12 @@ Revise phrase to &quot;A pivot table arranges data...&quot; = correct?"?>can
               smaller tables instead of one table which displays all of your data elements and
               indicators together.</para>
           </listitem>
+          <listitem>
+            <para>The <emphasis role="bold">Pivot Table</emphasis> app supports drill-down and up
+              for periods and organisation unit. This means that you can for example drill down from
+              yearly periods to quarters, months and weeks inside a pivot table. You can also drill
+              down from the global organisation unit to countries, provinces and facilities.</para>
+          </listitem>
         </itemizedlist>
       </tip>
     </para>
@@ -293,8 +299,8 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
           <title>Pivot table options</title>
           <tgroup cols="3" align="left">
             <colspec colname="newCol1" colnum="1" colwidth="1*"/>
-            <colspec colname="c1" colnum="2" colwidth="1*"/>
-            <colspec colname="c2" colnum="3" colwidth="1.5*"/>
+            <colspec colname="c1" colnum="2" colwidth="1.67*"/>
+            <colspec colname="c2" colnum="3" colwidth="2*"/>
             <thead>
               <row>
                 <entry namest="newCol1" nameend="c1" align="left" valign="top">
@@ -398,7 +404,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                   <para>The options <emphasis role="bold">Percentage of row</emphasis> and<emphasis
                       role="bold">Percentage of column</emphasis> mean that you'll display values as
                     percentages of row total or percentage of column total instead of the aggregated
-                    value. This is useful when you want  to see the contribution of data elements,
+                    value. This is useful when you want to see the contribution of data elements,
                     categories or organisation units to the total value.</para>
                 </entry>
               </row>
@@ -426,6 +432,10 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                     Leone / Bombali / Tamabaka / Sanya CHP&quot; for Sanya CHP.</para>
                   <para>The organisation units are then sorted alphabetically which will order the
                     organisation units according to the hierarchy.</para>
+                  <para dir="ltr">When you download a pivot table with organisation units as rows
+                    and you've selected <emphasis role="bold">Show hierarchy</emphasis>, each
+                    organisation unit level is rendered as a separate column. This is useful for
+                    example when you create Excel pivot tables on a local computer.</para>
                 </entry>
               </row>
               <row>
@@ -510,6 +520,8 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                   <para><emphasis role="bold"
                       ><?oxy_comment_start author="cecilia" timestamp="20170530T133530+0200" comment="These settings must be explained better. Does it work as expected?"?>Parameters<?oxy_comment_end?>
                       (for standard reports only)</emphasis></para>
+                </entry>
+                <entry align="left" valign="top" namest="c1" nameend="c2">
                   <para>
                     <note>
                       <para>You create standard reports in the <emphasis role="bold"
@@ -518,6 +530,11 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                         parameters the system should prompt the user for.</para>
                     </note>
                   </para>
+                </entry>
+              </row>
+              <row>
+                <entry align="left" valign="top">
+                  <para/>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Reporting period</emphasis></para>
@@ -589,7 +606,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                   <para><emphasis role="bold">Top limit</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para>Cotrols the maximum number of rows to include in the pivot table.</para>
+                  <para>Controls the maximum number of rows to include in the pivot table.</para>
                 </entry>
               </row>
             </tbody>
@@ -616,19 +633,30 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
             download: Microsoft Excel, CSV or HTML.</para>
           <para>The data table will have one column per dimension and contain names of the dimension
             items. </para>
+          <para>
+            <tip>
+              <para dir="ltr">When you download a pivot table with organisation units as rows and
+                you've selected <emphasis role="bold">Show hierarchy</emphasis> in <emphasis
+                  role="bold">Table options</emphasis>, each organisation unit level is rendered as
+                a separate column. This is useful for example when you create Excel pivot tables on
+                a local computer.</para>
+            </tip>
+          </para>
         </listitem>
       </orderedlist>
-      <tip>
-        <para>You can
-          <?oxy_comment_start author="Home" timestamp="20160411T162253+0200" comment="FYI: Information about how you create a pivot tabel in Excel has been removed. Instructions for a different software than DHIS2 shouldn&apos;t been in this topic."?>create<?oxy_comment_end?>
-          a pivot table in
-          <?oxy_comment_start author="Home" timestamp="20160408T095906+0200" comment="Microsoft is a registered trademark, it must be marked in applications and user docs.
+      <para>
+        <tip>
+          <para>You can
+            <?oxy_comment_start author="Home" timestamp="20160411T162253+0200" comment="FYI: Information about how you create a pivot tabel in Excel has been removed. Instructions for a different software than DHIS2 shouldn&apos;t been in this topic."?>create<?oxy_comment_end?>
+            a pivot table in
+            <?oxy_comment_start author="Home" timestamp="20160408T095906+0200" comment="Microsoft is a registered trademark, it must be marked in applications and user docs.
 Refer to: https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general.aspx
 Excel is a registered trademark, it must be marked in applications and user docs.
 Refer to: https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/en-us.aspx#941ec897-4e24-4d80-8b94-47f4122a241b
 "?>Microsoft<?oxy_comment_end?>
-          Excel from the downloaded Excel file.</para>
-      </tip>
+            Excel from the downloaded Excel file.</para>
+        </tip>
+      </para>
     </section>
     <section>
       <title>Download plain data source format</title>
