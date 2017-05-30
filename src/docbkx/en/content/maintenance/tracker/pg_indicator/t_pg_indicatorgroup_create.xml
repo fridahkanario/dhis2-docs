@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_program_indicator_group">
+    <title>Create or edit a program indicator group</title>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Indicator</emphasis> > <emphasis role="bold">Program indicator
+                    group</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add button.</para>
+        </listitem>
+        <listitem>
+            <para>Enter <emphasis role="bold">Name</emphasis> and <emphasis role="bold"
+                    >Code</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>In the list of available program indicators, double-click the program indicators
+                you want to assign to your group.</para>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>    
+</section>
+

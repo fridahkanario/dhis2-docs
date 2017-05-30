@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_program_indicator">
+    <title>Create or edit a program
+        <?oxy_comment_start author="cecilia" timestamp="20170525T115648+0200" comment="Need better explainations on these settings, verify in indicator doc."?>indicator<?oxy_comment_end?></title>
+    <para>
+        <note>
+            <para>A program indicator belongs to exactly one program.</para>
+        </note>
+    </para>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Indicator</emphasis> > <emphasis role="bold">Program
+                    indicator</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add button.</para>
+        </listitem>
+        <listitem>
+            <para>Select a <emphasis role="bold">Program</emphasis> and enter:<itemizedlist>
+                    <listitem>
+                        <para><emphasis role="bold">Name</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Short name</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Code</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Description</emphasis></para>
+                    </listitem>
+                </itemizedlist></para>
+        </listitem>
+        <listitem>
+            <para>Select number of <emphasis role="bold">Decimals in data output</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Select an <emphasis role="bold">Aggregation type</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Select a if you want to <emphasis role="bold">Display in form</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Assign one or multiple <emphasis role="bold">Legend</emphasis>s.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Enter a <emphasis role="bold">Category option combination for aggregate
+                    data export</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Enter an <emphasis role="bold">Attribute option combination for
+                    aggregate data export</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <?oxy_comment_start author="cecilia" timestamp="20170525T115713+0200" comment="More info needed"?>
+            <para>Create the expression.</para>
+            <?oxy_comment_end?>
+            <orderedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">Edit expression</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Create the expression based on mathematical operators and the attributes,
+                        variables and constants listed to the right.</para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <?oxy_comment_start author="cecilia" timestamp="20170525T115721+0200" comment="More info needed."?>
+            <para>Create the filter.</para>
+            <?oxy_comment_end?>
+            <orderedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">Edit filter</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Create the expression based on mathematical operators and the attributes,
+                        variables and constants listed to the right.</para>
+                </listitem>
+            </orderedlist>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>    
+</section>
+

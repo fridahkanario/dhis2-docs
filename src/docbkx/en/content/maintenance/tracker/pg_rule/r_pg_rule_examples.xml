@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="program_rule_examples">
+    <title>Example: program rules</title>
+    <para>
+        <note>
+            <para>You can view all examples on the demo
+                <?oxy_comment_start author="cecilia" timestamp="20170528T114607+0200" comment="Update link when demo server is on 2.27"?>server<?oxy_comment_end?>:
+                    <link
+                    xlink:href="https://play.dhis2.org/dev/dhis-web-maintenance/#/list/programSection/programRule"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"/></para>
+        </note>
+    </para>
+    <para>
+        <example>
+            <title>Display key/value pair</title>
+            <para>This example shows how to configure a program rule which calculate number of weeks
+                and days in a pregnancy and display the result in the format the clinician is used
+                to see it in. The calculation is based on previous recorded data.</para>
+            <orderedlist>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule details</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="80%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/keyvaluepair_details.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule expression</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="80%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/keyvaluepair_expression.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule action</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="60%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/keyvaluepair_action.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                    <para>The full expression in the <emphasis role="bold">Data</emphasis>
+                        field:</para>
+                    <para>
+                        <screen>d2:concatenate(d2:weeksBetween(#{lmp}, V{current_date}), '+', 
+d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
+                    </para>
+                </listitem>
+            </orderedlist>
+            <para>
+                <screenshot>
+                    <title>Result of program rule in Tracker Capture or Event Capture apps:</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%" align="center"
+                                fileref="resources/images/maintainence/pg_rule_ex/keyvaluepair_result.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
+        </example>
+    </para>
+    <para>
+        <example>
+            <title>Show display text in Feedback widget</title>
+            <para>This
+                <?oxy_comment_start author="cecilia" timestamp="20170528T102916+0200" comment="No variable?"?>example<?oxy_comment_end?>
+                shows how to configure a program rule to display text in the Feedback widget in the
+                    <emphasis role="bold">Tracker Capture</emphasis>
+                <?oxy_comment_start author="cecilia" timestamp="20170528T102830+0200" comment="Also Event Capture?"?>app<?oxy_comment_end?>.</para>
+            <orderedlist>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule variable</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="80%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/displaytext_pgrule_variable.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule details</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="80%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/displaytext_details.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule expression</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="80%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/displaytext_expression.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule action</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="60%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/displaytext_action.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+            </orderedlist>
+            <para>
+                <screenshot>
+                    <title>Result of program rule in Tracker Capture or Event Capture apps:</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%" align="center"
+                                fileref="resources/images/maintainence/pg_rule_ex/displaytext_result.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
+        </example>
+    </para>
+    <para>
+        <example>
+            <title>Show information from first program stage in Feedback
+                <?oxy_comment_start author="cecilia" timestamp="20170528T102848+0200" comment="Info from SME: 
+ eksempel på displaytext, som sørger for at viktige data(medisin-allergi) fra første program stage alltid vises i feedback-widgeten i brukergrensesnittet."?>widget<?oxy_comment_end?></title>
+            <para>This example shows how to configure a program rule to always display certain data
+                in the Feedback widget in the <emphasis role="bold">Tracker Capture</emphasis>
+                <?oxy_comment_start author="cecilia" timestamp="20170528T102830+0200" comment="Also Event Capture?"?>app<?oxy_comment_end?>.
+                This is useful when you want to make sure that vital data, for example medicine
+                allergies, is always visible.</para>
+            <orderedlist>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule variable</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="80%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/displaytext2_pgrule_variable.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule details</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="80%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/displaytext2_details.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule expression</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="80%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/displaytext2_expression.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule action</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="60%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/displaytext2_action.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+            </orderedlist>
+            <para>
+                <screenshot>
+                    <title>Medicine allergies recorded in first program stage in the Tracker Capture
+                        app:</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%" align="center"
+                                fileref="resources/images/maintainence/pg_rule_ex/displaytext2_first_pgstage.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
+            <para>
+                <screenshot>
+                    <title>Result of program rule in the Tracker Capture app:</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%" align="center"
+                                fileref="resources/images/maintainence/pg_rule_ex/displaytext2_result.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
+        </example>
+    </para>
+    <para>
+        <example>
+            <title>Calculate gestational age in weeks at visit</title>
+            <para>By using a program rule of type "Assign value" you can calculate the "Gestational
+                age at visit" value and fill it in the data entry form. You configure the program
+                rule to calculate "Gestational age at visit" based on either "LMP date" or
+                "Ultrasound estimated due date".</para>
+            <orderedlist>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule details</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="80%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/assign_details.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule expression</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="80%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/assign_expression.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>
+                        <screenshot>
+                            <title>Program rule action</title>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="60%" align="center"
+                                        fileref="resources/images/maintainence/pg_rule_ex/assign_action.png"
+                                        format="PNG"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot>
+                    </para>
+                </listitem>
+            </orderedlist>
+            <para>
+                <screenshot>
+                    <title>Result of program rule in Tracker Capture or Event Capture apps:</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata width="80%" align="center"
+                                fileref="resources/images/maintainence/pg_rule_ex/assign_result.png"
+                                format="PNG"/>
+                        </imageobject>
+                    </mediaobject>
+                </screenshot>
+            </para>
+        </example>
+    </para>
+</section>

@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="create_program_rule_variable">
+    <title>Create or edit a program rule variable</title>
+    <orderedlist>
+        <listitem>
+            <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                    role="bold">Program</emphasis> > <emphasis role="bold">Program rule
+                    variable</emphasis>.</para>
+        </listitem>
+        <listitem>
+            <para>Click the add button.</para>
+        </listitem>
+        <listitem>
+            <para>Select a <emphasis role="bold">Program</emphasis> and enter:<itemizedlist>
+                    <listitem>
+                        <para><emphasis role="bold">Name</emphasis></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Code</emphasis></para>
+                    </listitem>
+                </itemizedlist></para>
+        </listitem>
+        <?oxy_comment_start author="cecilia" timestamp="20170525T123318+0200" comment="An expl. of this option is needed."?>
+        <listitem>
+            <para>Select if you want to <emphasis role="bold">Use code for option
+                set</emphasis>.</para>
+            <para>This option is only effective when the data element or tracked entity attribute is
+                connected to an option set. If you don't select this option, the program rule
+                variable will be populated with the option set's name. If you select the option, the
+                program rule variable will be populated with the option set's code instead.</para>
+        </listitem>
+        <?oxy_comment_end?>
+        <listitem>
+            <para>Select a <emphasis role="bold">Source type</emphasis> and enter the required
+                information.</para>
+            <para>Depending on the source type, you'll have to select, for example, a <emphasis
+                    role="bold">Program stage,</emphasis>
+                <emphasis role="bold">Data element</emphasis> or <emphasis role="bold">Tracked
+                    entity attribute</emphasis>.</para>
+            <?oxy_comment_start author="cecilia" timestamp="20170528T165749+0200" comment="Is this information correct?"?>
+            <para>The source types determine how the program rule variable is populated with a
+                value.</para>
+            <?oxy_comment_end?>
+            <informaltable frame="all">
+                <tgroup cols="2" align="left">
+                    <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                    <thead>
+                        <row>
+                            <entry align="left" valign="top">
+                                <para>Source type</para>
+                            </entry>
+                            <entry align="left" valign="top">
+                                <para>Description</para>
+                            </entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry align="left" valign="top">
+                                <para><emphasis role="bold">Data element from the newest event for a
+                                        program stage</emphasis></para>
+                            </entry>
+                            <entry align="left" valign="top">
+                                <para>This source type works the same way as <emphasis role="bold"
+                                        >Data element from the newest event in the current
+                                        program</emphasis>, except that it only evaluates values
+                                    from one program stage. </para>
+                                <para>This source type can be useful in program rules where the same
+                                    data element is used in several program stages, and a rule needs
+                                    to evaluate the newest data value from within one specific
+                                    stage.</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry align="left" valign="top">
+                                <para><emphasis role="bold">Data element from the newest event in
+                                        the current program</emphasis></para>
+                            </entry>
+                            <entry align="left" valign="top">
+                                <para>This source type is used when a program rule variable needs to
+                                    reflect the newest known value of a data element, regardless of
+                                    what event the user currently has open.</para>
+                                <para>This source type is populated slightly differently in
+                                        <emphasis role="bold">Tracker Capture</emphasis> and
+                                        <emphasis role="bold">Event Capture</emphasis> apps:</para>
+                                <para><emphasis role="bold">Tracker Capture</emphasis>: the program
+                                    rule variable will be populated with the newest data value
+                                    collected for the given data element within the
+                                    enrollment.</para>
+                                <para><emphasis role="bold">Event Capture</emphasis>: the program
+                                    rule variable will be populated with the newest data value found
+                                    within the 10 newest events in the same organisation
+                                    unit.</para>
+                                <para>The newest data value is determined with event date.</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry align="left" valign="top">
+                                <para><emphasis role="bold">Data element in current
+                                    event</emphasis></para>
+                            </entry>
+                            <entry align="left" valign="top">
+                                <para>Program rule variables with this source type will contain the
+                                    data value from the same event that the user currently has
+                                    open.</para>
+                                <para>This is the most commonly used source type, especially for
+                                    skip logic (hide actions) and warning/error rules.</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry align="left" valign="top">
+                                <para><emphasis role="bold">Data element from previous
+                                        event</emphasis></para>
+                            </entry>
+                            <entry align="left" valign="top">
+                                <para>Program rule variables with this source type will contain the
+                                    value from a specified data element from a previous event. Only
+                                    older events is evaluated, not including the event that the user
+                                    currently has open. </para>
+                                <para>This source type is commonly used when a data element only
+                                    should be collected once during an enrollment, and should be
+                                    hidden in subsequent events.</para>
+                                <para>Another use case is making rules for validating input where
+                                    there is an expected progression from one event to the next - a
+                                    rule can evaluate whether the previous value is higher/lower and
+                                    give a warning if an unexpected value is entered.</para>
+                                <para>This source type is populated slightly differently in
+                                        <emphasis role="bold">Tracker Capture</emphasis> and
+                                        <emphasis role="bold">Event Capture</emphasis> apps:</para>
+                                <para><emphasis role="bold">Tracker Capture</emphasis>: the program
+                                    rule variable will be populated with the newest data value
+                                    collected for the given data element within the enrollment - but
+                                    only evaluating the events that comes before the current event
+                                    date.</para>
+                                <para><emphasis role="bold">Event Capture</emphasis>: the program
+                                    rule variable will be populated with the newest data value
+                                    collected within the 10 events preceding the current event date
+                                    - not including the current event.</para>
+                                <para>The newest data value is determined with event date.</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry align="left" valign="top">
+                                <para><emphasis role="bold">Calculated value</emphasis></para>
+                            </entry>
+                            <entry align="left" valign="top">
+                                <?oxy_comment_start author="cecilia" timestamp="20170528T170814+0200" comment="Add missing info"?>
+                                <para>TBA</para>
+                                <?oxy_comment_end?>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry align="left" valign="top">
+                                <para><emphasis role="bold">Tracked entity
+                                    attribute</emphasis></para>
+                            </entry>
+                            <entry align="left" valign="top">
+                                <para>Populates the program rule variable with a specified tracked
+                                    entity attribute for the current enrollment.</para>
+                                <para>Use this is the source type to create program rules that
+                                    evaluate data values entered during registration.</para>
+                                <para>This source type is also useful when you create program rules
+                                    that compare data in events to data entered during
+                                    registration.</para>
+                                <para>This source type is only used for tracker programs (programs
+                                    with registration).</para>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+        </listitem>
+        <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+        </listitem>
+    </orderedlist>    
+</section>
+

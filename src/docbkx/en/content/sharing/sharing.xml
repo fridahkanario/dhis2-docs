@@ -12,7 +12,10 @@
          xmlns:db="http://docbook.org/ns/docbook"
          xml:id="sharing">
   <title>About sharing of
-    <?oxy_comment_start author="cecilia" timestamp="20170509T142346+0200" comment="Must be completely reviewed for the 2.27 release, new sharing dialog."?>objects<?oxy_comment_end?></title>
+    <?oxy_comment_start author="cecilia" timestamp="20170509T142346+0200" comment="Section requires complete review.
+2.27: new sharing dialog in Mtn app.
+
+Future releases: Legacy sharing dialog will be replaced with new in the analytics apps, Users app and Dashboard app."?>objects<?oxy_comment_end?></title>
   <para>This chapter discusses the sharing of entities feature in DHIS2.</para>
   <section>
     <title>Sharing of objects</title>
@@ -21,14 +24,28 @@
       to a group of users or to everyone. For instance for reports, the sharing dialog can be opened
       by clicking on the &quot;Sharing settings&quot; button next to each report in the list. Implementers can use this feature to allow access to certain objects to only certain user groups. Users can use the feature to decide who they would like to share objects (such as pivot tables, charts, dashboards, etc) with. </para>
     <para>If sharing is supported for a particular class of objects, a dialog will be available called &quot;Sharing settings&quot;, usually available by clicking on the name of the object or in the analytics tools, through an icon (Share with other people). Once you have accessed the sharing settings for the object you wish to share, a dialog similar to the one below will be shown. </para>
-    <screenshot>
-      <title>The sharing dialog.</title>
-      <mediaobject>
-        <imageobject>
-          <imagedata width="40%" fileref="resources/images/sharing/sharing-dialog.png" format="PNG" align="center"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
+    <para>
+      <screenshot>
+        <title>The sharing dialog</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="40%" fileref="resources/images/sharing/sharing-dialog.png"
+              format="PNG" align="center"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
+    <para>
+      <screenshot>
+        <title>The sharing dialog in the Maintenance app</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="40%" fileref="resources/images/maintainence/mtn_sharing_dialog.png"
+              format="PNG" align="center"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
     <para>You can share your report with everyone or with a number of user groups. &quot;External access&quot; can be enabled to allow this resource to be shared with everyone, including users which cannot logon to DHIS2. This is useful for sharing public resources with external systems. Note, that if objects are shared externally, then they are visible to anyone who has access to the URL which provides the resource without any login credentials. </para>
     <para>Next to &quot;Public
       access&quot; you can choose your public access option: &quot;None&quot;, &quot;Can view&quot; or &quot;Can edit and view&quot;.

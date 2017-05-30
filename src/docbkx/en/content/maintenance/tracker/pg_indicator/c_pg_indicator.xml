@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="about_program_indicators">
+    <title>About program indicators</title>
+    <para>Program indicators are expressions based on data elements and attributes of tracked
+        entities which can be used to calculate values based on a formula. Program indicators
+        consist of an aggregation type, an analytics type, an expression and a filter.</para>
+    <para>Program indicators are evaluated based on the assigned aggregation type, expression and
+        filter. The order of evaluation is:</para>
+    <orderedlist>
+        <listitem>
+            <para>The <emphasis role="italic">filter</emphasis> will filter the events which become
+                part of the evaluation/aggregation routine.</para>
+        </listitem>
+        <listitem>
+            <para>The <emphasis role="italic">expression</emphasis> will be evaluated per
+                event.</para>
+        </listitem>
+        <listitem>
+            <para>All evaluated expression values will be <emphasis role="italic"
+                    >aggregated</emphasis> according to the aggregation type of the program
+                indicator.</para>
+        </listitem>
+    </orderedlist>
+    <table frame="all">
+        <title>Program indicator components</title>
+        <tgroup cols="2" align="left">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Program rule component</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Description</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Aggregation
+                            <?oxy_comment_start author="cecilia" timestamp="20170529T150343+0200" comment="Same as the other aggregation types used in DHIS2?"?>type<?oxy_comment_end?></para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>The aggregation type determines how the program indicator will be
+                            aggregated. The following aggregation types are available:</para>
+                        <para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>Average</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Average (number)</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Average (number, disaggregation)</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Average (sum in organisation unit hierarchy)</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Average (sum of numbers)</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Average (sum of numbers, disaggregation)</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Average (Yes/No)</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Count</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Custom</para>
+                                    <para>The "custom" aggregation type allows you to specify the
+                                        aggregation type in-line in the expression. All other
+                                        aggregation types are applied to the entire
+                                        expression.</para>
+                                    <para>Using the "custom" aggregation type might lead to an
+                                        exception of the order of evaluation described above where
+                                        individual parts of the expression can be evaluated and
+                                        aggregated, as opposed to the entire expression being
+                                        evaluated prior to aggregation.</para>
+                                </listitem>
+                                <listitem>
+                                    <para><?oxy_comment_start author="cecilia" timestamp="20170529T160032+0200" comment="What&apos;s the default setting?"?>Default<?oxy_comment_end?></para>
+                                </listitem>
+                                <listitem>
+                                    <para>Max</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Min</para>
+                                </listitem>
+                                <listitem>
+                                    <para>None</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Standard deviation</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Sum</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Variance</para>
+                                </listitem>
+                            </itemizedlist>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Analytics type</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>The available analytics types are <emphasis>event</emphasis> and
+                                <emphasis>enrollment</emphasis>.</para>
+                        <para>The analytics type defines whether the program indicator is calculated
+                            based on events or program enrollments. This has an impact on what type
+                            of calculations can be made.</para>
+                        <para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>Events implies a data source where each event exists as an
+                                        independent row. This is suitable for performing
+                                        aggregations such as counts and sums. </para>
+                                </listitem>
+                                <listitem>
+                                    <para>Enrollments implies a data source where all events for a
+                                        single enrollment is combined on the same row. This allows
+                                        for calculations which can compare event data from various
+                                        program stages within a program enrollment.</para>
+                                </listitem>
+                            </itemizedlist>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Expression</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>The expression defines how the indicator is being calculated. The
+                            expression can contain references to various entities which will be
+                            substituted with a related values when the indicator is
+                            calculated:</para>
+                        <para>
+                            <itemizedlist>
+                                <listitem>
+                                    <para>Data elements: Will be substituted with the value of the
+                                        data element for the time period and organisation unit for
+                                        which the calculation is done. Refers to both program stage
+                                        and data element.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Attributes: Will be substituted with the value of the
+                                        attribute for the person / tracked entity for which the
+                                        calculation is done.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Variables: Will be substituted with special values linked
+                                        to the program, including incident date and date of
+                                        enrollment for the person, current date and count of values
+                                        in the expression for the time period and organisation unit
+                                        for which the calculation is done.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Constants: Will be substituted with the value of the
+                                        constant.</para>
+                                </listitem>
+                            </itemizedlist>
+                        </para>
+                        <para>The expression is a mathematical expression and can also contain
+                            operators.</para>
+                        <para>For single event programs and tracker programs with analytics type
+                                <emphasis role="italic">event</emphasis>, the expression will be
+                            evaluated <emphasis role="italic">per event </emphasis>, then aggregated
+                            according to its aggregation type. </para>
+                        <para>For tracker programs with analytics type <emphasis role="italic"
+                                >enrollment</emphasis>, the expression will be evaluated <emphasis
+                                role="italic">per enrollment</emphasis>, then aggregated according
+                            to its aggregation type.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Filter</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>The filter is applied to events and filters the data source used for
+                            the calculation of the indicator. I.e. the filter is applied to the set
+                            of events before the indicator expression is being evaluated. The filter
+                            must evaluate to either true or false. It filter is applied to each
+                            individual event. If the filter evaluates to true then the event is
+                            included later in the expression evaluation, if not it is ignored. The
+                            filter can, in a similar way as expressions, contain references to data
+                            elements, attributes and constants.</para>
+                        <para>The program indicator filter can in addition use logical operators.
+                            These operators can be used to form logical expressions which ultimately
+                            evaluate to either true or false. For example you can assert that
+                            multiple data elements must be a specific value, or that specific
+                            attributes must have numerical values less or greater than a
+                            constant.</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+    <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following program
+        indicator objects:</para>
+    <informaltable frame="all">
+        <tgroup cols="2" align="left">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>Object type</para>
+                    </entry>
+                    <entry>
+                        <para>Available functions</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Program indicator</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Program indicator group</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+</section>
