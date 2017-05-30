@@ -8,7 +8,7 @@
   xmlns:db="http://docbook.org/ns/docbook" xml:id="pivot">
   <title>Analyze data in pivot tables</title>
   <section xml:id="pivot_about">
-    <title>About the Pivot table app</title>
+    <title>About the Pivot Table app</title>
     <para>With the <emphasis role="bold">Pivot Table</emphasis> app, you can create pivot tables
       based on all available data dimensions in DHIS2. A pivot table is a dynamic tool for data
       analysis which lets you summarize and arrange data according to its dimensions. Examples of
