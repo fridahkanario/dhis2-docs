@@ -1172,7 +1172,13 @@ connection.schema = update
 
 # Cache time in seconds, default is 600, applies to memcached
 # cache.time = 600
-</screen></para>
+
+# ----------------------------------------------------------------------
+# Node
+# ----------------------------------------------------------------------
+
+# Node identifier, optional, useful in clusters
+# node.id = 'node-1'</screen></para>
   </section>
   <section xml:id="install_application_logging">
     <title>Application logging</title>

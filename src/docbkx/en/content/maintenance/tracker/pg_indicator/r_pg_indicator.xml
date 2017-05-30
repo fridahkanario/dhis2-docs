@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="reference_information_program_indicator">
+    <title>Reference information: Expression and filter examples per value type</title>
+    <para>The table below shows examples of how to write expressions and filters for different data
+        element and attribute value types:</para>
+    <table>
+        <title>Expression and filter examples per value type</title>
+        <tgroup cols="2">
+            <colspec colnum="1" colname="c1" colwidth="250"/>
+            <colspec colnum="2" colname="c2" colwidth="*"/>
+            <thead>
+                <row>
+                    <entry align="left" valign="top">Value types</entry>
+                    <entry align="left" valign="top">Example syntax</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Integer</para>
+                        <para>Negative integer</para>
+                        <para>Positive or zero integer</para>
+                        <para>Positive integer</para>
+                        <para>Number</para>
+                        <para>Percentage</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Numeric fields, can be used for aggregation as an expression, or in
+                            filters: </para>
+                        <para>
+                            <screen>#{mCXR7u4kNBW.K0A4BauXJDl} >= 3</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Yes/No</para>
+                        <para>Yes only</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Boolean fields. Yes is translated to numeric 1, No to numeric 0. Can
+                            be used for aggregation as an expression, or in filters: </para>
+                        <para>
+                            <screen>#{mCXR7u4kNBW.Popa3BauXJss} == 1</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Text</para>
+                        <para>Long text</para>
+                        <para>Phone number</para>
+                        <para>Email</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Text fields. Can be checked for equality in filters: </para>
+                        <para>
+                            <screen>#{mCXR7u4kNBW.L8K4BauIKsl} == 'LiteralValue'</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Date</para>
+                        <para>Age</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Date fields. Most useful when combined with a d2:daysBetween function,
+                            which produces a number that can be aggregated as an expression or used
+                            in filters:</para>
+                        <para>
+                            <screen>d2:daysBetween(#{mCXR7u4kNBW.JKJKBausssl},V{enrollment_date}) > 100</screen>
+                        </para>
+                        <para> Can also directly be checked for equality in filters: </para>
+                        <para>
+                            <screen>#{mCXR7u4kNBW.JKJKBausssl} == '2011-10-28'</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Date</para>
+                        <para>Age</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Date fields. Most useful when combined with a d2:daysBetween function,
+                            which produces a number that can be aggregated as an expression or used
+                            in filters:</para>
+                        <para>
+                            <screen>d2:daysBetween(#{mCXR7u4kNBW.JKJKBausssl},V{enrollment_date}) > 100</screen>
+                        </para>
+                        <para>Can also directly be checked for equality in filters: </para>
+                        <para>
+                            <screen>#{mCXR7u4kNBW.JKJKBausssl} == '2011-10-28'</screen>
+                        </para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>    
+</section>
+

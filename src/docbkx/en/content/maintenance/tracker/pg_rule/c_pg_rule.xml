@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="about_program_rules">
+    <title>About program rules</title>
+    <para>Program rules allows you to create and control dynamic behavior of the user interface in
+        the <emphasis role="bold">Tracker Capture</emphasis> and <emphasis role="bold">Event
+            Capture</emphasis> apps. During data entry, the program rules expressions are evaluated
+        each time the user interface is displayed, and each time a data element is changed. Most
+        types of actions will take effect immediately when the user enters values in the <emphasis
+            role="bold">Tracker Capture</emphasis> and <emphasis role="bold">Event
+            Capture</emphasis> apps.</para>
+    <table frame="all">
+        <title>Program rule components</title>
+        <tgroup cols="2" align="left">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>Program rule component</para>
+                    </entry>
+                    <entry>
+                        <para>Description</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Program rule action</para>
+                    </entry>
+                    <entry>
+                        <para>Each program rule contains one or multiple actions. These are the
+                            behaviors that are triggered in the user interface when the expression
+                            is true. Actions will be applied at once if the expression is true, and
+                            will be reverted if the expression is no longer true. There are several
+                            types of actions and you can have several actions in one program
+                            rule.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Program rule expression</para>
+                    </entry>
+                    <entry>
+                        <para>Each program rule has a single expression that determines whether the
+                            program rule actions should be triggered, if the expression evaluates to
+                            true. If the expression is true the program rule is in effect and the
+                            actions will be executed. If the expression is false, the program rule
+                            is no longer in effect and the actions will no longer be applied. </para>
+                        <para>You create the expression with standard mathematical operators, custom
+                            functions, user-defined static values and program rule variables. The
+                            program rule variables represent attribute and data element values which
+                            will be evaluated as part of the expression.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Program rule variable</para>
+                    </entry>
+                    <entry>
+                        <para>Program rule variables lets you include data values and attribute
+                            values in program rule expressions. Typically, you'll have to create one
+                            or several program rule variables before creating a program rule. This
+                            is because program rules expressions usually contain at least one data
+                            element or attribute value to be meaningful.</para>
+                        <para>The program rule variables are shared between all rules in your
+                            program. When you create multiple program rules for the same program,
+                            these rules will share the same library of program rule
+                            variables.</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
+    <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following program
+        rule objects:</para>
+    <informaltable frame="all">
+        <tgroup cols="2" align="left">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry>
+                        <para>Object type</para>
+                    </entry>
+                    <entry>
+                        <para>Available functions</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry>
+                        <para>Program rule</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry>
+                        <para>Program rule variable</para>
+                    </entry>
+                    <entry>
+                        <para>Create, edit, clone, share, delete, show details and translate</para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+</section>

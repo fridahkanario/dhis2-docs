@@ -168,7 +168,7 @@
       </listitem>
     </orderedlist>
     <section>
-      <title xml:id="program_dules_adding_source_fields"> [Review ongoing] Add source
+      <title xml:id="program_dules_adding_source_fields">Add source
         <?oxy_comment_start author="cecilia" timestamp="20161005T104203+0200" comment="At next revision: perfrom full editorial review."?>fields<?oxy_comment_end?></title>
       <para> Source fields represent a uniform way to include data values and attribute values in
         expressions. The source fields is defined as needed when creating expressions. When creating
@@ -288,7 +288,7 @@
       </para>
     </section>
     <section xml:id="program_rules_expressions">
-      <title> [Review ongoing] Define
+      <title>Define
         <?oxy_comment_start author="cecilia" timestamp="20161005T104210+0200" comment="At next revision: perfrom full editorial review."?>expressions<?oxy_comment_end?></title>
       <para>Each program rule has a single expression that determines whether rules action should be
         triggered, if the expression evaluates to true. If the expression is true the program rule
@@ -701,7 +701,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>Operators<?
       </tip>
     </section>
     <section>
-      <title xml:id="program_rules_defining_actions">[Review ongoing] Define
+      <title xml:id="program_rules_defining_actions">Define
         <?oxy_comment_start author="cecilia" timestamp="20161005T104219+0200" comment="At next revision: perfrom full editorial review."?>actions<?oxy_comment_end?></title>
       <para>Each program rule has one or more actions attached. These are the behaviors that is
         triggered in the user interface when the expression(see previous chapter) is true. Actions
