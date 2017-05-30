@@ -9,17 +9,19 @@
   <title>Using the Data Visualizer app</title>
   <section xml:id="data_vis_intro">
     <title>About the Data Visualizer app</title>
-    <screenshot>
-      <info>
-        <title>Data visualizer module displaying a column chart.</title>
-      </info>
-      <mediaobject>
-        <imageobject>
-          <imagedata width="100%" align="center"
-            fileref="resources/images/visualizer/column_chart.png" format="PNG"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
+    <para>
+      <screenshot>
+        <info>
+          <title>Data visualizer module displaying a column chart.</title>
+        </info>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="100%" align="center"
+              fileref="resources/images/visualizer/column_chart.png" format="PNG"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
     <para>With the <emphasis role="bold"
         >D<?oxy_comment_start author="CPersson" timestamp="20160421T133120+0200" comment="Which type of data? What&apos;s the difference to the Event Visualizer?"?>ata<?oxy_comment_end?>
         Visualizer</emphasis> app, you can select content, for example indicators, data elements,
@@ -39,17 +41,6 @@
               side menu and gives more space for the chart. You can get the menu back by clicking on
               the same button again.</para>
           </listitem>
-          <?oxy_comment_start author="cecilia" timestamp="20170530T145048+0200" comment="see JIRA  https://jira.dhis2.org/browse/DHIS2-668
-
-Pending confirmation from Lars"?>
-          <listitem>
-            <para>The <emphasis role="bold">Data Visualizer</emphasis> app supports drill-down and
-              up for periods and organisation unit. This means that you can for example drill down
-              from yearly periods to quarters, months and weeks inside a pivot table. You can also
-              drill down from the global organisation unit to countries, provinces and
-              facilities.</para>
-          </listitem>
-          <?oxy_comment_end?>
         </itemizedlist>
       </tip>
     </para>
@@ -58,11 +49,8 @@ Pending confirmation from Lars"?>
     <title>Create a chart</title>
     <orderedlist>
       <listitem>
-        <para>In the <emphasis role="bold">Apps</emphasis> menu, click <emphasis role="bold">Data
-            Visualizer</emphasis>.</para>
-      </listitem>
-      <listitem>
-        <para>Select a chart type.</para>
+        <para>Open the <emphasis role="bold">Data Visualizer</emphasis> app and select a chart
+          type.</para>
       </listitem>
       <listitem>
         <para>In the menu to the left, select the metadata you want to analyse. You must select one
@@ -102,20 +90,20 @@ Pending confirmation from Lars"?>
             <colspec colname="c2" colnum="2" colwidth="2.03*"/>
             <thead>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Chart type</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Description</para>
                 </entry>
               </row>
             </thead>
             <tbody>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Column chart</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Displays information as vertical rectangular columns with lengths
                     proportional to the values they represent.</para>
                   <para>Useful when you want to, for example, compare performance of different
@@ -123,10 +111,10 @@ Pending confirmation from Lars"?>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Stacked column chart</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Displays information as vertical rectangular columns, where bars
                     representing multiple categories are stacked on top of each other.</para>
                   <para>Useful when you want to, for example, display trends or sums of related data
@@ -134,26 +122,26 @@ Pending confirmation from Lars"?>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Bar chart</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Same as column chart, only with horizontal bars.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Stacked bar chart</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Same as stacked column chart, only with horizontal bars.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Line chart</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Displays information as a series of points connected by straight lines. Also
                     referred to as time series.</para>
                   <para>Useful when you want to, for example, visualize trends in indicator data
@@ -161,20 +149,20 @@ Pending confirmation from Lars"?>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Area chart</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Is based on line chart, with the space between the axis and the line filled
                     with colors and the lines stacked on top of each other.</para>
                   <para>Useful when you want to compare the trends of related indicators.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Pie chart</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Circular chart divided into sectors (or slices).</para>
                   <para>Useful when you want to, for example, visualize the proportion of data for
                     individual data elements compared to the total sum of all data elements in the
@@ -182,19 +170,19 @@ Pending confirmation from Lars"?>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Radar chart</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Displays data on axes starting from the same point. Also known as spider
                     chart.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Speedometer chart</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para> Semi-circle chart which displays values out of 100 %. Also referred to as a
                     gauge chart. </para>
                 </entry>
@@ -366,20 +354,20 @@ Also standardize which section it belongs in."?>A
               <colspec colname="c2" colnum="2" colwidth="1.74*"/>
               <thead>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Selection mode</para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Description</para>
                   </entry>
                 </row>
               </thead>
               <tbody>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para><emphasis role="bold">Select organisation units</emphasis></para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Lets you select the organisation units you want to appear in the chart
                       from the organization tree.</para>
                     <para>Select <emphasis role="bold">User org unit</emphasis> to disable the
@@ -397,10 +385,10 @@ Also standardize which section it belongs in."?>A
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para><emphasis role="bold">Select levels</emphasis></para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Lets you select all organisation units at one or more levels, for example
                       national or district level.</para>
                     <para>You can also select the parent organisation unit in the tree, which makes
@@ -409,10 +397,10 @@ Also standardize which section it belongs in."?>A
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para><emphasis role="bold">Select groups</emphasis></para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Lets you select all organisation units inside one or several groups and
                       parent organisation units at the same time, for example hospitals or
                       chiefdoms.</para>
@@ -465,41 +453,43 @@ Also standardize which section it belongs in."?>A
         <para>Click <emphasis role="bold">Update</emphasis>.</para>
       </listitem>
     </orderedlist>
-    <example>
-      <title>Chart illustrating the concepts of series, categories and
-        <?oxy_comment_start author="CPersson" timestamp="20160426T111125+0200" comment="Verify in output that titles render correctly"?>filter<?oxy_comment_end?></title>
-      <screenshot>
-        <info>
-          <title>Example chart illustrating the concepts of series, categories
-            <?oxy_comment_start author="CPersson" timestamp="20160426T150730+0200" comment="At next revision, replace graph with a better quality one."?>and<?oxy_comment_end?>
-            filter</title>
-        </info>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="100%" align="center"
-              fileref="resources/images/visualizer/series_category_filter.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-      <itemizedlist>
-        <listitem>
-          <para>Series: A series is a set of continuous, related elements (for example periods or
-            data elements) which you want to visualize in order to emphasize trends or relations in
-            its data.</para>
-        </listitem>
-        <listitem>
-          <para>Categories: A category is a set of elements (for example indicators or organisation
-            units) for which you want to compare its data.</para>
-        </listitem>
-        <listitem>
-          <para><?oxy_comment_start author="CPersson" timestamp="20160426T111211+0200" comment="Which filter is used in the example?"?>Filter<?oxy_comment_end?>:
-            The filter selection will filter the data displayed in the chart. Note that if you use
-            the data dimension as filter, you can only specify a single indicator or data set as
-            filter item, whereas with other dimension types you can select any number of
-            items.</para>
-        </listitem>
-      </itemizedlist>
-    </example>
+    <para>
+      <example>
+        <title>Chart illustrating the concepts of series, categories and
+          <?oxy_comment_start author="CPersson" timestamp="20160426T111125+0200" comment="Verify in output that titles render correctly"?>filter<?oxy_comment_end?></title>
+        <screenshot>
+          <info>
+            <title>Example chart illustrating the concepts of series, categories
+              <?oxy_comment_start author="CPersson" timestamp="20160426T150730+0200" comment="At next revision, replace graph with a better quality one."?>and<?oxy_comment_end?>
+              filter</title>
+          </info>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="100%" align="center"
+                fileref="resources/images/visualizer/series_category_filter.png" format="PNG"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <itemizedlist>
+          <listitem>
+            <para>Series: A series is a set of continuous, related elements (for example periods or
+              data elements) which you want to visualize in order to emphasize trends or relations
+              in its data.</para>
+          </listitem>
+          <listitem>
+            <para>Categories: A category is a set of elements (for example indicators or
+              organisation units) for which you want to compare its data.</para>
+          </listitem>
+          <listitem>
+            <para><?oxy_comment_start author="CPersson" timestamp="20160426T111211+0200" comment="Which filter is used in the example?"?>Filter<?oxy_comment_end?>:
+              The filter selection will filter the data displayed in the chart. Note that if you use
+              the data dimension as filter, you can only specify a single indicator or data set as
+              filter item, whereas with other dimension types you can select any number of
+              items.</para>
+          </listitem>
+        </itemizedlist>
+      </example>
+    </para>
   </section>
   <section xml:id="datavis_change_display">
     <title>Change the display of your chart</title>
@@ -517,56 +507,56 @@ Also standardize which section it belongs in."?>A
             <colspec colname="c2" colnum="3" colwidth="1.81*"/>
             <thead>
               <row>
-                <entry namest="newCol1" nameend="c1">
+                <entry namest="newCol1" nameend="c1" align="left" valign="top">
                   <para>Option</para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Description</para>
                 </entry>
               </row>
             </thead>
             <tbody>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Data</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Show values</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Shows the values above the series in the chart.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Use 100% stacked values</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Displays 100 % stacked values in column charts.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Use cumulative values</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Displays cumulative values in line charts.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Hide empty categories</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Hides the category items with no data from the chart.</para>
                   <para><emphasis role="bold">None</emphasis>: doesn't hide any of the empty
                     categories</para>
@@ -581,63 +571,63 @@ Also standardize which section it belongs in."?>A
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Trend line</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Displays the trend line which visualizes how your data evolves over time.
                     For example if performance is improving or deteriorating. Useful when periods
                     are selected as category. </para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Target line value/title</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Displays a horizontal line at the given domain value. Useful for example
                     when you want to compare your performance to the current target.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Base line value/title</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Displays a horizontal line at the given domain value. Useful for example
                     when you want to visualize how your performance has evolved since the beginning
                     of a process.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Sort order</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Allows you to sort the values on your chart from either low to high or high
                     to low. </para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Aggregation type</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Defines how the data elements or indicators will be aggregated within the
                     chart. Some of the aggregation types are <emphasis role="bold">By data
                       element</emphasis>, <emphasis role="bold">Count</emphasis>, <emphasis
@@ -645,132 +635,132 @@ Also standardize which section it belongs in."?>A
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Events</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Include only completed events</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Includes only completed events in the aggregation process. This is useful
                     when you want for example to exclude partial events in indicator
                     calculations.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Axes</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Range axis min/max</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Defines the maximum and minimum value which will be visible on the range
                     axis.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Range axis tick steps</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Defines the number of ticks which will be visible on the range axis.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Range axis decimals</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Defines the number of decimals which will be used for range axis
                     values.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Range axis title</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Type a title here to display a label next to the range axis (also referred
                     to as the Y axis). Useful when you want to give context information to the
                     chart, for example about the unit of measure.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Domain axis title</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para> Type a title here to display a label below the domain axis (also referred
                     to as the X axis). Useful when you want to give context information to the
                     chart, for example about the period type.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">General</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Hide chart legend</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Hides the legend and leaves more room for the chart itself.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Hide chart title</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Hides the title (default or custom) of your chart.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Chart title</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Type a title here to display a custom title above the chart. If you don't
                     enter a title, the default title is displayed.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Hide chart subtitle</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Hides the subtitle of your chart.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Chart subtitle</emphasis></para>
                 </entry>
-                <entry>
+                <entry align="left" valign="top">
                   <para>Type a subtitle here to display a custom subtitle above the chart but below
                     the title. If you don't enter a subtitle, no subtitle is displayed in the
                     chart.</para>
@@ -828,52 +818,52 @@ Also standardize which section it belongs in."?>A
               <colspec colname="c2" colnum="3" colwidth="2.6*"/>
               <thead>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Format</para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Action</para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Description</para>
                   </entry>
                 </row>
               </thead>
               <tbody>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>JSON</para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Click <emphasis role="bold">JSON</emphasis></para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Downloads JSON format based on ID property. </para>
                     <para>You can also download JSON format based on <emphasis role="bold"
                         >Code</emphasis> or <emphasis role="bold">Name</emphasis> property. </para>
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>XML</para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Click <emphasis role="bold">XML</emphasis></para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Downloads XML format based on ID property.</para>
                     <para>You can also download XML format based on <emphasis role="bold"
                         >Code</emphasis> or <emphasis role="bold">Name</emphasis> property. </para>
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Microsoft Excel</para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Click <emphasis role="bold">Microsoft Excel</emphasis></para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Downloads Microsoft Excel format based on ID property.</para>
                     <para>You can also download Microsoft Excel format based on <emphasis
                         role="bold">Code</emphasis> or <emphasis role="bold">Name</emphasis>
@@ -881,39 +871,40 @@ Also standardize which section it belongs in."?>A
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>CSV</para>
                   </entry>
-                  <entry>Click <emphasis role="bold">CSV</emphasis></entry>
-                  <entry>
+                  <entry align="left" valign="top">Click <emphasis role="bold"
+                    >CSV</emphasis></entry>
+                  <entry align="left" valign="top">
                     <para>Downloads CSV format based on ID property.</para>
                     <para>You can also download CSV format based on <emphasis role="bold"
                         >Code</emphasis> or <emphasis role="bold">Name</emphasis> property.</para>
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>JRXML</para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Put the cursor on <emphasis role="bold">Advanced</emphasis> and click
                         <emphasis role="bold">JRXML</emphasis></para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Produces a template of a Jasper Report which can be further customized
                       based on your exact needs and used as the basis for a standard report in DHIS
                       2.</para>
                   </entry>
                 </row>
                 <row>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Raw data SQL</para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Put the cursor on <emphasis role="bold">Advanced</emphasis> and click
                         <emphasis role="bold">Raw data SQL</emphasis></para>
                   </entry>
-                  <entry>
+                  <entry align="left" valign="top">
                     <para>Provides the actual SQL statement used to generate the data visualization.
                       You can use it as a data source in a Jasper report, or as the basis for a SQL
                       view.</para>
