@@ -6,9 +6,9 @@
   xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
   xmlns:db="http://docbook.org/ns/docbook" xml:id="pivot">
-  <title>[Review ongoing] Analyze data in pivot tables</title>
+  <title>Analyze data in pivot tables</title>
   <section xml:id="pivot_about">
-    <title>About the Pivot table app</title>
+    <title>About the Pivot Table app</title>
     <para>With the <emphasis role="bold">Pivot Table</emphasis> app, you can create pivot tables
       based on all available data dimensions in DHIS2. A pivot table is a dynamic tool for data
       analysis which lets you summarize and arrange data according to its dimensions. Examples of
@@ -66,6 +66,12 @@ Revise phrase to &quot;A pivot table arranges data...&quot; = correct?"?>can
               be constrained by the maximum RAM which is available to your browser. Consider making
               smaller tables instead of one table which displays all of your data elements and
               indicators together.</para>
+          </listitem>
+          <listitem>
+            <para>The <emphasis role="bold">Pivot Table</emphasis> app supports drill-down and up
+              for periods and organisation unit. This means that you can for example drill down from
+              yearly periods to quarters, months and weeks inside a pivot table. You can also drill
+              down from the global organisation unit to countries, provinces and facilities.</para>
           </listitem>
         </itemizedlist>
       </tip>
@@ -293,11 +299,11 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
           <title>Pivot table options</title>
           <tgroup cols="3" align="left">
             <colspec colname="newCol1" colnum="1" colwidth="1*"/>
-            <colspec colname="c1" colnum="2" colwidth="1*"/>
-            <colspec colname="c2" colnum="3" colwidth="1.5*"/>
+            <colspec colname="c1" colnum="2" colwidth="1.67*"/>
+            <colspec colname="c2" colnum="3" colwidth="2*"/>
             <thead>
               <row>
-                <entry namest="newCol1" nameend="c1">
+                <entry namest="newCol1" nameend="c1" align="left" valign="top">
                   <para><?oxy_comment_start author="Home" timestamp="20160406T170516+0200" comment="Must update this list. More settings in GUI under Parameters&quot;."?>Option<?oxy_comment_end?></para>
                 </entry>
                 <entry align="left" valign="top">
@@ -307,7 +313,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
             </thead>
             <tbody>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Data</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
@@ -320,7 +326,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry/>
+                <entry align="left" valign="top"/>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Show column sub-totals</emphasis></para>
                   <para><emphasis role="bold">Show row sub-totals</emphasis></para>
@@ -332,7 +338,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry/>
+                <entry align="left" valign="top"/>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Show dimension labels</emphasis></para>
                 </entry>
@@ -341,7 +347,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry/>
+                <entry align="left" valign="top"/>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Hide empty rows</emphasis></para>
                 </entry>
@@ -352,7 +358,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry/>
+                <entry align="left" valign="top"/>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Hide empty columns</emphasis></para>
                 </entry>
@@ -363,7 +369,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry/>
+                <entry align="left" valign="top"/>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Skip rounding</emphasis></para>
                 </entry>
@@ -374,7 +380,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry/>
+                <entry align="left" valign="top"/>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Aggregation type</emphasis></para>
                 </entry>
@@ -386,16 +392,24 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry/>
+                <entry align="left" valign="top"/>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Number type</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para/>
+                  <para>Sets the type of value you want to display in the pivot table: <emphasis
+                      role="bold">Value</emphasis>, <emphasis role="bold">Percentage of
+                      row</emphasis> or <emphasis role="bold">Percentage of
+                    column</emphasis>.</para>
+                  <para>The options <emphasis role="bold">Percentage of row</emphasis> and<emphasis
+                      role="bold">Percentage of column</emphasis> mean that you'll display values as
+                    percentages of row total or percentage of column total instead of the aggregated
+                    value. This is useful when you want to see the contribution of data elements,
+                    categories or organisation units to the total value.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Events</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
@@ -407,7 +421,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Organisation units</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
@@ -418,33 +432,42 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                     Leone / Bombali / Tamabaka / Sanya CHP&quot; for Sanya CHP.</para>
                   <para>The organisation units are then sorted alphabetically which will order the
                     organisation units according to the hierarchy.</para>
+                  <para dir="ltr">When you download a pivot table with organisation units as rows
+                    and you've selected <emphasis role="bold">Show hierarchy</emphasis>, each
+                    organisation unit level is rendered as a separate column. This is useful for
+                    example when you create Excel pivot tables on a local computer.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Legend</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Apply legend</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para>Shows a colour indicator next to the values. Currently the GIS legend  are
-                    being used.</para>
+                  <para>Applies a legend to the values. This mean that you can apply a colour to the
+                    values.</para>
+                  <para dir="ltr">Select <emphasis role="bold">By data item</emphasis> to color the
+                    table cells individually according to each data element or indicator.</para>
+                  <para>You configure legends in the <emphasis role="bold">Maintenance</emphasis>
+                    app.</para>
                 </entry>
               </row>
               <row>
-                <entry/>
+                <entry align="left" valign="top"/>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Style</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para>Color the text or background of cells in pivot tables based on legend sets.
-                    You can use this option for scorecards to identify high and low values at a
+                  <para>Colors the text or background of cells in pivot tables based on the selected
+                    legend.</para>
+                  <para>You can use this option for scorecards to identify high and low values at a
                     glance.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Style</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
@@ -459,7 +482,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry/>
+                <entry align="left" valign="top"/>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Font size</emphasis></para>
                 </entry>
@@ -470,7 +493,7 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry/>
+                <entry align="left" valign="top"/>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Digit group separator</emphasis></para>
                 </entry>
@@ -482,98 +505,108 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">General</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Table title</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para/>
+                  <para>Type a title here to display it above the table.</para>
                 </entry>
               </row>
               <row>
-                <entry>
-                  <para><emphasis role="bold">Parameters (for standard reports
-                    only)</emphasis></para>
-                </entry>
                 <entry align="left" valign="top">
-                  <para><emphasis role="bold">Reporting period</emphasis></para>
+                  <para><emphasis role="bold"
+                      ><?oxy_comment_start author="cecilia" timestamp="20170530T133530+0200" comment="These settings must be explained better. Does it work as expected?"?>Parameters<?oxy_comment_end?>
+                      (for standard reports only)</emphasis></para>
                 </entry>
-                <entry align="left" valign="top">
-                  <para/>
+                <entry align="left" valign="top" namest="c1" nameend="c2">
                   <para>
                     <note>
                       <para>You create standard reports in the <emphasis role="bold"
                           >Reports</emphasis> app.</para>
+                      <para>In the <emphasis role="bold">Pivot Table</emphasis> app you set which
+                        parameters the system should prompt the user for.</para>
                     </note>
                   </para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Reporting period</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Controls whether to ask user to enter a report period.</para>
+                </entry>
+              </row>
+              <row>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Organisation unit</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para/>
+                  <para>Controls whether to ask user to enter an organisation unit.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Parent organisation unit</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para/>
+                  <para>Controls whether to ask user to enter a parent organisation unit.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Include regression</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para/>
+                  <para>Includes a column with regression values to the pivot table.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Include cumulative</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para/>
+                  <para>Includes a column with cumulative values to the pivot table.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Sort order</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para/>
+                  <para>Controls the sort order of the values.</para>
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
                   <para/>
                 </entry>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Top limit</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
-                  <para/>
+                  <para>Controls the maximum number of rows to include in the pivot table.</para>
                 </entry>
               </row>
             </tbody>
@@ -600,19 +633,30 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
             download: Microsoft Excel, CSV or HTML.</para>
           <para>The data table will have one column per dimension and contain names of the dimension
             items. </para>
+          <para>
+            <tip>
+              <para dir="ltr">When you download a pivot table with organisation units as rows and
+                you've selected <emphasis role="bold">Show hierarchy</emphasis> in <emphasis
+                  role="bold">Table options</emphasis>, each organisation unit level is rendered as
+                a separate column. This is useful for example when you create Excel pivot tables on
+                a local computer.</para>
+            </tip>
+          </para>
         </listitem>
       </orderedlist>
-      <tip>
-        <para>You can
-          <?oxy_comment_start author="Home" timestamp="20160411T162253+0200" comment="FYI: Information about how you create a pivot tabel in Excel has been removed. Instructions for a different software than DHIS2 shouldn&apos;t been in this topic."?>create<?oxy_comment_end?>
-          a pivot table in
-          <?oxy_comment_start author="Home" timestamp="20160408T095906+0200" comment="Microsoft is a registered trademark, it must be marked in applications and user docs.
+      <para>
+        <tip>
+          <para>You can
+            <?oxy_comment_start author="Home" timestamp="20160411T162253+0200" comment="FYI: Information about how you create a pivot tabel in Excel has been removed. Instructions for a different software than DHIS2 shouldn&apos;t been in this topic."?>create<?oxy_comment_end?>
+            a pivot table in
+            <?oxy_comment_start author="Home" timestamp="20160408T095906+0200" comment="Microsoft is a registered trademark, it must be marked in applications and user docs.
 Refer to: https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general.aspx
 Excel is a registered trademark, it must be marked in applications and user docs.
 Refer to: https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/en-us.aspx#941ec897-4e24-4d80-8b94-47f4122a241b
 "?>Microsoft<?oxy_comment_end?>
-          Excel from the downloaded Excel file.</para>
-      </tip>
+            Excel from the downloaded Excel file.</para>
+        </tip>
+      </para>
     </section>
     <section>
       <title>Download plain data source format</title>

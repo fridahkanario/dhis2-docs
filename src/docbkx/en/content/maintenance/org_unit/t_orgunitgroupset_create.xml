@@ -21,10 +21,12 @@
                 and <emphasis role="bold">Ownership</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>An organisation unit group set is always exclusive: an organisation unit can't be
-                a member of more than one group in a group set.</para>
-            <para>You can only select a single organisation group membership for each group set when
-                you create a new organisation unit.</para>
+            <para>An organisation unit can only be a member of a single organisation unit group
+                within an organisation unit group set.</para>
+        </listitem>
+        <listitem>
+            <para>An organisation unit group can be part of multiple organisation unit group
+                sets.</para>
         </listitem>
         <listitem>
             <para>You can define whether an organisation unit group set is compulsory or not, which

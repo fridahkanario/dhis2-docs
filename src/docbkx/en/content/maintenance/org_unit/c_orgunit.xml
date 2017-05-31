@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook" xml:id="about_organisation_unit">
     <?oxy_comment_start author="cecilia" timestamp="20160524T140340+0200" comment="At next revision, minimize concept info even more and add example graphic." flag="done"?>
-    <title>[Review ongoing] About organisation units</title>
+    <title>About organisation units</title>
     <?oxy_comment_end?>
     <para>The organisation unit hierarchy defines the organisation structure of DHIS2, for example
         how health facilities, administrative areas and other geographical areas are arranged with
@@ -48,6 +48,10 @@ Typically sets up by implementer, maintained at district level." flag="done"?>n
         <listitem>
             <para>An organisation unit can only be a member of a single organisation unit group
                 within an organisation unit group set.</para>
+        </listitem>
+        <listitem>
+            <para>An organisation unit group can be part of multiple organisation unit group
+                sets.</para>
         </listitem>
         <listitem>
             <?oxy_comment_start author="cecilia" timestamp="20160525T120205+0200" comment="At next release, review para. The para is the same in user guide and implementer guides.
