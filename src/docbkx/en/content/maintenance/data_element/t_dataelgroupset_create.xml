@@ -5,13 +5,13 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="create_data_element_group_set">
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="create_data_element_group_set">
     <title>Create or edit a data element group set</title>
     <?oxy_comment_start author="cecilia" timestamp="20160513T112352+0200" comment="At next revision, rephrase into active voice." flag="done"?>
     <para>Data element group sets allows you to categorise multiple data element groups into a set.
         The system uses data element group sets during analysis and reporting to combine similar
-        data element groups into a common theme.</para>
+        data element groups into a common theme. A data element group can be part of multiple data
+        element group sets.</para>
     <?oxy_comment_end?>
     <orderedlist>
         <listitem>
