@@ -13912,7 +13912,7 @@ interval=WEEK" -u admin:district</screen>
     <para>
       <screen>GET /api/minMaxDataElements.json</screen>
     </para>
-    <para><emphasis role="bold">Use filter paremeter</emphasis></para>
+    <para>You can filter the response like this:</para>
     <para><screen>GET /api/minMaxDataElements.json?filter=dataElement.id:eq:UOlfIjgN8X6</screen></para>
     <para><screen>GET /api/minMaxDataElements.json?filter=dataElement.id:in:[UOlfIjgN8X6,xc8gmAKfO95]</screen></para>
     <para>The filter parameter for min-max data elements supports two operators: eq and in.</para>
