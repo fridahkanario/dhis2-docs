@@ -7,14 +7,17 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <title>Manage favorites</title>
-    <para>Saving your charts as favorites makes it easy to find them later. You can also choose to
-        share them with other users as an interpretation or display them on the dashboard.</para>
-    <para>You can view the details and interpretations of your favorites when you open the
-            <?oxy_comment_start author="rachaelb" timestamp="20161010T224006+0200" comment="For 2.26 favorites will be also applied to: event reports, event visualizer, GIS"?><emphasis
-            role="bold">Pivot table</emphasis> or <emphasis role="bold">Data
-            Visualization</emphasis> app<?oxy_comment_end?>. You can edit descriptions, share your
-        favorites, or write interpretations directly in this pane, or you can use the <emphasis
-            role="bold">Favorites</emphasis> menu.</para>
+    <para>Saving your charts or pivot tables as favorites makes it easy to find them later. You can
+        also choose to share them with other users as an interpretation or display them on the
+        dashboard.</para>
+    <para>You view the details and interpretations of your favorites in the
+            <?oxy_comment_start author="rachaelb" timestamp="20161010T224006+0200" comment="For 2.26 favorites will be also applied to: event reports, event visualizer, GIS" id="xfj_2mr_b1b" flag="done"?><?oxy_comment_start author="cecilia" timestamp="20170531T145844+0200" comment="only GIS left on old model, will be changed in version 2.28
+
+2.27: Event Visualizer and Event Reports got new favorite solution" parentID="xfj_2mr_b1b" flag="done" mid="1"?><emphasis
+            role="bold">Pivot Table</emphasis>, <emphasis role="bold">Data Visualizer</emphasis>,
+            <emphasis role="bold">Event Visualizer</emphasis>, <emphasis role="bold">Event
+            Reports</emphasis> app<?oxy_comment_end mid="1"?><?oxy_comment_end?>s. Use the <emphasis
+            role="bold">Favorites</emphasis> menu to manage your favorites.</para>
     <section>
         <title>Open a favorite</title>
         <orderedlist>
@@ -27,6 +30,9 @@
                         role="bold">Prev</emphasis> and <emphasis role="bold">Next</emphasis> to
                     display favorites.</para>
             </listitem>
+            <listitem>
+                <para>Click the name of the favorite you want to open.</para>
+            </listitem>
         </orderedlist>
     </section>
     <section>
@@ -37,8 +43,8 @@
                         as</emphasis>.</para>
             </listitem>
             <listitem>
-<para>Enter a name, title and a description for your
-                    favorite.</para>
+<para>Enter a <emphasis role="bold">Name</emphasis> and a <emphasis role="bold"
+                        >Description</emphasis> for your favorite.</para>
             </listitem>
             <listitem>
                 <para>Click <emphasis role="bold">Save</emphasis>.</para>
@@ -63,38 +69,40 @@
     <section>
         <title>Write an interpretation for a favorite</title>
         <para role="">An interpretation is a link to a resource with a description of the data at a
-            given period. This information is visible on the dashboard. To create an interpretation,
-            you first need to create a favorite. If you've shared your favorite with other people,
-            the interpretation you write is visible to those people.</para>
+            given period. This information is visible in the <emphasis role="bold"
+                >Dashboard</emphasis> app. To create an interpretation, you first need to create a
+            favorite. If you've shared your favorite with other people, the interpretation you write
+            is visible to those people.</para>
         <orderedlist>
             <listitem>
                 <para>Click <emphasis role="bold">Favorites</emphasis> > <emphasis role="bold">Write
                         interpretation</emphasis>.</para>
             </listitem>
             <listitem>
-<para>In the text field, type a comment, question or interpretation. You can see
-                    this information on the <emphasis role="bold">dashboard</emphasis>.</para>
+<para>In the text field, type a comment, question or interpretation. You can see this information in
+                    the <emphasis role="bold">Dashboard</emphasis> app.</para>
             </listitem>
             <listitem>
-                <para>Add a user group that you want to share your favorite with by clicking the
-                        <emphasis role="bold">+</emphasis> icon.</para>
+                <para>Search for a user group that you want to share your favorite with, then click
+                    the <emphasis role="bold">+</emphasis> icon.</para>
             </listitem>
             <listitem>
-<para>Select:<orderedlist>
-                        <listitem>
-                            <para><emphasis role="bold">Allow external access</emphasis> if you want
-                                everyone to view this interpretation.</para>
-                        </listitem>
-                        <listitem>
-                            <para><emphasis role="bold">Public access</emphasis> and choose a
-                                setting: <emphasis role="bold">None</emphasis>, <emphasis
-                                    role="bold">Can view</emphasis>, <emphasis role="bold">Can edit
-                                    and view</emphasis>.</para>
-                        </listitem>
-                        <listitem>
-                            <para><emphasis role="bold">Administrators</emphasis></para>
-                        </listitem>
-                    </orderedlist></para>
+                <para>Change sharing settings for the user groups you want to modify.</para>
+                <itemizedlist>
+                    <listitem>
+                        <para><emphasis role="bold">Can edit and view</emphasis>: Everyone can view
+                            and edit the object.</para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Can view only</emphasis>: Everyone can view the
+                            object.</para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">None</emphasis>: The public won't have access to
+                            the object. This setting is only applicable to <emphasis role="bold"
+                                >Public access</emphasis>. </para>
+                    </listitem>
+                </itemizedlist>
             </listitem>
             <listitem>
                 <para>Click <emphasis role="bold">Share</emphasis>.</para>
@@ -110,7 +118,7 @@
                             >Get link</emphasis>.</para>
                 </listitem>
                 <listitem>
-                    <para>Choose one of the following:</para>
+                    <para>Select one of the following:</para>
                     <itemizedlist>
                         <listitem>
                             <para><emphasis role="bold">Open in this app</emphasis>: You get a URL
