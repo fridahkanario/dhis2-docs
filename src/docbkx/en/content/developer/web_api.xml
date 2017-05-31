@@ -13774,86 +13774,6 @@ interval=WEEK" -u admin:district</screen>
         values to the database:<screen>POST /api/26/predictors/AG10KUJCrRk/dryRun</screen></para>
     </section>
   </section>
-  <section xml:id="webapi_tokens">
-    <title>Tokens</title>
-    <para>The <emphasis>tokens</emphasis> resource provides access tokens to various
-      services.</para>
-    <section>
-      <title>Google Service Account</title>
-      <para>You can retrieve a Google service account OAuth 2.0 access token with a GET request to
-        the following resource.<screen>GET /api/tokens/google</screen></para>
-      <para>The token will be valid for a certain amount of time, after which another token must be
-        requested from this resource. The response contains a cache control header which matches the
-        token expiration. The response will contain the following properties in JSON format.<table
-          frame="all">
-          <title>Token response</title>
-          <tgroup cols="2">
-            <colspec colname="c1" colnum="1" colwidth="1*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.44*"/>
-            <thead>
-              <row>
-                <entry>Property</entry>
-                <entry>Description</entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry>access_token</entry>
-                <entry>The OAuth 2.0 access token to be used when authentication against Google
-                  services.</entry>
-              </row>
-              <row>
-                <entry>expires_in</entry>
-                <entry>The number of seconds until the access token expires, typically 3600 seconds
-                  (1 hour).</entry>
-              </row>
-              <row>
-                <entry>client_id</entry>
-                <entry>The Google service account client id.</entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table></para>
-      <para>This assumes that a Google service account has been set up and configured for DHIS2.
-        Please consult the installation guide for more info.</para>
-    </section>
-  </section>
-  <section xml:id="webapi_metadata_repository">
-    <title>Metadata repository</title>
-    <para>DHIS2 provides a metadata repository containing metadata packages with various content. A
-      metadata package is a DHIS2-compliant JSON document which describes a set of metadata
-      objects.</para>
-    <para>To retrieve an index over available metadata packages you can issue a GET request to the
-        <emphasis role="italic">metadataRepo</emphasis>
-      resource:<screen>GET /api/synchronization/metadataRepo</screen></para>
-    <para>A metadata package entry contains information about the package and a URL to the relevant
-      package. An index could look like
-      this:<screen>{
-  &quot;packages&quot;: [ {
-    &quot;id&quot;: &quot;sierre-leone-demo&quot;,
-    &quot;name&quot;: &quot;Sierra Leone demo&quot;,
-    &quot;description&quot;: &quot;Sierra Leone demo database&quot;,
-    &quot;version&quot;: &quot;0.1&quot;,
-    &quot;href&quot;: &quot;https://dhis2.org/metadata-repo/221/sierra-leone-demo/metadata.json&quot;
-  },
-  {
-    &quot;id&quot;: &quot;trainingland-org-units&quot;,
-    &quot;name&quot;: &quot;Trainingland organisation units&quot;,
-    &quot;description&quot;: &quot;Trainingland organisation units with four levels&quot;,
-    &quot;version&quot;: &quot;0.1&quot;,
-    &quot;href&quot;: &quot;https://dhis2.org/metadata-repo/221/trainingland-org-units/metadata.json&quot;
-  }
- ]
-}</screen></para>
-    <para>A client can follow the URLs and install a metadata package through a POST request with
-      content type <emphasis>text/plain</emphasis> with the metadata package URL as the payload to
-      the <emphasis role="italic">metadataPull</emphasis>
-      resource:<screen>POST /api/synchronization/metadataPull</screen></para>
-    <para>An example curl command looks like
-      this:<screen>curl &quot;localhost:8080/api/synchronization/metadataPull&quot; -X POST
-  -d &quot;https://dhis2.org/metadata-repo/221/trainingland-org-units/metadata.json&quot;
-  -H &quot;Content-Type:text/plain&quot; -u admin:district -v</screen></para>
-  </section>
   <section xml:id="webapi_min_max_data_elements">
     <title>Min-max data elements</title>
     <para>The min-max data elements resource allows you to set minimum and maximum value ranges for data elements.
@@ -13959,5 +13879,96 @@ interval=WEEK" -u admin:district</screen>
   }
 }</screen></para>
     </section>
+  </section>
+  <section xml:id="webapi_lock_exceptions">
+    <title>Lock exceptions</title>
+    <para>The lock exceptions resource allows you to open otherwise locked data sets for data entry
+      for a specific data set, period and organisation unit. You can read lock exceptions from the
+      following resource:<screen>/api/lockExceptions</screen></para>
+    <para>To create a new lock excecption you can use a POST request and specify the data set,
+      period and organisation
+      unit:<screen>POST /api/lockExceptions?ds=BfMAe6Itzgt&amp;pe=201709&amp;ou=DiszpKrYNg8</screen></para>
+    <para>To delete a lock exception you can use a similar request syntax with a DELETE
+      request:<screen>DELETE /api/lockExceptions?ds=BfMAe6Itzgt&amp;pe=201709&amp;ou=DiszpKrYNg8</screen></para>
+  </section>
+  <section xml:id="webapi_tokens">
+    <title>Tokens</title>
+    <para>The <emphasis>tokens</emphasis> resource provides access tokens to various
+      services.</para>
+    <section>
+      <title>Google Service Account</title>
+      <para>You can retrieve a Google service account OAuth 2.0 access token with a GET request to
+        the following resource.<screen>GET /api/tokens/google</screen></para>
+      <para>The token will be valid for a certain amount of time, after which another token must be
+        requested from this resource. The response contains a cache control header which matches the
+        token expiration. The response will contain the following properties in JSON format.<table
+          frame="all">
+          <title>Token response</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.44*"/>
+            <thead>
+              <row>
+                <entry>Property</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>access_token</entry>
+                <entry>The OAuth 2.0 access token to be used when authentication against Google
+                  services.</entry>
+              </row>
+              <row>
+                <entry>expires_in</entry>
+                <entry>The number of seconds until the access token expires, typically 3600 seconds
+                  (1 hour).</entry>
+              </row>
+              <row>
+                <entry>client_id</entry>
+                <entry>The Google service account client id.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
+      <para>This assumes that a Google service account has been set up and configured for DHIS2.
+        Please consult the installation guide for more info.</para>
+    </section>
+  </section>
+  <section xml:id="webapi_metadata_repository">
+    <title>Metadata repository</title>
+    <para>DHIS2 provides a metadata repository containing metadata packages with various content. A
+      metadata package is a DHIS2-compliant JSON document which describes a set of metadata
+      objects.</para>
+    <para>To retrieve an index over available metadata packages you can issue a GET request to the
+        <emphasis role="italic">metadataRepo</emphasis>
+      resource:<screen>GET /api/synchronization/metadataRepo</screen></para>
+    <para>A metadata package entry contains information about the package and a URL to the relevant
+      package. An index could look like
+      this:<screen>{
+  &quot;packages&quot;: [ {
+    &quot;id&quot;: &quot;sierre-leone-demo&quot;,
+    &quot;name&quot;: &quot;Sierra Leone demo&quot;,
+    &quot;description&quot;: &quot;Sierra Leone demo database&quot;,
+    &quot;version&quot;: &quot;0.1&quot;,
+    &quot;href&quot;: &quot;https://dhis2.org/metadata-repo/221/sierra-leone-demo/metadata.json&quot;
+  },
+  {
+    &quot;id&quot;: &quot;trainingland-org-units&quot;,
+    &quot;name&quot;: &quot;Trainingland organisation units&quot;,
+    &quot;description&quot;: &quot;Trainingland organisation units with four levels&quot;,
+    &quot;version&quot;: &quot;0.1&quot;,
+    &quot;href&quot;: &quot;https://dhis2.org/metadata-repo/221/trainingland-org-units/metadata.json&quot;
+  }
+ ]
+}</screen></para>
+    <para>A client can follow the URLs and install a metadata package through a POST request with
+      content type <emphasis>text/plain</emphasis> with the metadata package URL as the payload to
+      the <emphasis role="italic">metadataPull</emphasis>
+      resource:<screen>POST /api/synchronization/metadataPull</screen></para>
+    <para>An example curl command looks like
+      this:<screen>curl &quot;localhost:8080/api/synchronization/metadataPull&quot; -X POST
+  -d &quot;https://dhis2.org/metadata-repo/221/trainingland-org-units/metadata.json&quot;
+  -H &quot;Content-Type:text/plain&quot; -u admin:district -v</screen></para>
   </section>
 </chapter>
