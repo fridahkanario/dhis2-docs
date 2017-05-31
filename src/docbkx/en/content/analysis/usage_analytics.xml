@@ -6,41 +6,46 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook" xml:base="usage_analytics" xml:id="using_usage_analytics">
-    <title>Using the Usage Analytics app</title>
-    <screenshot>
-        <mediaobject>
-            <imageobject>
-                <imagedata align="center" format="PNG" width="100%"
-                    fileref="resources/images/usage_analytics/usage_analytics_interface.png"/>
-            </imageobject>
-        </mediaobject>
-    </screenshot>
-    <para>The <emphasis role="bold">Usage Analytics</emphasis> app lets you visualize statistics on
-        how users are working with the <emphasis role="bold">Dashboard</emphasis>, <emphasis
-            role="bold">Pivot Table</emphasis>, <emphasis role="bold">GIS</emphasis>, <emphasis
-            role="bold">Event Visualizer</emphasis>, <emphasis role="bold">Data
-            Visualizer</emphasis> and <emphasis role="bold">Event Reports</emphasis> apps within
-        DHIS2. With this statistics you can answers questions such as:</para>
-    <itemizedlist>
-        <listitem>
-            <para>How many times people have loaded charts, pivots tables and dashboards?</para>
-        </listitem>
-        <listitem>
-            <para>How many favorites have users created?</para>
-        </listitem>
-        <listitem>
-            <para>How many users that are logging in versus total number of users?</para>
-        </listitem>
-        <listitem>
-            <para>What are the most viewed favorites?</para>
-        </listitem>
-    </itemizedlist>
+    <title>Visualize usage statistics</title>
+    <section>
+        <title>About the Usage Analytics app</title>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata align="center" format="PNG" width="80%"
+                            fileref="resources/images/usage_analytics/usage_analytics_interface.png"
+                        />
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <para>The <emphasis role="bold">Usage Analytics</emphasis> app lets you visualize statistics
+            on how users are working with the <emphasis role="bold">Dashboard</emphasis>, <emphasis
+                role="bold">Pivot Table</emphasis>, <emphasis role="bold">GIS</emphasis>, <emphasis
+                role="bold">Event Visualizer</emphasis>, <emphasis role="bold">Data
+                Visualizer</emphasis> and <emphasis role="bold">Event Reports</emphasis> apps within
+            DHIS2. With this statistics you can answers questions such as:</para>
+        <itemizedlist>
+            <listitem>
+                <para>How many times people have loaded charts, pivots tables and dashboards?</para>
+            </listitem>
+            <listitem>
+                <para>How many favorites have users created?</para>
+            </listitem>
+            <listitem>
+                <para>How many users that are logging in versus total number of users?</para>
+            </listitem>
+            <listitem>
+                <para>What are the most viewed favorites?</para>
+            </listitem>
+        </itemizedlist>
+    </section>
     <section xml:id="usage_analytics_create_chart">
         <title>Create a usage analytics graph</title>
         <orderedlist>
             <listitem>
-                <para>Click <emphasis role="bold">Apps</emphasis> > <emphasis role="bold">Usage
-                        Analytics</emphasis>.</para>
+                <para>Open the <emphasis role="bold">Usage Analytics</emphasis> app.</para>
             </listitem>
             <listitem>
                 <para>Select a <emphasis role="bold">Start date</emphasis> and <emphasis role="bold"
