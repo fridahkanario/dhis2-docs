@@ -18,7 +18,8 @@
         </imageobject>
       </mediaobject>
     </screenshot>
-    <para>With the Event Visualizer app, you can create charts based on event data.</para>
+    <para>With the <emphasis role="bold">Event Visualizer</emphasis> app, you can create charts
+      based on event data.</para>
   </section>
   <section>
     <title>Create a chart</title>
@@ -614,7 +615,8 @@ For exampel: JSON file, table in JSON format?"?>Description<?oxy_comment_end?></
       </listitem>
     </orderedlist>
   </section>
-  <section>
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../generic/favorites.xml" encoding="UTF-8"/>
+        <!-- OBSOLETE: <section>
     <title>Manage chart favorites</title>
     <para>Saving your charts as favorites makes it easy to restore them later. It also gives you the
       opportunity to share them with other users as an interpretation or display them on the
@@ -800,7 +802,7 @@ For exampel: JSON file, table in JSON format?"?>Description<?oxy_comment_end?></
         </listitem>
       </orderedlist>
     </para>
-  </section>
+  </section>  --> 
   <section>
     <title>Visualize a chart as a pivot
       <?oxy_comment_start author="CPersson" timestamp="20160428T152352+0200" comment="At next revision, verify if view as map has been developed."?>table<?oxy_comment_end?></title>
