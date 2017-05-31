@@ -518,7 +518,8 @@ For exampel: JSON file, table in JSON format?"?>Description<?oxy_comment_end?></
       </listitem>
     </orderedlist>
   </section>
-  <section>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../generic/favorites.xml" encoding="UTF-8"/>
+ <!--  OBSOLETE <section>
     <title>Manage event report favorites</title>
     <para>Saving your event reports as favorites makes it easy to restore them later. It also gives
       you the opportunity to display them on the dashboard. </para>
@@ -681,7 +682,7 @@ For exampel: JSON file, table in JSON format?"?>Description<?oxy_comment_end?></
         </listitem>
       </orderedlist>
     </para>
-  </section>
+  </section> -->
   <section>
     <title>Visualize an event report as a chart</title>
     <para>When you have made an event report you can open it as a chart:</para>
