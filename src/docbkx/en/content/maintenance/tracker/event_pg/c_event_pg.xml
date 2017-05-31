@@ -9,280 +9,265 @@
     xml:id="about_event_program">
     <title>About event programs</title>
     <para>Single event <emphasis>without</emphasis> registration programs are called event programs.
-        You configure them in the <emphasis role="bold">Maintenance</emphasis> app.</para>
+        You configure them in the <emphasis role="bold">Maintenance</emphasis> app. Event programs
+        can have three types of data entry forms:</para>
+    <table frame="all">
+        <title>Types of data entry forms for event programs</title>
+        <tgroup cols="2" align="left">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Form type</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Description</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Basic</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Lists all data elements which belong to the program. You can change
+                            the order of the data elements.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Section</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>A section groups data elements. You can then arrange the order of the
+                            sections to create the desired layout of the data entry form.</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Custom</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Defines the data entry form as HTML page. </para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
     <para>
         <note>
-            <para>The functions you have access to depend on your
-                <?oxy_comment_start author="cecilia" timestamp="20160926T113321+0200" comment="Verify with SME: depends on user role?"?>user
-                role's access p<?oxy_comment_end?>ermissions.</para>
+            <itemizedlist>
+                <listitem>
+                    <para>Custom forms takes precedence over section forms if both are
+                        present.</para>
+                </listitem>
+                <listitem>
+                    <para>If no custom or section form are defined, the basic form will be
+                        used.</para>
+                </listitem>
+                <listitem>
+                    <para>The Android apps only supports section forms.</para>
+                </listitem>
+            </itemizedlist>
         </note>
     </para>
-    <section>
-        <title>About data entry forms for event programs</title>
-        <para>Event program can have three types of data entry forms:</para>
-        <table frame="all">
-            <title>Type of data entry forms for event programs</title>
-            <tgroup cols="2" align="left">
-                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-                <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-                <thead>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para>Form type</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Description</para>
-                        </entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para>Basic</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Lists all data elements which belong to the program. You can
-                                change the order of the data elements.</para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para>Section</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>A section groups data elements. You can then arrange the order of
-                                the sections to create the desired layout of the data entry
-                                form.</para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para>Custom</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Defines the data entry form as HTML page. </para>
-                        </entry>
-                    </row>
-                </tbody>
-            </tgroup>
-        </table>
-        <para>
-            <note>
-                <itemizedlist>
-                    <listitem>
-                        <para>Custom forms takes precedence over section forms if both are
-                            present.</para>
-                    </listitem>
-                    <listitem>
-                        <para>If no custom or section form are defined, the basic form will be
-                            used.</para>
-                    </listitem>
-                    <listitem>
-                        <para>The Android apps only supports section forms.</para>
-                    </listitem>
-                </itemizedlist>
-            </note>
-        </para>
-    </section>
-    <section>
-        <title>About program notifications for event programs</title>
-        <para>You can create program notifications for event programs. The notifications are sent
-            either via the internal DHIS2 messaging system, via e-mail or via text messages (SMS).
-            You can use program notifications to, for example, send an automatic reminder to a
-            tracked entity 10 days before a scheduled appointment. You use the program’s tracked
-            entity attributes (for example first name) and program parameters (for example
-            enrollment date) to create a notification template.</para>
-        <para>In the <emphasis role="bold">Parameters</emphasis> field, you'll find a list of
-            available tracked entity attributes and the following program parameters:</para>
-        <table frame="all">
-            <title/>
-            <tgroup cols="3">
-                <colspec colname="newCol3" colnum="1" colwidth="1*"/>
-                <colspec colname="c1" colnum="2" colwidth="1.0*"/>
-                <colspec colname="c2" colnum="3" colwidth="1.0*"/>
-                <thead>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para>Notification type</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Variable name</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Variable code</para>
-                        </entry>
-                    </row>
-                </thead>
-                <tbody>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para>Program</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Current date</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{current_date}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Days since enrollment date</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{days_since_enrollment_date}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Enrollment date</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{enrollment_date}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Incident date</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{incident_date}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Organisation unit name</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{org_unit_name}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Program name</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{program_name}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para>Program stage</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Current date</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{current_date}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Days since due date</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{days_since_due_date}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Days until due date</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <screen>V{days_until_due_date}</screen>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Due date</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{due_date}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Organisation unit name</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{org_unit_name}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Program name</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{program_name}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                    <row>
-                        <entry align="left" valign="top">
-                            <para/>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>Program stage name</para>
-                        </entry>
-                        <entry align="left" valign="top">
-                            <para>
-                                <screen>V{program_stage_name}</screen>
-                            </para>
-                        </entry>
-                    </row>
-                </tbody>
-            </tgroup>
-        </table>
-    </section>
+    <para>You can create program notifications for event programs. The notifications are sent either
+        via the internal DHIS2 messaging system, via e-mail or via text messages (SMS). You can use
+        program notifications to, for example, send an automatic reminder to a tracked entity 10
+        days before a scheduled appointment. You use the program’s tracked entity attributes (for
+        example first name) and program parameters (for example enrollment date) to create a
+        notification template. In the <emphasis role="bold">Parameters</emphasis> field, you'll find
+        a list of available tracked entity attributes and the following program parameters:</para>
+    <table frame="all">
+        <title>Program notification parameters</title>
+        <tgroup cols="3">
+            <colspec colname="newCol3" colnum="1" colwidth="1*"/>
+            <colspec colname="c1" colnum="2" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Notification type</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Variable name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Variable code</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Program</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Current date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{current_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Days since enrollment date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{days_since_enrollment_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Enrollment date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{enrollment_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Incident date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{incident_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Organisation unit name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{org_unit_name}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Program name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{program_name}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Program stage</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Current date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{current_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Days since due date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{days_since_due_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Days until due date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <screen>V{days_until_due_date}</screen>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Due date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{due_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Organisation unit name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{org_unit_name}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Program name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{program_name}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Program stage name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{program_stage_name}</screen>
+                        </para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
 </section>

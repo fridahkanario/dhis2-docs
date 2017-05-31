@@ -255,8 +255,8 @@
                     <entry align="left" valign="top">
                         <para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/using_usage_analytics.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Using the Usage Analytics
-                                app</link></para>
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Visualize usage
+                                statistics</link></para>
                     </entry>
                     <entry align="left" valign="top">
                         <para><emphasis role="bold">Usage Analytics</emphasis></para>
@@ -304,12 +304,12 @@
                     </entry>
                     <entry align="left" valign="top">
                         <para><link
-                                xlink:href="https://docs.dhis2.org/master/en/user/html/configure_program.html"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure
-                            programs</link></para>
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/configure_programs_in_maintenance_app.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Configure programs in the
+                                Maintenance app</link></para>
                     </entry>
                     <entry align="left" valign="top">
-                        <para><emphasis role="bold">Program</emphasis></para>
+                        <para><emphasis role="bold">Maintenance</emphasis></para>
                     </entry>
                 </row>
                 <row>
@@ -469,7 +469,7 @@
                     <entry align="left" valign="top"
                             ><?oxy_comment_start author="cecilia" timestamp="20170527T142059+0200" comment="Before release update link"?><link
                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xlink:href="https://docs.dhis2.org/master/en/user/html/configure_programs_in_Maintenance_app.html"
+                            xlink:href="https://docs.dhis2.org/master/en/user/html/configure_programs_in_maintenance_app.html"
                             >Configure programs in the Maintenance
                                 app</link><?oxy_comment_end?><para><link
                                 xlink:href="https://docs.dhis2.org/master/en/user/html/configure_programs_in_legacy_app.html"

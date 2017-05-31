@@ -181,10 +181,9 @@
                         <para>Types of entities which can be tracked through the system. Can be
                             anything from persons to commodities, for example a medicine or a
                             person.</para>
-                        <para>A program must have one tracked entity. And entity registered must be
-                            specified an tracked entity. To enrol a tracked entity instance into a
-                            program, the tracked entity of an entity and tracked entity of a program
-                            must be the same.</para>
+                        <para>A program must have one tracked entity. To enrol a tracked entity
+                            instance into a program, the tracked entity of an entity and tracked
+                            entity of a program must be the same.</para>
                     </entry>
                     <entry>
                         <para>Create, edit, clone, delete, show details and translate</para>

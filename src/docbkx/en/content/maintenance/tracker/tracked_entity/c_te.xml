@@ -8,52 +8,10 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="about_tracked_entity">
     <title>About tracked entities</title>
-    <note>
-        <para>The functions you have access to depend on your
-            <?oxy_comment_start author="cecilia" timestamp="20160926T113321+0200" comment="Verify with SME: depends on user role?"?>user
-            role's access p<?oxy_comment_end?>ermissions.</para>
-    </note>
-    <table frame="all">
-        <title>Program metadata objects in the Maintenance app</title>
-        <tgroup cols="2">
-            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-            <thead>
-                <row>
-                    <entry>
-                        <para>Object type</para>
-                    </entry>
-                    <entry>
-                        <para>Available functions</para>
-                    </entry>
-                </row>
-            </thead>
-            <tbody>
-                <row>
-                    <entry>
-                        <para>Tracked entity</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, clone, delete, show details and translate</para>
-                    </entry>
-                </row>
-                <row>
-                    <entry>
-                        <para>Tracked entity attribute</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, clone, share, delete, show details and translate</para>
-                    </entry>
-                </row>
-                <row>
-                    <entry>
-                        <para>Relationship type</para>
-                    </entry>
-                    <entry>
-                        <para>Create, edit, clone, delete, show details and translate</para>
-                    </entry>
-                </row>
-            </tbody>
-        </tgroup>
-    </table>
+    <para>A tracked entity is a types of entities which can be tracked through the system. It can be
+        anything from persons to commodities, for example a medicine or a person.</para>
+    <para>A program must have one tracked entity. To enrol a tracked entity instance into a program,
+        the tracked entity of an entity and tracked entity of a program must be the same.</para>
+    <para>Tracked entity attributes are used to register extra information for a tracked entity.
+        Tracked entity attributes can be shared between programs.</para>
 </section>
