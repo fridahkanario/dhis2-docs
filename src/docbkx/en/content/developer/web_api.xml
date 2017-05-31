@@ -4758,6 +4758,13 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                 <entry>Refers to the value of a program indicator.</entry>
               </row>
               <row>
+                <entry>R{&lt;dataset-id>.&lt;metric>}</entry>
+                <entry>Reporting rate</entry>
+                <entry>Refers to a reporting rate metric. The metric can be REPORTING_RATE,
+                  REPORTING_RATE_ON_TIME, ACTUAL_REPORTS, ACTUAL_REPORTS_ON_TIME,
+                  EXPECTED_REPORTS.</entry>
+              </row>
+              <row>
                 <entry>C{&lt;constant-id&gt;}</entry>
                 <entry>Constant</entry>
                 <entry>Refers to a constant value.</entry>
@@ -4782,10 +4789,14 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>Data element operands can include any of category option combination and attribute
         option combination, and use wildcards to indicate any
         value:<screen>#{P3jJH5Tu5VC.S34ULMcHMca} + #{P3jJH5Tu5VC.*.j8vBiBqGf6O} + #{P3jJH5Tu5VC.S34ULMcHMca.*}</screen></para>
-      <para>An example which use a program data element and a program
+      <para>An example which uses a program data element and a program
         attribute:<screen>( D{eBAyeGv0exc.vV9UWAZohSf} * A{IpHINAT79UW.cejWyOfXge6} ) / D{eBAyeGv0exc.GieVkTxp4HH}</screen></para>
       <para>An example which combines program indicators and aggregate
         indicators:<screen>I{EMOt6Fwhs1n} * 1000 / #{WUg3MYWQ7pt}</screen></para>
+      <para>An example which uses a reporting rate looks like
+        this:<screen>R{BfMAe6Itzgt.REPORTING_RATE} * #{P3jJH5Tu5VC.S34ULMcHMca}</screen></para>
+      <para>Another example which uses actual data set
+        reports:<screen>R{BfMAe6Itzgt.ACTUAL_REPORTS} / R{BfMAe6Itzgt.EXPECTED_REPORTS}</screen></para>
       <para>Expressions can be any kind of valid mathematical expression, as an
         example:<screen>( 2 * #{P3jJH5Tu5VC.S34ULMcHMca} ) / ( #{FQ2o8UBlcrS.S34ULMcHMca} - 200 ) * 25</screen></para>
     </section>
