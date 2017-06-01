@@ -12,5 +12,5 @@
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="c_event_pg.xml" encoding="UTF-8"/> 
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wf_event_pg.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_event_pg_create.xml" encoding="UTF-8"/>
-    
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="r_event_pg_not_para.xml" encoding="UTF-8"/>
    </section>

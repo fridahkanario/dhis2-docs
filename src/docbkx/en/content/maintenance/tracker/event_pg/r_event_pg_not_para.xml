@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="reference_information_event_program_notification_parameters">
+    <title>Reference information: Program notification parameters</title>
+    <table frame="all">
+        <title>Program notification parameters to use in program notifications</title>
+        <tgroup cols="3">
+            <colspec colname="newCol3" colnum="1" colwidth="1*"/>
+            <colspec colname="c1" colnum="2" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.0*"/>
+            <thead>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Notification type</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Variable name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Variable code</para>
+                    </entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Program</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Current date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{current_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Days since enrollment date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{days_since_enrollment_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Enrollment date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{enrollment_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Incident date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{incident_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Organisation unit name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{org_unit_name}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Program name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{program_name}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Program stage</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Current date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{current_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Days since due date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{days_since_due_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Days until due date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <screen>V{days_until_due_date}</screen>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Due date</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{due_date}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Organisation unit name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{org_unit_name}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Program name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{program_name}</screen>
+                        </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Program stage name</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>
+                            <screen>V{program_stage_name}</screen>
+                        </para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>    
+</section>
+

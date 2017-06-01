@@ -39,7 +39,7 @@
                                 <para><emphasis role="bold">Name</emphasis></para>
                             </entry>
                             <entry align="left" valign="top">
-                                <para/>
+                                <para>The name of the program.</para>
                             </entry>
                         </row>
                         <row>
@@ -47,7 +47,8 @@
                                 <para><emphasis role="bold">Short name</emphasis></para>
                             </entry>
                             <entry align="left" valign="top">
-                                <para/>
+                                <para>A short name of the
+                                    <?oxy_comment_start author="cecilia" timestamp="20170601T101047+0200" comment="Where will this be used?"?>program<?oxy_comment_end?>.</para>
                             </entry>
                         </row>
                         <row>
@@ -55,7 +56,8 @@
                                 <para><emphasis role="bold">Description</emphasis></para>
                             </entry>
                             <entry align="left" valign="top">
-                                <para/>
+                                <para>A detailed description of the
+                                    <?oxy_comment_start author="cecilia" timestamp="20170601T102112+0200" comment="Where is this description displayed?"?>program<?oxy_comment_end?>.</para>
                             </entry>
                         </row>
                         <row>
@@ -63,7 +65,10 @@
                                 <para><emphasis role="bold">Version</emphasis></para>
                             </entry>
                             <entry align="left" valign="top">
-                                <para/>
+                                <para>The version of the program. This is used for example when
+                                    people collect data offline in an Android implementation. When
+                                    they go online and synchronize their metadata, they should get
+                                    the latest version of the program.</para>
                             </entry>
                         </row>
                         <row>
@@ -71,7 +76,9 @@
                                 <para><emphasis role="bold">Category combination</emphasis></para>
                             </entry>
                             <entry align="left" valign="top">
-                                <para/>
+                                <para>The category combination you want to use. The
+                                    <?oxy_comment_start author="cecilia" timestamp="20170601T102249+0200" comment="Is there a default setting?"?>default<?oxy_comment_end?>
+                                    setting is ??</para>
                             </entry>
                         </row>
                         <row>
@@ -79,7 +86,9 @@
                                 <para><emphasis role="bold">Data approval workflow</emphasis></para>
                             </entry>
                             <entry align="left" valign="top">
-                                <para/>
+                                <para>The data approval workflow you want to use. The
+                                    <?oxy_comment_start author="cecilia" timestamp="20170601T102249+0200" comment="Is there a default setting?"?>default<?oxy_comment_end?>
+                                    setting is ??</para>
                             </entry>
                         </row>
                         <row>
@@ -88,15 +97,39 @@
                                     date</emphasis></para>
                             </entry>
                             <entry align="left" valign="top">
-                                <para/>
+                                <para>Defines the number of days for which you can edit a completed
+                                    event. This means that when an event is completed and the
+                                    specified number of expiry days has passed, the event is
+                                    locked.</para>
+                                <para>
+                                    <example>
+                                        <para>If you set "Completed events expiry days" to 10", an
+                                            event is locked ten days after the completion date.
+                                            After this date you can no longer edit the event.</para>
+                                    </example>
+                                </para>
                             </entry>
                         </row>
                         <row>
                             <entry align="left" valign="top">
-                                <para><emphasis role="bold">Expiry days</emphasis></para>
+                                <para><emphasis role="bold">Expiry
+                                        <?oxy_comment_start author="cecilia" timestamp="20170601T101631+0200" comment="No Expiry period type as in legacy app?"?>days<?oxy_comment_end?></emphasis></para>
                             </entry>
                             <entry align="left" valign="top">
-                                <para/>
+                                <para>The expiry days defines for how many days after the end of the
+                                    previous period, an event can be edited. The period type is
+                                    defined by the expiry period type. This means that when the
+                                    specified number of expiry days has passed since the end date of
+                                    the previous period, the events from that period are
+                                    locked.</para>
+                                <para>
+                                    <example>
+                                        <para>If you set the expiry type to "Monthly" and the expiry
+                                            days to "10" and the month is October, then you can't
+                                            add or edit an event to October after the 10th of
+                                            November.</para>
+                                    </example>
+                                </para>
                             </entry>
                         </row>
                     </tbody>
@@ -131,7 +164,8 @@
                                         <para><emphasis role="bold">Compulsory</emphasis></para>
                                     </entry>
                                     <entry align="left" valign="top">
-                                        <para/>
+                                        <para>The value of this data element must be filled into
+                                            data entry form before you can comple the event.</para>
                                     </entry>
                                 </row>
                                 <row>
@@ -140,7 +174,11 @@
                                                 elsewhere</emphasis></para>
                                     </entry>
                                     <entry align="left" valign="top">
-                                        <para/>
+                                        <?oxy_comment_start author="cecilia" timestamp="20170601T103058+0200" comment="More info needed"?>
+                                        <para>Specify if the value of this data element comes from
+                                            other facility, not in the facility where this data is
+                                            entered.</para>
+                                        <?oxy_comment_end?>
                                     </entry>
                                 </row>
                                 <row>
@@ -149,7 +187,11 @@
                                             reports</emphasis></para>
                                     </entry>
                                     <entry align="left" valign="top">
-                                        <para/>
+                                        <?oxy_comment_start author="cecilia" timestamp="20170601T103108+0200" comment="More info needed"?>
+                                        <para>Displays the value of this data element into the
+                                            single event without registration data entry
+                                            function.</para>
+                                        <?oxy_comment_end?>
                                     </entry>
                                 </row>
                                 <row>
@@ -157,7 +199,8 @@
                                         <para><emphasis role="bold">Date in future</emphasis></para>
                                     </entry>
                                     <entry align="left" valign="top">
-                                        <para/>
+                                        <para>Will allow user to select a date in future for date
+                                            data elements.</para>
                                     </entry>
                                 </row>
                                 <row>
@@ -166,7 +209,9 @@
                                                 radio</emphasis></para>
                                     </entry>
                                     <entry align="left" valign="top">
+                                        <?oxy_comment_start author="cecilia" timestamp="20170601T102716+0200" comment="What does this mean?"?>
                                         <para/>
+                                        <?oxy_comment_end?>
                                     </entry>
                                 </row>
                             </tbody>
@@ -179,26 +224,81 @@
             </orderedlist>
         </listitem>
         <listitem>
-            <para>Create data entry form(s).</para>
+            <para>Create the data entry form(s).</para>
+            <para>The data entry forms decide how the data elements will be displayed to the user in
+                the <emphasis role="bold">Event Capture</emphasis> app.</para>
             <itemizedlist>
                 <listitem>
-                    <para>Basic: Drag and drop the data elements in the order you want.</para>
+                    <para><emphasis role="bold">Basic</emphasis>: Drag and drop the data elements in
+                        the order you want.</para>
                 </listitem>
                 <listitem>
-                    <para>Section: Create section(s) and add data elements. You can drag and drop
-                        the sections to change the order of them.</para>
+                    <para><emphasis role="bold">Section</emphasis>: Create section(s) and add data
+                        elements. </para>
+                    <orderedlist>
+                        <listitem>
+                            <para>Click the add button and enter a section name.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Click the section so it's highlighted by a black line.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Add data elements by clicking the plus sign next to the data
+                                elements' names.</para>
+                        </listitem>
+                        <listitem>
+                            <para>Repeat above steps until you've all the sections you need.</para>
+                        </listitem>
+                        <listitem>
+                            <para>(Optional) Click the
+                                <?oxy_comment_start author="cecilia" timestamp="20170601T103955+0200" comment="Would be good if you could click anywhere in the section."?>options<?oxy_comment_end?>
+                                menu and drag and drop the sections to change the order of
+                                them.</para>
+                        </listitem>
+                    </orderedlist>
                 </listitem>
                 <listitem>
-                    <para>Custom: Use the WYSIWYG editor to create a completely customized
-                        form.</para>
+                    <para><emphasis role="bold">Custom</emphasis>: Use the WYSIWYG editor to create
+                        a completely customized form. If you select <emphasis role="bold"
+                            >Source</emphasis>, you can paste HTML code directly in the editing
+                        area. You can also insert images for example flags or logos.</para>
                 </listitem>
             </itemizedlist>
         </listitem>
         <listitem>
-            <para>Assign organisation units.</para>
+            <para>Assign the program to organisation unit(s).</para>
+            <orderedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">Assign organisation units</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>In the organisation tree, double-click the organisation units you want to
+                        add to the program to.</para>
+                    <para>You can locate an organisation unit in the tree by expanding the branches
+                        (click on the arrow symbol), or by searching for it by
+                        <?oxy_comment_start author="cecilia" timestamp="20160526T100438+0200" comment="Issue submitted on GitHub to make it possible to search by code too, jsut like the Create new org unit form." flag="done"?>name<?oxy_comment_end?>.
+                        The selected organisation units display in orange.</para>
+                </listitem>
+            </orderedlist>
         </listitem>
         <listitem>
             <para>Create program notification(s).</para>
+            <note>
+                <para>You configure when the program notifications are sent in the <emphasis
+                        role="bold">Data Administration</emphasis> app > <emphasis role="bold"
+                        >Scheduling</emphasis> > <emphasis role="bold">Program notifications
+                        scheduler</emphasis>. </para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Click <emphasis role="bold">Run now</emphasis> to send the program
+                            notifications immediately.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Select a time and click <emphasis role="bold">Start</emphasis> to
+                            schedule the program notifications to be send at a specific time.</para>
+                    </listitem>
+                </itemizedlist>
+            </note>
             <orderedlist>
                 <listitem>
                     <para>What?</para>
@@ -214,6 +314,509 @@
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
         </listitem>
-    </orderedlist>    
+    </orderedlist>
+    <section>
+        <title>Enter event program details</title>
+        <orderedlist>
+            <listitem>
+                <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
+                        role="bold">Program</emphasis> > <emphasis role="bold"
+                    >Program</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>Click the add button.</para>
+            </listitem>
+            <listitem>
+                <para>Enter program details, then click next.</para>
+                <informaltable frame="all">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                        <thead>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para>Field</para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>Description</para>
+                                </entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Name</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>The name of the program.</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Short name</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>A short name of the
+                                        <?oxy_comment_start author="cecilia" timestamp="20170601T101047+0200" comment="Where will this be used?
+
+Default i analytics apps charts title" flag="done"?>program<?oxy_comment_end?>.
+                                        The short name is used as the default chart or table title
+                                        in the analytics apps.</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Description</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>A detailed description of the
+                                        <?oxy_comment_start author="cecilia" timestamp="20170601T102112+0200" comment="Where is this description displayed?
+
+Data Entry but not by default
+monitoring and evaluation people"?>program<?oxy_comment_end?>.</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Version</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>The version of the program. This is used for example when
+                                        people collect data offline in an Android implementation.
+                                        When they go online and synchronize their metadata, they
+                                        should get the latest version of the program.</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Category
+                                        combination</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>The category combination you want to use. The default
+                                        setting is <emphasis role="bold">None</emphasis>.</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Data approval
+                                        workflow</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>The data approval workflow you want to use. The default
+                                        setting is <emphasis role="bold"
+                                            ><?oxy_comment_start author="cecilia" timestamp="20170601T120008+0200" comment="Suggest to SME to change UI to &quot;None&quot;."?>No<?oxy_comment_end?>
+                                            value</emphasis>.</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Completed events expiry
+                                            date</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>Defines the number of days for which you can edit a
+                                        completed event. This means that when an event is completed
+                                        and the specified number of expiry days has passed, the
+                                        event is locked.</para>
+                                    <para>
+                                        <example>
+                                            <para>If you set "Completed events expiry days" to 10",
+                                                an event is locked ten days after the completion
+                                                date. After this date you can no longer edit the
+                                                event.</para>
+                                        </example>
+                                    </para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Expiry period type</emphasis></para>
+                                    <para><emphasis role="bold">Expiry
+                                            <?oxy_comment_start author="cecilia" timestamp="20170601T101631+0200" comment="No Expiry period type as in legacy app?
+
+Verifed with SME that it should be added, submitted JIRA issue."?>days<?oxy_comment_end?></emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>The expiry days defines for how many days after the end of
+                                        the previous period, an event can be edited. The period type
+                                        is defined by the expiry period type. This means that when
+                                        the specified number of expiry days has passed since the end
+                                        date of the previous period, the events from that period are
+                                        locked.</para>
+                                    <para>
+                                        <example>
+                                            <para>If you set the expiry type to "Monthly" and the
+                                                expiry days to "10" and the month is October, then
+                                                you can't add or edit an event to October after the
+                                                10th of November.</para>
+                                        </example>
+                                    </para>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </informaltable>
+            </listitem>
+            <listitem>
+                <para>Click next.</para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>Assign data elements</title>
+        <orderedlist>
+            <listitem>
+                <para>Click <emphasis role="bold">Assign data elements</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>In the list of available items, double-click the data elements you want to
+                    assign to the event program.</para>
+            </listitem>
+            <listitem>
+                <para>(Optional) For each data element, add additional settings: </para>
+                <informaltable frame="all">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                        <thead>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para>Setting</para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>Description</para>
+                                </entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Compulsory</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>The value of this data element must be filled into data
+                                        entry form before you can comple the event.</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Allow provided
+                                        elsewhere</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <?oxy_comment_start author="cecilia" timestamp="20170601T103058+0200" comment="More info needed"?>
+                                    <para>Specify if the value of this data element comes from other
+                                        facility, not in the facility where this data is
+                                        entered.</para>
+                                    <?oxy_comment_end?>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Display in reports</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <?oxy_comment_start author="cecilia" timestamp="20170601T103108+0200" comment="More info needed"?>
+                                    <para>Displays the value of this data element into the single
+                                        event without registration data entry function.</para>
+                                    <?oxy_comment_end?>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Date in future</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>Will allow user to select a date in future for date data
+                                        elements.</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Render option as
+                                        radio</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>Displays a radio button in the data entry form. It's only
+                                        possible for option sets.</para>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </informaltable>
+            </listitem>
+            <listitem>
+                <para>Click next.</para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>Create data entry forms</title>
+        <para>The data entry forms decide how the data elements will be displayed to the user in the
+                <emphasis role="bold">Event Capture</emphasis> app.</para>
+        <orderedlist>
+            <listitem>
+                <para>Click <emphasis role="bold">Create data entry form</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold">Basic</emphasis>, <emphasis role="bold"
+                        >Section</emphasis> or <emphasis role="bold">Custom</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>To create a <emphasis role="bold">Basic</emphasis> data entry form: Drag and
+                    drop the data elements in the order you want.</para>
+            </listitem>
+            <listitem>
+                <para>To create a <emphasis role="bold">Section</emphasis> data entry form:</para>
+                <orderedlist>
+                    <listitem>
+                        <para>Click the add button and enter a section name.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Click the section so it's highlighted by a black line.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Add data elements by clicking the plus sign next to the data elements'
+                            names.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Repeat above steps until you've all the sections you need.</para>
+                    </listitem>
+                    <listitem>
+                        <para>(Optional) Click the
+                            <?oxy_comment_start author="cecilia" timestamp="20170601T103955+0200" comment="Would be good if you could click anywhere in the section."?>options<?oxy_comment_end?>
+                            menu and drag and drop the sections to change the order of them.</para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>To create a <emphasis role="bold">Custom</emphasis> data entry from: Use the
+                    WYSIWYG editor to create a completely customized form. If you select <emphasis
+                        role="bold">Source</emphasis>, you can paste HTML code directly in the
+                    editing area. You can also insert images for example flags or logos.</para>
+            </listitem>
+            <listitem>
+                <para>Click next.</para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>Assign organisation units</title>
+        <orderedlist>
+            <listitem>
+                <para>Click <emphasis role="bold">Assign organisation units</emphasis>.</para>
+            </listitem>
+            <listitem>
+                <para>In the organisation tree, double-click the organisation units you want to add
+                    to the program to.</para>
+                <para>You can locate an organisation unit in the tree by expanding the branches
+                    (click on the arrow symbol), or by searching for it by
+                    <?oxy_comment_start author="cecilia" timestamp="20160526T100438+0200" comment="Issue submitted on GitHub to make it possible to search by code too, jsut like the Create new org unit form." flag="done"?>name<?oxy_comment_end?>.
+                    The selected organisation units display in orange.</para>
+            </listitem>
+            <listitem>
+                <para>Click next.</para>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>Create program notifications</title>
+        <note>
+            <para>You configure when the program notifications are sent in the <emphasis role="bold"
+                    >Data Administration</emphasis> app > <emphasis role="bold"
+                    >Scheduling</emphasis> > <emphasis role="bold">Program notifications
+                    scheduler</emphasis>. </para>
+            <itemizedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">Run now</emphasis> to send the program
+                        notifications immediately.</para>
+                </listitem>
+                <listitem>
+                    <para>Select a time and click <emphasis role="bold">Start</emphasis> to schedule
+                        the program notifications to be send at a specific time.</para>
+                </listitem>
+            </itemizedlist>
+        </note>
+        <orderedlist>
+            <listitem>
+                <para>Create the message you want to send:</para>
+                <orderedlist>
+                    <listitem>
+                        <para>Click <emphasis role="bold">What to send?</emphasis>.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Enter a <emphasis role="bold">Name</emphasis>.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Create the <emphasis role="bold">Subject template</emphasis>:
+                            Double-click the parameters in the <emphasis role="bold">Template
+                                variables</emphasis> field to add them to your subject.</para>
+                        <para>
+                            <note>
+                                <para>The subject is not included in text messages.</para>
+                            </note>
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>Create the <emphasis role="bold">Message template</emphasis>:
+                            Double-click the parameter names in the <emphasis role="bold">Template
+                                variables</emphasis> list to add them to your message. </para>
+                        <para>
+                            <?oxy_comment_start author="cecilia" timestamp="20170601T111404+0200" comment="example still valid?"?>
+                            <example>
+                                <para>Dear A{w75KJ2mc4zz}, You're now enrolled in
+                                    V{program_name}.</para>
+                            </example>
+                            <?oxy_comment_end?>
+                        </para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>Define <emphasis>when</emphasis> you want to send the message:</para>
+                <orderedlist>
+                    <listitem>
+                        <para>Click <emphasis role="bold">When to send it?</emphasis>.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Select a <emphasis role="bold">Notification trigger</emphasis>.</para>
+                        <informaltable frame="all">
+                            <tgroup cols="2" align="left">
+                                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                                <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                                <thead>
+                                    <row>
+                                        <entry align="left" valign="top">
+                                            <para>Notification trigger</para>
+                                        </entry>
+                                        <entry align="left" valign="top">
+                                            <para>Description</para>
+                                        </entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry align="left" valign="top">
+                                            <para>Program stage completion</para>
+                                        </entry>
+                                        <entry align="left" valign="top">
+                                            <para>The program stage notification is sent when the
+                                                program stage is completed</para>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry align="left" valign="top">
+                                            <para>Days scheduled (due date)</para>
+                                        </entry>
+                                        <entry align="left" valign="top">
+                                            <para>The program stage notification is sent XX number
+                                                of days before or after the due date</para>
+                                            <para>You need to enter the number of days before or
+                                                after the scheduled date that the notification will
+                                                be send.</para>
+                                        </entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </informaltable>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>Define <emphasis>who</emphasis> you want to send the message to:</para>
+                <orderedlist>
+                    <listitem>
+                        <para>Click <emphasis role="bold">Who to send it to?</emphasis>.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Select a <emphasis role="bold">Notification
+                            recipient</emphasis>.</para>
+                        <informaltable frame="all">
+                            <tgroup cols="2" align="left">
+                                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                                <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                                <thead>
+                                    <row>
+                                        <entry align="left" valign="top">
+                                            <para>Notification recipient</para>
+                                        </entry>
+                                        <entry align="left" valign="top">
+                                            <para>Description</para>
+                                        </entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry align="left" valign="top">
+                                            <para>Tracked entity instance</para>
+                                        </entry>
+                                        <entry align="left" valign="top">
+                                            <para>Receives program notifications via e-mail or text
+                                                message.</para>
+                                            <para>To receive a program notification, the recipient
+                                                must have an e-mail address or a phone number
+                                                attribute.</para>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry align="left" valign="top">
+                                            <para>Organisation unit contact</para>
+                                        </entry>
+                                        <entry align="left" valign="top">
+                                            <para>Receives program notifications via e-mail or text
+                                                message.</para>
+                                            <para>To receive a program notification, the receiving
+                                                organisation unit must have a registered contact
+                                                person with e-mail address and phone number.</para>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry align="left" valign="top">
+                                            <para>Users at organisation unit</para>
+                                        </entry>
+                                        <entry align="left" valign="top">
+                                            <para>All users registered to the selected organisation
+                                                unit receive program notifications via the internal
+                                                DHIS2 messaging system.</para>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry align="left" valign="top">
+                                            <para>User group</para>
+                                        </entry>
+                                        <entry align="left" valign="top">
+                                            <para>All members of the selected user group receive the
+                                                program notifications via the internal DHIS2
+                                                messaging system</para>
+                                        </entry>
+                                    </row>
+                                    <row>
+                                        <entry align="left" valign="top">
+                                            <?oxy_comment_start author="cecilia" timestamp="20170601T112453+0200" comment="What does this option do?"?>
+                                            <para>Program</para>
+                                            <?oxy_comment_end?>
+                                        </entry>
+                                        <entry align="left" valign="top">
+                                            <para>TBA</para>
+                                        </entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </informaltable>
+                    </listitem>
+                    <listitem>
+                        <para>Click <emphasis role="bold">Save</emphasis>.</para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>Repeat above steps to create all the program notifications you need.</para>
+            </listitem>
+            <listitem>
+                <para>Click <emphasis role="bold">Save</emphasis>.</para>
+            </listitem>
+        </orderedlist>
+    </section>    
 </section>
 

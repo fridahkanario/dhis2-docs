@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="workflow_event_program">
-    <title>Workflow</title>
+    <title>Workflow - create an event program</title>
     <orderedlist>
         <listitem>
             <para>Enter the event program details.</para>
@@ -21,7 +21,7 @@
                 >Custom</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>Assign organisation units.</para>
+            <para>Assign the program to organisation unit(s).</para>
         </listitem>
         <listitem>
             <para>Create program notification(s).</para>

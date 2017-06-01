@@ -10,12 +10,11 @@
     <title>About
         <?oxy_comment_start author="cecilia" timestamp="20170527T141059+0200" comment="Add introducation phrase what you use a program to do, very generic. Check training material"?>programs<?oxy_comment_end?></title>
     <para dir="ltr">Traditionally, public health information systems have been reporting aggregated
-        data of service provision across its health programs. This does not allow for tracing the
-        people being provided with these services. In DHIS2, you can define your own programs with
-        stages. These programs are a essential part of the "tracker" functionality which lets you
-        track individual records. You can also track other ‘entities’ such as wells or
-        insurances.</para>
-    <para>There are two types of programs:</para>
+        data of service provision across its health programs. This does not allow you to trace the
+        people provided with these services. In DHIS2, you can define your own programs with stages.
+        These programs are a essential part of the "tracker" functionality which lets you track
+        individual records. You can also track other ‘entities’ such as wells or insurances. You can
+        create two types of programs:</para>
     <table frame="all">
         <title>Program types</title>
         <tgroup cols="3" align="left">
@@ -24,23 +23,23 @@
             <colspec colname="c3" colnum="3" colwidth="1.0*"/>
             <thead>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program type</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Description</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Examples of use</para>
                     </entry>
                 </row>
             </thead>
             <tbody>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Event program</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Single event <emphasis>without</emphasis> registration program
                             (anonymous program or SEWoR)</para>
                         <para dir="ltr">Anonymous, individual events are tracked through the health
@@ -50,7 +49,7 @@
                         <para>Has only one program stage.</para>
                         <?oxy_custom_end?>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
                         <para>To record health cases without registering any
                             <?oxy_comment_start author="cecilia" timestamp="20170527T141746+0200" comment="Any information about the patiend/TEI in the system?"?>information<?oxy_comment_end?>
@@ -60,10 +59,10 @@
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Tracker program</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Single event <emphasis>with</emphasis> registration program
                             (SEWR)</para>
                         <para dir="ltr">An entity (person, commodity, etc.) is tracked through each
@@ -72,22 +71,22 @@
                         <para>A tracked entity instance (TEI) can only enroll in the program
                             once.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>To record birth certificate and death certificate.</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para/>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Multi events <emphasis>with</emphasis> registration program
                             (MEWR)</para>
                         <para dir="ltr">An entity (person, commodity, etc.) is tracked through each
                             individual transaction with the health system</para>
                         <para>Has multiple program stages.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Mother Health Program with stages as ANC Visit (2-4+), Delivery, PNC
                             Visit.</para>
                     </entry>
@@ -95,12 +94,6 @@
             </tbody>
         </tgroup>
     </table>
-    <para>
-        <note>
-            <para>A program must be specified with only one tracked entity. Only tracked entity as
-                same as the tracked entity of program can enroll into that program.</para>
-        </note>
-    </para>
     <para>To create a program, you must first configure several types of metadata objects. You
         create these metadata objects in the <emphasis role="bold">Maintenance</emphasis> app or the
             <emphasis role="bold">Program / Attributes</emphasis> (legacy) app.</para>
@@ -112,92 +105,99 @@
             <colspec colname="c2" colnum="3" colwidth="1.0*"/>
             <thead>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Object type</para>
                     </entry>
-                    <entry>Description</entry>
-                    <entry>
+                    <entry align="left" valign="top">Description</entry>
+                    <entry align="left" valign="top">
                         <para>Available functions</para>
                     </entry>
                 </row>
             </thead>
             <tbody>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Event program</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>A program to record single event without registration</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, share, delete, show details and translate</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program
                             <?oxy_comment_start author="cecilia" timestamp="20161004T162510+0200" comment="Documented" flag="done"?>indicator<?oxy_comment_end?></para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>An expression based on data elements and attributes of tracked
                             entities which can be used to calculate values based on a
                             formula.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, share, delete, show details and translate</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program
                             <?oxy_comment_start author="cecilia" timestamp="20161004T162532+0200" comment="Documented" flag="done"?>rule<?oxy_comment_end?></para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Allows you to create and control dynamic behavior of the user
                             interface in the <emphasis role="bold">Tracker Capture</emphasis> and
                                 <emphasis role="bold">Event Capture</emphasis> apps.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, delete, show details and translate</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Relationship type</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Defines the relationship between tracked entity A and tracked entity
                             B, for example mother and child.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, clone, delete, show details and translate</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Tracked entity</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Types of entities which can be tracked through the system. Can be
                             anything from persons to commodities, for example a medicine or a
                             person.</para>
                         <para>A program must have one tracked entity. To enrol a tracked entity
                             instance into a program, the tracked entity of an entity and tracked
                             entity of a program must be the same.</para>
+                        <para>
+                            <note>
+                                <para>A program must be specified with only one tracked entity. Only
+                                    tracked entity as same as the tracked entity of program can
+                                    enroll into that program.</para>
+                            </note>
+                        </para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, clone, delete, show details and translate</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Tracked entity attribute</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Used to register extra information for a tracked entity.</para>
                         <para>Can be shared between programs.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, clone, share, delete, show details and translate</para>
                     </entry>
                 </row>
@@ -214,24 +214,24 @@
             <colspec colname="c2" colnum="3" colwidth="1.0*"/>
             <thead>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Object type</para>
                     </entry>
-                    <entry>Description</entry>
-                    <entry>
+                    <entry align="left" valign="top">Description</entry>
+                    <entry align="left" valign="top">
                         <para>Available functions</para>
                     </entry>
                 </row>
             </thead>
             <tbody>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para><?oxy_comment_start author="cecilia" timestamp="20161004T162501+0200" comment="Documented" flag="done"?>Program<?oxy_comment_end?></para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>A program consist of program stages.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, share, delete, assign to organisation units, show
                             details and
                             <?oxy_comment_start author="cecilia" timestamp="20161004T170542+0200" comment="You can also Design custom registration form.
@@ -240,92 +240,92 @@ A separate topic?"?>translate<?oxy_comment_end?></para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program
                             <?oxy_comment_start author="cecilia" timestamp="20161005T105204+0200" comment="Documented." flag="done"?>stage<?oxy_comment_end?></para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>A program stage defines which actions should be taken at each
                             stage.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, change sort order,
                             <?oxy_comment_start author="cecilia" timestamp="20161004T165628+0200" comment="Verify with SME: how do you delete a program stage?"?>delete<?oxy_comment_end?>,
                             show details and translate</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program stage
                             <?oxy_comment_start author="cecilia" timestamp="20161005T110524+0200" comment="delete, translate, display not documented
 WIll move into Mtn app for 2.26"?>section<?oxy_comment_end?></para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>N/A</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, change sort order, delete, show details and
                             translate</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program indicator
                             <?oxy_comment_start author="cecilia" timestamp="20161004T165334+0200" comment="Documented." flag="done"?>group<?oxy_comment_end?></para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>A group of program indicators</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, delete, show details and translate</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Validation
                             <?oxy_comment_start author="cecilia" timestamp="20161005T104818+0200" comment="Documented" flag="done"?>rule<?oxy_comment_end?></para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>A validation rule is based on an expression which defines a
                             relationship between data element values.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit and delete</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program notification</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Automated message reminder </para>
                         <para>Set reminders to be automatically sent to enrolled tracked entity
                             instances before scheduled appointments and after missed visits.</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit and delete</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Program stage
                             <?oxy_comment_start author="cecilia" timestamp="20161005T144821+0200" comment="Documented" flag="done"?>notification<?oxy_comment_end?></para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>-</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit and delete</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Design custom registration form</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>-</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>-</para>
                     </entry>
                 </row>
