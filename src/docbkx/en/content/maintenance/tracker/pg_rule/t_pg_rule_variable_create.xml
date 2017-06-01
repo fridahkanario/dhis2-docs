@@ -18,14 +18,8 @@
             <para>Click the add button.</para>
         </listitem>
         <listitem>
-            <para>Select a <emphasis role="bold">Program</emphasis> and enter:<itemizedlist>
-                    <listitem>
-                        <para><emphasis role="bold">Name</emphasis></para>
-                    </listitem>
-                    <listitem>
-                        <para><emphasis role="bold">Code</emphasis></para>
-                    </listitem>
-                </itemizedlist></para>
+            <para>Select a <emphasis role="bold">Program</emphasis> and enter a <emphasis
+                    role="bold">Name</emphasis>.</para>
         </listitem>
         <?oxy_comment_start author="cecilia" timestamp="20170525T123318+0200" comment="An expl. of this option is needed."?>
         <listitem>
