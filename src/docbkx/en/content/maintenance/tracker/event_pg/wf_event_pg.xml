@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="workflow_event_program">
-    <title>Workflow - create an event program</title>
+    <title>Workflow: Create an event program</title>
     <orderedlist>
         <listitem>
             <para>Enter the event program details.</para>

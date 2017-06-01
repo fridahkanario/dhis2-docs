@@ -133,8 +133,7 @@
                     </entry>
                     <entry align="left" valign="top">
                         <para>An expression based on data elements and attributes of tracked
-                            entities which can be used to calculate values based on a
-                            formula.</para>
+                            entities which you use to calculate values based on a formula.</para>
                     </entry>
                     <entry align="left" valign="top">
                         <para>Create, edit, share, delete, show details and translate</para>
@@ -149,6 +148,19 @@
                         <para>Allows you to create and control dynamic behavior of the user
                             interface in the <emphasis role="bold">Tracker Capture</emphasis> and
                                 <emphasis role="bold">Event Capture</emphasis> apps.</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Create, edit, delete, show details and translate</para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para>Program
+                            <?oxy_comment_start author="cecilia" timestamp="20161004T162532+0200" comment="Documented" flag="done"?>rule<?oxy_comment_end?>
+                            variable</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para>Variables you use to create program rule expressions.</para>
                     </entry>
                     <entry align="left" valign="top">
                         <para>Create, edit, delete, show details and translate</para>
