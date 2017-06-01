@@ -26,13 +26,16 @@
     there is limited Internet connectivity. DHIS2 provides robust export-import functionality to
     fulfill these needs. </para>
   <para>To access the main Import-Export module, choose <guimenu>Services-&gt;Import-Export. </guimenu>A number of services are available, all of which will be described in detail in respective sections below. </para>
-  <screenshot>
-    <mediaobject>
-      <imageobject>
-        <imagedata width="80%" align="center"  fileref="resources/images/import_export/import_export_overview.png" format="PNG"/>
-      </imageobject>
-    </mediaobject>
-  </screenshot>
+  <para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata width="80%" align="center"
+            fileref="resources/images/import_export/import_export_overview.png" format="PNG"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+  </para>
   <section>
     <title>Meta-data import</title>
     <section>
@@ -288,34 +291,150 @@
       </screenshot>
       <para>Simply choose the objects which you would like to export, and click <guibutton>&quot;Export&quot;</guibutton>. </para>
     </section>
-    <section>
-      <title>Meta-data detailed export</title>
-      <para>In certain implementations, it may be useful to create groups of metadata objects which should always be exported together. To access this feature, click &quot; Meta-data detailed export&quot; from the left side menu of the &quot;Import-export&quot; dialog. </para>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="60%" align="center" fileref="resources/images/import_export/metadata_detailed_export_main.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-      <para>A list of available metadata export filters will be shown. Click on the name of the filter you would like to edit and then select &quot;Edit&quot; from the context menu. An example of the dialog is shown below. </para>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="75%" align="center" fileref="resources/images/import_export/metadata_detail_export_select.png"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-      <para>In this example, we have created a metadata export filter, to export all &quot;Constants&quot; from the system. If any meta-data objects have been selected to be part of the filter, they will be highlighted in green. Click on the name of the objects you would like to export, and add them to the right side to be selected to be part of the export. Once you have composed the filter as needed, click &quot;Save&quot; (when editing) or &quot;Add&quot; (when adding a new metadata filter). </para>
-      <para>To export the filter, click on the name from the main &quot;Meta-data detailed export&quot; menu, and choose &quot;Export&quot; from the context menu. The following dialog will appear. </para>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="40%" align="center" fileref="resources/images/import_export/metadata_detail_export_dialog.png"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-      <para>You can choose to export the data as XML or JSON format. You can also specify whether or not the result should be zipped or unzipped. Lastly, if you click check &quot;Export with dependencies&quot;, all dependent meta-data objects which the ones you have selected depend upon, will also be exported. </para>
+    <section xml:id="metadata_export_dependencies">
+      <title>Metadata export with dependencies</title>
+      <para>Metadata export with dependencies lets you create canned exports for metadata objects.
+        This type of  export will include the metadata objects and the metadata object's related
+        objects, that is the metadata which belong together with the main object.</para>
+      <table frame="all">
+        <title>Object types and their dependencies</title>
+        <tgroup cols="2" align="left">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry align="left" valign="top">
+                <para>Object type</para>
+              </entry>
+              <entry align="left" valign="top">
+                <para>Dependencies included in export</para>
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry align="left" valign="top">
+                <para><emphasis role="bold"
+                    xml:id="docs-internal-guid-4a3662ce-63b9-1efd-e640-8ba874d1bcde">Data
+                    set</emphasis></para>
+              </entry>
+              <entry align="left" valign="top">
+                <para dir="ltr">Data elements</para>
+                <para dir="ltr">Sections</para>
+                <para dir="ltr">Indicators</para>
+                <para dir="ltr">Indicator types</para>
+                <para dir="ltr">Attributes</para>
+                <para dir="ltr">Data entry forms</para>
+                <para dir="ltr">Legend sets</para>
+                <para dir="ltr">Legends</para>
+                <para dir="ltr">Category combinations</para>
+                <para dir="ltr">Categories</para>
+                <para dir="ltr">Category options</para>
+                <para dir="ltr">Category option combinations</para>
+                <para>Option sets</para>
+              </entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">
+                <para>Program</para>
+              </entry>
+              <entry align="left" valign="top">
+                <para dir="ltr">Data entry form</para>
+                <para dir="ltr">Tracked entity</para>
+                <para dir="ltr">Program stages</para>
+                <para dir="ltr">Program attributes</para>
+                <para dir="ltr">Program indicators</para>
+                <para dir="ltr">Program rules</para>
+                <para dir="ltr">Program rule actions</para>
+                <para dir="ltr">Program rule variables</para>
+                <para dir="ltr">Program attributes</para>
+                <para dir="ltr">Data elements</para>
+                <para dir="ltr">Category combinations</para>
+                <para dir="ltr">Categories</para>
+                <para dir="ltr">Category options</para>
+                <para dir="ltr">Category option combinations</para>
+                <para>Option sets</para>
+              </entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">
+                <para>Category combination </para>
+              </entry>
+              <entry align="left" valign="top">
+                <para dir="ltr">Category combinations</para>
+                <para dir="ltr">Categories</para>
+                <para dir="ltr">Category options</para>
+                <para dir="ltr">Category option combinations</para>
+                <para>Attributes</para>
+              </entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">
+                <para>Dashboard</para>
+              </entry>
+              <entry align="left" valign="top">
+                <para dir="ltr">Dashboard items</para>
+                <para dir="ltr">Charts</para>
+                <para dir="ltr">Event charts</para>
+                <para dir="ltr">Pivot tables</para>
+                <para dir="ltr">Event reports</para>
+                <para dir="ltr">Maps</para>
+                <para dir="ltr">Reports</para>
+                <para>Resources</para>
+              </entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">
+                <para>Data element group</para>
+              </entry>
+              <entry align="left" valign="top">
+                <para dir="ltr">Data elements</para>
+                <para dir="ltr">Category combinations</para>
+                <para dir="ltr">Categories</para>
+                <para dir="ltr">Category options</para>
+                <para dir="ltr">Category option combinations</para>
+                <para dir="ltr">Option sets</para>
+                <para dir="ltr">Attributes</para>
+                <para dir="ltr">Legend sets</para>
+                <para>Legends</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <orderedlist>
+        <listitem>
+          <para>Open the <emphasis role="bold">Import-Export</emphasis> app.</para>
+        </listitem>
+        <listitem>
+          <para>Click <emphasis role="bold">Metadata dependency export</emphasis>.</para>
+        </listitem>
+        <listitem>
+          <para>Select an <emphasis role="bold">Object type</emphasis>: <emphasis role="bold">Data
+              set</emphasis>, <emphasis role="bold">Program</emphasis>, <emphasis role="bold"
+              >category combo</emphasis>, <emphasis role="bold">Dashboard</emphasis> or <emphasis
+              role="bold">Data element group</emphasis>.</para>
+        </listitem>
+        <listitem>
+          <para>Select an <emphasis role="bold">Object</emphasis>.</para>
+        </listitem>
+        <listitem>
+          <para>Select a <emphasis role="bold">Format</emphasis>.</para>
+        </listitem>
+        <listitem>
+          <para>Select a format: <emphasis role="bold">XML</emphasis> or <emphasis role="bold"
+              >JSON</emphasis>.</para>
+        </listitem>
+        <listitem>
+          <para>Select <emphasis role="bold">Compression</emphasis>: <emphasis role="bold"
+              >Zip</emphasis>, <emphasis role="bold">Gzip</emphasis> or <emphasis role="bold"
+              >Uncompressed</emphasis>.</para>
+        </listitem>
+        <listitem>
+          <para>Click <emphasis role="bold">Export</emphasis>. The export file is downloaded to your
+            local computer.</para>
+        </listitem>
+      </orderedlist>
     </section>
     <section>
       <title>Data export</title>
