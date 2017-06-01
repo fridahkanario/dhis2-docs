@@ -81,7 +81,7 @@
             </itemizedlist><screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="40%"
+                        <imagedata width="30%"
                             fileref="resources/images/datastore_manager/datamgr_search_namespaces_keys.png"
                             format="png" align="left"/>
                     </imageobject>
@@ -93,7 +93,7 @@
         <para>Use the search tool in the workspace toolbar to search your JSON library.<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="40%"
+                        <imagedata width="30%"
                             fileref="resources/images/datastore_manager/datamgr_searchJSON.png"
                             format="png" align="left"/>
                     </imageobject>
