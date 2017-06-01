@@ -71,11 +71,7 @@
                         the key name to search for a specific key in a namespace.</para>
                 </listitem>
                 <listitem>
-                    <para>Enter a namespace name followed by <emphasis role="bold">#</emphasis> to
-                        search for namespaces only.</para>
-                </listitem>
-                <listitem>
-                    <para>Enter the name of a key followed by <emphasis role="bold">#</emphasis> to
+                    <para>Enter <emphasis role="bold">#</emphasis> followed by the name of a key to
                         search for keys only.</para>
                 </listitem>
             </itemizedlist><screenshot>
