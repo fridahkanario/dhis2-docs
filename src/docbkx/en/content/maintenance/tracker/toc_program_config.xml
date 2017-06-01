@@ -7,7 +7,7 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="configure_programs_in_maintenance_app">
-      <title>[Work in progress] Configure programs in the Maintenance
+      <title>Configure programs in the Maintenance
     <?oxy_comment_start author="cecilia" timestamp="20160926T105910+0200" comment="Is there a workflow for this?"?>app<?oxy_comment_end?></title>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="c_program.xml" encoding="UTF-8"/>
     
