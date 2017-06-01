@@ -8,24 +8,98 @@
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="datastore_manager_app">
     <title>Datastore Manager</title>
-    <para>The Datastore Manager is intended for advanced-level DHIS2 users. You can read more about the Data store here: <link xmlns:xlink="http://www.w3.org/1999/xlink"
-        xlink:href="https://docs.dhis2.org/master/en/developer/html/webapi_data_store.html"> DHIS2 data store</link>.</para>  
+    <para>The Datastore Manager is intended for advanced-level DHIS2 users. Before you use the
+        Datastore Manager, you can read more about the Data store here: <link
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="https://docs.dhis2.org/master/en/developer/html/webapi_data_store.html">
+            DHIS2 data store</link>.</para>  
     <section>
         <title>Using the Datastore Manager</title>
         <para>The Datastore Manager lets you manage the content of the web API data stores. This is helpful when managing apps and external scripts.</para></section>
    
-    <section><title>Add a new namespace or key to the Datastore Manager</title>
-        <para><itemizedlist>
-            <listitem><para>Click <emphasis role="bold">New</emphasis>.</para></listitem>
-            <listitem><para>Enter a name for the namespace you want to create.</para></listitem>
-            <listitem><para>Enter a key value, and select <emphasis role="bold">Create</emphasis>. The new namespace displays in the left pane.</para></listitem></itemizedlist></para></section>
+    <section><title>Add a new namespace and key to the Datastore Manager</title>
+        <para>Note: You have to create a namespace before you can add a key to it.<orderedlist>
+                <listitem>
+                    <para>Click <emphasis role="bold">New</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Enter a name for the namespace you want to create.</para>
+                </listitem>
+                <listitem>
+                    <para>Enter a key name, and select <emphasis role="bold">Create</emphasis>. The
+                        new namespace displays in the left pane.</para>
+                </listitem>
+            </orderedlist></para></section>
+    <section>
+        <title>Add a key to an existing namespace in the Datastore Manager</title>
+        <para>To add a new key to an existing namespace in the Datastore Manager, <orderedlist>
+                <listitem>
+                    <para>Select the namespace you want to add a key to.</para>
+                </listitem>
+                <listitem>
+                    <para>Click the options menu, and click <emphasis role="bold">New key</emphasis>.<screenshot>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata width="40%"
+                                        fileref="resources/images/datastore_manager/datamgr_add_key.png"
+                                        format="png" align="left"/>
+                                </imageobject>
+                            </mediaobject>
+                        </screenshot></para>
+                </listitem>
+                <listitem>
+                    <para>Enter a key name in the New key dialog box.</para>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">Create</emphasis>. The new key is added to the
+                        namespace you selected.</para>
+                </listitem>
+            </orderedlist></para>
+    </section>
     
     
     <section><title>Delete a namespace or key from the Datastore Manager </title>
-        <para>To delete a namespace, or key, click the Options menu, and then click <emphasis role="bold">Delete</emphasis>.<itemizedlist>
-        <listitem><para>Click the Options menu, and then click <emphasis role="bold">Delete</emphasis>.</para></listitem>
-        <listitem><para>Click <emphasis role="bold">Delete</emphasis>.</para>
-        </listitem></itemizedlist></para></section>
+        <para>To delete a namespace, or key, click the Options menu, and then click <emphasis
+                role="bold">Delete</emphasis>, and then <emphasis role="bold">Delete</emphasis>
+            again. Note that if you delete the only key in a namespace, you will also delete the
+            namespace it belongs to.</para></section>
+    <section>
+        <title>Search for namespaces or keys</title>
+        <para>Use the search tool in the top left corner to search for namespaces and keys as follows:<itemizedlist>
+                <listitem>
+                    <para>Enter a namespace name followed by <emphasis role="bold">#</emphasis> and
+                        the key name to search for a specific key in a namespace.</para>
+                </listitem>
+                <listitem>
+                    <para>Enter a namespace name followed by <emphasis role="bold">#</emphasis> to
+                        search for namespaces only.</para>
+                </listitem>
+                <listitem>
+                    <para>Enter the name of a key followed by <emphasis role="bold">#</emphasis> to
+                        search for keys only.</para>
+                </listitem>
+            </itemizedlist><screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="40%"
+                            fileref="resources/images/datastore_manager/datamgr_search_namespaces_keys.png"
+                            format="png" align="left"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot></para>
+    </section>
+    <section>
+        <title>Search your JSON library</title>
+        <para>Use the search tool in the workspace toolbar to search your JSON library.<screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="40%"
+                            fileref="resources/images/datastore_manager/datamgr_searchJSON.png"
+                            format="png" align="left"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot></para>
+    </section>
     
     <section><title>Edit namespaces or keys in the Datastore Manager</title>
         <para>Use the <emphasis role="bold">Search</emphasis> tool to find namespaces or keys in your datastore. When you edit your content, you can toggle between the <emphasis role="bold">Tree</emphasis> view and the <emphasis role="bold">Code</emphasis> view. Use the <emphasis role="bold">Tree</emphasis> view to get an overview of the contents of the Datastore. Use the <emphasis role="bold">Code</emphasis> view to edit your code directly in the code editor. Remember to save your work by clicking the <emphasis role="bold">Save</emphasis> button.
