@@ -103,13 +103,28 @@
   <section xml:id="using_reporting_resources">
     <title>Using resources</title>
     <para>The resource tool allows you to upload both files from your local computer to the DHIS
-      server and to add links to other resources on the Internet through URLs. If you want to share
-      a direct link to the DHIS2 resources you can right click on the &quot;view resource&quot;
-      button and copy the link address.</para>
-    <para>To create a resource click on the &quot;Add new&quot; button. Enter a name for the
-      resource, then choose between uploading a file or external URL. If you chose file upload click
-      &quot;Choose file&quot; and select your file your local computer. If you chose URL enter the
-      link to the resource on the Internet. Then click &quot;Save&quot;.</para>
+      server and to add links to other resources on the Internet through URLs. If cloud storage is
+      configured for your system, resources will be saved there.</para>
+    <para>To create a new resource:</para>
+    <orderedlist>
+      <listitem>
+        <para>Open the <emphasis role="bold">Reports</emphasis> app and click <emphasis role="bold"
+            >Resource</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Add new</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Enter a <emphasis role="bold">Name</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Select a <emphasis role="bold">Type</emphasis>: <emphasis role="bold">Upload
+            file</emphasis> or <emphasis role="bold">External URL</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Save</emphasis>.</para>
+      </listitem>
+    </orderedlist>
   </section>
   <section xml:id="using_reporting_reporting_rate_summary">
     <title>Using reporting rate summary</title>
