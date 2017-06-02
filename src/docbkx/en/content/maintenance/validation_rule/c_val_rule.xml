@@ -74,26 +74,22 @@
     </table>
     <section xml:id="sliding_windows">
         <title>About sliding windows</title>
-        <para>Validation rules can calculate data based on <emphasis>sliding windows</emphasis>. In
-            DHIS2, a sliding window is used to select intervals of time that do not have fixed
-            periods. Sliding windows have a size, that is to say, the number of days to cover, a
-            starting point and an end point. In DHIS2, we use sliding windows in a slightly
-            different way to sliding windows as they are generally defined here: <link
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="https://en.wikipedia.org/wiki/Sliding_window_protocol">Sliding window
-                protocol</link>. Use sliding windows as follows:<table frame="all">
-                <title>Difference when you use or don't use sliding windows in validation
-                    rules</title>
+        <para>You can use sliding windows to group data <emphasis>across multiple periods</emphasis>
+            as opposed to selecting data for <emphasis>a single period.</emphasis>. Sliding windows
+            have a size, that is to say, the number of days to cover, a starting point and an end
+                point.<table frame="all">
+                <title>Different behavior of validation rules when you use or don't use sliding
+                    windows</title>
                 <tgroup cols="2">
                     <colspec colname="c1" colnum="1" colwidth="1.0*"/>
                     <colspec colname="c2" colnum="2" colwidth="1.0*"/>
                     <thead>
                         <row>
                             <entry>
-                                <para>Validation rules with sliding windows</para>
+                                <para>With sliding windows</para>
                             </entry>
                             <entry>
-                                <para>Validation rules without sliding windows</para>
+                                <para>Without sliding windows</para>
                             </entry>
                         </row>
                     </thead>
@@ -118,17 +114,17 @@
                         <row>
                             <entry>
                                 <para>The position of the sliding window is always<emphasis>
-                                        relevant to</emphasis> the period being compared.</para>
+                                        relative to</emphasis> the period being compared.</para>
                             </entry>
                             <entry>
-                                <para>Data is always positioned at the <emphasis>current level
-                                    </emphasis>you're comparing data to.</para>
+                                <para>Data is always selected for the <emphasis>same
+                                        period</emphasis> as the period being compared.</para>
                             </entry>
                         </row>
                     </tbody>
                 </tgroup>
             </table></para>
-        <para>See also: How to use sliding windows when <link
+        <para>See also: How to use sliding windows when you're <link
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 xlink:href="https://docs.dhis2.org/master/en/user/html/manage_validation_rule.html#create_validation_rule"
                 >Creating or editing a validation rule</link>.</para>
@@ -141,7 +137,7 @@
                     >validation rule analysis</link></emphasis>, you can choose to run all of the
             validation rules in your system, or just the validation rules in one group.</para>
     </section>
-    <section>
+    <section xml:id="validation_notifications">
         <title>About validation notifications</title>
         <para>You can configure a validation rule analysis to automatically send notifications about
             validation errors to selected user groups. These messages are called

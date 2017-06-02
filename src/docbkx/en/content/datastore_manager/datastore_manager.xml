@@ -123,7 +123,7 @@
                     <imageobject>
                         <imagedata width="40%"
                             fileref="resources/images/datastore_manager/datamgr_editcode_error.png"
-                            format="png" align="left"/>
+                            format="png" align="left" scalefit="1"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
