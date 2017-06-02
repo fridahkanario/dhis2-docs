@@ -89,7 +89,7 @@
         <para>Use the search tool in the workspace toolbar to search your JSON library.<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="30%"
+                        <imagedata
                             fileref="resources/images/datastore_manager/datamgr_searchJSON.png"
                             format="png" align="left"/>
                     </imageobject>
