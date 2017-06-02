@@ -72,7 +72,7 @@
             </tbody>
         </tgroup>
     </table>
-    <section>
+    <section xml:id="sliding_windows">
         <title>About sliding windows</title>
         <para>Validation rules can calculate data based on <emphasis>sliding windows</emphasis>. In
             DHIS2, a sliding window is used to select intervals of time that do not have fixed
