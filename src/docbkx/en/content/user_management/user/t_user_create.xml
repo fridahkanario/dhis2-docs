@@ -61,10 +61,17 @@
                             </imageobject>
                         </mediaobject>
                     </screenshot>
-                    <para>Choose this option if you want to send an invitation by email to the user.
+                    <para>
+                        Choose this option if you want to send an invitation by email to the user.
                         Then she/he must return to DHIS2 and finish setting up their user account.
                         The account that the user finishes setting up will be limited according to
-                        how you configure the account.</para>
+                        how you configure the account.
+                    </para>
+                    
+                    <para>
+                        In order to use this feature "Enable email message notifications"  in SystemSettings -> Messaging should be checked.
+                    </para>
+                    
                     <note>
                         <para>You may not select this option to create an account with
                             &quot;critical&quot; system authorities such as All, Scheduling
