@@ -72,6 +72,9 @@
                             Eliminate duplicate data elements, SQL View Management, Change system
                             settings, and List, Add or Delete user roles.</para>
                     </note>
+                    <para>
+                        In order to use this feature "Enable email message notifications"  in SystemSettings -> Messaging should be checked.
+                    </para>
                     <para>Enter the email address to which the invitation should be sent. If you
                         want to, you may also enter the user name that the account will have. If you
                         leave the user name empty, then the user may choose their own user name when
