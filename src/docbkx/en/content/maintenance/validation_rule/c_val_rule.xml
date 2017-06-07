@@ -77,8 +77,18 @@
         <para>You can use sliding windows to group data <emphasis>across multiple periods</emphasis>
             as opposed to selecting data for <emphasis>a single period.</emphasis>. Sliding windows
             have a size, that is to say, the number of days to cover, a starting point and an end
-                point.<table frame="all">
-                <title>Different behavior of validation rules when you use or don't use sliding
+            point. The example below shows a sliding window that is customized to display weekly
+            periods, a predicator, and an expression that compares the number of cases against the
+            threshold of the period. Whenever the threshold is exceeded, a warning message displays.<screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="40%"
+                            fileref="resources/images/maintenance/validation_rules_sliding_window.gif"
+                            format="gif" align="left"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot><table frame="all">
+                <title>Different behavior of validation rules when you use or do not use sliding
                     windows</title>
                 <tgroup cols="2">
                     <colspec colname="c1" colnum="1" colwidth="1.0*"/>
