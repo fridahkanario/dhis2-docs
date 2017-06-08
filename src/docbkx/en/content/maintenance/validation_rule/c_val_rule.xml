@@ -75,7 +75,7 @@
     <section xml:id="sliding_windows">
         <title>About sliding windows</title>
         <para>You can use sliding windows to group data <emphasis>across multiple periods</emphasis>
-            as opposed to selecting data for <emphasis>a single period.</emphasis>. Sliding windows
+            as opposed to selecting data for <emphasis>a single period</emphasis>. Sliding windows
             have a size, that is to say, the number of days to cover, a starting point and an end
             point. The example below shows a sliding window that is customized to display weekly
             periods, a predicator, and an expression that compares the number of cases against the
