@@ -263,13 +263,13 @@ downloaded to the folder that you specified.</para>
     </table>
     <para>
       <example>
-        <title>File naming of program rule</title>
+        <title>File naming of program rule topics</title>
         <para>
           <screenshot>
             <mediaobject>
               <imageobject>
-                <imagedata width="80%" align="center"
-                  fileref="resources/images/implmentation_guide/doc_topic_name.png" format="PNG"/>
+                <imagedata width="70%" align="center"
+                  fileref="resources/images/implementation_guide/doc_topic_name.png" format="PNG"/>
               </imageobject>
             </mediaobject>
           </screenshot>
