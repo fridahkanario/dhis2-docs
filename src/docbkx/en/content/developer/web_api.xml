@@ -4583,6 +4583,21 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       dataSet resource is optimized for data entry clients for validating a data set / form, and can
       be accessed like
       this:<screen>/api/26/validation/dataSet/QX4ZTUbOt3a.json?pe=201501&amp;ou=DiszpKrYNg8</screen></para>
+    <para>In addition to validate rules based on data set, there are two additional methods for
+      performing validation: Custom validation and Scheduled validation.</para>
+    <para>Custom validation can be initiated through the "Data Quality" app, where you can configure
+      the periods, validation rule groups and organisation units to be included in the analysis and
+      if you want to send out notifications for the results found. The result of this analysis will
+      be a list of violations found using your criteria.</para>
+    <para>The scheduled validation on the other hand, is an async task you can chose to scheduled to
+      run once a day, or you can trigger it using the resource table endpoint as described in  <link
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xlink:href="https://docs.dhis2.org/master/en/developer/html/dhis2_developer_manual_full.html#webapi_generating_resource_analytics_tables"
+        >resource tables</link> When running the scheduled validation task, any violations found
+      will be persisted as validation results. These results can be accessed trouh the <link
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xlink:href="https://docs.dhis2.org/master/en/developer/html/dhis2_developer_manual_full.html#webapi_validation_results"
+        >validation result api</link>.</para>
     <para>The first path variable is an identifier referring to the data set to validate. XML and
       JSON resource representations are supported. The response contains violations to validation
       rules. This will be extended with more validation types in coming versions.</para>
@@ -4670,6 +4685,18 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         </tgroup>
       </table>
     </para>
+  </section>
+  <section>
+    <title>Validation Results</title>
+    <para>Validation results are objects created when violations are found during a scheduled
+      validation analysis. These results can be accessed through the api using the following
+      endpoint:<screen>/api/26/validationResults</screen></para>
+    <para>You can also inspect an individual result using the validation result id in this
+      endpoint:<screen>/api/26/validationResults/&lt;id></screen></para>
+    <para>Validation results are sent out to the appropriate users once every day, but can also be
+      manually triggered to run on demand using the following api
+      endpoint:<screen>/api/26/validation/sendNotifications</screen></para>
+    <para>Only unsendt results are sendt using this endpoint.</para>
   </section>
   <section xml:id="webapi_data_integrity">
     <title>Data integrity</title>
@@ -9795,6 +9822,10 @@ interval=WEEK" -u admin:district</screen>
         </tbody>
       </tgroup>
     </table>
+    <para>"Data Quality" and "Data Surveillance" can be run through the monitoring task, triggered
+      with the following endpoint:<screen>/api/26/resourceTables/monitoring</screen></para>
+    <para>This task will analyse your validation rules, find any violations and persist them as
+      validation results.</para>
     <para>These requests will return immediately and initiate a server-side process.</para>
   </section>
   <section xml:id="webapi_maintenance">
