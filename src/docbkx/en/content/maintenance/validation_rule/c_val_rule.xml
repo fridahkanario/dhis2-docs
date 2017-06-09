@@ -82,7 +82,7 @@
             threshold of the period. Whenever the threshold is exceeded, a warning message displays.<screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata width="40%"
+                        <imagedata width="90%"
                             fileref="resources/images/maintainence/validation_rules_sliding_window.gif"
                             format="gif" align="left"/>
                     </imageobject>
