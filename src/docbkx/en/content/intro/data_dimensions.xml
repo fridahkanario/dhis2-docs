@@ -324,18 +324,21 @@
       <para>As mentioned above, all organisation units should be a member of a single group within a group set. If an organisation unit is not present in any group or is present in multiple group members in a group set, this can lead to unexpected results in the analysis modules. DHIS2 has integrity checks to identify organisation units which are not present in any organisation unit group set member, or which is present in multiple groups.  </para>
     </section>
   </section>
-  <section>
+  <section xml:id="period_types">
     <title>The period dimension in DHIS2</title>
     <para>The period dimension becomes an important factor when analysing data over time e.g. when looking at cumulative data, when creating quarterly or annual aggregated reports, or when doing analysis that combines data with different characteristics like monthly routine data, annual census/population data or six-monthly staff data.</para>
     <section>
-      <title>Period Types</title>
+      <title>Period types</title>
       <para>In DHIS2,  periods are organised according to a set of fixed period types described below. The following list is for the default ISO 8601 calendar type. </para>
       <orderedlist>
         <listitem>
           <para>Daily</para>
         </listitem>
         <listitem>
-          <para>Weekly: These are defined as <link xl:href="http://en.wikipedia.org/wiki/ISO_week_date">ISO weeks</link>, beginning on Monday  and and ending on Sunday. Note that other week definitions are not currently supported.</para>
+          <para>Weekly: The system supports various weekly period types, with Monday, Wednesday,
+            Thursday, Saturday and Sunday as the first day of the week. You collect data through
+            data sets configured to use the desired weekly period type. The analytics engine will
+            attribute weekly data to the month which contains four days or more of the week.</para>
         </listitem>
         <listitem>
           <para>Monthly: Refers to standard calendar months.</para>
@@ -353,20 +356,22 @@
           <para>Yearly: This refers to a calendar year. </para>
         </listitem>
         <listitem>
-          <para>Financial April: Financial year period beginning on April 1st and ending on March 31st of the calendar next year</para>
+          <para>Financial April: Financial year period beginning on April 1st and ending on March
+            31st of the calendar next year</para>
         </listitem>
         <listitem>
-          <para>Financial July: Financial year period beginning on July 1st and ending on June 31st of the calendar next year</para>
+          <para>Financial July: Financial year period beginning on July 1st and ending on June 31st
+            of the calendar next year</para>
         </listitem>
         <listitem>
-          <para>Financial Oct: Financial year period beginning on October 1st and ending on September 31st of the calendar next year</para>
+          <para>Financial Oct: Financial year period beginning on October 1st and ending on
+            September 31st of the calendar next year</para>
         </listitem>
         <listitem>
-          <para>Six-monthly April: Six-month periods beginning on April 1st with a duration of six calendar months.</para>
+          <para>Six-monthly April: Six-month periods beginning on April 1st with a duration of six
+            calendar months.</para>
         </listitem>
       </orderedlist>
-      <para> 
-</para>
       <para>As a general rule, all organisation units should collect the same data using the same frequency or periodicity. A data entry form therefore is associated with a single period type to make sure data is always collected according to the correct and same periodicity across the country. </para>
       <para>It is possible however to collect the same data elements using different period types by
         assigning the same data elements to multiple data sets with different period types, however

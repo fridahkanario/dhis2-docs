@@ -6,7 +6,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook" xml:id="program_rule_examples">
-    <title>Example: program rules</title>
+    <title>Example: Program rules</title>
     <para>
         <note>
             <para>You can view all examples on the demo
@@ -29,7 +29,7 @@
                             <title>Program rule details</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%" align="center"
+                                    <imagedata width="100%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/keyvaluepair_details.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -43,7 +43,7 @@
                             <title>Program rule expression</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%" align="center"
+                                    <imagedata width="100%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/keyvaluepair_expression.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -57,7 +57,7 @@
                             <title>Program rule action</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="60%" align="center"
+                                    <imagedata width="80%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/keyvaluepair_action.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -101,7 +101,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule variable</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%" align="center"
+                                    <imagedata width="100%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/displaytext_pgrule_variable.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -115,7 +115,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule details</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%" align="center"
+                                    <imagedata width="100%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/displaytext_details.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -129,7 +129,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule expression</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%" align="center"
+                                    <imagedata width="100%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/displaytext_expression.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -143,7 +143,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule action</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="60%" align="center"
+                                    <imagedata width="80%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/displaytext_action.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -157,7 +157,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                     <title>Result of program rule in Tracker Capture or Event Capture apps:</title>
                     <mediaobject>
                         <imageobject>
-                            <imagedata width="80%" align="center"
+                            <imagedata width="100%" align="center"
                                 fileref="resources/images/maintainence/pg_rule_ex/displaytext_result.png"
                                 format="PNG"/>
                         </imageobject>
@@ -183,7 +183,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule variable</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%" align="center"
+                                    <imagedata width="100%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/displaytext2_pgrule_variable.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -197,7 +197,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule details</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%" align="center"
+                                    <imagedata width="100%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/displaytext2_details.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -211,7 +211,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule expression</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%" align="center"
+                                    <imagedata width="100%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/displaytext2_expression.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -225,7 +225,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule action</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="60%" align="center"
+                                    <imagedata width="80%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/displaytext2_action.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -240,7 +240,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                         app:</title>
                     <mediaobject>
                         <imageobject>
-                            <imagedata width="80%" align="center"
+                            <imagedata width="100%" align="center"
                                 fileref="resources/images/maintainence/pg_rule_ex/displaytext2_first_pgstage.png"
                                 format="PNG"/>
                         </imageobject>
@@ -252,7 +252,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                     <title>Result of program rule in the Tracker Capture app:</title>
                     <mediaobject>
                         <imageobject>
-                            <imagedata width="80%" align="center"
+                            <imagedata width="100%" align="center"
                                 fileref="resources/images/maintainence/pg_rule_ex/displaytext2_result.png"
                                 format="PNG"/>
                         </imageobject>
@@ -275,7 +275,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule details</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%" align="center"
+                                    <imagedata width="100%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/assign_details.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -289,7 +289,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule expression</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="80%" align="center"
+                                    <imagedata width="100%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/assign_expression.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -303,7 +303,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                             <title>Program rule action</title>
                             <mediaobject>
                                 <imageobject>
-                                    <imagedata width="60%" align="center"
+                                    <imagedata width="80%" align="center"
                                         fileref="resources/images/maintainence/pg_rule_ex/assign_action.png"
                                         format="PNG"/>
                                 </imageobject>
@@ -317,7 +317,7 @@ d2:modulus(d2:daysBetween(#{lmp}, V{current_date}), 7))</screen>
                     <title>Result of program rule in Tracker Capture or Event Capture apps:</title>
                     <mediaobject>
                         <imageobject>
-                            <imagedata width="80%" align="center"
+                            <imagedata width="100%" align="center"
                                 fileref="resources/images/maintainence/pg_rule_ex/assign_result.png"
                                 format="PNG"/>
                         </imageobject>

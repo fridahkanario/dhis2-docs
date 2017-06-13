@@ -4583,6 +4583,21 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       dataSet resource is optimized for data entry clients for validating a data set / form, and can
       be accessed like
       this:<screen>/api/26/validation/dataSet/QX4ZTUbOt3a.json?pe=201501&amp;ou=DiszpKrYNg8</screen></para>
+    <para>In addition to validate rules based on data set, there are two additional methods for
+      performing validation: Custom validation and Scheduled validation.</para>
+    <para>Custom validation can be initiated through the "Data Quality" app, where you can configure
+      the periods, validation rule groups and organisation units to be included in the analysis and
+      if you want to send out notifications for the results found. The result of this analysis will
+      be a list of violations found using your criteria.</para>
+    <para>The scheduled validation on the other hand, is an async task you can chose to scheduled to
+      run once a day, or you can trigger it using the resource table endpoint as described in  <link
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xlink:href="https://docs.dhis2.org/master/en/developer/html/dhis2_developer_manual_full.html#webapi_generating_resource_analytics_tables"
+        >resource tables</link> When running the scheduled validation task, any violations found
+      will be persisted as validation results. These results can be accessed trouh the <link
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xlink:href="https://docs.dhis2.org/master/en/developer/html/dhis2_developer_manual_full.html#webapi_validation_results"
+        >validation result api</link>.</para>
     <para>The first path variable is an identifier referring to the data set to validate. XML and
       JSON resource representations are supported. The response contains violations to validation
       rules. This will be extended with more validation types in coming versions.</para>
@@ -4670,6 +4685,18 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         </tgroup>
       </table>
     </para>
+  </section>
+  <section>
+    <title>Validation Results</title>
+    <para>Validation results are objects created when violations are found during a scheduled
+      validation analysis. These results can be accessed through the api using the following
+      endpoint:<screen>/api/26/validationResults</screen></para>
+    <para>You can also inspect an individual result using the validation result id in this
+      endpoint:<screen>/api/26/validationResults/&lt;id></screen></para>
+    <para>Validation results are sent out to the appropriate users once every day, but can also be
+      manually triggered to run on demand using the following api
+      endpoint:<screen>/api/26/validation/sendNotifications</screen></para>
+    <para>Only unsendt results are sendt using this endpoint.</para>
   </section>
   <section xml:id="webapi_data_integrity">
     <title>Data integrity</title>
@@ -5390,8 +5417,8 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
   <section xml:id="webapi_auditing">
     <title>Auditing</title>
     <para>DHIS2 does automatic auditing on all update and deletions of aggregate data values,
-      tracked entity data values, tracked entity attribute values, and this chapter will explain the
-      web-api available for fetching this data back out again.</para>
+      tracked entity data values, tracked entity attribute values, and data approvals. This section
+      explains how to fetch this data.</para>
     <section>
       <title>Aggregate data value audits</title>
       <para>The endpoint for aggregate data value audits is located at <emphasis role="italic"
@@ -5553,6 +5580,76 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       </table>
       <para>Get all audits which have attribute with ID
         VqEFza8wbwA:<screen>/api/26/audits/trackedEntityAttributeValue?tea=VqEFza8wbwA</screen></para>
+    </section>
+    <section>
+      <title>Data approval audits</title>
+      <para>The endpoint for data approval audits is located at /api/audits/dataApproval, and the
+        available parameters are displayed in the table below.</para>
+      <table frame="all">
+        <title><emphasis role="bold">Data approval query parameters</emphasis></title>
+        <tgroup cols="3">
+          <colspec colnum="1" colname="c1" colwidth="1*"/>
+          <colspec colnum="2" colname="newCol2" colwidth="1.34*"/>
+          <colspec colnum="3" colname="c2" colwidth="5.55*"/>
+          <thead>
+            <row>
+              <entry align="left" valign="top">Parameter</entry>
+              <entry align="left" valign="top">Option</entry>
+              <entry align="left" valign="top">Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry align="left" valign="top">dal</entry>
+              <entry align="left" valign="top">Data Approval Level</entry>
+              <entry align="left" valign="top">One or more data approval level identifiers.</entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">wf</entry>
+              <entry align="left" valign="top">Workflow</entry>
+              <entry align="left" valign="top">One or more data approval workflow
+                identifiers.</entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">ou</entry>
+              <entry align="left" valign="top">Organisation Unit</entry>
+              <entry align="left" valign="top">One or more organisation unit identifiers.</entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">aoc</entry>
+              <entry align="left" valign="top">Attribute Option Combo</entry>
+              <entry align="left" valign="top">One or more attribute option combination
+                identifiers.</entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">startDate</entry>
+              <entry align="left" valign="top">Start Date</entry>
+              <entry align="left" valign="top">Starting Date for approvals in yyyy-mm-dd
+                format.</entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">endDate</entry>
+              <entry align="left" valign="top">End Date</entry>
+              <entry align="left" valign="top">Ending Date for approvals in yyyy-mm-dd
+                format.</entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">skipPaging</entry>
+              <entry align="left" valign="top">false | true</entry>
+              <entry align="left" valign="top">Turn paging on / off</entry>
+            </row>
+            <row>
+              <entry align="left" valign="top">page</entry>
+              <entry align="left" valign="top">1 (default)</entry>
+              <entry align="left" valign="top">
+                <para>If paging is enabled, this parameter decides which page to show. </para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <para>Get all audits for data approval workflow
+        RwNpkAM7Hw7:<screen>/api/27/audits/dataApproval?wf=RwNpkAM7Hw7</screen></para>
     </section>
   </section>
   <section xml:id="webapi_message_conversations">
@@ -9725,6 +9822,10 @@ interval=WEEK" -u admin:district</screen>
         </tbody>
       </tgroup>
     </table>
+    <para>"Data Quality" and "Data Surveillance" can be run through the monitoring task, triggered
+      with the following endpoint:<screen>/api/26/resourceTables/monitoring</screen></para>
+    <para>This task will analyse your validation rules, find any violations and persist them as
+      validation results.</para>
     <para>These requests will return immediately and initiate a server-side process.</para>
   </section>
   <section xml:id="webapi_maintenance">

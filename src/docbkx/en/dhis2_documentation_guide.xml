@@ -144,15 +144,138 @@ downloaded to the folder that you specified.</para>
   <section xml:id="docs_5">
     <title>Editing the documentation</title>
     <para>Once you have downloaded the source, you should have a series of folders inside of the
-      repository directory. All documents should be placed in the
-        <filename>/src/docbkx/content/XXXX</filename> folder. Note that XXXX simply represents one
-      of the thematic folders which are used to organize the documentation. If you are editing the
-      chapter on the GIS, you will find it in the "gis" directory.  Place any image files that may
-      be linked to your document in the
-        <filename>/dhis2docs/src/docbkx/XX/resources/images</filename> folder and link these inside
-      your DocBook document using a relative file link. When the documentation is built, in a
-      separate step, the images will be automatically copied over to the correct directory during
-      the build process.</para>
+      repository directory.</para>
+    <itemizedlist>
+      <listitem>
+        <para>Place all files in a folder in the following format
+            <filename>/src/docbkx/content/XXXX</filename>. XXXX  represents one of the thematic
+          folders which are used to organize the documentation.</para>
+      </listitem>
+      <listitem>
+        <para>Place images that you linked to in the
+            <filename>/dhis2docs/src/docbkx/XX/resources/images</filename> folder. Link these inside
+          your DocBook file using a relative file link. When the documentation is built, in a
+          separate step, the images will be automatically copied over to the correct
+          directory.</para>
+      </listitem>
+    </itemizedlist>
+    <table frame="all">
+      <title>File naming conventions for modularization</title>
+      <tgroup cols="4" align="left">
+        <colspec colname="newCol1" colnum="1" colwidth="1*"/>
+        <colspec colname="c1" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="3" colwidth="1.0*"/>
+        <colspec colname="newCol2" colnum="4" colwidth="1*"/>
+        <thead>
+          <row>
+            <entry>
+              <para>File prefix</para>
+            </entry>
+            <entry>
+              <para>Topic type</para>
+            </entry>
+            <entry>
+              <para>Description</para>
+            </entry>
+            <entry>
+              <para>Example</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>
+              <para>c</para>
+            </entry>
+            <entry>
+              <para>Concept</para>
+            </entry>
+            <entry>
+              <para>This topic contains a short description about the feature.</para>
+            </entry>
+            <entry>
+              <para><filename>c_pg_rule.xml</filename></para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>r</para>
+            </entry>
+            <entry>
+              <para>Reference</para>
+            </entry>
+            <entry>
+              <para>This topic contains relevant reference information, for example operators and
+                functions to use in program rule expressions.</para>
+            </entry>
+            <entry>
+              <para><filename>r_pg_indicator_expression.xml</filename></para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>t</para>
+            </entry>
+            <entry>
+              <para>Task</para>
+            </entry>
+            <entry>
+              <para>This topic contains detailed step-by-step instructions of how to perform a
+                task.</para>
+            </entry>
+            <entry>
+              <para><filename>t_pg_rule_create.xml</filename></para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>toc</para>
+            </entry>
+            <entry>
+              <para>-</para>
+            </entry>
+            <entry>
+              <para>This topic contains the xi:include links that together create a complete
+                section.</para>
+              <para>You shouldn't mix xi:include links and content in the same topic.</para>
+            </entry>
+            <entry>
+              <para><filename>toc_pg_rule.xml</filename></para>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <para>wf</para>
+            </entry>
+            <entry>
+              <para>-</para>
+            </entry>
+            <entry>
+              <para>This topic contains the process the user must go through to complete a
+                complicated task, for example create a program rule.</para>
+            </entry>
+            <entry>
+              <para><filename>wf_pg_rule.xml</filename></para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para>
+      <example>
+        <title>File naming of program rule topics</title>
+        <para>
+          <screenshot>
+            <mediaobject>
+              <imageobject>
+                <imagedata width="70%" align="center"
+                  fileref="resources/images/implementation_guide/doc_topic_name.png" format="PNG"/>
+              </imageobject>
+            </mediaobject>
+          </screenshot>
+        </para>
+      </example>
+    </para>
   </section>
   <section>
     <title>DHIS2 Bibliography</title>

@@ -7,8 +7,8 @@
   xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
   xmlns:db="http://docbook.org/ns/docbook" xml:id="event_reports_app">
   <title>Using the Event Reports app</title>
-  <section>
-    <title>Event reports overview</title>
+        <section xml:id="event_reports_about">
+    <title>About the Event Reports app</title>
     <screenshot>
       <mediaobject>
         <imageobject>
@@ -42,12 +42,11 @@
       </listitem>
     </itemizedlist>
   </section>
-  <section>
+   <section xml:id="event_reports_create">
     <title>Create an event report</title>
     <orderedlist>
       <listitem>
-        <para>In the <emphasis role="bold">Apps</emphasis> menu, click <emphasis role="bold">Event
-            Reports</emphasis>.</para>
+        <para>Open the <emphasis role="bold">Event Reports</emphasis> app.</para>
       </listitem>
       <listitem>
         <para>Select <emphasis role="bold">Aggregated values</emphasis> or <emphasis role="bold"
@@ -65,8 +64,12 @@
       </listitem>
     </orderedlist>
   </section>
-  <section>
+  <section xml:id="event_reports_select_dimensions">
     <title>Select dimension items</title>
+    <para>An event report is always based on a program and you can do analysis based on a range of
+      dimensions. For programs with category combinations, you can use program categories and
+      category option group sets as dimensions for tables and charts. Each dimension item can have a
+      corresponding filter.</para>
     <orderedlist>
       <listitem>
         <para>Select data elements:</para>
@@ -210,7 +213,7 @@
       </listitem>
     </orderedlist>
   </section>
-  <section>
+  <section xml:id="event_reports_select_series_category_filter">
     <title>Select series, category and filter</title>
     <para>You can define which data dimension you want to appear as columns, rows and filters in the
       pivot table. Each data element appears as individual dimensions and can be placed on any of
@@ -235,8 +238,8 @@
       </listitem>
     </orderedlist>
   </section>
-  <section>
-    <title>Change the display of your chart</title>
+  <section xml:id="event_reports_change_display">
+    <title>Change the display of your table</title>
     <para>You can customize the display of an event report. </para>
     <orderedlist>
       <listitem>
@@ -247,19 +250,29 @@
           reports and individual event reports.</para>
         <table frame="all">
           <title>Event reports options </title>
-          <tgroup cols="3">
-            <colspec colname="c1" colnum="1" colwidth="1*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.5*"/>
-            <colspec colname="newCol3" colnum="3" colwidth="1*"/>
+          <tgroup cols="4">
+            <colspec colname="newCol1" colnum="1" colwidth="1*"/>
+            <colspec colname="c1" colnum="2" colwidth="1*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.5*"/>
+            <colspec colname="newCol3" colnum="4" colwidth="1*"/>
             <thead>
               <row>
-                <entry>Option</entry>
-                <entry>Description</entry>
-                <entry>Available for report type</entry>
+                <entry namest="newCol1" nameend="c1">
+                  <para>Option</para>
+                </entry>
+                <entry>
+                  <para>Description</para>
+                </entry>
+                <entry>
+                  <para>Available for report type</para>
+                </entry>
               </row>
             </thead>
             <tbody>
               <row>
+                <entry>
+                  <para><emphasis role="bold">Data</emphasis></para>
+                </entry>
                 <entry>
                   <para><emphasis role="bold">Show column totals</emphasis></para>
                 </entry>
@@ -271,6 +284,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Show column sub-totals</emphasis></para>
                 </entry>
@@ -282,6 +296,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Show row totals</emphasis></para>
                 </entry>
@@ -293,6 +308,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Show row sub-totals</emphasis></para>
                 </entry>
@@ -304,6 +320,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Show dimension labels</emphasis></para>
                 </entry>
@@ -313,6 +330,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Hide empty rows</emphasis></para>
                 </entry>
@@ -324,6 +342,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Hide n/a data</emphasis></para>
                 </entry>
@@ -335,6 +354,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Include only completed events</emphasis></para>
                 </entry>
@@ -349,6 +369,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Limit</emphasis></para>
                 </entry>
@@ -361,6 +382,7 @@
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Output type</emphasis></para>
                 </entry>
@@ -379,6 +401,42 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
               </row>
               <row>
                 <entry>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Program status</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Filters data based on the program status: <emphasis role="bold"
+                      >All</emphasis>, <emphasis role="bold">Active</emphasis>, <emphasis
+                      role="bold">Completed</emphasis> or <emphasis role="bold"
+                    >Cancelled</emphasis>. </para>
+                </entry>
+                <entry>
+                  <para>Aggregated event report</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Event status</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Filters data based on the event status: <emphasis role="bold"
+                    >All</emphasis>, <emphasis role="bold">Active</emphasis>, <emphasis role="bold"
+                      >Completed</emphasis>, <emphasis role="bold">Scheduled</emphasis>, <emphasis
+                      role="bold">Overdue</emphasis> or <emphasis role="bold">Skipped</emphasis>.
+                  </para>
+                </entry>
+                <entry>
+                  <para>Aggregated event report</para>
+                </entry>
+              </row>
+              <row>
+                <entry><emphasis role="bold">Organisation units</emphasis></entry>
+                <entry>
                   <para><emphasis role="bold">Show hierarchy</emphasis></para>
                 </entry>
                 <entry>
@@ -391,10 +449,17 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
               </row>
               <row>
                 <entry>
+                  <para><emphasis role="bold">Style</emphasis></para>
+                </entry>
+                <entry>
                   <para><emphasis role="bold">Display density</emphasis></para>
                 </entry>
                 <entry>
-                  <para>Changes the padding around values inside cells.</para>
+                  <para>Controls the size of the cells in the table. You can set it to <emphasis
+                      role="bold">Comfortable</emphasis>, <emphasis role="bold">Normal</emphasis> or
+                      <emphasis role="bold">Compact</emphasis>. </para>
+                  <para><emphasis role="bold">Compact</emphasis> is useful when you want to fit
+                    large tables into the browser screen.</para>
                 </entry>
                 <entry>
                   <para>Aggregated event report</para>
@@ -402,11 +467,14 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Font size</emphasis></para>
                 </entry>
                 <entry>
-                  <para>Changes the font size of values.</para>
+                  <para>Controls the size of the table text font. You can set it to <emphasis
+                      role="bold">Large</emphasis>, <emphasis role="bold">Normal</emphasis> or
+                      <emphasis role="bold">Small</emphasis>.</para>
                 </entry>
                 <entry>
                   <para>Aggregated event report</para>
@@ -414,13 +482,15 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
+                <entry/>
                 <entry>
                   <para><emphasis role="bold">Digit group separator</emphasis></para>
                 </entry>
                 <entry>
-                  <?oxy_comment_start author="CPersson" timestamp="20160429T115234+0200" comment="At next release, reword."?>
-                  <para>Changes the character to use for splitting digit groups.</para>
-                  <?oxy_comment_end?>
+                  <para>Controls which character to separate groups of digits or
+                    &quot;thousands&quot;. You can set it to <emphasis role="bold">Comma</emphasis>,
+                      <emphasis role="bold">Space</emphasis> or <emphasis role="bold"
+                      >None</emphasis>.</para>
                 </entry>
                 <entry>
                   <para>Aggregated event report</para>
@@ -436,7 +506,7 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="event_reports_download_report">
     <title>Download chart
       <?oxy_comment_start author="CPersson" timestamp="20160429T120826+0200" comment="At next revision, standardize concept info."?>data
       source<?oxy_comment_end?></title>
@@ -683,7 +753,7 @@ For exampel: JSON file, table in JSON format?"?>Description<?oxy_comment_end?></
       </orderedlist>
     </para>
   </section> -->
-  <section>
+   <section xml:id="event_reports_open_as_chart">
     <title>Visualize an event report as a chart</title>
     <para>When you have made an event report you can open it as a chart:</para>
     <para>Click <emphasis role="bold">Chart</emphasis> > <emphasis role="bold">Open this chart as
