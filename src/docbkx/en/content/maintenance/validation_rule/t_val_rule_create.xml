@@ -67,6 +67,13 @@
                     <para>Click <emphasis role="bold">Left side</emphasis>.</para>
                 </listitem>
                 <listitem>
+                    <para>Select <emphasis role="bold">Sliding window</emphasis> if you want to view
+                        data relative to the period you are comparing. See also <link
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="https://docs.dhis2.org/master/en/user/html/manage_validation_rule.html#about_validation_rule"
+                            >About validation rules</link>.</para>
+                </listitem>
+                <listitem>
                     <para>Select a <emphasis role="bold">Missing value strategy</emphasis>. This
                         selection sets how the system evaluates a validation rule if data is
                         missing.</para>
@@ -204,6 +211,13 @@
                             </tbody>
                         </tgroup>
                     </informaltable>
+                </listitem>
+                <listitem>
+                    <para>Select <emphasis role="bold">Sliding window</emphasis> if you want to view
+                        data relative to the period you are comparing. See also <link
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="https://docs.dhis2.org/master/en/user/html/manage_validation_rule.html#about_validation_rule"
+                            >About validation rules</link>.</para>
                 </listitem>
                 <listitem>
                     <para>Type a <emphasis role="bold">Description</emphasis>.</para>

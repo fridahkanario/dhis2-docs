@@ -6,7 +6,7 @@
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook" xml:id="program_indicator_functions_variables_operators">
-    <title>Reference information: functions, variables and operators to use in program indicator
+    <title>Reference information: Functions, variables and operators to use in program indicator
         expressions and filters</title>
     <para>
         <example>
@@ -249,6 +249,25 @@
                         <entry align="left" valign="top">
                             <para>The date of when the tracked entity instance was enrolled in the
                                 program.</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry align="left" valign="top">
+                            <para>enrollment_status</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para> Can be used to include or exclude enrollments in certain
+                                statuses.</para>
+                            <para>
+                                <example>
+                                    <para>When calculating the hemoglobin improvement/deterioration
+                                        throughout a pregnancy, it might make sense to only consider
+                                        completed enrollments. If non-completed enrollments is not
+                                        filtered out, these will represent half-finished ANC
+                                        followups, where the final improvement/deterioration is not
+                                        yet established.</para>
+                                </example>
+                            </para>
                         </entry>
                     </row>
                     <row>

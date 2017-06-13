@@ -8,8 +8,8 @@
   xmlns:db="http://docbook.org/ns/docbook" xml:id="event_visualizer_app">
   <title>Using the Event Visualizer app</title>
   <section>
-    <title>Event Visualizer
-      <?oxy_comment_start author="CPersson" timestamp="20160428T092619+0200" comment="At next revision, develop overview concept content."?>overview<?oxy_comment_end?></title>
+    <title>About the Event Visualizer
+      <?oxy_comment_start author="CPersson" timestamp="20160428T092619+0200" comment="At next revision, develop overview concept content."?>app<?oxy_comment_end?></title>
     <screenshot>
       <mediaobject>
         <imageobject>
@@ -25,11 +25,8 @@
     <title>Create a chart</title>
     <orderedlist>
       <listitem>
-        <para>In the <emphasis role="bold">Apps</emphasis> menu, click <emphasis role="bold">Event
-            Visualizer</emphasis>.</para>
-      </listitem>
-      <listitem>
-        <para>Select a chart type.</para>
+        <para>&lt;Open the <emphasis role="bold">Event Visualizer</emphasis> app and select a chart
+          type.</para>
       </listitem>
       <listitem>
         <para>In the menu to the left, select the meta data you want to analyse.</para>
@@ -154,11 +151,12 @@
       </listitem>
     </orderedlist>
   </section>
-  <section>
-    <title>Select dimension items</title>
-    <para>An event report is always based on a program. You can do analysis based on a range of
-      dimensions. Each dimension item can have a corresponding filter. You select dimension items
-      from from the left-side menu.</para>
+  <section xml:id="event_visualizer_select_dimensions">
+    <title>Select dimension items</title >
+    <para>An event chart is always based on a program and you can do analysis based on a range of
+      dimensions. For programs with category combinations, you can use program categories and
+      category option group sets as dimensions for tables and charts. Each dimension item can have a
+      corresponding filter. You select dimension items from the left-side menu.</para>
     <orderedlist>
       <listitem>
         <para>Select data elements:</para>
@@ -328,7 +326,7 @@
       </listitem>
     </orderedlist>
   </section>
-  <section>
+   <section xml:id="event_visualizer_change_display">
     <title>Change the display of your chart</title>
     <para>You can customize the display of an event report. </para>
     <orderedlist>
@@ -339,17 +337,25 @@
         <para>Set the options as required.</para>
         <table frame="all">
           <title>Chart options</title>
-          <tgroup cols="2">
-            <colspec colname="c1" colnum="1" colwidth="1*"/>
-            <colspec colname="c2" colnum="2" colwidth="1.5*"/>
+          <tgroup cols="3">
+            <colspec colname="newCol1" colnum="1" colwidth="1*"/>
+            <colspec colname="c1" colnum="2" colwidth="1*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.5*"/>
             <thead>
               <row>
-                <entry>Option</entry>
-                <entry>Description</entry>
+                <entry namest="newCol1" nameend="c1">
+                  <para>Option</para>
+                </entry>
+                <entry>
+                  <para>Description</para>
+                </entry>
               </row>
             </thead>
             <tbody>
               <row>
+                <entry>
+                  <para><emphasis role="bold">Data</emphasis></para>
+                </entry>
                 <entry>
                   <para><emphasis role="bold">Show values</emphasis></para>
                 </entry>
@@ -358,24 +364,31 @@
                 </entry>
               </row>
               <row>
-                <entry>
-                  <para><emphasis role="bold">Show trend lines</emphasis></para>
+                <entry align="left" valign="top">
+                  <para/>
                 </entry>
-                <entry>
-                  <para>Displays the trend line which visualizes how your data evolves over time.
-                    For example if performance is improving or deteriorating. Useful when periods
-                    are selected as category.</para>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Use 100% stacked values</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Displays 100 % stacked values in column charts.</para>
+                </entry>
+              </row>
+              <row>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Use cumulative values</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Displays cumulative values in line charts.</para>
                 </entry>
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Hide empty category items</emphasis></para>
+                  <para/>
                 </entry>
-                <entry>
-                  <para>Hides the category items with no data from the chart.</para>
-                </entry>
-              </row>
-              <row>
                 <entry>
                   <para><emphasis role="bold">Hide n/a data</emphasis></para>
                 </entry>
@@ -384,6 +397,9 @@
                 </entry>
               </row>
               <row>
+                <entry>
+                  <para/>
+                </entry>
                 <entry>
                   <para><emphasis role="bold">Include only completed events</emphasis></para>
                 </entry>
@@ -395,27 +411,70 @@
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Target value /
-                      <?oxy_comment_start author="CPersson" timestamp="20160422T121457+0200" comment="Suggest to dev to remove &quot;:&quot; in UI."?>title<?oxy_comment_end?>:</emphasis></para>
+                  <para/>
                 </entry>
                 <entry>
-                  <para>Displays a horizontal line at the given domain value. Useful for example
-                    when you want to compare your performance to the current target.</para>
+                  <para><emphasis role="bold">Hide empty categories</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Hides the category items with no data from the chart.</para>
+                  <para><emphasis role="bold">None</emphasis>: doesn't hide any of the empty
+                    categories</para>
+                  <para><emphasis role="bold">Before first</emphasis>: hides missing values only
+                    before the first value</para>
+                  <para><emphasis role="bold">After last</emphasis>: hides missing values only after
+                    the last value</para>
+                  <para><emphasis role="bold">Before first and after last</emphasis>: hides missing
+                    values only before the first value and after the last value</para>
+                  <para><emphasis role="bold">All</emphasis>: hides all missing values</para>
+                  <para>This is useful for example when you create column and bar charts.</para>
                 </entry>
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Base value / title:</emphasis></para>
+                  <para/>
                 </entry>
                 <entry>
-                  <para>Displays a horizontal line at the given domain value. Useful for example
-                    when you want to visualize how your performance has evolved since the beginning
-                    of a process.</para>
+                  <para><emphasis role="bold">Trend line</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Displays the trend line which visualizes how your data evolves over time.
+                    For example if performance is improving or deteriorating. Useful when periods
+                    are selected as category. </para>
                 </entry>
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Sort order:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Target line value/title</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Displays a horizontal line and title (optional) at the given domain value.
+                    Useful for example when you want to compare your performance to the current
+                    target.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Base line value/title</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Displays a horizontal line and title (optional) at the given domain value.
+                    Useful for example when you want to visualize how your performance has evolved
+                    since the beginning of a process.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Sort order</emphasis></para>
                 </entry>
                 <entry>
                   <para>Allows you to sort the values on your chart from either low to high or high
@@ -424,10 +483,13 @@
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Output type:</emphasis></para>
+                  <para/>
                 </entry>
                 <entry>
-                  <para>Defines the output type. The output types are  <emphasis role="bold"
+                  <para><emphasis role="bold">Output type</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Defines the output type. The output types are <emphasis role="bold"
                       >Event</emphasis>, <emphasis role="bold"
                       ><?oxy_comment_start author="CPersson" timestamp="20160427T163926+0200" comment="In GUI: &quot;Enrollment&quot;
 
@@ -438,7 +500,39 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Range axis min/max:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Program status</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Filters data based on the program status: <emphasis role="bold"
+                      >All</emphasis>, <emphasis role="bold">Active</emphasis>, <emphasis
+                      role="bold">Completed</emphasis> or <emphasis role="bold"
+                    >Cancelled</emphasis>. </para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Event status</emphasis></para>
+                </entry>
+                <entry>
+                  <para>Filters data based on the event status: <emphasis role="bold"
+                    >All</emphasis>, <emphasis role="bold">Active</emphasis>, <emphasis role="bold"
+                      >Completed</emphasis>, <emphasis role="bold">Scheduled</emphasis>, <emphasis
+                      role="bold">Overdue</emphasis> or <emphasis role="bold">Skipped</emphasis>.
+                  </para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para><emphasis role="bold">Axes</emphasis></para>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Range axis min/max</emphasis></para>
                 </entry>
                 <entry>
                   <para>Defines the maximum and minimum value which will be visible on the range
@@ -447,7 +541,10 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Range axis tick steps:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Range axis tick steps</emphasis></para>
                 </entry>
                 <entry>
                   <para>Defines the number of ticks which will be visible on the range axis.</para>
@@ -455,7 +552,10 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Range axis decimals:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Range axis decimals</emphasis></para>
                 </entry>
                 <entry>
                   <para>Defines the number of decimals which will be used for range axis
@@ -464,7 +564,10 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Range axis title:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Range axis title</emphasis></para>
                 </entry>
                 <entry>
                   <para>Type a title here to display a label next to the range axis (also referred
@@ -474,7 +577,10 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
               </row>
               <row>
                 <entry>
-                  <para><emphasis role="bold">Domain axis title:</emphasis></para>
+                  <para/>
+                </entry>
+                <entry>
+                  <para><emphasis role="bold">Domain axis title</emphasis></para>
                 </entry>
                 <entry>
                   <para> Type a title here to display a label below the domain axis (also referred
@@ -484,6 +590,9 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
               </row>
               <row>
                 <entry>
+                  <para><emphasis role="bold">General</emphasis></para>
+                </entry>
+                <entry>
                   <para><emphasis role="bold">Hide chart legend</emphasis></para>
                 </entry>
                 <entry>
@@ -491,19 +600,50 @@ US or UK spelling? http://grammarist.com/spelling/enrol-enroll/
                 </entry>
               </row>
               <row>
-                <entry>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">Hide chart title</emphasis></para>
                 </entry>
-                <entry>
-                  <para>Hides the title of your chart.</para>
+                <entry align="left" valign="top">
+                  <para>Hides the title (default or custom) of your chart.</para>
                 </entry>
               </row>
               <row>
-                <entry>
-                  <para><emphasis role="bold">Chart title:</emphasis></para>
+                <entry align="left" valign="top">
+                  <para/>
                 </entry>
-                <entry>
-                  <para>Type any title here to display it above the chart.</para>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Chart title</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Type a title here to display a custom title above the chart. If you don't
+                    enter a title, the default title is displayed.</para>
+                </entry>
+              </row>
+              <row>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Hide chart subtitle</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Hides the subtitle of your chart.</para>
+                </entry>
+              </row>
+              <row>
+                <entry align="left" valign="top">
+                  <para/>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Chart subtitle</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Type a subtitle here to display a custom subtitle above the chart but below
+                    the title. If you don't enter a subtitle, no subtitle is displayed in the
+                    chart.</para>
                 </entry>
               </row>
             </tbody>

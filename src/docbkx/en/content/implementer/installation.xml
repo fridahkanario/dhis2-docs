@@ -357,16 +357,26 @@ filestore.secret = xxxx</screen>
         If you want to use an external provider the last block of properties need to be defined, as
         well as the <emphasis role="italic">provider</emphasis> property being set to a supported
         provider (currently only AWS S3).</para>
+    <para>
+      <note>
+        <para>If you’ve configured cloud storage in dhis.conf, all files you upload or the files the
+          system generates will use cloud storage.</para>
+      </note>
+    </para>
       <para>For a production system the initial setup of the file store should be carefully
         considered as moving files across storage providers while keeping the integrity of the
         database references could be complex. Keep in mind that the contents of the file store might
         contain both sensitive and integral information and protecting access to the folder as well
         as making sure a backup plan is in place is recommended on a production
         implementation.</para>
-      <para><emphasis role="italic">A note on external provider support: AWS S3 is the only
-          supported provider at the moment but more providers are likely to be added, such as Google
-          Cloud Store and Rackspace Cloud Files. Let the developers know if you have inquiries about
-          adding support for more providers.</emphasis></para>
+      <para>
+      <note>
+        <title>External provider support</title>
+        <para>AWS S3 is the only supported provider (starting from version 2.27) but more providers
+          are likely to be added, such as Google Cloud Store and Rackspace Cloud Files. Let the
+          developers know if you have inquiries about adding support for more providers.</para>
+      </note>
+    </para>
     </section>
     <section xml:id="install_google_service_account_configuration">
       <title>Google service account configuration</title>

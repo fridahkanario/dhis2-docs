@@ -45,66 +45,66 @@ You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
             <colspec colname="c3" colnum="3" colwidth="2.0*"/>
             <thead>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Term</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Definition</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Example</para>
                     </entry>
                 </row>
             </thead>
             <tbody>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Authority</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>A permission to perform one or several specific tasks</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create a new data element</para>
                         <para>Update an organisation unit</para>
                         <para>View a report</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>User</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>A person's DHIS2 user account</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>admin</para>
                         <para>traore</para>
                         <para>guest</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>User role</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>A group of authorities</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Data entry clerk</para>
                         <para>System administrator</para>
                         <para>Antenatal care program access</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>User group</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>A group of
                             <?oxy_comment_start author="cecilia" timestamp="20161115T152054+0100" comment="A group of user accounts?"?>users<?oxy_comment_end?></para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Kenya staff</para>
                         <para>Feedback message recipients</para>
                         <para>HIV program coordinators</para>
@@ -123,37 +123,37 @@ You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
             <colspec colname="c2" colnum="2" colwidth="4.0*"/>
             <thead>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Object type</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Available functions</para>
                     </entry>
                 </row>
             </thead>
             <tbody>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>User</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, clone, disable, assign search organisation units,
                             display by organisation unit, delete and show details</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>User role</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, share, delete and show details</para>
                     </entry>
                 </row>
                 <row>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>User group</para>
                     </entry>
-                    <entry>
+                    <entry align="left" valign="top">
                         <para>Create, edit, join, leave, share, delete and show details</para>
                     </entry>
                 </row>
@@ -261,11 +261,11 @@ What happens when you share a user group with another user group?"?>groups<?oxy_
                 xlink:href="https://ci.dhis2.org/docs/master/en/user/html/sharing.html"
                 >Sharing</link></para>
         <para><link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="https://ci.dhis2.org/docs/master/en/user/html/program_notifications.html"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/manage_program_notification.html"
                 >Manage program notifications</link></para>
         <para>
             <link xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="https://ci.dhis2.org/docs/master/en/user/html/manage_push_reports.html"
+                xlink:href="https://docs.dhis2.org/master/en/user/html/manage_push_report.html"
                 >Mange push reports</link></para>
     </section>
 </section>
