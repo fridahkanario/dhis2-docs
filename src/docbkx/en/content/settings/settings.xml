@@ -1241,7 +1241,7 @@ SME:
             <entry valign="top">
               <para>Defines which calendar the system will use.</para>
               <para>The system supports the following calendars: Coptic, Ethiopian, Gregorian,
-                Islamic, ISO 8601, Julian, Nepali and Thai.</para>
+                Islamic (Lunar Hijri), ISO 8601, Julian, Nepali, Persian (Solar Hijri) and Thai.</para>
               <para>
                 <note>
                   <para>This is a s system wide setting. It is not possible to have multiple

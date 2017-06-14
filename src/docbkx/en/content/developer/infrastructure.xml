@@ -68,15 +68,20 @@ tar zcvf db.tar.gz db.pgdump</screen></para>
             directory.</para>
         </listitem>
         <listitem>
+          <para>Update the version info on the play server home page at https://play.dhis2.org/. The 
+            index file is found on the play server at: <screen>/usr/share/nginx/html/index.html</screen>            
+          </para>
+        </listitem>
+        <listitem>
           <para>Update download page at www.dhis2.org/downloads with links to new Live package, WAR
             file, source code branch page and sample data including version.</para>
         </listitem>
         <listitem>
-          <para>Add stable WAR file download link in nginx.conf on dhis2.org.</para>
-        </listitem>
-        <listitem>
           <para>Create a documentation branch and update documentation page at
             www.dhis2.org/documentation with links to documentation and Javadocs.</para>
+        </listitem>
+        <listitem>
+          <para>Add stable WAR file download link in nginx.conf on dhis2.org.</para>
         </listitem>
         <listitem>
           <para>Write and send release email.</para>
