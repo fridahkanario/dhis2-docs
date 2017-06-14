@@ -4704,7 +4704,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       the web API. This section describes how to run the data integrity process as well as
       retrieving the result. The details of the analysis performed are described in the user
       manual.</para>
-    <section>
+    <section xml:id="webapi_data_integrity_run">
       <title>Running data integrity</title>
       <para>The operation of measuring data integrity is a fairly resource (and time) demanding
         task. It is therefore run as an asynchronous process and only when explicitly requested.
@@ -4717,7 +4717,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         completed and a JSON taskSummary object when the task is done. Polling (conservatively) to
         this resource can hence be used to wait for the task to finish.</para>
     </section>
-    <section>
+    <section xml:id="webapi_data_integrity_fetch_results">
       <title>Fetching the result</title>
       <para>Once data integrity is finished running the result can be fetched from the <emphasis
           role="italic">system/taskSummaries</emphasis> resource like
@@ -4731,7 +4731,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
   <section xml:id="webapi_indicators">
     <title>Indicators</title>
     <para>This section describes indicators and indicator expressions.</para>
-    <section>
+    <section xml:id="webapi_aggregate_indicators">
       <title>Aggregate indicators</title>
       <para>To retrieve indicators you can make a GET request to the indicators resource like
         this:<screen>/api/26/indicators</screen></para>
@@ -5155,7 +5155,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         <emphasis role="italic">dataApprovals</emphasis> resource. Approval is done per data set,
       period, organisation unit and attribute option
       combo.<screen>/api/26/dataApprovals</screen></para>
-    <section>
+    <section xml:id="webapi_data_approval_get_status">
       <title>Get approval status</title>
       <para>To get approval information for a data set you can issue a GET request similar to
         this:</para>
@@ -5322,7 +5322,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         approval records for individual attribute option combos from the following
         resource:<screen>GET api/dataApprovals/categoryOptionCombos?ds=aLpVgfXiz0f&amp;pe=2013&amp;ou=DiszpKrYNg8</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_data_approval_approve_data">
       <title>Approve data</title>
       <para>To approve data you can issue a <emphasis role="italic">POST</emphasis> request to the
           <emphasis role="italic">dataApprovals</emphasis> resource. To un-approve data you can
@@ -5382,7 +5382,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         </listitem>
       </itemizedlist>
     </section>
-    <section>
+    <section xml:id="webapi_data_approval_bulk_approve_data">
       <title>Bulk approve data</title>
       <para>You can approve a bulk of data records by posting to the<emphasis role="italic">
           api/dataApprovals/approvals</emphasis>
@@ -5419,7 +5419,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     <para>DHIS2 does automatic auditing on all update and deletions of aggregate data values,
       tracked entity data values, tracked entity attribute values, and data approvals. This section
       explains how to fetch this data.</para>
-    <section>
+    <section xml:id="webapi_auditing_aggregate_audits">
       <title>Aggregate data value audits</title>
       <para>The endpoint for aggregate data value audits is located at <emphasis role="italic"
           >/api/audits/dataValue</emphasis>, and the available parameters are displayed in the table
@@ -5665,7 +5665,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       user and send a message to the <emphasis role="italic">Mobile</emphasis> user. We will then
       pretend to be the mobile user and read our new message. Following this we will manage the
       admin user inbox by marking and removing messages.</para>
-    <section>
+    <section xml:id="webapi_writing_messages">
       <title>Writing and reading messages</title>
       <para>The resource we need to interact with when sending and reading messages is the <emphasis
           role="italic">messageConversations</emphasis> resource. We start by visiting the Web API
@@ -5788,7 +5788,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>If all went according to plan you will receive a <emphasis role="italic">200
           OK</emphasis> status code.</para>
     </section>
-    <section>
+    <section xml:id="webapi_managing_messages">
       <title>Managing messages</title>
       <para><emphasis>Note: the Web-API calls discussed in this section were introduced in DHIS
           2.17</emphasis></para>
@@ -5851,7 +5851,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>The response is a <emphasis role="italic">200 OK</emphasis> with the following JSON
         body:<screen>{ &quot;markedRead&quot; : [ &quot;ZrKML5WiyFm&quot;, &quot;Gc03smoTm6q&quot; ] }</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_messaging_tickets">
       <title>Tickets</title>
       <para>You can use the "write feedback" tool to create tickets and messages. The only
         difference between a ticket and a message is that you can give a status and a priority to a
@@ -6253,7 +6253,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     <title>Plugins</title>
     <para>DHIS2 comes with plugins which enables you to embed live data directly in your web portal
       or web site. Currently, plugins exist for charts, maps and pivot tables.</para>
-    <section>
+    <section xml:id="webapi_pivot_table_plugin">
       <title>Embedding pivot tables with the Pivot Table plug-in</title>
       <para>In this example we will see how we can embed good-looking, light-weight html pivot
         tables with data served from a DHIS2 back-end into a Web page. To accomplish this we will use
@@ -6570,7 +6570,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         </tgroup>
       </table>
     </section>
-    <section>
+    <section xml:id="webapi_chart_plugin">
       <title>Embedding charts with the Visualizer chart plug-in</title>
       <para>In this example we will see how we can embed good-looking Highcharts charts (<link
           xl:href="http://www.highcharts.com"/>) with data served from a DHIS2 back-end
@@ -6915,7 +6915,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         </tgroup>
       </table>
     </section>
-    <section>
+    <section xml:id="webapi_map_plugin">
       <title>Embedding maps with the GIS map plug-in</title>
       <para>In this example we will see how we can embed maps with data served from a DHIS2 back-end
         into a Web page. To accomplish this we will use the GIS map plug-in. The plug-in is written
@@ -7246,7 +7246,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>To see a complete working example please visit <link
           xl:href="http://play.dhis2.org/portal/map.html"/>.</para>
     </section>
-    <section>
+    <section xml:id="webapi_carousel_plugin">
       <title>Creating a chart carousel with the carousel plug-in</title>
       <para>The chart plug-in also makes it possible to create a chart carousel which for instance
         can be used to create an attractive front page on a Web portal. To use the carousel we need
@@ -7343,7 +7343,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
             variables for customized queries.</para>
         </listitem>
       </itemizedlist></para>
-    <section>
+    <section xml:id="webapi_sql_view_criteria">
       <title>Criteria</title>
       <para>You can do simple filtering on the columns in the result set by appending <emphasis
           role="italic">criteria</emphasis> query parameters to the URL, using the column names and
@@ -7353,7 +7353,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
         at level 4 you can use the following URL:</para>
       <screen>https://play.dhis2.org/demo/api/26/sqlViews/dI68mLkP1wN/data.csv?criteria=level:4</screen>
     </section>
-    <section>
+  <section xml:id="webapi_sql_view_variables">
       <title>Variables</title>
       <para>SQL views support variable subsitution. Variable subsitition is only available for SQL
         view of type <emphasis role="italic">query</emphasis>, meaning SQL views which are not
@@ -7375,7 +7375,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
       <para>The variable parameter must contain alphanumeric characters only. The variables must
         contain alphanumeric, dash, underscore and whitespace characters only.</para>
     </section>
-    <section>
+    <section xml:id="webapi_sql_view_filtering">
       <title>Filtering</title>
       <para>The SQL view api supports data filtering, equal to the <link
           xmlns:xlink="http://www.w3.org/1999/xlink" linkend="webapi_metadata_object_filter"
@@ -13624,8 +13624,8 @@ interval=WEEK" -u admin:district</screen>
       <screen>{
     &quot;foo&quot;:&quot;bar&quot;
 }</screen>
-      <para>To retrieve meta-data for en existing key from a namespace:
-        <screen>GET /api/26/dataStore/</screen></para>
+      <para>To retrieve meta-data for an existing key from a namespace:
+        <screen>GET /api/26/dataStore/&lt;namespace&gt;/&lt;key&gt;/metaData</screen></para>
       <para>Example curl request for
         retrieval:<screen>curl &quot;play.dhis2.org/demo/api/26/dataStore/foo/key_1/metaData&quot; -X GET -u admin:district -v</screen></para>
       <para>Example
