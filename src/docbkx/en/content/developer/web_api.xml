@@ -13624,8 +13624,8 @@ interval=WEEK" -u admin:district</screen>
       <screen>{
     &quot;foo&quot;:&quot;bar&quot;
 }</screen>
-      <para>To retrieve meta-data for en existing key from a namespace:
-        <screen>GET /api/26/dataStore/</screen></para>
+      <para>To retrieve meta-data for an existing key from a namespace:
+        <screen>GET /api/26/dataStore/&lt;namespace&gt;/&lt;key&gt;/metaData</screen></para>
       <para>Example curl request for
         retrieval:<screen>curl &quot;play.dhis2.org/demo/api/26/dataStore/foo/key_1/metaData&quot; -X GET -u admin:district -v</screen></para>
       <para>Example
