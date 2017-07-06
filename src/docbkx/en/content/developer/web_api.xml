@@ -10917,23 +10917,33 @@ interval=WEEK" -u admin:district</screen>
         simple example payload to create would be, the password should be sent in plain text
         (remember to only use this on a SSL enabled server) and will be encrypted on the
         backend:<screen>{
-  &quot;firstName&quot;: &quot;John&quot;,
-  &quot;surname&quot;: &quot;Doe&quot;,
-  &quot;email&quot;: &quot;johndoe@mail.com&quot;,
-  &quot;userCredentials&quot;: {
-    &quot;id&quot;: &quot;ZyjSDLHGPv4&quot;,
-    &quot;username&quot;: &quot;johndoe&quot;,
-    &quot;password&quot;: &quot;your-password-123&quot;,
-    &quot;userRoles&quot;: [ {
-      &quot;id&quot;: &quot;Euq3XfEIEbx&quot;
-    } ]
+  "id": "Mj8balLULKp",
+  "firstName": "John",
+  "surname": "Doe",
+  "email": "johndoe@mail.com",
+  "userCredentials": {
+    "id": "lWCkJ4etppc",
+    "userInfo": {
+      "id": "Mj8balLULKp"
+    },
+    "username": "johndoe123",
+    "password": "Your-password-123",
+    "userRoles": [
+      {
+        "id": "Ufph3mGRmMo"
+      }
+    ]
   },
-  &quot;organisationUnits&quot;: [ {
-    &quot;id&quot;: &quot;ImspTQPwCqd&quot;
-  } ],
-  &quot;userGroups&quot;: [ {
-    &quot;id&quot;: &quot;vAvEltyXGbD&quot;
-  } ]
+  "organisationUnits": [
+    {
+      "id": "Rp268JB6Ne4"
+    }
+  ],
+  "userGroups": [
+    {
+      "id": "wl5cDMuUhmF"
+    }
+  ]
 }</screen></para>
       <screen>curl -X POST -u user:pass -d @u.json -H &quot;Content-Type: application/json&quot; http://server/api/26/users</screen>
       <para>After the user is created, a <emphasis role="italic">Location</emphasis> header is sent
