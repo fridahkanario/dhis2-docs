@@ -1,87 +1,1073 @@
-<?xml version='1.0' encoding='UTF-8'?>
- <chapter version="5.0"
-         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
-          xmlns="http://docbook.org/ns/docbook"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xs="http://www.w3.org/2001/XMLSchema"
-         xmlns:xl="http://www.w3.org/1999/xlink"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-         xmlns:svg="http://www.w3.org/2000/svg"
-         xmlns:mth="http://www.w3.org/1998/Math/MathML"
-         xmlns:db="http://docbook.org/ns/docbook">
-  <title>Integration</title>
-  <para>This chapter will discuss the following topics:</para>
-  <itemizedlist>
-    <listitem>
-      <para>Integration and interoperability</para>
-    </listitem>
-    <listitem>
-      <para>Benefits of integration</para>
-    </listitem>
-    <listitem>
-      <para>What facilitates integration and interoperability</para>
-    </listitem>
-    <listitem>
-      <para>Architecture of  interoperable HIS</para>
-    </listitem>
-  </itemizedlist>
-  <para>In the following each topic will be discussed in greater detail.</para>
-  <section>
-    <title>Integration and interoperability</title>
-    <para>In a country there will usually be many different, isolated health information systems. The reasons for this are many, both technical and organizational. Here the focus will be on what benefits integration of these systems will bring, and why it should be a priority. First, a couple of clarifications:</para>
-    <itemizedlist>
-      <listitem>
-        <para>When talking about integration, we think about the process of making different information systems appear as one, i.e. data from them to be available to all relevant users as well as the harmonization of definitions and dimensions so that it is possible to combine the data in useful ways.</para>
-      </listitem>
-      <listitem>
-        <para>A related concept is interoperability, which is one strategy to achieve integration. For purposes related to DHIS2, we say that it is interoperable with other software applications if it is able to share data with this. For example, DHIS2 and OpenMRS are interoperable, because there is support in both to share data definitions and data with each other.</para>
-      </listitem>
-    </itemizedlist>
-    <para>To say that something is integrated, then, means that they share something, and that they are available from one place, while interoperability usually means that they are able to do this sharing electronically. DHIS2 is often used as an integrated data warehouse, since it contains (aggregate) data from various sources, such as Mother and Child health, Malaria program, census data, and data on stocks and human resources. These data sources share the same platform, DHIS2, and are available all from the same place. These subsystems are thus considered integrated into one system. Interoperability will then be a useful way to integrate also those data sources available on other software applications. For example, if census data is stored in some other database, interoperability between this database and DHIS2 would mean census data would be accessible in both (but only stored one place).</para>
-  </section>
-  <section>
-    <title>Benefits of integration</title>
-    <para>There are several potential benefits related to integration of systems. The most important are:</para>
-    <itemizedlist>
-      <listitem>
-        <para>Calculation of indicators: many indicators are based on numerators and denominators from different data sources. Examples include mortality rates, including some mortality data as numerator and population data as denominator, staff coverage and staff workload rates (human resource data, and population and headcount data), immunization rates, and the like. For these to be calculated, you need both the numerator and denominator data, and they should thus be integrated into a single data warehouse. The more data sources that are integrated, the more indicators can be generated from the central repository.</para>
-      </listitem>
-      <listitem>
-        <para>Reduce manual processing and entering of data: with different data at the same place, there is no need to manually extract and process indicators, or re-enter data into the data warehouse. Especially interoperability between systems of different data types (such as patient registers and aggregate data warehouse) allows software for subsystems to both calculate and share data electronically. This reduces the amount of manual steps involved in data processing, which increases data quality.</para>
-      </listitem>
-      <listitem>
-        <para>There are organizational reasons for integration. If all data can be handled by one unit in the ministry of health, instead of in various subsystems maintained by the health programs, this one unit can be professionalized. With staff whose sole responsibility is data management, processing, and analysis, more specialized skills can be developed and the information handling be rationalized.</para>
-      </listitem>
-    </itemizedlist>
-  </section>
-  <section>
-    <title>What facilitates integration and interoperability</title>
-    <para>There are three levels that need to be addressed in this regard:</para>
-    <itemizedlist>
-      <listitem>
-        <para>The motivation and will to integrate (organizational level)</para>
-      </listitem>
-      <listitem>
-        <para>Standard definitions (language level)</para>
-      </listitem>
-      <listitem>
-        <para>Standard for electronic storage and exchange (technical level)</para>
-      </listitem>
-    </itemizedlist>
-    <para>The first level is less of a topic in this guide, which takes as a point of departure that a decision has been taken about integration of data. However, it is an important issue and usually the most complex to solve given the range of actors involved in the health sector. Clear national policies on data integration, data ownership, routines for data collection, processing, and sharing, should be in place to address this issue. Often some period of disturbance to the normal data flow will take place during integration, so for many the long-term prospects of a more efficient system will have to be judged against the short-term disturbance. Integration is thus often a step-wise process, where measures need to be taken for this to happen as smoothly as possible.</para>
-    <para>At the language level, there is a need to be consistent about definitions. If you have two data sources for the same data, they need to be comparable. For example, if you collect malaria data from both standard clinics and from hospitals, this data need to describe the same thing if they need to be combined for totals and indicators. If a hospital is reporting malaria cases by sex but not age group, and other clinics are reporting by age group but not sex, this data cannot be analyzed according to either of these dimensions, though a total amount of cases will be possible to calculate. There is thus a need to agree on uniform definitions.</para>
-    <para>In addition to uniform definitions across the various sub-systems, data exchange standards must be adopted if data is to be shared electronically. The various software applications need this to be able to understand each other. DHIS2 supports several data formats for import and export, including one standard format now supported by WHO called SDMX-HD (Statistical Data and Metadata Exchange - Health Domain). Other software applications also support SDMX-HD, and it allows the sharing of data definitions and aggregate data between them. For DHIS2, this means it supports import of aggregate data that are supplied by other applications, such as OpenMRS (for patient management) and iHRIS (for human resources management).</para>
-  </section>
-  <section>
-    <title>Architecture of interoperable HIS</title>
-    <para>Since there are many different use-cases for health information, such as monitoring and evaluation, budgeting, patient management and tracking, logistics management, insurance, human resource management, etc, there will be many different types of software applications functioning within the health sector. Above the issue of interoperability has been addressed, and a plan or overview of the various interoperable software applications and their specific uses, along with what data should be shared between them, is termed an architecture for health information. </para>
-    <para>The role of the architecture is to function as a plan to coordinate the development and interoperability of various sub-systems within the larger health information system. It is advisable to develop a plan for the various components even if they are not currently running any software, to be able to adequately see the requirements in terms of data sharing. These requirements should then be part of any specification for the software when such is developed or procured.</para>
-    <para>Below is a simple illustration of an architecture, with a focus on the data warehouse for aggregate data. The various boxes represent use cases, such as managing logistics, tracking TB patients, general patient management, etc. All of these will share aggregate data with DHIS2. Note that the arrows are two-way, because there is also a synchronization of meta-data (definitions) involved, to make sure that the right data is shared. Also, an example of the logistics and financial data applications sharing data is also shown, as there are strong links between procuring drugs and handling the budget for this. There will be many such instances of sharing data; the architecture helps us to plan better for this being implemented as the ecosystem of software applications grow.</para>
-    <mediaobject>
-      <imageobject>
-        <imagedata width="80%" format="PNG" fileref="resources/images/implementation_guide/interoperable_his.png" align="center"/>
-      </imageobject>
-    </mediaobject>
-  </section>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter version="5.0" 
+	xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd" 
+	xmlns="http://docbook.org/ns/docbook" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xl="http://www.w3.org/1999/xlink" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+	xmlns:svg="http://www.w3.org/2000/svg" 
+	xmlns:mth="http://www.w3.org/1998/Math/MathML" 
+	xmlns:db="http://docbook.org/ns/docbook" 
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xml:id="integrationn">
+	
+		<title>Integration concepts</title>
+		<para>
+		DHIS2 is an open platform and its implementers are active
+		contributors to interoperability initiatives, such as openHIE.
+		The DHIS2 application database is designed with flexibility in
+		mind. Data structures such as data elements, organisation units,
+		forms and user roles can be defined completely freely through
+		the application user interface. This makes it possible for the
+		system to be adapted to a multitude of local contexts and
+		use-cases. DHIS2 supports many requirements for routine data
+		capture and analysis emerging in country implementations. It
+		also makes it possible for DHIS2 to serve as a basic management
+		system in domains such as <xref linkend="Integration_and_interoperability"/>.
+					
+		</para>
+		<section xml:id="Integration_and_interoperability" xreflabel="logistics, laboratory management and finance">
+			<title>Integration and interoperability</title>
+			<para>Based on its platform approach, DHIS2 is able to receive and host data from different data sources and share it to other systems and reporting mechanisms. An important distinction of integration concepts is the difference between data integration and systems interoperability:
+			</para>
+			<itemizedlist>
+				<listitem>
+					<para>
+						When talking about <emphasis role="bold">integration</emphasis>, we think about
+						the process of making different information
+						systems appear as one, making data available to
+						all relevant users as well as the harmonization
+						of definitions and dimensions so that it is
+						possible to combine the data in useful ways.
+					</para>
+				</listitem>
+				<listitem>
+					<para> A related concept is <emphasis role="bold">interoperability</emphasis>, which is one
+					strategy to achieve integration. We consider DHIS2 interoperable with other
+					software applications because of its capability to exchange data. For example,
+					DHIS2 and OpenMRS are interoperable, because they allow to share data
+					definitions and data with each other. Interoperability depends on standards for
+					data formats, interfaces, codes and terminologies. These would ideally be
+					internationally balloted standards, but in practice may also consist of de facto
+					standards (which has wide acceptance and usage but is not necessarily formally
+					balloted in a standards development organisation) and other more local
+					agreements within a particular context.</para>
+				</listitem>
+			</itemizedlist>
+			<para>To say that something is integrated, then, means that they share something, and that they are available from one place, while interoperability usually means that they are able to do this sharing electronically. 
+			DHIS2 is often used as an integrated data warehouse, since it contains (aggregate) data from various sources, such as <xref linkend="Objectives_of_integration"/>. These data sources share the same platform, DHIS2, and are available all from the same place. 
+			These subsystems are thus considered integrated into one system.
+			</para>
+			<para>Interoperability in addition will integrate data sources from other software applications. 
+				For example, if census data is stored in a specialized <xref linkend="Health_information"/>, 
+			interoperability between this database and DHIS2 would mean that census data would also be be accessible in DHIS2.
+			</para>
+			<para>Finally, the most basic integration activity (that is not always taken into account in the
+			interoperability discussion) is the possibility to integratedata from existing paper
+			systems or parallel vertical systems into DHIS2. Data will be entered directly into
+			DHIS2 without passing through a different software application. This process is based on
+			creating consistent indicator definitions and can already greatly reduce fragmentation
+			andenhance data analysis through an integrated data repository. </para>
+		</section>
+		<section xml:id="Objectives_of_integration" xreflabel="Mother and Child health, Malaria program, census data, and data on stocks and human resources">
+			<title>Objectives of integration</title>
+			<para>In most countries we find many different, <emphasis role="bold">isolated</emphasis> health
+			information systems, causing many information management challenges. Public Health
+			Information System have seen an explosive and often uncoordinated growth over the last
+			years. Modern information technology makes it less costly to implement ICT4D solutions,
+			which can lead to a high diversity of solutions. A staggering example was the mHealth
+			moratorium declaration of Uganda´s MoH in 2012, as a reaction to an avalanche of around
+				<link
+				xlink:href="http://www.ictworks.org/2012/02/22/ugandan-mhealth-moratorium-good-thing"
+				>50 mHealth solutions</link> that were implemented within the course of a few years.
+			Most of these solutions were standalone approaches that did not share their data with
+			the national systems and rarely were developed beyond pilot status.</para>
+			<para>This may lead to the conclusion, that all systems should be connected or that <emphasis role="bold">interoperability is an objective</emphasis> in itself. However DHIS2 is often employed in contexts, where infrastructure is weak, and where resources to run even basic systems reliably are scarce. Fragmentation is a serious problem in this context, however interoperability approaches can only resolve some of the fragmentation problems - and often interoperability approaches result in an additional layer of complexity.</para>
+			<informaltable frame="all">
+				<tgroup cols="1">
+					<tbody>
+						<row>
+							<entry>
+								<para> <emphasis role="bold">Example: Complexity of Logistics solutions in Ghana</emphasis></para>
+					<para>In the area of Logistics or Supply Chain Management, often a multitude of parallel,
+								overlapping or competing software solutions can be found in a single
+								country. As identified in a <link
+									xlink:href="http://docplayer.net/23773118-Ghana-landscape-analysis-of-supply-chain-management-software-tools-in-use.html"
+									>JSI study in 2012</link>, eighteen (18!) different software
+								tools were documented as being used within the public health supply
+								chain in Ghana alone.</para>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</informaltable>
+			<para> Systems interoperability therefore seems as one possibility to remove fragmentation and
+			redundancies and give public health officers a concise and balanced picture from
+			available data sources. However the effort of connecting many redundant software
+			solutions would be very high and therefore seems questionable. In a first step, focus
+			should be on <emphasis role="bold">reducing the number of parallel systems
+			</emphasis>and identifying the most relevant systems, afterwards these relevant systems
+			can be integrated. </para>
+			<para>
+				On this background, we want to define the major
+				objectives of DHIS2 integration approaches:
+				<itemizedlist>
+					<listitem>
+						<para><emphasis role="bold">Calculation of indicators</emphasis>: Many indicators are based on numerators and denominators from different data sources. Examples include mortality rates, including some mortality data as numerator and population data as denominator, staff coverage and staff workload rates (human resource data, and population and headcount data), immunization rates, and the like. For the calculation, you need both the numerator and denominator data, and they should thus be integrated into a single data warehouse. The more data sources that are integrated, the more indicators can be generated from the central repository.</para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Reduce manual processing</emphasis> and entering of data: With
+						different data at the same place, there is no need to manually extract and
+						process indicators, or re-enter data into the data warehouse. Especially
+						interoperability between systems of different data types (such as patient
+						registers and aggregate data warehouse) allows software for subsystems to
+						both calculate and share data electronically. This reduces the amount of
+						manual steps involved in data processing, which increases data
+						quality.</para>
+						</listitem>
+					<listitem>
+						<para><emphasis role="bold">Reduce redundancies</emphasis>: Often overlapping and redundant data is being captured by the various parallel systems. For instance will HIV/AIDS related data elements be captured both by both multiple general counselling and testing programs and the specialized HIV/AIDS program. Harmonizing the data collection tools of such programs will reduce the total workload of the end users. This implies that such data sources can be integrated into DHIS2 and harmonized with the existing data elements, which involves both data entry and data analysis requirements.</para>
+					</listitem>
+					<listitem>
+						<para> Improve <emphasis role="bold">organizational aspects</emphasis>: If all data can be handled by one unit in the ministry of health, instead of various subsystems maintained by the several health programs, this one unit can be professionalized. With staff which sole responsibility is data management, processing, and analysis, more specialized skills can be developed and the information handling be rationalized.</para>
+						</listitem>
+					<listitem>
+						<para>Integration of <emphasis role="bold">vertical programs</emphasis>: The typical government health domain has a lot of existing players and systems. An integrated database containing data from various sources becomes more valuable and useful than fragmented and isolated ones. For instance when analysis of epidemiological data is combined with specialized <xref linkend="nn"/> data, it will give a more complete picture of the situation. </para>
+					</listitem>
+				</itemizedlist>
+			</para>
+			<para> DHIS2 can help streamlining and <emphasis role="bold">simplifying system
+				architecture</emphasis>, following questions such as:What is the objective of the
+			integration effort? Can DHIS2 help reduce the number of systems? Can an DHIS2
+			integration help provide relevant management information at a lower cost, at at higher
+			speed and with a better data quality than the existing systems? More practical
+			information on defining these objectives can be found in <link
+				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.dhis2.org/downloads">
+				<emphasis role="underline">STEP 1 of the 6-Step implementation
+				guideline</emphasis></link>. 
+			
+				
+				
+		</para>
+			</section>
+	
+	<section xml:id="Health_information" xreflabel="civil registry or in a vital events system">
+			<title>Health information exchange</title>
+			<para>Since there are different use-cases for health information, there are different types of software applications functioning within the health sector. We use the term architecture for health information to describe a plan or overview of the various software applications, their specific uses and data connections. The architecture functions as a plan to coordinate the development and interoperability of various subsystems within the larger health information system. It is advisable to develop a plan that covers all components, including the areas that are currently not running any software, to be able to adequately see the requirements in terms of data sharing. These requirements should then be part of specifications for the software once it is developed or procured.</para>
+			<para>The <emphasis role="bold">openhealth information exchange (openHIE)</emphasis> is an interoperable interpretation of this architecture, with an HMIS or DHIS2 often assuming a significant role in it.The openHIE framework has been developed with a clear focus on countries in low resource settings, through the participation of several institutions and development partners, including the Oslo HISP program.</para>
+			<para>
+				The schematic overview below shows the main elements of
+				the openHIE framework, containing a component layer, an
+				interoperability services layer and external systems.
+				<screenshot>
+					<mediaobject>
+						<imageobject>
+							<imagedata width="100%" align="center" fileref="../../resources/images/implementation_guide/frameworktest.png" format="PNG"/> <!--Please provide the reference to image in fileref attribute-->
+						</imageobject>
+					</mediaobject>
+				</screenshot>
+			</para>
+			<para>The openHIE component layer covers meta or reference data (Terminology, Clients, Facilities), Personal data (Staff, Patient History) and national health statistics. The purpose is to ensure the availability of the same meta data in all systems that participate in the corresponding data exchange (e.g. indicator definitions, facility naming, coding and classification). In some cases, like the case of the Master Facility Registry, the data may also be used to provide information to the general public through a web portal. While the interoperability layer ensures data brokerage between the different systems, the external systems layer contains several sub-systems, many at point of service level, with often overlapping functional range.</para>
+			<para>There are different approaches to define an eHealth architecture. In the context of this DHIS2 guideline, we distinguish between approaches based on a 1:1 connection versus approaches based on an n:n connection (many-to-many).</para>
+			<section xml:id="integration" xreflabel="MIS/LMIS implementation in Senegal"> 
+				<title><emphasis>1:1</emphasis> integration</title> <!--No subsection element in DTD, thats why using section element-->
+				<para>In many countries a national HMIS is often the first system to be rolled out to a large number of facilities and to manage a large number of data on a monthly or quarterly basis. When countries start to develop their health system architecture further, DHIS2 often will be connected to some other systems. This connection is done directly through a simple script, which automates a data transfer.</para>
+				<para>We talk of a 1:1 connection because it is limited to two systems. In the case of an LMIS/HMIS integration, one LMIS (e.g. openLMIS as is the case in Tanzania) will transfer data to DHIS2 as defined in the script. In case a second logistics system would want to transfer data to DHIS2 (e.g. commodity data for a specific disease program), a second script would have to written, to perform this task. These two scripts would then run independently from another, resulting in two separate 1:1 connections.</para>
+				<para>This hands-on approach often represents a first step and is one of the most common use cases on the way to an interoperable openHIE architecture.</para>
+			</section>
+			<section xml:id="nn" xreflabel="HIV/AIDS, TB, financial and human resource data, or when immunization is combined with logistics/stock"> 
+				<title><emphasis>n:n</emphasis> integration</title> <!--No subsection element in DTD, thats why using section element-->
+				<para>A different approach is based on placing a purpose-built software to serve as an <emphasis
+					role="bold">interoperability layer</emphasis> or BUS approach, managing the data
+				transfer between possibly several systems on either side (n:n). This could be the
+				case if for example you wanted to collect stock level data through different LMIS
+				applications, and then share it to a central warehouse LMIS, the HMIS and some
+				vertical disease programs system. The openHIE reference software to assume this role
+				is Jembi openHIM, but systems like Grameen Motech have also been used for this
+				purpose as will be discussed below.</para>
+				<para>While this approach may result in a higher initial effort, it promises to make further integration project easier, because the interoperability layer is being alimented with definitions and mappings that can be re-used for connecting the next systems.</para>
+				<para>In practice, there are certain challenges to this approach. It takes a considerable effort
+				of qualified resources to activate APIs and with each new release of any involved
+				system, data flows require re-testing and if necessary adaptations. Also, to be
+				successful these implementation projects typically have to go through a series
+					of<link xmlns:xlink="http://www.w3.org/1999/xlink"
+					xlink:href="https://www.dhis2.org/downloads">
+					<emphasis role="underline">complex steps</emphasis></link>, such as the
+				agreement on an interoperability approach embedded in the national eHealth strategy,
+				the definition of data standards and sustainable maintenance structure, and
+				attaining a stakeholder consensus on data ownership and sharing policies. There can
+				be some long term consequences when data and systems are knitted together - it
+				creates new roles, jobs and tasks which didn't exist before and may not have been
+				planned for (metadata governance, complex system administration, boundary
+				negotiators, etc.).</para>
+				<informaltable frame="all">
+					<tgroup cols="1">
+						<tbody>
+							<row>
+								<entry>
+									<para> <emphasis role="bold">Example: Grameen DHIS2/CommCare middle layer in Senegal</emphasis></para>
+									<para>In a <xref linkend="integration"/>, <link xlink:href="https://motechproject.org/"
+										>Grameen MOTECH</link> serves as technical middle layer
+									between an LMIS (<link xlink:href="http://www.commcarehq.org"
+										>CommCare</link>) and DHIS2, allowing to define data
+									mapping, transformation rules and data quality checks. The
+									interface is set-up to transfers data from CommCare Supply to
+									DHIS2 whenever data is saved into a CommCare form at facilities.
+									For each commodity, data on consumption, available stock, losses
+									and stock-out data is transferred from CommCare to DHIS2. </para>
+					<para>The higher initial investment of the Senegal approach hints towards a more ambitious
+									long-term system architecture, foreseeing that the Grameen
+									Motech platform may in future serve to accommodate further
+									interoperability task. However we do not see any of the country
+									activities tightly embedded in a text-book eHealth architecture,
+									which would clearly define areas of priority, leading systems
+									for each priority and the relations and resulting APIs between
+									these different components. One may argue that interoperability
+									projects are built on a weak foundation if there is no previous
+									consensus on an architectural master plan. On the other hand it
+									is also valuable to allow system initiatives to organically
+									develop, as long as they are rooted in well-founded country
+									needs.</para>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</informaltable>
+				</section>
+			
+			<section>
+				<title>Architecture, standards and mapping</title> 
+				<para>An important element of an eHealth architecture is the inclusion of <emphasis role="bold"
+					>international eHealth standards</emphasis>. Standards are especially relevant
+				for n:n connections, less so for direct (1:1) connections.</para>
+				<para>Some standards are on the technical level (e.g. transmission methods), other on the contents side (e.g. WHO 100 core indicators). Gradually aligning national system initiatives to these standards can give countries access to proven solutions, benefitting from medical and technological innovation.</para>
+				<informaltable frame="all">
+					<tgroup cols="1">
+						<tbody>
+							<row>
+								<entry>
+									<para> <emphasis role="bold">Example: Ghana EPI</emphasis></para>
+									<para>The Ghana case illustrates how the WHO EPI reporting requirements serves to define standard data in DHIS2. This standardization at the dataset and terminological level is the basis for the system integration. In the area of DHIS2, work is ongoing with WHO to develop standardized datasets, which could in the future open up new opportunities for interoperability and efficiency gains by offering some consistency of metadata across systems, and also encouraging countries to reuse existing solutions.</para>	
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</informaltable>
+				<para>At the <emphasis role="bold">language</emphasis> level, there is a need to be consistent about definitions. If you have two data sources for the same data, they need to be comparable. For example, if you collect malaria data from both standard clinics and from hospitals, this data need to describe the same thing if they need to be combined for totals and indicators. If a hospital is reporting malaria cases by sex but not age group, and other clinics are reporting by age group but not sex, this data cannot be analysed according to either of these dimensions (even though a total amount of cases can be calculated). There is thus a need to agree on uniform definitions.</para>
+				<para>In addition to uniform definitions across the various sub-systems, <emphasis role="bold"
+					>data exchange standards</emphasis> must be adopted if data is to be shared
+				electronically. The various software applications would need this to be able to
+				understand each other. DHIS2 is supporting several data formats for import and
+				export, including the most relevant standard ADX. Other software applications are
+				also supporting this, and it allows the sharing of data definitions and aggregate
+				data between them. For DHIS2, this means it supports import of aggregate data that
+				are supplied by other applications, such as <link xlink:href="http://openmrs.org"
+					>OpenMRS</link> (for patient management) and <link
+					xlink:href="https://www.ihris.org/">iHRIS</link> (for human resources
+				management).</para>
+				<para>A crucial element of the architecture is how organize data <emphasis role="bold">mapping</emphasis>.  Typically the metadata of different systems does not match exactly. Unless an MoH has been enforcing a consequent data standard policy, different systems will have different codes and labels for a facility. one System may call it <emphasis role="italic">District Hospital - 123</emphasis>, the other system may refer to it as Malaria Treatment Centre - 15. To be able to transfer data, somewhere the information that these two facilities correspond needs to be stored.</para>
+				<para>In the case of a 1:1 connection, this mapping has to be done for every connection, in case of an n:n interoperability approach, one side of the definitions can be re-used.</para>
+				<para>In order to assure that the data can flow smoothly, you need to have clear responsibilities on both sides of the system regarding data maintenance and troubleshooting. For example, there need to be previously defined standard procedures for such activities as adding, renaming, temporarily deactivating or removing a facility on either of the two systems. Changes of database fields that are included in a transferred data record need also to be coordinated in a systematic way.</para>
+			</section>
+			</section>
+		
+		<section>
+			<title>Aggregate and transactional data</title>
+			<para>DHIS2 has been expanding its reach into many health systems. Starting from its familiar grounds of aggregate data sets for routine data it has included patient related data and then data in the areas of HR, finance, logistics and laboratory management, moving towards operational or transactional data.</para>
+			<para>We can differentiate between transactional and aggregate data. A <emphasis role="bold">transactional system</emphasis> (or operational system from a data warehouse perspective) is a system that collects, stores and modifies low level data. This system is typically used on a day-to-day basis for data entry and validation. The design is optimized for fast insert and update performance. DHIS2 can incorporate aggregate data from external data sources, typically aggregated in the space dimension (the organisation unit hierarchy), time dimension (over multiple periods) and for indicator formulas (mathematical expressions including data elements).</para>
+			<para>When we look at a transactional system, such as a logistics software for the entire supply chain or parts of it, there is one fundamental decision to take: Do you need to track all detailed transactions at all levels, including such operations as returns, transfer between facilities, barcode reading, batch and expiry management? Or can you get most of your results using aggregate data?</para>
+			<para>Supply chains can often be well controlled with aggregate data only, as long as data is
+			provided reliably from all relevant levels and followed up upon. The main indicators
+				<emphasis role="italic">intake, consumption and stock level at the end of
+				period</emphasis> can be managed without electronic transactions and often suffice
+			to give the big picture, reducing the needs for system investment.</para>
+		<para>
+			<note>
+				<para>The expectation, that more detailed data leads to better logistics management
+					is not always fulfilled. Sometimes the ambitious attempt to regularly collect
+					logistics transaction data results in less data quality, for example because the
+					data recording, which may have to happen on a daily basis instead of a monthly
+					or quarterly basis, is not carried out reliably. On the other hand, if the
+					transactional system is well maintained and monitored, more detailed data may
+					lead to discover inaccuracies and data quality challenges. Analysing these may
+					help to discover root causes of some problems and improve the data quality in
+					the long run.</para>
+			</note>
+		</para>
+			<para>DHIS2 can assume different roles in interoperability scenarios. A common interoperability
+			scenario is for DHIS2 to receive aggregate data from an operational system, in which
+			case the operational system adds up the transactions before passing it on to DHIS2.
+			However, DHIS2 may to a certain extent also be configured to store detailed
+			transactional data, receiving it from external systems or through direct data entry in
+			DHIS2.</para>
+			<para>On this basis we try making a comparative overview, comparing aggregate DHIS2 data management with data management of external specialized system. This can serve as a rough orientation, but is not static since both the capabilities of DHIS2 and its interpretation by implementers are broadening with almost each release.</para>
+		
+			<informaltable frame="all">
+					<tgroup cols="3">
+						<colspec colname="c1" colnum="1" colwidth="0.5*"/>
+						<colspec colname="c2" colnum="2" colwidth="1.0*"/>
+						<colspec colname="newCol3" colnum="3" colwidth="1*"/>
+					<thead>
+						<row>
+							<entry>Area</entry>
+							<entry>Aggregate DHIS2</entry>
+							<entry>External specialized systems</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry>Logistics</entry>
+							<entry>Aggregate data, e.g. end-of-month facility stock levels can be send through DHIS2. DHIS2 can produce simple stock level and consumption reports.</entry>
+							<entry>Supply chain management systems can track detailed stock movements (receiving, return, transfer, destruction) and record details such as production batch numbers. At HQ level, SCM systems typically create forecasting, replenishment and elaborate control reports.</entry>
+						</row>
+						<row>
+							<entry>Finance</entry>
+							<entry>Aggregate data, e.g. on total expenditure or cash level can be send through DHIS2. DHIS2 can produce simple finance overview reports, e.g. on remaining budgets.</entry>
+							<entry>Finance management systems allow fully traceable recording of financial transactions according to legal requirements, including budgeting, transfers, cancellations, reimbursements etc. Multi-dimensional tagging of transactions allows for analytical reports.</entry>
+						</row>
+						<row>
+							<entry>Patient tracking</entry>
+							<entry>Disease or program related data are collected by DHIS2, DHIS2 Tracker also allows a simplified longitudinal view on medical records, including patient history and multi-stage clinical pathways.</entry>
+							<entry>Specialized hospital management systems can cover and optimize complex workflows between different departments (e.g. reception, payment counter, wards, OPD, IPD, laboratory, imaging, storeroom, finance and HR administration, medical device maintenance, etc.).</entry>
+						</row>
+						<row>
+							<entry>Human Resources</entry>
+							<entry>DHIS2 collects human resource related indicators, for example planned positions and
+							vacancies per facility.</entry>
+							<entry>A specialized HR management system can track detailed status information and changes for a Health Worker (accreditation, promotion, sabbatical, change of position, change of location, additional training, etc.). It comes with pre-designed reports for both operational oversight and planning.</entry>
+						</row>
+												
+					</tbody>
+				</tgroup>
+			</informaltable>
+		</section>
+			<section>
+				<title>Different DHIS2 integration scenarios</title>
+				<para>The different objectives described above lead to different integration scenarios. DHIS2 can assume multiple <emphasis role="bold">roles</emphasis> in a system architecture:
+				
+					<itemizedlist>
+					    <listitem>
+						<para>Data input: data entry (offline, mobile), data import (transactional data, aggregate
+						data)</para>
+					    </listitem>
+						<listitem>
+						<para>Data storage, visualisation and analysis with in-built tools (DWH, reports, GIS) </para>
+						</listitem>
+						<listitem>
+						<para>Data sharing to external tools (e.g. DVDMT) , via web APIs, web apps </para>
+					<para>In the following paragraphs we discuss the data input and data sharing
+						approaches, then we present the example of the vertical integration where
+						DHIS2 often assumes all these roles. </para>
+					<para>The role of DHIS2 to store, visualise and analyse data is discussed
+						seperpately in the <link
+							xlink:href="https://docs.dhis2.org/master/en/implementer/html/ch05.html"
+							>data warehouse section</link>.</para>
+						</listitem>
+						</itemizedlist>
+				</para>
+				<section> 
+					<title>Data input</title>
+					<para>There are several aspects on how DHIS2 deals with data input. On the most basic level,
+				DHIS2 serves to replace or at least mirror paper-based data collection forms,
+				integrating the data electronically. This will result in <emphasis role="bold"
+					>manual data entry</emphasis> activities at facility or at health administration
+				level. The next input option is to <emphasis role="bold">import data</emphasis>.
+				DHIS2 allows to import data through a user interface, which is a method requiring
+				little technical knowledge, but needs to be executed manually every time data needs
+				to be made available. A detailed description of the import functions can be found in
+				the <link xmlns:xlink="http://www.w3.org/1999/xlink"
+					xlink:href="https://docs.dhis2.org/master/en/user/html/dhis2_user_manual_en_full.html#import"
+					> DHIS2 user guides</link>.</para>
+					<informaltable frame="all">
+						<tgroup cols="1">
+							<tbody>
+								<row>
+									<entry>
+										<para> <emphasis role="bold">Practical note:</emphasis></para>
+										<para>The manual data entry and import approach require relatively little technical effort. They may also be used temporarily to pilot a data integration approach. This allows user to test indicators and reports, without having to employ dedicated technical resources for the development of automated interoperability functions, either through a 1:1 or an n:n connection.</para>	
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</informaltable>
+				</section>
+				<section xml:id="datashare" xreflabel="the Tanzania HMIS Web Portal">
+					<para/>	
+				</section>
+				<section>
+					<title>Data sharing</title>
+					<para>There are three sharing scenarios, (1) a simple <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.dhis2.org/master/en/user/html/dhis2_user_manual_en_full.html#export"> 
+						<emphasis role="underline">data export</emphasis></link>, (2) <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.dhis2.org/master/en/developer/html/dhis2_developer_manual_full.html"> 
+							<emphasis role="underline">DHIS2 apps and (3) external apps or websites connecting to the DHIS Web API</emphasis></link>. Similar to the import functions described in the data input section, the most accessible way of data sharing is to use the data export functions that are available from the user menu, requiring little technical knowledge.</para>
+					<para>Due to its modular design DHIS2 can be extended with <emphasis role="bold">additional
+					software modules, which can be downloaded from the DHIS2</emphasis><link
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					xlink:href="https://www.dhis2.org/appstore">
+					<emphasis role="underline">App store</emphasis></link>. These software modules
+				can live side by side with the core modules of DHIS2 and can be integrated into the
+				DHIS2 portal and menu system. This is a powerful feature as it makes it possible to
+				extend the system with extra functionality when needed, typically for country
+				specific requirements as earlier pointed out.</para>
+					<para>The downside of the software module extensibility is that it puts several constraints on the development process. The developers creating the extra functionality are limited to the DHIS2 technology in terms of programming language and software frameworks, in addition to the constraints put on the design of modules by the DHIS2 portal solution. Also, these modules must be included in the DHIS2 software when the software is built and deployed on the web server, not dynamically during run-time.</para>
+					<para>In order to overcome these limitations and achieve a looser coupling between the DHIS2 service layer and additional software artefacts, the DHIS2 development team decided to create a <emphasis role="bold">Web API</emphasis>. This Web API complies with the rules of the REST architectural style. This implies that:
+						<itemizedlist>
+							<listitem>
+								<para>The Web API provides a navigable and machine-readable interface to the complete DHIS2 data model. For instance, one can access the full list of data elements, then navigate using the provided hyperlink to a particular data element of interest, then navigate using the provided hyperlink to the list of forms which this data element is
+									part of. E.g. clients will only do state transitions using the hyperlinks which are dynamically embedded in the responses.</para>
+							</listitem>
+							<listitem>
+								<para>Data is accessed through a uniform interface (URLs) using a well-known protocol. There are no fancy transport formats or protocols involved - just the well-tested, well-understood HTTP protocol which is the main building block of the Web today. This implies that third-party developers can develop software using the DHIS2 data model and data without knowing the DHIS2 specific technology or complying with the DHIS2
+									design constraints.</para>
+							</listitem>
+							<listitem>
+								<para>All data including meta-data, reports, maps and charts, known as resources in REST terminology, can be retrieved in most of the popular representation formats of the Web of today, such as HTML, XML, JSON, PDF and PNG. These formats are widely supported in applications and programming languages and gives third-party developers a wide range of implementation options.</para>
+							</listitem>
+					   	</itemizedlist>	
+						</para>
+					<para>This Web API can be accessed by different external information system. The effort needed for developing new information systems and maintaining them over time is often largely underestimated. Instead of starting from scratch, a new application can be built on top of the Web API.</para>
+					<para>Extenal systems can offer different options for visualizing and presenting DHIS2 data,
+				e.g. in the form of dashboards, GIS and charting components. Web portals targeted at
+				the health domain can use DHIS2 as the main source for aggregate data. The portal
+				can connect to the Web API and communicate with relevant resources such as maps,
+				charts, reports, tables and static documents. These data views can dynamically
+				visualize aggregate data based on queries on the organisation unit, indicator or
+				period dimension. The portal can add value to the information accessibility in
+				several ways. It can be structured in a user-friendly way and make data accessible
+				to inexperienced users. An example for this is the <link
+					xlink:href="https://appstore.hisptanzania.org/">Tanzania HMIS Web
+				Portal</link>.</para>
+				</section>
+			</section>
+			<section>
+		<title>DHIS2 maturity model</title>
+		<para>Taking into account all the above elements on system architecture and data types,
+			DHIS2 implementers have several options on how to approach implementations: <itemizedlist>
+				<listitem>
+					<para>Focus on transactional or aggregate data</para>
+				</listitem>
+				<listitem>
+					<para>Focus on data integration or systems interoperability</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+		<para>Given the efforts required to implement systems interoperability, many Ministries of
+			Health are going for the pragmatic shortcut of integrating data such as basic stock
+			level data <emphasis role="bold">directly into their existing national DHIS2</emphasis>.
+			As a rapidly evolving platform, DHIS2 has been adding a lot of functionality over the
+			last years, especially in DHIS2 Tracker. Taking the example of logistics data, the
+			following main functions are currently available: <itemizedlist>
+				<listitem>
+					<para>Data entry form mirroring the widely used Report and Requisition
+						(R&#038;R) paper form. Data entry by facilities is possible through the
+						desktop browser or a mobile app, including in offline mode. These electronic
+						forms can be filled by staff based on the paper stock cards, that are
+						normally placed next to the commodity in the store room.</para>
+				</listitem>
+				<listitem>
+					<para>DHIS2 can then produce reports for central decision making, giving
+						commodity and program managers the possibility to accept or modify delivery
+						suggestions.</para>
+				</listitem>
+				<listitem>
+					<para>Stock data can be transformed into logistics indicators, that can be put
+						into context with other program indicators, for example cross-referencing
+						number of patients treated with a specific pathology and corresponding drug
+						consumption.</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+		<para>Although each country that we look at in the use cases has their own development path
+			towards system integration, some common learnings can be drawn from their experiences.
+			The maturity model below describes an evolutionary approach to cope with integration and
+			interoperability challenges, allowing the different stakeholders in a national Health
+			System to grow professional analytics and data usage habits.</para>
+		<para>The maturity model suggests moving from aggregate data to transactional data and from
+			stand-alone to interoperable systems (using the example of logistics data). <orderedlist>
+				<listitem>
+					<para>DHIS2 is often one of the first systems to cover the health administration
+						and several facility levels of a country. At first core disease indicators
+						are covered (for example corresponding to the 100 WHO Core Health
+						Indicators).</para>
+				</listitem>
+				<listitem>
+					<para>In a second phase, different stakeholders seek to complement the disease
+						and service delivery data they are reporting with basic LMIS data. This can
+						be done on an aggregate basis in DHIS2, e.g. by including stock levels and
+						consumption in periodic reports.</para>
+				</listitem>
+				<listitem>
+					<para>At a more mature stage, there may be a legitimate need for specialized
+						logistics systems, especially when a very detailed transactional view is
+						wanted to have a more granular control, (e.g. returns, transfers between
+						facilities, batch numbers and expiries, etc.). DHIS2 Tracker can offer some
+						event or patient related data management functions, but cannot always
+						respond to the needs for a specialized external system.</para>
+				</listitem>
+				<listitem>
+					<para>In a mature technological and managerial environment, the logistics
+						transactions can be shared to DHIS2 in an aggregate form, moving from a
+						stand-alone to an integrated scenario.</para>
+				</listitem>
+			</orderedlist>
+		</para>
+	</section>
+			
+	<section>
+		<title>Implementation steps for successful data and system integration</title>
+		<para>The purpose of this step-by-step DHIS2 Implementation Guide is to provide a methodology for implementers to create and support a DHIS2 integration scenario.  The guide is based on the best practices and lessons learned.  The guide advocates for a country driven, iterative, and agile approach that begins with collecting user stories and functional requirements.  The guide is intended as a framework that can be adapted to the specific context of each country. The content describes specific examples for each step detailing user stories, data specifications, job aids and checklists to guide the use of the reference implementation software. The implementation process includes the following steps:</para>
+		<para><emphasis role="bold">Step 1</emphasis>: Identify Stakeholders and Motivations for Improved Facility Data</para>
+		<para><emphasis role="bold">Step 2</emphasis>: Document Facility Registry Specifications and User Stories</para>
+		<para><emphasis role="bold">Step 3</emphasis>: Set Up Initial Instance</para>
+		<para><emphasis role="bold">Step 4</emphasis>: Identify Gaps &#038; Iterative Development via User Testing</para>
+		<para><emphasis role="bold">Step 5</emphasis>: Scaling the Registry Implementation</para>
+		<para><emphasis role="bold">Step 6</emphasis>: Provide Ongoing Support</para>
+		<para>
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata width="100%" align="center" fileref="../../resources/images/implementation_guide/implementation_steps.png" format="PNG"/> <!--Please provide the reference to image in fileref attribute-->
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+		</para>
+				<section>
+					<title>Step 1: Define strategy, stakeholders and data usage objectives</title>
+					<para>In a first step, the objectives of the integration project will be defined. As with every technology project, there should be a clear <emphasis role="bold">consensus on strategic and functional objectives</emphasis>. The sole driving force should not be technological innovation and feasibility but a clearly defined organisational goal. This step is intended to answer the question: “Why do we want to connect systems or integrate data from different sources with DHIS2?”</para>
+					<para>On a practical level, this leads to questions on the data integration approach, such as:</para>
+					<itemizedlist>
+						<listitem>
+							<para>Do you want to eliminate paper forms or even eliminate data sets that are redundant or not needed anymore?</para>
+						</listitem>
+						<listitem>
+							<para>Can you integrate the (aggregate) data into DHIS2?</para>
+						</listitem>
+						<listitem>
+							<para>Can you integrate the detailed (e.g. patient level or transactional) data into DHIS2, using DHIS2 tracker functions?</para>
+						</listitem>
+						<listitem>
+							<para>If you want to create an data exchange connection between DHIS2 and another system how do you define ownership and responsibilities?</para>
+						</listitem>
+					</itemizedlist>
+					<para>Activities to answer this question are described below and will lay the groundwork for an DHIS2 interoperability project.</para>
+				<section>
+					<title>Identify Stakeholders and Motivations</title>
+					<para>It is in the nature of interoperability projects to have more than one stakeholder. Stakeholders from different areas need to agree on a common system approach, for example the team responsible for the national HMIS (e.g. the M#038;E department or Planning Department) and the Logistics Department in case of an LMIS implementation. These two main areas often have sub-divisions, e.g. in the LMIS area the procurement unit, the warehousing unit, the transport unit. In addition, stakeholders from disease specific programs will have their own regimens and commodity managers. In addition to these local actors, international partners (agencies, donors, iNGOs, consultancies) are often also involved in the decision making process.</para>
+					<para>It´s good to take a look at the main motivations of the stakeholders and how to mitigate risks resulting from potential diverging interests.</para>
+					<itemizedlist>
+						<listitem>
+							<para>Central MoH Departments such as <emphasis role="bold">M&#038;E &#038;</emphasis> Planning often are the main stakeholders for a standardisation of indicators and IT Systems</para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Central IT departments</emphasis> have a general interest over (often locally controlled) technology choices and ownership, hardware and software purchases. They are often dealing with network and hardware issues but lack experience dealing with complex web-based architectures and data exchanges.</para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Specialized disease programs</emphasis> are often under pressure to deliver very program specific indicators, both for their own management but also responding to donor driven approaches. They may also feel more comfortable controlling their proper IT system to be sure their needs are prioritized.</para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Specialized functional areas</emphasis> (such as Human Resources, Logistics, Hospital Management) are often in a sandwich position, having to cater to the information needs of several different stakeholders, while trying to achieve operational efficiency with limited resources.</para>
+						</listitem>
+					</itemizedlist>
+					<para>By identifying who is interested to provide or utilize the data, the lead implementers can start to form a project team to inform the design and implementation. One method for characterizing stakeholders involves grouping interested parties by their functional roles. The existing infrastructure and procedures are also important to understanding to gauge governance and curation. Understanding the stakeholders and their corresponding system is a critical first step. Below are job aides to assist in this initial process.</para>
+					<informaltable frame="all">
+						<tgroup cols="1">
+							<tbody>
+								<row>
+									<entry>
+										<para> <emphasis role="bold">Job aides</emphasis>
+									<itemizedlist>
+											<listitem>
+												<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/document/d/1jQUZ1n1Oh2d_VTeXlFj-Y2IPkqQXvoGDV6v98Y5n4DI/edit"> 
+													<emphasis role="underline">Actor and Stakeholders Guide</emphasis></link></para>
+											</listitem>
+											<listitem>
+												<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/spreadsheets/d/1RBpiNA4PGAeMHFs_maFSwPcD_l9FU45WO0im_vPq1p0/edit#gid=0"> 
+													<emphasis role="underline">Stakeholder List Template</emphasis></link></para>
+											</listitem>
+											<listitem>
+												<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/spreadsheets/d/1RStGYat9SPG2_iqx32mVrKl-9bELJ1nfay72W4Uupp4/edit#gid=0"> 
+													<emphasis role="underline">Infrastructure &#038; Procedures Checklist</emphasis></link></para>
+											</listitem>
+									</itemizedlist>	</para>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</informaltable>
+				</section>
+					<section>
+						<title>Embedding new system in national eHealth Strategy</title>
+						<para>…….</para>
+					</section>
+					<section>
+						<title>eHealth System inventory</title>
+						<para>It is important to get a clear view on the overall IT systems landscape. This can help make sure that interoperability investment is done to strengthen the main systems and that the investments contribute to a <emphasis role="bold">simplification</emphasis> of the system architecture. For example, if the system inventory shows that there are a lot of redundant functional systems, e.g. more than 10 different logistics systems or modules in a country, the interoperability project should try to contribute to a mid or long-term rationalization of this situation. This could mean to participate in a national consensus finding process to identify the most future-proof solutions, identify national “champions” for each speciality and develop a roadmap for aligning these systems or data and removing underutilized or redundant systems.</para>
+						<para>Also in this context it is interesting to analyse whether simple <xref linkend="lm"/> indicators can be collected and managed in DHIS2 itself. Once the stable and sustainable systems have been identified, planning for a data exchange with DHIS2 can start.</para>
+					</section>
+					<section>
+						<title>Explore Opportunities and Challenges</title>
+						<para>The motivations driving an implementation can be detailed by the perceived opportunities or challenges that stakeholders face. This might include the desire to share data across systems related to health facilities for supply chain management, monitoring and evaluation, health service delivery and many other systems. User stories and use cases will be documented in depth during Step 2, but a high level vision of motivations to engage with partners is also needed.  The job aide below will help to create a conceptual foundation for future activities.</para>
+						<informaltable frame="all">
+							<tgroup cols="1">
+								<tbody>
+									<row>
+										<entry>
+											<para> <emphasis role="bold">Job aid</emphasis>
+												<itemizedlist>
+													<listitem>
+														<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/document/d/1aBxu3GysAyGtpPG3s1LFpTZimO8lyO4p6yhV3e2BHlA/edit"> 
+															<emphasis role="underline">Opportunity Brainstorming Methods</emphasis></link></para>
+													</listitem>
+													<listitem>
+														<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/document/d/17Gu76gShQhPz6axQzirT7c8LL8Ckwk8qnekC-SSKLL0/edit#heading=h.ydr5ktvto6o0"> 
+															<emphasis role="underline">Risk Identification and Management</emphasis></link></para>
+													</listitem>
+													<listitem>
+														<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/spreadsheets/d/1nI0-AFQr6zxGtFXdy2cqffxuDW4RHLCpGQ4g8D_Wyuc/edit#gid=0"> 
+															<emphasis role="underline">Risk Matrix Template</emphasis></link></para>
+													</listitem>
+												</itemizedlist></para>
+											
+										
+										<para> <emphasis role="bold">Country Example</emphasis>
+												<itemizedlist>
+													<listitem>
+														<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/document/d/1jSyiytftmCGM_-d5hfKS_mVhDkh0Ol1ZdSsPc-wN7gU/edit#heading=h.69q14eed6q35"> 
+															<emphasis role="underline">Tanzania Facility Registry Goals and Challenges</emphasis></link></para>
+													</listitem>
+											</itemizedlist></para>
+										</entry>
+									</row>
+											
+								</tbody>
+							</tgroup>
+						</informaltable>
+					</section>
+					<section>
+						<title>Organisation and HR</title>
+						<para>Clear national policies on data integration, data ownership, routines for data collection, processing, and sharing, should be in place at the start of the project. Often some period of disturbance to the normal data flow will take place during integration, so for many the long-term prospects of a more efficient system will have to be judged against the short-term disturbance. Integration is thus often a stepwise process, where measures need to be taken for this to happen as smoothly as possible.</para>
+						<informaltable frame="all">
+							<tgroup cols="1">
+								<tbody>
+									<row>
+										<entry>
+											<para> <emphasis role="bold">Country example: Ghana CHIM</emphasis>
+												<itemizedlist>
+													<listitem>
+														<para><emphasis role="bold">Stakeholder cooperation</emphasis>: Ghana CHIM has a clear position towards vertical programs and other partners with proper software initiatives. CHIM establishes DHIS2 as an attractive data collection option, supporting other GHS stakeholders to connect to DHIS2 and to work on a common interoperability strategy, evolving DHIS2 according to stakeholder needs. <emphasis role="bold">This also includes data sharing agreements </emphasis>.</para>
+													</listitem>
+													<listitem>
+														<para><emphasis role="bold">Strong sense of system ownership</emphasis>: CHIM has a strong determination to build up the necessary know-how inside the CHIM team to configure and maintain the system. The CHIM team consists of Health Information Officers, that combine Public Health and Data Management skills. In addition, CHIM established a yearly maintenance cycle, revising and adding indicators in collaboration with stakeholders, updating the system configuration and documentation.</para>
+													</listitem>
+												</itemizedlist>	
+											</para>
+										</entry>
+									</row>
+								</tbody>
+							</tgroup>
+						</informaltable>
+						<para>Also, having clearly defined <emphasis role="bold">system maintenance and update procedures</emphasis> can certainly help to manage interoperability.</para>
+						<informaltable frame="all">
+							<tgroup cols="1">
+								<tbody>
+									<row>
+										<entry>
+											<para> <emphasis role="bold">Country example: Ghana CHIM</emphasis></para>
+											<para>As an example, in the case of Ghana DHIS2, a clear yearly system update cycle is in place: Towards the end of each year, new indicators are created and the corresponding paper forms are issued. Staff will receive training and is prepared for data entry. The new form for EPI data was included in this update cycle and EPI staff was prepared for data entry as part of the process. This systematic procedure allows GHS to quickly respond to the needs of stakeholders such as the EPI Programme and accommodate their data and reporting needs with a limited and predictable investment. It puts CHIM in a position to contribute to the rationalization and simplification of the national Health System Architecture, gradually integrating the data management for more <emphasis role="bold">vertical programs</emphasis>, both on the side of data entry and analytics.</para>
+										</entry>
+									</row>
+								</tbody>
+							</tgroup>
+						</informaltable>
+						<para>A key principle for HISP is to engage the local team in building the system from the very beginning, with guidance from external experts if needed, and not to delay knowledge transfer towards the end of the implementation. Ownership comes first of all from building the system and owning every step of this process.</para>
+					</section>
+	</section>
+		<section>
+			<title>Step 2: Document Specifications and Requirements</title>
+			<para>Integrated systems should be responsive to users’ needs and the local context. User stories and data specifications are two ways to describe: “What will the integrated systems achieve and how should they operate?”. A primary objective of this guide is to promote and facilitate a country driven and user requirements based process. To complete these activities, in-country meetings of stakeholders are highly recommended and can expedite the process.</para>
+			<para>Functional requirements describe how a system is to operate and what types of expectations exist for the tool. User stories are the primary mechanism. In some instances it may be desirable to describe in greater detail the user stories as a more thorough requirement.</para>
+		<section>
+			<title>Collect Existing Metadata</title>
+			<para>To inform the collection and documentation of data specifications, collect existing metadata sources data. This may include old forms, facility lists, administrative hierarchies, data dictionaries, commodity lists, disease codes, and other existing data element sources. Some examples of metadata collected in other countries are included below.</para>
+			<informaltable frame="all">
+				<tgroup cols="1">
+					<tbody>
+						<row>
+							<entry>
+								<para> <emphasis role="bold">Country Examples</emphasis></para>
+								<para><emphasis role="bold">Tanzania</emphasis>: <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://drive.google.com/file/d/0B8FXnkGZqsEoZ2FfOGZKek5QQjg/edit"><emphasis role="underline">Health Facility Form</emphasis></link>, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/spreadsheets/d/1kzKDVIxzpTvtjxl4q3ttFZIFudDgCG0yWEKdq-Xu9QA/edit#gid=0"><emphasis role="underline">Facility Data Sources</emphasis></link></para>
+								<para><emphasis role="bold">Rwanda</emphasis>: <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/file/d/0B_RUEKy5Lc7BaUM3alNCM0ZTTkE/edit"><emphasis role="underline"> Facility Registry Annual Survey</emphasis></link>, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/file/d/0B_RUEKy5Lc7BVEEzZmRvaUU4emc/edit?usp=drive_web"><emphasis role="underline">Facility Registration Form</emphasis></link></para>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</informaltable>
+		</section>
+			
+			<section>
+				<title>Document Data Specifications</title>
+				<para>A data specification document is a technical tool describing the master data elements or the information to be managed in the systems.  This is a similar concept to a data dictionary where the contents and format of data elements in the system are documented. It is recommended that a stakeholder meeting be used along with the tools below an in-country meeting to expedite the process of documenting a data specification.</para>
+				<informaltable frame="all">
+					<tgroup cols="1">
+						<tbody>
+							<row>
+								<entry>
+									<para> <emphasis role="bold">Job aids</emphasis>:</para>
+									<itemizedlist>
+										<listitem>
+											<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/document/d/1V1nw2aLUUdDHJk_C36GRpiPAcRW1n89WaYZtFTWp4mE/edit"><emphasis role="underline">Facility Registry Data Specification Guide</emphasis></link>, <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/file/d/0B_RUEKy5Lc7BS2swR3ZDTjZZeTQ/edit"><emphasis role="underline">Draft WHO MFL Guide</emphasis></link></para>
+										</listitem>
+										<listitem>
+											<para>Tanzania Example:  <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/document/d/1X_3unJ6v3ZOgmXHQ4W98zKXzy7uifi9h_ZLUyULX88M/edit"><emphasis role="underline">TZ Data Specification</emphasis></link></para>
+										</listitem>
+										<listitem>
+											<para>Rwanda Example: <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://drive.google.com/file/d/0B_RUEKy5Lc7Bd0tuYzVmcFdiY1E/edit"><emphasis role="underline">RW Registry Specifications (See Page 17)</emphasis></link></para>
+										</listitem>
+									
+									</itemizedlist>	
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</informaltable>
+			</section>
+			
+			<section>
+				<title>Document User Stories</title>
+				<para>User Stories are a mechanism to gather user requirements and/or core requirements describing the desired registry functionality.  User Stories also promote agile user-centred design and help to identify requirements within the local context.  The following job aid has been synthesized from facility registry implementations and can help guide the collection of user stories for your implementation.</para>
+				<informaltable frame="all">
+					<tgroup cols="1">
+						<tbody>
+							<row>
+								<entry>
+									<para> <emphasis role="bold">Job Aides</emphasis></para>
+									<itemizedlist>
+										<listitem>
+											<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://xp123.com/articles/invest-in-good-stories-and-smart-tasks/"><emphasis role="underline">INVEST in Good Stories, and SMART Tasks</emphasis></link></para>
+										</listitem>
+										<listitem>
+											<para><link xmlns:xlink="https://docs.google.com/spreadsheets/d/1UdBd0WSTM77LqW7APRxnsriGzgIfSFO25orAP5sSTj4/edit#gid=0"><emphasis role="underline">User Story Comparison</emphasis></link></para>
+										</listitem>
+										<listitem>
+											<para><link xmlns:xlink="https://docs.google.com/document/d/17Gu76gShQhPz6axQzirT7c8LL8Ckwk8qnekC-SSKLL0/edit"><emphasis role="underline">Risk Identification and Management</emphasis></link></para>
+										</listitem>
+									</itemizedlist>	
+									<para><emphasis role="bold">Country examples</emphasis></para>
+									<itemizedlist>
+										<listitem>
+											<para>Tanzania: <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/spreadsheets/d/1HV5oCVNj-ONFaMzT-ckO6KJIRgdsH094F2orRHsyecQ/edit#gid=0"><emphasis role="underline">User Stories</emphasis></link>; <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/file/d/0B_RUEKy5Lc7BN2RuMXEyMlU4NGs/edit"><emphasis role="underline">Functional Requirements v0.3</emphasis></link></para>
+										</listitem>
+										<listitem>
+											<para>Rwanda: <link xmlns:xlink="https://docs.google.com/file/d/0B_RUEKy5Lc7BVF9fcXBQVjlveE0/edit"><emphasis role="underline">User Requirements</emphasis></link>, <link xmlns:xlink="https://bitbucket.org/instedd/resource_map/wiki/User_Stories"><emphasis role="underline">General Resource Map User Stories</emphasis></link></para>
+										</listitem>
+									</itemizedlist>	
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</informaltable>
+			</section>
+			</section>
+		
+		<section>
+			<title>Step 3: Carry Out Specifications and Identify Gaps</title>
+			<para>Using the draft data specifications and user stories as the foundation to move forward, the next step is to initiate an agile and iterative development process of the systems.  The main outcome from this step is the implementation a tangible version of the new or updated systems, however it is common that all the previously documented requirements will not be completed.</para>
+		<section>
+			<title>Implement the Specifications</title>
+			<para>The data specification and user stories for the systems can now be used as the basis to:
+				<orderedlist>
+					<listitem>
+						<para>Determine the appropriate software application and</para>
+					</listitem>
+					<listitem>
+						<para>Implement the data specification to create schemas</para>
+					</listitem>
+				</orderedlist>
+			</para>
+		
+		<informaltable frame="all">
+				<tgroup cols="1">
+					<tbody>
+						<row>
+							<entry>
+								<para> <emphasis role="bold">Functional example: Facility registry</emphasis></para>
+								<para>To view the free and open source tool used by the Tanzania and Rwanda facility registry reference implementations, see the <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://resourcemap.instedd.org/en"><emphasis role="underline">Resource Map Homepage</emphasis></link>.  A demo for setting up your own facility registry is included below.  Other applications may also be used as a facility registry given that they adequately respond to the prioritized user stories.   The resulting version of the facility registry may not fully reflect the data specifications and user stories, but these limitations will be addressed in an iterative and agile approach in the next step of the implementation guide.  Several reference documents are included below to assist in this process.</para>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</informaltable>
+			
+			<informaltable frame="all">
+				<tgroup cols="1">
+					<tbody>
+						<row>
+							<entry>
+								<para> <emphasis role="bold">Job aids</emphasis></para>
+								<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/spreadsheets/d/1UdBd0WSTM77LqW7APRxnsriGzgIfSFO25orAP5sSTj4/edit?usp=sharing"><emphasis role="underline">User Story Comparison</emphasis></link>; <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/spreadsheets/d/1CoJlor-DL5VMTmFZkK_jzTCuTJ4o6qzP-uU2Ub2tPAM/edit?usp=sharing"><emphasis role="underline">Facility Registry Implementations</emphasis></link>; <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://ohie.org/demo"><emphasis role="underline">Facility Registry Demo</emphasis></link> </para>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</informaltable>
+		</section>
+			<section>
+				<title>Identify and Prioritize Incomplete User Stories</title>
+				<para>It is likely that the systems implemented in Activity 3.1 will have gaps and limitations when compared to the ideal state described by users.  To address these shortfalls as well potential uncertainty regarding requirements, use an agile approach to regularly identify and prioritized incomplete users stories.  Popular tools to manage this process include <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/"><emphasis role="underline">GitHub</emphasis></link> repositories and <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://trello.com/"><emphasis role="underline">Trello</emphasis></link> boards to document and prioritize user stories and responsible parties.  See below for an example and a job aid.</para>
+				<para>Given the cross-cutting nature of these activities, a job aid has been created to facilitate the landscaping and needs assessment process.</para>
+				<informaltable frame="all">
+					<tgroup cols="1">
+						<tbody>
+							<row>
+								<entry>
+									<para><emphasis role="bold">OHIE Example</emphasis>
+										<itemizedlist>
+											<listitem>
+												<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/facilityregistry/reference_implementation/issues?q=is%3Aopen+sort%3Aupdated-desc"><emphasis role="underline">Github - OHIE Reference Implementations</emphasis></link> </para>
+											</listitem>
+										</itemizedlist>		
+									</para>
+									<para><emphasis role="bold">Job aid</emphasis>: 
+										<itemizedlist>
+											<listitem>
+												<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/document/d/1wDyUSQ1bjoUsOiK5aNFnPogDVviVy9DwGjMVG_QiN1c/edit#heading=h.w3lglep7lfm"><emphasis role="underline">Landscaping and Needs Assessment Scripts</emphasis></link> </para>
+											</listitem>
+										</itemizedlist>	
+									</para>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</informaltable>
+			</section>
+		</section> <!-- step3  -->
+		
+		<section>
+			<title>Step 4: Iteration and User Testing</title>
+			<para>Once an initial version of the system is implemented, a process of resolving and prioritizing the remaining user stories will begin.  The iterative development of the tool should be ongoing and also incorporate new stakeholders and/or user stories as they are identified.  Close collaboration between technical and non-technical stakeholders is key to agile development to ensure technical solutions align with users’ needs.  The core outcome from this step is a system with the user stories completed to create a <emphasis role="bold">minimally viable tool</emphasis>.</para>
+		<section>
+			<title>Agile and Iterative Development</title>
+			<para>Agile and iterative development takes the prioritized lists and applies the project team to resolve the prioritized user stories.  Additional requirements and user stories will continue to be generated throughout the lifetime of the implementation and should be prioritized and similarly addressed by the team.  Initially, the goal of this activity will be to address the user stories that will result in a viable and operational facility registry.  Additional, development will continue to occur and will also be informed through routine testing and re-prioritization among the team.  A github repository to track this process can help to keep both technical and non-technical stakeholders engaged and accountable.</para>
+			<para><emphasis role="bold">OHIE Example</emphasis>: <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/facilityregistry/reference_implementation/issues?q=is%3Aopen+sort%3Aupdated-desc"><emphasis role="underline">Github - Reference Implementations</emphasis></link>; <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/MichaelKambenga/ihfr_curation"><emphasis role="underline">Github - UCC Curation Tool</emphasis></link></para>
+		</section>
+			<section>
+				<title>User Testing</title>
+				<para>A key component of the agile process initiated in Activity 4.1, will be to conduct routine field testing of the system should be completed to gain feedback from a subset of user.  The goal of this activity is to obtain user feedback on the use of the systems.  The testing should be a separate activity from augmented or decentralized processes to collect and standardize data that may also be desired as part of the governance and management of the system.  It is also likely that the formality of the testing may vary based on the availability of resources and at the request of the central stakeholders.</para>
+				<para><emphasis role="bold">Job aid</emphasis>: <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/document/d/1ZGqn_0XJYdzZLTE25sUjQEkeosM5lSV5xJ0GsmAjGzU/edit#heading=h.2qdru6kgu2yu"><emphasis role="underline">User Testing Guide</emphasis></link> </para>
+			</section>	
+			<section>
+				<title>Collect, Reconcile and Upload Data</title>
+				<para><emphasis role="italic">drafting in progress…</emphasis></para>
+				<para>ResourceMap Troubleshooting and Support is also available through the following online tools and communities.</para>
+				</section>	
+			</section> <!-- step4 -->
+		<section> 
+			<title>Step 5: Scale-Up</title>
+			<para>The system will be at a point ready to be scaled more broadly among users and other systems that can provide or consume the data. The goal of this step is to engage nationally with users and systems to ensure the management and institutional processes are in place for ongoing curation, governance, and data utilization.</para>
+			<section> 
+				<title>Confirm User Roles and Responsibilities</title>
+				<para>While user stories were detailed during the early steps of the implementation guide, it is important to confirm the roles and responsibilities among the various stakeholders.  There will be existing and new responsibilities for users ranging from data collection, data entry, curation, governance, management and support roles.  By confirming the facility registry actor responsibilities user training can be focused on the correct staff.</para>
+				<para><emphasis role="bold">Tanzania Example</emphasis>: Roles and Responsibilities - Pending</para>
+			</section>
+			<section> 
+				<title>User Training</title>
+				<para>Next, expand the scope of engagement among users to build capacity and initiate or augment the level of ownership and responsibility for the system.  Training is intended to reinforce the various type of users that will be engaged.  While each country may use the system differently a job aid with some of the common training requirements is included here as a reference.</para>
+				<informaltable frame="all">
+					<tgroup cols="1">
+						<tbody>
+							<row>
+								<entry>
+									<para> <emphasis role="bold">Job aid</emphasis> </para>
+										<itemizedlist>
+											<listitem>
+												<para><link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://docs.google.com/document/d/1usQJ-8CiOhSfitypPvcI89mbm7T2KPdycmNSpfj7zlA/edit"> <emphasis role="underline">Rwanda Training Plan</emphasis></link></para>
+											</listitem>
+										</itemizedlist>	
+									
+									
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</informaltable>	
+			</section>
+			<section> 
+				<title>Critical Integrations</title>
+				<para>In addition to collecting and standardizing data in the central system, it is important to identify and achieve critical integrations with priority systems.  Multiple APIs are available to facilitate the automated transmission of data, however it will be required that some code be incorporated into the partner system to consume the API.</para>
+				<informaltable frame="all">
+					<tgroup cols="1">
+						<tbody>
+							<row>
+								<entry>
+									<para> <emphasis role="bold">Functional example:</emphasis>
+										<itemizedlist>
+											<listitem>
+												<para>Common high priority systems to consider integration with the facility registry include: DHIS2, CommCare, PROMIS, OpenLMIS, etc...</para>
+											</listitem>
+										</itemizedlist>	
+									</para>
+									
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</informaltable>	
+			</section>
+		</section> <!-- step5 -->
+		
+		<section>
+			<title>Step 6: Ongoing Support</title>
+			<para>Base on the <emphasis role="bold"> accompanying implementation support structure, a permanent support structure needs </emphasis>to be set-up. The main challenge is to have clear responsibilities. In an ideal situation, we are dealing with two stable systems that each have already their own clearly defined support structure.</para>
+			<para>However in reality some recurring challenges may have to be dealt with: Many Public Health System are undergoing dynamic developments, leading to changes in data collection needs or calculation of indicators.</para>
+			<para>Interoperability tends to be a tedious technical and organisational charge. All of the three described initiatives have consumed a considerable effort of qualified <emphasis role="bold">resources</emphasis> to activate APIs. In addition, with each new release of any involved system, data flows require re-testing and if necessary adaptations. To be successful these implementation projects typically have to go through a series of complex steps, such as the agreement on an interoperability approach embedded in the national eHealth strategy, the definition of data standards and sustainable maintenance structure, and attaining a stakeholder consensus on data ownership and sharing policies. There can be some long term consequences when data and systems are knitted together - it creates <emphasis role="bold">new roles, tasks and categories of labour</emphasis> which need to be planned for (metadata governance, complex system administration, boundary negotiators, etc.). A solution could be to discuss the new responsibilities beforehand, assigning them to job descriptions, teams and specific positions.</para>
+			<informaltable frame="all">
+				<tgroup cols="1">
+					<tbody>
+						<row>
+							<entry>
+								<para> <emphasis role="bold">Country example</emphasis></para>
+								<para>Comparing the three cases we can see how technology and system architecture choices impact the  <emphasis role="bold">resource needs</emphasis>. In the Senegal case the sophisticated technical architecture involved much external expertise, which may be challenging to be internalized. Tanzania and even more so Ghana seem to have relied much more on mostly local actors, using simpler technical approaches. In the case of Senegal it has to be seen, what the effort will be to maintain the demanding set-up and what resources are available for these tasks.</para>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</informaltable>
+			<section> 
+				<title>Metadata responsibility</title>
+				<para>Another important area is that of <emphasis role="bold">metadata governance</emphasis>, particularly in the scenarios of secondary use of data. In a stand-alone set-up, metadata, such as facility or commodity codes can be managed without much consideration of other stakeholder´s needs. But in an interoperability environment, metadata changes will have effects outside of the individual system. Metadata governance can be highly formalised through registries or more manual through human processes.</para>
+				<para>In order to determine the appropriate approach, is it useful to estimate the expected <emphasis role="role">metadata maintenance effort</emphasis> and the consequences of unsynchronized metadata across different systems. In the case of the LMIS/DHIS2 integrations, there are potentially thousands of facility identifiers that could go out of synch. However normally, facility identifiers do not change often since the physical infrastructure of most public health system is relatively constant. As to the commodities, although regimes and priority drugs may change over time, the number of datasets is relatively small.</para>
+				<informaltable frame="all">
+					<tgroup cols="1">
+						<tbody>
+							<row>
+								<entry>
+									<para> <emphasis role="bold">Country example</emphasis></para>
+									<para>The 3 cases illustrate different approaches of how to deal with this situation.  The Senegal case approaches interoperability through a middleware mapping layer, representing the highest conceptual and technical effort. Tanzania on the other hand made an initial transfer of facility data from dhis2 to openLMIS and is now maintaining the identifiers manually in openLMIS, based on the pragmatic perception, that they are expected to change only infrequently. The facility identifiers in DHIS2 are viewed as authoritative since they are the most complete listing available in any national system, while the LMIS only represents an excerpt. Regarding commodities, the LMIS could be considered the authoritative source or the leading system.</para>	
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</informaltable>
+				<para>It should be expected that requirements and requests for the systems will evolve over time.  For this reason, ongoing support and continued agile/iterative strategies should remain in place.  This can be organized by the roles of the technical support and implementation teams to triage requests for data, system enhancements, integrations, operations support or general troubleshooting among users.  Common types of ongoing support are described below.
+					<itemizedlist>
+						<listitem>
+							<para><emphasis role="bold">Operations Support</emphasis>: Operations support is intended to maintain the logistics and infrastructure required.  Depending on the server location, operations support can include monitoring error logs, maintaining a server, ensuring security protocols, carry out backups, and updates as needed.</para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Developer Support</emphasis>: Developer support is important to facilitate any future adaptations and the creation of external applications that augment the functionality.  For instance it may be desirable to create a specialized curation, workflow, or other application that would work in coordination with the system in a service oriented fashion.  Developer support will also include the identification, documentation and resolution of any enhancement requests or bugs. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/facilityregistry/reference_implementation/issues?q=is%3Aopen+sort%3Aupdated-desc"><emphasis role="underline">Github: Reference Implementation Issues</emphasis></link></para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Integration Support</emphasis>: Integration with the facility registry is critical to ensure that the data can be widely shared and distributed to existing and new eHealth systems. Ongoing support will be required to triage requests for integration, issues, and API enhancements to support other systems interested to consume facility registry data.  New systems that want to consume an API may also require some technical assistance to create an end node in their application to facilitate integration.</para>
+							<informaltable frame="all">
+								<tgroup cols="1">
+									<tbody>
+										<row>
+											<entry>
+												<para> <emphasis role="bold">Functional example: Facility registry</emphasis></para>
+												<para>A core component of integrating with a facility registry is the FRED API.  See the following links to documentation and ongoing issues. <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://facilityregistry.org/"> <emphasis role="underline">Facility Registry API (FRED API)</emphasis></link>; <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://github.com/facilityregistry/fred-api"> <emphasis role="underline">Github: Fred API Issues</emphasis></link>; <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_CSD.pdf"> <emphasis role="underline">Care Services Discovery - CSD</emphasis></link></para>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</informaltable>
+						</listitem>
+						
+						<listitem>
+							<para><emphasis role="bold">Data Support</emphasis>: Ongoing support will also require assistance for issues related to data collection, curation, analysis and utilization.  While the system is designed to fulfil user requirements there will be ongoing requirements to provide training, troubleshooting and respond to data access requests by users.  Other aspects of data support include data collection, entry, permissions, bulk imports, data flows, curation, and data quality.</para>
+						</listitem>
+						<listitem>
+							<para><emphasis role="bold">Help Desk Support</emphasis>: Help desk support may not be required initially, but as more users and organizations start using the system it is expected to become increasingly important to identify, document, triage and direct response to types of requests from the varied types of users.</para>
+						</listitem>
+					
+					</itemizedlist>	
+				</para>
+				<para><emphasis role="bold">Job Aide</emphasis>: TORs for tiered support</para>
+			</section>
+			
+		</section> <!-- step6 -->
+	</section> <!-- 2 implementation steps -->
+	
+	<section>
+		<title>Specific integration and interoperability use cases</title>
+		<para>DHIS2 has been expanding its reach into many health systems. Starting from its
+			familiar grounds of aggregate data sets for routine data it has included patient related
+			data and then data in the areas of HR, finance, logistics and laboratory management.
+			This is in line with the development of DHIS2 in many country settings, where
+			implementers are pushing the use beyond its originally intended scope.</para>
+		<para>This is also reflected in the overall system architecture. Since the expanding
+			functionality of DHIS2 reduces the urgency to introduce or maintain other specialized
+			systems, the number of potential data interfaces decreases. This <emphasis role="bold"
+				>reduced complexity</emphasis> in system architecture is certainly a benefit for a
+			Health System with limited resources.</para>
+		<para>For several years now, DHIS2 has grown its data management activities organically,
+			allowing the actual usage to lead to sometimes unforeseen solutions. However, there are
+			also limits to where leveraging DHIS2 seems useful. In the following sections, special
+			systems will be described.</para>
+		<section xml:id="lm" xreflabel="LMIS">
+			<title>Functional integration – specialized transactional systems</title>
+			<section>
+				<title>Logistics Management</title>
+				<para><emphasis role="bold">a) Introduction</emphasis></para>
+				<para>Logistics Management Systems <emphasis role="bold">(LMIS)</emphasis> or Supply
+					Chain Management Systems <emphasis role="bold">(SCM)</emphasis> serve to replace
+					paper systems to increase standardization, transparency, timeliness of
+					procurement, efficiency, safety, cost-effectiveness, and to reduce waste.
+					National SCMS/LMIS can cover such functions as commodity planning, budgeting,
+					procurement, storage, distribution and replenishment of essential drugs and
+					consumables. </para>
+				<para><emphasis role="bold">b) Implementing LMIS in DHIS2</emphasis></para>
+				<para>Supply chains can often be well controlled with aggregate data only, as long
+					as data is provided reliably from all relevant levels and followed up upon. The
+					main indicators intake, consumption and stock level at the end of period can be
+					managed without electronic transactions and often suffice to give the big
+					picture, reducing the needs for system investment. As a rapidly evolving
+					platform, DHIS2 has been adding a lot of functionality over the last years,
+					especially in DHIS2 Tracker. The following main functions are currently
+					available: <itemizedlist>
+						<listitem>
+							<para>Data entry form mirroring the widely used Report and Requisition
+								(R&#038;R) paper form. Data entry by facilities is possible through
+								the desktop browser or a mobile app, including in offline mode. In
+								online mode the form can calculate requisition proposals, offering
+								the facility manager to modify the request and comment on it. These
+								electronic forms can be filled by staff based on the paper stock
+								cards, that are normally placed next to the commodity in the store
+								room.</para>
+						</listitem>
+						<listitem>
+							<para>DHIS2 can then produce reports for central decision making, giving
+								commodity and program managers the possibility to accept or modify
+								delivery suggestions.</para>
+						</listitem>
+						<listitem>
+							<para>Stock data can be transformed into logistics indicators, that can
+								be put into context with other program indicators, for example
+								cross-referencing number of patients treated with a specific
+								pathology and corresponding drug consumption.</para>
+						</listitem>
+					</itemizedlist>
+				</para>
+				<para><emphasis role="bold">c) Interoperability Options</emphasis></para>
+				<para>LMIS is an area where a multitude of parallel, overlapping or competing
+					software solutions can be found in a single country. As identified in a JSI
+					study in 2012 (Ghana Ministry of Health, July 2013: Landscape Analysis of Supply
+					Chain Management Tools in Use), eighteen (18!) different software tools were
+					documented as being in use within the public health supply chain in Ghana
+					alone.</para>
+				<para>Although a basic LMIS configuration based on aggregate data can take you very
+					far, in some cases a transactional LMIS is necessary if you need to track such
+					detailed operations as returns, transfer between facilities, barcode reading,
+					batch and expiry management. Also some specialized HQ functions such as creating
+					forecasting, replenishment and elaborate control reports are often done in
+					specialized tools.</para>
+				<para>DHIS2 has integrated aggregate data from external systems such as openLMIS and
+					CommCare through automated data interfaces. As a result, stock data is available
+					in shared dashboards, displaying health service and stock data next to each
+					other. </para>
+			</section>
+		</section>
+		<section/>
+	</section>
 </chapter>

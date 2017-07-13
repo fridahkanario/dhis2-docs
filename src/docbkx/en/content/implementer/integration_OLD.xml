@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+ <chapter version="5.0"
+         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+          xmlns="http://docbook.org/ns/docbook"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:xl="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xhtml="http://www.w3.org/1999/xhtml"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:mth="http://www.w3.org/1998/Math/MathML"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <title>Integration</title>
+  <para>This chapter will discuss the following topics:</para>
+  <itemizedlist>
+    <listitem>
+      <para>Integration and interoperability</para>
+    </listitem>
+    <listitem>
+      <para>Benefits of integration</para>
+    </listitem>
+    <listitem>
+      <para>What facilitates integration and interoperability</para>
+    </listitem>
+    <listitem>
+      <para>Architecture of  interoperable HIS</para>
+    </listitem>
+  </itemizedlist>
+  <para>In the following each topic will be discussed in greater detail.</para>
+  <section>
+    <title>Integration and interoperability</title>
+    <para>In a country there will usually be many different, isolated health information systems. The reasons for this are many, both technical and organizational. Here the focus will be on what benefits integration of these systems will bring, and why it should be a priority. First, a couple of clarifications:</para>
+    <itemizedlist>
+      <listitem>
+        <para>When talking about integration, we think about the process of making different information systems appear as one, i.e. data from them to be available to all relevant users as well as the harmonization of definitions and dimensions so that it is possible to combine the data in useful ways.</para>
+      </listitem>
+      <listitem>
+        <para>A related concept is interoperability, which is one strategy to achieve integration. For purposes related to DHIS2, we say that it is interoperable with other software applications if it is able to share data with this. For example, DHIS2 and OpenMRS are interoperable, because there is support in both to share data definitions and data with each other.</para>
+      </listitem>
+    </itemizedlist>
+    <para>To say that something is integrated, then, means that they share something, and that they are available from one place, while interoperability usually means that they are able to do this sharing electronically. DHIS2 is often used as an integrated data warehouse, since it contains (aggregate) data from various sources, such as Mother and Child health, Malaria program, census data, and data on stocks and human resources. These data sources share the same platform, DHIS2, and are available all from the same place. These subsystems are thus considered integrated into one system. Interoperability will then be a useful way to integrate also those data sources available on other software applications. For example, if census data is stored in some other database, interoperability between this database and DHIS2 would mean census data would be accessible in both (but only stored one place).</para>
+  </section>
+  <section>
+    <title>Benefits of integration</title>
+    <para>There are several potential benefits related to integration of systems. The most important are:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Calculation of indicators: many indicators are based on numerators and denominators from different data sources. Examples include mortality rates, including some mortality data as numerator and population data as denominator, staff coverage and staff workload rates (human resource data, and population and headcount data), immunization rates, and the like. For these to be calculated, you need both the numerator and denominator data, and they should thus be integrated into a single data warehouse. The more data sources that are integrated, the more indicators can be generated from the central repository.</para>
+      </listitem>
+      <listitem>
+        <para>Reduce manual processing and entering of data: with different data at the same place, there is no need to manually extract and process indicators, or re-enter data into the data warehouse. Especially interoperability between systems of different data types (such as patient registers and aggregate data warehouse) allows software for subsystems to both calculate and share data electronically. This reduces the amount of manual steps involved in data processing, which increases data quality.</para>
+      </listitem>
+      <listitem>
+        <para>There are organizational reasons for integration. If all data can be handled by one unit in the ministry of health, instead of in various subsystems maintained by the health programs, this one unit can be professionalized. With staff whose sole responsibility is data management, processing, and analysis, more specialized skills can be developed and the information handling be rationalized.</para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section>
+    <title>What facilitates integration and interoperability</title>
+    <para>There are three levels that need to be addressed in this regard:</para>
+    <itemizedlist>
+      <listitem>
+        <para>The motivation and will to integrate (organizational level)</para>
+      </listitem>
+      <listitem>
+        <para>Standard definitions (language level)</para>
+      </listitem>
+      <listitem>
+        <para>Standard for electronic storage and exchange (technical level)</para>
+      </listitem>
+    </itemizedlist>
+    <para>The first level is less of a topic in this guide, which takes as a point of departure that a decision has been taken about integration of data. However, it is an important issue and usually the most complex to solve given the range of actors involved in the health sector. Clear national policies on data integration, data ownership, routines for data collection, processing, and sharing, should be in place to address this issue. Often some period of disturbance to the normal data flow will take place during integration, so for many the long-term prospects of a more efficient system will have to be judged against the short-term disturbance. Integration is thus often a step-wise process, where measures need to be taken for this to happen as smoothly as possible.</para>
+    <para>At the language level, there is a need to be consistent about definitions. If you have two data sources for the same data, they need to be comparable. For example, if you collect malaria data from both standard clinics and from hospitals, this data need to describe the same thing if they need to be combined for totals and indicators. If a hospital is reporting malaria cases by sex but not age group, and other clinics are reporting by age group but not sex, this data cannot be analyzed according to either of these dimensions, though a total amount of cases will be possible to calculate. There is thus a need to agree on uniform definitions.</para>
+    <para>In addition to uniform definitions across the various sub-systems, data exchange standards must be adopted if data is to be shared electronically. The various software applications need this to be able to understand each other. DHIS2 supports several data formats for import and export, including one standard format now supported by WHO called SDMX-HD (Statistical Data and Metadata Exchange - Health Domain). Other software applications also support SDMX-HD, and it allows the sharing of data definitions and aggregate data between them. For DHIS2, this means it supports import of aggregate data that are supplied by other applications, such as OpenMRS (for patient management) and iHRIS (for human resources management).</para>
+  </section>
+  <section>
+    <title>Architecture of interoperable HIS</title>
+    <para>Since there are many different use-cases for health information, such as monitoring and evaluation, budgeting, patient management and tracking, logistics management, insurance, human resource management, etc, there will be many different types of software applications functioning within the health sector. Above the issue of interoperability has been addressed, and a plan or overview of the various interoperable software applications and their specific uses, along with what data should be shared between them, is termed an architecture for health information. </para>
+    <para>The role of the architecture is to function as a plan to coordinate the development and interoperability of various sub-systems within the larger health information system. It is advisable to develop a plan for the various components even if they are not currently running any software, to be able to adequately see the requirements in terms of data sharing. These requirements should then be part of any specification for the software when such is developed or procured.</para>
+    <para>Below is a simple illustration of an architecture, with a focus on the data warehouse for aggregate data. The various boxes represent use cases, such as managing logistics, tracking TB patients, general patient management, etc. All of these will share aggregate data with DHIS2. Note that the arrows are two-way, because there is also a synchronization of meta-data (definitions) involved, to make sure that the right data is shared. Also, an example of the logistics and financial data applications sharing data is also shown, as there are strong links between procuring drugs and handling the budget for this. There will be many such instances of sharing data; the architecture helps us to plan better for this being implemented as the ecosystem of software applications grow.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata width="80%" format="PNG" fileref="resources/images/implementation_guide/interoperable_his.png" align="center"/>
+      </imageobject>
+    </mediaobject>
+  </section>
+</chapter>
