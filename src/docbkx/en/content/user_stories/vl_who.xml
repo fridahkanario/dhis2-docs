@@ -97,7 +97,7 @@
         <title>Importing retrospective surveillance data into DHIS2 Event Capture</title>
         <para>The WHO team developed an “Excel importer” app, based on an existing DHIS2 app from
             HISP Vietnam. VL event data from 2013 to 2015 was imported, and data was then available
-            for analysis of Neural tube defects (NTDs) surveillance and control.</para>
+            for analysis of  Neglected Tropical Diseases (NTDs) surveillance and control.</para>
         <para>A DHIS2 dashboard was implemented for Somalia, with main indicators, and a map
             representing VL cases from villages of residence as a proxy of the village of infection. </para>
         <screenshot>
