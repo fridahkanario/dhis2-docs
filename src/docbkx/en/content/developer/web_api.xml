@@ -11684,6 +11684,32 @@ interval=WEEK" -u admin:district</screen>
       request:<screen>GET /api/26/dataSets/&lt;uid>/version</screen></para>
     <para>To bump (increase by one) the version of a data set you can issue a POST
       request:<screen>POST /api/26/dataSets/&lt;uid>/version</screen></para>
+    <section xml:id="webapi_dataset_notifications">
+      <title>DataSet Notification Template</title>
+      <para>The <emphasis>dataset notification templates</emphasis> resource follows the standard conventions as other
+        metadata resources in DHIS2.
+        <screen>GET /api/26/dataSetNotficationTemplates</screen></para>
+      <para>To retrieve data set notification template you can issue a GET
+        request:<screen>GET /api/26/dataSetNotficationTemplates/&lt;uid></screen></para>
+      <para>To add data set notification template you can issue a POST
+        request:<screen>POST /api/26/dataSetNotficationTemplates</screen></para>
+      <para>To delete data set notification template you can issue a DELETE
+        request:<screen>DELETE /api/26/dataSetNotficationTemplates/&lt;uid</screen></para>
+      <para>JSON payload sample is given below<screen>{
+    "name": "dataSetNotificationTemplate1",
+    "notificationTrigger": "COMPLETION",
+    "relativeScheduledDays": 0,
+    "notificationRecipient": "ORGANISATION_UNIT_CONTACT",
+    "dataSets": [{
+        "id": "eZDhcZi6FLP"
+    }],
+    "deliveryChannels": ["SMS"],
+    "subjectTemplate": "V{data_name}",
+    "messageTemplate": "V{data_name}V{complete_registration_period}",
+    "sendStrategy": "SINGLE_NOTIFICATION"
+}
+      </screen></para>
+    </section>
   </section>
   <section xml:id="webapi_filled_organisation_unit_levels">
     <title>Filled organisation unit levels</title>
