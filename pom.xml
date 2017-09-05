@@ -14,7 +14,7 @@
 		<pluginRepository>
 			<id>docbkx.snapshots</id>
 			<name>Maven Plugin Snapshots</name>
-			<url>http://docbkx-tools.sourceforge.net/snapshots/</url>
+			<url>https://docbkx-tools.sourceforge.net/snapshots/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -25,7 +25,7 @@
 		<pluginRepository>
 			<id>docbook-utils</id>
 			<name>DocBook Utils</name>
-			<url>http://docbook-utils.sourceforge.net/maven2</url>
+			<url>https://docbook-utils.sourceforge.net/maven2</url>
 			<layout>default</layout>
 			<releases>
 				<enabled>true</enabled>
