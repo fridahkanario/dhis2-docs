@@ -203,7 +203,7 @@
 				<mediaobject>
 					<imageobject>
 						<imagedata width="100%" align="center"
-							fileref="../../resources/images/implementation_guide/frameworktest.png"
+							fileref="resources/images/implementation_guide/frameworktest.png"
 							format="PNG"/>
 						<!--Please provide the reference to image in fileref attribute-->
 					</imageobject>
@@ -735,7 +735,7 @@
 				<mediaobject>
 					<imageobject>
 						<imagedata width="70%" align="center"
-							fileref="../../resources/images/implementation_guide/implementation_steps.png"
+							fileref="resources/images/implementation_guide/implementation_steps.png"
 							format="PNG"/>
 					</imageobject>
 				</mediaobject>
