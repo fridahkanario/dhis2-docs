@@ -38,6 +38,23 @@
                             </inlinemediaobject></link></entry>
                 </row> -->
                 <row>
+                    <entry><link xlink:href="https://www.dhis2.org/download/releases/2.27/dhis.war">2.27</link></entry>
+                    <entry>2017-06-02</entry>
+                    <entry><link
+                        xlink:href="https://docs.google.com/document/d/1SF0jea6JyMPXOsZgPVvIqAedfaYFxHIoUV19g-pSou4/pub"><inlinemediaobject>
+                                <imageobject>
+                                    <imagedata fileref="resources/images/icons/info.png"
+                                        align="center" width="24"/>
+                                </imageobject>
+                            </inlinemediaobject></link></entry>
+                    <entry><link xlink:href="https://www.dhis2.org/227-upgrade"><inlinemediaobject>
+                                <imageobject>
+                                    <imagedata fileref="resources/images/icons/upgrade.png"
+                                        align="center" width="24"/>
+                                </imageobject>
+                            </inlinemediaobject></link></entry>
+                </row>
+                <row>
                     <entry><link xlink:href="https://www.dhis2.org/download/releases/2.26/dhis.war">2.26</link></entry>
                     <entry>2017-02-01</entry>
                     <entry><link
@@ -240,4 +257,3 @@
         </tgroup>
     </table>
 </chapter>
-
