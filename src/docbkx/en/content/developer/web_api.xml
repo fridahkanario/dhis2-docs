@@ -13487,8 +13487,16 @@ interval=WEEK" -u admin:district</screen>
   <section xml:id="webapi_apps">
     <title>Apps</title>
     <para> The <emphasis role="italic">/api/apps</emphasis> endpoint can be used for installing,
-      deleting and listing apps. The app key is derived from the name of the ZIP archive, exluding
-      the file extension.<screen>/api/26/apps</screen></para>
+      deleting and listing apps. The app key is based on the app name, but with all
+      non-alphanumerical characters removed, and spaces replaced with a dash. <emphasis>My
+        app!</emphasis> will return the key <emphasis>My-app</emphasis>.<note>
+        <para>Previous to 2.28, the app key was derived from the name of the ZIP archive, excluding
+          the file extension. URLs using the old format should still return the correct app in the
+          api.</para>
+      </note></para>
+    <para>
+      <screen>/api/26/apps</screen>
+    </para>
     <section>
       <title>Get apps</title>
       <para>You can read the keys for apps by listing all apps from the apps resource and look for
