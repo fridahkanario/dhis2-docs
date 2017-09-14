@@ -1971,6 +1971,52 @@ http://server/api/26/constants/ID</screen></para>
 &quot;Impact&quot;,&quot;cJ82jd8sd32&quot;,&quot;IMPACT&quot;,&quot;Medium&quot;,,&quot;MEDIUM&quot;
 &quot;Impact&quot;,&quot;cJ82jd8sd32&quot;,&quot;IMPACT&quot;,&quot;Poor&quot;,,&quot;POOR&quot;</screen>
     </section>
+    <section>
+      <title>Collection membership</title>
+      <para>In addition to importing objects, you can also choose to only import the group-member
+        relationship between an object and group. Currently the following group and object pairs are supported<itemizedlist>
+          <listitem>
+            <para>Organisation Unit Group - Organisation Unit</para>
+          </listitem>
+          <listitem>
+            <para>Data Element Group - Data Element</para>
+          </listitem>
+          <listitem>
+            <para>Indicator Group - Indicator</para>
+          </listitem>
+        </itemizedlist></para>
+      <para>The CSV format for these imports are the same<table frame="all">
+          <title>Collection membership CSV Format</title>
+          <tgroup cols="4">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+            <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Column</entry>
+                <entry>Required</entry>
+                <entry>Value (default first)</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>UID</entry>
+                <entry>Yes</entry>
+                <entry>UID</entry>
+                <entry>The UID of the collection to add an object to</entry>
+              </row>
+              <row>
+                <entry>UID</entry>
+                <entry>Yes</entry>
+                <entry>UID</entry>
+                <entry>The UID of the object to add to the collection</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
+    </section>
     <section xml:id="webapi_csv_other_objects">
       <title>Other objects</title>
       <table frame="all">
