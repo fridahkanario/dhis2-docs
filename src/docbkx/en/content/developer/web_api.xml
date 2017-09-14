@@ -11876,6 +11876,47 @@ interval=WEEK" -u admin:district</screen>
       command:<screen>curl &quot;localhost/api/26/configuration/feedbackRecipients&quot; -d &quot;wl5cDMuUhmF&quot; 
   -H &quot;Content-Type:text/plain&quot;-u admin:district -v</screen></para>
   </section>
+  <section xml:id="webapi_readonly_configuration_interface">
+    <title>Read-Only configuration service</title>
+    <para>To access configuration you can now use read-only service. This service will provide read-only access to <emphasis role="italic">UserSettings, SystemSettings and DHIS server configurations </emphasis>  
+      You can get XML and JSON responses through the <emphasis
+        role="italic">Accept</emphasis> header. You can
+      <emphasis role="italic">GET</emphasis> all settings from:</para>
+    <screen>/api/28/configuration/settings</screen>
+    <para>You can get filtered settings based on setting type:</para>
+    <screen>GET /api/28/configuration/settings/filter?types=USER_SETTING</screen>
+    <screen>GET /api/28/configuration/settings/filter?types=CONFIGURATION</screen>
+    <para>More than one type can be provided</para>
+    <screen>GET /api/28/configuration/settings/filter?types=USER_SETTING&amp;types=SYSTEM_SETTING</screen>
+    <table frame="all">
+      <title>SettingType values</title>
+      <tgroup cols="2">
+        <colspec colnum="1" colname="c1" colwidth="1*"/>
+        <colspec colnum="2" colname="c2" colwidth="2.28*"/>
+        <thead>
+          <row>
+            <entry>Value</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>USER_SETTING</entry>
+            <entry>To get user settings</entry>
+          </row>
+          <row>
+            <entry>SYSTEM_SETTING</entry>
+            <entry>To get system settings</entry>
+          </row>
+          <row>
+            <entry>CONFIGURATION</entry>
+            <entry>To get DHIS server settings</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para><emphasis role="italic">NOTE: </emphasis>Fields which are confidential will be provided in the output but with no values.</para>
+  </section>
   <section xml:id="webapi_i18n">
     <title>Internationalization</title>
     <para>In order to retrieve key-value pairs for translated strings you can use the <emphasis
@@ -13547,25 +13588,40 @@ interval=WEEK" -u admin:district</screen>
       resource.<screen>/api/26/appStore</screen></para>
     <section>
       <title>Get apps</title>
-      <para>You can retrieve apps with a GET request: <screen>GET /api/26/appStore</screen></para>
+      <para>You can retrieve apps with a GET request: <screen>GET /api/28/appStore</screen></para>
       <para>A sample JSON response is described below.
         <screen>{
-  &quot;name&quot;: &quot;DHIS2 App Store&quot;,
-  &quot;description&quot;: &quot;Send your apps with a description to us at apps@dhis2.org&quot;,
-  &quot;apps&quot;: [
+   [
     {
       &quot;name&quot;: &quot;Tabular Tracker Capture&quot;,
       &quot;description&quot;: &quot;Tabular Tracker Capture is an app that makes you more effective.&quot;,
-      &quot;developer&quot;: &quot;John Develop&quot;,
-      &quot;img_large&quot;: &quot;https://www.dhis2.org/images/appstore/tabular-tracker-capture.png&quot;,
+      &quot;sourceUrl&quot;: &quot;https://github.com/dhis2/App-repository&quot;,
+      &quot;appType&quot;: &quot;DASHBOARD_WIDGET&quot;,
+      &quot;status&quot;: &quot;PENDING&quot;,
+      &quot;id&quot;: &quot;NSD06BVoV21&quot;,
+      &quot;developer&quot;: {
+          &quot;name&quot;: &quot;DHIS&quot;,
+          &quot;organisation&quot;: &quot;Uio&quot;,
+          &quot;address&quot;: &quot;Oslo&quot;,
+          &quot;email&quot;: &quot;dhis@abc.com&quot;,
+        }
       &quot;versions&quot;: [
         {
           &quot;id&quot;: &quot;upAPqrVgwK6&quot;,
           &quot;version&quot;: &quot;1.2&quot;,
-          &quot;min_platform_version&quot;: &quot;2.17&quot;,
-          &quot;max_platform_version&quot;: &quot;2.20&quot;,
-          &quot;download_url&quot;: &quot;https://www.dhis2.org/download/appstore/tabular-tracker-capture-12.zip&quot;,
-          &quot;demo_url&quot;: &quot;http://play.dhis2.org/demo&quot;
+          &quot;minDhisVersion&quot;: &quot;2.17&quot;,
+          &quot;maxDhisVersion&quot;: &quot;2.20&quot;,
+          &quot;downloadUrl&quot;: &quot;https://www.dhis2.org/download/appstore/tabular-tracker-capture-12.zip&quot;,
+          &quot;demoUrl&quot;: &quot;http://play.dhis2.org/demo&quot;
+        }
+      ]
+      &quot;images&quot;: [
+        {
+          &quot;id&quot;: &quot;upAPqrVgwK6&quot;,
+          &quot;logo&quot;: &quot;true&quot;,
+          &quot;imageUrl&quot;: &quot;https://www.dhis2.org/download/appstore/tabular-tracker-capture-12.png&quot;,
+          &quot;description&quot;: &quot;added feature snapshot&quot;,
+          &quot;caption&quot;: &quot;dialog&quot;,
         }
       ]
     }
