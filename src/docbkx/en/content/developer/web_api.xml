@@ -1497,6 +1497,22 @@ http://server/api/26/constants/ID</screen></para>
       </tgroup>
     </table>
   </section>
+  <section>
+    <title>Metadata audit</title>
+    <para>If you need information about who created, edited, or deleted some part of the DHIS2
+      metadata, you can enable metadata audit, there are two configuration options (your in your
+      `dhis.conf`) you can enable to support this:<screen>metadata.audit.log = on</screen></para>
+    <para>This enabled additional log output in your servlet container  (e.g. tomcat catalina.log)
+      which contains full information about the object created, object edited, or object deleted
+      including full JSON payload, date of audit event, and the user who did the
+      action.<screen>metadata.audit.persist = on</screen></para>
+    <para>This enables persisted audits (audits saved to the database) the information stored is the
+      same as with audit log, but this information is now placed into the `metadataaudit` table in
+      your database.</para>
+    <para>We do not recommended enabling these options on a empty database if you intend to import a
+      lot of metadata, as it slows down the import and the audit might not be that useful if you are
+      bootstrapping a new system.</para>
+  </section>
   <section xml:id="webapi_csv_metadata_import">
     <title>CSV metadata import</title>
     <para>DHIS2 supports import of metadata in the CSV format. Columns which are not required can
