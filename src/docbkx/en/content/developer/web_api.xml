@@ -3101,7 +3101,7 @@ http://server/api/26/constants/ID</screen></para>
           <para>csv (application/csv)</para>
         </listitem>
         <listitem>
-          <para>adx (application/xml+adx)</para>
+          <para>adx (application/adx+xml)</para>
         </listitem>
       </itemizedlist>
       <para>Assuming that we have posted data values to DHIS2 according to the previous section
@@ -3436,7 +3436,7 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
         using <emphasis role="italic">application/xml+adx</emphasis> as content type. So, for
         example, the following curl command can be used to POST the example data above to the DHIS2
         demo server:
-        <screen>curl -u admin:district -X POST -H &quot;Content-Type: application/xml+adx&quot;
+        <screen>curl -u admin:district -X POST -H &quot;Content-Type: application/adx+xml"
 -d @data.xml &quot;https://play.dhis2.org/demo/api/26/dataValueSets?dataElementIdScheme=code&amp;orgUnitIdScheme=code&quot;</screen>
         Note the query parameters are the same as are used with DXF data. The adx endpoint should
         interpret all the existing DXF parameters with the same semantics as DXF.</para>
@@ -3447,7 +3447,7 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
           <emphasis>/api/dataValueSets</emphasis> using <emphasis role="italic"
           >application/xml+adx</emphasis> as the accepted content type. So, for example, the
         following curl command can be used to retrieve the adx data:
-        <screen>curl -u admin:district -H &quot;Accept: application/xml+adx&quot;
+        <screen>curl -u admin:district -H &quot;Accept: application/adx+xml&quot;
  &quot;https://play.dhis2.org/demo/api/26/dataValueSets?dataValueSets?orgUnit=M_CLINIC&amp;dataSet=MALARIA&amp;period=201501&quot;</screen>
         Note the query parameters are the same as are used with DXF data. An important difference is
         that the identifiers for dataSet and orgUnit are assumed to be codes rather than
@@ -6267,8 +6267,21 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
   </section>
   <section xml:id="webapi_plugins">
     <title>Plugins</title>
-    <para>DHIS2 comes with plugins which enables you to embed live data directly in your web portal
+    <para>DHIS2 comes with plugins which enable you to embed live data directly in your web portal
       or web site. Currently, plugins exist for charts, maps and pivot tables.</para>
+    <para>Please be aware that <emphasis role="bold">all of the code examples in this section are
+        for demonstration purposes only</emphasis>. They should not be used as is in production
+      systems.  To make things simple, the credentials (admin/district) have been embedded into the
+      scripts.  In a real scenario you should never expose credentials in javascript as it opens a
+      vulnerability to the application.   In addition you would create a user with more minimal
+      privileges rather than make use of a superuser to fetch resources for your portal.</para>
+    <para>It is possible to workaround exposing the credentials by using a reverse proxy such as
+      nginx or apache2. The proxy can be configured to inject the required Authorization header for
+      only the endpoints that you wish to make public. There is some documentation to get you
+      started in the section of the implementers manual which describes <link
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xlink:href="https://docs.dhis2.org/master/en/implementer/html/install_reverse_proxy_configuration.html#install_making_resources_available_with_nginx"
+        >reverse proxy</link> configuration.</para>
     <section xml:id="webapi_pivot_table_plugin">
       <title>Embedding pivot tables with the Pivot Table plug-in</title>
       <para>In this example we will see how we can embed good-looking, light-weight html pivot
