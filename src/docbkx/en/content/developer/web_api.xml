@@ -10576,11 +10576,17 @@ interval=WEEK" -u admin:district</screen>
     <section>
       <title>API End Points</title>
       <para>The list of commands can be retrieved using GET.</para>
-      <screen>GET /api/26/sms/commands</screen>
-      <para>One particular command can also be retreived using GET. Where parameter <emphasis
-        role="italic">type</emphasis> can be one of the below mentioned parsers. In this type of query, command will be retreived with all its parameters attached to it. For example "birth A=1,B=2,G=Male". Birth is the name
-      of SMS command and A,B and G are parameters attached to this SMS command. Query result will also contain information about what these parameters are and which DataElement they belong to. These parameters are given short codes inorder to fit them in 160 characters SMS length.</para>
-      <screen>GET /api/26/sms/commands/{commandName}?type=EVENT_REGISTRATION_PARSER</screen>
+      <screen>GET /api/smsCommands</screen>
+      <para>One particular command can be retreived using GET.</para>
+      <screen>GET /api/smsCommands/uid</screen>
+      <para>One particular command can be updated using PUT.</para>
+      <screen>PUT /api/smsCommands/uid</screen>
+      <para>Command can be created using POST.</para>
+      <screen>POST /api/smsCommands</screen>  
+      <para>One particular command can be deleted using DELETE.</para>
+      <screen>DELETE /api/smsCommands/uid</screen>
+      <section>
+        <title>SMSCommand parser types</title>
       <itemizedlist>
         <listitem>
           <para>KEY_VALUE_PARSER</para>
@@ -10604,6 +10610,7 @@ interval=WEEK" -u admin:district</screen>
           <para>EVENT_REGISTRATION_PARSER</para>
         </listitem>
       </itemizedlist>
+      </section>
     </section>
   </section>
   <section xml:id="webapi_program_messages">
