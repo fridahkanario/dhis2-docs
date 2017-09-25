@@ -84,6 +84,11 @@ Make sure the possibility to create a validation notification is mentioned is th
                     corresponding validation notification for a validation rule, the system has
                     nowhere to send the validation violations.</para>
             </note>
+            <note>
+                <para>While running validation rule analysis automatically, any results not already
+                    persisted, will be persisted during this run. Persisted results can currently
+                    only be accessed trough the api.</para>
+            </note>
         </para>
         <orderedlist>
             <listitem>
@@ -146,6 +151,10 @@ Make sure the possibility to create a validation notification is mentioned is th
                     <para>If you want to send out validation notifications, you must first create
                         them in the <emphasis role="bold">Maintenance</emphasis> app.</para>
                 </note>
+            </listitem>
+            <listitem>
+                <para>(Optional) Select <emphasis>Persist new results</emphasis> to persist any
+                    non-persisted results found during the analysis</para>
             </listitem>
             <listitem>
                 <para>Select a <emphasis role="bold">Parent organisation unit</emphasis>.</para>
