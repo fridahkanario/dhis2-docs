@@ -6350,8 +6350,8 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         <screen>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src=&quot;https://dhis2-cdn.org/v225-1/plugin/jquery-2.2.4.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;https://dhis2-cdn.org/v225-1/plugin/reporttable.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://dhis2-cdn.org/v227/plugin/jquery-2.2.4.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://dhis2-cdn.org/v227/plugin/reporttable.js&quot;&gt;&lt;/script&gt;
 
   &lt;script&gt;
     reportTablePlugin.url = &quot;https://play.dhis2.org/demo&quot;;
@@ -6361,7 +6361,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
 
     // Referring to an existing table through the id parameter, render to &quot;report1&quot; div
     
-    var r1 = { el: &quot;report1&quot;, id: &quot;R0DVGvXDUNP&quot; });
+    var r1 = { el: &quot;report1&quot;, id: &quot;R0DVGvXDUNP&quot; };
 
     // Table configuration, render to &quot;report2&quot; div
     
@@ -6667,8 +6667,8 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         <screen>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src=&quot;https://dhis2-cdn.org/v225-1/plugin/jquery-2.2.4.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;https://dhis2-cdn.org/v225-1/plugin/chart.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://dhis2-cdn.org/v227/plugin/jquery-2.2.4.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://dhis2-cdn.org/v227/plugin/chart.js&quot;&gt;&lt;/script&gt;
 
   &lt;script&gt;
     chartPlugin.url = &quot;https://play.dhis2.org/demo&quot;;
@@ -6678,7 +6678,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     
     // Referring to an existing chart through the id parameter, render to &quot;report1&quot; div
     
-    var r1 = { el: "report1", id: "R0DVGvXDUNP" });
+    var r1 = { el: "report1", id: "R0DVGvXDUNP" };
 
     // Chart configuration, render to "report2" div
     
@@ -6713,6 +6713,11 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       rangeAxisTitle: &quot;My range axis title&quot;,
       domainAxisTitle: &quot;My domain axis title&quot;,
       hideLegend: true
+    };
+
+    // Render the charts
+
+    chartPlugin.load(r1, r2);
   &lt;/script&gt;
 &lt;/head&gt;
 
