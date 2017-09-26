@@ -1862,7 +1862,7 @@ http://server/api/26/constants/ID</screen></para>
               <entry>Operator</entry>
               <entry>No</entry>
               <entry>equal_to | not_equal_to | greater_than | greater_than_or_equal_to | less_than |
-                less_than_or_equal_to | compulsory_pair</entry>
+                less_than_or_equal_to | compulsory_pair | exclusive_pair</entry>
               <entry/>
             </row>
             <row>
@@ -4705,6 +4705,14 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
             <row>
               <entry>less_than_or_equal_to</entry>
               <entry>Less than or equal to</entry>
+            </row>
+            <row>
+              <entry>compulsory_pair</entry>
+              <entry>If either side is present, the other must also be</entry>
+            </row>
+            <row>
+              <entry>exclusive_pair</entry>
+              <entry>If either side is present, the other must not be</entry>
             </row>
           </tbody>
         </tgroup>
