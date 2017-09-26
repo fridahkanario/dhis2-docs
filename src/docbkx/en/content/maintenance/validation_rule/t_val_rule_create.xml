@@ -235,6 +235,11 @@
             </orderedlist>
         </listitem>
         <listitem>
+            <para>(Optional) Click <emphasis role="bold">Skip this rule during form
+                    validation</emphasis> to avoid triggering this rule while doing data
+                entry</para>
+        </listitem>
+        <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
         </listitem>
     </orderedlist>
