@@ -7,15 +7,28 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <title>About predictors</title>
-    <?oxy_comment_start author="cecilia" timestamp="20160922T160546+0200" comment="Copied from Launchpad: https://blueprints.launchpad.net/dhis2/+spec/predictors"?>
-    <para>Predictors are data elements that are automatically generated from samples of current and
-        past data. You use predictors to analyse previous data in order to predict future values,
-        for example for disease surveillance.</para>
-    <para>A predictor specifies an expression and a set of sample constraints, identical to the
-        implementation of validation rules. This includes a period type, organisation unit levels,
-        and parameters specifying past or periodic sample windows. The expression should evaluate to
-        true or false.</para>
-    <?oxy_comment_end?>
+    <para>A predictor tells DHIS2 how to generate a data value based on data values
+        from past periods. It defines which past periods to sample,
+        and how to combine the sampled data to produce a predicted value.
+        A predictor always generates an aggregate data value, but the past data values used to
+        calculate the predicted value may come from aggregate data, event data, or both.</para>
+    <para>A simple use of predictors would be to copy a past period data value into a
+        new period, for example into the next month, or into the same quarter in the next year.
+        A more complex use of predictors would be for disease surveillance, to predict what
+        value would be expected in a given week or month of the year, based on previous
+        data values. A validation rule could then be used to see how the actual value
+        compares with the expected (predicted) value.</para>
+    <para>You can specify the organisation unit level(s) for which a predictor will generate
+        values. For example in disease surveillance you can use one predictor to give the
+        expected value at each local facility, given the amount of variation you would expect
+        at a single facility, while using a different predictor to estimate the value you
+        would expect summed over all facilities in a district, given the (smaller) proportional
+        variation that you would expect when adding up the values for all facilities
+        in the district. You could also define additional predictors at any higher levels
+        of the organisation unit hierarchy, where you might expect different proportions
+        of variation. Alternatively, you can define a single predictor for all these
+        levels and use the standard deviation function to determine what amounts of
+        deviation were measured at each level.</para>
     <para>In the <emphasis role="bold">Maintenance</emphasis> app, you manage the following
         predictor objects:</para>
     <table frame="all">

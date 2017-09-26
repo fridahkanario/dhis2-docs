@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook">
+    <title>Sampling past periods</title>
+    <para>Predicted values are based on sampled values from past periods (prior to the period
+        of the predicted value, which may itself be in the past, present or future). Several
+        parameters determine the choice of which past periods to sample from:</para>
+    <section xml:id="sequential_sample_count">
+        <title>Sequential sample count</title>
+        <para>A predictor's <emphasis>Sequential sample count</emphasis> gives the number of
+            immediate prior periods to sample.
+            For example, if a predictor's period type is <emphasis>Weekly</emphasis> and the
+            <emphasis>Sequential sample count</emphasis> is 4, this means to sample four
+            prior weeks immediately preceding the predicted value week. So the predicted
+            value for week 9 would use samples from weeks 5, 6, 7, and 8:</para>
+        <para></para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata align="center"
+                        fileref="resources/images/maintainence/predictor_sequential.png" width="55%"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+        <para>If a predictor's period type is <emphasis>Monthly</emphasis> and the
+            <emphasis>Sequential sample count</emphasis> is 4, this means to sample four
+            prior months immediately preceding the predicted value month. So the predicted
+            value for May would use samples from weeks January, February, March, and April:</para>
+        <para></para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata align="center"
+                        fileref="resources/images/maintainence/predictor_sequential_month.png" width="55%"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </section>
+    <section xml:id="sequential_skip_count">
+        <title>Sequential skip count</title>
+        <para>A predictor's <emphasis>Sequential skip count</emphasis> tells how many periods
+            should be skipped immediately prior to the predicted value period,
+            within the <emphasis>Sequential sample count</emphasis>.
+            This could be used, for instance, in outbreak detection to skip one or more
+            immediately prededing samples that might in fact contain values from the
+            beginning of an outbreak that you are trying to detect.</para>
+        <para>
+            For example, if the <emphasis>Sequential sample count</emphasis> is 4, but
+            the <emphasis>Sequential skip count</emphasis> is 2, then the two samples
+            immediately preceding the predicted period will be skipped, resulting in
+            only two periods being sampled:</para>
+        <para></para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata align="center"
+                        fileref="resources/images/maintainence/predictor_skip.png" width="55%"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </section>
+    <section xml:id="annual_sample_count">
+        <title>Annual sample count</title>
+        <para>A predictor's <emphasis>Annual sample count</emphasis> gives the number of
+            prior years for which samples should be collected at the same time of year.
+            This could be used, for instance, for disease surveillance in cases where the
+            expected incidence of the disease varies during the year and can best be
+            compared with the same relative period in previous years. For example, if
+            the <emphasis>Annual sample count</emphasis> is 2 (and the <emphasis>Sequential
+            sample count</emphasis> is zero), then samples would be collected
+            from periods in the immediately preceding two years, at the same time of year.</para>
+        <para></para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata align="center"
+                        fileref="resources/images/maintainence/predictor_annual.png" width="60%"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </section>
+    <section xml:id="sequential_annual_sample_count">
+        <title>Sequential and annual sample counts together</title>
+        <para>You can use the sequential and annual sample counts together to collect
+            samples from a number of sequential periods over a number of past years.
+            When you do this, samples will be collected in prior years during the
+            period at the same time of year as the predicted value period, and also
+            in previous years both before and after the same time of year, as determined
+            by the <emphasis>Sequential sample count</emphasis> number.</para>
+        <para>For example, if the <emphasis>Sequential sample count</emphasis> is 4
+            and the <emphasis>Annual sample count</emphasis> is 2, samples will be
+            collected from the 4 periods immediately preceding the predicted value period.
+            In addition samples will be collected in the prior 2 years for the corresponding
+            period, as well as 4 periods on either side:</para>
+        <para></para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata align="center"
+                        fileref="resources/images/maintainence/predictor_sequential_annual.png" width="75%"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </section>
+    <section xml:id="sequential_annual_skip_sample_count">
+        <title>Sequential, annual, and skip sample counts together</title>
+        <para>You can use the <emphasis>Sequential skip count</emphasis> together
+            with the sequential and annual sample counts. When you do this, the
+            <emphasis>Sequential skip count</emphasis> tells how many periods to
+            skip in the same year as the predicted value period. For
+            example, if the <emphasis>Sequential sample count</emphasis> is 4
+            and the <emphasis>Sequential skip count</emphasis> is 2, then the
+            two preiods immediatly preceding the predicted value period period
+            will be skipped, but the two periods before that will be sampled:</para>
+        <para></para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata align="center"
+                        fileref="resources/images/maintainence/predictor_skip_2_weeks.png" width="75%"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+        <para>If the <emphasis>Sequential skip count</emphasis> is
+            equal to or greater than the <emphasis>Sequential sample count</emphasis>,
+            then no samples will be collected for the year containing the
+            predicted value period; only periods from past years will be sampled:</para>
+        <para></para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata align="center"
+                        fileref="resources/images/maintainence/predictor_skip_current_year.png" width="75%"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </section>
+    <section xml:id="sample_skip_test">
+        <title>Sample skip test</title>
+        <para>You can use the <emphasis>Sample skip test</emphasis> to skip
+            samples from certain periods that would otherwise be included, based on
+            the results of testing an expression within those periods.
+            This could be used, for instance, in disease outbreak detection, where
+            the sample skip test could identify previous disease outbreaks, to exclude
+            those samples from the prediction of a non-outbreak baseline expected value.</para>
+        <para>The <emphasis>Sample skip test</emphasis> is an expression that should
+            return a value of true or false, to indicate whether or not the period should
+            be skipped. It can be an expression that tests any values in the preiovus
+            period. For example, it could test for a data value that was explicitly
+            entered to indicate that a previous period should be skipped. Or it could
+            compare a previously predicted value for a period with the actual value
+            recorded for that period, to determine if that period should be skipped.</para>
+        <para>Any periods for which the <emphasis>Sample skip test</emphasis>
+            is <emphasis>true</emphasis> will not be sampled. For example:</para>
+        <para></para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata align="center"
+                        fileref="resources/images/maintainence/predictor_sample_skip_test.png" width="75%"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+        <para></para>
+    </section>
+</section>
