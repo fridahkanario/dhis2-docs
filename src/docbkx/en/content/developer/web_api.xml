@@ -746,25 +746,25 @@ LAST_FINANCIAL_YEAR, LAST_5_FINANCIAL_YEARS</screen>
               <entry>Case sensitive string, not match anywhere</entry>
             </row>
             <row>
-              <entry>^like</entry>
+              <entry>$ike</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case sensitive string, match start</entry>
             </row>
             <row>
-              <entry>!^like</entry>
+              <entry>!$like</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case sensitive string, not match start</entry>
             </row>
             <row>
-              <entry>$like</entry>
+              <entry>like$</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case sensitive string, match end</entry>
             </row>
             <row>
-              <entry>!$like</entry>
+              <entry>!like$</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case sensitive string, not match end</entry>
@@ -782,25 +782,25 @@ LAST_FINANCIAL_YEAR, LAST_5_FINANCIAL_YEARS</screen>
               <entry>Case insensitive string, not match anywhere</entry>
             </row>
             <row>
-              <entry>^ilike</entry>
+              <entry>$ilike</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case insensitive string, match start</entry>
             </row>
             <row>
-              <entry>!^ilike</entry>
+              <entry>!$ilike</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case insensitive string, not match start</entry>
             </row>
             <row>
-              <entry>$ilike</entry>
+              <entry>ilike$</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case insensitive string, match end</entry>
             </row>
             <row>
-              <entry>!$ilike</entry>
+              <entry>!ilike$</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case insensitive string, not match end</entry>
