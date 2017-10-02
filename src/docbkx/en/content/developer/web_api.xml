@@ -11789,7 +11789,7 @@ interval=WEEK" -u admin:district</screen>
       <para>To add data set notification template you can issue a POST
         request:<screen>POST /api/26/dataSetNotficationTemplates</screen></para>
       <para>To delete data set notification template you can issue a DELETE
-        request:<screen>DELETE /api/26/dataSetNotficationTemplates/&lt;uid</screen></para>
+        request:<screen>DELETE /api/26/dataSetNotficationTemplates/&lt;uid></screen></para>
       <para>JSON payload sample is given below<screen>{
     "name": "dataSetNotificationTemplate1",
     "notificationTrigger": "COMPLETION",
