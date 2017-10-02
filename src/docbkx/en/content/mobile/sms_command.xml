@@ -81,9 +81,14 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
         </thead>
         <tbody>
           <row>
-            <entry>Code and value Separator</entry>
+            <entry>Code Value Separator</entry>
             <entry>String</entry>
             <entry>To provide custom code value separator. Default is "="</entry>
+          </row>
+          <row>
+            <entry>Field Separator</entry>
+            <entry>String</entry>
+            <entry>To provide custom field separator. Default is "|"</entry>
           </row>
           <row>
             <entry>Reply message if no codes are sent (only the command)</entry>
@@ -179,7 +184,7 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
       </para>
       <para>The format of those command will be: [command&apos;s name] [code][separator][value], for example: </para>
       <para><emphasis role="bold">birth A=1,B=2,G=Male</emphasis></para>
-      <para>Code/Value separator is configurable. Comma "," is by default taken as field separator. Commands which has  EVENT_REGISTRATION_PARSER will be received from DHIS2 users only. Once command is successfully received then data received in SMS will be parsed and event will be registered in DHIS2. </para>
+      <para>Code/Value separator is configurable. Pipe "|" is by default taken as field separator. Commands which has  EVENT_REGISTRATION_PARSER will be received from DHIS2 users only. Once command is successfully received then data received in SMS will be parsed and event will be registered in DHIS2. </para>
     </section>
   </section>
 </section>
