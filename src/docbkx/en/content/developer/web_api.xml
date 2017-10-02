@@ -14076,9 +14076,6 @@ interval=WEEK" -u admin:district</screen>
         run resource:<screen>POST /api/26/predictors/run</screen></para>
       <para>To run a single predictor you can make a POST request to the run resource for a
         predictor:<screen>POST /api/26/predictors/AG10KUJCrRk/run</screen></para>
-      <para>To do a dry run for a single predictor you can use the dryRun resource. This resource
-        will return all predicted values in the response, as opposed to actually writing those
-        values to the database:<screen>POST /api/26/predictors/AG10KUJCrRk/dryRun</screen></para>
     </section>
   </section>
   <section xml:id="webapi_min_max_data_elements">
