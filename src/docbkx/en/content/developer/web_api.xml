@@ -11979,10 +11979,10 @@ interval=WEEK" -u admin:district</screen>
       <emphasis role="italic">GET</emphasis> all settings from:</para>
     <screen>/api/28/configuration/settings</screen>
     <para>You can get filtered settings based on setting type:</para>
-    <screen>GET /api/28/configuration/settings/filter?types=USER_SETTING</screen>
-    <screen>GET /api/28/configuration/settings/filter?types=CONFIGURATION</screen>
+    <screen>GET /api/28/configuration/settings/filter?type=USER_SETTING</screen>
+    <screen>GET /api/28/configuration/settings/filter?type=CONFIGURATION</screen>
     <para>More than one type can be provided</para>
-    <screen>GET /api/28/configuration/settings/filter?types=USER_SETTING&amp;types=SYSTEM_SETTING</screen>
+    <screen>GET /api/28/configuration/settings/filter?type=USER_SETTING&amp;type=SYSTEM_SETTING</screen>
     <table frame="all">
       <title>SettingType values</title>
       <tgroup cols="2">
