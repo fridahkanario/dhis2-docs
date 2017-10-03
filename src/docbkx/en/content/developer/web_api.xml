@@ -1513,6 +1513,33 @@ http://server/api/26/constants/ID</screen></para>
       lot of metadata, as it slows down the import and the audit might not be that useful if you are
       bootstrapping a new system.</para>
   </section>
+  <section>
+    <title>AMQP/RabbitMQ integration</title>
+    <para>If you have an external system that needs to know about updates inside of DHIS2 (update
+      data element, create org unit, etc) you can set up a rabbitmq message broker, and have it
+      receive messages from DHIS2, then other clients can listen to this broker and be notified when
+      events happen. Configuration of this happens in "dhis.conf" and the following keys are
+      available (defaults values are
+      shown):<screen>rabbitmq.host =
+rabbitmq.port = 5672
+rabbitmq.addresses = 
+rabbitmq.virtual-host = /
+rabbitmq.exchange = dhis2
+rabbitmq.username = guest
+rabbitmq.password = guest
+rabbitmq.connection-timeout = 60000</screen></para>
+    <para>The only required key to enable rabbitmq is "host", if the rest of the values are
+      applicable for your instance you can just use the defaults provided.</para>
+    <para>Inside DHIS2 it communicates with AMQP using a topic exchange called "dhis2" (unless you
+      have configured it to be called something else), and the following keys are sent
+      out:<screen>metadata.&lt;type>.&lt;action>.&lt;id></screen></para>
+    <para>Where type can be any type inside of DHIS2 (data element, indicator, org unit, etc),
+      action is <emphasis>CREATE, UPDATE, DELETE</emphasis> and <emphasis>id</emphasis> is the id of
+      the type being handled. The event also contains a payload, for <emphasis>CREATE</emphasis> and
+        <emphasis>DELETE</emphasis> this is the full serialized version of the object, for
+        <emphasis>UPDATE</emphasis> its a patch containing the updates that are happening on that
+      object.</para>
+  </section>
   <section xml:id="webapi_csv_metadata_import">
     <title>CSV metadata import</title>
     <para>DHIS2 supports import of metadata in the CSV format. Columns which are not required can
