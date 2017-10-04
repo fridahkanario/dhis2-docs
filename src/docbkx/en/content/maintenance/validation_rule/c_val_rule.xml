@@ -77,9 +77,23 @@
         <para>You can use sliding windows to group data <emphasis>across multiple periods</emphasis>
             as opposed to selecting data for <emphasis>a single period</emphasis>. Sliding windows
             have a size, that is to say, the number of days to cover, a starting point and an end
-            point. The example below shows a sliding window that is customized to display weekly
-            periods, a predicator, and an expression that compares the number of cases against the
-            threshold of the period. Whenever the threshold is exceeded, a warning message displays.<screenshot>
+            point. The example below shows disease surveillance data:.<itemizedlist>
+                <listitem>
+                    <para>The data in the orange section, selects data based on the current period.
+                        There is a threshold, which is calculated once for each week or period, and
+                        this is shown in the "Result" section. </para>
+                </listitem>
+                <listitem>
+                    <para>The data in the blue section is the sliding window. It selects data from
+                        the past 7 days. The "Result" shows the total number of confirmed cases of a
+                        disease.</para>
+                </listitem>
+                <listitem>
+                    <para>The validation rule makes sure users are notified when the total number of
+                        cases breaks the threshold for the period.</para>
+                </listitem>
+            </itemizedlist>
+            <screenshot>
                 <mediaobject>
                     <imageobject>
                         <imagedata width="90%"
@@ -88,8 +102,7 @@
                     </imageobject>
                 </mediaobject>
             </screenshot><table frame="all">
-                <title>Different behavior of validation rules when you use or do not use sliding
-                    windows</title>
+                <title>Different behavior of validation rules </title>
                 <tgroup cols="2">
                     <colspec colname="c1" colnum="1" colwidth="1.0*"/>
                     <colspec colname="c2" colnum="2" colwidth="1.0*"/>
