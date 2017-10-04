@@ -1361,6 +1361,13 @@ http://server/api/26/constants/ID</screen></para>
             <entry>&lt;locale></entry>
             <entry>Change from user locale, to your own custom locale.</entry>
           </row>
+          <row>
+            <entry>defaults</entry>
+            <entry>INCLUDE/EXCLUDE</entry>
+            <entry>Should auto-generated category object be included or not in the payload. If you
+              are moving metadata between 2 non-synced instances, it might make sense to set this to
+              EXCLUDE to ease the handling of these generated objects.</entry>
+          </row>
         </tbody>
       </tgroup>
     </table>
