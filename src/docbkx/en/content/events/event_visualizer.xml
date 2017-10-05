@@ -152,7 +152,7 @@
     </orderedlist>
   </section>
   <section xml:id="event_visualizer_select_dimensions">
-    <title>Select dimension items</title >
+    <title>Select dimension items</title>
     <para>An event chart is always based on a program and you can do analysis based on a range of
       dimensions. For programs with category combinations, you can use program categories and
       category option group sets as dimensions for tables and charts. Each dimension item can have a
@@ -171,6 +171,8 @@
           </listitem>
           <listitem>
             <para>Select the data elements you need by double-clicking their names.</para>
+            <para>Data elements can be filtered by type (Data elements, Program attributes, Program indicators)
+              and are prefixed to make them easily recognizable.</para>
             <para>After selecting a data element, it is visible under <emphasis role="bold">Selected
                 data items</emphasis>. </para>
           </listitem>
