@@ -5005,7 +5005,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     <section xml:id="webapi_completing_data_sets">
       <title>Completing data sets</title>
       <para>This section explains how to register data sets as complete. This is achieved by
-        interactithe <emphasis role="italic">completeDataSetRegistrations</emphasis>
+        interacting with the <emphasis role="italic">completeDataSetRegistrations</emphasis>
         resource:<screen>/api/26/completeDataSetRegistrations</screen></para>
       <para>The endpoint supports the <emphasis role="italic">POST</emphasis> method for registering
         data set completions. The endpoint is functionally very similar to the <emphasis
