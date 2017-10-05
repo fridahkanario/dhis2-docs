@@ -710,6 +710,18 @@ Also standardize which section it belongs in."?>A
               </row>
               <row>
                 <entry align="left" valign="top">
+                  <para><emphasis role="bold">Style</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">No space between columns/bars</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Removes the space between the columns or bars in the chart.
+                    Useful for displaying the chart as an EPI curve.</para>
+                </entry>
+              </row>
+              <row>
+                <entry align="left" valign="top">
                   <para><emphasis role="bold">General</emphasis></para>
                 </entry>
                 <entry align="left" valign="top">
