@@ -409,6 +409,18 @@ Consider presenting content in a table."?>items<?oxy_comment_end?></title>
                 </entry>
               </row>
               <row>
+                <entry align="left" valign="top"/>
+                <entry align="left" valign="top">
+                  <para><emphasis role="bold">Measure criteria</emphasis></para>
+                </entry>
+                <entry align="left" valign="top">
+                  <para>Allows for the data to be filtered on the server side.</para>
+                  <para>You can instruct the system to return only records where the aggregated data
+                    value is equal, greater than, greater or equal, less than or less or equal to certain values.</para>
+                  <para>If both parts of the filter are used, it's possible to filter out a range of data records.</para>
+                </entry>
+              </row>
+              <row>
                 <entry align="left" valign="top">
                   <para><emphasis role="bold">Events</emphasis></para>
                 </entry>
