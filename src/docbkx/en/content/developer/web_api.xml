@@ -1500,6 +1500,14 @@ http://server/api/26/constants/ID</screen></para>
             <entry>Asynchronous import, returns immediately with a <emphasis>Location</emphasis>
               header pointing to the location of the <emphasis>importReport</emphasis>.</entry>
           </row>
+          <row>
+            <entry>inclusionStrategy</entry>
+            <entry>NON_NULL, ALWAYS, NON_EMPTY</entry>
+            <entry><emphasis>NON_NULL</emphasis> includes properties which are not null,
+                <emphasis>ALWAYS</emphasis> include all properties,  <emphasis>NON_EMPTY</emphasis>
+              includes non empty properties (will not include strings of 0 length, collections of
+              size 0 etc)</entry>
+          </row>
         </tbody>
       </tgroup>
     </table>
