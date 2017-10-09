@@ -81,9 +81,14 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
         </thead>
         <tbody>
           <row>
-            <entry>Code and value Separator</entry>
+            <entry>Code Value Separator</entry>
             <entry>String</entry>
             <entry>To provide custom code value separator. Default is "="</entry>
+          </row>
+          <row>
+            <entry>Field Separator</entry>
+            <entry>String</entry>
+            <entry>To provide custom field separator. Default is "|"</entry>
           </row>
           <row>
             <entry>Reply message if no codes are sent (only the command)</entry>
@@ -149,9 +154,52 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
         </screenshot></para>
       <para>User  can set the custom response message for &quot;Wrong format message&quot;, &quot;No User Message&quot;, &quot;User belong to more than one OrgUnit message&quot; and &quot;Success message&quot;. If no custom message is being set, system will use the default message.</para>
     </section>
+    
+    
+    <section>
+      <title>SMS Command for Entity Enrollment</title>
+      <para>TRACKED_ENTITY_REGISTRATION_PARSER can be used to enroll tracked entity into the system.</para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="40%" align="center" fileref="resources/images/dhis2_mobile/tracker.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
+      <para>Command name will be followed by tracked entity attributes pertaining to specific program which this command is associated with. Program selection will be done while creating this command.</para>
+      <para>Default text pattern ( if field separator and codevalue separator is not provided ) for this parser would look like this. <emphasis role="bold">childProgram fn=xmen|ln=xmen2|age=4</emphasis></para>
+      <para>In case field separator is for example "," then text would look like this.<emphasis role="bold">
+        <emphasis role="bold">childProgram fn=xmen,ln=xmen2,age=4</emphasis>
+      </emphasis></para>
+      <para>Rest of the behavior is same as for other commands. If user does not provide those parameters then default ones will be used.</para>
+    </section>
+    
+    <section>
+      <title>SMS Command for Program Stage Data Entry</title>
+      <para>PROGRAM_STAGE_DATAENTRY_PARSER can be used to enter program stage related data for a specific tracked entity instance.</para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="40%" align="center" fileref="resources/images/dhis2_mobile/program-stage-parser.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
+      <para>Command name will be followed by data elements pertaining to specific program stage which this command is associated with. Program and program stage selection will be done while creating this command.</para>
+      <para>Default text pattern ( if field separator and codevalue separator is not provided ) for this parser would look like this. <emphasis role="bold">programstage bcgd=1|opvd=2|wght=34</emphasis></para>
+      <para>In case field separator is for example "," then text would look like this.<emphasis role="bold">
+        <emphasis role="bold">programstage bcgd=1,opvd=2,wght=34</emphasis>
+      </emphasis></para>
+      <para>Rest of the behavior is same as for other commands. If user does not provide those parameters then default ones will be used.</para>
+    </section>
+    
+    
     <section>
       <title>SMS Command for Alerting, Registering</title>
-      <para>In order to alert users or register patients, users, we use SMS commands which have ALERT_PARSER (for phone&apos;s plain text), or UNREGISTERED_PARSER (for j2me apps)</para>
+      <para>In order to alert users, we use SMS commands which have ALERT_PARSER (for phone&apos;s plain text), or UNREGISTERED_PARSER (for j2me apps). UNREGISTERED_PARSER can also be used for registering IDSR rumour.</para>
       <para>
         <screenshot>
           <mediaobject>
@@ -179,7 +227,7 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
       </para>
       <para>The format of those command will be: [command&apos;s name] [code][separator][value], for example: </para>
       <para><emphasis role="bold">birth A=1,B=2,G=Male</emphasis></para>
-      <para>Code/Value separator is configurable. Comma "," is by default taken as field separator. Commands which has  EVENT_REGISTRATION_PARSER will be received from DHIS2 users only. Once command is successfully received then data received in SMS will be parsed and event will be registered in DHIS2. </para>
+      <para>Code/Value separator is configurable. Pipe "|" is by default taken as field separator. Commands which has  EVENT_REGISTRATION_PARSER will be received from DHIS2 users only. Once command is successfully received then data received in SMS will be parsed and event will be registered in DHIS2. </para>
     </section>
   </section>
 </section>

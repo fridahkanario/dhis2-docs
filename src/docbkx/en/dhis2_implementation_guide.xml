@@ -14,7 +14,7 @@
   <title>DHIS2 Implementer guide</title>
   <xi:include href="content/bookinfo/bookinfo.xml" encoding="UTF-8"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/preface/preface.xml" encoding="UTF-8"/>
-  <xi:include href="content/implementer/recommendations.xml" encoding="UTF-8"/>
+  <xi:include href="content/implementer/implementer_quick_guide.xml" encoding="UTF-8"/>
   <xi:include href="content/implementer/conceptual_design_principles.xml" encoding="UTF-8"/>
   <xi:include href="content/implementer/setting_up_new_database.xml" encoding="UTF-8"/>
   <xi:include href="content/implementer/deployment_strategies.xml" encoding="UTF-8"/>

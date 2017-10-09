@@ -84,6 +84,8 @@
           </listitem>
           <listitem>
             <para>Select the data elements you need by double-clicking their names.</para>
+            <para>Data elements can be filtered by type (Data elements, Program attributes, Program indicators)
+              and are prefixed to make them easily recognizable.</para>
             <para>After selecting a data element, it is visible under <emphasis role="bold">Selected
                 data items</emphasis>. </para>
           </listitem>

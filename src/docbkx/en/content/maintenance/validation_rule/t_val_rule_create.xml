@@ -235,6 +235,16 @@
             </orderedlist>
         </listitem>
         <listitem>
+            <para>(Optional) Choose which <emphasis role="bold">Organisation unit levels</emphasis>
+                this rule should be evaluated for. Leaving this empty will cause the validation rule
+                to be evaluated at all levels.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Click <emphasis role="bold">Skip this rule during form
+                    validation</emphasis> to avoid triggering this rule while doing data
+                entry</para>
+        </listitem>
+        <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
         </listitem>
     </orderedlist>

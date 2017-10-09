@@ -388,10 +388,10 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">d2:substring</entry>
                     <entry align="left" valign="top">(text, start-char-num, end-char-num)</entry>
                     <entry align="left" valign="top">Evaluates to the part of a string specified by
-                        the start and end character number. <para> The text can be quoted or
-                            evaluated from a variable:
-                            <screen>d2:right(#{variableWithText}, 2, 4)</screen></para>
-                    </entry>
+                        the start and end character number. <para>Example
+                            expression:<screen>d2:substring(#{variableWithText}, 1, 3)</screen></para>If
+                        the #{variableWithText} in the above example was 'ABCD', then the result of
+                        the evaluation would be 'BC' </entry>
                 </row>
                 <row>
                     <entry align="left" valign="top">d2:split</entry>

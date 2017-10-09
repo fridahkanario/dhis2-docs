@@ -746,25 +746,25 @@ LAST_FINANCIAL_YEAR, LAST_5_FINANCIAL_YEARS</screen>
               <entry>Case sensitive string, not match anywhere</entry>
             </row>
             <row>
-              <entry>^like</entry>
+              <entry>$ike</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case sensitive string, match start</entry>
             </row>
             <row>
-              <entry>!^like</entry>
+              <entry>!$like</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case sensitive string, not match start</entry>
             </row>
             <row>
-              <entry>$like</entry>
+              <entry>like$</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case sensitive string, match end</entry>
             </row>
             <row>
-              <entry>!$like</entry>
+              <entry>!like$</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case sensitive string, not match end</entry>
@@ -782,25 +782,25 @@ LAST_FINANCIAL_YEAR, LAST_5_FINANCIAL_YEARS</screen>
               <entry>Case insensitive string, not match anywhere</entry>
             </row>
             <row>
-              <entry>^ilike</entry>
+              <entry>$ilike</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case insensitive string, match start</entry>
             </row>
             <row>
-              <entry>!^ilike</entry>
+              <entry>!$ilike</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case insensitive string, not match start</entry>
             </row>
             <row>
-              <entry>$ilike</entry>
+              <entry>ilike$</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case insensitive string, match end</entry>
             </row>
             <row>
-              <entry>!$ilike</entry>
+              <entry>!ilike$</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case insensitive string, not match end</entry>
@@ -1361,6 +1361,13 @@ http://server/api/26/constants/ID</screen></para>
             <entry>&lt;locale></entry>
             <entry>Change from user locale, to your own custom locale.</entry>
           </row>
+          <row>
+            <entry>defaults</entry>
+            <entry>INCLUDE/EXCLUDE</entry>
+            <entry>Should auto-generated category object be included or not in the payload. If you
+              are moving metadata between 2 non-synced instances, it might make sense to set this to
+              EXCLUDE to ease the handling of these generated objects.</entry>
+          </row>
         </tbody>
       </tgroup>
     </table>
@@ -1493,9 +1500,60 @@ http://server/api/26/constants/ID</screen></para>
             <entry>Asynchronous import, returns immediately with a <emphasis>Location</emphasis>
               header pointing to the location of the <emphasis>importReport</emphasis>.</entry>
           </row>
+          <row>
+            <entry>inclusionStrategy</entry>
+            <entry>NON_NULL, ALWAYS, NON_EMPTY</entry>
+            <entry><emphasis>NON_NULL</emphasis> includes properties which are not null,
+                <emphasis>ALWAYS</emphasis> include all properties,  <emphasis>NON_EMPTY</emphasis>
+              includes non empty properties (will not include strings of 0 length, collections of
+              size 0 etc)</entry>
+          </row>
         </tbody>
       </tgroup>
     </table>
+  </section>
+  <section>
+    <title>Metadata audit</title>
+    <para>If you need information about who created, edited, or deleted some part of the DHIS2
+      metadata, you can enable metadata audit, there are two configuration options (your in your
+      `dhis.conf`) you can enable to support this:<screen>metadata.audit.log = on</screen></para>
+    <para>This enabled additional log output in your servlet container  (e.g. tomcat catalina.log)
+      which contains full information about the object created, object edited, or object deleted
+      including full JSON payload, date of audit event, and the user who did the
+      action.<screen>metadata.audit.persist = on</screen></para>
+    <para>This enables persisted audits (audits saved to the database) the information stored is the
+      same as with audit log, but this information is now placed into the `metadataaudit` table in
+      your database.</para>
+    <para>We do not recommended enabling these options on a empty database if you intend to import a
+      lot of metadata, as it slows down the import and the audit might not be that useful if you are
+      bootstrapping a new system.</para>
+  </section>
+  <section>
+    <title>AMQP/RabbitMQ integration</title>
+    <para>If you have an external system that needs to know about updates inside of DHIS2 (update
+      data element, create org unit, etc) you can set up a rabbitmq message broker, and have it
+      receive messages from DHIS2, then other clients can listen to this broker and be notified when
+      events happen. Configuration of this happens in "dhis.conf" and the following keys are
+      available (defaults values are
+      shown):<screen>rabbitmq.host =
+rabbitmq.port = 5672
+rabbitmq.addresses = 
+rabbitmq.virtual-host = /
+rabbitmq.exchange = dhis2
+rabbitmq.username = guest
+rabbitmq.password = guest
+rabbitmq.connection-timeout = 60000</screen></para>
+    <para>The only required key to enable rabbitmq is "host", if the rest of the values are
+      applicable for your instance you can just use the defaults provided.</para>
+    <para>Inside DHIS2 it communicates with AMQP using a topic exchange called "dhis2" (unless you
+      have configured it to be called something else), and the following keys are sent
+      out:<screen>metadata.&lt;type>.&lt;action>.&lt;id></screen></para>
+    <para>Where type can be any type inside of DHIS2 (data element, indicator, org unit, etc),
+      action is <emphasis>CREATE, UPDATE, DELETE</emphasis> and <emphasis>id</emphasis> is the id of
+      the type being handled. The event also contains a payload, for <emphasis>CREATE</emphasis> and
+        <emphasis>DELETE</emphasis> this is the full serialized version of the object, for
+        <emphasis>UPDATE</emphasis> its a patch containing the updates that are happening on that
+      object.</para>
   </section>
   <section xml:id="webapi_csv_metadata_import">
     <title>CSV metadata import</title>
@@ -1846,7 +1904,7 @@ http://server/api/26/constants/ID</screen></para>
               <entry>Operator</entry>
               <entry>No</entry>
               <entry>equal_to | not_equal_to | greater_than | greater_than_or_equal_to | less_than |
-                less_than_or_equal_to | compulsory_pair</entry>
+                less_than_or_equal_to | compulsory_pair | exclusive_pair</entry>
               <entry/>
             </row>
             <row>
@@ -1970,6 +2028,52 @@ http://server/api/26/constants/ID</screen></para>
 &quot;Impact&quot;,&quot;cJ82jd8sd32&quot;,&quot;IMPACT&quot;,&quot;Great&quot;,,&quot;GREAT&quot;
 &quot;Impact&quot;,&quot;cJ82jd8sd32&quot;,&quot;IMPACT&quot;,&quot;Medium&quot;,,&quot;MEDIUM&quot;
 &quot;Impact&quot;,&quot;cJ82jd8sd32&quot;,&quot;IMPACT&quot;,&quot;Poor&quot;,,&quot;POOR&quot;</screen>
+    </section>
+    <section>
+      <title>Collection membership</title>
+      <para>In addition to importing objects, you can also choose to only import the group-member
+        relationship between an object and group. Currently the following group and object pairs are supported<itemizedlist>
+          <listitem>
+            <para>Organisation Unit Group - Organisation Unit</para>
+          </listitem>
+          <listitem>
+            <para>Data Element Group - Data Element</para>
+          </listitem>
+          <listitem>
+            <para>Indicator Group - Indicator</para>
+          </listitem>
+        </itemizedlist></para>
+      <para>The CSV format for these imports are the same<table frame="all">
+          <title>Collection membership CSV Format</title>
+          <tgroup cols="4">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+            <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Column</entry>
+                <entry>Required</entry>
+                <entry>Value (default first)</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>UID</entry>
+                <entry>Yes</entry>
+                <entry>UID</entry>
+                <entry>The UID of the collection to add an object to</entry>
+              </row>
+              <row>
+                <entry>UID</entry>
+                <entry>Yes</entry>
+                <entry>UID</entry>
+                <entry>The UID of the object to add to the collection</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
     </section>
     <section xml:id="webapi_csv_other_objects">
       <title>Other objects</title>
@@ -3085,7 +3189,7 @@ http://server/api/26/constants/ID</screen></para>
           <para>csv (application/csv)</para>
         </listitem>
         <listitem>
-          <para>adx (application/xml+adx)</para>
+          <para>adx (application/adx+xml)</para>
         </listitem>
       </itemizedlist>
       <para>Assuming that we have posted data values to DHIS2 according to the previous section
@@ -3420,7 +3524,7 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
         using <emphasis role="italic">application/xml+adx</emphasis> as content type. So, for
         example, the following curl command can be used to POST the example data above to the DHIS2
         demo server:
-        <screen>curl -u admin:district -X POST -H &quot;Content-Type: application/xml+adx&quot;
+        <screen>curl -u admin:district -X POST -H &quot;Content-Type: application/adx+xml"
 -d @data.xml &quot;https://play.dhis2.org/demo/api/26/dataValueSets?dataElementIdScheme=code&amp;orgUnitIdScheme=code&quot;</screen>
         Note the query parameters are the same as are used with DXF data. The adx endpoint should
         interpret all the existing DXF parameters with the same semantics as DXF.</para>
@@ -3431,7 +3535,7 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
           <emphasis>/api/dataValueSets</emphasis> using <emphasis role="italic"
           >application/xml+adx</emphasis> as the accepted content type. So, for example, the
         following curl command can be used to retrieve the adx data:
-        <screen>curl -u admin:district -H &quot;Accept: application/xml+adx&quot;
+        <screen>curl -u admin:district -H &quot;Accept: application/adx+xml&quot;
  &quot;https://play.dhis2.org/demo/api/26/dataValueSets?dataValueSets?orgUnit=M_CLINIC&amp;dataSet=MALARIA&amp;period=201501&quot;</screen>
         Note the query parameters are the same as are used with DXF data. An important difference is
         that the identifiers for dataSet and orgUnit are assumed to be codes rather than
@@ -4644,6 +4748,14 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>less_than_or_equal_to</entry>
               <entry>Less than or equal to</entry>
             </row>
+            <row>
+              <entry>compulsory_pair</entry>
+              <entry>If either side is present, the other must also be</entry>
+            </row>
+            <row>
+              <entry>exclusive_pair</entry>
+              <entry>If either side is present, the other must not be</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
@@ -4704,7 +4816,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       the web API. This section describes how to run the data integrity process as well as
       retrieving the result. The details of the analysis performed are described in the user
       manual.</para>
-    <section>
+    <section xml:id="webapi_data_integrity_run">
       <title>Running data integrity</title>
       <para>The operation of measuring data integrity is a fairly resource (and time) demanding
         task. It is therefore run as an asynchronous process and only when explicitly requested.
@@ -4717,7 +4829,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         completed and a JSON taskSummary object when the task is done. Polling (conservatively) to
         this resource can hence be used to wait for the task to finish.</para>
     </section>
-    <section>
+    <section xml:id="webapi_data_integrity_fetch_results">
       <title>Fetching the result</title>
       <para>Once data integrity is finished running the result can be fetched from the <emphasis
           role="italic">system/taskSummaries</emphasis> resource like
@@ -4731,7 +4843,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
   <section xml:id="webapi_indicators">
     <title>Indicators</title>
     <para>This section describes indicators and indicator expressions.</para>
-    <section>
+    <section xml:id="webapi_aggregate_indicators">
       <title>Aggregate indicators</title>
       <para>To retrieve indicators you can make a GET request to the indicators resource like
         this:<screen>/api/26/indicators</screen></para>
@@ -4901,7 +5013,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     <section xml:id="webapi_completing_data_sets">
       <title>Completing data sets</title>
       <para>This section explains how to register data sets as complete. This is achieved by
-        interactithe <emphasis role="italic">completeDataSetRegistrations</emphasis>
+        interacting with the <emphasis role="italic">completeDataSetRegistrations</emphasis>
         resource:<screen>/api/26/completeDataSetRegistrations</screen></para>
       <para>The endpoint supports the <emphasis role="italic">POST</emphasis> method for registering
         data set completions. The endpoint is functionally very similar to the <emphasis
@@ -5155,7 +5267,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         <emphasis role="italic">dataApprovals</emphasis> resource. Approval is done per data set,
       period, organisation unit and attribute option
       combo.<screen>/api/26/dataApprovals</screen></para>
-    <section>
+    <section xml:id="webapi_data_approval_get_status">
       <title>Get approval status</title>
       <para>To get approval information for a data set you can issue a GET request similar to
         this:</para>
@@ -5322,7 +5434,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         approval records for individual attribute option combos from the following
         resource:<screen>GET api/dataApprovals/categoryOptionCombos?ds=aLpVgfXiz0f&amp;pe=2013&amp;ou=DiszpKrYNg8</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_data_approval_approve_data">
       <title>Approve data</title>
       <para>To approve data you can issue a <emphasis role="italic">POST</emphasis> request to the
           <emphasis role="italic">dataApprovals</emphasis> resource. To un-approve data you can
@@ -5382,7 +5494,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         </listitem>
       </itemizedlist>
     </section>
-    <section>
+    <section xml:id="webapi_data_approval_bulk_approve_data">
       <title>Bulk approve data</title>
       <para>You can approve a bulk of data records by posting to the<emphasis role="italic">
           api/dataApprovals/approvals</emphasis>
@@ -5419,7 +5531,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     <para>DHIS2 does automatic auditing on all update and deletions of aggregate data values,
       tracked entity data values, tracked entity attribute values, and data approvals. This section
       explains how to fetch this data.</para>
-    <section>
+    <section xml:id="webapi_auditing_aggregate_audits">
       <title>Aggregate data value audits</title>
       <para>The endpoint for aggregate data value audits is located at <emphasis role="italic"
           >/api/audits/dataValue</emphasis>, and the available parameters are displayed in the table
@@ -5665,7 +5777,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       user and send a message to the <emphasis role="italic">Mobile</emphasis> user. We will then
       pretend to be the mobile user and read our new message. Following this we will manage the
       admin user inbox by marking and removing messages.</para>
-    <section>
+    <section xml:id="webapi_writing_messages">
       <title>Writing and reading messages</title>
       <para>The resource we need to interact with when sending and reading messages is the <emphasis
           role="italic">messageConversations</emphasis> resource. We start by visiting the Web API
@@ -5788,7 +5900,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>If all went according to plan you will receive a <emphasis role="italic">200
           OK</emphasis> status code.</para>
     </section>
-    <section>
+    <section xml:id="webapi_managing_messages">
       <title>Managing messages</title>
       <para><emphasis>Note: the Web-API calls discussed in this section were introduced in DHIS
           2.17</emphasis></para>
@@ -5851,7 +5963,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>The response is a <emphasis role="italic">200 OK</emphasis> with the following JSON
         body:<screen>{ &quot;markedRead&quot; : [ &quot;ZrKML5WiyFm&quot;, &quot;Gc03smoTm6q&quot; ] }</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_messaging_tickets">
       <title>Tickets</title>
       <para>You can use the "write feedback" tool to create tickets and messages. The only
         difference between a ticket and a message is that you can give a status and a priority to a
@@ -6251,9 +6363,22 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
   </section>
   <section xml:id="webapi_plugins">
     <title>Plugins</title>
-    <para>DHIS2 comes with plugins which enables you to embed live data directly in your web portal
+    <para>DHIS2 comes with plugins which enable you to embed live data directly in your web portal
       or web site. Currently, plugins exist for charts, maps and pivot tables.</para>
-    <section>
+    <para>Please be aware that <emphasis role="bold">all of the code examples in this section are
+        for demonstration purposes only</emphasis>. They should not be used as is in production
+      systems.  To make things simple, the credentials (admin/district) have been embedded into the
+      scripts.  In a real scenario you should never expose credentials in javascript as it opens a
+      vulnerability to the application.   In addition you would create a user with more minimal
+      privileges rather than make use of a superuser to fetch resources for your portal.</para>
+    <para>It is possible to workaround exposing the credentials by using a reverse proxy such as
+      nginx or apache2. The proxy can be configured to inject the required Authorization header for
+      only the endpoints that you wish to make public. There is some documentation to get you
+      started in the section of the implementers manual which describes <link
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xlink:href="https://docs.dhis2.org/master/en/implementer/html/install_reverse_proxy_configuration.html#install_making_resources_available_with_nginx"
+        >reverse proxy</link> configuration.</para>
+    <section xml:id="webapi_pivot_table_plugin">
       <title>Embedding pivot tables with the Pivot Table plug-in</title>
       <para>In this example we will see how we can embed good-looking, light-weight html pivot
         tables with data served from a DHIS2 back-end into a Web page. To accomplish this we will use
@@ -6267,8 +6392,8 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         <screen>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src=&quot;https://dhis2-cdn.org/v225-1/plugin/jquery-2.2.4.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;https://dhis2-cdn.org/v225-1/plugin/reporttable.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://dhis2-cdn.org/v227/plugin/jquery-2.2.4.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://dhis2-cdn.org/v227/plugin/reporttable.js&quot;&gt;&lt;/script&gt;
 
   &lt;script&gt;
     reportTablePlugin.url = &quot;https://play.dhis2.org/demo&quot;;
@@ -6278,7 +6403,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
 
     // Referring to an existing table through the id parameter, render to &quot;report1&quot; div
     
-    var r1 = { el: &quot;report1&quot;, id: &quot;R0DVGvXDUNP&quot; });
+    var r1 = { el: &quot;report1&quot;, id: &quot;R0DVGvXDUNP&quot; };
 
     // Table configuration, render to &quot;report2&quot; div
     
@@ -6570,7 +6695,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         </tgroup>
       </table>
     </section>
-    <section>
+    <section xml:id="webapi_chart_plugin">
       <title>Embedding charts with the Visualizer chart plug-in</title>
       <para>In this example we will see how we can embed good-looking Highcharts charts (<link
           xl:href="http://www.highcharts.com"/>) with data served from a DHIS2 back-end
@@ -6584,8 +6709,8 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         <screen>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src=&quot;https://dhis2-cdn.org/v225-1/plugin/jquery-2.2.4.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;https://dhis2-cdn.org/v225-1/plugin/chart.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://dhis2-cdn.org/v227/plugin/jquery-2.2.4.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://dhis2-cdn.org/v227/plugin/chart.js&quot;&gt;&lt;/script&gt;
 
   &lt;script&gt;
     chartPlugin.url = &quot;https://play.dhis2.org/demo&quot;;
@@ -6595,7 +6720,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     
     // Referring to an existing chart through the id parameter, render to &quot;report1&quot; div
     
-    var r1 = { el: "report1", id: "R0DVGvXDUNP" });
+    var r1 = { el: "report1", id: "R0DVGvXDUNP" };
 
     // Chart configuration, render to "report2" div
     
@@ -6630,6 +6755,11 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       rangeAxisTitle: &quot;My range axis title&quot;,
       domainAxisTitle: &quot;My domain axis title&quot;,
       hideLegend: true
+    };
+
+    // Render the charts
+
+    chartPlugin.load(r1, r2);
   &lt;/script&gt;
 &lt;/head&gt;
 
@@ -6915,7 +7045,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         </tgroup>
       </table>
     </section>
-    <section>
+    <section xml:id="webapi_map_plugin">
       <title>Embedding maps with the GIS map plug-in</title>
       <para>In this example we will see how we can embed maps with data served from a DHIS2 back-end
         into a Web page. To accomplish this we will use the GIS map plug-in. The plug-in is written
@@ -7246,7 +7376,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>To see a complete working example please visit <link
           xl:href="http://play.dhis2.org/portal/map.html"/>.</para>
     </section>
-    <section>
+    <section xml:id="webapi_carousel_plugin">
       <title>Creating a chart carousel with the carousel plug-in</title>
       <para>The chart plug-in also makes it possible to create a chart carousel which for instance
         can be used to create an attractive front page on a Web portal. To use the carousel we need
@@ -7343,7 +7473,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
             variables for customized queries.</para>
         </listitem>
       </itemizedlist></para>
-    <section>
+    <section xml:id="webapi_sql_view_criteria">
       <title>Criteria</title>
       <para>You can do simple filtering on the columns in the result set by appending <emphasis
           role="italic">criteria</emphasis> query parameters to the URL, using the column names and
@@ -7353,7 +7483,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
         at level 4 you can use the following URL:</para>
       <screen>https://play.dhis2.org/demo/api/26/sqlViews/dI68mLkP1wN/data.csv?criteria=level:4</screen>
     </section>
-    <section>
+  <section xml:id="webapi_sql_view_variables">
       <title>Variables</title>
       <para>SQL views support variable subsitution. Variable subsitition is only available for SQL
         view of type <emphasis role="italic">query</emphasis>, meaning SQL views which are not
@@ -7375,7 +7505,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
       <para>The variable parameter must contain alphanumeric characters only. The variables must
         contain alphanumeric, dash, underscore and whitespace characters only.</para>
     </section>
-    <section>
+    <section xml:id="webapi_sql_view_filtering">
       <title>Filtering</title>
       <para>The SQL view api supports data filtering, equal to the <link
           xmlns:xlink="http://www.w3.org/1999/xlink" linkend="webapi_metadata_object_filter"
@@ -10560,11 +10690,17 @@ interval=WEEK" -u admin:district</screen>
     <section>
       <title>API End Points</title>
       <para>The list of commands can be retrieved using GET.</para>
-      <screen>GET /api/26/sms/commands</screen>
-      <para>One particular command can also be retreived using GET. Where parameter <emphasis
-        role="italic">type</emphasis> can be one of the below mentioned parsers. In this type of query, command will be retreived with all its parameters attached to it. For example "birth A=1,B=2,G=Male". Birth is the name
-      of SMS command and A,B and G are parameters attached to this SMS command. Query result will also contain information about what these parameters are and which DataElement they belong to. These parameters are given short codes inorder to fit them in 160 characters SMS length.</para>
-      <screen>GET /api/26/sms/commands/{commandName}?type=EVENT_REGISTRATION_PARSER</screen>
+      <screen>GET /api/smsCommands</screen>
+      <para>One particular command can be retreived using GET.</para>
+      <screen>GET /api/smsCommands/uid</screen>
+      <para>One particular command can be updated using PUT.</para>
+      <screen>PUT /api/smsCommands/uid</screen>
+      <para>Command can be created using POST.</para>
+      <screen>POST /api/smsCommands</screen>  
+      <para>One particular command can be deleted using DELETE.</para>
+      <screen>DELETE /api/smsCommands/uid</screen>
+      <section>
+        <title>SMSCommand parser types</title>
       <itemizedlist>
         <listitem>
           <para>KEY_VALUE_PARSER</para>
@@ -10588,6 +10724,7 @@ interval=WEEK" -u admin:district</screen>
           <para>EVENT_REGISTRATION_PARSER</para>
         </listitem>
       </itemizedlist>
+      </section>
     </section>
   </section>
   <section xml:id="webapi_program_messages">
@@ -10917,23 +11054,33 @@ interval=WEEK" -u admin:district</screen>
         simple example payload to create would be, the password should be sent in plain text
         (remember to only use this on a SSL enabled server) and will be encrypted on the
         backend:<screen>{
-  &quot;firstName&quot;: &quot;John&quot;,
-  &quot;surname&quot;: &quot;Doe&quot;,
-  &quot;email&quot;: &quot;johndoe@mail.com&quot;,
-  &quot;userCredentials&quot;: {
-    &quot;id&quot;: &quot;ZyjSDLHGPv4&quot;,
-    &quot;username&quot;: &quot;johndoe&quot;,
-    &quot;password&quot;: &quot;your-password-123&quot;,
-    &quot;userRoles&quot;: [ {
-      &quot;id&quot;: &quot;Euq3XfEIEbx&quot;
-    } ]
+  "id": "Mj8balLULKp",
+  "firstName": "John",
+  "surname": "Doe",
+  "email": "johndoe@mail.com",
+  "userCredentials": {
+    "id": "lWCkJ4etppc",
+    "userInfo": {
+      "id": "Mj8balLULKp"
+    },
+    "username": "johndoe123",
+    "password": "Your-password-123",
+    "userRoles": [
+      {
+        "id": "Ufph3mGRmMo"
+      }
+    ]
   },
-  &quot;organisationUnits&quot;: [ {
-    &quot;id&quot;: &quot;ImspTQPwCqd&quot;
-  } ],
-  &quot;userGroups&quot;: [ {
-    &quot;id&quot;: &quot;vAvEltyXGbD&quot;
-  } ]
+  "organisationUnits": [
+    {
+      "id": "Rp268JB6Ne4"
+    }
+  ],
+  "userGroups": [
+    {
+      "id": "wl5cDMuUhmF"
+    }
+  ]
 }</screen></para>
       <screen>curl -X POST -u user:pass -d @u.json -H &quot;Content-Type: application/json&quot; http://server/api/26/users</screen>
       <para>After the user is created, a <emphasis role="italic">Location</emphasis> header is sent
@@ -11674,6 +11821,32 @@ interval=WEEK" -u admin:district</screen>
       request:<screen>GET /api/26/dataSets/&lt;uid>/version</screen></para>
     <para>To bump (increase by one) the version of a data set you can issue a POST
       request:<screen>POST /api/26/dataSets/&lt;uid>/version</screen></para>
+    <section xml:id="webapi_dataset_notifications">
+      <title>DataSet Notification Template</title>
+      <para>The <emphasis>dataset notification templates</emphasis> resource follows the standard conventions as other
+        metadata resources in DHIS2.
+        <screen>GET /api/26/dataSetNotficationTemplates</screen></para>
+      <para>To retrieve data set notification template you can issue a GET
+        request:<screen>GET /api/26/dataSetNotficationTemplates/&lt;uid></screen></para>
+      <para>To add data set notification template you can issue a POST
+        request:<screen>POST /api/26/dataSetNotficationTemplates</screen></para>
+      <para>To delete data set notification template you can issue a DELETE
+        request:<screen>DELETE /api/26/dataSetNotficationTemplates/&lt;uid></screen></para>
+      <para>JSON payload sample is given below<screen>{
+    "name": "dataSetNotificationTemplate1",
+    "notificationTrigger": "COMPLETION",
+    "relativeScheduledDays": 0,
+    "notificationRecipient": "ORGANISATION_UNIT_CONTACT",
+    "dataSets": [{
+        "id": "eZDhcZi6FLP"
+    }],
+    "deliveryChannels": ["SMS"],
+    "subjectTemplate": "V{data_name}",
+    "messageTemplate": "V{data_name}V{complete_registration_period}",
+    "sendStrategy": "SINGLE_NOTIFICATION"
+}
+      </screen></para>
+    </section>
   </section>
   <section xml:id="webapi_filled_organisation_unit_levels">
     <title>Filled organisation unit levels</title>
@@ -11839,6 +12012,47 @@ interval=WEEK" -u admin:district</screen>
     <para>As an example, to set the feedback recipients user group you can invoke the following curl
       command:<screen>curl &quot;localhost/api/26/configuration/feedbackRecipients&quot; -d &quot;wl5cDMuUhmF&quot; 
   -H &quot;Content-Type:text/plain&quot;-u admin:district -v</screen></para>
+  </section>
+  <section xml:id="webapi_readonly_configuration_interface">
+    <title>Read-Only configuration service</title>
+    <para>To access configuration you can now use read-only service. This service will provide read-only access to <emphasis role="italic">UserSettings, SystemSettings and DHIS server configurations </emphasis>  
+      You can get XML and JSON responses through the <emphasis
+        role="italic">Accept</emphasis> header. You can
+      <emphasis role="italic">GET</emphasis> all settings from:</para>
+    <screen>/api/28/configuration/settings</screen>
+    <para>You can get filtered settings based on setting type:</para>
+    <screen>GET /api/28/configuration/settings/filter?type=USER_SETTING</screen>
+    <screen>GET /api/28/configuration/settings/filter?type=CONFIGURATION</screen>
+    <para>More than one type can be provided</para>
+    <screen>GET /api/28/configuration/settings/filter?type=USER_SETTING&amp;type=SYSTEM_SETTING</screen>
+    <table frame="all">
+      <title>SettingType values</title>
+      <tgroup cols="2">
+        <colspec colnum="1" colname="c1" colwidth="1*"/>
+        <colspec colnum="2" colname="c2" colwidth="2.28*"/>
+        <thead>
+          <row>
+            <entry>Value</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>USER_SETTING</entry>
+            <entry>To get user settings</entry>
+          </row>
+          <row>
+            <entry>SYSTEM_SETTING</entry>
+            <entry>To get system settings</entry>
+          </row>
+          <row>
+            <entry>CONFIGURATION</entry>
+            <entry>To get DHIS server settings</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para><emphasis role="italic">NOTE: </emphasis>Fields which are confidential will be provided in the output but with no values.</para>
   </section>
   <section xml:id="webapi_i18n">
     <title>Internationalization</title>
@@ -13451,10 +13665,23 @@ interval=WEEK" -u admin:district</screen>
   <section xml:id="webapi_apps">
     <title>Apps</title>
     <para> The <emphasis role="italic">/api/apps</emphasis> endpoint can be used for installing,
-      deleting and listing apps. The app key is derived from the name of the ZIP archive, exluding
-      the file extension.<screen>/api/26/apps</screen></para>
+      deleting and listing apps. The app key is based on the app name, but with all
+      non-alphanumerical characters removed, and spaces replaced with a dash. <emphasis>My
+        app!</emphasis> will return the key <emphasis>My-app</emphasis>.<note>
+        <para>Previous to 2.28, the app key was derived from the name of the ZIP archive, excluding
+          the file extension. URLs using the old format should still return the correct app in the
+          api.</para>
+      </note></para>
+    <para>
+      <screen>/api/26/apps</screen>
+    </para>
     <section>
       <title>Get apps</title>
+      <note>
+        <para>Previous to 2.28 the app property folderName referred to the actual path of the
+          installed app. With the ability to store apps on cloud services, folderName's purpose
+          changed, and will now refer to the app key.</para>
+      </note>
       <para>You can read the keys for apps by listing all apps from the apps resource and look for
         the <emphasis role="italic">key</emphasis> property. To list all installed apps in
         JSON:<screen>curl -X GET -u user:pass -H &quot;Accept: application/json&quot; http://server.com/api/26/apps</screen></para>
@@ -13486,22 +13713,17 @@ interval=WEEK" -u admin:district</screen>
         <screen>curl -X PUT -u user:pass http://server.com/api/26/apps</screen></para>
     </section>
     <section>
-      <title>Configure apps</title>
-      <para>To let DHIS2 serve apps from the Web API make sure to set the &quot;App base URL&quot;
-        to point to the apps resource, i.e.:<screen>http://server.com/api/26/apps</screen></para>
-      <para>To set the apps configuration you can make a POST request to the <emphasis role="italic"
-          >config</emphasis> resourec with a JSON payload:</para>
-      <screen>{
-  &quot;appFolderPath&quot;: &quot;/home/dhis/config/apps&quot;,
-  &quot;appBaseUrl&quot;: &quot;http://server.com/api/apps&quot;
-}</screen>
-      <screen>curl -X POST -u user:pass -d @config.json http://server.com/api/26/apps/config</screen>
-      <para>To restore the default app settings you can make a DELETE request to the config
-        resource:</para>
-      <screen>curl -X DELETE -u user:pass http://server.com/api/26/apps/config</screen>
-      <para>Note that by default apps will be served through the apps Web API resource, and the file
-        system folder will be <emphasis role="italic">DHIS2_HOME/apps</emphasis>. These systems
-        should be fine for most situations.</para>
+      <title>Apps shared between instances</title>
+      <para><note>
+          <para>Previous to 2.28, installed apps would only be stored on the instace's local
+            filesystem.</para>
+        </note>If the DHIS2 instance has been configured to use cloud storage, apps will now be
+        installed and stored on the cloud service. This will enable multiple instances share the
+        same versions on installed apps, instead of installing the same apps on each individual instance.<note>
+          <para>Apps installed previously to 2.28 will still be available  on the instance it was
+            installed, but it will not be shared with other instances, as it's still located on the
+            instances local filesystem.</para>
+        </note></para>
     </section>
   </section>
   <section xml:id="webapi_app_store">
@@ -13511,25 +13733,40 @@ interval=WEEK" -u admin:district</screen>
       resource.<screen>/api/26/appStore</screen></para>
     <section>
       <title>Get apps</title>
-      <para>You can retrieve apps with a GET request: <screen>GET /api/26/appStore</screen></para>
+      <para>You can retrieve apps with a GET request: <screen>GET /api/28/appStore</screen></para>
       <para>A sample JSON response is described below.
         <screen>{
-  &quot;name&quot;: &quot;DHIS2 App Store&quot;,
-  &quot;description&quot;: &quot;Send your apps with a description to us at apps@dhis2.org&quot;,
-  &quot;apps&quot;: [
+   [
     {
       &quot;name&quot;: &quot;Tabular Tracker Capture&quot;,
       &quot;description&quot;: &quot;Tabular Tracker Capture is an app that makes you more effective.&quot;,
-      &quot;developer&quot;: &quot;John Develop&quot;,
-      &quot;img_large&quot;: &quot;https://www.dhis2.org/images/appstore/tabular-tracker-capture.png&quot;,
+      &quot;sourceUrl&quot;: &quot;https://github.com/dhis2/App-repository&quot;,
+      &quot;appType&quot;: &quot;DASHBOARD_WIDGET&quot;,
+      &quot;status&quot;: &quot;PENDING&quot;,
+      &quot;id&quot;: &quot;NSD06BVoV21&quot;,
+      &quot;developer&quot;: {
+          &quot;name&quot;: &quot;DHIS&quot;,
+          &quot;organisation&quot;: &quot;Uio&quot;,
+          &quot;address&quot;: &quot;Oslo&quot;,
+          &quot;email&quot;: &quot;dhis@abc.com&quot;,
+        }
       &quot;versions&quot;: [
         {
           &quot;id&quot;: &quot;upAPqrVgwK6&quot;,
           &quot;version&quot;: &quot;1.2&quot;,
-          &quot;min_platform_version&quot;: &quot;2.17&quot;,
-          &quot;max_platform_version&quot;: &quot;2.20&quot;,
-          &quot;download_url&quot;: &quot;https://www.dhis2.org/download/appstore/tabular-tracker-capture-12.zip&quot;,
-          &quot;demo_url&quot;: &quot;http://play.dhis2.org/demo&quot;
+          &quot;minDhisVersion&quot;: &quot;2.17&quot;,
+          &quot;maxDhisVersion&quot;: &quot;2.20&quot;,
+          &quot;downloadUrl&quot;: &quot;https://www.dhis2.org/download/appstore/tabular-tracker-capture-12.zip&quot;,
+          &quot;demoUrl&quot;: &quot;http://play.dhis2.org/demo&quot;
+        }
+      ]
+      &quot;images&quot;: [
+        {
+          &quot;id&quot;: &quot;upAPqrVgwK6&quot;,
+          &quot;logo&quot;: &quot;true&quot;,
+          &quot;imageUrl&quot;: &quot;https://www.dhis2.org/download/appstore/tabular-tracker-capture-12.png&quot;,
+          &quot;description&quot;: &quot;added feature snapshot&quot;,
+          &quot;caption&quot;: &quot;dialog&quot;,
         }
       ]
     }
@@ -13624,8 +13861,8 @@ interval=WEEK" -u admin:district</screen>
       <screen>{
     &quot;foo&quot;:&quot;bar&quot;
 }</screen>
-      <para>To retrieve meta-data for en existing key from a namespace:
-        <screen>GET /api/26/dataStore/</screen></para>
+      <para>To retrieve meta-data for an existing key from a namespace:
+        <screen>GET /api/26/dataStore/&lt;namespace&gt;/&lt;key&gt;/metaData</screen></para>
       <para>Example curl request for
         retrieval:<screen>curl &quot;play.dhis2.org/demo/api/26/dataStore/foo/key_1/metaData&quot; -X GET -u admin:district -v</screen></para>
       <para>Example
@@ -13881,9 +14118,6 @@ interval=WEEK" -u admin:district</screen>
         run resource:<screen>POST /api/26/predictors/run</screen></para>
       <para>To run a single predictor you can make a POST request to the run resource for a
         predictor:<screen>POST /api/26/predictors/AG10KUJCrRk/run</screen></para>
-      <para>To do a dry run for a single predictor you can use the dryRun resource. This resource
-        will return all predicted values in the response, as opposed to actually writing those
-        values to the database:<screen>POST /api/26/predictors/AG10KUJCrRk/dryRun</screen></para>
     </section>
   </section>
   <section xml:id="webapi_min_max_data_elements">
