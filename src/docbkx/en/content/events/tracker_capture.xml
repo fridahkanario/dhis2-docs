@@ -565,6 +565,10 @@ Do the data entry widgets look different depending on the program?"?>widgets<?ox
                 section comes handy. However it is not possible to delete a note. The idea is notes
                 are more like log books. Both skip-logic and validation error/warning messages are
                 supported during data entry.</para>
+              <para>Also included in the Timeline Data entry is the option to compare your data
+                entry to previous entries. This can be enabled by clicking the "Switch to compare
+                form" button (Two sheets of paper) in the top right corner of the Timeline Data
+                entry widget.</para>
             </entry>
           </row>
           <row>
@@ -583,6 +587,7 @@ Do the data entry widgets look different depending on the program?"?>widgets<?ox
         </tbody>
       </tgroup>
     </table>
+    <para/>
   </section>
   <section xml:id="manage_tracked_entity_instance_enrollment">
     <title>Manage a
