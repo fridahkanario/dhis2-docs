@@ -42,6 +42,19 @@
                 </imageobject>
             </mediaobject>
         </screenshot>
+        <para>The <emphasis>Sequential sample count</emphasis> can be greater than the number of
+            periods in a year. For example, if you want to sample the 24 months immediately preceding
+            the predicted value month, set the <emphasis>Sequential sample count</emphasis> to 24:</para>
+        <para></para>
+        <screenshot>
+            <mediaobject>
+                <imageobject>
+                    <imagedata align="center"
+                        fileref="resources/images/maintainence/predictor_24_months.png" width="65%"
+                        format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
     </section>
     <section xml:id="sequential_skip_count">
         <title>Sequential skip count</title>
