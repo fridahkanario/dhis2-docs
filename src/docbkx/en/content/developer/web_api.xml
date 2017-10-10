@@ -7980,13 +7980,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
           <tbody>
             <row>
               <entry>Data elements, indicators, data set reporting rate metrics, data element
-                operands, program indicators, program data elements, program attributes</entry>
+                operands, program indicators, program data elements, program attributes, validation rules</entry>
               <entry>dx</entry>
               <entry>Data element, indicator, data set reporting rate metrics, data element operand,
                 program indicator, program attribute identifiers, keyword DE_GROUP-&lt;group-id&gt;,
                 IN_GROUP-&lt;group-id>, use &lt;dataelement-id&gt;.&lt;optioncombo-id&gt; for data
                 element operands, &lt;program-id>.&lt;dataelement-id> for program data elements,
-                &lt;program-id>.&lt;attribute-id> for program attributes.</entry>
+                &lt;program-id>.&lt;attribute-id> for program attributes, &lt;validationrule-id> for validation results.</entry>
             </row>
             <row>
               <entry>Periods (time)</entry>
@@ -8225,6 +8225,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Program indicator identifier. Reads from events from within the program
                 associated with the program identifier.</entry>
               <entry>Events from the program of the program indicator</entry>
+            </row>
+            <row>
+              <entry>Validation result</entry>
+              <entry>&lt;validationrule-id></entry>
+              <entry>Validation rule identifier. Will include validation rule violations for
+                the validation rule, requires that validation results are generated and persisted.</entry>
+              <entry>Validation results</entry>
             </row>
           </tbody>
         </tgroup>
