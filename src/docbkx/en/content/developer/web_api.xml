@@ -1512,7 +1512,7 @@ http://server/api/26/constants/ID</screen></para>
       </tgroup>
     </table>
   </section>
-  <section>
+  <section xml:id="webapi_metadata_audit">
     <title>Metadata audit</title>
     <para>If you need information about who created, edited, or deleted some part of the DHIS2
       metadata, you can enable metadata audit, there are two configuration options (your in your
@@ -1528,7 +1528,7 @@ http://server/api/26/constants/ID</screen></para>
       lot of metadata, as it slows down the import and the audit might not be that useful if you are
       bootstrapping a new system.</para>
   </section>
-  <section>
+  <section xml:id="webapi_amqp_rabbitmq_integration">
     <title>AMQP/RabbitMQ integration</title>
     <para>If you have an external system that needs to know about updates inside of DHIS2 (update
       data element, create org unit, etc) you can set up a rabbitmq message broker, and have it
