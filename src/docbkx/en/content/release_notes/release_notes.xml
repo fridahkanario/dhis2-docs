@@ -20,23 +20,23 @@
                 </row>
             </thead>
             <tbody>
-              <!--  <row>
-                    <entry>2.24</entry>
-                    <entry/>
+                <row>
+                    <entry><link xlink:href="https://www.dhis2.org/download/releases/2.28/dhis.war">2.28</link></entry>
+                    <entry>2017-10-11</entry>
                     <entry><link
-                            xlink:href="https://drive.google.com/open?id=1WpW3Rv3rMbwWUXxd_grYDMc4EFGvQoTc_FJ24-stT7s"><inlinemediaobject>
-                                <imageobject>
-                                    <imagedata fileref="resources/images/icons/info.png"
-                                        align="center" width="24"/>
-                                </imageobject>
-                            </inlinemediaobject></link></entry>
-                    <entry><link xlink:href="https://www.dhis2.org/224-upgrade"><inlinemediaobject>
-                                <imageobject>
-                                    <imagedata fileref="resources/images/icons/upgrade.png"
-                                        align="center" width="24"/>
-                                </imageobject>
-                            </inlinemediaobject></link></entry>
-                </row> -->
+                        xlink:href="https://docs.google.com/document/d/126Grj2kAWDbkuNJDVm34x72vQXT_O5UkJDYWDqhsdhI/pub"><inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="resources/images/icons/info.png"
+                                    align="center" width="24"/>
+                            </imageobject>
+                        </inlinemediaobject></link></entry>
+                    <entry><link xlink:href="https://www.dhis2.org/228-upgrade"><inlinemediaobject>
+                        <imageobject>
+                            <imagedata fileref="resources/images/icons/upgrade.png"
+                                align="center" width="24"/>
+                        </imageobject>
+                    </inlinemediaobject></link></entry>
+                </row>
                 <row>
                     <entry><link xlink:href="https://www.dhis2.org/download/releases/2.27/dhis.war">2.27</link></entry>
                     <entry>2017-06-02</entry>
