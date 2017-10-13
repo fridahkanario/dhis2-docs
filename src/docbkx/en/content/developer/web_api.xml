@@ -3473,6 +3473,92 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
         but it is very flexible and allows us to support all existing period types in DHIS2</para>
     </section>
     <section>
+      <title>ADX period definitions</title>
+      <para/>
+      <para>DHIS2 supports a limited number of periods or durations during import. Periods should
+        begin with the date which the duration begins,followed by a "/" and then the duration
+        notation as noted in the table. The following table details all of the ADX supported period
+        types, along with examples. <table frame="all">
+          <title>ADX Periods</title>
+          <tgroup cols="4">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+            <colspec colname="newCol4" colnum="4" colwidth="1*"/>
+            <thead>
+              <row>
+                <entry>Period type</entry>
+                <entry>Duration notation</entry>
+                <entry>Example</entry>
+                <entry>Duration</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Daily</entry>
+                <entry>P1D</entry>
+                <entry>2017-10-01/P1M</entry>
+                <entry>Oct 01 2017</entry>
+              </row>
+              <row>
+                <entry>Weekly</entry>
+                <entry>P7D</entry>
+                <entry>2017-10-01/P7D</entry>
+                <entry>Oct 01 2017-Oct 07-2017</entry>
+              </row>
+              <row>
+                <entry>Monthly</entry>
+                <entry>P1M</entry>
+                <entry>2017-10-01/P1M</entry>
+                <entry>Oct 01 2017-Oct 31 2017</entry>
+              </row>
+              <row>
+                <entry>Bi-monthly</entry>
+                <entry>P2M</entry>
+                <entry>2017-11-01/P1M</entry>
+                <entry>Nov 01 2017-Dec 31 2017</entry>
+              </row>
+              <row>
+                <entry>Quarterly</entry>
+                <entry>P3M</entry>
+                <entry>2017-09-01/P3M</entry>
+                <entry>Sep 01 2017-Dec 31 2017</entry>
+              </row>
+              <row>
+                <entry>Six-monthly</entry>
+                <entry>P6M</entry>
+                <entry>2017-01-01/P6M</entry>
+                <entry>Jan 01 2017-Jun 30 2017</entry>
+              </row>
+              <row>
+                <entry>Yearly</entry>
+                <entry>P1Ý</entry>
+                <entry>2017-01-01/P1Y</entry>
+                <entry>Jan 01 2017-Dec 31 2017</entry>
+              </row>
+              <row>
+                <entry>Financial October</entry>
+                <entry>P1Y</entry>
+                <entry>2017-10-01/P1Y</entry>
+                <entry>Oct 01 2017-Sep 30 2018</entry>
+              </row>
+              <row>
+                <entry>Financial April</entry>
+                <entry>P1Y</entry>
+                <entry>2017-04-01/P1Y</entry>
+                <entry>April 1 2017-Mar 31 2018</entry>
+              </row>
+              <row>
+                <entry>Financial July</entry>
+                <entry>P1Y</entry>
+                <entry>2017-07-01/P1Y</entry>
+                <entry>July 1 2017-June 30 2018</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
+    </section>
+    <section>
       <title>Data values</title>
       <para>The dataValue element in adx is very similar to its equivalent in DXF. The mandatory
         attributes are <emphasis>dataElement</emphasis> and <emphasis>value</emphasis>.
