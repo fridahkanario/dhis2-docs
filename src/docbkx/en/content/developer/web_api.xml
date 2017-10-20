@@ -5350,14 +5350,14 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
   <section xml:id="webapi_data_approval">
     <title>Data approval</title>
     <para>This section explains how to approve, unapprove and check approval status using the
-        <emphasis role="italic">dataApprovals</emphasis> resource. Approval is done per data set,
-      period, organisation unit and attribute option
+        <emphasis role="italic">dataApprovals</emphasis> resource. Approval is done per data
+      approval workflow, period, organisation unit and attribute option
       combo.<screen>/api/26/dataApprovals</screen></para>
     <section xml:id="webapi_data_approval_get_status">
       <title>Get approval status</title>
       <para>To get approval information for a data set you can issue a GET request similar to
         this:</para>
-      <screen>GET http://server.com/api/dataApprovals?ds=aLpVgfXiz0f&amp;pe=2013&amp;ou=DiszpKrYNg8</screen>
+      <screen>GET http://server.com/api/dataApprovals?wf=rIUL3hYOjJc&amp;pe=201801&amp;ou=YuQRtpLP10I</screen>
       <table frame="all">
         <title>Data approval query parameters</title>
         <tgroup cols="3">
@@ -5373,9 +5373,9 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           </thead>
           <tbody>
             <row>
-              <entry>ds</entry>
+              <entry>wf</entry>
               <entry>Yes</entry>
-              <entry>Data set identifier</entry>
+              <entry>Data approval workflow</entry>
             </row>
             <row>
               <entry>pe</entry>
@@ -5390,6 +5390,10 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           </tbody>
         </tgroup>
       </table>
+      <para>(Note: for backwards compatibility, the partameter ds for data set
+        may be given instaed of wf for workflow in this and other data approval
+        requests as described below. If the data set is given, the
+        workflow associated with that data set will be used.)</para>
       <para>This will give you a response something like this:</para>
       <screen>{
   &quot;mayApprove&quot;: false,
@@ -5518,7 +5522,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       </itemizedlist>
       <para>For data sets which are associated with a category combo you might want to fetch data
         approval records for individual attribute option combos from the following
-        resource:<screen>GET api/dataApprovals/categoryOptionCombos?ds=aLpVgfXiz0f&amp;pe=2013&amp;ou=DiszpKrYNg8</screen></para>
+        resource:<screen>GET api/dataApprovals/categoryOptionCombos?wf=rIUL3hYOjJc&amp;pe=201801&amp;ou=YuQRtpLP10I</screen></para>
     </section>
     <section xml:id="webapi_data_approval_approve_data">
       <title>Approve data</title>
@@ -5527,11 +5531,12 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         issue a <emphasis role="italic">DELETE</emphasis> request to the dataApprovals
         resource.</para>
       <screen>POST DELETE /api/26/dataApprovals</screen>
-      <para>To accept data you can issue a <emphasis role="italic">POST</emphasis> request to the
-          <emphasis role="italic">dataApprovals/acceptances</emphasis> resource. To un-accept data
+      <para>To accept data that is already approved you can issue a
+        <emphasis role="italic">POST</emphasis> request to the
+        <emphasis role="italic">dataAcceptances</emphasis> resource. To un-accept data
         you can issue a <emphasis role="italic">DELETE</emphasis> request to the <emphasis
-          role="italic">dataApprovals/acceptances</emphasis> resource.</para>
-      <screen>POST DELETE /api/26/dataApprovals/acceptances</screen>
+          role="italic">dataAcceptances</emphasis> resource.</para>
+      <screen>POST DELETE /api/26/dataAcceptances</screen>
       <para>These requests contain the following parameters:</para>
       <table frame="all">
         <title>Data approval action parameters</title>
@@ -5548,9 +5553,9 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           </thead>
           <tbody>
             <row>
-              <entry>ds</entry>
+              <entry>wf</entry>
               <entry>Yes</entry>
-              <entry>Data set identifier</entry>
+              <entry>Data approval workflow</entry>
             </row>
             <row>
               <entry>pe</entry>
@@ -5596,7 +5601,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         resource.<screen>POST /api/26/dataAcceptances/unacceptances</screen></para>
       <para>The approval payload is supported as JSON and looks like
         this:<screen>{
-  &quot;ds&quot;: [
+  &quot;wf&quot;: [
     &quot;pBOMPrpg1QX&quot;, &quot;lyLU2wR22tC&quot;
   ],
   &quot;pe&quot;: [
