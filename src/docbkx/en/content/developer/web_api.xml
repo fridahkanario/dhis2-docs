@@ -5375,7 +5375,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
             <row>
               <entry>wf</entry>
               <entry>Yes</entry>
-              <entry>Data approval workflow</entry>
+              <entry>Data approval workflow identifier</entry>
             </row>
             <row>
               <entry>pe</entry>
@@ -5386,6 +5386,11 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>ou</entry>
               <entry>Yes</entry>
               <entry>Organisation unit identifier</entry>
+            </row>
+            <row>
+              <entry>aoc</entry>
+              <entry>No</entry>
+              <entry>Attribute option combination identifier</entry>
             </row>
           </tbody>
         </tgroup>
@@ -5555,7 +5560,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
             <row>
               <entry>wf</entry>
               <entry>Yes</entry>
-              <entry>Data approval workflow</entry>
+              <entry>Data approval workflow identifier</entry>
             </row>
             <row>
               <entry>pe</entry>
@@ -5567,21 +5572,24 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>Yes</entry>
               <entry>Organisation unit identifier</entry>
             </row>
+            <row>
+              <entry>aoc</entry>
+              <entry>No</entry>
+              <entry>Attribute option combination identifier</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
       <para>Note that, unlike querying the data approval status, you must specify parameters that
-        correspond to a selection of data that could be approved. In particular, all of the
+        correspond to a selection of data that could be approved. In particular, both of the
         following must be true:</para>
       <itemizedlist>
         <listitem>
-          <para>The organisation unit&apos;s level must be specified by an approval level.</para>
+          <para>The organisation unit&apos;s level must be specified by an approval level
+            in the workfow.</para>
         </listitem>
         <listitem>
-          <para>The time period specified must match the period type of the data set.</para>
-        </listitem>
-        <listitem>
-          <para>The data set must specify that data can be approved for this data set.</para>
+          <para>The time period specified must match the period type of the workflow.</para>
         </listitem>
       </itemizedlist>
     </section>
