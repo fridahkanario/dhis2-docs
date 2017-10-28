@@ -3319,6 +3319,14 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
               <entry>Attribute option identifiers, separated with ; for multiple values</entry>
             </row>
             <row>
+              <entry>ds</entry>
+              <entry>No</entry>
+              <entry>Data set, to check if POST or DELETE is allowed for period and organisation
+                unit. If specified, the data element must be assigned to this data set. If not
+                specified, a data set containing the data element will be chosen to check if
+                the operation is allowed.</entry>
+            </row>
+            <row>
               <entry>value</entry>
               <entry>No</entry>
               <entry>Data value</entry>
