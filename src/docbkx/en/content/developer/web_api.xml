@@ -1512,7 +1512,7 @@ http://server/api/26/constants/ID</screen></para>
       </tgroup>
     </table>
   </section>
-  <section>
+  <section xml:id="webapi_metadata_audit">
     <title>Metadata audit</title>
     <para>If you need information about who created, edited, or deleted some part of the DHIS2
       metadata, you can enable metadata audit, there are two configuration options (your in your
@@ -1528,7 +1528,7 @@ http://server/api/26/constants/ID</screen></para>
       lot of metadata, as it slows down the import and the audit might not be that useful if you are
       bootstrapping a new system.</para>
   </section>
-  <section>
+  <section xml:id="webapi_amqp_rabbitmq_integration">
     <title>AMQP/RabbitMQ integration</title>
     <para>If you have an external system that needs to know about updates inside of DHIS2 (update
       data element, create org unit, etc) you can set up a rabbitmq message broker, and have it
@@ -3319,6 +3319,14 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
               <entry>Attribute option identifiers, separated with ; for multiple values</entry>
             </row>
             <row>
+              <entry>ds</entry>
+              <entry>No</entry>
+              <entry>Data set, to check if POST or DELETE is allowed for period and organisation
+                unit. If specified, the data element must be assigned to this data set. If not
+                specified, a data set containing the data element will be chosen to check if
+                the operation is allowed.</entry>
+            </row>
+            <row>
               <entry>value</entry>
               <entry>No</entry>
               <entry>Data value</entry>
@@ -3471,6 +3479,92 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
         (date|datetime)/(duration). So the period in the example above is a period of 1 month (P1M)
         starting on 2015-06-01. So it is the data for June 2015. The notation is a bit more verbose,
         but it is very flexible and allows us to support all existing period types in DHIS2</para>
+    </section>
+    <section>
+      <title>ADX period definitions</title>
+      <para/>
+      <para>DHIS2 supports a limited number of periods or durations during import. Periods should
+        begin with the date which the duration begins,followed by a "/" and then the duration
+        notation as noted in the table. The following table details all of the ADX supported period
+        types, along with examples. <table frame="all">
+          <title>ADX Periods</title>
+          <tgroup cols="4">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+            <colspec colname="newCol4" colnum="4" colwidth="1*"/>
+            <thead>
+              <row>
+                <entry>Period type</entry>
+                <entry>Duration notation</entry>
+                <entry>Example</entry>
+                <entry>Duration</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Daily</entry>
+                <entry>P1D</entry>
+                <entry>2017-10-01/P1M</entry>
+                <entry>Oct 01 2017</entry>
+              </row>
+              <row>
+                <entry>Weekly</entry>
+                <entry>P7D</entry>
+                <entry>2017-10-01/P7D</entry>
+                <entry>Oct 01 2017-Oct 07-2017</entry>
+              </row>
+              <row>
+                <entry>Monthly</entry>
+                <entry>P1M</entry>
+                <entry>2017-10-01/P1M</entry>
+                <entry>Oct 01 2017-Oct 31 2017</entry>
+              </row>
+              <row>
+                <entry>Bi-monthly</entry>
+                <entry>P2M</entry>
+                <entry>2017-11-01/P1M</entry>
+                <entry>Nov 01 2017-Dec 31 2017</entry>
+              </row>
+              <row>
+                <entry>Quarterly</entry>
+                <entry>P3M</entry>
+                <entry>2017-09-01/P3M</entry>
+                <entry>Sep 01 2017-Dec 31 2017</entry>
+              </row>
+              <row>
+                <entry>Six-monthly</entry>
+                <entry>P6M</entry>
+                <entry>2017-01-01/P6M</entry>
+                <entry>Jan 01 2017-Jun 30 2017</entry>
+              </row>
+              <row>
+                <entry>Yearly</entry>
+                <entry>P1Ý</entry>
+                <entry>2017-01-01/P1Y</entry>
+                <entry>Jan 01 2017-Dec 31 2017</entry>
+              </row>
+              <row>
+                <entry>Financial October</entry>
+                <entry>P1Y</entry>
+                <entry>2017-10-01/P1Y</entry>
+                <entry>Oct 01 2017-Sep 30 2018</entry>
+              </row>
+              <row>
+                <entry>Financial April</entry>
+                <entry>P1Y</entry>
+                <entry>2017-04-01/P1Y</entry>
+                <entry>April 1 2017-Mar 31 2018</entry>
+              </row>
+              <row>
+                <entry>Financial July</entry>
+                <entry>P1Y</entry>
+                <entry>2017-07-01/P1Y</entry>
+                <entry>July 1 2017-June 30 2018</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
     </section>
     <section>
       <title>Data values</title>
@@ -5264,14 +5358,14 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
   <section xml:id="webapi_data_approval">
     <title>Data approval</title>
     <para>This section explains how to approve, unapprove and check approval status using the
-        <emphasis role="italic">dataApprovals</emphasis> resource. Approval is done per data set,
-      period, organisation unit and attribute option
+        <emphasis role="italic">dataApprovals</emphasis> resource. Approval is done per data
+      approval workflow, period, organisation unit and attribute option
       combo.<screen>/api/26/dataApprovals</screen></para>
     <section xml:id="webapi_data_approval_get_status">
       <title>Get approval status</title>
       <para>To get approval information for a data set you can issue a GET request similar to
         this:</para>
-      <screen>GET http://server.com/api/dataApprovals?ds=aLpVgfXiz0f&amp;pe=2013&amp;ou=DiszpKrYNg8</screen>
+      <screen>GET http://server.com/api/dataApprovals?wf=rIUL3hYOjJc&amp;pe=201801&amp;ou=YuQRtpLP10I</screen>
       <table frame="all">
         <title>Data approval query parameters</title>
         <tgroup cols="3">
@@ -5287,9 +5381,9 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           </thead>
           <tbody>
             <row>
-              <entry>ds</entry>
+              <entry>wf</entry>
               <entry>Yes</entry>
-              <entry>Data set identifier</entry>
+              <entry>Data approval workflow identifier</entry>
             </row>
             <row>
               <entry>pe</entry>
@@ -5301,9 +5395,18 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>Yes</entry>
               <entry>Organisation unit identifier</entry>
             </row>
+            <row>
+              <entry>aoc</entry>
+              <entry>No</entry>
+              <entry>Attribute option combination identifier</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
+      <para>(Note: for backwards compatibility, the partameter ds for data set
+        may be given instaed of wf for workflow in this and other data approval
+        requests as described below. If the data set is given, the
+        workflow associated with that data set will be used.)</para>
       <para>This will give you a response something like this:</para>
       <screen>{
   &quot;mayApprove&quot;: false,
@@ -5432,7 +5535,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       </itemizedlist>
       <para>For data sets which are associated with a category combo you might want to fetch data
         approval records for individual attribute option combos from the following
-        resource:<screen>GET api/dataApprovals/categoryOptionCombos?ds=aLpVgfXiz0f&amp;pe=2013&amp;ou=DiszpKrYNg8</screen></para>
+        resource:<screen>GET api/dataApprovals/categoryOptionCombos?wf=rIUL3hYOjJc&amp;pe=201801&amp;ou=YuQRtpLP10I</screen></para>
     </section>
     <section xml:id="webapi_data_approval_approve_data">
       <title>Approve data</title>
@@ -5441,11 +5544,12 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         issue a <emphasis role="italic">DELETE</emphasis> request to the dataApprovals
         resource.</para>
       <screen>POST DELETE /api/26/dataApprovals</screen>
-      <para>To accept data you can issue a <emphasis role="italic">POST</emphasis> request to the
-          <emphasis role="italic">dataApprovals/acceptances</emphasis> resource. To un-accept data
+      <para>To accept data that is already approved you can issue a
+        <emphasis role="italic">POST</emphasis> request to the
+        <emphasis role="italic">dataAcceptances</emphasis> resource. To un-accept data
         you can issue a <emphasis role="italic">DELETE</emphasis> request to the <emphasis
-          role="italic">dataApprovals/acceptances</emphasis> resource.</para>
-      <screen>POST DELETE /api/26/dataApprovals/acceptances</screen>
+          role="italic">dataAcceptances</emphasis> resource.</para>
+      <screen>POST DELETE /api/26/dataAcceptances</screen>
       <para>These requests contain the following parameters:</para>
       <table frame="all">
         <title>Data approval action parameters</title>
@@ -5462,9 +5566,9 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           </thead>
           <tbody>
             <row>
-              <entry>ds</entry>
+              <entry>wf</entry>
               <entry>Yes</entry>
-              <entry>Data set identifier</entry>
+              <entry>Data approval workflow identifier</entry>
             </row>
             <row>
               <entry>pe</entry>
@@ -5476,21 +5580,24 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>Yes</entry>
               <entry>Organisation unit identifier</entry>
             </row>
+            <row>
+              <entry>aoc</entry>
+              <entry>No</entry>
+              <entry>Attribute option combination identifier</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
       <para>Note that, unlike querying the data approval status, you must specify parameters that
-        correspond to a selection of data that could be approved. In particular, all of the
+        correspond to a selection of data that could be approved. In particular, both of the
         following must be true:</para>
       <itemizedlist>
         <listitem>
-          <para>The organisation unit&apos;s level must be specified by an approval level.</para>
+          <para>The organisation unit&apos;s level must be specified by an approval level
+            in the workfow.</para>
         </listitem>
         <listitem>
-          <para>The time period specified must match the period type of the data set.</para>
-        </listitem>
-        <listitem>
-          <para>The data set must specify that data can be approved for this data set.</para>
+          <para>The time period specified must match the period type of the workflow.</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -5510,7 +5617,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         resource.<screen>POST /api/26/dataAcceptances/unacceptances</screen></para>
       <para>The approval payload is supported as JSON and looks like
         this:<screen>{
-  &quot;ds&quot;: [
+  &quot;wf&quot;: [
     &quot;pBOMPrpg1QX&quot;, &quot;lyLU2wR22tC&quot;
   ],
   &quot;pe&quot;: [
