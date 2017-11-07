@@ -2704,7 +2704,7 @@ rabbitmq.connection-timeout = 60000</screen></para>
       <para>In JSON
         format:<screen language="json">{
   &quot;dataSet&quot;: &quot;pBOMPrpg1QX&quot;,
-  &quot;completeData&quot;: &quot;2014-02-03&quot;,
+  &quot;completeDate&quot;: &quot;2014-02-03&quot;,
   &quot;period&quot;: &quot;201401&quot;,
   &quot;orgUnit&quot;: &quot;DiszpKrYNg8&quot;,
   &quot;dataValues&quot;: [
@@ -3223,7 +3223,7 @@ rabbitmq.connection-timeout = 60000</screen></para>
       <para>The response will look something like
         this:<screen>{
   &quot;dataSet&quot;: &quot;pBOMPrpg1QX&quot;,
-  &quot;completeData&quot;: &quot;2014-02-03&quot;,
+  &quot;completeDate&quot;: &quot;2014-02-03&quot;,
   &quot;period&quot;: &quot;201401&quot;,
   &quot;orgUnit&quot;: &quot;DiszpKrYNg8&quot;,
   &quot;dataValues&quot;: [
