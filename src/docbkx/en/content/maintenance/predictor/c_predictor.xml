@@ -7,9 +7,9 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <title>About predictors</title>
-    <para>A predictor tells DHIS2 how to generate a data value based on data values
-        from past periods. It defines which past periods to sample,
-        and how to combine the sampled data to produce a predicted value.
+    <para>A predictor tells DHIS2 how to generate a data value based on data values from
+        past periods and/or the period of the data value. It defines which past periods to
+        sample, and how to combine the data to produce a predicted value.
         A predictor always generates an aggregate data value, but the past data values used to
         calculate the predicted value may come from aggregate data, event data, or both.</para>
     <para>A simple use of predictors would be to copy a past period data value into a
