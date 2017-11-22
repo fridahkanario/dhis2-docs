@@ -61,8 +61,8 @@
                     <para>Enter the generator expression. You can build the expression by selecting
                         data elements for aggregate data, or program data elements, attributes
                         or indicators. Organisation unit counts are not yet supported.</para>
-                    <para>You should enclose any items you select in one of the following
-                        aggregate functions:</para>
+                    <para>To use sampled, past period data, you should enclose any items
+                        you select in one of the following aggregate functions:</para>
                     <informaltable frame="all">
                         <tgroup cols="2">
                             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
@@ -137,6 +137,11 @@
                             </tbody>
                         </tgroup>
                     </informaltable>
+                    <para>Any items inside an aggregate function will be evaluated for
+                        all sampled past periods, and then combined according to the
+                        formula inside the aggregate function. Any items outside an
+                        aggregate function will be evaluated for the period in which
+                        the prediction is being made.</para>
                     <para>You can build more complex expressions by clicking on (or typing) any
                         of the elements below the expression field: ( ) * / + - Days. Constant
                         numbers may be added by typing them. The
@@ -190,6 +195,27 @@
                                             divided by the number of days
                                             in all sample periods (resulting in
                                             the overall average daily value)</para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left">
+                                        <para>SUM(#{FTRrcoaog83}) + #{T7OyqQpUpNd}</para>
+                                    </entry>
+                                    <entry>
+                                        <para>Sum of all sampled values of data element
+                                            FTRrcoaog83 plus the value of data element
+                                            T7OyqQpUpNd in the period being predicted for
+                                        </para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left">
+                                        <para>1.2 * #{T7OyqQpUpNd}</para>
+                                    </entry>
+                                    <entry>
+                                        <para>1.2 times the value of data element
+                                            T7OyqQpUpNd in the period being predicted for
+                                        </para>
                                     </entry>
                                 </row>
                             </tbody>
