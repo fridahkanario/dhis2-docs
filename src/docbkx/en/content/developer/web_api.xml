@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <chapter version="5.0"
   xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
   xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -2704,7 +2704,7 @@ rabbitmq.connection-timeout = 60000</screen></para>
       <para>In JSON
         format:<screen language="json">{
   &quot;dataSet&quot;: &quot;pBOMPrpg1QX&quot;,
-  &quot;completeData&quot;: &quot;2014-02-03&quot;,
+  &quot;completeDate&quot;: &quot;2014-02-03&quot;,
   &quot;period&quot;: &quot;201401&quot;,
   &quot;orgUnit&quot;: &quot;DiszpKrYNg8&quot;,
   &quot;dataValues&quot;: [
@@ -3223,7 +3223,7 @@ rabbitmq.connection-timeout = 60000</screen></para>
       <para>The response will look something like
         this:<screen>{
   &quot;dataSet&quot;: &quot;pBOMPrpg1QX&quot;,
-  &quot;completeData&quot;: &quot;2014-02-03&quot;,
+  &quot;completeDate&quot;: &quot;2014-02-03&quot;,
   &quot;period&quot;: &quot;201401&quot;,
   &quot;orgUnit&quot;: &quot;DiszpKrYNg8&quot;,
   &quot;dataValues&quot;: [
@@ -5116,10 +5116,12 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>Importing both <emphasis role="italic">XML</emphasis> and <emphasis role="italic"
           >JSON</emphasis> formatted payloads are supported. The basic format of this payload, given
         as <emphasis role="italic">XML</emphasis> in this example, is like
-        so:<programlisting>&lt;completeDataSetRegistrations xmlns="http://dhis2.org/schema/dxf/2.0">
-  &lt;completeDataSetRegistration period="200810" dataSet="eZDhcZi6FLP" organisationUnit="qhqAxPSTUXp" attributeOptionCombo="bRowv6yZOF2" storedBy="imported"/>
-  &lt;compelteDataSetRegistration ...> &lt;!-- Any number of elements allowed -->
-&lt;/completeDataSetRegistrations></programlisting></para>
+        so:<screen>&lt;completeDataSetRegistrations xmlns="http://dhis2.org/schema/dxf/2.0">
+  &lt;completeDataSetRegistration period="200810" dataSet="eZDhcZi6FLP" organisationUnit="qhqAxPSTUXp" 
+    attributeOptionCombo="bRowv6yZOF2" storedBy="imported"/>
+  &lt;completeDataSetRegistration period="200811" dataSet="eZDhcZi6FLP" organisationUnit="qhqAxPSTUXp" 
+    attributeOptionCombo="bRowv6yZOF2" storedBy="imported"/>
+&lt;/completeDataSetRegistrations></screen></para>
       <para>The <emphasis role="italic">storedBy</emphasis> attribute is optional (as it is a
         nullable property on the complete registration object). You can also optionally set the
           <emphasis role="italic">date</emphasis> property (time of registration) as an attribute.
