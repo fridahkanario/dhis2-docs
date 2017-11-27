@@ -1287,18 +1287,9 @@ http://server/api/26/constants/ID</screen></para>
       <title>Partial updates</title>
       <para>For cases where you don&apos;t want or need to update all properties on a object (which
         means downloading a potentially huge payload, change one property, then upload again) we now
-        support partial update, both for single properties and for multiple properties.</para>
-      <para>The format for updating a single property is the same as when you are updating a
-        complete object, just with only 1 property in the JSON/XML file,
-        i.e.:<screen>curl -X PATCH -d &quot;{\&quot;name\&quot;: \&quot;New Name\&quot;}&quot; -H &quot;Content-Type: application/json&quot; 
--u admin:district https://play.dhis2.org/dev/api/26/dataElements/fbfJHSPpUQD/name</screen></para>
-      <para>Please note that we are including the property name two times, one time in the payload,
-        and one time in the endpoint, the generic endpoint for this is <emphasis role="italic"
-          >/api/type/id/property-name</emphasis>, and the <emphasis role="italic"
-          >Content-Type</emphasis> must also be included as usual (since we support multiple
-        formats).</para>
-      <para>The format for updating multiple properties are similar, just that we don&apos;t include
-        the property names in the url,
+        support partial update, for one or more properties.</para>
+      <para>The payload for doing partial updataes are the same as when you are doing a full update,
+        the only difference is that you only include the properties you want to update,
         i.e.:<screen>{ // file.json
   &quot;name&quot;: &quot;Updated Name&quot;,
   &quot;zeroIsSignificant&quot;: true
