@@ -175,7 +175,7 @@ curl -X POST -H &quot;Accept: application/json&quot; -u demo:$SECRET $SERVER/uaa
           might want to add &amp;redirect_uri=http://www.example.org)
           :<screen>SERVER=&quot;https://play.dhis2.org/dev&quot;
 
-$SERVER/uaa/oauth/authorize?client_xml:id=demo&amp;response_type=code</screen></para>
+$SERVER/uaa/oauth/authorize?client_id=demo&amp;response_type=code</screen></para>
         <para>Step 2: After the user have successfully logged in and accepted your client access, it
           will redirect back to your redirect uri like
           this:<screen>http://www.example.org/?code=XYZ</screen></para>
@@ -184,7 +184,7 @@ $SERVER/uaa/oauth/authorize?client_xml:id=demo&amp;response_type=code</screen></
           token:<screen>SERVER=&quot;https://play.dhis2.org/dev&quot;
 SECRET=&quot;1e6db50c-0fee-11e5-98d0-3c15c2c6caf6&quot;
 
-curl -X POST -u demo:$SECRET -H &quot;Accept: application/json&quot; $SERVER/token 
+curl -X POST -u demo:$SECRET -H &quot;Accept: application/json&quot; $SERVER/uaa/oauth/token
   -d grant_type=authorization_code -d code=XYZ</screen></para>
       </section>
     </section>
