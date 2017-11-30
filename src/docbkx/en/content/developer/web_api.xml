@@ -175,7 +175,7 @@ curl -X POST -H &quot;Accept: application/json&quot; -u demo:$SECRET $SERVER/uaa
           might want to add &amp;redirect_uri=http://www.example.org)
           :<screen>SERVER=&quot;https://play.dhis2.org/dev&quot;
 
-$SERVER/uaa/oauth/authorize?client_xml:id=demo&amp;response_type=code</screen></para>
+$SERVER/uaa/oauth/authorize?client_id=demo&amp;response_type=code</screen></para>
         <para>Step 2: After the user have successfully logged in and accepted your client access, it
           will redirect back to your redirect uri like
           this:<screen>http://www.example.org/?code=XYZ</screen></para>
@@ -184,7 +184,7 @@ $SERVER/uaa/oauth/authorize?client_xml:id=demo&amp;response_type=code</screen></
           token:<screen>SERVER=&quot;https://play.dhis2.org/dev&quot;
 SECRET=&quot;1e6db50c-0fee-11e5-98d0-3c15c2c6caf6&quot;
 
-curl -X POST -u demo:$SECRET -H &quot;Accept: application/json&quot; $SERVER/token 
+curl -X POST -u demo:$SECRET -H &quot;Accept: application/json&quot; $SERVER/uaa/oauth/token
   -d grant_type=authorization_code -d code=XYZ</screen></para>
       </section>
     </section>
@@ -6745,7 +6745,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>aggregationType</entry>
               <entry>string</entry>
               <entry>No</entry>
-              <entry>&quot;DEFAULT&quot; | &quot;COUNT&quot; | &quot;AVERAGE&quot; | &quot;SUM&quot; | &quot;STDDEV&quot; | &quot;VARIANCE&quot; | &quot;MIN&quot; | &quot;MAX&quot;</entry>
+              <entry>&quot;DEFAULT&quot; | &quot;SUM&quot; |&quot;AVERAGE&quot; | &quot;AVERAGE_SUM_ORG_UNIT&quot;|&quot;LAST&quot;|&quot;LAST_AVERAGE_ORG_UNIT&quot;| &quot;COUNT&quot; | &quot;STDDEV&quot; | &quot;VARIANCE&quot; | &quot;MIN&quot; | &quot;MAX&quot;</entry>
               <entry>Override the data element's default aggregation type</entry>
             </row>
             <row>
@@ -7109,7 +7109,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>aggregationType</entry>
               <entry>string</entry>
               <entry>No</entry>
-              <entry>&quot;DEFAULT&quot; | &quot;COUNT&quot; | &quot;AVERAGE&quot; | &quot;SUM&quot; | &quot;STDDEV&quot; | &quot;VARIANCE&quot; | &quot;MIN&quot; | &quot;MAX&quot;</entry>
+              <entry>&quot;DEFAULT&quot; | &quot;SUM&quot; |&quot;AVERAGE&quot; | &quot;AVERAGE_SUM_ORG_UNIT&quot;|&quot;LAST&quot;|&quot;LAST_AVERAGE_ORG_UNIT&quot;| &quot;COUNT&quot; | &quot;STDDEV&quot; | &quot;VARIANCE&quot; | &quot;MIN&quot; | &quot;MAX&quot;</entry>
               <entry>Override the data element's default aggregation type</entry>
             </row>
             <row>
@@ -7873,7 +7873,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>aggregationType</entry>
                 <entry>No</entry>
                 <entry>Aggregation type to use in the aggregation process.</entry>
-                <entry>SUM | AVERAGE | COUNT | STDDEV | VARIANCE</entry>
+                <entry>SUM | AVERAGE |AVERAGE_SUM_ORG_UNIT|LAST|LAST_AVERAGE_ORG_UNIT| COUNT | STDDEV | VARIANCE|MIN|MAX</entry>
               </row>
               <row>
                 <entry>measureCriteria</entry>
@@ -7960,7 +7960,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>outputIdScheme</entry>
                 <entry>No</entry>
                 <entry>Identifier scheme to use for metadata items the query response, can be identifier, code or attributes.</entry>
-                <entry>UID | CODE | ATTRIBUTE:&lt;UID></entry>
+                <entry>UID | CODE |NAME| ATTRIBUTE:&lt;UID></entry>
               </row>
               <row>
                 <entry>inputIdScheme</entry>
@@ -8955,7 +8955,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>aggregationType</entry>
               <entry>No</entry>
               <entry>Aggregation type for the value dimension. Default is AVERAGE.</entry>
-              <entry>AVERAGE | SUM | COUNT | STDDEV | VARIANCE | MIN | MAX</entry>
+              <entry>|SUM|AVERAGE | AVERAGE_SUM_ORG_UNIT | COUNT | STDDEV | VARIANCE | MIN | MAX</entry>
             </row>
             <row>
               <entry>showHierarchy</entry>
