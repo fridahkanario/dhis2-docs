@@ -8695,6 +8695,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
 &amp;filter=J5jldMd8OHv:uYxK4wmcPqA;tDZVQ1WtwpA
 &amp;startDate=2015-01-01&amp;endDate=2015-12-31
 &amp;dimension=ou:O6uvpzGd5pu</screen></para>
+      <para>The <emphasis>outputIdScheme</emphasis> parameter is useful if you want human readable
+        data responses as it can be set to <emphasis>NAME</emphasis> like this:
+        <screen>/api/analytics/rawData.csv?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU
+&amp;filter=J5jldMd8OHv:uYxK4wmcPqA;tDZVQ1WtwpA
+&amp;startDate=2017-01-01&amp;endDate=2017-12-31
+&amp;dimension=ou:O6uvpzGd5pu
+&amp;outputIdScheme=NAME</screen></para>
       <para>The response from the <emphasis>rawData</emphasis> resource will look identical to the
         regular analytics resource; the difference is that the response contain raw, non-aggregated
         data, suitable for further aggregation by third-party systems.</para>
