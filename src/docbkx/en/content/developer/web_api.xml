@@ -13647,50 +13647,48 @@ interval=WEEK" -u admin:district</screen>
   </section>
   <section xml:id="webapi_scheduling">
     <title>Scheduling</title>
-    <para>To schedule tasks to run at fixed intervals you can interact with the scheduling resource.
-      To configure tasks you can do a POST request to the following
-      resource:<screen>/api/26/scheduling</screen></para>
-    <para>The payload in JSON format is described
-      below.<screen>{
-    &quot;resourceTableStrategy&quot;: &quot;allDaily&quot;,
-    &quot;analyticsStrategy&quot;: &quot;allDaily&quot;,
-    &quot;monitoringStrategy&quot;: &quot;allDaily&quot;,
-    &quot;dataSynchStrategy&quot;: &quot;enabled&quot;
-}</screen></para>
-    <para>An example using
-      curl:<screen>curl &quot;localhost/dhis/api/26/scheduling&quot; -d @scheduling.json -X POST 
-  -H &quot;Content-Type:application/json&quot; -u admin:district -v</screen></para>
-    <para>The table below lists available task strategies.<table frame="all">
-        <title>Task strategies</title>
-        <tgroup cols="2">
-          <colspec colnum="1" colname="c1" colwidth="1*"/>
-          <colspec colnum="2" colname="c2" colwidth="1.27*"/>
-          <thead>
-            <row>
-              <entry>Task</entry>
-              <entry>Strategies</entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry>Resource table task</entry>
-              <entry>allDaily | allEvery15Min</entry>
-            </row>
-            <row>
-              <entry>Analytics task</entry>
-              <entry>allDaily | last3YearsDaily</entry>
-            </row>
-            <row>
-              <entry>Monitoring</entry>
-              <entry>allDaily</entry>
-            </row>
-            <row>
-              <entry>Data synch task</entry>
-              <entry>enabled</entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table></para>
+    <para>With 2.29 you are able to schedule jobs with more options. You can specify a cron expression which will
+      trigger the job to execute at a user specified interval. For jobs with parameters you are also able to pass a
+      parameter object with the POST which contains user specified parameters for the particular job.
+
+      To configure jobs you can do a POST request to the following resource: <screen>/api/jobConfigurations</screen></para>
+
+    <para>Jobs without parameters in JSON format:
+      <screen>
+        {
+          name:     user specified name for the job,
+          jobType:  DATA_INTEGRITY | RESOURCE_TABLE | DATA_SYNC | META_DATA_SYNC |
+                    SEND_SCHEDULED_MESSAGE | PROGRAM_NOTIFICATIONS | CREDENTIALS_EXPIRY_ALERT,
+          cronExpression: 0 * * ? * *
+        }
+      </screen>
+    </para>
+
+    <para>Jobs with parameters in JSON format:
+      <screen>
+        {
+          name:     user specified name for the job,
+          jobType:  ANALYTICS_TABLE | MONITORING | PUSH_ANALYSIS | PREDICTOR,
+          cronExpression: 0 * * ? * *,
+          jobParameters: (ANALYTICS_TABLE example)
+          {
+              lastYears: 2,
+              skipTableTypes: [],
+              skipResourceTables: false
+          }
+        }
+      </screen>
+    </para>
+
+    There are some special flags for jobs. They are described here:
+    <para>
+      <screen>
+        enabled:  Set this to false if you want to add/update a job and want it to be disabled.
+                  All jobs are enabled by default.
+        continuousExecution:  Set this to true if you want the job to run continuously. A good example is analytics
+                              run continuously.
+      </screen>
+    </para>
   </section>
   <section xml:id="webapi_schema">
     <title>Schema</title>
