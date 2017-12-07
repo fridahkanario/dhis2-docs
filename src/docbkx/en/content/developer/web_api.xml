@@ -14465,7 +14465,7 @@ interval=WEEK" -u admin:district</screen>
       main table. As a result, the SQL script should refer to the analytics temp table, e.g.
       analytics_temp, analytics_completeness_temp, analytics_completenesstarget_temp,
       analytics_orgunittarget_temp, analytics_event_temp_&lt;program-uid>.</para>
-    <para>This applies also to the RESOURCE_TABLE_COMPLETED phase, which takes place after the
+    <para>This applies also to the RESOURCE_TABLE_POPULATED phase, which takes place after the
       resource table has been populated, but before indexes have been created and the temp table has
       been swapped with the main table. As a result, the SQL script should refer to the resource
       temp table, e.g. _orgunitstructure_temp, _categorystructure_temp.</para>
@@ -14473,7 +14473,7 @@ interval=WEEK" -u admin:district</screen>
       a POST request like
       this:<screen>POST /api/analyticsTableHooks</screen><screen>{
   "name": "Update 'Area' in org unit group set resource table",
-  "phase": "RESOURCE_TABLE_COMPLETED",
+  "phase": "RESOURCE_TABLE_POPULATED",
   "resourceTableType": "ORG_UNIT_GROUP_SET_STRUCTURE",
   "sql": "update _organisationunitgroupsetstructure_temp set \"uIuxlbV1vRT\" = 'b0EsAxm8Nge'"
 }</screen></para>
