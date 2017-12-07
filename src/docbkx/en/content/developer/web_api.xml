@@ -14408,8 +14408,10 @@ interval=WEEK" -u admin:district</screen>
       resource and analytics tables, e.g. in order to achieve specific logic for calculations and
       aggregation. Analytics table hooks can be manipulated at the following API
       endpoint:<screen>/api/analyticsTableHooks</screen></para>
+    <para>The analytics table hooks API supports the standard HTTP CRUD operations for creating
+      (POST), updating (PUT), retrieveing (GET) and deleting (DELETE) entities.</para>
     <para>Analytics table hooks have the following fields:<table frame="all">
-        <title>Analytics table hook</title>
+        <title>Analytics table hook fields</title>
         <tgroup cols="3">
           <colspec colname="c1" colnum="1" colwidth="1*"/>
           <colspec colname="c2" colnum="2" colwidth="1.35*"/>
@@ -14429,7 +14431,7 @@ interval=WEEK" -u admin:district</screen>
             </row>
             <row>
               <entry>phase</entry>
-              <entry>RESOURCE_TABLE_COMPLETED, ANALYTICS_TABLE_POPULATED</entry>
+              <entry>RESOURCE_TABLE_POPULATED, ANALYTICS_TABLE_POPULATED</entry>
               <entry>The phase for when the SQL script should be invoked.</entry>
             </row>
             <row>
@@ -14467,8 +14469,6 @@ interval=WEEK" -u admin:district</screen>
       resource table has been populated, but before indexes have been created and the temp table has
       been swapped with the main table. As a result, the SQL script should refer to the resource
       temp table, e.g. _orgunitstructure_temp, _categorystructure_temp.</para>
-    <para>The analytics table hooks API supports the standard HTTP CRUD operations for creating
-      (POST), updating (PUT), retrieveing (GET) and deleting (DELETE) entities.</para>
     <para>To create a hook which should run after the resource tables have been populated you can do
       a POST request like
       this:<screen>POST /api/analyticsTableHooks</screen><screen>{
