@@ -4883,7 +4883,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       </table>
     </para>
   </section>
-  <section>
+  <section xml:id="webapi_validation_results">
     <title>Validation Results</title>
     <para>Validation results are objects created when violations are found during a scheduled
       validation analysis. These results can be accessed through the api using the following
@@ -14469,7 +14469,7 @@ interval=WEEK" -u admin:district</screen>
   "name": "Update 'Area' in org unit group set resource table",
   "phase": "RESOURCE_TABLE_COMPLETED",
   "resourceTableType": "ORG_UNIT_GROUP_SET_STRUCTURE",
-  "sql": "update _organisationunitgroupsetstructure_temp set \"J40PpdN4Wkk\" = 'uIuxlbV1vRT'"
+  "sql": "update _organisationunitgroupsetstructure_temp set \"uIuxlbV1vRT\" = 'b0EsAxm8Nge'"
 }</screen></para>
     <para>To create a hook which should run after the data value analytics table has been populated
       you can do a POST request like
