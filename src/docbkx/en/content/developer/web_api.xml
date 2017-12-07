@@ -7954,6 +7954,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>includeMetadataDetails</entry>
                 <entry>No</entry>
                 <entry>Include metadata details to raw data response.</entry>
+                <entry>false | true</entry>
               </row>
               <row>
                 <entry>displayProperty</entry>
