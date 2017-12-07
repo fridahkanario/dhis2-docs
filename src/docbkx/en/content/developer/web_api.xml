@@ -14395,6 +14395,75 @@ interval=WEEK" -u admin:district</screen>
         Please consult the installation guide for more info.</para>
     </section>
   </section>
+  <section>
+    <title>Analytics table hooks</title>
+    <para>Analytics table hooks provides a mechanism for invoking SQL scripts during different
+      phases of the analytics table generation process. This is useful for customizing data in
+      resource and analytics tables, e.g. in order to achieve specific logic for calculations and
+      aggregation. Analytics table hooks can be manipulated at the following API
+      endpoint:<screen>/api/analyticsTableHooks</screen></para>
+    <para>Analytics table hooks have the following fields:<table frame="all">
+        <title>Analytics table hook</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.35*"/>
+          <colspec colname="newCol3" colnum="3" colwidth="2.04*"/>
+          <thead>
+            <row>
+              <entry>Field</entry>
+              <entry>Options</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>name</entry>
+              <entry>Text</entry>
+              <entry>Name of the hook</entry>
+            </row>
+            <row>
+              <entry>phase</entry>
+              <entry>RESOURCE_TABLE_COMPLETED, ANALYTICS_TABLE_POPULATED</entry>
+              <entry>The phase for when the SQL script should be invoked.</entry>
+            </row>
+            <row>
+              <entry>type</entry>
+              <entry>DATA_VALUE, COMPLETENESS, COMPLETENESS_TARGET, ORG_UNIT_TARGET, EVENT,
+                ENROLLMENT, VALIDATION_RESULT</entry>
+              <entry>The type of analytics table for which to invoke the SQL script. Applies only
+                for hooks defined with the ANALYTICS_TABLE_POPULATED phase.</entry>
+            </row>
+            <row>
+              <entry>sql</entry>
+              <entry>Text</entry>
+              <entry>The SQL script to invoke.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>The ANALYTICS_TABLE_POPULATED phase takes place after the analytic table has been
+      populated but before indexes have been created and the temp table has been swapped with the
+      main table. As a result, the SQL script should refer to the analytics temp table, e.g.
+      analytics_temp, analytics_completeness_temp, analytics_completenesstarget_temp,
+      analytics_orgunittarget_temp, analytics_event_temp_&lt;program-uid>.</para>
+    <para>The analytics table hooks API supports the standard HTTP CRUD operations for creating
+      (POST), updating (PUT), retrieveing (GET) and deleting (DELETE) entities.</para>
+    <para>To create a hook which should run after the resource tables have been populated you can do
+      a POST request like
+      this:<screen>POST /api/analyticsTableHooks</screen><screen>{
+  "name": "Update 'Area' in _organisationunitgroupsetstructure resource table",
+  "phase": "ANALYTICS_TABLE_POPULATED",
+  "sql": "update _organisationunitgroupsetstructure set \"J40PpdN4Wkk\" = 'uIuxlbV1vRT';"
+}</screen></para>
+    <para>To create a hook which should run after the data value analytics table has been populated
+      you can do a POST
+      request:<screen>{
+  "name": "Update 'Currently on treatment' data in analytics table",
+  "phase": "ANALYTICS_TABLE_POPULATED",
+  "type": "DATA_VALUE",
+  "sql": "update analytics_temp set monthly = '200212' where \"monthly\" in ('200210', '200211');"
+}</screen></para>
+  </section>
   <section xml:id="webapi_metadata_repository">
     <title>Metadata repository</title>
     <para>DHIS2 provides a metadata repository containing metadata packages with various content. A
