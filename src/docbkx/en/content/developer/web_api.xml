@@ -14442,7 +14442,7 @@ interval=WEEK" -u admin:district</screen>
               <row>
                 <entry>name</entry>
                 <entry>Text</entry>
-                <entry>Name of the hook</entry>
+                <entry>Name of the hook.</entry>
               </row>
               <row>
                 <entry>phase</entry>
@@ -14458,7 +14458,8 @@ interval=WEEK" -u admin:district</screen>
                     PERIOD_STRUCTURE, DATE_PERIOD_STRUCTURE, DATA_ELEMENT_CATEGORY_OPTION_COMBO,
                     DATA_APPROVAL_MIN_LEVEL</para>
                 </entry>
-                <entry>The type of resource table for which to invoke the SQL script.</entry>
+                <entry>The type of resource table for which to invoke the SQL script. Applies only
+                  for hooks defined with the RESOURCE_TABLE_POPULATED phase.</entry>
               </row>
               <row>
                 <entry>analyticsTableType</entry>
@@ -14492,21 +14493,22 @@ interval=WEEK" -u admin:district</screen>
     <section>
       <title>Creating hooks</title>
       <para>To create a hook which should run after the resource tables have been populated you can
-        do a <emphasis>POST</emphasis> request like this using JSON
+        do a <emphasis>POST</emphasis> request like this using <emphasis>JSON</emphasis>
         format:<screen>curl -d @hooks.json "localhost/api/analyticsTableHooks" -H "Content-Type:application/json" -u admin:district -v</screen><screen>{
-    "name": "Update 'Area' in org unit group set resource table",
-    "phase": "RESOURCE_TABLE_POPULATED",
-    "resourceTableType": "ORG_UNIT_GROUP_SET_STRUCTURE",
-    "sql": "update _organisationunitgroupsetstructure_temp set \"uIuxlbV1vRT\" = 'b0EsAxm8Nge'"
-  }</screen></para>
+  "name": "Update 'Area' in org unit group set resource table",
+  "phase": "RESOURCE_TABLE_POPULATED",
+  "resourceTableType": "ORG_UNIT_GROUP_SET_STRUCTURE",
+  "sql": "update _organisationunitgroupsetstructure_temp set \"uIuxlbV1vRT\" = 'b0EsAxm8Nge'"
+}</screen></para>
       <para>To create a hook which should run after the data value analytics table has been
-        populated you can do a <emphasis>POST</emphasis> request like this using JSON
+        populated you can do a <emphasis>POST</emphasis> request like this using
+          <emphasis>JSON</emphasis>
         format:<screen>{
-    "name": "Update 'Currently on treatment' data in analytics table",
-    "phase": "ANALYTICS_TABLE_POPULATED",
-    "analyticsTableType": "DATA_VALUE",
-    "sql": "update analytics_temp set monthly = '200212' where \"monthly\" in ('200210', '200211')"
-  }</screen></para>
+  "name": "Update 'Currently on treatment' data in analytics table",
+  "phase": "ANALYTICS_TABLE_POPULATED",
+  "analyticsTableType": "DATA_VALUE",
+  "sql": "update analytics_temp set monthly = '200212' where \"monthly\" in ('200210', '200211')"
+}</screen></para>
     </section>
   </section>
   <section xml:id="webapi_metadata_repository">
