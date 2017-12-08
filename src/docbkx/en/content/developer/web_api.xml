@@ -1499,6 +1499,19 @@ http://server/api/26/constants/ID</screen></para>
               includes non empty properties (will not include strings of 0 length, collections of
               size 0 etc)</entry>
           </row>
+          <row>
+            <entry>userOverrideMode</entry>
+            <entry>NONE, CURRENT, SELECTED</entry>
+            <entry>Allows you to override the user property of every object you are importing, the
+              options are NONE (do nothing), CURRENT (use import user), SELECTED (select a specific
+              user using overrideUser=X)</entry>
+          </row>
+          <row>
+            <entry>overrideUser</entry>
+            <entry>User ID</entry>
+            <entry>If userOverrideMode is SELECTED, use this parameter to select the user you want
+              override with.</entry>
+          </row>
         </tbody>
       </tgroup>
     </table>
@@ -4883,7 +4896,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       </table>
     </para>
   </section>
-  <section>
+  <section xml:id="webapi_validation_results">
     <title>Validation Results</title>
     <para>Validation results are objects created when violations are found during a scheduled
       validation analysis. These results can be accessed through the api using the following
@@ -7954,6 +7967,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>includeMetadataDetails</entry>
                 <entry>No</entry>
                 <entry>Include metadata details to raw data response.</entry>
+                <entry>false | true</entry>
               </row>
               <row>
                 <entry>displayProperty</entry>
@@ -14407,8 +14421,10 @@ interval=WEEK" -u admin:district</screen>
       resource and analytics tables, e.g. in order to achieve specific logic for calculations and
       aggregation. Analytics table hooks can be manipulated at the following API
       endpoint:<screen>/api/analyticsTableHooks</screen></para>
+    <para>The analytics table hooks API supports the standard HTTP CRUD operations for creating
+      (POST), updating (PUT), retrieveing (GET) and deleting (DELETE) entities.</para>
     <para>Analytics table hooks have the following fields:<table frame="all">
-        <title>Analytics table hook</title>
+        <title>Analytics table hook fields</title>
         <tgroup cols="3">
           <colspec colname="c1" colnum="1" colwidth="1*"/>
           <colspec colname="c2" colnum="2" colwidth="1.35*"/>
@@ -14428,7 +14444,7 @@ interval=WEEK" -u admin:district</screen>
             </row>
             <row>
               <entry>phase</entry>
-              <entry>RESOURCE_TABLE_COMPLETED, ANALYTICS_TABLE_POPULATED</entry>
+              <entry>RESOURCE_TABLE_POPULATED, ANALYTICS_TABLE_POPULATED</entry>
               <entry>The phase for when the SQL script should be invoked.</entry>
             </row>
             <row>
@@ -14462,19 +14478,17 @@ interval=WEEK" -u admin:district</screen>
       main table. As a result, the SQL script should refer to the analytics temp table, e.g.
       analytics_temp, analytics_completeness_temp, analytics_completenesstarget_temp,
       analytics_orgunittarget_temp, analytics_event_temp_&lt;program-uid>.</para>
-    <para>This applies also to the RESOURCE_TABLE_COMPLETED phase, which takes place after the
+    <para>This applies also to the RESOURCE_TABLE_POPULATED phase, which takes place after the
       resource table has been populated, but before indexes have been created and the temp table has
       been swapped with the main table. As a result, the SQL script should refer to the resource
       temp table, e.g. _orgunitstructure_temp, _categorystructure_temp.</para>
-    <para>The analytics table hooks API supports the standard HTTP CRUD operations for creating
-      (POST), updating (PUT), retrieveing (GET) and deleting (DELETE) entities.</para>
     <para>To create a hook which should run after the resource tables have been populated you can do
       a POST request like
       this:<screen>POST /api/analyticsTableHooks</screen><screen>{
   "name": "Update 'Area' in org unit group set resource table",
-  "phase": "RESOURCE_TABLE_COMPLETED",
+  "phase": "RESOURCE_TABLE_POPULATED",
   "resourceTableType": "ORG_UNIT_GROUP_SET_STRUCTURE",
-  "sql": "update _organisationunitgroupsetstructure_temp set \"J40PpdN4Wkk\" = 'uIuxlbV1vRT'"
+  "sql": "update _organisationunitgroupsetstructure_temp set \"uIuxlbV1vRT\" = 'b0EsAxm8Nge'"
 }</screen></para>
     <para>To create a hook which should run after the data value analytics table has been populated
       you can do a POST request like
