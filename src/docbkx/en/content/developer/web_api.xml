@@ -14489,6 +14489,9 @@ interval=WEEK" -u admin:district</screen>
         created and the temp table has been swapped with the main table. As a result, the SQL script
         should refer to the resource temp table, e.g. <emphasis>_orgunitstructure_temp</emphasis>,
           <emphasis>_categorystructure_temp</emphasis>.</para>
+      <para>You should define only one of the <emphasis>resourceTableType</emphasis> and
+          <emphasis>analyticsTableType</emphasis> fields, depending on which
+          <emphasis>phase</emphasis> is defined.</para>
     </section>
     <section>
       <title>Creating hooks</title>
