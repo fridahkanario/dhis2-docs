@@ -14423,81 +14423,91 @@ interval=WEEK" -u admin:district</screen>
       endpoint:<screen>/api/analyticsTableHooks</screen></para>
     <para>The analytics table hooks API supports the standard HTTP CRUD operations for creating
       (POST), updating (PUT), retrieveing (GET) and deleting (DELETE) entities.</para>
-    <para>Analytics table hooks have the following fields:<table frame="all">
-        <title>Analytics table hook fields</title>
-        <tgroup cols="3">
-          <colspec colname="c1" colnum="1" colwidth="1*"/>
-          <colspec colname="c2" colnum="2" colwidth="1.35*"/>
-          <colspec colname="newCol3" colnum="3" colwidth="2.04*"/>
-          <thead>
-            <row>
-              <entry>Field</entry>
-              <entry>Options</entry>
-              <entry>Description</entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry>name</entry>
-              <entry>Text</entry>
-              <entry>Name of the hook</entry>
-            </row>
-            <row>
-              <entry>phase</entry>
-              <entry>RESOURCE_TABLE_POPULATED, ANALYTICS_TABLE_POPULATED</entry>
-              <entry>The phase for when the SQL script should be invoked.</entry>
-            </row>
-            <row>
-              <entry>resourceTableType</entry>
-              <entry>
-                <para>ORG_UNIT_STRUCTURE, DATA_SET_ORG_UNIT_CATEGORY, CATEGORY_OPTION_COMBO_NAME,
-                  DATA_ELEMENT_GROUP_SET_STRUCTURE, INDICATOR_GROUP_SET_STRUCTURE,
-                  ORG_UNIT_GROUP_SET_STRUCTURE, CATEGORY_STRUCTURE, DATA_ELEMENT_STRUCTURE
-                  PERIOD_STRUCTURE, DATE_PERIOD_STRUCTURE, DATA_ELEMENT_CATEGORY_OPTION_COMBO,
-                  DATA_APPROVAL_MIN_LEVEL</para>
-              </entry>
-              <entry>The type of resource table for which to invoke the SQL script.</entry>
-            </row>
-            <row>
-              <entry>analyticsTableType</entry>
-              <entry>DATA_VALUE, COMPLETENESS, COMPLETENESS_TARGET, ORG_UNIT_TARGET, EVENT,
-                ENROLLMENT, VALIDATION_RESULT</entry>
-              <entry>The type of analytics table for which to invoke the SQL script. Applies only
-                for hooks defined with the ANALYTICS_TABLE_POPULATED phase.</entry>
-            </row>
-            <row>
-              <entry>sql</entry>
-              <entry>Text</entry>
-              <entry>The SQL script to invoke.</entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table></para>
-    <para>The ANALYTICS_TABLE_POPULATED phase takes place after the analytics table has been
-      populated, but before indexes have been created and the temp table has been swapped with the
-      main table. As a result, the SQL script should refer to the analytics temp table, e.g.
-      analytics_temp, analytics_completeness_temp, analytics_completenesstarget_temp,
-      analytics_orgunittarget_temp, analytics_event_temp_&lt;program-uid>.</para>
-    <para>This applies also to the RESOURCE_TABLE_POPULATED phase, which takes place after the
-      resource table has been populated, but before indexes have been created and the temp table has
-      been swapped with the main table. As a result, the SQL script should refer to the resource
-      temp table, e.g. _orgunitstructure_temp, _categorystructure_temp.</para>
-    <para>To create a hook which should run after the resource tables have been populated you can do
-      a POST request like
-      this:<screen>POST /api/analyticsTableHooks</screen><screen>{
-  "name": "Update 'Area' in org unit group set resource table",
-  "phase": "RESOURCE_TABLE_POPULATED",
-  "resourceTableType": "ORG_UNIT_GROUP_SET_STRUCTURE",
-  "sql": "update _organisationunitgroupsetstructure_temp set \"uIuxlbV1vRT\" = 'b0EsAxm8Nge'"
-}</screen></para>
-    <para>To create a hook which should run after the data value analytics table has been populated
-      you can do a POST request like
-      this:<screen>{
-  "name": "Update 'Currently on treatment' data in analytics table",
-  "phase": "ANALYTICS_TABLE_POPULATED",
-  "analyticsTableType": "DATA_VALUE",
-  "sql": "update analytics_temp set monthly = '200212' where \"monthly\" in ('200210', '200211')"
-}</screen></para>
+    <section>
+      <title>Hook fields</title>
+      <para>Analytics table hooks have the following fields:<table frame="all">
+          <title>Analytics table hook fields</title>
+          <tgroup cols="3">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.35*"/>
+            <colspec colname="newCol3" colnum="3" colwidth="2.04*"/>
+            <thead>
+              <row>
+                <entry>Field</entry>
+                <entry>Options</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>name</entry>
+                <entry>Text</entry>
+                <entry>Name of the hook</entry>
+              </row>
+              <row>
+                <entry>phase</entry>
+                <entry>RESOURCE_TABLE_POPULATED, ANALYTICS_TABLE_POPULATED</entry>
+                <entry>The phase for when the SQL script should be invoked.</entry>
+              </row>
+              <row>
+                <entry>resourceTableType</entry>
+                <entry>
+                  <para>ORG_UNIT_STRUCTURE, DATA_SET_ORG_UNIT_CATEGORY, CATEGORY_OPTION_COMBO_NAME,
+                    DATA_ELEMENT_GROUP_SET_STRUCTURE, INDICATOR_GROUP_SET_STRUCTURE,
+                    ORG_UNIT_GROUP_SET_STRUCTURE, CATEGORY_STRUCTURE, DATA_ELEMENT_STRUCTURE
+                    PERIOD_STRUCTURE, DATE_PERIOD_STRUCTURE, DATA_ELEMENT_CATEGORY_OPTION_COMBO,
+                    DATA_APPROVAL_MIN_LEVEL</para>
+                </entry>
+                <entry>The type of resource table for which to invoke the SQL script.</entry>
+              </row>
+              <row>
+                <entry>analyticsTableType</entry>
+                <entry>DATA_VALUE, COMPLETENESS, COMPLETENESS_TARGET, ORG_UNIT_TARGET, EVENT,
+                  ENROLLMENT, VALIDATION_RESULT</entry>
+                <entry>The type of analytics table for which to invoke the SQL script. Applies only
+                  for hooks defined with the ANALYTICS_TABLE_POPULATED phase.</entry>
+              </row>
+              <row>
+                <entry>sql</entry>
+                <entry>Text</entry>
+                <entry>The SQL script to invoke.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
+      <para>The <emphasis>ANALYTICS_TABLE_POPULATED</emphasis> phase takes place after the analytics
+        table has been populated, but before indexes have been created and the temp table has been
+        swapped with the main table. As a result, the SQL script should refer to the analytics temp
+        table, e.g. <emphasis>analytics_temp</emphasis>,
+          <emphasis>analytics_completeness_temp</emphasis>,
+          <emphasis>analytics_completenesstarget_temp</emphasis>,
+          <emphasis>analytics_orgunittarget_temp</emphasis>,
+          <emphasis>analytics_event_temp_&lt;program-uid></emphasis>.</para>
+      <para>This applies also to the <emphasis>RESOURCE_TABLE_POPULATED</emphasis> phase, which
+        takes place after the resource table has been populated, but before indexes have been
+        created and the temp table has been swapped with the main table. As a result, the SQL script
+        should refer to the resource temp table, e.g. <emphasis>_orgunitstructure_temp</emphasis>,
+          <emphasis>_categorystructure_temp</emphasis>.</para>
+    </section>
+    <section>
+      <title>Creating hooks</title>
+      <para>To create a hook which should run after the resource tables have been populated you can
+        do a <emphasis>POST</emphasis> request like this using JSON
+        format:<screen>curl -d @hooks.json "localhost/api/analyticsTableHooks" -H "Content-Type:application/json" -u admin:district -v</screen><screen>{
+    "name": "Update 'Area' in org unit group set resource table",
+    "phase": "RESOURCE_TABLE_POPULATED",
+    "resourceTableType": "ORG_UNIT_GROUP_SET_STRUCTURE",
+    "sql": "update _organisationunitgroupsetstructure_temp set \"uIuxlbV1vRT\" = 'b0EsAxm8Nge'"
+  }</screen></para>
+      <para>To create a hook which should run after the data value analytics table has been
+        populated you can do a <emphasis>POST</emphasis> request like this using JSON
+        format:<screen>{
+    "name": "Update 'Currently on treatment' data in analytics table",
+    "phase": "ANALYTICS_TABLE_POPULATED",
+    "analyticsTableType": "DATA_VALUE",
+    "sql": "update analytics_temp set monthly = '200212' where \"monthly\" in ('200210', '200211')"
+  }</screen></para>
+    </section>
   </section>
   <section xml:id="webapi_metadata_repository">
     <title>Metadata repository</title>
