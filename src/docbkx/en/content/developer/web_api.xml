@@ -1499,6 +1499,19 @@ http://server/api/26/constants/ID</screen></para>
               includes non empty properties (will not include strings of 0 length, collections of
               size 0 etc)</entry>
           </row>
+          <row>
+            <entry>userOverrideMode</entry>
+            <entry>NONE, CURRENT, SELECTED</entry>
+            <entry>Allows you to override the user property of every object you are importing, the
+              options are NONE (do nothing), CURRENT (use import user), SELECTED (select a specific
+              user using overrideUser=X)</entry>
+          </row>
+          <row>
+            <entry>overrideUser</entry>
+            <entry>User ID</entry>
+            <entry>If userOverrideMode is SELECTED, use this parameter to select the user you want
+              override with.</entry>
+          </row>
         </tbody>
       </tgroup>
     </table>
@@ -14478,17 +14491,17 @@ interval=WEEK" -u admin:district</screen>
     </section>
     <section>
       <title>Creating hooks</title>
-      <para>To create a hook which should run after the resource tables have been populated you can do
-        a POST request like
-        this:<screen>POST /api/analyticsTableHooks</screen><screen>{
+      <para>To create a hook which should run after the resource tables have been populated you can
+        do a <emphasis>POST</emphasis> request like this using JSON
+        format:<screen>curl -d @hooks.json "localhost/api/analyticsTableHooks" -H "Content-Type:application/json" -u admin:district -v</screen><screen>{
     "name": "Update 'Area' in org unit group set resource table",
     "phase": "RESOURCE_TABLE_POPULATED",
     "resourceTableType": "ORG_UNIT_GROUP_SET_STRUCTURE",
     "sql": "update _organisationunitgroupsetstructure_temp set \"uIuxlbV1vRT\" = 'b0EsAxm8Nge'"
   }</screen></para>
-      <para>To create a hook which should run after the data value analytics table has been populated
-        you can do a POST request like
-        this:<screen>{
+      <para>To create a hook which should run after the data value analytics table has been
+        populated you can do a <emphasis>POST</emphasis> request like this using JSON
+        format:<screen>{
     "name": "Update 'Currently on treatment' data in analytics table",
     "phase": "ANALYTICS_TABLE_POPULATED",
     "analyticsTableType": "DATA_VALUE",
