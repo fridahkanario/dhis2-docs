@@ -235,11 +235,9 @@ Used anywhere else? - Check with Jan."?>facility
             <entry valign="top">
               <para><emphasis role="bold">Default relative period for analysis</emphasis></para>
             </entry>
-            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
             <entry valign="top">
-              <para>TBA</para>
+              <para>Setting this value will determine which relative period is selected as the default in the analytics apps. </para>
             </entry>
-            <?oxy_custom_end?>
           </row>
           <row>
             <entry valign="top">
@@ -308,48 +306,12 @@ Used anywhere else? - Check with Jan."?>facility
               <?oxy_custom_end?>
             </entry>
           </row>
-          <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-          <?oxy_comment_start author="cecilia" timestamp="20170331T143209+0200" comment="No longer in UI, still relevant?" mid="11"?>
           <row>
-            <?oxy_custom_end?>
-            <entry valign="top">
-              <para><emphasis role="bold">Days after period end to qualify for timely data
-                  submission</emphasis></para>
-            </entry>
-            <entry valign="top">
-              <para>Sets the number of days after the end of a period in which a data entry form
-                must be marked as complete in order to be considered timely.</para>
-              <para>The setting affects the <emphasis role="bold">Reporting rate summary</emphasis>
-                report you create in the <emphasis role="bold">Reports</emphasis> app. This report
-                lists data entry forms marked as complete as well as data entry forms marked as
-                completed on time.</para>
-              <para>The default value is 15.</para>
-            </entry>
-            <?oxy_custom_start type="oxy_content_highlight" color="235,192,230" mid="12"?>
+            <entry><emphasis role="bold">Acceptance required before approval</emphasis></entry>
+            <entry valign="top">When this setting is selected, acceptance of data will be required
+              first before submission to the next approval level is possible. </entry>
           </row>
-          <?oxy_comment_end mid="11"?>
-          <?oxy_comment_start author="cecilia" timestamp="20170331T143100+0200" comment="No longer in UI, still relevant?" mid="13"?>
-          <row>
-            <?oxy_comment_start author="cecilia" timestamp="20170321T114612+0100" comment="Not in UI anymore, functionality removed or moved?"?>
-            <entry valign="top">
-              <para><emphasis role="bold">Omit indicator values with zero numerator value in data
-                  mart:</emphasis></para>
-            </entry>
-            <?oxy_comment_end?>
-            <entry valign="top">
-              <para>Defines whether aggregated indicator values with zero as the numerator value
-                should be written to the indicator data mart table.</para>
-              <para>You must write such values for example when connecting Excel pivot tables to the
-                data mart since Excel will need the numerator data to correctly aggregate up in the
-                organisation unit hierarchy.</para>
-              <para>If third-party tools are not used with DHIS2, this will reduce the total number
-                of values written to the data mart (which again will improve performance) and could
-                safely<?oxy_comment_start author="cecilia" timestamp="20170331T142953+0200" comment="What do you set to &quot;omit&quot;? Do you select the setting or not?"?>
-                be set to omit.<?oxy_comment_end?></para>
-            </entry>
-          </row>
-          <?oxy_custom_end mid="12"?>
-          <?oxy_comment_end mid="13"?>
+
         </tbody>
       </tgroup>
     </table>
@@ -387,6 +349,12 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
           </row>
           <row>
+            <entry valign="top"><emphasis role="bold">Financial year relative start
+              month</emphasis></entry>
+            <entry valign="top">Defines which month (April, July or October) the the relative
+              financial year in the analytics apps should begin on. </entry>
+          </row>
+          <row>
             <entry valign="top">
               <para><emphasis role="bold">Cacheability</emphasis></para>
             </entry>
@@ -412,14 +380,8 @@ Used anywhere else? - Check with Jan."?>facility
               <para><emphasis role="bold">Cache strategy</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>Decides for how long reports and responses related to
-                <?oxy_comment_start author="cecilia" timestamp="20170403T103239+0200" comment="Analytics?"?>analysis<?oxy_comment_end?>
-                should be cached.</para>
-              <para>If you use the
-                <?oxy_comment_start author="cecilia" timestamp="20170403T103436+0200" comment="What is the &quot;scheduled, nightly analytics tables update&quot;? In which app do you set this?"?>scheduled,
-                nightly
-                <?oxy_comment_start author="cecilia" timestamp="20170403T103009+0200" comment="What is an analytics table? Reports?"?>analytics
-                tables<?oxy_comment_end?> updat<?oxy_comment_end?>e, select <emphasis role="bold"
+              <para>Decides for how long reports analytics responses should be cached.</para>
+              <para>If you use the scheduled, nightly analytics update, select <emphasis role="bold"
                   >Cache until 6 AM tomorrow</emphasis>. This is because data in reports change at
                 that time, and you can safely cache data up to the moment when the
                 <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>analytics
@@ -435,9 +397,10 @@ Used anywhere else? - Check with Jan."?>facility
                   analytics</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>Sets whether and for how long back in time
-                the<?oxy_comment_start author="cecilia" timestamp="20170403T103504+0200" comment="What&apos;s the &quot;analytics&quot; engine?"?>
-                analytics engine <?oxy_comment_end?>should hide unapproved data.</para>
+              <para>Sets whether and for how long back in time  analytics should respect the
+                approval level of the data. Typically, data which is several years old would be
+                considered to be approved by default. In order to speed up analytics requests, you
+                can choose to ignore the actual approval level of historical data. </para>
               <para><emphasis role="bold">Never check approval</emphasis>: no data will be hidden,
                 irrespective of its data approval status. </para>
               <para><emphasis role="bold">Check approval for all data</emphasis>: approval status
@@ -465,13 +428,9 @@ Used anywhere else? - Check with Jan."?>facility
             </entry>
             <entry valign="top">
               <?oxy_comment_start author="cecilia" timestamp="20170322T163946+0100" comment="Reword"?>
-              <para>Sets whether aggregate data values where the data period falls outside the start
-                and end date of the category options of the data attribute category option
-                combination should be filtered out of the
-                <?oxy_comment_start author="cecilia" timestamp="20170403T103811+0200" comment="What&apos;s an &quot;analytics table&quot;?
-
-Refer to JIRA issue https://jira.dhis2.org/browse/DHIS2-262"?>analytics
-                tables<?oxy_comment_end?> when generated.</para>
+              <para>This setting constrols whether analytics should filter data which is assocciated
+                with a category option with a start and end date, but which is not associated with a
+                period within the category options interval of validity. </para>
               <?oxy_comment_end?>
             </entry>
           </row>
@@ -479,15 +438,13 @@ Refer to JIRA issue https://jira.dhis2.org/browse/DHIS2-262"?>analytics
             <entry valign="top">
               <para><emphasis role="bold">Put analytics in maintenance mode</emphasis></para>
             </entry>
-            <entry valign="top">
-              <para>Puts the
-                <?oxy_comment_start author="cecilia" timestamp="20170403T110222+0200" comment="What&apos;s an &quot;analytics engine&quot;?"?>analytics
-                engine<?oxy_comment_end?> and web API resource in maintenance mode. This means that
-                "503 Service Unavailable" will be returned for all requests.</para>
-              <para>This is useful when you need to perform maintenance on the server, for example
-                rebuilding indexes while the server is running in production, in order to reduce
-                load and more efficiently carry out the maintenance.</para>
-            </entry>
+            <entry valign="top">Places the
+              <?oxy_comment_start author="cecilia" timestamp="20170403T110222+0200" comment="What&apos;s an &quot;analytics engine&quot;?"?>analytics
+              <?oxy_comment_end?>and web API of DHIS2 in maintenance mode. This means that "503
+              Service Unavailable" will be returned for all requests.<para>This is useful when you
+                need to perform maintenance on the server, for example rebuilding indexes while the
+                server is running in production, in order to reduce load and more efficiently carry
+                out the maintenance.</para></entry>
           </row>
         </tbody>
       </tgroup>
@@ -518,9 +475,8 @@ Refer to JIRA issue https://jira.dhis2.org/browse/DHIS2-262"?>analytics
             <entry valign="top">
               <para>Sets the number of CPU cores of your database server.</para>
               <para>This allows the system to perform optimally when the database is hosted on a
-                different server than the application server, as the
-                <?oxy_comment_start author="cecilia" timestamp="20170403T110602+0200" comment="What&apos;s an &quot;analytics engine&quot;?"?>analytics
-                engine<?oxy_comment_end?> scales linearly on the number of available cores.</para>
+                different server than the application server, since analytics in DHIS2 scales
+                linearly with the number of available cores.</para>
             </entry>
           </row>
           <row>
@@ -528,11 +484,7 @@ Refer to JIRA issue https://jira.dhis2.org/browse/DHIS2-262"?>analytics
               <para><emphasis role="bold">System notifications email address</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>Defines the email address which will receive system
-                <?oxy_comment_start author="cecilia" timestamp="20170403T110705+0200" comment="Which notifications? 
-From DHIS2 messaging?
-Some type of server maintenance?
-Program notifications??"?>notifications<?oxy_comment_end?>.</para>
+              <para>Defines the email address which will receive system notifications.</para>
               <para>Notifications about failures in processes such
                 as<?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?> analytics
                 table<?oxy_custom_end?> generation will be sent here. This is useful for application
@@ -567,12 +519,12 @@ Program notifications??"?>notifications<?oxy_comment_end?>.</para>
                 key</emphasis></para>
             </entry>
             <entry valign="top">
-              <para>Sets the Google UA key to provide
+              <para>Sets the Google UA key to provide usage
                 <?oxy_comment_start author="cecilia" timestamp="20170330T095421+0200" comment="What kind of analytics? DHIS2 analytics or Google analytics?"?>analytics<?oxy_comment_end?>
-                for your DHIS2 instance.</para>
-              <para><?oxy_comment_start author="cecilia" timestamp="20170330T095332+0200" comment="What does this mean?"?>Most
-                places are covered<?oxy_comment_end?>, but it will not be provided for custom apps.
-                You can read more about Google Analytics at <link
+                for your DHIS2 instance through the Google Analytics platform. It should be noted
+                that currently, not all apps in DHIS2 support Google Analytics, so certain activity
+                of your users may not appear in this platform. </para>
+              <para>You can read more about Google Analytics at <link
                   xlink:href="http://google.com/analytics"
                 >http://google.com/analytics</link>.</para>
             </entry>
@@ -890,9 +842,7 @@ At next revision, consider adding graphic."?>
             </entry>
             <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
             <entry valign="top">
-              <para>Sends out a
-                test<?oxy_comment_start author="cecilia" timestamp="20170403T115205+0200" comment="Who do you send a test email to? The logged in user?"?>
-                to email<?oxy_comment_end?>.</para>
+              <para>Sends a test email to the current user logged into DHIS2.</para>
             </entry>
             <?oxy_custom_end?>
           </row>
@@ -915,18 +865,7 @@ SME:
 - Used in internal DHIS2 messaging system: System message (generated by the sytem, can be many things, something has gone wrong), private message, ticket message, validation result message (result of validation analysis) (4 type of messages right now)
 - Push analysis don&apos;t go through internal DHIS2 messaging system, always send via email
 - Can also send despite all settings (force send)"?>settings<?oxy_comment_end?></title>
-    <para>A message that something happened internally that you have to investigate.</para>
-    <?oxy_custom_start type="oxy_content_highlight" color="235,192,230"?>
-    <para>- A general seetting, if user doesn't have hes/hers "own" notification settings.</para>
-    <para>- Used in internal DHIS2 messaging system: System message (generated by the system, can be
-      many things, something has gone wrong), private message, ticket message, validation result
-      message (result of validation analysis) (4 type of messages right now)</para>
-    <para>- Push analysis don't go through internal DHIS2 messaging system, always send via
-      email</para>
-    <para>- Can also send despite all settings (force send)</para>
-    <?oxy_custom_end?>
     <table frame="all">
-      <title>Messaging settings</title>
       <tgroup cols="2">
         <colspec colname="c1" colnum="1" colwidth="1.0*"/>
         <colspec colname="c2" colnum="2" colwidth="1.0*"/>
@@ -1025,7 +964,7 @@ SME:
           </row>
           <row>
             <entry valign="top">
-              <para><emphasis role="bold">Do not require recaptcha for self
+              <para><emphasis role="bold">Do not require reCAPTCHA for self
                 registration</emphasis></para>
             </entry>
             <entry valign="top">
@@ -1101,6 +1040,12 @@ SME:
             </entry>
           </row>
           <row>
+            <entry valign="top"><emphasis role="bold">Enable password expiry
+              alerts</emphasis></entry>
+            <entry valign="top">When set, users will receive a notification when their password is
+              about to expire. </entry>
+          </row>
+          <row>
             <entry valign="top">
               <para><emphasis role="bold">Minimum characters in password</emphasis></para>
             </entry>
@@ -1155,63 +1100,6 @@ SME:
                 DHIS 2.</para>
             </entry>
           </row>
-          <?oxy_custom_end mid="49"?>
-        </tbody>
-      </tgroup>
-    </table>
-  </section>
-  <section xml:id="system_approval_settings">
-    <title>Approval settings</title>
-    <para>
-      <note>
-        <para>For more information about how you configure data approvals, refer to <link
-            xlink:href="https://docs.dhis2.org/master/en/user/html/data_approval.html">Data
-            approval</link>
-        </para>
-      </note>
-    </para>
-    <table frame="all">
-      <title>Approval settings</title>
-      <tgroup cols="2">
-        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-        <thead>
-          <row>
-            <entry valign="top">
-              <para>Setting</para>
-            </entry>
-            <entry valign="top">
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry valign="top">
-              <para>Approval level</para>
-            </entry>
-            <entry valign="top">
-              <para>The levels at which you want to approve data in the system.</para>
-            </entry>
-          </row>
-          <row>
-            <entry valign="top">
-              <para>Approval workflow</para>
-            </entry>
-            <entry valign="top">
-              <para>The workflows that the system will use to approve data. Each workflow can be
-                associated with one or more approval levels.</para>
-            </entry>
-          </row>
-          <row>
-            <entry valign="top">
-              <para><emphasis role="bold">Acceptance required before approval</emphasis></para>
-            </entry>
-            <entry valign="top">
-              <para>Defines whether to include an acceptance step before the approval step in the
-                approval workflow.</para>
-            </entry>
-          </row>
         </tbody>
       </tgroup>
     </table>
@@ -1264,9 +1152,10 @@ SME:
   </section>
   <section xml:id="system_data_import_settings">
     <title>Data import settings</title>
-    <para>The data import settings apply to the data import process. They provide optional
-      constraints on what should be considered a conflict during import. The constraints are applied
-      to each individual data value in the import.</para>
+    <para>The data import settings apply to extra controls which can be enabled to validate
+      aggregate data which is imported through the web API.  They provide optional constraints on
+      what should be considered a conflict during import. The constraints are applied to each
+      individual data value in the import.</para>
     <table frame="all">
       <title>Data import settings</title>
       <tgroup cols="2">
@@ -1503,8 +1392,8 @@ Why would you use this?
 How do you set it up?
 
 According to SME: Disse brukes for å gjøre en kall mot URL med username og password." flag="done"?>monitoring<?oxy_comment_end?></title>
-    <para>Use the system monitoring settings when you want to make a call to a URL with user name
-      and password.</para>
+    <para>Use the system monitoring settings when you want to make a call to a remote server for
+      system monitoring purposes. </para>
     <table frame="all">
       <title>System monitoring settings</title>
       <tgroup cols="2">
@@ -1619,8 +1508,8 @@ Vet ikke akkurat hvordan oauth2 brukes i settings her, men Zubair mener å huske
       </listitem>
       <listitem>
         <para>Enter <emphasis role="bold">Redirect
-            <?oxy_comment_start author="cecilia" timestamp="20170330T155124+0200" comment="Says &quot;URIs&quot; in UI, create JIRA issue."?>URLs<?oxy_comment_end?></emphasis>.
-          If you've multiple URLs, separate them with a line.</para>
+            <?oxy_comment_start author="cecilia" timestamp="20170330T155124+0200" comment="Says &quot;URIs&quot; in UI, create JIRA issue." flag="done"?>URIs<?oxy_comment_end?></emphasis>.
+          If you've multiple URIs, separate them with a line.</para>
       </listitem>
     </orderedlist>
   </section>

@@ -1499,6 +1499,19 @@ http://server/api/26/constants/ID</screen></para>
               includes non empty properties (will not include strings of 0 length, collections of
               size 0 etc)</entry>
           </row>
+          <row>
+            <entry>userOverrideMode</entry>
+            <entry>NONE, CURRENT, SELECTED</entry>
+            <entry>Allows you to override the user property of every object you are importing, the
+              options are NONE (do nothing), CURRENT (use import user), SELECTED (select a specific
+              user using overrideUser=X)</entry>
+          </row>
+          <row>
+            <entry>overrideUser</entry>
+            <entry>User ID</entry>
+            <entry>If userOverrideMode is SELECTED, use this parameter to select the user you want
+              override with.</entry>
+          </row>
         </tbody>
       </tgroup>
     </table>
@@ -4883,7 +4896,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       </table>
     </para>
   </section>
-  <section>
+  <section xml:id="webapi_validation_results">
     <title>Validation Results</title>
     <para>Validation results are objects created when violations are found during a scheduled
       validation analysis. These results can be accessed through the api using the following
@@ -7951,6 +7964,12 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>false | true</entry>
               </row>
               <row>
+                <entry>includeMetadataDetails</entry>
+                <entry>No</entry>
+                <entry>Include metadata details to raw data response.</entry>
+                <entry>false | true</entry>
+              </row>
+              <row>
                 <entry>displayProperty</entry>
                 <entry>No</entry>
                 <entry>Property to display for metadata.</entry>
@@ -8695,6 +8714,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
 &amp;filter=J5jldMd8OHv:uYxK4wmcPqA;tDZVQ1WtwpA
 &amp;startDate=2015-01-01&amp;endDate=2015-12-31
 &amp;dimension=ou:O6uvpzGd5pu</screen></para>
+      <para>The <emphasis>outputIdScheme</emphasis> parameter is useful if you want human readable
+        data responses as it can be set to <emphasis>NAME</emphasis> like this:
+        <screen>/api/analytics/rawData.csv?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU
+&amp;filter=J5jldMd8OHv:uYxK4wmcPqA;tDZVQ1WtwpA
+&amp;startDate=2017-01-01&amp;endDate=2017-12-31
+&amp;dimension=ou:O6uvpzGd5pu
+&amp;outputIdScheme=NAME</screen></para>
       <para>The response from the <emphasis>rawData</emphasis> resource will look identical to the
         regular analytics resource; the difference is that the response contain raw, non-aggregated
         data, suitable for further aggregation by third-party systems.</para>
@@ -14384,6 +14410,106 @@ interval=WEEK" -u admin:district</screen>
         </table></para>
       <para>This assumes that a Google service account has been set up and configured for DHIS2.
         Please consult the installation guide for more info.</para>
+    </section>
+  </section>
+  <section xml:id="webapi_analytics_table_hooks">
+    <title>Analytics table hooks</title>
+    <para>Analytics table hooks provides a mechanism for invoking SQL scripts during different
+      phases of the analytics table generation process. This is useful for customizing data in
+      resource and analytics tables, e.g. in order to achieve specific logic for calculations and
+      aggregation. Analytics table hooks can be manipulated at the following API
+      endpoint:<screen>/api/analyticsTableHooks</screen></para>
+    <para>The analytics table hooks API supports the standard HTTP CRUD operations for creating
+      (POST), updating (PUT), retrieveing (GET) and deleting (DELETE) entities.</para>
+    <section>
+      <title>Hook fields</title>
+      <para>Analytics table hooks have the following fields:<table frame="all">
+          <title>Analytics table hook fields</title>
+          <tgroup cols="3">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.35*"/>
+            <colspec colname="newCol3" colnum="3" colwidth="2.04*"/>
+            <thead>
+              <row>
+                <entry>Field</entry>
+                <entry>Options</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>name</entry>
+                <entry>Text</entry>
+                <entry>Name of the hook.</entry>
+              </row>
+              <row>
+                <entry>phase</entry>
+                <entry>RESOURCE_TABLE_POPULATED, ANALYTICS_TABLE_POPULATED</entry>
+                <entry>The phase for when the SQL script should be invoked.</entry>
+              </row>
+              <row>
+                <entry>resourceTableType</entry>
+                <entry>
+                  <para>ORG_UNIT_STRUCTURE, DATA_SET_ORG_UNIT_CATEGORY, CATEGORY_OPTION_COMBO_NAME,
+                    DATA_ELEMENT_GROUP_SET_STRUCTURE, INDICATOR_GROUP_SET_STRUCTURE,
+                    ORG_UNIT_GROUP_SET_STRUCTURE, CATEGORY_STRUCTURE, DATA_ELEMENT_STRUCTURE
+                    PERIOD_STRUCTURE, DATE_PERIOD_STRUCTURE, DATA_ELEMENT_CATEGORY_OPTION_COMBO,
+                    DATA_APPROVAL_MIN_LEVEL</para>
+                </entry>
+                <entry>The type of resource table for which to invoke the SQL script. Applies only
+                  for hooks defined with the RESOURCE_TABLE_POPULATED phase.</entry>
+              </row>
+              <row>
+                <entry>analyticsTableType</entry>
+                <entry>DATA_VALUE, COMPLETENESS, COMPLETENESS_TARGET, ORG_UNIT_TARGET, EVENT,
+                  ENROLLMENT, VALIDATION_RESULT</entry>
+                <entry>The type of analytics table for which to invoke the SQL script. Applies only
+                  for hooks defined with the ANALYTICS_TABLE_POPULATED phase.</entry>
+              </row>
+              <row>
+                <entry>sql</entry>
+                <entry>Text</entry>
+                <entry>The SQL script to invoke.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
+      <para>The <emphasis>ANALYTICS_TABLE_POPULATED</emphasis> phase takes place after the analytics
+        table has been populated, but before indexes have been created and the temp table has been
+        swapped with the main table. As a result, the SQL script should refer to the analytics temp
+        table, e.g. <emphasis>analytics_temp</emphasis>,
+          <emphasis>analytics_completeness_temp</emphasis>,
+          <emphasis>analytics_completenesstarget_temp</emphasis>,
+          <emphasis>analytics_orgunittarget_temp</emphasis>,
+          <emphasis>analytics_event_temp_&lt;program-uid></emphasis>.</para>
+      <para>This applies also to the <emphasis>RESOURCE_TABLE_POPULATED</emphasis> phase, which
+        takes place after the resource table has been populated, but before indexes have been
+        created and the temp table has been swapped with the main table. As a result, the SQL script
+        should refer to the resource temp table, e.g. <emphasis>_orgunitstructure_temp</emphasis>,
+          <emphasis>_categorystructure_temp</emphasis>.</para>
+      <para>You should define only one of the <emphasis>resourceTableType</emphasis> and
+          <emphasis>analyticsTableType</emphasis> fields, depending on which
+          <emphasis>phase</emphasis> is defined.</para>
+    </section>
+    <section>
+      <title>Creating hooks</title>
+      <para>To create a hook which should run after the resource tables have been populated you can
+        do a <emphasis>POST</emphasis> request like this using <emphasis>JSON</emphasis>
+        format:<screen>curl -d @hooks.json "localhost/api/analyticsTableHooks" -H "Content-Type:application/json" -u admin:district -v</screen><screen>{
+  "name": "Update 'Area' in org unit group set resource table",
+  "phase": "RESOURCE_TABLE_POPULATED",
+  "resourceTableType": "ORG_UNIT_GROUP_SET_STRUCTURE",
+  "sql": "update _organisationunitgroupsetstructure_temp set \"uIuxlbV1vRT\" = 'b0EsAxm8Nge'"
+}</screen></para>
+      <para>To create a hook which should run after the data value analytics table has been
+        populated you can do a <emphasis>POST</emphasis> request like this using
+          <emphasis>JSON</emphasis>
+        format:<screen>{
+  "name": "Update 'Currently on treatment' data in analytics table",
+  "phase": "ANALYTICS_TABLE_POPULATED",
+  "analyticsTableType": "DATA_VALUE",
+  "sql": "update analytics_temp set monthly = '200212' where \"monthly\" in ('200210', '200211')"
+}</screen></para>
     </section>
   </section>
   <section xml:id="webapi_metadata_repository">

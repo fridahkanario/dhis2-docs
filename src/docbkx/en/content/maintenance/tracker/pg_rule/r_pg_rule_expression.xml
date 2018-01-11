@@ -412,4 +412,90 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
             </tbody>
         </tgroup>
     </table>
+    <table frame="all">
+        <title>Standard variables to use in program rule expressions</title>
+        <tgroup cols="3">
+            <colspec colnum="1" colname="c1" colwidth="1*"/>
+            <colspec colnum="2" colname="newCol2" colwidth="2*"/>
+            <colspec colnum="3" colname="c2" colwidth="3.61*"/>
+            <thead>
+                <row>
+                    <entry align="left" valign="top">Variable</entry>
+                    <entry align="left" valign="top">Type</entry>
+                    <entry align="left" valign="top">Description</entry>
+                </row>
+            </thead>
+            <tbody>
+                <row>
+                    <entry align="left" valign="top">V{current_date}</entry>
+                    <entry align="left" valign="top">(date)</entry>
+                    <entry align="left" valign="top">Contains the current date whenever the rule is
+                        executed. <para> Example expression:
+                            <screen>d2:daysBetween(#{symptomDate},V{current_date}) &lt; 0 </screen>
+                        </para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{event_date}</entry>
+                    <entry align="left" valign="top">(date)</entry>
+                    <entry align="left" valign="top">Contains the event date of the current event
+                        execution. Will not have a value at the moment the rule is executed as part
+                        of the registration form.<para> </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{due_date}</entry>
+                    <entry align="left" valign="top">(date)</entry>
+                    <entry align="left" valign="top">This variable will contain the current date
+                        whenever the rule is executed.</entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{event_count}</entry>
+                    <entry align="left" valign="top">(number)</entry>
+                    <entry align="left" valign="top">Contains the total number of events in the
+                        enrollment. </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{enrollment_date}</entry>
+                    <entry align="left" valign="top">(date)</entry>
+                    <entry align="left" valign="top">Contains the enrollment date of the current
+                        enrollment. Will not have a value for single event programs.<para> </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{incident_date}</entry>
+                    <entry align="left" valign="top">(date)</entry>
+                    <entry align="left" valign="top">Contains the incident date of the current
+                        enrollment. Will not have a value for single event programs.<para> </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{enrollment_id}</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">Universial identifier string(UID) of the
+                        current enrollment. Will not have a value for single event
+                            programs.<para> </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{event_id}</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">Universial identifier string(UID) of the
+                        current event context. Will not have a value at the moment the rule is
+                        executed as part of the registration form.<para> </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{orgunit_code}</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">Contains the code of the orgunit that is linked
+                        to the current enrollment. For single event programs the code from the
+                        current event orgunit will be used instead.<para> Example expression to
+                            check wether orgunit code starts with WB_:
+                            <screen>d2:left(V{orgunit_code},3) == 'WB_'</screen>
+                        </para>
+                    </entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </table>
 </section>
