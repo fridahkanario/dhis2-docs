@@ -13683,8 +13683,7 @@ interval=WEEK" -u admin:district</screen>
       <screen>
         {
           name:     user specified name for the job,
-          jobType:  DATA_INTEGRITY | RESOURCE_TABLE | DATA_SYNC | META_DATA_SYNC |
-                    SEND_SCHEDULED_MESSAGE | PROGRAM_NOTIFICATIONS | CREDENTIALS_EXPIRY_ALERT,
+          jobType:  JOB TYPE
           cronExpression: 0 * * ? * *
         }
       </screen>
@@ -13694,7 +13693,7 @@ interval=WEEK" -u admin:district</screen>
       <screen>
         {
           name:     user specified name for the job,
-          jobType:  ANALYTICS_TABLE | MONITORING | PUSH_ANALYSIS | PREDICTOR,
+          jobType:  JOB TYPE
           cronExpression: 0 * * ? * *,
           jobParameters: (ANALYTICS_TABLE example)
           {
@@ -13706,13 +13705,31 @@ interval=WEEK" -u admin:district</screen>
       </screen>
     </para>
 
-    There are some special flags for jobs. They are described here:
-    <para>
+    <para>Available job types:
+      <screen>
+        RESOURCE_TABLE
+        DATA_SYNC
+        META_DATA_SYNC
+        PREDICTOR
+        MONITORING
+        PUSH_ANALYSIS
+        DATA_INTEGRITY
+        SEND_SCHEDULED_MESSAGE
+        CREDENTIALS_EXPIRY_ALERT
+        PROGRAM_NOTIFICATIONS
+        ANALYTICS_TABLE
+      </screen>
+    </para>
+
+    Jobs with special configuration may not be added if the configuration is missing. An example of this is data synchronization,
+    which requires remote server configuration.
+
+    <para>There are some special flags for jobs. They are described here:
       <screen>
         enabled:  Set this to false if you want to add/update a job and want it to be disabled.
                   All jobs are enabled by default.
         continuousExecution:  Set this to true if you want the job to run continuously. A good example is analytics
-                              run continuously.
+                              run continuously
       </screen>
     </para>
   </section>

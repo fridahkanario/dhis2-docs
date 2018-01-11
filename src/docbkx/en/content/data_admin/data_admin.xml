@@ -542,11 +542,8 @@
       predefined options or user specified cron expression. The cron expression must follow a specific pattern, see
       https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm for guidelines.
 
-      For some jobs you are also able to select parameters for that job. Following is an example of a monitoring job
-      with parameters. The selections will present appropriate values so it is easy to select the correct parameters.
-
-      TODO: insert screenshot from scheduler app.
-
+      For some jobs you are able to select parameters for that job. The entry will become a job configuration in the system and
+      trigger when the cron expression is valid.
     </para>
   </section>
   <section xml:id="dataAdmin_dataSync">
