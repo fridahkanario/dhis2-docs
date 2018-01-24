@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <chapter version="5.0"
   xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
   xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -175,7 +175,7 @@ curl -X POST -H &quot;Accept: application/json&quot; -u demo:$SECRET $SERVER/uaa
           might want to add &amp;redirect_uri=http://www.example.org)
           :<screen>SERVER=&quot;https://play.dhis2.org/dev&quot;
 
-$SERVER/uaa/oauth/authorize?client_xml:id=demo&amp;response_type=code</screen></para>
+$SERVER/uaa/oauth/authorize?client_id=demo&amp;response_type=code</screen></para>
         <para>Step 2: After the user have successfully logged in and accepted your client access, it
           will redirect back to your redirect uri like
           this:<screen>http://www.example.org/?code=XYZ</screen></para>
@@ -184,7 +184,7 @@ $SERVER/uaa/oauth/authorize?client_xml:id=demo&amp;response_type=code</screen></
           token:<screen>SERVER=&quot;https://play.dhis2.org/dev&quot;
 SECRET=&quot;1e6db50c-0fee-11e5-98d0-3c15c2c6caf6&quot;
 
-curl -X POST -u demo:$SECRET -H &quot;Accept: application/json&quot; $SERVER/token 
+curl -X POST -u demo:$SECRET -H &quot;Accept: application/json&quot; $SERVER/uaa/oauth/token
   -d grant_type=authorization_code -d code=XYZ</screen></para>
       </section>
     </section>
@@ -1287,18 +1287,9 @@ http://server/api/26/constants/ID</screen></para>
       <title>Partial updates</title>
       <para>For cases where you don&apos;t want or need to update all properties on a object (which
         means downloading a potentially huge payload, change one property, then upload again) we now
-        support partial update, both for single properties and for multiple properties.</para>
-      <para>The format for updating a single property is the same as when you are updating a
-        complete object, just with only 1 property in the JSON/XML file,
-        i.e.:<screen>curl -X PATCH -d &quot;{\&quot;name\&quot;: \&quot;New Name\&quot;}&quot; -H &quot;Content-Type: application/json&quot; 
--u admin:district https://play.dhis2.org/dev/api/26/dataElements/fbfJHSPpUQD/name</screen></para>
-      <para>Please note that we are including the property name two times, one time in the payload,
-        and one time in the endpoint, the generic endpoint for this is <emphasis role="italic"
-          >/api/type/id/property-name</emphasis>, and the <emphasis role="italic"
-          >Content-Type</emphasis> must also be included as usual (since we support multiple
-        formats).</para>
-      <para>The format for updating multiple properties are similar, just that we don&apos;t include
-        the property names in the url,
+        support partial update, for one or more properties.</para>
+      <para>The payload for doing partial updataes are the same as when you are doing a full update,
+        the only difference is that you only include the properties you want to update,
         i.e.:<screen>{ // file.json
   &quot;name&quot;: &quot;Updated Name&quot;,
   &quot;zeroIsSignificant&quot;: true
@@ -1507,6 +1498,19 @@ http://server/api/26/constants/ID</screen></para>
                 <emphasis>ALWAYS</emphasis> include all properties,  <emphasis>NON_EMPTY</emphasis>
               includes non empty properties (will not include strings of 0 length, collections of
               size 0 etc)</entry>
+          </row>
+          <row>
+            <entry>userOverrideMode</entry>
+            <entry>NONE, CURRENT, SELECTED</entry>
+            <entry>Allows you to override the user property of every object you are importing, the
+              options are NONE (do nothing), CURRENT (use import user), SELECTED (select a specific
+              user using overrideUser=X)</entry>
+          </row>
+          <row>
+            <entry>overrideUser</entry>
+            <entry>User ID</entry>
+            <entry>If userOverrideMode is SELECTED, use this parameter to select the user you want
+              override with.</entry>
           </row>
         </tbody>
       </tgroup>
@@ -2704,7 +2708,7 @@ rabbitmq.connection-timeout = 60000</screen></para>
       <para>In JSON
         format:<screen language="json">{
   &quot;dataSet&quot;: &quot;pBOMPrpg1QX&quot;,
-  &quot;completeData&quot;: &quot;2014-02-03&quot;,
+  &quot;completeDate&quot;: &quot;2014-02-03&quot;,
   &quot;period&quot;: &quot;201401&quot;,
   &quot;orgUnit&quot;: &quot;DiszpKrYNg8&quot;,
   &quot;dataValues&quot;: [
@@ -3223,7 +3227,7 @@ rabbitmq.connection-timeout = 60000</screen></para>
       <para>The response will look something like
         this:<screen>{
   &quot;dataSet&quot;: &quot;pBOMPrpg1QX&quot;,
-  &quot;completeData&quot;: &quot;2014-02-03&quot;,
+  &quot;completeDate&quot;: &quot;2014-02-03&quot;,
   &quot;period&quot;: &quot;201401&quot;,
   &quot;orgUnit&quot;: &quot;DiszpKrYNg8&quot;,
   &quot;dataValues&quot;: [
@@ -4892,7 +4896,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       </table>
     </para>
   </section>
-  <section>
+  <section xml:id="webapi_validation_results">
     <title>Validation Results</title>
     <para>Validation results are objects created when violations are found during a scheduled
       validation analysis. These results can be accessed through the api using the following
@@ -5116,10 +5120,12 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>Importing both <emphasis role="italic">XML</emphasis> and <emphasis role="italic"
           >JSON</emphasis> formatted payloads are supported. The basic format of this payload, given
         as <emphasis role="italic">XML</emphasis> in this example, is like
-        so:<programlisting>&lt;completeDataSetRegistrations xmlns="http://dhis2.org/schema/dxf/2.0">
-  &lt;completeDataSetRegistration period="200810" dataSet="eZDhcZi6FLP" organisationUnit="qhqAxPSTUXp" attributeOptionCombo="bRowv6yZOF2" storedBy="imported"/>
-  &lt;compelteDataSetRegistration ...> &lt;!-- Any number of elements allowed -->
-&lt;/completeDataSetRegistrations></programlisting></para>
+        so:<screen>&lt;completeDataSetRegistrations xmlns="http://dhis2.org/schema/dxf/2.0">
+  &lt;completeDataSetRegistration period="200810" dataSet="eZDhcZi6FLP" organisationUnit="qhqAxPSTUXp" 
+    attributeOptionCombo="bRowv6yZOF2" storedBy="imported"/>
+  &lt;completeDataSetRegistration period="200811" dataSet="eZDhcZi6FLP" organisationUnit="qhqAxPSTUXp" 
+    attributeOptionCombo="bRowv6yZOF2" storedBy="imported"/>
+&lt;/completeDataSetRegistrations></screen></para>
       <para>The <emphasis role="italic">storedBy</emphasis> attribute is optional (as it is a
         nullable property on the complete registration object). You can also optionally set the
           <emphasis role="italic">date</emphasis> property (time of registration) as an attribute.
@@ -6752,7 +6758,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>aggregationType</entry>
               <entry>string</entry>
               <entry>No</entry>
-              <entry>&quot;DEFAULT&quot; | &quot;COUNT&quot; | &quot;AVERAGE&quot; | &quot;SUM&quot; | &quot;STDDEV&quot; | &quot;VARIANCE&quot; | &quot;MIN&quot; | &quot;MAX&quot;</entry>
+              <entry>&quot;DEFAULT&quot; | &quot;SUM&quot; |&quot;AVERAGE&quot; | &quot;AVERAGE_SUM_ORG_UNIT&quot;|&quot;LAST&quot;|&quot;LAST_AVERAGE_ORG_UNIT&quot;| &quot;COUNT&quot; | &quot;STDDEV&quot; | &quot;VARIANCE&quot; | &quot;MIN&quot; | &quot;MAX&quot;</entry>
               <entry>Override the data element's default aggregation type</entry>
             </row>
             <row>
@@ -7116,7 +7122,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
               <entry>aggregationType</entry>
               <entry>string</entry>
               <entry>No</entry>
-              <entry>&quot;DEFAULT&quot; | &quot;COUNT&quot; | &quot;AVERAGE&quot; | &quot;SUM&quot; | &quot;STDDEV&quot; | &quot;VARIANCE&quot; | &quot;MIN&quot; | &quot;MAX&quot;</entry>
+              <entry>&quot;DEFAULT&quot; | &quot;SUM&quot; |&quot;AVERAGE&quot; | &quot;AVERAGE_SUM_ORG_UNIT&quot;|&quot;LAST&quot;|&quot;LAST_AVERAGE_ORG_UNIT&quot;| &quot;COUNT&quot; | &quot;STDDEV&quot; | &quot;VARIANCE&quot; | &quot;MIN&quot; | &quot;MAX&quot;</entry>
               <entry>Override the data element's default aggregation type</entry>
             </row>
             <row>
@@ -7880,7 +7886,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>aggregationType</entry>
                 <entry>No</entry>
                 <entry>Aggregation type to use in the aggregation process.</entry>
-                <entry>SUM | AVERAGE | COUNT | STDDEV | VARIANCE</entry>
+                <entry>SUM | AVERAGE |AVERAGE_SUM_ORG_UNIT|LAST|LAST_AVERAGE_ORG_UNIT| COUNT | STDDEV | VARIANCE|MIN|MAX</entry>
               </row>
               <row>
                 <entry>measureCriteria</entry>
@@ -7958,6 +7964,12 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>false | true</entry>
               </row>
               <row>
+                <entry>includeMetadataDetails</entry>
+                <entry>No</entry>
+                <entry>Include metadata details to raw data response.</entry>
+                <entry>false | true</entry>
+              </row>
+              <row>
                 <entry>displayProperty</entry>
                 <entry>No</entry>
                 <entry>Property to display for metadata.</entry>
@@ -7967,7 +7979,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>outputIdScheme</entry>
                 <entry>No</entry>
                 <entry>Identifier scheme to use for metadata items the query response, can be identifier, code or attributes.</entry>
-                <entry>UID | CODE | ATTRIBUTE:&lt;UID></entry>
+                <entry>UID | CODE |NAME| ATTRIBUTE:&lt;UID></entry>
               </row>
               <row>
                 <entry>inputIdScheme</entry>
@@ -8702,6 +8714,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
 &amp;filter=J5jldMd8OHv:uYxK4wmcPqA;tDZVQ1WtwpA
 &amp;startDate=2015-01-01&amp;endDate=2015-12-31
 &amp;dimension=ou:O6uvpzGd5pu</screen></para>
+      <para>The <emphasis>outputIdScheme</emphasis> parameter is useful if you want human readable
+        data responses as it can be set to <emphasis>NAME</emphasis> like this:
+        <screen>/api/analytics/rawData.csv?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU
+&amp;filter=J5jldMd8OHv:uYxK4wmcPqA;tDZVQ1WtwpA
+&amp;startDate=2017-01-01&amp;endDate=2017-12-31
+&amp;dimension=ou:O6uvpzGd5pu
+&amp;outputIdScheme=NAME</screen></para>
       <para>The response from the <emphasis>rawData</emphasis> resource will look identical to the
         regular analytics resource; the difference is that the response contain raw, non-aggregated
         data, suitable for further aggregation by third-party systems.</para>
@@ -8962,7 +8981,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>aggregationType</entry>
               <entry>No</entry>
               <entry>Aggregation type for the value dimension. Default is AVERAGE.</entry>
-              <entry>AVERAGE | SUM | COUNT | STDDEV | VARIANCE | MIN | MAX</entry>
+              <entry>|SUM|AVERAGE | AVERAGE_SUM_ORG_UNIT | COUNT | STDDEV | VARIANCE | MIN | MAX</entry>
             </row>
             <row>
               <entry>showHierarchy</entry>
@@ -14393,6 +14412,106 @@ interval=WEEK" -u admin:district</screen>
         </table></para>
       <para>This assumes that a Google service account has been set up and configured for DHIS2.
         Please consult the installation guide for more info.</para>
+    </section>
+  </section>
+  <section xml:id="webapi_analytics_table_hooks">
+    <title>Analytics table hooks</title>
+    <para>Analytics table hooks provides a mechanism for invoking SQL scripts during different
+      phases of the analytics table generation process. This is useful for customizing data in
+      resource and analytics tables, e.g. in order to achieve specific logic for calculations and
+      aggregation. Analytics table hooks can be manipulated at the following API
+      endpoint:<screen>/api/analyticsTableHooks</screen></para>
+    <para>The analytics table hooks API supports the standard HTTP CRUD operations for creating
+      (POST), updating (PUT), retrieveing (GET) and deleting (DELETE) entities.</para>
+    <section>
+      <title>Hook fields</title>
+      <para>Analytics table hooks have the following fields:<table frame="all">
+          <title>Analytics table hook fields</title>
+          <tgroup cols="3">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.35*"/>
+            <colspec colname="newCol3" colnum="3" colwidth="2.04*"/>
+            <thead>
+              <row>
+                <entry>Field</entry>
+                <entry>Options</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>name</entry>
+                <entry>Text</entry>
+                <entry>Name of the hook.</entry>
+              </row>
+              <row>
+                <entry>phase</entry>
+                <entry>RESOURCE_TABLE_POPULATED, ANALYTICS_TABLE_POPULATED</entry>
+                <entry>The phase for when the SQL script should be invoked.</entry>
+              </row>
+              <row>
+                <entry>resourceTableType</entry>
+                <entry>
+                  <para>ORG_UNIT_STRUCTURE, DATA_SET_ORG_UNIT_CATEGORY, CATEGORY_OPTION_COMBO_NAME,
+                    DATA_ELEMENT_GROUP_SET_STRUCTURE, INDICATOR_GROUP_SET_STRUCTURE,
+                    ORG_UNIT_GROUP_SET_STRUCTURE, CATEGORY_STRUCTURE, DATA_ELEMENT_STRUCTURE
+                    PERIOD_STRUCTURE, DATE_PERIOD_STRUCTURE, DATA_ELEMENT_CATEGORY_OPTION_COMBO,
+                    DATA_APPROVAL_MIN_LEVEL</para>
+                </entry>
+                <entry>The type of resource table for which to invoke the SQL script. Applies only
+                  for hooks defined with the RESOURCE_TABLE_POPULATED phase.</entry>
+              </row>
+              <row>
+                <entry>analyticsTableType</entry>
+                <entry>DATA_VALUE, COMPLETENESS, COMPLETENESS_TARGET, ORG_UNIT_TARGET, EVENT,
+                  ENROLLMENT, VALIDATION_RESULT</entry>
+                <entry>The type of analytics table for which to invoke the SQL script. Applies only
+                  for hooks defined with the ANALYTICS_TABLE_POPULATED phase.</entry>
+              </row>
+              <row>
+                <entry>sql</entry>
+                <entry>Text</entry>
+                <entry>The SQL script to invoke.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
+      <para>The <emphasis>ANALYTICS_TABLE_POPULATED</emphasis> phase takes place after the analytics
+        table has been populated, but before indexes have been created and the temp table has been
+        swapped with the main table. As a result, the SQL script should refer to the analytics temp
+        table, e.g. <emphasis>analytics_temp</emphasis>,
+          <emphasis>analytics_completeness_temp</emphasis>,
+          <emphasis>analytics_completenesstarget_temp</emphasis>,
+          <emphasis>analytics_orgunittarget_temp</emphasis>,
+          <emphasis>analytics_event_temp_&lt;program-uid></emphasis>.</para>
+      <para>This applies also to the <emphasis>RESOURCE_TABLE_POPULATED</emphasis> phase, which
+        takes place after the resource table has been populated, but before indexes have been
+        created and the temp table has been swapped with the main table. As a result, the SQL script
+        should refer to the resource temp table, e.g. <emphasis>_orgunitstructure_temp</emphasis>,
+          <emphasis>_categorystructure_temp</emphasis>.</para>
+      <para>You should define only one of the <emphasis>resourceTableType</emphasis> and
+          <emphasis>analyticsTableType</emphasis> fields, depending on which
+          <emphasis>phase</emphasis> is defined.</para>
+    </section>
+    <section>
+      <title>Creating hooks</title>
+      <para>To create a hook which should run after the resource tables have been populated you can
+        do a <emphasis>POST</emphasis> request like this using <emphasis>JSON</emphasis>
+        format:<screen>curl -d @hooks.json "localhost/api/analyticsTableHooks" -H "Content-Type:application/json" -u admin:district -v</screen><screen>{
+  "name": "Update 'Area' in org unit group set resource table",
+  "phase": "RESOURCE_TABLE_POPULATED",
+  "resourceTableType": "ORG_UNIT_GROUP_SET_STRUCTURE",
+  "sql": "update _organisationunitgroupsetstructure_temp set \"uIuxlbV1vRT\" = 'b0EsAxm8Nge'"
+}</screen></para>
+      <para>To create a hook which should run after the data value analytics table has been
+        populated you can do a <emphasis>POST</emphasis> request like this using
+          <emphasis>JSON</emphasis>
+        format:<screen>{
+  "name": "Update 'Currently on treatment' data in analytics table",
+  "phase": "ANALYTICS_TABLE_POPULATED",
+  "analyticsTableType": "DATA_VALUE",
+  "sql": "update analytics_temp set monthly = '200212' where \"monthly\" in ('200210', '200211')"
+}</screen></para>
     </section>
   </section>
   <section xml:id="webapi_metadata_repository">

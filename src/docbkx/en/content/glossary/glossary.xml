@@ -20,6 +20,24 @@
       </glossdef>
     </glossentry>
     <glossentry>
+      <glossterm>Ananlytics</glossterm>
+      <glossdef>
+        <para>Analytics refers to the process which processes and prepares data which has been
+          entered into DHIS2 into a format which is more suitable for retreiving indicators and
+          aggregated data.  When data is entered into DHIS2, it is stored in a format which is
+          optimized for writing the data. However, when data needs to be processed into indicators
+          or aggregated (e.g from months to quarters), it is more efficent to transform and store
+          this data in a different format which is optimized for read-only operations. The analytics
+          system of DHIS2 is used extensively by the anaytics apps (GIS, Pivot Table, Event reports,
+          etc). </para>
+        <para>It is important to keep in mind that because the data which has been entered into
+          DHIS2 must be processed into the analytics format, the data which appears in the analytics
+          apps only represents the data which was present in the system the last time analytics was
+          run. If data has been entered after that, analytics will need to be run again for this
+          data to appear in the analytics apps. </para>
+      </glossdef>
+    </glossentry>
+    <glossentry>
       <glossterm baseform="aggregateData">Aggregate data</glossterm>
       <glossdef>
         <para>In the context of DHIS2, aggregate data refers to either data elements or indicators
@@ -34,6 +52,27 @@
       <abbrev>API</abbrev>
       <glossdef>
         <para>An application programming interface is a specification of how different software components should interact with each other. The DHIS2 API (or WebAPI) can be used to interface DHIS2 with other software, to build reports or custom data entry forms.</para>
+      </glossdef>
+    </glossentry>
+    <glossentry>
+      <glossterm>Approvals</glossterm>
+      <glossdef>
+        <para>Approvals can be used to control the visibility and editibility of data. When data is
+          submitted from the lowest reporting level, it can be approved by the next higher level.
+          This approval has two effects: <orderedlist>
+            <listitem>
+              <para>Data is no longer able to be edited in the data entry screens at the lower
+                level. </para>
+            </listitem>
+            <listitem>
+              <para>Depending on the system settings which have been enabled, the data will become
+                visibile at the approval level. </para>
+            </listitem>
+          </orderedlist></para>
+        <para>As an example, data is entered at the facility level, and the submitted for approval.
+          Once the data has been approved at the district level, the data will become locked in the
+          data entry screens for the facility level. It will also become visible in the analytics
+          apps to district users. </para>
       </glossdef>
     </glossentry>
   </glossdiv>
