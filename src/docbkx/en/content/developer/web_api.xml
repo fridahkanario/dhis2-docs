@@ -2149,7 +2149,7 @@ rabbitmq.connection-timeout = 60000</screen></para>
     <title>Favorites</title>
     <para>Certain types of metadata objects can be marked as favorites for the currently logged in
       user. This applies currently for
-      dashboards.<screen>/api/dashbards/29/&lt;uid>/favorite</screen></para>
+      dashboards.<screen>/api/dashboards/29/&lt;uid>/favorite</screen></para>
     <para>To make a dashboard a favorite you can make a <emphasis>POST</emphasis> request (no
       content type required) to a URL like
       this:<screen>/api/29/dashboards/iMnYyBfSxmM/favorite</screen></para>
