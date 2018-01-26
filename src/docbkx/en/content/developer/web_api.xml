@@ -2145,6 +2145,19 @@ rabbitmq.connection-timeout = 60000</screen></para>
     <para>Get deleted object of type indicator which was deleted in 2015 and
         forward:<screen>GET /api/deletedObjects.json?klass=Indicator&amp;deletedAt=2015-01-01</screen></para>
   </section>
+  <section>
+    <title>Favorite objects</title>
+    <para>Certain types of metadata objects can be marked as favorites for the currently logged in
+      user. This applies currently for
+      dashboards.<screen>/api/dashbards/29/&lt;uid>/favorite</screen></para>
+    <para>To make a dashboard a favorite you can make a <emphasis>POST</emphasis> request (no
+      content type required) to a URL like
+      this:<screen>/api/29/dashboards/iMnYyBfSxmM/favorite</screen></para>
+    <para>To remove a dashboard as a favorite you can make a <emphasis>DELETE</emphasis> request
+      using the same URL as above.</para>
+    <para>The favorite status will appear as a boolean <emphasis>favorite</emphasis> field on the
+      object (e.g. the dashboard) in the metadata response.</para>
+  </section>
   <section xml:id="webapi_file_resources">
     <title>File resources</title>
     <para><emphasis role="italic">File resources</emphasis> are objects used to represent and store
