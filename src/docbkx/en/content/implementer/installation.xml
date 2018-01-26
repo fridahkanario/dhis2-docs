@@ -1188,7 +1188,20 @@ connection.schema = update
 # ----------------------------------------------------------------------
 
 # Node identifier, optional, useful in clusters
-# node.id = 'node-1'</screen></para>
+# node.id = 'node-1'
+
+# ----------------------------------------------------------------------
+# System monitoring
+# ----------------------------------------------------------------------
+
+# System monitoring URL
+# system.monitoring.url = 
+
+# System monitoring username
+# system.monitoring.username = 
+
+# System monitoring password
+# system.monitoring.password =</screen></para>
   </section>
   <section xml:id="install_application_logging">
     <title>Application logging</title>
