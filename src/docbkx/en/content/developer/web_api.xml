@@ -2145,8 +2145,8 @@ rabbitmq.connection-timeout = 60000</screen></para>
     <para>Get deleted object of type indicator which was deleted in 2015 and
         forward:<screen>GET /api/deletedObjects.json?klass=Indicator&amp;deletedAt=2015-01-01</screen></para>
   </section>
-  <section>
-    <title>Favorite objects</title>
+  <section xml:id="webapi_favorites">
+    <title>Favorites</title>
     <para>Certain types of metadata objects can be marked as favorites for the currently logged in
       user. This applies currently for
       dashboards.<screen>/api/dashbards/29/&lt;uid>/favorite</screen></para>
