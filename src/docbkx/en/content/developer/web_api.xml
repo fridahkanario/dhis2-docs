@@ -4585,6 +4585,15 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                         </listitem>
                       </itemizedlist>
                     </listitem>
+                  <listitem>
+                    <para><emphasis role="bold">SENDMESSAGE</emphasis> - Send message at completion of event/enrollment</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><emphasis role="italic">messageTemplate</emphasis> - if defined, this
+                          template will be delivered either as SMS or EMAIL depending upon DeliveryChannel value in message template.</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
                   </itemizedlist></entry>
                 <entry>Compulsory</entry>
               </row>
