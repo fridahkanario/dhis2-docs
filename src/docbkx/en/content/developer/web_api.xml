@@ -10544,6 +10544,7 @@ interval=WEEK" -u admin:district</screen>
         single or multiple destinations. One or more gateways need to be configured before using the
         service. An SMS will not be sent if there is no gateway configured.  It needs a set of
         recipients and message text in JSON format as shown below. </para>
+      <para>NOTE: Recipients list will be partitioned if its size exceed MAX_ALLOWED_RECIPIENTS limit which is 200.</para>
       <screen>/api/26/sms/outbound</screen>
       <screen>{ 
   &quot;message&quot;:&quot;Sms Text&quot;,  
