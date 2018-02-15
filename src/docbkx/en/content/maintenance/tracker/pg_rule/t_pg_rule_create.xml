@@ -384,6 +384,20 @@ Kolla med mArkus"?>
                                             to fix the error.</para>
                                     </entry>
                                 </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Send Message
+                                        </emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Message template to send</emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>Send Message triggers a notification based on provided message template. This action will be taken at event/enrollment 
+                                            <emphasis role="bold">completion.</emphasis> </para>
+                                        <para>Message template will be parsed and variables will be substituted with actual values.</para>
+                                    </entry>
+                                </row>
                             </tbody>
                         </tgroup>
                     </informaltable>

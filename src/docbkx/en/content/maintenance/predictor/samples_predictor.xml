@@ -7,9 +7,11 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <title>Sampling past periods</title>
-    <para>Predicted values are based on sampled values from past periods (prior to the period
-        of the predicted value, which may itself be in the past, present or future). Several
-        parameters determine the choice of which past periods to sample from:</para>
+    <para>Predictors can generate data values for periods that are in the past, present, or future.
+        These values are based on data sampled from periods before the predicted period, and/or
+        data from the predicted period. When you use data sampled from past periods (periods
+        before the predicted period), several parameters determine the choice of which past
+        periods to sample from:</para>
     <section xml:id="sequential_sample_count">
         <title>Sequential sample count</title>
         <para>A predictor's <emphasis>Sequential sample count</emphasis> gives the number of
