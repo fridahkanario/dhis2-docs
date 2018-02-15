@@ -59,6 +59,11 @@ Explain all properties that are in activities." flag="done"?>activities<?oxy_com
             &quot;href&quot;: &quot;*&quot;,
             "namespace": "my-namespace"
         }
+    },
+    "authorities": [
+         "MY_APP_ADD_NEW",
+         "MY_APP_UPDATE",
+         "MY_APP_DELETE"
     }
 }</screen>
     </para>
@@ -73,6 +78,12 @@ Explain all properties that are in activities." flag="done"?>activities<?oxy_com
         <para>The <emphasis role="italic">activities</emphasis> property is an dhis-specific
           extension meant to differentiate between a standard Open Web App and an app that can be
           installed in DHIS2. </para>
+      </listitem>
+      <listitem>
+        <para>The <emphasis role="italic">authorities</emphasis> property contains a list of DHIS2
+          authorities which can be used to restrict users from certain actions on the current app.
+          This list will be loaded into DHIS2 during app installation process and available for
+          selecting in User Role management form.</para>
       </listitem>
       <listitem>
         <para>The <emphasis role="italic">*</emphasis> value for <emphasis role="italic"
