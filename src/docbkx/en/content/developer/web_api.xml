@@ -848,6 +848,18 @@ LAST_FINANCIAL_YEAR, LAST_5_FINANCIAL_YEARS</screen>
               <entry>Collection is empty</entry>
             </row>
             <row>
+              <entry>token</entry>
+              <entry> string </entry>
+              <entry>true</entry>
+              <entry>Match on multiple tokens in search property</entry>
+            </row>
+            <row>
+              <entry>!token</entry>
+              <entry> string </entry>
+              <entry>true</entry>
+              <entry>Not match on multiple tokens in search property</entry>
+            </row>
+            <row>
               <entry>in</entry>
               <entry> string | boolean | integer | float | date</entry>
               <entry>true</entry>
