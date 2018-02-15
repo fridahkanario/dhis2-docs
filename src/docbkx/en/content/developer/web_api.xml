@@ -2145,6 +2145,19 @@ rabbitmq.connection-timeout = 60000</screen></para>
     <para>Get deleted object of type indicator which was deleted in 2015 and
         forward:<screen>GET /api/deletedObjects.json?klass=Indicator&amp;deletedAt=2015-01-01</screen></para>
   </section>
+  <section xml:id="webapi_favorites">
+    <title>Favorites</title>
+    <para>Certain types of metadata objects can be marked as favorites for the currently logged in
+      user. This applies currently for
+      dashboards.<screen>/api/29/dashboards/&lt;uid>/favorite</screen></para>
+    <para>To make a dashboard a favorite you can make a <emphasis>POST</emphasis> request (no
+      content type required) to a URL like
+      this:<screen>/api/29/dashboards/iMnYyBfSxmM/favorite</screen></para>
+    <para>To remove a dashboard as a favorite you can make a <emphasis>DELETE</emphasis> request
+      using the same URL as above.</para>
+    <para>The favorite status will appear as a boolean <emphasis>favorite</emphasis> field on the
+      object (e.g. the dashboard) in the metadata response.</para>
+  </section>
   <section xml:id="webapi_file_resources">
     <title>File resources</title>
     <para><emphasis role="italic">File resources</emphasis> are objects used to represent and store
@@ -4572,6 +4585,15 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                         </listitem>
                       </itemizedlist>
                     </listitem>
+                  <listitem>
+                    <para><emphasis role="bold">SENDMESSAGE</emphasis> - Send message at completion of event/enrollment</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><emphasis role="italic">messageTemplate</emphasis> - if defined, this
+                          template will be delivered either as SMS or EMAIL depending upon DeliveryChannel value in message template.</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
                   </itemizedlist></entry>
                 <entry>Compulsory</entry>
               </row>
@@ -10522,6 +10544,7 @@ interval=WEEK" -u admin:district</screen>
         single or multiple destinations. One or more gateways need to be configured before using the
         service. An SMS will not be sent if there is no gateway configured.  It needs a set of
         recipients and message text in JSON format as shown below. </para>
+      <para>NOTE: Recipients list will be partitioned if its size exceed MAX_ALLOWED_RECIPIENTS limit which is 200.</para>
       <screen>/api/26/sms/outbound</screen>
       <screen>{ 
   &quot;message&quot;:&quot;Sms Text&quot;,  
