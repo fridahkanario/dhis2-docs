@@ -4585,6 +4585,15 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                         </listitem>
                       </itemizedlist>
                     </listitem>
+                  <listitem>
+                    <para><emphasis role="bold">SENDMESSAGE</emphasis> - Send message at completion of event/enrollment</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><emphasis role="italic">messageTemplate</emphasis> - if defined, this
+                          template will be delivered either as SMS or EMAIL depending upon DeliveryChannel value in message template.</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
                   </itemizedlist></entry>
                 <entry>Compulsory</entry>
               </row>
@@ -10544,6 +10553,7 @@ interval=WEEK" -u admin:district</screen>
         single or multiple destinations. One or more gateways need to be configured before using the
         service. An SMS will not be sent if there is no gateway configured.  It needs a set of
         recipients and message text in JSON format as shown below. </para>
+      <para>NOTE: Recipients list will be partitioned if its size exceed MAX_ALLOWED_RECIPIENTS limit which is 200.</para>
       <screen>/api/26/sms/outbound</screen>
       <screen>{ 
   &quot;message&quot;:&quot;Sms Text&quot;,  
@@ -11616,6 +11626,10 @@ interval=WEEK" -u admin:district</screen>
               <entry>keyCacheAnalyticsDataYearThreshold</entry>
               <entry>Analytics data older than this value (in years) will always be cached. "0"
                 disabled this setting. Default: 0</entry>
+            </row>
+            <row>
+              <entry>analyticsFinancialYearStart</entry>
+              <entry>Set financial year start. Default: October</entry>
             </row>
             <row>
               <entry>keyIgnoreAnalyticsApprovalYearThreshold</entry>
