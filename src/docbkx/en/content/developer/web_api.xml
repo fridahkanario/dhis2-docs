@@ -11631,6 +11631,10 @@ interval=WEEK" -u admin:district</screen>
                 disabled this setting. Default: 0</entry>
             </row>
             <row>
+              <entry>analyticsFinancialYearStart</entry>
+              <entry>Set financial year start. Default: October</entry>
+            </row>
+            <row>
               <entry>keyIgnoreAnalyticsApprovalYearThreshold</entry>
               <entry>"0" check approval for all data. "-1" disable approval checking. "1" or higher
                 checks approval for all data that is newer than "1" year.</entry>
