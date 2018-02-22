@@ -537,14 +537,7 @@
   </section>
   <section xml:id="dataAdmin_scheduling">
     <title>Scheduling</title>
-    <para>
-      Starting 2.29 you can schedule several jobs. For each job you can specify the interval, either with
-      predefined options or user specified cron expression. The cron expression must follow a specific pattern, see
-      https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm for guidelines.
-
-      For some jobs you are able to select parameters for that job. The entry will become a job configuration in the system and
-      trigger when the cron expression is valid.
-    </para>
+    // TODO Kjetil
   </section>
   <section xml:id="dataAdmin_dataSync">
     <title>Data synchronization</title>

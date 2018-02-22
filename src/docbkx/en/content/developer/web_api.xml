@@ -13673,65 +13673,144 @@ interval=WEEK" -u admin:district</screen>
   </section>
   <section xml:id="webapi_scheduling">
     <title>Scheduling</title>
-    <para>With 2.29 you are able to schedule jobs with more options. You can specify a cron expression which will
-      trigger the job to execute at a user specified interval. For jobs with parameters you are also able to pass a
-      parameter object with the POST which contains user specified parameters for the particular job.
+    <para>In 2.29 we introduced a new way of scheduling jobs on the server. Each type of job has different properties
+      for configuration, giving you more control over how jobs are run. In addition, you can configure the same job to run with
+      different configurations and at different intervals if required.
 
-      To configure jobs you can do a POST request to the following resource: <screen>/api/jobConfigurations</screen></para>
+      <table frame="all">
+        <title>Main properties</title>
+        <tgroup cols="2">
+          <colspec colnum="1" colname="c1" colwidth="127.75pt"/>
+          <colspec colnum="2" colname="c2" colwidth="328.25pt"/>
+          <thead>
+            <row>
+              <entry>Property</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>name</entry>
+              <entry>Name of job</entry>
+            </row>
+            <row>
+              <entry>cronExpression</entry>
+              <entry>The cron expression resembles a time interval. It must follow a specific pattern,
+                see https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm for guidelines</entry>
+            </row>
+            <row>
+              <entry>jobType</entry>
+              <entry>
+                Type of job, see next table for detailed overview of available job type or visit https://play.dhis2.org/dev/api/jobConfigurations/jobTypesExtended
+                for an overview of the parameters designed for a job type. A JobConfiguration has a "configurable"
+                property which is adopted by the job type. Some jobs are system jobs which only allows for altering of the cron expression.
+              </entry>
+            </row>
+            <row>
+              <entry>jobParameters</entry>
+              <entry>Parameters of job if applicable for job type</entry>
+            </row>
+            <row>
+              <entry>continuousExecution</entry>
+              <entry>A job may be added as a continuous job which means, as soon as the job finished, it will be scheduled to run again right away.
+                Set "continuouseExecution" to true in the payload if continuous execution is desired
+              </entry>
+            </row>
+            <row>
+              <entry>enabled</entry>
+              <entry>A job can be added to the system without it being scheduled by setting "enabled" to false in the JSON payload</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+
+      <table frame="all">
+        <title>Available job types</title>
+        <tgroup cols="2">
+          <colspec colnum="1" colname="c1" colwidth="157.75pt"/>
+          <colspec colnum="2" colname="c2" colwidth="298,25pt"/>
+          <thead>
+            <row>
+              <entry>Job type</entry>
+              <entry>Parameters</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>DATA_INTEGRITY</entry>
+              <entry>NONE</entry>
+            </row>
+            <row>
+              <entry>ANALYTICS_TABLE</entry>
+              <entry>lastYears, skipTableTypes, skipResourceTables</entry>
+            </row>
+            <row>
+              <entry>DATA_SYNC</entry>
+              <entry>NONE</entry>
+            </row>
+            <row>
+              <entry>META_DATA_SYNC</entry>
+              <entry>NONE</entry>
+            </row>
+            <row>
+              <entry>SEND_SCHEDULED_MESSAGE</entry>
+              <entry>NONE</entry>
+            </row>
+            <row>
+              <entry>PROGRAM_NOTIFICATIONS</entry>
+              <entry>NONE</entry>
+            </row>
+            <row>
+              <entry>PROGRAM_NOTIFICATIONS</entry>
+              <entry>NONE</entry>
+            </row>
+            <row>
+              <entry>MONITORING</entry>
+              <entry>relativeStart, relativeEnd, validationRuleGroups, sendNotifications, persistsResults</entry>
+            </row>
+            <row>
+              <entry>PUSH_ANALYSIS</entry>
+              <entry>pushAnalysis</entry>
+            </row>
+            <row>
+              <entry>PREDICTOR</entry>
+              <entry>relativeStart, relativeEnd, predictors</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+
+      To configure jobs you can do a POST request to the following resource: <screen>/api/jobConfigurations</screen>
+    </para>
 
     <para>Jobs without parameters in JSON format:
       <screen>
         {
-          name:     user specified name for the job,
-          jobType:  JOB TYPE
-          cronExpression: 0 * * ? * *
+          "name":     "",
+          "jobType":  "JOBTYPE",
+          "cronExpression": "0 * * ? * *"
         }
       </screen>
     </para>
 
-    <para>Jobs with parameters in JSON format:
+    <para>Jobs with parameters in JSON format (ANALYTICS_TABLE example):
       <screen>
         {
-          name:     user specified name for the job,
-          jobType:  JOB TYPE
-          cronExpression: 0 * * ? * *,
-          jobParameters: (ANALYTICS_TABLE example)
+          "name":     "Analytics last two years",
+          "jobType":  "ANALYTICS_TABLE",
+          "cronExpression": "0 * * ? * *",
+          "jobParameters":
           {
-              lastYears: 2,
-              skipTableTypes: [],
-              skipResourceTables: false
+              "lastYears": "2",
+              "skipTableTypes": "[]",
+              "skipResourceTables": "false"
           }
         }
       </screen>
     </para>
 
-    <para>Available job types:
-      <screen>
-        RESOURCE_TABLE
-        DATA_SYNC
-        META_DATA_SYNC
-        PREDICTOR
-        MONITORING
-        PUSH_ANALYSIS
-        DATA_INTEGRITY
-        SEND_SCHEDULED_MESSAGE
-        CREDENTIALS_EXPIRY_ALERT
-        PROGRAM_NOTIFICATIONS
-        ANALYTICS_TABLE
-      </screen>
-    </para>
-
-    Jobs with special configuration may not be added if the configuration is missing. An example of this is data synchronization,
+    Jobs with special configuration may not be added if the required system settings are not configured. An example of this is data synchronization,
     which requires remote server configuration.
-
-    <para>There are some special flags for jobs. They are described here:
-      <screen>
-        enabled:  Set this to false if you want to add/update a job and want it to be disabled.
-                  All jobs are enabled by default.
-        continuousExecution:  Set this to true if you want the job to run continuously. A good example is analytics
-                              run continuously
-      </screen>
-    </para>
   </section>
   <section xml:id="webapi_schema">
     <title>Schema</title>
