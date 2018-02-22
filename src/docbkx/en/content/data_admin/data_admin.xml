@@ -536,7 +536,126 @@
       effect.</para>
   </section>
   <section xml:id="dataAdmin_scheduling">
-    <title>Scheduling</title>
+    <title>About the Scheduler</title>
+    <para>The Scheduler is an application for for managing background jobs in DHIS2. Background jobs
+    can do a number of tasks, such as running analytics, synchronizing data and meta data, or sending
+    an SMS to a number of recipients. The application provides the ability to create, modify and delete
+    such jobs.</para>
+    <para>The Scheduler comes bundled with DHIS2 and is accessed through the App Menu.</para>
+    <para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="80%" align="center"
+              fileref="resources/images/scheduler/overview.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
+    <title>Configuring jobs with the Scheduler app</title>
+    <para>
+        <note>
+            <para>The Scheduler is an application for for managing background jobs in DHIS2. Background
+            jobs can do a number of tasks, such as running analytics, synchronizing data and meta data,
+            or sending an SMS to a number of recipients. The application provides the ability to create,
+            modify and delete such jobs.</para>
+        </note>
+    </para>
+    <title>Creating a job:</title>
+    <orderedList>
+      <listitem>
+        <para>Open the <emphasis role="bold">Scheduler</emphasis> app and click the add button in the
+        bottom right corner.</para>
+      </listitem>
+      <listitem>
+        <para>Choose a suitable <emphasis role="bold">Name</emphasis> for the new job.</para>
+      </listitem>
+      <listitem>
+        <para>Select a running frequency for the job, i.e. when and how often the job should run.</para>
+        <orderedList>
+          <listItem>
+            <para>You can either select a pre-defined frequency from the dropdown-menu, or</para>
+          </listItem>
+          <listItem>
+            <para>You can give the job a custom <emphasis role="bold">Cron expresssion</emphasis> if you
+            want a specific schedule. See the "Cron expressions" section for details.</para>
+          </listItem>
+          <listItem>
+            <para>Enabling the <emphasis role="bold">Continuous execution</emphasis> option will make
+            the job run constantly. In other words, as soon as the job finishes, it will be scheduled to
+            run again right away. Selecting this option will disable the other fields.</para>
+          </listItem>
+        </orderedList>
+      </listitem>
+      <listItem>
+        <para>Select the <emphasis role="bold">Job type</emphasis> you want to schedule using the
+        dropdown-menu</para>
+      </listItem>
+      <listItem>
+        <para>If the job type is customizable, a <emphasis role="bold">Parameters</emphasis> section will
+        appear below. These additional options specify the details of the scheduled job, and will vary 
+        greatly depending on the job type.</para>
+      </listItem>
+      <listItem>
+        <para>Press the <emphasis role="bold">Add job</emphasis> button to confirm the job
+        creation.<para>
+      </listItem>
+    </orderedList>
+    <para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="80%" align="center"
+              fileref="resources/images/scheduler/add_new_job.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
+    <para>Jobs are enabled by default.</para>
+    <title>Configuring a job</title>
+    <itemizedList>
+      <listItem>
+        <para>To quickly enable or disable a job from running, use the <emphasis role="bold">Enabled</emphasis>
+        column on the landing page of the Scheduler app.</para>
+      </listItem>
+    </itemizedList>
+    <para>Further configuring a job:</para>
+    <orderedList>
+      <listItem>
+        <para>Select a job from the landing page to unveil the <emphasis role="bold">Attributes</emphasis>
+        and change them to accordingly</para>
+        <itemizedList>
+          <listItem>
+            <para>See the previous section for scheduling details</para>
+          </listItem>
+        </itemizedList>
+      <listItem>
+      <listItem>
+        <para>If the job type supports extra options, the <emphasis role="bold">Parameters</emphasis> section
+        will also be able to change</para>
+      <listItem>
+      <listItem>
+        <para>When done, press the <emphasis role="bold">Save changes</emphasis> button to persist the
+        changes</para>
+      <listItem>
+    </orderedList>
+    <title>Deleting a job</title>
+    <orderedList>
+      <listItem>Select the job you want to delete.</listItem>
+      <listItem>Press the <emphasis role="bold"Delete</emphasis> button in the bottom right corner</listItem>
+      <listItem>Confirm by pressing <emphasis role="bold">Delete</emphasis> again in the popup
+      window.</listItem>
+    </orderedList>
+    <para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="80%" align="center"
+              fileref="resources/images/scheduler/delete_job.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
   </section>
   <section xml:id="dataAdmin_dataSync">
     <title>Data synchronization</title>

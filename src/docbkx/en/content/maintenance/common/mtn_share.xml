@@ -10,6 +10,9 @@
     <para>You can assign different sharing settings to metadata objects, for example organisation
         units and tracked entity attributes. These sharing settings control which users and users
         groups that can view or edit a metadata object.</para>
+    <para>Some metadata objects also allows you to change the sharing setting of data related to
+        the object. These additional settings control which users and user groups that can capture
+        or view data instantiated from that metadata object.</para>
     <para>
         <note>
             <para>The default setting is that everyone (<emphasis role="bold">Public
@@ -30,7 +33,7 @@
                 it. The user group is added to the list.</para>
         </listitem>
         <listitem>
-            <para>Change sharing settings for the users and user groups you want to modify.</para>
+            <para>Change metadata sharing settings for the users and user groups you want to modify.</para>
             <itemizedlist>
                 <listitem>
                     <para><emphasis role="bold">Can edit and view</emphasis>: Everyone can view and
@@ -43,6 +46,23 @@
                 <listitem>
                     <para><emphasis role="bold">No access</emphasis>: The public won't have access
                         to the object. This setting is only applicable to <emphasis role="bold"
+                            >Public access</emphasis>.  </para>
+                </listitem>
+            </itemizedlist>
+
+            <para>Change data sharing settings for the users and user groups you want to modify.</para>
+            <itemizedlist>
+                <listitem>
+                    <para><emphasis role="bold">Can capture data</emphasis>: Everyone can view and
+                        capture data for the object.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Can view data</emphasis>: Everyone can view data for
+                        the object.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">No access</emphasis>: The public won't have access
+                        to data for the object. This setting is only applicable to <emphasis role="bold"
                             >Public access</emphasis>.  </para>
                 </listitem>
             </itemizedlist>
