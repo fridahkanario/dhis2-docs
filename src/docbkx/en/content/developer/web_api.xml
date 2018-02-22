@@ -11622,6 +11622,16 @@ interval=WEEK" -u admin:district</screen>
               <entry>Do not require recaptcha for self registration. Default: "false"</entry>
             </row>
             <row>
+              <entry>recaptchaSecret</entry>
+              <entry>Google API recaptcha secret. Default: dhis2 play instance API secret, but 
+                this will only works on you local instance and not in production.</entry>
+            </row>
+            <row>
+              <entry>recaptchaSite</entry>
+              <entry>Google API recaptcha site. Default: dhis2 play instance API site, but
+                this will only works on you local instance and not in production.</entry>
+            </row>
+            <row>
               <entry>keyOpenIdProvider</entry>
               <entry>OpenID provider</entry>
             </row>
