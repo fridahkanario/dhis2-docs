@@ -848,6 +848,18 @@ LAST_FINANCIAL_YEAR, LAST_5_FINANCIAL_YEARS</screen>
               <entry>Collection is empty</entry>
             </row>
             <row>
+              <entry>token</entry>
+              <entry> string </entry>
+              <entry>true</entry>
+              <entry>Match on multiple tokens in search property</entry>
+            </row>
+            <row>
+              <entry>!token</entry>
+              <entry> string </entry>
+              <entry>true</entry>
+              <entry>Not match on multiple tokens in search property</entry>
+            </row>
+            <row>
               <entry>in</entry>
               <entry> string | boolean | integer | float | date</entry>
               <entry>true</entry>
@@ -8042,6 +8054,12 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>Dimensions to use as rows for table layout.</entry>
                 <entry>Any dimension (must be query dimension)</entry>
               </row>
+              <row>
+                <entry>order</entry>
+                <entry>No</entry>
+                <entry>Specify ordering of rows based on value</entry>
+                <entry>ASC | DESC</entry>
+              </row>
             </tbody>
           </tgroup>
         </table>The <emphasis role="italic">dimension</emphasis> query parameter defines which
@@ -8095,6 +8113,9 @@ ORDER BY oul.level, par.name, ou.name</screen>
         query (not a filter). Such a request can look like this:</para>
       <screen>/api/26/analytics.html?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU&amp;dimension=pe:2014Q1;2014Q2
   &amp;dimension=ou:O6uvpzGd5pu&amp;tableLayout=true&amp;columns=dx;ou&amp;rows=pe</screen>
+  <para>The <emphasis role="italic">order</emphasis> parameter can be used for analytics resource to generate ordered data. 
+  The data will be ordered in ascending(or descending) order of values. An example request for ordering the values in descending order is:</para>
+      <screen>/api/26/analytics?dimension=dx:fbfJHSPpUQD&amp;dimension=pe:LAST_12_MONTHS&amp;dimension=ou:O6uvpzGd5pu&amp;order=DESC</screen>
     </section>
     <section xml:id="webapi_analytics_dimensions_and_items">
       <title>Dimensions and items</title>
@@ -11627,6 +11648,10 @@ interval=WEEK" -u admin:district</screen>
               <entry>keyCacheAnalyticsDataYearThreshold</entry>
               <entry>Analytics data older than this value (in years) will always be cached. "0"
                 disabled this setting. Default: 0</entry>
+            </row>
+            <row>
+              <entry>analyticsFinancialYearStart</entry>
+              <entry>Set financial year start. Default: October</entry>
             </row>
             <row>
               <entry>keyIgnoreAnalyticsApprovalYearThreshold</entry>
