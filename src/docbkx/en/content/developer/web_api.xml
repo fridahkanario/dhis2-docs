@@ -13728,7 +13728,7 @@ interval=WEEK" -u admin:district</screen>
       intervals if required.
       <table frame="all">
         <title>Main properties</title>
-        <tgroup>
+        <tgroup cols="3">
           <thead>
             <row>
               <entry>Property</entry>
@@ -13754,7 +13754,7 @@ interval=WEEK" -u admin:district</screen>
             <row>
               <entry>jobType</entry>
               <entry>The job type represent which task is run. In the next table, you can get an
-                overview of existing job types.  Each job type can have a a specific set of
+                overview of existing job types. Each job type can have a a specific set of
                 parameters for job configuration
                 https://play.dhis2.org/dev/api/jobConfigurations/jobTypesExtended for an overview of
                 the parameters designed for a job type. A JobConfiguration has a "configurable"
@@ -13786,7 +13786,7 @@ interval=WEEK" -u admin:district</screen>
       </table>
       <table frame="all">
         <title>Available job types</title>
-        <tgroup>
+        <tgroup cols="3">
           <thead>
             <row>
               <entry>Job type</entry>
@@ -13865,19 +13865,24 @@ interval=WEEK" -u admin:district</screen>
               <entry>
                 <itemizedlist>
                   <listitem>
-                    <para>relativeStart: A number related to date of execution which resembles the start of the period to monitor</para>
+                    <para>relativeStart: A number related to date of execution which resembles the
+                      start of the period to monitor</para>
                   </listitem>
                   <listitem>
-                    <para>relativeEnd: A number related to date of execution which resembles the start of the period to monitor</para>
+                    <para>relativeEnd: A number related to date of execution which resembles the end
+                      of the period to monitor</para>
                   </listitem>
                   <listitem>
-                    <para>validationRuleGroups: Validation rule groups(UIDs) to include in job</para>
+                    <para>validationRuleGroups: Validation rule groups(UIDs) to include in
+                      job</para>
                   </listitem>
                   <listitem>
-                    <para>sendNotification: Set "true" if job should send notifications based on validation rule groups</para>
+                    <para>sendNotification: Set "true" if job should send notifications based on
+                      validation rule groups</para>
                   </listitem>
                   <listitem>
-                    <para>persistsResults: Set "true" if job should persist validation results</para>
+                    <para>persistsResults: Set "true" if job should persist validation
+                      results</para>
                   </listitem>
                 </itemizedlist>
               </entry>
@@ -13893,10 +13898,10 @@ interval=WEEK" -u admin:district</screen>
                     <para>validationRuleGroups (Array of String (UIDs):None )</para>
                   </listitem>
                   <listitem>
-                    <para>sendNotification (Boolean)</para>
+                    <para>sendNotification (Boolean:false)</para>
                   </listitem>
                   <listitem>
-                    <para>persistsResults (Boolean)</para>
+                    <para>persistsResults (Boolean:false)</para>
                   </listitem>
                 </itemizedlist>
               </entry>
@@ -13904,16 +13909,19 @@ interval=WEEK" -u admin:district</screen>
             <row>
               <entry>PUSH_ANALYSIS</entry>
               <entry>pushAnalysis</entry>
+              <entry/>
             </row>
             <row>
               <entry>PREDICTOR</entry>
               <entry>
                 <itemizedlist>
                   <listitem>
-                    <para>relativeStart: A number related to date of execution which resembles the start of the period to monitor</para>
+                    <para>relativeStart: A number related to date of execution which resembles the
+                      start of the period to monitor</para>
                   </listitem>
                   <listitem>
-                    <para>relativeEnd: A number related to date of execution which resembles the start of the period to monitor</para>
+                    <para>relativeEnd: A number related to date of execution which resembles the
+                      start of the period to monitor</para>
                   </listitem>
                   <listitem>
                     <para>predictors: Predictors(UIDs) to include in job</para>
@@ -13961,10 +13969,11 @@ interval=WEEK" -u admin:district</screen>
               "skipResourceTables": false
           }
         }
-      </screen>
+      </screen></para>
+    <para>List all jobConfigurations:<screen>GET /api/jobConfigurations</screen>
     </para>
-    <para>GET job: (ANALYTICS_TABLE example):
-      <screen>
+    <para>Retrieve a job: (ANALYTICS_TABLE example):
+      <screen>GET /api/jobConfigurations/KBcP6Qw37gT</screen><screen>
         {
           "lastUpdated": "2018-02-22T15:15:34.067",
           "id": "KBcP6Qw37gT",
@@ -14006,7 +14015,7 @@ interval=WEEK" -u admin:district</screen>
       </screen>
     </para>
     <para>Updating job with parameters in JSON format (ANALYTICS_TABLE example):
-      <screen>
+      <screen>PUT /api/jobConfiguration/KBcP6Qw37gT</screen><screen>
         {
           "name": "analytics last two years",
           "enabled": true,
@@ -14021,6 +14030,7 @@ interval=WEEK" -u admin:district</screen>
         }
       </screen>
     </para>
+    <para>Deleting a job:<screen>DELETE /api/jobConfiguration/KBcP6Qw37gT</screen></para>
 
     <para>Some jobs with custom configuration parameters may not be added if the required system
       settings are not configured. An example of this is data synchronization, which requires remote
