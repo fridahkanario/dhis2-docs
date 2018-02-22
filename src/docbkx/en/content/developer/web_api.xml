@@ -13856,11 +13856,6 @@ interval=WEEK" -u admin:district</screen>
               <entry/>
             </row>
             <row>
-              <entry>PROGRAM_NOTIFICATIONS</entry>
-              <entry>NONE</entry>
-              <entry/>
-            </row>
-            <row>
               <entry>MONITORING (Validation rule analysis)</entry>
               <entry>
                 <itemizedlist>
@@ -13908,8 +13903,20 @@ interval=WEEK" -u admin:district</screen>
             </row>
             <row>
               <entry>PUSH_ANALYSIS</entry>
-              <entry>pushAnalysis</entry>
-              <entry/>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>pushAnalysis: The uid of the push analysis you want to run</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>pushAnalysis (String:None)</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
             </row>
             <row>
               <entry>PREDICTOR</entry>
