@@ -13721,15 +13721,14 @@ interval=WEEK" -u admin:district</screen>
   </section>
   <section xml:id="webapi_scheduling">
     <title>Scheduling</title>
-    <para>In 2.29 we introduced a new way of scheduling jobs on the server. Each type of job has
+    <para>
+      In 2.29 we introduced a new way of scheduling jobs on the server. Each type of job has
       different properties for configuration, giving you more control over how jobs are run. In
       addition, you can configure the same job to run with different configurations and at different
-      intervals if required. <table frame="all">
+      intervals if required.
+      <table frame="all">
         <title>Main properties</title>
-        <tgroup cols="3">
-          <colspec colnum="1" colname="c1" colwidth="110.2pt"/>
-          <colspec colnum="2" colname="c2" colwidth="345.8pt"/>
-          <colspec colname="newCol3" colnum="3" colwidth="1*"/>
+        <tgroup>
           <thead>
             <row>
               <entry>Property</entry>
@@ -13756,7 +13755,7 @@ interval=WEEK" -u admin:district</screen>
               <entry>jobType</entry>
               <entry>The job type represent which task is run. In the next table, you can get an
                 overview of existing job types.  Each job type can have a a specific set of
-                parameters for job configuration.<para/>
+                parameters for job configuration
                 https://play.dhis2.org/dev/api/jobConfigurations/jobTypesExtended for an overview of
                 the parameters designed for a job type. A JobConfiguration has a "configurable"
                 property which is adopted by the job type. Some jobs are system jobs which only
@@ -13787,10 +13786,7 @@ interval=WEEK" -u admin:district</screen>
       </table>
       <table frame="all">
         <title>Available job types</title>
-        <tgroup cols="3">
-          <colspec colnum="1" colname="c1" colwidth="146.94pt"/>
-          <colspec colnum="2" colname="c2" colwidth="1*"/>
-          <colspec colname="newCol3" colnum="3" colwidth="1.01*"/>
+        <tgroup>
           <thead>
             <row>
               <entry>Job type</entry>
@@ -13815,7 +13811,7 @@ interval=WEEK" -u admin:district</screen>
                     <para>skipTableTypes: Skip generation of tables</para>
                     <itemizedlist>
                       <listitem>
-                        <para>Possuble values: DATA_VALUE, COMPLETENESS, COMPLETENESS_TARGET,
+                        <para>Possible values: DATA_VALUE, COMPLETENESS, COMPLETENESS_TARGET,
                           ORG_UNIT_TARGET, EVENT, ENROLLMENT, VALIDATION_RESULT</para>
                       </listitem>
                     </itemizedlist>
@@ -13866,35 +13862,93 @@ interval=WEEK" -u admin:district</screen>
             </row>
             <row>
               <entry>MONITORING (Validation rule analysis)</entry>
-              <entry>relativeStart, relativeEnd, validationRuleGroups, sendNotifications,
-                persistsResults</entry>
-              <entry/>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>relativeStart: A number related to date of execution which resembles the start of the period to monitor</para>
+                  </listitem>
+                  <listitem>
+                    <para>relativeEnd: A number related to date of execution which resembles the start of the period to monitor</para>
+                  </listitem>
+                  <listitem>
+                    <para>validationRuleGroups: Validation rule groups(UIDs) to include in job</para>
+                  </listitem>
+                  <listitem>
+                    <para>sendNotification: Set "true" if job should send notifications based on validation rule groups</para>
+                  </listitem>
+                  <listitem>
+                    <para>persistsResults: Set "true" if job should persist validation results</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>relativeStart (int:0)</para>
+                  </listitem>
+                  <listitem>
+                    <para>relativeEnd (int:0)</para>
+                  </listitem>
+                  <listitem>
+                    <para>validationRuleGroups (Array of String (UIDs):None )</para>
+                  </listitem>
+                  <listitem>
+                    <para>sendNotification (Boolean)</para>
+                  </listitem>
+                  <listitem>
+                    <para>persistsResults (Boolean)</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
             </row>
             <row>
               <entry>PUSH_ANALYSIS</entry>
               <entry>pushAnalysis</entry>
-              <entry/>
             </row>
             <row>
               <entry>PREDICTOR</entry>
-              <entry>relativeStart, relativeEnd, predictors</entry>
-              <entry/>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>relativeStart: A number related to date of execution which resembles the start of the period to monitor</para>
+                  </listitem>
+                  <listitem>
+                    <para>relativeEnd: A number related to date of execution which resembles the start of the period to monitor</para>
+                  </listitem>
+                  <listitem>
+                    <para>predictors: Predictors(UIDs) to include in job</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>relativeStart (int:0)</para>
+                  </listitem>
+                  <listitem>
+                    <para>relativeEnd (int:0)</para>
+                  </listitem>
+                  <listitem>
+                    <para>predictors (Array of String (UIDs):None )</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
             </row>
           </tbody>
         </tgroup>
       </table> To configure jobs you can do a POST request to the following resource:
       <screen>/api/jobConfigurations</screen>
     </para>
-    <para>Jobs without parameters in JSON format:
+    <para>Adding job without parameters in JSON format:
       <screen>
         {
           "name": "",
           "jobType": "JOBTYPE",
-          "cronExpression": "0 * * ? * *"
+          "cronExpression": "0 * * ? * *",
         }
       </screen>
     </para>
-    <para>Jobs with parameters in JSON format (ANALYTICS_TABLE example):
+    <para>Adding job with parameters in JSON format (ANALYTICS_TABLE example):
       <screen>
         {
           "name": "Analytics last two years",
@@ -13903,12 +13957,71 @@ interval=WEEK" -u admin:district</screen>
           "jobParameters":
           {
               "lastYears": "2",
-              "skipTableTypes": "[]",
-              "skipResourceTables": "false"
+              "skipTableTypes": [],
+              "skipResourceTables": false
           }
         }
       </screen>
     </para>
+    <para>GET job: (ANALYTICS_TABLE example):
+      <screen>
+        {
+          "lastUpdated": "2018-02-22T15:15:34.067",
+          "id": "KBcP6Qw37gT",
+          "href": "http://localhost:8080/api/jobConfigurations/KBcP6Qw37gT",
+          "created": "2018-02-22T15:15:34.067",
+          "name": "analytics last two years",
+          "jobStatus": "SCHEDULED",
+          "displayName": "analytics last two years",
+          "enabled": true,
+          "externalAccess": false,
+          "continuousExecution": false,
+          "jobType": "ANALYTICS_TABLE",
+          "nextExecutionTime": "2018-02-26T03:00:00.000",
+          "cronExpression": "0 0 3 ? * MON",
+          "jobParameters": {
+            "lastYears": 2,
+            "skipTableTypes": [],
+            "skipResourceTables": false
+          },
+          "favorite": false,
+          "configurable": true,
+          "access": {
+            "read": true,
+            "update": true,
+            "externalize": true,
+            "delete": true,
+            "write": true,
+            "manage": true
+          },
+          "lastUpdatedBy": {
+            "id": "GOLswS44mh8"
+          },
+          "favorites": [],
+          "translations": [],
+          "userGroupAccesses": [],
+          "attributeValues": [],
+          "userAccesses": []
+        }
+      </screen>
+    </para>
+    <para>Updating job with parameters in JSON format (ANALYTICS_TABLE example):
+      <screen>
+        {
+          "name": "analytics last two years",
+          "enabled": true,
+          "cronExpression": "0 0 3 ? * MON",
+          "continuousExecution": false,
+          "jobType": "ANALYTICS_TABLE",
+          "jobParameters": {
+            "lastYears": "3",
+            "skipTableTypes": [],
+            "skipResourceTables": false
+          }
+        }
+      </screen>
+    </para>
+
     <para>Some jobs with custom configuration parameters may not be added if the required system
       settings are not configured. An example of this is data synchronization, which requires remote
       server configuration. </para>
