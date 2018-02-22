@@ -848,6 +848,18 @@ LAST_FINANCIAL_YEAR, LAST_5_FINANCIAL_YEARS</screen>
               <entry>Collection is empty</entry>
             </row>
             <row>
+              <entry>token</entry>
+              <entry> string </entry>
+              <entry>true</entry>
+              <entry>Match on multiple tokens in search property</entry>
+            </row>
+            <row>
+              <entry>!token</entry>
+              <entry> string </entry>
+              <entry>true</entry>
+              <entry>Not match on multiple tokens in search property</entry>
+            </row>
+            <row>
               <entry>in</entry>
               <entry> string | boolean | integer | float | date</entry>
               <entry>true</entry>
@@ -2144,6 +2156,19 @@ rabbitmq.connection-timeout = 60000</screen></para>
       elements:<screen>GET /api/deletedObjects.json?klass=DataElement</screen></para>
     <para>Get deleted object of type indicator which was deleted in 2015 and
         forward:<screen>GET /api/deletedObjects.json?klass=Indicator&amp;deletedAt=2015-01-01</screen></para>
+  </section>
+  <section xml:id="webapi_favorites">
+    <title>Favorites</title>
+    <para>Certain types of metadata objects can be marked as favorites for the currently logged in
+      user. This applies currently for
+      dashboards.<screen>/api/29/dashboards/&lt;uid>/favorite</screen></para>
+    <para>To make a dashboard a favorite you can make a <emphasis>POST</emphasis> request (no
+      content type required) to a URL like
+      this:<screen>/api/29/dashboards/iMnYyBfSxmM/favorite</screen></para>
+    <para>To remove a dashboard as a favorite you can make a <emphasis>DELETE</emphasis> request
+      using the same URL as above.</para>
+    <para>The favorite status will appear as a boolean <emphasis>favorite</emphasis> field on the
+      object (e.g. the dashboard) in the metadata response.</para>
   </section>
   <section xml:id="webapi_file_resources">
     <title>File resources</title>
@@ -4572,6 +4597,15 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                         </listitem>
                       </itemizedlist>
                     </listitem>
+                  <listitem>
+                    <para><emphasis role="bold">SENDMESSAGE</emphasis> - Send message at completion of event/enrollment</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><emphasis role="italic">messageTemplate</emphasis> - if defined, this
+                          template will be delivered either as SMS or EMAIL depending upon DeliveryChannel value in message template.</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
                   </itemizedlist></entry>
                 <entry>Compulsory</entry>
               </row>
@@ -8020,6 +8054,12 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>Dimensions to use as rows for table layout.</entry>
                 <entry>Any dimension (must be query dimension)</entry>
               </row>
+              <row>
+                <entry>order</entry>
+                <entry>No</entry>
+                <entry>Specify ordering of rows based on value</entry>
+                <entry>ASC | DESC</entry>
+              </row>
             </tbody>
           </tgroup>
         </table>The <emphasis role="italic">dimension</emphasis> query parameter defines which
@@ -8073,6 +8113,9 @@ ORDER BY oul.level, par.name, ou.name</screen>
         query (not a filter). Such a request can look like this:</para>
       <screen>/api/26/analytics.html?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU&amp;dimension=pe:2014Q1;2014Q2
   &amp;dimension=ou:O6uvpzGd5pu&amp;tableLayout=true&amp;columns=dx;ou&amp;rows=pe</screen>
+  <para>The <emphasis role="italic">order</emphasis> parameter can be used for analytics resource to generate ordered data. 
+  The data will be ordered in ascending(or descending) order of values. An example request for ordering the values in descending order is:</para>
+      <screen>/api/26/analytics?dimension=dx:fbfJHSPpUQD&amp;dimension=pe:LAST_12_MONTHS&amp;dimension=ou:O6uvpzGd5pu&amp;order=DESC</screen>
     </section>
     <section xml:id="webapi_analytics_dimensions_and_items">
       <title>Dimensions and items</title>
@@ -10522,6 +10565,7 @@ interval=WEEK" -u admin:district</screen>
         single or multiple destinations. One or more gateways need to be configured before using the
         service. An SMS will not be sent if there is no gateway configured.  It needs a set of
         recipients and message text in JSON format as shown below. </para>
+      <para>NOTE: Recipients list will be partitioned if its size exceed MAX_ALLOWED_RECIPIENTS limit which is 200.</para>
       <screen>/api/26/sms/outbound</screen>
       <screen>{ 
   &quot;message&quot;:&quot;Sms Text&quot;,  
@@ -11594,6 +11638,10 @@ interval=WEEK" -u admin:district</screen>
               <entry>keyCacheAnalyticsDataYearThreshold</entry>
               <entry>Analytics data older than this value (in years) will always be cached. "0"
                 disabled this setting. Default: 0</entry>
+            </row>
+            <row>
+              <entry>analyticsFinancialYearStart</entry>
+              <entry>Set financial year start. Default: October</entry>
             </row>
             <row>
               <entry>keyIgnoreAnalyticsApprovalYearThreshold</entry>
