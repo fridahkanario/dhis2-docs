@@ -16,5 +16,3 @@ notifications:
 env:
     global:
     - TERM=dumb
-    - GH_REF: github.com/dhis2/dhis2-docs.git
-    - secure: j8o/CjjpUHW5maKuroMnxWCXHqEnIB/l6DpUzARBBXs3klQahmCidxqAMkqTG5sdgMuXT1bv8LXI2pbCy5ZUxD32S13bypL9M4IKvJsCq7xqrUNQJ/Kys/Pb8DXvpq8ZY6ER/Df32NsUDoiBohseEP6rLfe6JFlW1HvtNmtP/o8=
