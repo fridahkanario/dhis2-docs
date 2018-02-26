@@ -981,6 +981,31 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         reset to the admin's saved layout after page refresh. The remove widget buttons will be
         hidden when the dashboard layout is locked.</para>
     </section>
+    <section>
+      <title>Top bar</title>
+      <para>The top bar can be a helpful tool to see important data in a quick and easy way. To
+        start using the top bar:<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>Click the <emphasis role="bold">Settings</emphasis> icon, and select <emphasis
+                role="bold">Top bar settings</emphasis>.</para>
+          </listitem>
+          <listitem>
+            <para>Click <emphasis role="bold">Activate top bar</emphasis> and click the data you
+              would like to display in the top bar. </para>
+          </listitem>
+        </orderedlist></para>
+      <para><inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="../../resources/images/tracker_capture/top_bar.png"/>
+          </imageobject>
+        </inlinemediaobject></para>
+    </section>
   </section>
     <section  xml:id="create_report_tracker_capture">
     <title>Create
