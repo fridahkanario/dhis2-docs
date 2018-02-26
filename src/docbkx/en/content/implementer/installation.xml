@@ -599,8 +599,8 @@ read3.connection.url = jdbc:postgresql://127.0.0.13/dbread3</screen></para>
       <para>A DHIS 2 cluster setup is based on manual configuration of each instance. For each DHIS
         2 instance one must specify the public <emphasis>hostname</emphasis> as well as the
         hostnames of the other instances participating in the cluster. You can optionally specify
-        the <emphasis>port</emphasis> number for which each instance should listen for cache
-        updates. The default port number is 4001.</para>
+        the <emphasis>port numbers</emphasis> for which each instance should listen for cache
+        updates.</para>
       <para>The hostname of the server is specified using the
           <emphasis>cluster.instance0.hostname</emphasis> configuration property. Additional servers
         which participate in the cluster are specified using properties on the format
