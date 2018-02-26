@@ -614,7 +614,7 @@ read3.connection.url = jdbc:postgresql://127.0.0.13/dbread3</screen></para>
         is typically useful when you have multiple cluster instances on the same server /
         virtual machine or if you need to explicitly specify the ports to be used so as to have them configured in firewall. When running cluster instances on separate servers / virtual machines it is
         often appropriate to use the default port numbers and omit the ports configuration
-        properties. If ommitted, 4001 will be assigned as the listener port and a random free port will be assigned as the remote object port.</para>
+        properties. If omitted, 4001 will be assigned as the listener port and a random free port will be assigned as the remote object port.</para>
       <para>An example setup for a cluster of two web servers is described below. For
           <emphasis>server A</emphasis> availabe at hostname <emphasis>193.157.199.131</emphasis>
         the following can be specified in
