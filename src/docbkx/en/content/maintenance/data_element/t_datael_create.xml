@@ -122,7 +122,8 @@ Is this optional? Recommended?" flag="done"?><emphasis
                                 <para>Date &amp; time</para>
                             </entry>
                             <entry>
-                                <para>-</para>
+                                <para>Is a combination of  the <emphasis role="bold">DATE</emphasis>
+                                    and <emphasis role="bold">TIME</emphasis> data elements.</para>
                             </entry>
                         </row>
                         <row>
@@ -140,6 +141,17 @@ Is this optional? Recommended?" flag="done"?><emphasis
                             <entry>
                                 <para>A file resource where you can store external files, for
                                     example documents and photos.</para>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <para>Image</para>
+                            </entry>
+                            <entry>
+                                <para>A file resource where you can store photos.</para>
+                                <para>Unlike the <emphasis role="bold">FILE</emphasis> data element,
+                                    the <emphasis role="bold">IMAGE</emphasis> data element can
+                                    display the uploaded image directly in forms.</para>
                             </entry>
                         </row>
                         <row>
@@ -223,6 +235,9 @@ Is this optional? Recommended?" flag="done"?><emphasis
                             </entry>
                             <entry>
                                 <para>Organisation units rendered as a hierarchy tree widget.</para>
+                                <para>If the user has assigned "search organisation units", these
+                                    will be displayed instead of the  assigned organisation
+                                    units.</para>
                             </entry>
                         </row>
                         <row>

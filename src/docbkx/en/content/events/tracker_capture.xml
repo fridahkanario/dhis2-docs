@@ -958,6 +958,29 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         </listitem>
       </orderedlist>
     </section>
+    <section>
+      <title>Lock dashboard's layout </title>
+      <para>If you are the <emphasis role="bold">administrator</emphasis> you have the option of
+        locking the layout of the dashboard for all users.<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>Organize the widgets to the desired layout and save it as default (see section
+              above).</para>
+          </listitem>
+          <listitem>
+            <para>Click the <emphasis role="bold">Settings</emphasis> icon, and select <emphasis
+                role="bold">Lock layout for all users</emphasis>.</para>
+          </listitem>
+        </orderedlist></para>
+      <para>Users will still be able to reorganize the widgets temporarily, but the layout will be
+        reset to the admin's saved layout after page refresh. The remove widget buttons will be
+        hidden when the dashboard layout is locked.</para>
+    </section>
   </section>
     <section  xml:id="create_report_tracker_capture">
     <title>Create
