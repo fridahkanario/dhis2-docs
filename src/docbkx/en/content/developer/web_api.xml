@@ -9169,7 +9169,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
           </tbody>
         </tgroup>
       </table>
-    </section
+    </section>
     <section xml:id="webapi_event_query_analytics">
       <title>Event query analytics</title>
       <para>The <emphasis role="italic">analytics/events/query</emphasis> resource lets you query
@@ -9403,7 +9403,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
           columns and rows. Instead of generating a plain, normalized data source, the event analytics resource
           will now generate the data in table layout. The column and rows dimensions must be present as a data dimension in the
           query (not a filter). Such a request can look like this:</para>
-        <screen>/api/29/analytics.html+css?dimension=dx:cYeuwXTCPkU;fbfJHSPpUQD&dimension=pe:WEEKS_THIS_YEAR&filter=ou:ImspTQPwCqd&displayProperty=SHORTNAME&columns=dx&rows=pe</screen>
+        <screen>/api/29/analytics.html+css?dimension=dx:cYeuwXTCPkU;fbfJHSPpUQD&amp;dimension=pe:WEEKS_THIS_YEAR&amp;filter=ou:ImspTQPwCqd&amp;displayProperty=SHORTNAME&amp;columns=dx&amp;rows=pe</screen>
       </section>
     </section>
     <section xml:id="webapi_event_aggregate_analytics">
