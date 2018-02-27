@@ -621,7 +621,7 @@ cluster.hostname = 193.157.199.131
 
 # Ports for cache listener, can be omitted
 cluster.cache.port = 4001
-cluster.cache.remote.object.port = 40001
+cluster.cache.remote.object.port = 5001
 
 # List of Host:port participating in the cluster
 cluster.members = 193.157.199.132:4001
