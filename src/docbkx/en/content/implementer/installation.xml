@@ -625,7 +625,7 @@ cluster.instance0.hostname = 193.157.199.131
 
 # Ports for cache listener, can be omitted
 cluster.instance0.cache.port = 4001
-cluster.instance0.cache.remote.object.port = 40001
+cluster.instance0.cache.remote.object.port = 5001
 
 # Hostname for web server B participating in cluster
 cluster.instance1.hostname = 193.157.199.132
