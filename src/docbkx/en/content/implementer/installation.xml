@@ -599,8 +599,8 @@ read3.connection.url = jdbc:postgresql://127.0.0.13/dbread3</screen></para>
       <para>A DHIS 2 cluster setup is based on manual configuration of each instance. For each DHIS
         2 instance one must specify the public <emphasis>hostname</emphasis> as well as the
         hostnames of the other instances participating in the cluster. You can optionally specify
-        the <emphasis>port</emphasis> number for which each instance should listen for cache
-        updates. The default port number is 4001.</para>
+        the <emphasis>port numbers</emphasis> for which each instance should listen for cache
+        updates.</para>
       <para>The hostname of the server is specified using the
           <emphasis>cluster.instance0.hostname</emphasis> configuration property. Additional servers
         which participate in the cluster are specified using properties on the format
@@ -608,14 +608,13 @@ read3.connection.url = jdbc:postgresql://127.0.0.13/dbread3</screen></para>
         number. You can specify up to 4 cluster instances in a configuration file, giving a maximum
         cluster size of 5 instances. N is a number between 1 and 4.</para>
       <para>The hostname must be visible to the participating servers on the network for the
-        clustering to work. You might have to allow incoming and outgoing connections on port 4001
-        (or whichever port number is configured) in the firewall.</para>
+        clustering to work. You might have to allow incoming and outgoing connections on the configured port numbers in the firewall.</para>
       <para>The port number of the server is specified using the<emphasis>
-          cluster.instance0.cache.port</emphasis> configuration property. Specifying the port number
-        is typically only useful when you have multiple cluster instances on the same server /
-        virtual machine. When running cluster instances on separate servers / virtual machines it is
-        often appropriate to use the default port number and omit this configuration
-        property.</para>
+          cluster.instance0.cache.port</emphasis> configuration property. The remote object port used for registry receive calls is specified using <emphasis>cluster.instance0.cache.remote.object.port</emphasis>. Specifying the port numbers
+        is typically useful when you have multiple cluster instances on the same server /
+        virtual machine or if you need to explicitly specify the ports to be used so as to have them configured in firewall. When running cluster instances on separate servers / virtual machines it is
+        often appropriate to use the default port numbers and omit the ports configuration
+        properties. If omitted, 4001 will be assigned as the listener port and a random free port will be assigned as the remote object port.</para>
       <para>An example setup for a cluster of two web servers is described below. For
           <emphasis>server A</emphasis> availabe at hostname <emphasis>193.157.199.131</emphasis>
         the following can be specified in
@@ -624,8 +623,9 @@ read3.connection.url = jdbc:postgresql://127.0.0.13/dbread3</screen></para>
 # Hostname for this web server
 cluster.instance0.hostname = 193.157.199.131
 
-# Port for cache listener, can be omitted
+# Ports for cache listener, can be omitted
 cluster.instance0.cache.port = 4001
+cluster.instance0.cache.remote.object.port = 5001
 
 # Hostname for web server B participating in cluster
 cluster.instance1.hostname = 193.157.199.132
