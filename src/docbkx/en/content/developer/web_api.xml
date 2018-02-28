@@ -8953,6 +8953,18 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Date identifier e.g: "2016-01-01". Overrides the start date of the relative
                 period</entry>
             </row>
+            <row>
+              <entry>columns</entry>
+              <entry>No</entry>
+              <entry>Dimensions to use as columns for table layout.</entry>
+              <entry>Any dimension (must be query dimension)</entry>
+            </row>
+            <row>
+              <entry>rows</entry>
+              <entry>No</entry>
+              <entry>Dimensions to use as rows for table layout.</entry>
+              <entry>Any dimension (must be query dimension)</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
@@ -9385,6 +9397,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
           the response mapped to their names.</para>
         <para>The <emphasis role="italic">rows</emphasis> section contains the events produced by
           the query. Each row represents exactly one event.</para>
+        <para>In order to have the event analytics resource generate the data in the shape of a ready-made
+          table, you can provide <emphasis role="italic">rows</emphasis> and <emphasis role="italic">columns</emphasis>
+          parameters with requested dimension identifiers separated by semi-colons as values to indicate which ones to use as table
+          columns and rows. Instead of generating a plain, normalized data source, the event analytics resource
+          will now generate the data in table layout. The column and rows dimensions must be present as a data dimension in the
+          query (not a filter). Such a request can look like this:</para>
+        <screen>/api/29/analytics.html+css?dimension=dx:cYeuwXTCPkU;fbfJHSPpUQD&amp;dimension=pe:WEEKS_THIS_YEAR&amp;filter=ou:ImspTQPwCqd&amp;displayProperty=SHORTNAME&amp;columns=dx&amp;rows=pe</screen>
       </section>
     </section>
     <section xml:id="webapi_event_aggregate_analytics">
