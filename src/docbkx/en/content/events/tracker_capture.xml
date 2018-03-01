@@ -609,6 +609,23 @@ Do the data entry widgets look different depending on the program?"?>widgets<?ox
           </listitem>
         </orderedlist></para>
     </section>
+    <section>
+      <title>Compare events</title>
+      <para>Sometimes it can be helpful to see data from previous events when entering data for a
+        new event. This can be achived by:<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>In the <emphasis role="bold">Timeline Data entry</emphasis> widget, click the
+                <emphasis role="bold">two pages</emphasis> icon (as seen in the image below).</para>
+          </listitem>
+        </orderedlist></para>
+      <para>Note that this will only work for events that are repeatable.</para>
+    </section>
   </section>
   <section xml:id="manage_tracked_entity_instance_enrollment">
     <title>Manage a
