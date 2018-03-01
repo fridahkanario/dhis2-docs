@@ -624,7 +624,15 @@ Do the data entry widgets look different depending on the program?"?>widgets<?ox
                 <emphasis role="bold">two pages</emphasis> icon (as seen in the image below).</para>
           </listitem>
         </orderedlist></para>
-      <para>Note that this will only work for events that are repeatable.</para>
+      <note>
+        <para><emphasis>Note that this will only work for events that are
+          repeatable.</emphasis></para>
+      </note>
+      <para><inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="../../resources/images/tracker_capture/compareForm.png"/>
+          </imageobject>
+        </inlinemediaobject></para>
     </section>
   </section>
   <section xml:id="manage_tracked_entity_instance_enrollment">
