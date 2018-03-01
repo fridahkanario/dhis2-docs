@@ -603,7 +603,7 @@ Do the data entry widgets look different depending on the program?"?>widgets<?ox
           </listitem>
           <listitem>
             <para>Click either <emphasis role="bold">One-time referral</emphasis> which will only
-              refer TEI for one single event, or <emphasis role="bold">Move permanently</emphasis>
+              refer TEI for one single event or <emphasis role="bold">Move permanently</emphasis>
               which will move TEI and all its future events permantly to the selected <emphasis
                 role="bold">Organisation Unit</emphasis>.</para>
           </listitem>
