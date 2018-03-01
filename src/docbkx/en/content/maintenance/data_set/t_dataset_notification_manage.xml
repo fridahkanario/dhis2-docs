@@ -7,252 +7,128 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_data_set">
-    <title>Create or edit Dataset Notification
-        <?oxy_comment_start author="cecilia" timestamp="20160701T142620+0200" comment="Screenshot renders correctly after build." flag="done"?>set<?oxy_comment_end?></title>
-    <para>
-        <screenshot>
-            <mediaobject>
-                <imageobject>
-                    <imagedata width="80%" align="center"
-                        fileref="resources/images/datasets/dataset_notification_create.png" format="PNG"/>
-                </imageobject>
-            </mediaobject>
-        </screenshot>
-    </para>
+    <title>Create or edit Data set Notification</title>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
-                role="bold">Data set</emphasis> > <emphasis role="bold">Data
-                    set</emphasis>.</para>
+                role="bold">Data set</emphasis> > <emphasis role="bold">Data set notification</emphasis>.</para>
         </listitem>
         <listitem>
             <para>Click the add button.</para>
         </listitem>
-        <listitem>
-            <para>In the <emphasis role="bold">Name</emphasis>
-                <?oxy_comment_start author="cecilia" timestamp="20160602T113445+0200" comment="Discuss choice of word with tech writer" flag="done"?>field<?oxy_comment_end?>,
-                type the precise
-                <?oxy_comment_start author="cecilia" timestamp="20160602T095815+0200" comment="For SME: Does it have to be an unique name? - No" flag="done"?>name<?oxy_comment_end?>
-                of the data set.</para>
-        </listitem>
-        <listitem>
-            <para>In the <emphasis role="bold">Short name</emphasis> field, define a short name for
-                the data set.</para>
-            <para>Typically, the short name is an abbreviation of the full data set name. This
-                attribute is often used to display the name of the data set where space is
-                limited.</para>
-        </listitem>
-        <listitem>
-            <para>(Optional) In the <emphasis role="bold">Code</emphasis> field, assign a
-                code.</para>
-        </listitem>
-        <listitem>
-            <para>In the <emphasis role="bold">Description</emphasis> field, type a description of
-                the data set.</para>
-        </listitem>
-        <listitem>
-            <para>Enter the number of <emphasis role="bold">Expiry days</emphasis>.</para>
-            <para>The number of expiry days controls for how long it should be possible to enter
-                data
-                <?oxy_comment_start author="cecilia" timestamp="20160602T113535+0200" comment="For SME: What do you mean with &quot;...enter data in data entry...&quot;?
-Data entry app right?" flag="done"?>in
-                the <emphasis role="bold">Data entry</emphasis> app <?oxy_comment_end?>for this data
-                set. Expiry days refer to the number of days after the end date of the selected data
-                entry period where the data entry form should be open for entry. After the number of
-                days has expired, the data set will be locked for further entry.</para>
-            <para>You can set manual exceptions to this using the lock exception functionality
-                in<?oxy_comment_start author="cecilia" timestamp="20160602T100140+0200" comment="For next release:
-Create task i UG
-Where do you do this? - Lock Exception Management
-" flag="done"?>
-                the <emphasis role="bold">Data Administration</emphasis>
-                app.<?oxy_comment_end?></para>
-            <note>
-                <para>To allow data entry into all possible historical time periods, set the number
-                    of expiry days to zero.</para>
-            </note>
-        </listitem>
-        <listitem>
-            <para>If you want it to be possible to enter data for future periods, type the number of
-                periods in the <emphasis role="bold">Open future periods for data entry</emphasis>
-                field.</para>
-            <para>The value is the number of future periods which are available for data
-                entry.</para>
-            <example>
-                <title>Open future periods for data entry</title>
-                <para>For a monthly data set a value of 2 allows you to enter data for 2 months in
-                    advance. This is useful for, by example, population, target and planning
-                    data.</para>
-            </example>
-        </listitem>
-        <listitem>
-            <para>In the <emphasis role="bold">Days after period to qualify for timely
-                submission</emphasis> field, type the number of days in which data can be
-                entered to be considered reported on time.</para>
-            <?oxy_comment_start author="cecilia" timestamp="20160602T105106+0200" comment="For next release:
-Create this task under Reporting section (QC)" flag="done"?>
-            <para>To verify the number of timely reports submitted, go to <emphasis role="bold"
-                >Reports</emphasis> > <emphasis role="bold">Reporting rate
-                    summary</emphasis>.</para>
-            <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-            <para>Select a <emphasis role="bold">Period type</emphasis>.</para>
-            <para>The period type defines the frequency of reporting for the particular data set.
-                The frequency can for example be daily, quarterly or yearly.</para>
-        </listitem>
-        <listitem>
-            <para>Select a <emphasis role="bold">Category combination</emphasis> to assign it to the
-                data set.</para>
-            <tip>
-                <?oxy_comment_start author="cecilia" timestamp="20160526T104008+0200" comment="At next revision, ad x-ref." flag="done"?>
-                <para>Click <emphasis role="bold">Add new</emphasis> to create category combinations
-                    that you're missing. In the form that opens, create the category combinations
-                    you need. When you're done, click <emphasis role="bold">Refresh
-                        values</emphasis>.</para>
-                <?oxy_comment_end?>
-            </tip>
-        </listitem>
-        <listitem>
-            <para>In the <emphasis role="bold">Complete notification recipients</emphasis> list,
-                select a user group that should receive a message when the data set is marked as
-                complete in the <emphasis role="bold">Data Entry</emphasis> app.</para>
-            <para>The message is delivered through the DHIS2 messaging system.</para>
-        </listitem>
-        <listitem>
-            <para>If you want the user who entered the data to receive a message when the data set
-                is marked as complete in the <emphasis role="bold">Data entry</emphasis> app, select
-                <emphasis role="bold">Send notification to completing user</emphasis>.</para>
-            <para>The message is delivered through the DHIS2 messaging system.</para>
-        </listitem>
-        <listitem>
-            <para>If applicable,
-                s<?oxy_comment_start author="cecilia" timestamp="20160602T115743+0200" comment="For SME: What does &quot;Approved&quot; mean?
-Data can be marked as &quot;Complete&quot;, then there&apos;s an approval workflow - verify with Ola.
-- Reports &gt; Data approval" flag="done"?><?oxy_comment_start author="cecilia" timestamp="20160623T170050+0200" comment="At next revision:
-Add x-ref to Data approval section in UG.
-Removed existing reference because it was unclear." flag="done" mid="8"?>elect<?oxy_comment_end?><?oxy_comment_end mid="8"?>,
-                a <emphasis role="bold">Data approval workflow</emphasis>.</para>
-        </listitem>
-        <listitem>
-            <?oxy_comment_start author="cecilia" timestamp="20160602T122040+0200" comment="For SME: Still applicable?
-Yes, app still exist." flag="done"?>
-            <para>If you want it to be possible to use the data set within the Java mobile DHIS 2
-                application, select <emphasis role="bold">Enable for Java mobile
-                    client</emphasis>.</para>
-            <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-            <para>If you want it to be mandatory to fill all values for a data element
-                in<?oxy_comment_start author="cecilia" timestamp="20160623T170448+0200" comment="At next revision:
-Review the use of data entry.
-Do you mean in the Data entry app? Or just normal data entry?" flag="done"?>
-                data entry <?oxy_comment_end?>if one or more values have been filled, select
-                <emphasis role="bold">All fields for data elements required</emphasis>.</para>
-            <para>This means that if you enter one data value for a data element in an entry field
-                (that is for a category option combination), then you must enter data for all fields
-                belonging to that data element (that is all category option combinations).</para>
-        </listitem>
-        <listitem>
-            <para>If you want it to be possible to mark a data entry form as complete only if the
-                validation of that form is successful, select <emphasis role="bold">Complete allowed
-                    only if validation passes</emphasis>.</para>
-            <para>If you select this option, you can't mark the form as complete if validation
-                fails.</para>
-        </listitem>
-        <listitem>
-            <para>If you want it to be mandatory that any missing values require a comment to
-                justify their absence, select <emphasis role="bold">Missing values requires comment
-                    on complete</emphasis>.</para>
-        </listitem>
-        <listitem>
-            <para>(Optional) Assign one or multiple <emphasis role="bold">Legends</emphasis>.</para>
-        </listitem>
-        <listitem>
-            <para>If applicable, select <emphasis role="bold">Skip offline</emphasis>. </para>
-            <?oxy_comment_start author="cecilia" timestamp="20160629T115520+0200" comment="At next revision: rewrite para." flag="done"?>
-            <para>This option controls whether this data entry form should be downloaded and saved
-                in the user&apos;s web browser. Normally you shouldn't select <emphasis role="bold"
-                    >Skip offline</emphasis>. This is the default setting. If you have big forms
-                which are rarely used you can consider selecting this option to speed up initial
-                loading in the data entry module.</para>
-            <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-            <para>If applicable, select
-                <?oxy_comment_start author="cecilia" timestamp="20160613T110107+0200" comment="Lars: In Data entry app, dowload data sets in offline mode, description of data elements render in call out 
-More data to download, might not want to have this on a slow line.
-" flag="done"?><emphasis
-                    role="bold">Data element decoration</emphasis><?oxy_comment_end?></para>
-            <?oxy_comment_start author="cecilia" timestamp="20160623T171426+0200" comment="At next release: review para with SME: Correctly phrased?" flag="done"?>
-            <para>If you select this option, descriptions of data elements render in call-outs in
-                downloaded data sets in offline mode in the <emphasis role="bold">Data
-                    entry</emphasis> app.</para>
-            <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-            <?oxy_comment_start author="cecilia" timestamp="20160629T115742+0200" comment="Before release: verify that this work.
-"?>
-            <para>If applicable, select <emphasis role="bold">Render sections as
-                tabs</emphasis>.</para>
-            <?oxy_comment_end?>
-            <?oxy_comment_start author="cecilia" timestamp="20160629T115722+0200" comment="At next release: rewrite para." flag="done"?>
-            <para>This option is only applicable for section forms. The option allows you to render
-                each section as a tab horizontally above the data set. This is useful for long data
-                sets as it allows appropriate sections to be selected quickly without going through
-                the entire form.</para>
-            <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-            <?oxy_comment_start author="cecilia" timestamp="20160602T141431+0200" comment="For SME: What does this option mean?
-Before release, verify that this works."?>
-            <para>If applicable, select <emphasis role="bold">Render vertically</emphasis>.</para>
-            <?oxy_comment_end?>
-            <para>This option is only applicable for section forms.</para>
-        </listitem>
-        <listitem>
-            <?oxy_comment_start author="cecilia" timestamp="20160602T141437+0200" comment="At next release: add explanation." flag="done"?>
-            <para>Select data elements and assign them.</para>
-            <?oxy_comment_end?>
-            <para>You can override the category combination for each selected data set by clicking
-                on the gear icon above the list of selected data elements. This allows you to
-                utilize a specific category combination (disaggregation) within the current data set
-                instead of the category combination associated directly with the data element
-                itself.</para>
-        </listitem>
-        <listitem>
-            <?oxy_comment_start author="cecilia" timestamp="20160602T141441+0200" comment="At next release: add explanation." flag="done"?>
-            <para>Select indicators and assign them.</para>
-            <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-            <para>In the organisation unit tree, select the organisation units you want to
-                <?oxy_comment_start author="cecilia" timestamp="20160628T112043+0200" comment="Infor from previous version:
-Assign organisation units to data sets: This function will allow you to assign individual organisational units to a data set. Only organisation units which have been assigned to a data set will be allowed to enter data into the data set" flag="done"?>assign<?oxy_comment_end?>
-                the data set to.</para>
-            <tip>
+        </orderedlist>
+    <section>
+        <title>What to send?</title>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="resources/images/datasets/dataset_notification_create.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <orderedlist>
+            <listitem>
+                <para>In the <emphasis role="bold">Name</emphasis>
+                    <?oxy_comment_start author="cecilia" timestamp="20160602T113445+0200" comment="Discuss choice of word with tech writer" flag="done"?>field<?oxy_comment_end?>,
+                    type the precise
+                    <?oxy_comment_start author="cecilia" timestamp="20160602T095815+0200" comment="For SME: Does it have to be an unique name? - No" flag="done"?>name<?oxy_comment_end?>
+                    of the data set notification.</para>
+            </listitem>
+            <listitem>
+                <para>(Optional) In the <emphasis role="bold">Code</emphasis> field, assign a
+                    code.</para>
+            </listitem>
+            <listitem>
+                <para>Enter <emphasis role="bold">Data sets</emphasis>.</para>
+                <para>These data sets will be associated to this notification. Incase any of them is completed for a certain period and organisation unit, notification will be generated by the 
+                    system.</para>
+                <note>
+                    <para>Nothing will happen if no data set is selected</para>
+                </note>
+            </listitem>
+            <listitem>
+                <para>In <emphasis role="bold">Message template</emphasis> section there are two parameters.</para>
                 <itemizedlist>
-                    <listitem>
-                        <para><?oxy_comment_start author="cecilia" timestamp="20160923T152232+0200" comment="Review wording
-                            
-Maybe better with instructions:
-Select an Organisation unit level and click Select to select all organisation units that belong to a certain organisation unit level."?>Click<?oxy_comment_end?>
-                            <emphasis role="bold">Organisation unit level</emphasis> to select all
-                            organisation units that belong to a certain organisation level.</para>
-                    </listitem>
-                    <listitem>
-                        <para>Click <emphasis role="bold">Organisation unit group</emphasis> to
-                            select all organisation units that belong to a certain organisation unit
-                            group.</para>
-                    </listitem>
+                    <listitem><para><emphasis role="bold">Subject template</emphasis> subject of the notification sent in notification. It can have 
+                        values from the list of variables avaiable on the right side.</para></listitem>
+                    <listitem><para><emphasis role="bold">Message template</emphasis> actual message sent in notification. It can have 
+                        values from the list of variables avaiable on the right side.</para></listitem>
                 </itemizedlist>
-            </tip>
-        </listitem>
-        <listitem>
-            <para>Click <emphasis role="bold">Save</emphasis>.</para>
-        </listitem>
-    </orderedlist>
-    <para>You can now use the data set in the <emphasis role="bold">Data Entry</emphasis> app for
-        the organisation units that you have assigned to and for periods according to the selected
-        frequency (period type).</para>    
+                <note>
+                    <para>Subject is only relevant in case of Email and internal DHIS-2 messages. It is ignored in case of SMS.</para>
+                </note>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>When to send?</title>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="resources/images/datasets/when_to_send.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para>
+        <orderedlist>
+            <listitem>
+                <para><emphasis role="bold">Data set notification trigger</emphasis>
+                field determine when to send notification.
+                    <itemizedlist>
+                        <listitem><para><emphasis role="bold">Data Set Completion</emphasis> will trigger notification as soon as data set is completed.</para></listitem>
+                        <listitem><para><emphasis role="bold">Schedule Days</emphasis> will schedule notificaton based on number days relative to scheduled date. Schedule date 
+                        will be decided by Period associated with Data set.</para>
+                            <itemizedlist>
+                                <listitem><para><emphasis role="bold">Send notification as</emphasis> provides two different types of notifications</para>
+                                <itemizedlist>
+                                    <listitem><para><emphasis role="bold">Collective summary</emphasis> send notification in summary mood</para></listitem>
+                                    <listitem><para><emphasis role="bold">Single notification</emphasis> sends notification in sinlge mood</para></listitem>
+                                </itemizedlist>
+                                </listitem>
+                            </itemizedlist>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+                <note>
+                    <para><emphasis role="bold">Send notification as</emphasis> option is only available in case of scheduled notification. This option is set to default which is
+                         <emphasis role="bold">Single notification</emphasis> in case of completion notification</para>
+                </note>
+            </listitem>
+        </orderedlist>
+    </section>
+    <section>
+        <title>Who to send?</title>
+        <para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata width="80%" align="center"
+                            fileref="resources/images/datasets/who_to_send.png" format="PNG"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+        </para> 
+        <orderedlist>
+            <listitem>
+                <para><emphasis role="bold">Notification recipient</emphasis>
+                    field determine recipients of the notification.
+                    <itemizedlist>
+                        <listitem><para><emphasis role="bold">Organisation Unit contact</emphasis> will send notification to contact assigned to organisation unit which 
+                        the data has been collected from.</para></listitem>
+                        <listitem><para><emphasis role="bold">UserGroup</emphasis> will send notification to all the member of the selected UserGroup.</para>
+                        </listitem>
+                    </itemizedlist>
+                </para>
+                <note>
+                    <para>An internal DHIS-2 message will be sent in case if recipient is UserGroup. Moreover user will also receive SMS/EMAIL if phone number and email address exist for 
+                    that user and SMS/EMAIL notifications are enabled in SystemSettings</para>
+                </note>
+            </listitem>
+        </orderedlist>
+    </section>
 </section>
