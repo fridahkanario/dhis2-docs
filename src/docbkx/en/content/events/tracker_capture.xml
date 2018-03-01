@@ -467,70 +467,148 @@ Where do you set it?"?>All<?oxy_comment_end?>
   <section xml:id="enter_event_data_for_tracked_entity_instance">
     <title>Enter event data for a
       <?oxy_comment_start author="cecilia" timestamp="20161005T164705+0200" comment="At next release: Rewrite section and add more information," flag="done"?>TEI<?oxy_comment_end?></title>
-    <para>In a TEI dashboard, you enter event data in the <emphasis role="bold">Timeline Data
-        entry</emphasis> or <emphasis role="bold">Tabular data entry</emphasis>
-      <?oxy_comment_start author="cecilia" timestamp="20160913T144337+0200" comment="Verify with SME: 
+    <section>
+      <title>Widgets for data entry</title>
+      <section>
+        <para>In a TEI dashboard, you enter event data in the <emphasis role="bold">Timeline Data
+            entry</emphasis> or <emphasis role="bold">Tabular data entry</emphasis>
+          <?oxy_comment_start author="cecilia" timestamp="20160913T144337+0200" comment="Verify with SME: 
 Do the data entry widgets look different depending on the program?"?>widgets<?oxy_comment_end?>.</para>
-    <table frame="all">
-      <title>Data entry widgets in the Tracker Capture app</title>
-      <tgroup cols="2">
-        <colspec colname="c1" colnum="1" colwidth="1*"/>
-        <colspec colname="c2" colnum="2" colwidth="2.13*"/>
-        <thead>
-          <row>
-            <entry>
-              <para>Widget name</para>
-            </entry>
-            <entry>
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry>
-              <para><emphasis role="bold">Timeline Data entry</emphasis></para>
-            </entry>
-            <entry>
-              <para>For data entry using either default or custom forms.</para>
-              <para>Depending on program definition, in particular program stages, events will be
-                displayed in a timely fashion. Clicking on any of them displays the corresponding
-                data entry. If a stage needs new event, a plus icon is displayed for new event
-                creation. To proceed with data entry, it is mandatory to have event date. Once an
-                event date is specified it is not possible to change due date. The assumption is
-                that by specifying event date, the event has already taken place. If the event
-                hasn't occurred yet, it is possible to change due date - this is effectively doing
-                nothing but rescheduling. The buttons at the bottom help to change the status of a
-                selected event.</para>
-              <para>Another key feature from this widget is addition of multiple notes for an event.
-                Normally data recording is through data elements, however there are cases where it
-                is necessary to record additional information or comments. This is where the notes
-                section comes handy. However it is not possible to delete a note. The idea is notes
-                are more like log books. Both skip-logic and validation error/warning messages are
-                supported during data entry.</para>
-              <para>Also included in the Timeline Data entry is the option to compare your data
-                entry to previous entries. This can be enabled by clicking the "Switch to compare
-                form" button (Two sheets of paper) in the top right corner of the Timeline Data
-                entry widget.</para>
-            </entry>
-          </row>
-          <row>
-            <entry>
-              <para><emphasis role="bold">Tabular
-                  <?oxy_comment_start author="cecilia" timestamp="20161005T165624+0200" comment="Feature has been redone, verify with SME."?>data<?oxy_comment_end?>
-                  entry</emphasis></para>
-            </entry>
-            <entry>
-              <para>For tabular-style data entry.</para>
-              <para>The widget displays the list of program stages as left-hand side labels. Events
-                will be listed in table for repeatable program stage, and allows for in-line edits
-                of event data values.</para>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
-    <para/>
+        <table frame="all">
+          <title>Data entry widgets in the Tracker Capture app</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="2.13*"/>
+            <thead>
+              <row>
+                <entry>
+                  <para>Widget name</para>
+                </entry>
+                <entry>
+                  <para>Description</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>
+                  <para><emphasis role="bold">Timeline Data entry</emphasis></para>
+                </entry>
+                <entry>
+                  <para>For data entry using either default or custom forms.</para>
+                  <para>Depending on program definition, in particular program stages, events will
+                    be displayed in a timely fashion. Clicking on any of them displays the
+                    corresponding data entry. If a stage needs new event, a plus icon is displayed
+                    for new event creation. To proceed with data entry, it is mandatory to have
+                    event date. Once an event date is specified it is not possible to change due
+                    date. The assumption is that by specifying event date, the event has already
+                    taken place. If the event hasn't occurred yet, it is possible to change due date
+                    - this is effectively doing nothing but rescheduling. The buttons at the bottom
+                    help to change the status of a selected event.</para>
+                  <para>Another key feature from this widget is addition of multiple notes for an
+                    event. Normally data recording is through data elements, however there are cases
+                    where it is necessary to record additional information or comments. This is
+                    where the notes section comes handy. However it is not possible to delete a
+                    note. The idea is notes are more like log books. Both skip-logic and validation
+                    error/warning messages are supported during data entry.</para>
+                  <para>Also included in the Timeline Data entry is the option to compare your data
+                    entry to previous entries. This can be enabled by clicking the "Switch to
+                    compare form" button (Two sheets of paper) in the top right corner of the
+                    Timeline Data entry widget.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para><emphasis role="bold">Tabular
+                      <?oxy_comment_start author="cecilia" timestamp="20161005T165624+0200" comment="Feature has been redone, verify with SME."?>data<?oxy_comment_end?>
+                      entry</emphasis></para>
+                </entry>
+                <entry>
+                  <para>For tabular-style data entry.</para>
+                  <para>The widget displays the list of program stages as left-hand side labels.
+                    Events will be listed in table for repeatable program stage, and allows for
+                    in-line edits of event data values.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+    </section>
+    <section>
+      <title>Creating an event</title>
+      <para>You can create an event for a TEI by:<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>In the <emphasis role="bold">Timeline Data entry</emphasis> or <emphasis
+                role="bold">Tabular data entry</emphasis> widget, click the <emphasis role="bold"
+                >+</emphasis>-button.</para>
+          </listitem>
+          <listitem>
+            <para>Select a <emphasis role="bold">Programstage</emphasis> and set a <emphasis
+                role="bold">Report date</emphasis>.</para>
+          </listitem>
+          <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+          </listitem>
+        </orderedlist></para>
+    </section>
+    <section>
+      <title>Schedule an event</title>
+      <para>You can shedule an event for a future date by:<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>In the <emphasis role="bold">Timeline Data entry</emphasis> or <emphasis
+                role="bold">Tabular data entry</emphasis> widget, click the <emphasis role="bold"
+                >Calendar</emphasis> icon.</para>
+          </listitem>
+          <listitem>
+            <para>Select a <emphasis role="bold">Programstage</emphasis> and set a <emphasis
+                role="bold">Schedule date</emphasis>.</para>
+          </listitem>
+          <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+          </listitem>
+        </orderedlist></para>
+    </section>
+    <section>
+      <title>Refer an event</title>
+      <para>Sometimes it might be nessascary to refer a patient to a different <emphasis role="bold"
+          >Organisation unit</emphasis>. To refer a TEI:<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>In the <emphasis role="bold">Timeline Data entry</emphasis> or <emphasis
+                role="bold">Tabular data entry</emphasis> widget, click the <emphasis role="bold"
+                >Arrow</emphasis> icon.</para>
+          </listitem>
+          <listitem>
+            <para>Select a <emphasis role="bold">Programstage</emphasis>, <emphasis role="bold"
+                >Organisation unit</emphasis> and  set a <emphasis role="bold"><emphasis role="bold"
+                  >Report date</emphasis></emphasis>.</para>
+          </listitem>
+          <listitem>
+            <para>Click either <emphasis role="bold">One-time referral</emphasis> which will only
+              refer TEI for one single event, or <emphasis role="bold">Move permanently</emphasis>
+              which will move TEI and all its future events permantly to the selected <emphasis
+                role="bold">Organisation Unit</emphasis>.</para>
+          </listitem>
+        </orderedlist></para>
+    </section>
   </section>
   <section xml:id="manage_tracked_entity_instance_enrollment">
     <title>Manage a
