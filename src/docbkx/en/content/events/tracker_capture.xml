@@ -176,63 +176,6 @@ TEI&apos;s dashboard?"?>TEI's
       </orderedlist>
     </example>
   </section>
-        <section xml:id="create_tracked_entity_instance">
-    <title>Cr<?oxy_comment_start author="cecilia" timestamp="20160830T135151+0200" comment="Create a TEI?
-Register a TEI?"?>eate<?oxy_comment_end?>
-      a TEI</title>
-    <orderedlist>
-      <listitem>
-        <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
-      </listitem>
-      <listitem>
-        <para>In the organisation unit tree in the left hand pane, select an organisation
-          unit.</para>
-      </listitem>
-      <listitem>
-        <para>Verify that the <emphasis role="bold">Program</emphasis> field is empty.</para>
-      </listitem>
-      <listitem>
-        <para>Click <emphasis role="bold">Register</emphasis>.</para>
-      </listitem>
-      <listitem>
-        <para>Select an entity type.</para>
-      </listitem>
-      <listitem>
-        <para>Fill in the required
-          <?oxy_comment_start author="cecilia" timestamp="20160826T141524+0200" comment="Does the fields depend on which program you&apos;ve chosen?
-Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy_comment_end?>.</para>
-      </listitem>
-      <listitem>
-        <para>Click <emphasis role="bold">Save and continue</emphasis> or <emphasis role="bold">Save
-            and add new</emphasis>.</para>
-        <itemizedlist>
-          <listitem>
-            <para><emphasis role="bold">Save and continue</emphasis>: completes the registration and
-              opens the registered TEI's dashboard</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Save and add new</emphasis>: completes the registration but
-              stays on the same page.
-              <?oxy_comment_start author="cecilia" timestamp="20160905T155233+0200" comment="Verify this phrase with SME."?>Use
-              this option when you want to register one TEI after another without enrollment to a
-              program.<?oxy_comment_end?></para>
-          </listitem>
-        </itemizedlist>
-      </listitem>
-    </orderedlist>
-    <note>
-      <para>For unique tracked entity attributes the system can automatically generate and assign
-        numeric IDs. When registering tracked entity instances on web, the registration form will
-        then automatically be populated with a number in the given pattern. On Android, the ID
-        generation is used to reserve a series of IDs for each Android device. This allows offline
-        registration of tracked entity instances without risking duplicate IDs when syncing with the
-        server.</para>
-      <para>You configure automated IDs in the <emphasis role="bold">Maintenance</emphasis>
-        <?oxy_comment_start author="cecilia" timestamp="20161007T090423+0200" comment="When olinks work: add x-ref here. " flag="done"?>app<?oxy_comment_end?>:
-          <emphasis role="bold">Tracker</emphasis> > <emphasis role="bold">Tracked entity
-          attribute</emphasis>.</para>
-    </note>
-  </section >
   <section  xml:id="create_and_enroll_tracked_entity_instance">
     <title>Create a TEI and enroll it in a program</title>
     <para>You can create a TEI and enroll that TEI to a program in one operation:</para>
