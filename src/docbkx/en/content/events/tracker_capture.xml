@@ -287,8 +287,6 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
       TEI dashboard</title>
     <para>There are multiple ways to find a TEI: Using the "Lists" which is predefined lists in the
       current selection, or "Search" for global lookup. </para>
-    <para>There are two ways to find a TEI: simple and advanced search. You can also modify the
-      search results list's layout and download the search results list in several formats.</para>
     <section xml:id="simple_tracked_entity_instance_search">
       <title>Lists</title>
       <para>Lists is used to find and display TEIs in the selected organisation unit and program.<orderedlist>
@@ -319,24 +317,25 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
             <para>TEIs with a cancelled enrollment of the current program</para>
           </listitem>
         </orderedlist></para>
-      <para>(img)</para>
+      <?oxy_comment_start author="Lukas" timestamp="20180302T142338+0100" comment="Insert image?"?>
+      <para>(img)<?oxy_comment_end?></para>
       <para>You can select which columns to show or hide in the lists for each program. This will be
         saved in your user settings.<orderedlist>
           <listitem>
-            <para>Click the grid icon button</para>
+            <para>Click the <emphasis role="bold">grid</emphasis> icon button</para>
           </listitem>
           <listitem>
             <para>Check the columns you want to include</para>
           </listitem>
           <listitem>
-            <para>Click Save</para>
+            <para>Click <emphasis role="bold">Save</emphasis></para>
           </listitem>
         </orderedlist></para>
       <para>There is also an option to create a custom working list with own filters. This can be
         used to create custom lists on the fly.</para>
-      <para>(img)</para>
+      <para><?oxy_comment_start author="Lukas" timestamp="20180302T142436+0100" comment="Insert image?"?>(img)<?oxy_comment_end?></para>
       <para>Lists can also be downloaded or printed. </para>
-      <para>(img) </para>
+      <para><?oxy_comment_start author="Lukas" timestamp="20180302T142459+0100" comment="Insert image?"?>(img)<?oxy_comment_end?></para>
     </section>
     <section xml:id="advanced_tracked_entity_instance_search">
       <title>Search</title>
@@ -352,14 +351,15 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
             <para>Open <emphasis role="bold">Tracker Capture app</emphasis></para>
           </listitem>
           <listitem>
-            <para>Click the "Search" button</para>
+            <para>Click the <emphasis role="bold">Search</emphasis> button</para>
           </listitem>
           <listitem>
             <para>Searchable fields will be displayed in groups. Unique attributes is only
               individually searchable. Non-unique attributes can be combined.</para>
           </listitem>
           <listitem>
-            <para>Fill in search criteria and click the search icon button.</para>
+            <para>Fill in search criteria and click the <emphasis role="bold">search</emphasis> icon
+              button.</para>
           </listitem>
         </orderedlist></para>
       <para><emphasis role="bold">Searching with a program context:</emphasis><orderedlist>
@@ -373,14 +373,15 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
             <para>Select the program</para>
           </listitem>
           <listitem>
-            <para>Click the "Search" button</para>
+            <para>Click the <emphasis role="bold">Search</emphasis> button</para>
           </listitem>
           <listitem>
             <para>Searchable fields will be displayed in groups. Unique attributes is only
               individually searchable. Non-unique attributes can be combined.</para>
           </listitem>
           <listitem>
-            <para>Fill in search criteria and click the search icon button</para>
+            <para>Fill in search criteria and click the <emphasis role="bold">search</emphasis> icon
+              button</para>
           </listitem>
         </orderedlist></para>
       <para>After the search has been done, you will be presented with the search result. Whats
