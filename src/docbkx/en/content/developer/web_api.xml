@@ -3929,6 +3929,22 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
                 <entry>true | false</entry>
                 <entry>Indicates whether to send notifications for completed events.</entry>
               </row>
+              <row>
+                <entry/>
+                <entry/>
+                <entry/>
+              </row>
+              <row>
+                <entry>importReportMode</entry>
+                <entry>FULL, ERRORS, DEBUG</entry>
+                <entry>Sets the <emphasis role="bold">ImportReport</emphasis> mode, controls how
+                  much is reported back after the import is done. <emphasis role="bold"
+                    >ERRORS</emphasis> only includes <emphasis role="italic"
+                    >ObjectReports</emphasis> for object which has errors. <emphasis role="bold"
+                    >FULL</emphasis> returns an <emphasis role="italic">ObjectReport</emphasis> for
+                  all objects imported, and <emphasis role="bold">DEBUG</emphasis> returns the same
+                  plus a name for the object (if available).</entry>
+              </row>
             </tbody>
           </tgroup>
         </table>
