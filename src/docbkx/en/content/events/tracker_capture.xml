@@ -402,11 +402,11 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
         </itemizedlist></para>
       <para>For non-unique attributes search:<itemizedlist>
           <listitem>
-            <para>If no matching TEIs found, you will get the possibility to open the registration
+            <para>If no matching TEI's found, you will get the possibility to open the registration
               form. </para>
           </listitem>
           <listitem>
-            <para>If matching TEIs found, you can either click on any TEI in the result list, or
+            <para>If matching TEI's found, you can either click on any TEI in the result list, or
               open the registration form.</para>
           </listitem>
           <listitem>
