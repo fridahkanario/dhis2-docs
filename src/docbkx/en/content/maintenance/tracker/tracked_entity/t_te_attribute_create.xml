@@ -108,6 +108,10 @@
                             </entry>
                         </row>
                         <row>
+                            <entry>Image</entry>
+                            <entry>Similar to File, but restricted to images.</entry>
+                        </row>
+                        <row>
                             <entry>
                                 <para>Integer</para>
                             </entry>

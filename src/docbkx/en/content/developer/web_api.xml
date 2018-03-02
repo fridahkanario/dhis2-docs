@@ -4829,6 +4829,54 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     <screen>curl -d @form.html &quot;localhost/api/26/dataSets/BfMAe6Itzgt/form&quot; 
   -H &quot;Content-Type:text/html&quot; -u admin:district -X PUT -v</screen>
   </section>
+  <section>
+    <title>Documents</title>
+    <para>References to files can be stored with the document resource. <table frame="all">
+        <title>Document fields</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>Field name</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>name</entry>
+              <entry>unique name of document</entry>
+            </row>
+            <row>
+              <entry>external</entry>
+              <entry>flag identifying the location of the document. TRUE for external files, FALSE
+                for internal ones</entry>
+            </row>
+            <row>
+              <entry>url</entry>
+              <entry>the location of the file. URL for external files. File resource id for internal
+                ones (see <xref xmlns:xlink="http://www.w3.org/1999/xlink"
+                  linkend="webapi_file_resources"/>)</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>A GET request to the documents endpoint will return all
+      documents:<screen>/api/29/documents</screen></para>
+    <para>A POST request to the doucuments endpoint will create a new
+      document:<screen>curl -X POST -d @document.json -H "Content-type: allication/json"
+  http://dhis.domain/api/29/documents</screen></para>
+    <screen>{
+  "name": "dhis home",
+  "external": true,
+  "url": "https://www.dhis2.org"
+}</screen>
+    <para>A GET request with the id of a document appended will return information about the
+      document. A PUT request to the same endpoint will update the fields of the
+      document:<screen>/api/29/documents/&lt;documentId></screen></para>
+    <para>Appending <emphasis>/data</emphasis> to the GET request will return the actual file
+      content of the document:<screen>/api/29/documents/&lt;documentId>/data</screen></para>
+  </section>
   <section xml:id="webapi_validation">
     <title>Validation</title>
     <para>To generate a data validation summary you can interact with the validation resource. The
@@ -11829,6 +11877,11 @@ interval=WEEK" -u admin:district</screen>
               <entry>keyMapzenSearchApiKey</entry>
               <entry>Key for the Mapzen geo search API</entry>
             </row>
+            <row>
+              <entry>keyFileResourceRetentionStrategy</entry>
+              <entry>Determines how long file resources associated with deleted or updated values
+                are kept. NONE, THREE_MONTHS, ONE_YEAR, or FOREVER.</entry>
+            </row>
           </tbody>
         </tgroup>
       </table></para>
@@ -12627,6 +12680,17 @@ interval=WEEK" -u admin:district</screen>
           </tgroup>
         </table>
       </section>
+    </section>
+    <section>
+      <title>Image attributes</title>
+      <para>Working with image attributes is a lot like working with file data values. The value of
+        an attribute with the image value type is the id of the associated file resource. A GET
+        request to the
+          <emphasis>/api/trackedEntityInstances/&lt;entityId>/&lt;attributeId>/image</emphasis>
+        endpoint will return the actual image. The optional height and width parameters can be used
+        to specify the dimensions of the
+        image.<screen>curl http://server/api/29/trackedEntityInstances/ZRyCnJ1qUXS/zDhUuAYrxNC/image?height=200&amp;width=200
+  > image.jpg</screen></para>
     </section>
   </section>
   <section xml:id="webapi_tracked_entity_instance_query">
