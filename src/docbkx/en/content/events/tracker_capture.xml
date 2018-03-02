@@ -256,23 +256,28 @@ Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy
 Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy_comment_end?>.</para>
       </listitem>
       <listitem>
-        <para>Click <emphasis role="bold">Save and continue</emphasis> or <emphasis role="bold">Save
-            and add new</emphasis>.</para>
-        <itemizedlist>
-          <listitem>
-            <para><emphasis role="bold">Save and continue</emphasis>: completes the registration and
-              opens the registered TEI's dashboard</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Save and add new</emphasis>: completes the registration but
-              stays on the same page.
-              <?oxy_comment_start author="cecilia" timestamp="20160905T155233+0200" comment="Verify this phrase with SME."?>Use
-              this option when you want to register and enroll one TEI after another without enter
-              data.<?oxy_comment_end?></para>
-          </listitem>
-        </itemizedlist>
+        <para>If searching for program is configured, a background search will be performed on
+          searchable fields to help you prevent registering duplicates. If there is any matching
+          TEIs, a blue box will be displayed on the right side of the form with the possibility to
+          view these matching TEIs.</para>
       </listitem>
     </orderedlist>
+    <para>If there is any matching TEIs, click <emphasis role="bold">Continue</emphasis> to review
+      possible duplicates before registering a new one. </para>
+    <para>If there is no matching TEIs, click <emphasis role="bold">Save and continue</emphasis> or
+        <emphasis role="bold">Save and add new</emphasis><itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Save and continue</emphasis>: completes the registration and
+            opens the registered TEI's dashboard</para>
+        </listitem>
+        <listitem>
+          <para><emphasis role="bold">Save and add new</emphasis>: completes the registration but
+            stays on the same page.
+            <?oxy_comment_start author="cecilia" timestamp="20160905T155233+0200" comment="Verify this phrase with SME."?>Use
+            this option when you want to register and enroll one TEI after another without enter
+            data.<?oxy_comment_end?></para>
+        </listitem>
+      </itemizedlist></para>
   </section>
   <section  xml:id="open_existing_tracked_entity_instance_dashboard">
     <title>Open an
@@ -280,223 +285,137 @@ Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy
 Select of org unit optional?
 Does it search fin node + children or only children?"?>existing<?oxy_comment_end?>
       TEI dashboard</title>
+    <para>There are multiple ways to find a TEI: Using the "Lists" which is predefined lists in the
+      current selection, or "Search" for global lookup. </para>
     <para>There are two ways to find a TEI: simple and advanced search. You can also modify the
       search results list's layout and download the search results list in several formats.</para>
-    <para>
-      <screenshot>
-        <?oxy_comment_start author="cecilia" timestamp="20160830T135408+0200" comment="Replace with new screenshot or remove completely."?>
-        <title>Example: searching/registration</title>
-        <?oxy_comment_end?>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="resources/images/tracker_capture/search_register.png" format="PNG"
-              width="90%" align="center"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-    </para>
-    <section  xml:id="simple_tracked_entity_instance_search">
-      <title>Simple TEI
-        <?oxy_comment_start author="cecilia" timestamp="20161007T100209+0200" comment="Searches on TEI attributes"?>search<?oxy_comment_end?></title>
-      <orderedlist>
-        <listitem>
-          <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
-        </listitem>
-        <listitem>
-          <para>(Optional) In the organisation unit tree in the left hand pane, select an
-            organisation unit, then a program.</para>
-        </listitem>
-        <listitem>
-          <para>In the right hand search field, type your search criteria.</para>
-          <para>The search criteria could for example be a last
-            <?oxy_comment_start author="cecilia" timestamp="20161005T164018+0200" comment="Removed text to be validated: 
-&quot;The simple search works by typing a free text in the search field. What is typed in the input box is applied across all attributes for partial match.&quot;"?>name<?oxy_comment_end?>.
-            You can search on all TEI attributes.</para>
-        </listitem>
-        <listitem>
-          <para>Click the <emphasis role="bold">Search</emphasis> icon.</para>
-          <para>A list of  TEIs that match your search criteria
-            <?oxy_comment_start author="cecilia" timestamp="20160912T153955+0200" comment="Verify wording."?>displays<?oxy_comment_end?>.</para>
-        </listitem>
-        <listitem>
-          <para>If you have selected a program, you can filter the search results based on
-            enrollment
-            <?oxy_comment_start author="cecilia" timestamp="20160912T154623+0200" comment="Give feedback to SME:
-Rephrase tool-tips: Only active enrollment
-Only completed enrollment
-Only cancelled enrollment
-
-enrollment or enrollments?"?>status<?oxy_comment_end?>: <itemizedlist>
-              <listitem>
-                <para><emphasis role="bold">Only those with active enrollment</emphasis></para>
-              </listitem>
-              <listitem>
-                <para><emphasis role="bold">Only those with completed enrollment</emphasis></para>
-              </listitem>
-              <listitem>
-                <para><emphasis role="bold">Only those with cancelled enrollment</emphasis></para>
-              </listitem>
-            </itemizedlist></para>
-        </listitem>
-        <listitem>
-          <para>Click a TEI.</para>
-          <para>The TEI dashboard opens.</para>
-        </listitem>
-      </orderedlist>
+    <section xml:id="simple_tracked_entity_instance_search">
+      <title>Lists</title>
+      <para>Lists is used to find and display TEIs in the selected organisation unit and program.<orderedlist>
+          <listitem>
+            <para>Open Tracked Capture app</para>
+          </listitem>
+          <listitem>
+            <para>In the organisation unit tree in the left hand pane, select an organisation
+              unit</para>
+          </listitem>
+          <listitem>
+            <para>Select a program</para>
+          </listitem>
+          <listitem>
+            <para>Click the "Lists" button if not already selected</para>
+          </listitem>
+        </orderedlist>If not configured, a set of predefined lists will be available:<orderedlist>
+          <listitem>
+            <para>Any TEI with any enrollment status</para>
+          </listitem>
+          <listitem>
+            <para>TEIs with an active enrollment of the current program</para>
+          </listitem>
+          <listitem>
+            <para>TEIs with a completed enrollment of the current program</para>
+          </listitem>
+          <listitem>
+            <para>TEIs with a cancelled enrollment of the current program</para>
+          </listitem>
+        </orderedlist></para>
+      <para>(img)</para>
+      <para>You can select which columns to show or hide in the lists for each program. This will be
+        saved in your user settings.<orderedlist>
+          <listitem>
+            <para>Click the grid icon button</para>
+          </listitem>
+          <listitem>
+            <para>Check the columns you want to include</para>
+          </listitem>
+          <listitem>
+            <para>Click Save</para>
+          </listitem>
+        </orderedlist></para>
+      <para>There is also an option to create a custom working list with own filters. This can be
+        used to create custom lists on the fly.</para>
+      <para>(img)</para>
+      <para>Lists can also be downloaded or printed. </para>
+      <para>(img) </para>
     </section>
     <section xml:id="advanced_tracked_entity_instance_search">
-      <title>Advanced TEI search</title>
-      <para>Advanced search is conducted for the organisation units you select in the
-        <?oxy_comment_start author="cecilia" timestamp="20160913T101533+0200" comment="Verify with SMe if the node itself is part of the search and not only the children."?>organisation<?oxy_comment_end?>
-        tree inside the <emphasis role="bold">Advanced search</emphasis> window. The left-hand side
-        organisation tree is generated based on your assigned organisation units. So in the
-          <emphasis role="bold">Advanced search</emphasis> window you can select organisation units
-        outside your own organisation unit.</para>
-      <orderedlist>
-        <listitem>
-          <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
-        </listitem>
-        <listitem>
-          <para>(Optional) In the organisation unit tree in the left hand pane, select an
-            organisation unit, then a program.</para>
-          <?oxy_comment_start author="cecilia" timestamp="20160912T160241+0200" comment="Verify if this informaion is still correct.
-Can you set which attributes that are displayed in the advanced search?"?>
-          <para>If a program is selected, advanced search allows you to search on the incident date
-            if the program has one.</para>
-          <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-          <para>In the right hand search field, click the <emphasis role="bold">Advanced
-              search</emphasis>
-            <?oxy_comment_start author="cecilia" timestamp="20160912T155144+0200" comment="Arrow named according to MS Manual of Style rules (p 79)." flag="done"?>arrow<?oxy_comment_end?>.</para>
-          <para>An expanded search form opens.</para>
-        </listitem>
-        <listitem>
-          <para>Enter your search
-            <?oxy_comment_start author="cecilia" timestamp="20160912T154904+0200" comment="For SME: Does the advanced search work the same for all programs?"?>criteria<?oxy_comment_end?>(s).</para>
-          <itemizedlist>
-            <listitem>
-              <para><emphasis role="bold">Organisation unit</emphasis>: The tree displayed here
-                depends on your
-                <?oxy_comment_start author="cecilia" timestamp="20160913T102727+0200" comment="Settings of your user role?"?>user<?oxy_comment_end?>
-                role. If the you have role "Search Tracked Entity Instance in
-                <?oxy_comment_start author="cecilia" timestamp="20160913T100631+0200" comment="Verify with SME: 
-Who sets this?
-Where do you set it?"?>All<?oxy_comment_end?>
-                Org Units" or "ALL", a tree with all available organisation units is provided.
-                Otherwise the tree displayed in advanced search is the same as the one on the
-                left-hand side.</para>
-            </listitem>
-            <listitem>
-              <para>You can select the scope of the organisation unit search. In the <emphasis
-                  role="bold">Organisation unit
-                  <?oxy_comment_start author="cecilia" timestamp="20161007T135615+0200" comment="At next release: 
-Add more info here and rewrite task." flag="done"?>scope<?oxy_comment_end?></emphasis>
-                section select <emphasis role="bold">Selected</emphasis>, <emphasis role="bold"
-                  >Immediate children</emphasis> or <emphasis role="bold">All
-                children</emphasis>.</para>
-            </listitem>
-            <listitem>
-              <para><emphasis role="bold">Date or enrollment</emphasis>: appears if you have
-                selected a program</para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Search</emphasis>.</para>
-          <para>A list of  TEIs that match your search criteria(s)
-            <?oxy_comment_start author="cecilia" timestamp="20160912T153955+0200" comment="Verify wording."?>displays<?oxy_comment_end?>.</para>
-        </listitem>
-        <listitem>
-          <para>If you have selected a program, you can filter the search results based on
-            enrollment
-            <?oxy_comment_start author="cecilia" timestamp="20160912T154623+0200" comment="Give feedback to SME:
-Rephrase tool-tips: Only active enrollment
-Only completed enrollment
-Only cancelled enrollment
-
-enrollment or enrollments?"?>status<?oxy_comment_end?>: <itemizedlist>
-              <listitem>
-                <para><emphasis role="bold">Only those with active enrollment</emphasis></para>
-              </listitem>
-              <listitem>
-                <para><emphasis role="bold">Only those with completed enrollment</emphasis></para>
-              </listitem>
-              <listitem>
-                <para><emphasis role="bold">Only those with cancelled enrollment</emphasis></para>
-              </listitem>
-            </itemizedlist></para>
-        </listitem>
-        <listitem>
-          <para>Click a TEI.</para>
-          <para>The TEI dashboard opens.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section xml:id="find_tracked_entity_instance_outside_your_organisation_unit">
-      <title>Find a TEI outside your organisation
-        <?oxy_comment_start author="cecilia" timestamp="20160913T133501+0200" comment="At next revision: Review if this task should have it&apos;s on section or not." flag="done"?>unit<?oxy_comment_end?></title>
-      <para>You can search for a TEI from another organisation unit, outside your assigned
-        organisation units. To do this:</para>
-      <itemizedlist>
-        <listitem>
-          <?oxy_comment_start author="cecilia" timestamp="20160913T102033+0200" comment="Reword this para."?>
-          <para>Your user role must have "Search Tracked Entity Instance in
-            <?oxy_comment_start author="cecilia" timestamp="20160913T100631+0200" comment="Verify with SME: 
-Who sets this?
-Where do you set it?"?>All<?oxy_comment_end?>
-            Org Units" or "ALL" assigned to it.</para>
-          <?oxy_comment_end?>
-        </listitem>
-        <listitem>
-          <para>You must select another organisation unit than your own in the organisation unit
-            tree in the <emphasis role="bold">Advanced search</emphasis> window.</para>
-        </listitem>
-      </itemizedlist>
-    </section>
-    <section xml:id="download_tracked_entity_instance_search_result">
-      <title>Download TEI search results list</title>
-      <orderedlist>
-        <listitem>
-          <para>Create a TEI search results
-            list<?oxy_comment_start author="cecilia" timestamp="20160913T100650+0200" comment="At next revision: Add x-ref inside section." flag="done"?>.<?oxy_comment_end?>
-          </para>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Download as</emphasis> and select a format:</para>
-          <itemizedlist>
-            <listitem>
-              <para>XML</para>
-            </listitem>
-            <listitem>
-              <para>JSON</para>
-            </listitem>
-            <listitem>
-              <para>CSV</para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section xml:id="modify_tracked_entity_instance_search_result_layout">
-      <title>Modify TEI search results list's
-        <?oxy_comment_start author="cecilia" timestamp="20160912T164009+0200" comment="Revise wording."?>layout<?oxy_comment_end?></title>
-      <para>You can select which columns to show or hide in a TEI search result list. Once you've
-        modified the layout, it's saved on your user profile. You can have different layouts for
-        different programs.</para>
-      <orderedlist>
-        <listitem>
-          <para>Create a TEI search results
-            list<?oxy_comment_start author="cecilia" timestamp="20160913T100650+0200" comment="At next revision: Add x-ref inside section." flag="done"?>.<?oxy_comment_end?></para>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Show/hide columns</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Select the columns you want to display and click <emphasis role="bold"
-              >Close</emphasis>.</para>
-        </listitem>
-      </orderedlist>
+      <title>Search</title>
+      <para>Search is used to search for TEIs in the organisation units the user has search access
+        to. This can be used if you want to find a TEI, but you dont know which organisation unit or
+        program the TEI was enrolled in. There are two ways of doing this: With and without a
+        program context. Searchable fields needs to be configured. For configuring searching with
+        program context, this is done individually for each program in the program maintenance app.
+        For configuring searching without a program context, this is done individually for each
+        tracked entity type in the tracked entity type maintenance app.</para>
+      <para><emphasis role="bold">Searching without a program context:</emphasis><orderedlist>
+          <listitem>
+            <para>Open <emphasis role="bold">Tracker Capture app</emphasis></para>
+          </listitem>
+          <listitem>
+            <para>Click the "Search" button</para>
+          </listitem>
+          <listitem>
+            <para>Searchable fields will be displayed in groups. Unique attributes is only
+              individually searchable. Non-unique attributes can be combined.</para>
+          </listitem>
+          <listitem>
+            <para>Fill in search criteria and click the search icon button.</para>
+          </listitem>
+        </orderedlist></para>
+      <para><emphasis role="bold">Searching with a program context:</emphasis><orderedlist>
+          <listitem>
+            <para>Open <emphasis role="bold">Tracker Capture app</emphasis></para>
+          </listitem>
+          <listitem>
+            <para>Select an organisation unit which has the program you wish to search in</para>
+          </listitem>
+          <listitem>
+            <para>Select the program</para>
+          </listitem>
+          <listitem>
+            <para>Click the "Search" button</para>
+          </listitem>
+          <listitem>
+            <para>Searchable fields will be displayed in groups. Unique attributes is only
+              individually searchable. Non-unique attributes can be combined.</para>
+          </listitem>
+          <listitem>
+            <para>Fill in search criteria and click the search icon button</para>
+          </listitem>
+        </orderedlist></para>
+      <para>After the search has been done, you will be presented with the search result. Whats
+        displayed depends on the outcome of the search. </para>
+      <para>For unique attribute search:<itemizedlist>
+          <listitem>
+            <para>If no matching TEI found, you will get the possibility to open the registration
+              form.</para>
+          </listitem>
+          <listitem>
+            <para>If the TEI was found in the selected organisation unit, the TEI dashboard will
+              automatically open.</para>
+          </listitem>
+          <listitem>
+            <para>If the TEI was found in outside the selected organisation unit, you will get the
+              possibility to open the TEI. </para>
+          </listitem>
+        </itemizedlist></para>
+      <para>For non-unique attributes search:<itemizedlist>
+          <listitem>
+            <para>If no matching TEIs found, you will get the possibility to open the registration
+              form. </para>
+          </listitem>
+          <listitem>
+            <para>If matching TEIs found, you can either click on any TEI in the result list, or
+              open the registration form.</para>
+          </listitem>
+          <listitem>
+            <para>If a too large number of matches was found, you will be prompted to refine your
+              search criteria</para>
+            <para> </para>
+          </listitem>
+        </itemizedlist></para>
+      <para>When choosing to open the registration form, the search values will automatically be
+        filled into the registration form.</para>
     </section>
   </section>
     <section xml:id="enroll_existing_tracked_entity_instance_in_program">
