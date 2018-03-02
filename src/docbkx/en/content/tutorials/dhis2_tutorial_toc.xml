@@ -9,6 +9,7 @@
     xml:id="dhis2_tutorials">
     <title>DHIS2 Tutorials</title>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tutorial_scorecards_pivot_tables.xml" encoding="UTF-8"/>
+    <xi:include href="tutorial_textpattern.xml" encoding="UTF-8"/>
 </chapter>
 
 
