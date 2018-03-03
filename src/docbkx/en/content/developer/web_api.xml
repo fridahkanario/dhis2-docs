@@ -1544,6 +1544,338 @@ http://server/api/26/constants/ID</screen></para>
       lot of metadata, as it slows down the import and the audit might not be that useful if you are
       bootstrapping a new system.</para>
   </section>
+  <section>
+    <title>Render type (Experimental)</title>
+    <para>Some metadata types have a property named <emphasis>renderType</emphasis>. The render type
+      property is a map between a <emphasis>device</emphasis> and a
+        <emphasis>renderingType</emphasis>. Applications can use this information as a hint on how
+      the object should be rendered on a specific device. For example, a mobile device might want to
+      render a data element differently than a desktop computer.</para>
+    <para>There is currently two different kinds of renderingTypes available:<orderedlist>
+        <listitem>
+          <para>Value type rendering</para>
+        </listitem>
+        <listitem>
+          <para>Program stage section rendering</para>
+        </listitem>
+      </orderedlist></para>
+    <para>There is also 2 device types available:<orderedlist>
+        <listitem>
+          <para>MOBILE</para>
+        </listitem>
+        <listitem>
+          <para>DESKTOP</para>
+        </listitem>
+      </orderedlist></para>
+    <para>The following table lists the metadata and rendering types available. The value type
+      rendering has addition constraints based on the metadata configuration, which will be shown in
+      a second table.<table frame="all">
+        <title>Metadata and RenderingType overview</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Metadata type</entry>
+              <entry>Available RenderingTypes</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Program Stage Section</entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>LISTING (default)</para>
+                  </listitem>
+                  <listitem>
+                    <para>SEQUENTIAL</para>
+                  </listitem>
+                  <listitem>
+                    <para>MATRIX</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>Data element</entry>
+              <entry morerows="1">
+                <itemizedlist>
+                  <listitem>
+                    <para>DEFAULT</para>
+                  </listitem>
+                  <listitem>
+                    <para>DROPDOWN</para>
+                  </listitem>
+                  <listitem>
+                    <para>VERTICAL_RADIOBUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>HORIZONTAL_RADIOBUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>VERTICAL_CHECKBOXES</para>
+                  </listitem>
+                  <listitem>
+                    <para>HORIZONTAL_CHECKBOXES</para>
+                  </listitem>
+                  <listitem>
+                    <para>SHARED_HEADER_RADIOBUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>ICONS_AS_BUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>SPINNER</para>
+                  </listitem>
+                  <listitem>
+                    <para>ICON</para>
+                  </listitem>
+                  <listitem>
+                    <para>TOGGLE</para>
+                  </listitem>
+                  <listitem>
+                    <para>VALUE</para>
+                  </listitem>
+                  <listitem>
+                    <para>SLIDER</para>
+                  </listitem>
+                  <listitem>
+                    <para>LINEAR_SCALE</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>Tracked entity attribute</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>Since handling the default rendering of data elements and tracked entity attributes are
+      depending on the value type of the object, there is also a DEFAULT type to tell the client it
+      should be handled as normal. Program Stage Section are LISTING as default.<table frame="all">
+        <title>RenderingTypes allowed based on value types</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Value type</entry>
+              <entry>Is object an optionset?</entry>
+              <entry>RenderingTypes allowed</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>TRUE_ONLY</entry>
+              <entry>No</entry>
+              <entry morerows="1">DEFAULT, VERTICAL_RADIOBUTTONS, HORIZONTAL_RADIOBUTTONS,
+                VERTICAL_CHECKBOXES, HORIZONTAL_CHECKBOXES, TOGGLE </entry>
+            </row>
+            <row>
+              <entry>BOOLEAN</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>-</entry>
+              <entry>Yes</entry>
+              <entry>DEFAULT, DROPDOWN, VERTICAL_RADIOBUTTONS, HORIZONTAL_RADIOBUTTONS,
+                VERTICAL_CHECKBOXES, HORIZONTAL_CHECKBOXES, SHARED_HEADER_RADIOBUTTONS,
+                ICONS_AS_BUTTONS, SPINNER, ICON</entry>
+            </row>
+            <row>
+              <entry>INTEGER</entry>
+              <entry>No</entry>
+              <entry morerows="6">DEFAULT, VALUE, SLIDER, LINEAR_SCALE, SPINNER</entry>
+            </row>
+            <row>
+              <entry>INTEGER_POSITIVE</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>INTEGER_NEGATIVE</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>INTEGER_ZERO_OR_POSITIVE</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>NUMBER</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>UNIT_INTERVAL</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>PERCENTAGE</entry>
+              <entry>No</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>A complete reference of the previous table can also be retrieved using the following
+      endpoint:<screen>GET /api/staticConfiguration/renderingOptions</screen></para>
+    <para>Value type rendering also has some additional properties that can be set, which is usually
+      needed when rendering some of the specific types:<table frame="all">
+        <title>renderType object properties</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Property</entry>
+              <entry>Description</entry>
+              <entry>Type</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>type</entry>
+              <entry>The RenderingType of the object, as seen in the first table. This property is
+                the same for both value type and program stage section, but is the only property
+                available for program stage section. </entry>
+              <entry>Enum (See list in the Metadata and Rendering Type table)</entry>
+            </row>
+            <row>
+              <entry>min</entry>
+              <entry>Only for value type rendering. Represents the minimum value this field can
+                have.</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>max</entry>
+              <entry>Only for value type rendering. Represents the maximum value this field can
+                have.</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>step</entry>
+              <entry>Only for value type rendering. Represents the size of the steps the value
+                should increase, for example for SLIDER og LINEAR_SCALE</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>decimalPoints</entry>
+              <entry>Only for value type rendering. Represents the number of decimal points the
+                value should use.</entry>
+              <entry>Integer</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para><emphasis>renderingType</emphasis> can be set when creating or updating the metadata
+      listed in the first table. An example payload for the renderingType looks like
+      this:<screen>Program Stage Section:
+{
+  ...
+  "renderingType": {
+    "type": "MATRIX"
+  }
+  ...
+}
+
+Value type (Data Element, Tracked Entity Attribute)
+{
+  ...
+  "renderingType": {
+    "type": "SLIDER",
+    "min": 0,
+    "max": 1000,
+    "step": 50,
+    "decimalPoints": 0
+  }
+  ...
+}</screen></para>
+  </section>
+  <section>
+    <title>Object Style (Experimental)</title>
+    <para>Most metadata have a property names "style". This property can be used by clients to
+      represent the object in a certain way. The properties currently supported by style is as
+        follows:<table frame="all">
+        <title>Style properties</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Property</entry>
+              <entry>Description</entry>
+              <entry>Type</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>color</entry>
+              <entry>A color, represented by a hexadecimal.</entry>
+              <entry>String (#000000)</entry>
+            </row>
+            <row>
+              <entry>icon</entry>
+              <entry>An icon, represented by a icon-name.</entry>
+              <entry>String</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>Currently there is no official list or support for icon-libraries, so this is currently up
+      to the client to provide. The following list shows all objects that supports style:<itemizedlist>
+        <listitem>
+          <para>Data element</para>
+        </listitem>
+        <listitem>
+          <para>Data element category option</para>
+        </listitem>
+        <listitem>
+          <para>Data set</para>
+        </listitem>
+        <listitem>
+          <para>Indicator</para>
+        </listitem>
+        <listitem>
+          <para>Option</para>
+        </listitem>
+        <listitem>
+          <para>Program</para>
+        </listitem>
+        <listitem>
+          <para>Program Indicator</para>
+        </listitem>
+        <listitem>
+          <para>Program Section</para>
+        </listitem>
+        <listitem>
+          <para>Program Stage</para>
+        </listitem>
+        <listitem>
+          <para>Program Stage Section</para>
+        </listitem>
+        <listitem>
+          <para>Relationship (Tracker)</para>
+        </listitem>
+        <listitem>
+          <para>Tracked Entity Attribute</para>
+        </listitem>
+        <listitem>
+          <para>Tracked Entity Type</para>
+        </listitem>
+      </itemizedlist></para>
+    <para>When creating or updating any of these objects, you can include the following payload to
+      change the
+      style:<screen>{
+  ...
+  "style": {
+    "color": "#ffffff",
+    "icon": "my-beautiful-icon"
+  }
+  ...
+}</screen></para>
+  </section>
   <section xml:id="webapi_amqp_rabbitmq_integration">
     <title>AMQP/RabbitMQ integration</title>
     <para>If you have an external system that needs to know about updates inside of DHIS2 (update
@@ -13918,7 +14250,7 @@ interval=WEEK" -u admin:district</screen>
     </section>
   </section>
   <section xml:id="webapi_scheduling">
-    <title>Scheduling</title>
+    <title>Scheduling (Experimental)</title>
     <para>
       In 2.29 we introduced a new way of scheduling jobs on the server. Each type of job has
       different properties for configuration, giving you more control over how jobs are run. In
