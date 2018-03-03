@@ -12603,16 +12603,56 @@ interval=WEEK" -u admin:district</screen>
     <section xml:id="webapi_generate_tei_attributes">
       <title>Generated tracked entity instance attributes</title>
       <para>Tracked entity instance attributes that is using automatic generation of unique values
-        has two endpoints that is used by apps. One is used to generate values, the other to
-        generate and reserve one or more values for use later.</para>
+        has three endpoints that is used by apps. The endpoints are all used for generating and
+        reserving values.</para>
+      <para>In 2.29 we introduced TextPattern for defining and generating these patterns. You can
+        read more about <link xmlns:xlink="http://www.w3.org/1999/xlink"
+          linkend="create-scorecards-pivot-table">working with TextPattern here</link>. All existing
+        patterns will be converted to a valid TextPattern when upgrading to 2.29.<note>
+          <para>As of 2.29, all these endpoint will require you to include any variables reported by
+            the <emphasis>requiredValues</emphasis> endpoint listed as required. Existing patterns,
+            consisting of only “#”, will be upgraded to the new TextPattern syntax
+            “RANDOM(&lt;old-pattern>)”. The RANDOM segment of the TextPattern is not a required
+            variable, so this endpoint will work as before for patterns defined before 2.29. </para>
+        </note></para>
+      <section>
+        <title>Finding required values</title>
+        <para>A TextPattern can contain variables that change based on different factors. Some of
+          these factors will be unknown to the server, so the values for these variables have to be
+          supplied when generating and reserving values.</para>
+        <para>This endpoint will return a map of required and optional values, that the server will
+          inject into the TextPattern when generating new values. Required variables have to be
+          supplied for the generation, but optional variables should only be supplied if you know
+          what you are
+          doing.<screen>GET /api/trackedEntityAttributes/Gs1ICEQTPlG/requiredValues</screen><screen>{
+	"REQUIRED": [
+		"ORG_UNIT_CODE"
+	],
+	"OPTIONAL": [
+		"RANDOM"
+	]
+}</screen></para>
+      </section>
       <section xml:id="webapi_generate_values">
         <title>Generate value endpoint</title>
         <para>Online web apps and other clients that wants to generate a value that will be used
           right away can use the simple generate endpoint. This endpoint will generate a value that
           is guaranteed to be unique at the time of generation. The value is also guaranteed not to
-          be reserved by use of the generateAndReseve endpoint.</para>
-        <screen>curl -X GET -H "Content-Type: application/json" -u admin:district 
-          https://play.dhis2.org/dev/api/trackedEntityAttributes/lZGmxYbs97q/generate</screen>
+          be reserved. As of 2.29, this endpoint will also reserve the value generated for 3
+          days.</para>
+        <para>If your TextPattern includes required values, you can pass them as paramaters like the
+          example below:</para>
+        <para>The expiration time can also be overridden at the time of generation, by adding the
+          ?expiration=&lt;number-of-days> to the request.</para>
+        <screen>GET /api/trackedEntityAttributes/Gs1ICEQTPlG/generate?ORG_UNIT_CODE=OSLO</screen>
+        <screen>{
+	"ownerObject": "TRACKEDENTITYATTRIBUTE",
+	"ownerUid": "Gs1ICEQTPlG",
+	"key": "RANDOM(X)-OSL",
+	"value": "C-OSL",
+	"created": "2018-03-02T12:01:36.680",
+	"expiryDate": "2018-03-05T12:01:36.678"
+}</screen>
       </section>
       <section xml:id="webapi_generate_reserve_values">
         <title>Generate and reserve value endpoint</title>
@@ -12620,33 +12660,49 @@ interval=WEEK" -u admin:district</screen>
           register tracked entities with unique ids. They will reserve a number of unique ids that
           this device will then use when registering new tracked entity instances. The endpoint is
           called to retreieve a number of tracked entity instance reserved values. An optional
-          parameter numberToReserve specifies how many ids to generate (default is 1). </para>
-        <screen>curl -X GET -H "Content-Type: application/json" -u admin:district 
-          https://play.dhis2.org/dev/api/trackedEntityAttributes/lZGmxYbs97q/generateAndReserve?numberToReserve=3</screen>
+          parameter numberToReserve specifies how many ids to generate (default is 1).</para>
+        <para>If your TextPattern includes required values, you can pass them as paramaters like the
+          example below:</para>
+        <para>Similar to the /generate endpoint, this endpoint can also specify the expiration time
+          in the same way. By adding the ?expiration=&lt;number-of-days> you can override the
+          default 60 days. </para>
+        <screen>GET /api/trackedEntityAttributes/Gs1ICEQTPlG/generateAndReserve?numberToReserve=3&amp;ORG_UNIT_CODE=OSLO</screen>
         <screen>[
-   {
-      "created":"2016-06-25T07:52:26.466+0000",
-      "expiryDate":"2017-06-25T07:52:26.466+0000",
-      "value":"43327401",
-      "trackedEntityAttribute":{  }
-   },
-   {
-      "created":"2016-06-25T07:52:26.468+0000",
-      "expiryDate":"2017-06-25T07:52:26.468+0000",
-      "value":"82676084",
-      "trackedEntityAttribute":{  }
-   },
-   {
-      "created":"2016-06-25T07:52:26.471+0000",
-      "expiryDate":"2017-06-25T07:52:26.471+0000",
-      "value":"91700776",
-      "trackedEntityAttribute":{  }
-   }
-]
-        </screen>
-        <para>The generate and reserve endpoint returns an array of reserved values:</para>
+	{
+		"ownerObject": "TRACKEDENTITYATTRIBUTE",
+		"ownerUid": "Gs1ICEQTPlG",
+		"key": "RANDOM(X)-OSL",
+		"value": "B-OSL",
+		"created": "2018-03-02T13:22:35.175",
+		"expiryDate": "2018-05-01T13:22:35.174"
+	},
+	{
+		"ownerObject": "TRACKEDENTITYATTRIBUTE",
+		"ownerUid": "Gs1ICEQTPlG",
+		"key": "RANDOM(X)-OSL",
+		"value": "Q-OSL",
+		"created": "2018-03-02T13:22:35.175",
+		"expiryDate": "2018-05-01T13:22:35.174"
+	},
+	{
+		"ownerObject": "TRACKEDENTITYATTRIBUTE",
+		"ownerUid": "Gs1ICEQTPlG",
+		"key": "RANDOM(X)-OSL",
+		"value": "S-OSL",
+		"created": "2018-03-02T13:22:35.175",
+		"expiryDate": "2018-05-01T13:22:35.174"
+	}
+]</screen>
+      </section>
+      <section>
+        <title>Reserved values</title>
+        <para>Reserved values is currently not accessible trough the api, however they are returned
+          by the <emphasis>generate</emphasis> and <emphasis>generateAndReserve</emphasis>endpoints.
+          The following table explains the properties of the reserved value object:</para>
+      </section>
+      <section>
         <table frame="all">
-          <title>Tracked entity reserved values</title>
+          <title>Reserved values</title>
           <tgroup cols="2">
             <colspec colnum="1" colname="c1" colwidth="1.38*"/>
             <colspec colnum="2" colname="c3" colwidth="7.25*"/>
@@ -12658,27 +12714,39 @@ interval=WEEK" -u admin:district</screen>
             </thead>
             <tbody>
               <row>
-                <entry>created</entry>
-                <entry>The date the reserved value was created.</entry>
+                <entry>ownerObject</entry>
+                <entry>The metadata type referenced when generating and reserving the value.
+                  Currently only TRACKEDENTITYATTRIBUTE is supported.</entry>
               </row>
               <row>
-                <entry>expiryDate</entry>
-                <entry>After this date the value can be deleted/unreserved by the server if  no
-                  tracked entity has been registered with the value. The deletion does not happen
-                  automatically at the exact time of the expiration, but can/will be done with
-                  scripts or mechanisms implemneted later.</entry>
+                <entry>ownerUid</entry>
+                <entry>The uid of the metadata object referenced when generating and reserving the
+                  value.</entry>
+              </row>
+              <row>
+                <entry>key</entry>
+                <entry>A partially generated value where generated segments are not yet
+                  added.</entry>
               </row>
               <row>
                 <entry>value</entry>
-                <entry>The actual generated value that is reserved.</entry>
+                <entry>The fully resolved value reserved. This is the value you send to the server
+                  when storing data.</entry>
               </row>
               <row>
-                <entry>trackedEntityAttribute</entry>
-                <entry>The tracked entity attribute that the value was generated for.</entry>
+                <entry>created</entry>
+                <entry>The timestamp when the reservation was made</entry>
+              </row>
+              <row>
+                <entry>expiryDate</entry>
+                <entry>The timestamp when the reservation will no longer be reserved</entry>
               </row>
             </tbody>
           </tgroup>
         </table>
+        <para>Expired reservations are removed daily. If a pattern changes, values that was already
+          reserved will be accepted when storing data, even if they don't match the new pattern, as
+          long as the reservation has not expired.</para>
       </section>
     </section>
     <section>
