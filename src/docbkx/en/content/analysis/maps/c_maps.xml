@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="about_maps">
+    <title>About the Maps app</title>
+    <para>The Maps App is introduced in release 2.29 and serves as a replacement of the GIS App
+        offering a more intuitive and user-friendly interface.</para>
+    <para>With the Maps app you can overlay multiple layers and choose among different base maps.
+        You can create thematic maps of areas and points, view facilities based on classifications,
+        and visualize catchment areas for each facility. You can add labels to areas and points, and
+        search and filter using various criteria. You can move points and set locations on the fly.
+        Maps can be saved as favorites and shared with other users and groups.</para>
+    <para>
+        <note>
+            <para>To use predefined legends in the <emphasis role="bold">Maps</emphasis> app, you
+                need to create them first in the <emphasis role="bold">Maintenance</emphasis>
+                app.</para>
+        </note>
+    </para>
+    <para>
+        <screenshot>
+            <title>Here's an overview of the Maps app workspace</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resources/images/maps/maps_main.png" align="center"
+                        width="100%" format="PNG"/>
+                </imageobject>
+            </mediaobject>
+        </screenshot>
+    </para>
+    <itemizedlist>
+        <listitem>
+            <para>The <emphasis role="bold">layer panel</emphasis> on the left side of the workspace
+                shows an overview of the layers for the current map:</para>
+            <itemizedlist>
+                <listitem>
+                    <para>As layers are added, using the (+) Add layer button, they are arranged and
+                        managed in this panel.</para>
+                </listitem>
+                <listitem>
+                    <para>The <emphasis role="bold">basemap</emphasis> is always shown in the panel.
+                        The default basemap is OSM Light and is selected by default. OpenStreetMap
+                        Detailed,
+                        <?oxy_comment_start author="Home" timestamp="20160412T152838+0200" comment="Use of trademarks in documentaiton and interface must be reviewed.
+https://www.google.com/permissions/trademark/trademark-list.html
+" id="pjt_gvs_xcb" mid="1"?><?oxy_comment_start author="philld" timestamp="20180220T082207+0100" comment="The trademarks here are in line with Googles requirements on trademark use." parentID="pjt_gvs_xcb"?>Google
+                        Streets and Google Hybrid<?oxy_comment_end?><?oxy_comment_end mid="1"?> are
+                        also available. You can use these maps as background maps and layers. Switch
+                        between them by selecting the desired image.</para>
+                </listitem>
+                <listitem>
+                    <para>The small arrow button to the right of the layer panel, at the top, allows
+                        the panel to be hidden or shown. </para>
+                </listitem>
+            </itemizedlist>
+        </listitem>
+    </itemizedlist>
+    <para></para>
+    <itemizedlist>
+        <listitem>
+            <para>The <emphasis role="bold">Favorites</emphasis> button near the top left allows you
+                to save and open maps:</para>
+            <variablelist>
+                <varlistentry>
+                    <term>New             </term>
+                    <listitem>
+                        <para>will clear any existing map layers to create a new thematic map.
+                        </para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>Open</term>
+                    <listitem>
+                        <para>will display a <emphasis role="bold">Favorites</emphasis> dialog to
+                            select an existing thematic map. Favorites can also be renamed, shared
+                            and deleted through the Favorites dialog. <emphasis>The title of the
+                                current favorite is displayed in the header bar above the Favorites
+                                button.</emphasis></para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>Save</term>
+                    <listitem>
+                        <para>will save any changes to the current favorite.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>Save as</term>
+                    <listitem>
+                        <para>will save the current thematic map as a new favorite.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>Write interpretation</term>
+                    <listitem>
+                        <para>will open a dialog where an interpretation for the current favorite
+                            can be written.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>Get link</term>
+                    <listitem>
+                        <para>will provide a direct link and API link to the current
+                            favorite.</para>
+                    </listitem>
+                </varlistentry>
+            </variablelist>
+        </listitem>
+
+    </itemizedlist>
+    <itemizedlist>
+        <listitem>
+            <para>The <emphasis role="bold">+</emphasis> and <emphasis role="bold">-
+                </emphasis>buttons on the map allow you to zoom in and out of the map respectively.
+                The mouse scroll wheel can also be used for altering the zoom.</para>
+        </listitem>
+        <listitem>
+            <para><emphasis role="bold">Zoom to content</emphasis> (bounded magnifying glass symbol)
+                automatically adjusts the zoom level and map center position to put the data on your
+                map in focus.</para>
+        </listitem>
+        <listitem>
+            <para><emphasis role="bold">Search</emphasis> (magnifying glass symbol) allows searching
+                for and jumping to a location on the map.</para>
+        </listitem>
+        <listitem>
+            <para>The <emphasis role="bold">ruler</emphasis> button allows you to find the distance
+                between two locations on the map.</para>
+        </listitem>
+        <listitem>
+            <para>To view information for an event, simply click the event.</para>
+        </listitem>
+        <listitem>
+            <para>Right-click on the map to display the longitude and latitude of that
+                location.</para>
+        </listitem>
+        <listitem>
+            <para>The home icon on the top right of the workspace will take you back to the DHIS2
+                dashboard.</para>
+        </listitem>
+        <listitem>
+            <para>The About button will display system version information.</para>
+
+        </listitem>
+    </itemizedlist>
+    <para/>
+            <para><emphasis role="bold">Basemaps</emphasis></para>
+            <para>Basemap layers are represented by layer <emphasis>cards</emphasis> in the layer
+                panel such as:</para>
+            <screenshot>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="resources/images/maps/maps_basemap_card.png"
+                            format="png" align="left" width="40%"/>
+                    </imageobject>
+                </mediaobject>
+            </screenshot>
+            <para>Along the top of the basemap card from left to right are:</para>
+
+            <itemizedlist>
+                <listitem>
+                    <para>The title of the selected basemap</para>
+                </listitem>
+                <listitem>
+                    <para>An eye symbol for toggling the visibility of the layer</para>
+                </listitem>
+                <listitem>
+                    <para>An arrow symbol to collapse and expand the basemap card</para>
+                </listitem>
+            </itemizedlist>
+            <para>In the middle of the basemap card is the list of available basemaps. The current basemap is highlighted.</para>
+            <para>Along the bottom of the basemap card is:</para>
+            <itemizedlist>
+                <listitem>
+                    <para>A slider for modifying the layer transparency</para>
+                </listitem>
+            </itemizedlist>
+    
+</section>
