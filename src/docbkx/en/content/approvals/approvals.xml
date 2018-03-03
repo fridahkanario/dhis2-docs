@@ -68,6 +68,7 @@ Create an approval workflow - TBA"?>approval<?oxy_comment_end?></title>
       below, so reviewer does not have to worry that the data could be changing from below while it
       is being reviewed. It can also be used by the higher-level user to keep track of which
       lower-level data has already been reviewed.</para>
+    <para>Two-step process can be activated by checking <emphasis role="bold">Acceptance required before approval</emphasis>  in SystemSettings app under General section.</para>
   </section>
   <section xml:id="data_approvals_authorities">
     <title>Authorities for approving data</title>
@@ -101,15 +102,15 @@ Create an approval workflow - TBA"?>approval<?oxy_comment_end?></title>
   </section>
   <section xml:id="data_approvals_configuration">
     <title>Configuring data approval</title>
-    <para>In the <emphasis role="italic">Settings</emphasis> section under <emphasis role="italic"
-        >System Approval Settings</emphasis> you can specify the levels at which you want to approve
+    <para>In the <emphasis role="italic">Maintenance app</emphasis> section under <emphasis role="italic">Data approval level</emphasis>
+      you can specify the levels at which you want to approve
       data in the system. Click the Add new button on this page and select the organisation unit
       level at which you want approvals. It will be added to the list of approval settings. You may
       configure the system for approving data at every organisation unit level, or only at selected
       organisation unit levels.</para>
     <para>Note that when you add a new approval level, you may optionally choose a Category option
       group set. This feature is discussed later in this chapter.</para>
-    <para>Also under <emphasis role="italic">System Approval Settings</emphasis>, you can define the
+    <para>Also in maintenance under <emphasis role="italic">Data approval workflow</emphasis>, you can define the
       workflows that will be used for approving data. Each workflow can be associated with one or
       more approval levels. Any two workflows may operate at all the same approval levels as each
       other, some of the same and some different levels, or completely different levels.</para>
