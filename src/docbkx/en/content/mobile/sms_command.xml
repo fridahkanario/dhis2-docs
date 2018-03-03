@@ -163,7 +163,7 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
         <screenshot>
           <mediaobject>
             <imageobject>
-              <imagedata width="40%" align="center" fileref="resources/images/dhis2_mobile/tracker.png"/>
+              <imagedata width="40%" align="center" fileref="resources/images/dhis2_mobile_sms/TEI_parser.png"/>
             </imageobject>
           </mediaobject>
         </screenshot>
@@ -183,7 +183,7 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
         <screenshot>
           <mediaobject>
             <imageobject>
-              <imagedata width="40%" align="center" fileref="resources/images/dhis2_mobile/program-stage-parser.png"/>
+              <imagedata width="40%" align="center" fileref="resources/images/dhis2_mobile_sms/programstage_data_parser.png"/>
             </imageobject>
           </mediaobject>
         </screenshot>

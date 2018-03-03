@@ -18,6 +18,7 @@ Added to term list" flag="done"?>data
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="c_dataset.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wf_dataset.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_dataset_create.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_dataset_notification_manage.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_dataset_override_catcombo.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_dataset_editcomp_de.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="t_defaultform_download.xml" encoding="UTF-8"/>
