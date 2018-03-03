@@ -5,7 +5,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook" xml:id="create-scorecards-pivot-table">
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="working-with-textpattern">
     <title>Working with TextPattern</title>
     <para>TextPattern was introduced in DHIS2 version 2.29, as a way of defining a pattern that
         includes variables, generated values and raw text, which then could be generated into a text
@@ -185,7 +185,7 @@
             of the pattern, however the generated segment (RANDOM) will allow for 14776336 possible
             values. The reason for this is that * can be any one character of the 62 characters
             available (0-9, a-z, A-Z). You can read more about understanding pattern capacity
-            further  down in the tutorial.</para>
+            further down in the tutorial.</para>
     </section>
     <section>
         <title>Designing TextPattern for generating ids</title>
