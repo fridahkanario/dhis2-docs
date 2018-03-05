@@ -1,16 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-      <chapter version="5.0"
-         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
-          xmlns="http://docbook.org/ns/docbook"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xs="http://www.w3.org/2001/XMLSchema"
-         xmlns:xl="http://www.w3.org/1999/xlink"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-         xmlns:svg="http://www.w3.org/2000/svg"
-         xmlns:mth="http://www.w3.org/1998/Math/MathML"
-         xmlns:db="http://docbook.org/ns/docbook"
-         xml:id="tracker_capture_app">
+<chapter version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="tracker_capture_app">
   <title>Using the <?oxy_comment_start author="cecilia" timestamp="20160905T145828+0200" comment="Before release, replace all screen shots."?>Tracker<?oxy_comment_end?>
     <?oxy_comment_start author="cecilia" timestamp="20160912T110348+0200" comment="Add section about Print form feature
 What does it do?
@@ -77,7 +72,7 @@ Could also effect TEIs."?>to<?oxy_comment_end?>
       </listitem>
     </itemizedlist>
   </section>
-        <section xml:id="about_tracked_entity_instance_dashboard">
+  <section xml:id="about_tracked_entity_instance_dashboard">
     <title>About tracked entity instance (TEI) dashboards</title>
     <para>
       <screenshot>
@@ -139,7 +134,7 @@ TEI&apos;s dashboard?"?>TEI's
       </listitem>
     </itemizedlist>
   </section>
-   <section xml:id="workflow_tracker_capture">
+  <section xml:id="workflow_tracker_capture">
     <title>Workflow</title>
     <example>
       <para>Working process of Mother and child health program</para>
@@ -176,64 +171,7 @@ TEI&apos;s dashboard?"?>TEI's
       </orderedlist>
     </example>
   </section>
-        <section xml:id="create_tracked_entity_instance">
-    <title>Cr<?oxy_comment_start author="cecilia" timestamp="20160830T135151+0200" comment="Create a TEI?
-Register a TEI?"?>eate<?oxy_comment_end?>
-      a TEI</title>
-    <orderedlist>
-      <listitem>
-        <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
-      </listitem>
-      <listitem>
-        <para>In the organisation unit tree in the left hand pane, select an organisation
-          unit.</para>
-      </listitem>
-      <listitem>
-        <para>Verify that the <emphasis role="bold">Program</emphasis> field is empty.</para>
-      </listitem>
-      <listitem>
-        <para>Click <emphasis role="bold">Register</emphasis>.</para>
-      </listitem>
-      <listitem>
-        <para>Select an entity type.</para>
-      </listitem>
-      <listitem>
-        <para>Fill in the required
-          <?oxy_comment_start author="cecilia" timestamp="20160826T141524+0200" comment="Does the fields depend on which program you&apos;ve chosen?
-Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy_comment_end?>.</para>
-      </listitem>
-      <listitem>
-        <para>Click <emphasis role="bold">Save and continue</emphasis> or <emphasis role="bold">Save
-            and add new</emphasis>.</para>
-        <itemizedlist>
-          <listitem>
-            <para><emphasis role="bold">Save and continue</emphasis>: completes the registration and
-              opens the registered TEI's dashboard</para>
-          </listitem>
-          <listitem>
-            <para><emphasis role="bold">Save and add new</emphasis>: completes the registration but
-              stays on the same page.
-              <?oxy_comment_start author="cecilia" timestamp="20160905T155233+0200" comment="Verify this phrase with SME."?>Use
-              this option when you want to register one TEI after another without enrollment to a
-              program.<?oxy_comment_end?></para>
-          </listitem>
-        </itemizedlist>
-      </listitem>
-    </orderedlist>
-    <note>
-      <para>For unique tracked entity attributes the system can automatically generate and assign
-        numeric IDs. When registering tracked entity instances on web, the registration form will
-        then automatically be populated with a number in the given pattern. On Android, the ID
-        generation is used to reserve a series of IDs for each Android device. This allows offline
-        registration of tracked entity instances without risking duplicate IDs when syncing with the
-        server.</para>
-      <para>You configure automated IDs in the <emphasis role="bold">Maintenance</emphasis>
-        <?oxy_comment_start author="cecilia" timestamp="20161007T090423+0200" comment="When olinks work: add x-ref here. " flag="done"?>app<?oxy_comment_end?>:
-          <emphasis role="bold">Tracker</emphasis> > <emphasis role="bold">Tracked entity
-          attribute</emphasis>.</para>
-    </note>
-  </section >
-  <section  xml:id="create_and_enroll_tracked_entity_instance">
+  <section xml:id="create_and_enroll_tracked_entity_instance">
     <title>Create a TEI and enroll it in a program</title>
     <para>You can create a TEI and enroll that TEI to a program in one operation:</para>
     <orderedlist>
@@ -274,7 +212,7 @@ Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy
       </listitem>
     </orderedlist>
   </section>
-  <section  xml:id="open_existing_tracked_entity_instance_dashboard">
+  <section xml:id="open_existing_tracked_entity_instance_dashboard">
     <title>Open an
       <?oxy_comment_start author="cecilia" timestamp="20160912T113234+0200" comment="Verify with SME: 
 Select of org unit optional?
@@ -295,7 +233,7 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
         </mediaobject>
       </screenshot>
     </para>
-    <section  xml:id="simple_tracked_entity_instance_search">
+    <section xml:id="simple_tracked_entity_instance_search">
       <title>Simple TEI
         <?oxy_comment_start author="cecilia" timestamp="20161007T100209+0200" comment="Searches on TEI attributes"?>search<?oxy_comment_end?></title>
       <orderedlist>
@@ -315,7 +253,7 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
         </listitem>
         <listitem>
           <para>Click the <emphasis role="bold">Search</emphasis> icon.</para>
-          <para>A list of  TEIs that match your search criteria
+          <para>A list of TEIs that match your search criteria
             <?oxy_comment_start author="cecilia" timestamp="20160912T153955+0200" comment="Verify wording."?>displays<?oxy_comment_end?>.</para>
         </listitem>
         <listitem>
@@ -404,7 +342,7 @@ Add more info here and rewrite task." flag="done"?>scope<?oxy_comment_end?></emp
         </listitem>
         <listitem>
           <para>Click <emphasis role="bold">Search</emphasis>.</para>
-          <para>A list of  TEIs that match your search criteria(s)
+          <para>A list of TEIs that match your search criteria(s)
             <?oxy_comment_start author="cecilia" timestamp="20160912T153955+0200" comment="Verify wording."?>displays<?oxy_comment_end?>.</para>
         </listitem>
         <listitem>
@@ -499,7 +437,7 @@ Where do you set it?"?>All<?oxy_comment_end?>
       </orderedlist>
     </section>
   </section>
-    <section xml:id="enroll_existing_tracked_entity_instance_in_program">
+  <section xml:id="enroll_existing_tracked_entity_instance_in_program">
     <title>Enroll an existing TEI in a program</title>
     <orderedlist>
       <listitem>
@@ -524,70 +462,173 @@ Where do you set it?"?>All<?oxy_comment_end?>
   <section xml:id="enter_event_data_for_tracked_entity_instance">
     <title>Enter event data for a
       <?oxy_comment_start author="cecilia" timestamp="20161005T164705+0200" comment="At next release: Rewrite section and add more information," flag="done"?>TEI<?oxy_comment_end?></title>
-    <para>In a TEI dashboard, you enter event data in the <emphasis role="bold">Timeline Data
-        entry</emphasis> or <emphasis role="bold">Tabular data entry</emphasis>
-      <?oxy_comment_start author="cecilia" timestamp="20160913T144337+0200" comment="Verify with SME: 
+    <section>
+      <title>Widgets for data entry</title>
+      <section>
+        <para>In a TEI dashboard, you enter event data in the <emphasis role="bold">Timeline Data
+            entry</emphasis> or <emphasis role="bold">Tabular data entry</emphasis>
+          <?oxy_comment_start author="cecilia" timestamp="20160913T144337+0200" comment="Verify with SME: 
 Do the data entry widgets look different depending on the program?"?>widgets<?oxy_comment_end?>.</para>
-    <table frame="all">
-      <title>Data entry widgets in the Tracker Capture app</title>
-      <tgroup cols="2">
-        <colspec colname="c1" colnum="1" colwidth="1*"/>
-        <colspec colname="c2" colnum="2" colwidth="2.13*"/>
-        <thead>
-          <row>
-            <entry>
-              <para>Widget name</para>
-            </entry>
-            <entry>
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry>
-              <para><emphasis role="bold">Timeline Data entry</emphasis></para>
-            </entry>
-            <entry>
-              <para>For data entry using either default or custom forms.</para>
-              <para>Depending on program definition, in particular program stages, events will be
-                displayed in a timely fashion. Clicking on any of them displays the corresponding
-                data entry. If a stage needs new event, a plus icon is displayed for new event
-                creation. To proceed with data entry, it is mandatory to have event date. Once an
-                event date is specified it is not possible to change due date. The assumption is
-                that by specifying event date, the event has already taken place. If the event
-                hasn't occurred yet, it is possible to change due date - this is effectively doing
-                nothing but rescheduling. The buttons at the bottom help to change the status of a
-                selected event.</para>
-              <para>Another key feature from this widget is addition of multiple notes for an event.
-                Normally data recording is through data elements, however there are cases where it
-                is necessary to record additional information or comments. This is where the notes
-                section comes handy. However it is not possible to delete a note. The idea is notes
-                are more like log books. Both skip-logic and validation error/warning messages are
-                supported during data entry.</para>
-              <para>Also included in the Timeline Data entry is the option to compare your data
-                entry to previous entries. This can be enabled by clicking the "Switch to compare
-                form" button (Two sheets of paper) in the top right corner of the Timeline Data
-                entry widget.</para>
-            </entry>
-          </row>
-          <row>
-            <entry>
-              <para><emphasis role="bold">Tabular
-                  <?oxy_comment_start author="cecilia" timestamp="20161005T165624+0200" comment="Feature has been redone, verify with SME."?>data<?oxy_comment_end?>
-                  entry</emphasis></para>
-            </entry>
-            <entry>
-              <para>For tabular-style data entry.</para>
-              <para>The widget displays the list of program stages as left-hand side labels. Events
-                will be listed in table for repeatable program stage, and allows for in-line edits
-                of event data values.</para>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
-    <para/>
+        <table frame="all">
+          <title>Data entry widgets in the Tracker Capture app</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="2.13*"/>
+            <thead>
+              <row>
+                <entry>
+                  <para>Widget name</para>
+                </entry>
+                <entry>
+                  <para>Description</para>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>
+                  <para><emphasis role="bold">Timeline Data entry</emphasis></para>
+                </entry>
+                <entry>
+                  <para>For data entry using either default or custom forms.</para>
+                  <para>Depending on program definition, in particular program stages, events will
+                    be displayed in a timely fashion. Clicking on any of them displays the
+                    corresponding data entry. If a stage needs new event, a plus icon is displayed
+                    for new event creation. To proceed with data entry, it is mandatory to have
+                    event date. Once an event date is specified it is not possible to change due
+                    date. The assumption is that by specifying event date, the event has already
+                    taken place. If the event hasn't occurred yet, it is possible to change due date
+                    - this is effectively doing nothing but rescheduling. The buttons at the bottom
+                    help to change the status of a selected event.</para>
+                  <para>Another key feature from this widget is addition of multiple notes for an
+                    event. Normally data recording is through data elements, however there are cases
+                    where it is necessary to record additional information or comments. This is
+                    where the notes section comes handy. However it is not possible to delete a
+                    note. The idea is notes are more like log books. Both skip-logic and validation
+                    error/warning messages are supported during data entry.</para>
+                  <para>Also included in the Timeline Data entry is the option to compare your data
+                    entry to previous entries. This can be enabled by clicking the "Switch to
+                    compare form" button (Two sheets of paper) in the top right corner of the
+                    Timeline Data entry widget.</para>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <para><emphasis role="bold">Tabular
+                      <?oxy_comment_start author="cecilia" timestamp="20161005T165624+0200" comment="Feature has been redone, verify with SME."?>data<?oxy_comment_end?>
+                      entry</emphasis></para>
+                </entry>
+                <entry>
+                  <para>For tabular-style data entry.</para>
+                  <para>The widget displays the list of program stages as left-hand side labels.
+                    Events will be listed in table for repeatable program stage, and allows for
+                    in-line edits of event data values.</para>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+    </section>
+    <section>
+      <title>Creating an event</title>
+      <para>You can create an event for a TEI by:<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>In the <emphasis role="bold">Timeline Data entry</emphasis> or <emphasis
+                role="bold">Tabular data entry</emphasis> widget, click the <emphasis role="bold"
+                >+</emphasis>-button.</para>
+          </listitem>
+          <listitem>
+            <para>Select a <emphasis role="bold">Programstage</emphasis> and set a <emphasis
+                role="bold">Report date</emphasis>.</para>
+          </listitem>
+          <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+          </listitem>
+        </orderedlist></para>
+    </section>
+    <section>
+      <title>Schedule an event</title>
+      <para>You can shedule an event for a future date by:<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>In the <emphasis role="bold">Timeline Data entry</emphasis> or <emphasis
+                role="bold">Tabular data entry</emphasis> widget, click the <emphasis role="bold"
+                >Calendar</emphasis> icon.</para>
+          </listitem>
+          <listitem>
+            <para>Select a <emphasis role="bold">Programstage</emphasis> and set a <emphasis
+                role="bold">Schedule date</emphasis>.</para>
+          </listitem>
+          <listitem>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
+          </listitem>
+        </orderedlist></para>
+    </section>
+    <section>
+      <title>Refer an event</title>
+      <para>Sometimes it might be nessascary to refer a patient to a different <emphasis role="bold"
+          >Organisation unit</emphasis>. To refer a TEI:<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>In the <emphasis role="bold">Timeline Data entry</emphasis> or <emphasis
+                role="bold">Tabular data entry</emphasis> widget, click the <emphasis role="bold"
+                >Arrow</emphasis> icon.</para>
+          </listitem>
+          <listitem>
+            <para>Select a <emphasis role="bold">Programstage</emphasis>, <emphasis role="bold"
+                >Organisation unit</emphasis> and set a <emphasis role="bold"><emphasis role="bold"
+                  >Report date</emphasis></emphasis>.</para>
+          </listitem>
+          <listitem>
+            <para>Click either <emphasis role="bold">One-time referral</emphasis> which will only
+              refer TEI for one single event or <emphasis role="bold">Move permanently</emphasis>
+              which will move TEI and all its future events permantly to the selected <emphasis
+                role="bold">Organisation Unit</emphasis>.</para>
+          </listitem>
+        </orderedlist></para>
+    </section>
+    <section>
+      <title>Compare events</title>
+      <para>Sometimes it can be helpful to see data from previous events when entering data for a
+        new event. This can be achived by:<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>In the <emphasis role="bold">Timeline Data entry</emphasis> widget, click the
+                <emphasis role="bold">two pages</emphasis> icon (as seen in the image below).</para>
+          </listitem>
+        </orderedlist></para>
+      <note>
+        <para><emphasis>Note that this will only work for events that are
+          repeatable.</emphasis></para>
+      </note>
+      <para><inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="../../resources/images/tracker_capture/compareForm.png"/>
+          </imageobject>
+        </inlinemediaobject></para>
+    </section>
   </section>
   <section xml:id="manage_tracked_entity_instance_enrollment">
     <title>Manage a
@@ -711,7 +752,7 @@ Add example"?>enrollment<?oxy_comment_end?>
       </orderedlist>
     </section>
   </section>
-   <section xml:id="send_message_to_tracked_entity_instance">
+  <section xml:id="send_message_to_tracked_entity_instance">
     <title>Send a message to a
       <?oxy_comment_start author="cecilia" timestamp="20161007T164912+0200" comment="At next release: Verify that prereq is documented
 In user app, the user must set up to recieve notifications" flag="done"?>TEI<?oxy_comment_end?></title>
@@ -739,7 +780,7 @@ In user app, the user must set up to recieve notifications" flag="done"?>TEI<?ox
       </listitem>
     </orderedlist>
   </section>
-   <section xml:id="mark_tracked_entity_instance_for_follow_up">
+  <section xml:id="mark_tracked_entity_instance_for_follow_up">
     <title>Mark a TEI for follow-up</title>
     <para>You can use mark a TEI's enrollment for follow-up and then use this status as a filter
       when you create <emphasis role="bold">Upcoming events</emphasis> and <emphasis role="bold"
@@ -758,7 +799,7 @@ In user app, the user must set up to recieve notifications" flag="done"?>TEI<?ox
       </listitem>
     </orderedlist>
   </section>
-   <section xml:id="edit_tracked_entity_instance_profile">
+  <section xml:id="edit_tracked_entity_instance_profile">
     <title>Edit a TEI's profile</title>
     <para>You edit a TEI's profile or tracked entity attributes in the <emphasis role="bold"
         >Profile</emphasis> widget. </para>
@@ -788,8 +829,8 @@ In user app, the user must set up to recieve notifications" flag="done"?>TEI<?ox
     <example>
       <title>Mother-Child relationship</title>
       <para>Assume there are two programs: Antenatal care for the mother and Immunization for the
-        child. If  first name, last name and address attributes are required for both programs, it
-        is possible to configure last name and address attributes as inheritable. Then during child
+        child. If first name, last name and address attributes are required for both programs, it is
+        possible to configure last name and address attributes as inheritable. Then during child
         registration, there is no need to enter these inheritable attributes. You can add them
         automatically based on the mother's value. If you want to have a different value for the
         child, you can override the automatically generated value.</para>
@@ -847,7 +888,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </listitem>
     </orderedlist>
   </section>
-   <section xml:id="deactivate_tracked_entity_instance">
+  <section xml:id="deactivate_tracked_entity_instance">
     <title>Deactivate a TEI</title>
     <para>If you deactivate a TEI, the TEI becomes 'read-only'. Data associated with the TEI is not
       deleted.</para>
@@ -870,7 +911,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </listitem>
     </orderedlist>
   </section>
-   <section xml:id="activate_tracked_entity_instance">
+  <section xml:id="activate_tracked_entity_instance">
     <title>Activate a TEI</title>
     <orderedlist>
       <listitem>
@@ -891,7 +932,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </listitem>
     </orderedlist>
   </section>
-   <section xml:id="delete_tracked_entity_instance">
+  <section xml:id="delete_tracked_entity_instance">
     <title>Delete a TEI</title>
     <para>
       <warning>
@@ -921,7 +962,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
   </section>
   <section xml:id="configure_tracked_entity_instance_dashboard">
     <title>Configure the TEI dashboard</title>
-    <section  xml:id="tracked_entity_instance_dashboard_show_hide_widget">
+    <section xml:id="tracked_entity_instance_dashboard_show_hide_widget">
       <title>Show or hide widgets</title>
       <orderedlist>
         <listitem>
@@ -942,7 +983,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         </listitem>
       </orderedlist>
     </section>
-    <section  xml:id="tracked_entity_instance_dashboard_save_layout">
+    <section xml:id="tracked_entity_instance_dashboard_save_layout">
       <title>Save the dashboard's layout as default</title>
       <para>You can save the dashboard's layout as default for a program.</para>
       <orderedlist>
@@ -958,8 +999,56 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         </listitem>
       </orderedlist>
     </section>
+    <section>
+      <title>Lock dashboard's layout </title>
+      <para>If you are the <emphasis role="bold">administrator</emphasis> you have the option of
+        locking the layout of the dashboard for all users.<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>Organize the widgets to the desired layout and save it as default (see section
+              above).</para>
+          </listitem>
+          <listitem>
+            <para>Click the <emphasis role="bold">Settings</emphasis> icon, and select <emphasis
+                role="bold">Lock layout for all users</emphasis>.</para>
+          </listitem>
+        </orderedlist></para>
+      <para>Users will still be able to reorganize the widgets temporarily, but the layout will be
+        reset to the admin's saved layout after page refresh. The remove widget buttons will be
+        hidden when the dashboard layout is locked.</para>
+    </section>
+    <section>
+      <title>Top bar</title>
+      <para>The top bar can be a helpful tool to see important data in a quick and easy way. To
+        start using the top bar:<orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Tracker Capture</emphasis> app.</para>
+          </listitem>
+          <listitem>
+            <para>Open an existing TEI dashboard.</para>
+          </listitem>
+          <listitem>
+            <para>Click the <emphasis role="bold">Settings</emphasis> icon, and select <emphasis
+                role="bold">Top bar settings</emphasis>.</para>
+          </listitem>
+          <listitem>
+            <para>Click <emphasis role="bold">Activate top bar</emphasis> and click the data you
+              would like to display in the top bar. </para>
+          </listitem>
+        </orderedlist></para>
+      <para><inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="../../resources/images/tracker_capture/top_bar.png"/>
+          </imageobject>
+        </inlinemediaobject></para>
+    </section>
   </section>
-    <section  xml:id="create_report_tracker_capture">
+  <section xml:id="create_report_tracker_capture">
     <title>Create
       <?oxy_comment_start author="cecilia" timestamp="20161007T155325+0200" comment="At next release: rework section" flag="done"?>reports<?oxy_comment_end?></title>
     <orderedlist>
