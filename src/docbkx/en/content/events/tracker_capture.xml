@@ -262,6 +262,13 @@ Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy
           view these matching TEIs.</para>
       </listitem>
     </orderedlist>
+    <para><inlinemediaobject>
+        <imageobject>
+          <imagedata
+            fileref="../../resources/images/tracker_capture/tracker_capture_register_integrated_search.png"
+          />
+        </imageobject>
+      </inlinemediaobject></para>
     <para>If there is any matching TEIs, click <emphasis role="bold">Continue</emphasis> to review
       possible duplicates before registering a new one. </para>
     <para>If there is no matching TEIs, click <emphasis role="bold">Save and continue</emphasis> or
@@ -278,6 +285,7 @@ Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy
             data.<?oxy_comment_end?></para>
         </listitem>
       </itemizedlist></para>
+    <para>(img integrated search)</para>
   </section>
   <section  xml:id="open_existing_tracked_entity_instance_dashboard">
     <title>Open an
@@ -317,8 +325,12 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
             <para>TEIs with a cancelled enrollment of the current program</para>
           </listitem>
         </orderedlist></para>
-      <?oxy_comment_start author="Lukas" timestamp="20180302T142338+0100" comment="Insert image?"?>
-      <para>(img)<?oxy_comment_end?></para>
+      <para><inlinemediaobject>
+          <imageobject>
+            <imagedata fileref="../../resources/images/tracker_capture/tracker_capture_lists.png"
+              width="700"/>
+          </imageobject>
+        </inlinemediaobject></para>
       <para>You can select which columns to show or hide in the lists for each program. This will be
         saved in your user settings.<orderedlist>
           <listitem>
@@ -333,9 +345,20 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
         </orderedlist></para>
       <para>There is also an option to create a custom working list with own filters. This can be
         used to create custom lists on the fly.</para>
-      <para><?oxy_comment_start author="Lukas" timestamp="20180302T142436+0100" comment="Insert image?"?>(img)<?oxy_comment_end?></para>
+      <para><inlinemediaobject>
+          <imageobject>
+            <imagedata
+              fileref="../../resources/images/tracker_capture/tracker_capture_lists_custom.png"
+              width="700"/>
+          </imageobject>
+        </inlinemediaobject></para>
       <para>Lists can also be downloaded or printed. </para>
-      <para><?oxy_comment_start author="Lukas" timestamp="20180302T142459+0100" comment="Insert image?"?>(img)<?oxy_comment_end?></para>
+      <para><inlinemediaobject>
+          <imageobject>
+            <imagedata
+              fileref="../../resources/images/tracker_capture/tracker_capture_lists_download.png"/>
+          </imageobject>
+        </inlinemediaobject></para>
     </section>
     <section xml:id="advanced_tracked_entity_instance_search">
       <title>Search</title>
@@ -384,6 +407,12 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
               button</para>
           </listitem>
         </orderedlist></para>
+      <para><inlinemediaobject>
+          <imageobject>
+            <imagedata
+              fileref="../../resources/images/tracker_capture/tracker_capture_search_screen.png"/>
+          </imageobject>
+        </inlinemediaobject></para>
       <para>After the search has been done, you will be presented with the search result. Whats
         displayed depends on the outcome of the search. </para>
       <para>For unique attribute search:<itemizedlist>
