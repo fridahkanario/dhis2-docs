@@ -1545,7 +1545,55 @@ http://server/api/26/constants/ID</screen></para>
       bootstrapping a new system.</para>
     <section>
       <title>Metadata Audit API</title>
-      <para>This section describes the metadata audit API. More info will come.</para>
+      <para>If you have enabled persisted metadata audits on your DHIS2 instance we also expose a
+        web-api for looking at and filtering the audit log, this requires superuser privilege. The
+        endpoint is available on <emphasis>/api/29/metadataAudits</emphasis> and support the
+        following query parameters:<table frame="void">
+          <caption>Metadata audit API query parameters</caption>
+          <col width="22%"/>
+          <col width="27%"/>
+          <col width="51%"/>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Values</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>uid</td>
+              <td/>
+              <td>Object uid to query by (can be more than one)</td>
+            </tr>
+            <tr>
+              <td>code</td>
+              <td/>
+              <td>Object code to query by (can be more than one)</td>
+            </tr>
+            <tr>
+              <td>klass</td>
+              <td/>
+              <td>Object class to query by (can be more than one), please note that the full java
+                package name is required here (to avoid name collisions)</td>
+            </tr>
+            <tr>
+              <td>createdAt</td>
+              <td/>
+              <td>Query by creation date</td>
+            </tr>
+            <tr>
+              <td>createdBy</td>
+              <td/>
+              <td>Query by who made the change (username)</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>CREATE, UPDATE, DELETE</td>
+              <td>Query by audit type</td>
+            </tr>
+          </tbody>
+        </table></para>
     </section>
   </section>
   <section>
