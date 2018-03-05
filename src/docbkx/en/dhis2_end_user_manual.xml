@@ -21,6 +21,7 @@
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/pivot_tables.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/data_visualizer.xml" encoding="UTF-8"/>
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/using_gis.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/analysis/using_maps.xml" encoding="UTF-8"/>
    <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/dashboard/dashboard.xml" encoding="UTF-8"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/profile/profile.xml" encoding="UTF-8"/>
 </book>
