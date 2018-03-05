@@ -13956,6 +13956,10 @@ interval=WEEK" -u admin:district</screen>
 }</screen>
     </section>
   </section>
+  <section>
+    <title>Tracked entity instance filters</title>
+    <para/>
+  </section>
   <section xml:id="webapi_enrollment_instance_query">
     <title>Enrollment instance query</title>
     <para>To query for tracked entity instances you can interact with the <emphasis role="italic"
