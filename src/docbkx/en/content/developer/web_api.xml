@@ -1543,6 +1543,10 @@ http://server/api/26/constants/ID</screen></para>
     <para>We do not recommended enabling these options on a empty database if you intend to import a
       lot of metadata, as it slows down the import and the audit might not be that useful if you are
       bootstrapping a new system.</para>
+    <section>
+      <title>Metadata Audit API</title>
+      <para>This section describes the metadata audit API. More info will come.</para>
+    </section>
   </section>
   <section>
     <title>Render type (Experimental)</title>
