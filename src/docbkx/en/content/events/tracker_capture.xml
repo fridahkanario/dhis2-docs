@@ -1,16 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-      <chapter version="5.0"
-         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
-          xmlns="http://docbook.org/ns/docbook"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xs="http://www.w3.org/2001/XMLSchema"
-         xmlns:xl="http://www.w3.org/1999/xlink"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-         xmlns:svg="http://www.w3.org/2000/svg"
-         xmlns:mth="http://www.w3.org/1998/Math/MathML"
-         xmlns:db="http://docbook.org/ns/docbook"
-         xml:id="tracker_capture_app">
+<chapter version="5.0"
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="tracker_capture_app">
   <title>Using the <?oxy_comment_start author="cecilia" timestamp="20160905T145828+0200" comment="Before release, replace all screen shots."?>Tracker<?oxy_comment_end?>
     <?oxy_comment_start author="cecilia" timestamp="20160912T110348+0200" comment="Add section about Print form feature
 What does it do?
@@ -77,7 +72,7 @@ Could also effect TEIs."?>to<?oxy_comment_end?>
       </listitem>
     </itemizedlist>
   </section>
-        <section xml:id="about_tracked_entity_instance_dashboard">
+  <section xml:id="about_tracked_entity_instance_dashboard">
     <title>About tracked entity instance (TEI) dashboards</title>
     <para>
       <screenshot>
@@ -139,7 +134,7 @@ TEI&apos;s dashboard?"?>TEI's
       </listitem>
     </itemizedlist>
   </section>
-   <section xml:id="workflow_tracker_capture">
+  <section xml:id="workflow_tracker_capture">
     <title>Workflow</title>
     <example>
       <para>Working process of Mother and child health program</para>
@@ -176,7 +171,7 @@ TEI&apos;s dashboard?"?>TEI's
       </orderedlist>
     </example>
   </section>
-  <section  xml:id="create_and_enroll_tracked_entity_instance">
+  <section xml:id="create_and_enroll_tracked_entity_instance">
     <title>Create a TEI and enroll it in a program</title>
     <para>You can create a TEI and enroll that TEI to a program in one operation:</para>
     <orderedlist>
@@ -217,7 +212,7 @@ Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy
       </listitem>
     </orderedlist>
   </section>
-  <section  xml:id="open_existing_tracked_entity_instance_dashboard">
+  <section xml:id="open_existing_tracked_entity_instance_dashboard">
     <title>Open an
       <?oxy_comment_start author="cecilia" timestamp="20160912T113234+0200" comment="Verify with SME: 
 Select of org unit optional?
@@ -238,7 +233,7 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
         </mediaobject>
       </screenshot>
     </para>
-    <section  xml:id="simple_tracked_entity_instance_search">
+    <section xml:id="simple_tracked_entity_instance_search">
       <title>Simple TEI
         <?oxy_comment_start author="cecilia" timestamp="20161007T100209+0200" comment="Searches on TEI attributes"?>search<?oxy_comment_end?></title>
       <orderedlist>
@@ -258,7 +253,7 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
         </listitem>
         <listitem>
           <para>Click the <emphasis role="bold">Search</emphasis> icon.</para>
-          <para>A list of  TEIs that match your search criteria
+          <para>A list of TEIs that match your search criteria
             <?oxy_comment_start author="cecilia" timestamp="20160912T153955+0200" comment="Verify wording."?>displays<?oxy_comment_end?>.</para>
         </listitem>
         <listitem>
@@ -347,7 +342,7 @@ Add more info here and rewrite task." flag="done"?>scope<?oxy_comment_end?></emp
         </listitem>
         <listitem>
           <para>Click <emphasis role="bold">Search</emphasis>.</para>
-          <para>A list of  TEIs that match your search criteria(s)
+          <para>A list of TEIs that match your search criteria(s)
             <?oxy_comment_start author="cecilia" timestamp="20160912T153955+0200" comment="Verify wording."?>displays<?oxy_comment_end?>.</para>
         </listitem>
         <listitem>
@@ -442,7 +437,7 @@ Where do you set it?"?>All<?oxy_comment_end?>
       </orderedlist>
     </section>
   </section>
-    <section xml:id="enroll_existing_tracked_entity_instance_in_program">
+  <section xml:id="enroll_existing_tracked_entity_instance_in_program">
     <title>Enroll an existing TEI in a program</title>
     <orderedlist>
       <listitem>
@@ -598,7 +593,7 @@ Do the data entry widgets look different depending on the program?"?>widgets<?ox
           </listitem>
           <listitem>
             <para>Select a <emphasis role="bold">Programstage</emphasis>, <emphasis role="bold"
-                >Organisation unit</emphasis> and  set a <emphasis role="bold"><emphasis role="bold"
+                >Organisation unit</emphasis> and set a <emphasis role="bold"><emphasis role="bold"
                   >Report date</emphasis></emphasis>.</para>
           </listitem>
           <listitem>
@@ -757,7 +752,7 @@ Add example"?>enrollment<?oxy_comment_end?>
       </orderedlist>
     </section>
   </section>
-   <section xml:id="send_message_to_tracked_entity_instance">
+  <section xml:id="send_message_to_tracked_entity_instance">
     <title>Send a message to a
       <?oxy_comment_start author="cecilia" timestamp="20161007T164912+0200" comment="At next release: Verify that prereq is documented
 In user app, the user must set up to recieve notifications" flag="done"?>TEI<?oxy_comment_end?></title>
@@ -785,7 +780,7 @@ In user app, the user must set up to recieve notifications" flag="done"?>TEI<?ox
       </listitem>
     </orderedlist>
   </section>
-   <section xml:id="mark_tracked_entity_instance_for_follow_up">
+  <section xml:id="mark_tracked_entity_instance_for_follow_up">
     <title>Mark a TEI for follow-up</title>
     <para>You can use mark a TEI's enrollment for follow-up and then use this status as a filter
       when you create <emphasis role="bold">Upcoming events</emphasis> and <emphasis role="bold"
@@ -804,7 +799,7 @@ In user app, the user must set up to recieve notifications" flag="done"?>TEI<?ox
       </listitem>
     </orderedlist>
   </section>
-   <section xml:id="edit_tracked_entity_instance_profile">
+  <section xml:id="edit_tracked_entity_instance_profile">
     <title>Edit a TEI's profile</title>
     <para>You edit a TEI's profile or tracked entity attributes in the <emphasis role="bold"
         >Profile</emphasis> widget. </para>
@@ -834,8 +829,8 @@ In user app, the user must set up to recieve notifications" flag="done"?>TEI<?ox
     <example>
       <title>Mother-Child relationship</title>
       <para>Assume there are two programs: Antenatal care for the mother and Immunization for the
-        child. If  first name, last name and address attributes are required for both programs, it
-        is possible to configure last name and address attributes as inheritable. Then during child
+        child. If first name, last name and address attributes are required for both programs, it is
+        possible to configure last name and address attributes as inheritable. Then during child
         registration, there is no need to enter these inheritable attributes. You can add them
         automatically based on the mother's value. If you want to have a different value for the
         child, you can override the automatically generated value.</para>
@@ -893,7 +888,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </listitem>
     </orderedlist>
   </section>
-   <section xml:id="deactivate_tracked_entity_instance">
+  <section xml:id="deactivate_tracked_entity_instance">
     <title>Deactivate a TEI</title>
     <para>If you deactivate a TEI, the TEI becomes 'read-only'. Data associated with the TEI is not
       deleted.</para>
@@ -916,7 +911,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </listitem>
     </orderedlist>
   </section>
-   <section xml:id="activate_tracked_entity_instance">
+  <section xml:id="activate_tracked_entity_instance">
     <title>Activate a TEI</title>
     <orderedlist>
       <listitem>
@@ -937,7 +932,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
       </listitem>
     </orderedlist>
   </section>
-   <section xml:id="delete_tracked_entity_instance">
+  <section xml:id="delete_tracked_entity_instance">
     <title>Delete a TEI</title>
     <para>
       <warning>
@@ -967,7 +962,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
   </section>
   <section xml:id="configure_tracked_entity_instance_dashboard">
     <title>Configure the TEI dashboard</title>
-    <section  xml:id="tracked_entity_instance_dashboard_show_hide_widget">
+    <section xml:id="tracked_entity_instance_dashboard_show_hide_widget">
       <title>Show or hide widgets</title>
       <orderedlist>
         <listitem>
@@ -988,7 +983,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         </listitem>
       </orderedlist>
     </section>
-    <section  xml:id="tracked_entity_instance_dashboard_save_layout">
+    <section xml:id="tracked_entity_instance_dashboard_save_layout">
       <title>Save the dashboard's layout as default</title>
       <para>You can save the dashboard's layout as default for a program.</para>
       <orderedlist>
@@ -1053,7 +1048,7 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
         </inlinemediaobject></para>
     </section>
   </section>
-    <section  xml:id="create_report_tracker_capture">
+  <section xml:id="create_report_tracker_capture">
     <title>Create
       <?oxy_comment_start author="cecilia" timestamp="20161007T155325+0200" comment="At next release: rework section" flag="done"?>reports<?oxy_comment_end?></title>
     <orderedlist>
