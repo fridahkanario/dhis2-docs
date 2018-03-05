@@ -6841,6 +6841,14 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
 }</screen>
       </para>
     </section>
+    <section>
+      <title>Reading interpretations</title>
+      <para>You can mark interpretations as read by sending a POST request to the following
+        endpoint:<screen>POST /api/me/dashboard/interpretations/read</screen></para>
+      <para>This endpoint will update the users property for when interpretations was last checked,
+        meaning all interpretations created before sending this request, will be counted as read
+        when getting a unread count.</para>
+    </section>
   </section>
   <section xml:id="webapi_viewing_analytical_resource_representations">
     <title>Viewing analytical resource representations</title>
