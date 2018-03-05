@@ -13956,6 +13956,172 @@ interval=WEEK" -u admin:district</screen>
 }</screen>
     </section>
   </section>
+  <section>
+    <title>Tracked entity instance filter definitions</title>
+    <para>To create, read, update and delete tracked entity instance filters you can interact with
+      the <emphasis>/api/trackedEntityInstanceFilters</emphasis>
+      resource.<screen>/api/trackedEntityInstanceFilters</screen></para>
+    <section>
+      <title>Create and update a tracked entity instance filter definiton</title>
+      <para>For creating and updating a tracked entity instance filter in the system, you will be
+        working with the <emphasis role="italic">trackedEntityInstanceFilters</emphasis> resource.
+        The tracked entity instance filter defintions are used in the Tracker Capture app to display
+        relevant predefined &quot;Working lists&quot; in the tracker user interface.</para>
+      <table frame="all">
+        <title>Payload</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <colspec colname="c3" colnum="3" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>Payload values</entry>
+              <entry>Description</entry>
+              <entry>Example</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>name</entry>
+              <entry>Name of the filter. Required.</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>description</entry>
+              <entry>A description of the filter.</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>sortOrder</entry>
+              <entry>The sort order of the filter. Used in Tracker Capture to order the filters in
+                the program dashboard.</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>style</entry>
+              <entry>Object containing css style.</entry>
+              <entry>( "color": "blue", "icon": "fa fa-calendar"}</entry>
+            </row>
+            <row>
+              <entry>program</entry>
+              <entry>Object containing the id of the program. Required.</entry>
+              <entry>{ "id" : "uy2gU8kTjF"}</entry>
+            </row>
+            <row>
+              <entry>enrollmentStatus</entry>
+              <entry>The TEIs enrollment status. Can be none(any enrollmentstatus) or
+                ACTIVE|COMPLETED|CANCELED</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>followup</entry>
+              <entry>When this parameter is true, the filter only returns TEIs that has an
+                enrollment with status followup.</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>enrollmentCreatedPeriod</entry>
+              <entry>Period object containing a period which the enrollment must be created. See
+                  <emphasis>Period</emphasis> definition table below.</entry>
+              <entry>{ "periodFrom": -15, "periodTo": 15}</entry>
+            </row>
+            <row>
+              <entry>eventFilters</entry>
+              <entry>A list of eventFilters. See <emphasis>Event filters</emphasis> definition table
+                below.</entry>
+              <entry>[{"programStage": "eaDH9089uMp", "eventStatus": "OVERDUE",
+                "eventCreatedPeriod": {"periodFrom": -15, "periodTo": 15}}]</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="all">
+        <title>Event filters definition</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <colspec colname="c3" colnum="3" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry/>
+              <entry/>
+              <entry/>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>programStage</entry>
+              <entry>Which programStage the TEI needs an event in to be returned.</entry>
+              <entry>"eaDH9089uMp"</entry>
+            </row>
+            <row>
+              <entry>eventStatus</entry>
+              <entry>The events status. Can be none(any event status) or
+                ACTIVE|COMPLETED|SCHEDULED|OVERDUE</entry>
+              <entry>ACTIVE</entry>
+            </row>
+            <row>
+              <entry>eventCreatedPeriod</entry>
+              <entry>Period object containing a period in which the event must be created. See
+                  <emphasis>Period</emphasis> definition delow.</entry>
+              <entry>{ "periodFrom": -15, "periodTo": 15}</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="all">
+        <title>Period definition</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <colspec colname="c3" colnum="3" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry/>
+              <entry/>
+              <entry/>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>periodFrom</entry>
+              <entry>Number of days from current day. Can be positive or negative integer.</entry>
+              <entry>-15</entry>
+            </row>
+            <row>
+              <entry>periodTo</entry>
+              <entry>Number of days from current day. Must be bigger than periodFrom. Can be
+                positive or negative integer.</entry>
+              <entry>15</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Tracked entity instance filters query</title>
+      <para>To query for tracked entity instance filters in the system, you can interact with the
+          <emphasis>/api/trackedEntityInstanceFilters</emphasis> resource.<table frame="all">
+          <title>Tracked entity instance filters query paramateres</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="newCol2" colnum="2" colwidth="1*"/>
+            <thead>
+              <row>
+                <entry>Query parameter</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>program</entry>
+                <entry>Program identifier. Restricts filters to the given program.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
+    </section>
+  </section>
   <section xml:id="webapi_enrollment_instance_query">
     <title>Enrollment instance query</title>
     <para>To query for tracked entity instances you can interact with the <emphasis role="italic"
