@@ -10,10 +10,13 @@
     <para>You can assign different sharing settings to metadata objects, for example organisation
         units and tracked entity attributes. These sharing settings control which users and users
         groups that can view or edit a metadata object.</para>
+    <para>Some metadata objects also allows you to change the sharing setting of data entry for
+        the object. These additional settings control who can view or enter data in form fields
+        using the metadata.</para>
     <para>
         <note>
-            <para>The default setting is that everyone (<emphasis role="bold">Public
-                    access</emphasis>) can find, view and edit metadata objects.</para>
+            <para>The default setting is that everyone (<emphasis role="bold">Public access</emphasis>)
+            can find, view and edit metadata objects.</para>
         </note>
     </para>
     <orderedlist>
@@ -22,28 +25,45 @@
                 metadata object you want to modify.</para>
         </listitem>
         <listitem>
-            <para>In the object list, click the options menu and select <emphasis role="bold"
+            <para>In the object list, click the context menu and select <emphasis role="bold"
                     >Sharing settings</emphasis>.</para>
         </listitem>
         <listitem>
             <para>(Optional) Add users or user groups: search for a user or a user group and select
-                it. The user group is added to the list.</para>
+                it. The user or user group is added to the list.</para>
         </listitem>
         <listitem>
-            <para>Change sharing settings for the users and user groups you want to modify.</para>
+            <para>Change sharing settings for the access groups you want to modify.</para>
             <itemizedlist>
                 <listitem>
-                    <para><emphasis role="bold">Can edit and view</emphasis>: Everyone can view and
-                        edit the object.</para>
+                    <para><emphasis role="bold">Can edit and view</emphasis>: The access group can
+                        view and edit the object.</para>
                 </listitem>
                 <listitem>
-                    <para><emphasis role="bold">Can view only</emphasis>: Everyone can view the
-                        object.</para>
+                    <para><emphasis role="bold">Can view only</emphasis>: The access group can view
+                        the object.</para>
                 </listitem>
                 <listitem>
-                    <para><emphasis role="bold">No access</emphasis>: The public won't have access
-                        to the object. This setting is only applicable to <emphasis role="bold"
-                            >Public access</emphasis>.  </para>
+                    <para><emphasis role="bold">No access</emphasis> (only applicable to <emphasis
+                            role="bold">Public access</emphasis>): The public won't have access to
+                        the object.</para>
+                </listitem>
+            </itemizedlist>
+        </listitem>
+        <listitem>
+            <para>Change data sharing settings for the access groups you want to modify.</para>
+            <itemizedlist>
+                <listitem>
+                    <para><emphasis role="bold">Can capture data</emphasis>: The access group can
+                        view and capture data for the object.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">Can view data</emphasis>: The access group can view
+                        data for the object.</para>
+                </listitem>
+                <listitem>
+                    <para><emphasis role="bold">No access</emphasis>: The access group won't have
+                        access to data for the object.</para>
                 </listitem>
             </itemizedlist>
         </listitem>

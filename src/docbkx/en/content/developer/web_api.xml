@@ -1543,6 +1543,390 @@ http://server/api/26/constants/ID</screen></para>
     <para>We do not recommended enabling these options on a empty database if you intend to import a
       lot of metadata, as it slows down the import and the audit might not be that useful if you are
       bootstrapping a new system.</para>
+    <section>
+      <title>Metadata Audit API</title>
+      <para>If you have enabled persisted metadata audits on your DHIS2 instance we also expose a
+        web-api for looking at and filtering the audit log, this requires superuser privilege. The
+        endpoint is available on <emphasis>/api/29/metadataAudits</emphasis> and support the
+        following query parameters:<table frame="void">
+          <caption>Metadata audit API query parameters</caption>
+          <col width="22%"/>
+          <col width="27%"/>
+          <col width="51%"/>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Values</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>uid</td>
+              <td/>
+              <td>Object uid to query by (can be more than one)</td>
+            </tr>
+            <tr>
+              <td>code</td>
+              <td/>
+              <td>Object code to query by (can be more than one)</td>
+            </tr>
+            <tr>
+              <td>klass</td>
+              <td/>
+              <td>Object class to query by (can be more than one), please note that the full java
+                package name is required here (to avoid name collisions)</td>
+            </tr>
+            <tr>
+              <td>createdAt</td>
+              <td/>
+              <td>Query by creation date</td>
+            </tr>
+            <tr>
+              <td>createdBy</td>
+              <td/>
+              <td>Query by who made the change (username)</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>CREATE, UPDATE, DELETE</td>
+              <td>Query by audit type</td>
+            </tr>
+          </tbody>
+        </table></para>
+    </section>
+  </section>
+  <section>
+    <title>Render type (Experimental)</title>
+    <para>Some metadata types have a property named <emphasis>renderType</emphasis>. The render type
+      property is a map between a <emphasis>device</emphasis> and a
+        <emphasis>renderingType</emphasis>. Applications can use this information as a hint on how
+      the object should be rendered on a specific device. For example, a mobile device might want to
+      render a data element differently than a desktop computer.</para>
+    <para>There is currently two different kinds of renderingTypes available:<orderedlist>
+        <listitem>
+          <para>Value type rendering</para>
+        </listitem>
+        <listitem>
+          <para>Program stage section rendering</para>
+        </listitem>
+      </orderedlist></para>
+    <para>There is also 2 device types available:<orderedlist>
+        <listitem>
+          <para>MOBILE</para>
+        </listitem>
+        <listitem>
+          <para>DESKTOP</para>
+        </listitem>
+      </orderedlist></para>
+    <para>The following table lists the metadata and rendering types available. The value type
+      rendering has addition constraints based on the metadata configuration, which will be shown in
+      a second table.<table frame="all">
+        <title>Metadata and RenderingType overview</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Metadata type</entry>
+              <entry>Available RenderingTypes</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Program Stage Section</entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>LISTING (default)</para>
+                  </listitem>
+                  <listitem>
+                    <para>SEQUENTIAL</para>
+                  </listitem>
+                  <listitem>
+                    <para>MATRIX</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>Data element</entry>
+              <entry morerows="1">
+                <itemizedlist>
+                  <listitem>
+                    <para>DEFAULT</para>
+                  </listitem>
+                  <listitem>
+                    <para>DROPDOWN</para>
+                  </listitem>
+                  <listitem>
+                    <para>VERTICAL_RADIOBUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>HORIZONTAL_RADIOBUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>VERTICAL_CHECKBOXES</para>
+                  </listitem>
+                  <listitem>
+                    <para>HORIZONTAL_CHECKBOXES</para>
+                  </listitem>
+                  <listitem>
+                    <para>SHARED_HEADER_RADIOBUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>ICONS_AS_BUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>SPINNER</para>
+                  </listitem>
+                  <listitem>
+                    <para>ICON</para>
+                  </listitem>
+                  <listitem>
+                    <para>TOGGLE</para>
+                  </listitem>
+                  <listitem>
+                    <para>VALUE</para>
+                  </listitem>
+                  <listitem>
+                    <para>SLIDER</para>
+                  </listitem>
+                  <listitem>
+                    <para>LINEAR_SCALE</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>Tracked entity attribute</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>Since handling the default rendering of data elements and tracked entity attributes are
+      depending on the value type of the object, there is also a DEFAULT type to tell the client it
+      should be handled as normal. Program Stage Section are LISTING as default.<table frame="all">
+        <title>RenderingTypes allowed based on value types</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Value type</entry>
+              <entry>Is object an optionset?</entry>
+              <entry>RenderingTypes allowed</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>TRUE_ONLY</entry>
+              <entry>No</entry>
+              <entry morerows="1">DEFAULT, VERTICAL_RADIOBUTTONS, HORIZONTAL_RADIOBUTTONS,
+                VERTICAL_CHECKBOXES, HORIZONTAL_CHECKBOXES, TOGGLE </entry>
+            </row>
+            <row>
+              <entry>BOOLEAN</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>-</entry>
+              <entry>Yes</entry>
+              <entry>DEFAULT, DROPDOWN, VERTICAL_RADIOBUTTONS, HORIZONTAL_RADIOBUTTONS,
+                VERTICAL_CHECKBOXES, HORIZONTAL_CHECKBOXES, SHARED_HEADER_RADIOBUTTONS,
+                ICONS_AS_BUTTONS, SPINNER, ICON</entry>
+            </row>
+            <row>
+              <entry>INTEGER</entry>
+              <entry>No</entry>
+              <entry morerows="6">DEFAULT, VALUE, SLIDER, LINEAR_SCALE, SPINNER</entry>
+            </row>
+            <row>
+              <entry>INTEGER_POSITIVE</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>INTEGER_NEGATIVE</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>INTEGER_ZERO_OR_POSITIVE</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>NUMBER</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>UNIT_INTERVAL</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>PERCENTAGE</entry>
+              <entry>No</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>A complete reference of the previous table can also be retrieved using the following
+      endpoint:<screen>GET /api/staticConfiguration/renderingOptions</screen></para>
+    <para>Value type rendering also has some additional properties that can be set, which is usually
+      needed when rendering some of the specific types:<table frame="all">
+        <title>renderType object properties</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Property</entry>
+              <entry>Description</entry>
+              <entry>Type</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>type</entry>
+              <entry>The RenderingType of the object, as seen in the first table. This property is
+                the same for both value type and program stage section, but is the only property
+                available for program stage section. </entry>
+              <entry>Enum (See list in the Metadata and Rendering Type table)</entry>
+            </row>
+            <row>
+              <entry>min</entry>
+              <entry>Only for value type rendering. Represents the minimum value this field can
+                have.</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>max</entry>
+              <entry>Only for value type rendering. Represents the maximum value this field can
+                have.</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>step</entry>
+              <entry>Only for value type rendering. Represents the size of the steps the value
+                should increase, for example for SLIDER og LINEAR_SCALE</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>decimalPoints</entry>
+              <entry>Only for value type rendering. Represents the number of decimal points the
+                value should use.</entry>
+              <entry>Integer</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para><emphasis>renderingType</emphasis> can be set when creating or updating the metadata
+      listed in the first table. An example payload for the renderingType looks like
+      this:<screen>Program Stage Section:
+{
+  ...
+  "renderingType": {
+    "type": "MATRIX"
+  }
+  ...
+}
+
+Value type (Data Element, Tracked Entity Attribute)
+{
+  ...
+  "renderingType": {
+    "type": "SLIDER",
+    "min": 0,
+    "max": 1000,
+    "step": 50,
+    "decimalPoints": 0
+  }
+  ...
+}</screen></para>
+  </section>
+  <section>
+    <title>Object Style (Experimental)</title>
+    <para>Most metadata have a property names "style". This property can be used by clients to
+      represent the object in a certain way. The properties currently supported by style is as
+        follows:<table frame="all">
+        <title>Style properties</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Property</entry>
+              <entry>Description</entry>
+              <entry>Type</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>color</entry>
+              <entry>A color, represented by a hexadecimal.</entry>
+              <entry>String (#000000)</entry>
+            </row>
+            <row>
+              <entry>icon</entry>
+              <entry>An icon, represented by a icon-name.</entry>
+              <entry>String</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>Currently there is no official list or support for icon-libraries, so this is currently up
+      to the client to provide. The following list shows all objects that supports style:<itemizedlist>
+        <listitem>
+          <para>Data element</para>
+        </listitem>
+        <listitem>
+          <para>Data element category option</para>
+        </listitem>
+        <listitem>
+          <para>Data set</para>
+        </listitem>
+        <listitem>
+          <para>Indicator</para>
+        </listitem>
+        <listitem>
+          <para>Option</para>
+        </listitem>
+        <listitem>
+          <para>Program</para>
+        </listitem>
+        <listitem>
+          <para>Program Indicator</para>
+        </listitem>
+        <listitem>
+          <para>Program Section</para>
+        </listitem>
+        <listitem>
+          <para>Program Stage</para>
+        </listitem>
+        <listitem>
+          <para>Program Stage Section</para>
+        </listitem>
+        <listitem>
+          <para>Relationship (Tracker)</para>
+        </listitem>
+        <listitem>
+          <para>Tracked Entity Attribute</para>
+        </listitem>
+        <listitem>
+          <para>Tracked Entity Type</para>
+        </listitem>
+      </itemizedlist></para>
+    <para>When creating or updating any of these objects, you can include the following payload to
+      change the
+      style:<screen>{
+  ...
+  "style": {
+    "color": "#ffffff",
+    "icon": "my-beautiful-icon"
+  }
+  ...
+}</screen></para>
   </section>
   <section xml:id="webapi_amqp_rabbitmq_integration">
     <title>AMQP/RabbitMQ integration</title>
@@ -3929,6 +4313,22 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
                 <entry>true | false</entry>
                 <entry>Indicates whether to send notifications for completed events.</entry>
               </row>
+              <row>
+                <entry/>
+                <entry/>
+                <entry/>
+              </row>
+              <row>
+                <entry>importReportMode</entry>
+                <entry>FULL, ERRORS, DEBUG</entry>
+                <entry>Sets the <emphasis role="bold">ImportReport</emphasis> mode, controls how
+                  much is reported back after the import is done. <emphasis role="bold"
+                    >ERRORS</emphasis> only includes <emphasis role="italic"
+                    >ObjectReports</emphasis> for object which has errors. <emphasis role="bold"
+                    >FULL</emphasis> returns an <emphasis role="italic">ObjectReport</emphasis> for
+                  all objects imported, and <emphasis role="bold">DEBUG</emphasis> returns the same
+                  plus a name for the object (if available).</entry>
+              </row>
             </tbody>
           </tgroup>
         </table>
@@ -4812,6 +5212,54 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       type text/html where the payload is the custom form markup such as:</para>
     <screen>curl -d @form.html &quot;localhost/api/26/dataSets/BfMAe6Itzgt/form&quot; 
   -H &quot;Content-Type:text/html&quot; -u admin:district -X PUT -v</screen>
+  </section>
+  <section>
+    <title>Documents</title>
+    <para>References to files can be stored with the document resource. <table frame="all">
+        <title>Document fields</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>Field name</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>name</entry>
+              <entry>unique name of document</entry>
+            </row>
+            <row>
+              <entry>external</entry>
+              <entry>flag identifying the location of the document. TRUE for external files, FALSE
+                for internal ones</entry>
+            </row>
+            <row>
+              <entry>url</entry>
+              <entry>the location of the file. URL for external files. File resource id for internal
+                ones (see <xref xmlns:xlink="http://www.w3.org/1999/xlink"
+                  linkend="webapi_file_resources"/>)</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>A GET request to the documents endpoint will return all
+      documents:<screen>/api/29/documents</screen></para>
+    <para>A POST request to the doucuments endpoint will create a new
+      document:<screen>curl -X POST -d @document.json -H "Content-type: allication/json"
+  http://dhis.domain/api/29/documents</screen></para>
+    <screen>{
+  "name": "dhis home",
+  "external": true,
+  "url": "https://www.dhis2.org"
+}</screen>
+    <para>A GET request with the id of a document appended will return information about the
+      document. A PUT request to the same endpoint will update the fields of the
+      document:<screen>/api/29/documents/&lt;documentId></screen></para>
+    <para>Appending <emphasis>/data</emphasis> to the GET request will return the actual file
+      content of the document:<screen>/api/29/documents/&lt;documentId>/data</screen></para>
   </section>
   <section xml:id="webapi_validation">
     <title>Validation</title>
@@ -8953,6 +9401,18 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Date identifier e.g: "2016-01-01". Overrides the start date of the relative
                 period</entry>
             </row>
+            <row>
+              <entry>columns</entry>
+              <entry>No</entry>
+              <entry>Dimensions to use as columns for table layout.</entry>
+              <entry>Any dimension (must be query dimension)</entry>
+            </row>
+            <row>
+              <entry>rows</entry>
+              <entry>No</entry>
+              <entry>Dimensions to use as rows for table layout.</entry>
+              <entry>Any dimension (must be query dimension)</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
@@ -9385,6 +9845,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
           the response mapped to their names.</para>
         <para>The <emphasis role="italic">rows</emphasis> section contains the events produced by
           the query. Each row represents exactly one event.</para>
+        <para>In order to have the event analytics resource generate the data in the shape of a ready-made
+          table, you can provide <emphasis role="italic">rows</emphasis> and <emphasis role="italic">columns</emphasis>
+          parameters with requested dimension identifiers separated by semi-colons as values to indicate which ones to use as table
+          columns and rows. Instead of generating a plain, normalized data source, the event analytics resource
+          will now generate the data in table layout. The column and rows dimensions must be present as a data dimension in the
+          query (not a filter). Such a request can look like this:</para>
+        <screen>/api/29/analytics.html+css?dimension=dx:cYeuwXTCPkU;fbfJHSPpUQD&amp;dimension=pe:WEEKS_THIS_YEAR&amp;filter=ou:ImspTQPwCqd&amp;displayProperty=SHORTNAME&amp;columns=dx&amp;rows=pe</screen>
       </section>
     </section>
     <section xml:id="webapi_event_aggregate_analytics">
@@ -11794,6 +12261,11 @@ interval=WEEK" -u admin:district</screen>
               <entry>keyMapzenSearchApiKey</entry>
               <entry>Key for the Mapzen geo search API</entry>
             </row>
+            <row>
+              <entry>keyFileResourceRetentionStrategy</entry>
+              <entry>Determines how long file resources associated with deleted or updated values
+                are kept. NONE, THREE_MONTHS, ONE_YEAR, or FOREVER.</entry>
+            </row>
           </tbody>
         </tgroup>
       </table></para>
@@ -12515,16 +12987,56 @@ interval=WEEK" -u admin:district</screen>
     <section xml:id="webapi_generate_tei_attributes">
       <title>Generated tracked entity instance attributes</title>
       <para>Tracked entity instance attributes that is using automatic generation of unique values
-        has two endpoints that is used by apps. One is used to generate values, the other to
-        generate and reserve one or more values for use later.</para>
+        has three endpoints that is used by apps. The endpoints are all used for generating and
+        reserving values.</para>
+      <para>In 2.29 we introduced TextPattern for defining and generating these patterns. You can
+        read more about <link xmlns:xlink="http://www.w3.org/1999/xlink"
+          linkend="create-scorecards-pivot-table">working with TextPattern here</link>. All existing
+        patterns will be converted to a valid TextPattern when upgrading to 2.29.<note>
+          <para>As of 2.29, all these endpoint will require you to include any variables reported by
+            the <emphasis>requiredValues</emphasis> endpoint listed as required. Existing patterns,
+            consisting of only “#”, will be upgraded to the new TextPattern syntax
+            “RANDOM(&lt;old-pattern>)”. The RANDOM segment of the TextPattern is not a required
+            variable, so this endpoint will work as before for patterns defined before 2.29. </para>
+        </note></para>
+      <section>
+        <title>Finding required values</title>
+        <para>A TextPattern can contain variables that change based on different factors. Some of
+          these factors will be unknown to the server, so the values for these variables have to be
+          supplied when generating and reserving values.</para>
+        <para>This endpoint will return a map of required and optional values, that the server will
+          inject into the TextPattern when generating new values. Required variables have to be
+          supplied for the generation, but optional variables should only be supplied if you know
+          what you are
+          doing.<screen>GET /api/trackedEntityAttributes/Gs1ICEQTPlG/requiredValues</screen><screen>{
+	"REQUIRED": [
+		"ORG_UNIT_CODE"
+	],
+	"OPTIONAL": [
+		"RANDOM"
+	]
+}</screen></para>
+      </section>
       <section xml:id="webapi_generate_values">
         <title>Generate value endpoint</title>
         <para>Online web apps and other clients that wants to generate a value that will be used
           right away can use the simple generate endpoint. This endpoint will generate a value that
           is guaranteed to be unique at the time of generation. The value is also guaranteed not to
-          be reserved by use of the generateAndReseve endpoint.</para>
-        <screen>curl -X GET -H "Content-Type: application/json" -u admin:district 
-          https://play.dhis2.org/dev/api/trackedEntityAttributes/lZGmxYbs97q/generate</screen>
+          be reserved. As of 2.29, this endpoint will also reserve the value generated for 3
+          days.</para>
+        <para>If your TextPattern includes required values, you can pass them as paramaters like the
+          example below:</para>
+        <para>The expiration time can also be overridden at the time of generation, by adding the
+          ?expiration=&lt;number-of-days> to the request.</para>
+        <screen>GET /api/trackedEntityAttributes/Gs1ICEQTPlG/generate?ORG_UNIT_CODE=OSLO</screen>
+        <screen>{
+	"ownerObject": "TRACKEDENTITYATTRIBUTE",
+	"ownerUid": "Gs1ICEQTPlG",
+	"key": "RANDOM(X)-OSL",
+	"value": "C-OSL",
+	"created": "2018-03-02T12:01:36.680",
+	"expiryDate": "2018-03-05T12:01:36.678"
+}</screen>
       </section>
       <section xml:id="webapi_generate_reserve_values">
         <title>Generate and reserve value endpoint</title>
@@ -12532,33 +13044,49 @@ interval=WEEK" -u admin:district</screen>
           register tracked entities with unique ids. They will reserve a number of unique ids that
           this device will then use when registering new tracked entity instances. The endpoint is
           called to retreieve a number of tracked entity instance reserved values. An optional
-          parameter numberToReserve specifies how many ids to generate (default is 1). </para>
-        <screen>curl -X GET -H "Content-Type: application/json" -u admin:district 
-          https://play.dhis2.org/dev/api/trackedEntityAttributes/lZGmxYbs97q/generateAndReserve?numberToReserve=3</screen>
+          parameter numberToReserve specifies how many ids to generate (default is 1).</para>
+        <para>If your TextPattern includes required values, you can pass them as paramaters like the
+          example below:</para>
+        <para>Similar to the /generate endpoint, this endpoint can also specify the expiration time
+          in the same way. By adding the ?expiration=&lt;number-of-days> you can override the
+          default 60 days. </para>
+        <screen>GET /api/trackedEntityAttributes/Gs1ICEQTPlG/generateAndReserve?numberToReserve=3&amp;ORG_UNIT_CODE=OSLO</screen>
         <screen>[
-   {
-      "created":"2016-06-25T07:52:26.466+0000",
-      "expiryDate":"2017-06-25T07:52:26.466+0000",
-      "value":"43327401",
-      "trackedEntityAttribute":{  }
-   },
-   {
-      "created":"2016-06-25T07:52:26.468+0000",
-      "expiryDate":"2017-06-25T07:52:26.468+0000",
-      "value":"82676084",
-      "trackedEntityAttribute":{  }
-   },
-   {
-      "created":"2016-06-25T07:52:26.471+0000",
-      "expiryDate":"2017-06-25T07:52:26.471+0000",
-      "value":"91700776",
-      "trackedEntityAttribute":{  }
-   }
-]
-        </screen>
-        <para>The generate and reserve endpoint returns an array of reserved values:</para>
+	{
+		"ownerObject": "TRACKEDENTITYATTRIBUTE",
+		"ownerUid": "Gs1ICEQTPlG",
+		"key": "RANDOM(X)-OSL",
+		"value": "B-OSL",
+		"created": "2018-03-02T13:22:35.175",
+		"expiryDate": "2018-05-01T13:22:35.174"
+	},
+	{
+		"ownerObject": "TRACKEDENTITYATTRIBUTE",
+		"ownerUid": "Gs1ICEQTPlG",
+		"key": "RANDOM(X)-OSL",
+		"value": "Q-OSL",
+		"created": "2018-03-02T13:22:35.175",
+		"expiryDate": "2018-05-01T13:22:35.174"
+	},
+	{
+		"ownerObject": "TRACKEDENTITYATTRIBUTE",
+		"ownerUid": "Gs1ICEQTPlG",
+		"key": "RANDOM(X)-OSL",
+		"value": "S-OSL",
+		"created": "2018-03-02T13:22:35.175",
+		"expiryDate": "2018-05-01T13:22:35.174"
+	}
+]</screen>
+      </section>
+      <section>
+        <title>Reserved values</title>
+        <para>Reserved values is currently not accessible trough the api, however they are returned
+          by the <emphasis>generate</emphasis> and <emphasis>generateAndReserve</emphasis>endpoints.
+          The following table explains the properties of the reserved value object:</para>
+      </section>
+      <section>
         <table frame="all">
-          <title>Tracked entity reserved values</title>
+          <title>Reserved values</title>
           <tgroup cols="2">
             <colspec colnum="1" colname="c1" colwidth="1.38*"/>
             <colspec colnum="2" colname="c3" colwidth="7.25*"/>
@@ -12570,28 +13098,51 @@ interval=WEEK" -u admin:district</screen>
             </thead>
             <tbody>
               <row>
-                <entry>created</entry>
-                <entry>The date the reserved value was created.</entry>
+                <entry>ownerObject</entry>
+                <entry>The metadata type referenced when generating and reserving the value.
+                  Currently only TRACKEDENTITYATTRIBUTE is supported.</entry>
               </row>
               <row>
-                <entry>expiryDate</entry>
-                <entry>After this date the value can be deleted/unreserved by the server if  no
-                  tracked entity has been registered with the value. The deletion does not happen
-                  automatically at the exact time of the expiration, but can/will be done with
-                  scripts or mechanisms implemneted later.</entry>
+                <entry>ownerUid</entry>
+                <entry>The uid of the metadata object referenced when generating and reserving the
+                  value.</entry>
+              </row>
+              <row>
+                <entry>key</entry>
+                <entry>A partially generated value where generated segments are not yet
+                  added.</entry>
               </row>
               <row>
                 <entry>value</entry>
-                <entry>The actual generated value that is reserved.</entry>
+                <entry>The fully resolved value reserved. This is the value you send to the server
+                  when storing data.</entry>
               </row>
               <row>
-                <entry>trackedEntityAttribute</entry>
-                <entry>The tracked entity attribute that the value was generated for.</entry>
+                <entry>created</entry>
+                <entry>The timestamp when the reservation was made</entry>
+              </row>
+              <row>
+                <entry>expiryDate</entry>
+                <entry>The timestamp when the reservation will no longer be reserved</entry>
               </row>
             </tbody>
           </tgroup>
         </table>
+        <para>Expired reservations are removed daily. If a pattern changes, values that was already
+          reserved will be accepted when storing data, even if they don't match the new pattern, as
+          long as the reservation has not expired.</para>
       </section>
+    </section>
+    <section>
+      <title>Image attributes</title>
+      <para>Working with image attributes is a lot like working with file data values. The value of
+        an attribute with the image value type is the id of the associated file resource. A GET
+        request to the
+          <emphasis>/api/trackedEntityInstances/&lt;entityId>/&lt;attributeId>/image</emphasis>
+        endpoint will return the actual image. The optional height and width parameters can be used
+        to specify the dimensions of the
+        image.<screen>curl http://server/api/29/trackedEntityInstances/ZRyCnJ1qUXS/zDhUuAYrxNC/image?height=200&amp;width=200
+  > image.jpg</screen></para>
     </section>
   </section>
   <section xml:id="webapi_tracked_entity_instance_query">
@@ -13751,7 +14302,7 @@ interval=WEEK" -u admin:district</screen>
     </section>
   </section>
   <section xml:id="webapi_scheduling">
-    <title>Scheduling</title>
+    <title>Scheduling (Experimental)</title>
     <para>
       In 2.29 we introduced a new way of scheduling jobs on the server. Each type of job has
       different properties for configuration, giving you more control over how jobs are run. In
