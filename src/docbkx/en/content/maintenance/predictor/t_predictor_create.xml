@@ -278,7 +278,7 @@
                                 </row>
                                 <row>
                                     <entry align="left">
-                                        <para>IF(ISNULL(#{T7OyqQpUpNd}, 10, 20))</para>
+                                        <para>IF(ISNULL(#{T7OyqQpUpNd}), 10, 20)</para>
                                     </entry>
                                     <entry>
                                         <para>If the data element T7OyqQpUpNd is null,
