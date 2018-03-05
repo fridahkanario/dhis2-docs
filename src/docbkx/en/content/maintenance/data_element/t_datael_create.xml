@@ -5,8 +5,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="create_data_element">
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="create_data_element">
     <title>Create or edit a
         d<?oxy_comment_start author="cecilia" timestamp="20160510T101140+0200" comment="At next revision:
 Find out who does this? Admin? Implementer? User? " flag="done"?>ata<?oxy_comment_end?>
@@ -122,7 +121,7 @@ Is this optional? Recommended?" flag="done"?><emphasis
                                 <para>Date &amp; time</para>
                             </entry>
                             <entry>
-                                <para>Is a combination of  the <emphasis role="bold">DATE</emphasis>
+                                <para>Is a combination of the <emphasis role="bold">DATE</emphasis>
                                     and <emphasis role="bold">TIME</emphasis> data elements.</para>
                             </entry>
                         </row>
@@ -236,7 +235,7 @@ Is this optional? Recommended?" flag="done"?><emphasis
                             <entry>
                                 <para>Organisation units rendered as a hierarchy tree widget.</para>
                                 <para>If the user has assigned "search organisation units", these
-                                    will be displayed instead of the  assigned organisation
+                                    will be displayed instead of the assigned organisation
                                     units.</para>
                             </entry>
                         </row>
@@ -533,5 +532,5 @@ Ask Lars" flag="done"?>
         <listitem>
             <para>Click <emphasis role="bold">Save</emphasis>.</para>
         </listitem>
-    </orderedlist>    
+    </orderedlist>
 </section>
