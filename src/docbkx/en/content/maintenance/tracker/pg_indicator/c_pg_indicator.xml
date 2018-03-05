@@ -5,8 +5,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="about_program_indicators">
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="about_program_indicators">
     <title>About program indicators</title>
     <para>Program indicators are expressions based on data elements and attributes of tracked
         entities which can be used to calculate values based on a formula. Program indicators
@@ -147,25 +146,29 @@
                         <para>Analytics period boundaries</para>
                     </entry>
                     <entry align="left" valign="top">
-                        <para>Defines the boundaries for the program indicator calculation.</para>
-                        <itemizedList>
-                            <listitem>Boundary target: Can be
-                                <emphasis>incident date</emphasis>,
-                                <emphasis>event date</emphasis> or
-                                <emphasis>enrollment date</emphasis>.</listitem>
-                            <listitem>Analytics period boundary type:
-                                Defines the type of boundary for the
-                                period, e.g. if it should be before or
-                                after the start or end of the reporting
-                                period.</listitem>
-                            <listitem>Offset period by amount: A
-                                positive or negative number by which to
-                                offset the period.</listitem>
-                           <listitem>Period type: Can be any period,
-                               e.g. <emphasis>Weekly</emphasis> or
-                               <emphasis>Quarterly</emphasis>. The
-                               offset applies to this.</listitem>
-                        </itemizedList>
+                        <para>Defines the boundaries for the program indicator calculation. <itemizedlist>
+                                <listitem>
+                                    <para>Boundary target: Can be <emphasis>incident
+                                        date</emphasis>, <emphasis>event date</emphasis> or
+                                            <emphasis>enrollment date</emphasis>.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Analytics period boundary type: Defines the type of
+                                        boundary for the period, e.g. if it should be before or
+                                        after the start or end of the reporting period.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Offset period by amount: A positive or negative number by
+                                        which to offset the period.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>Period type: Can be any period, e.g.
+                                            <emphasis>Weekly</emphasis> or
+                                            <emphasis>Quarterly</emphasis>. The offset applies to
+                                        this.</para>
+                                </listitem>
+                            </itemizedlist>
+                        </para>
                     </entry>
                 </row>
                 <row>
