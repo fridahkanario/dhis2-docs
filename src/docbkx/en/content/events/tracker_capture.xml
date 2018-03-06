@@ -199,13 +199,16 @@ Is it always &quot;firstname&quot; and &quot;last name&quot;?"?>information<?oxy
           view these matching TEIs.</para>
       </listitem>
     </orderedlist>
-    <para><inlinemediaobject>
-        <imageobject>
-          <imagedata
-            fileref="../../resources/images/tracker_capture/tracker_capture_register_integrated_search.png"
-          />
-        </imageobject>
-      </inlinemediaobject></para>
+    <para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="80%" align="center"
+              fileref="resources/images/tracker_capture/tracker_capture_register_integrated_search.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
     <para>If there is any matching TEIs, click <emphasis role="bold">Continue</emphasis> to review
       possible duplicates before registering a new one. </para>
     <para>If there is no matching TEIs, click <emphasis role="bold">Save and continue</emphasis> or
@@ -262,12 +265,16 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
             <para>TEIs with a cancelled enrollment of the current program</para>
           </listitem>
         </orderedlist></para>
-      <para><inlinemediaobject>
-          <imageobject>
-            <imagedata fileref="../../resources/images/tracker_capture/tracker_capture_lists.png"
-              width="700"/>
-          </imageobject>
-        </inlinemediaobject></para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="rresources/images/tracker_capture/tracker_capture_lists.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
       <para>You can select which columns to show or hide in the lists for each program. This will be
         saved in your user settings.<orderedlist>
           <listitem>
@@ -282,18 +289,21 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
         </orderedlist></para>
       <para>There is also an option to create a custom working list with own filters. This can be
         used to create custom lists on the fly.</para>
-      <para><inlinemediaobject>
-          <imageobject>
-            <imagedata
-              fileref="../../resources/images/tracker_capture/tracker_capture_lists_custom.png"
-              width="700"/>
-          </imageobject>
-        </inlinemediaobject></para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/tracker_capture/tracker_capture_lists_custom.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
       <para>Lists can also be downloaded or printed. </para>
       <para><inlinemediaobject>
           <imageobject>
             <imagedata
-              fileref="../../resources/images/tracker_capture/tracker_capture_lists_download.png"/>
+              fileref="resources/images/tracker_capture/tracker_capture_lists_download.png"/>
           </imageobject>
         </inlinemediaobject></para>
     </section>
@@ -344,12 +354,16 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
               button</para>
           </listitem>
         </orderedlist></para>
-      <para><inlinemediaobject>
-          <imageobject>
-            <imagedata
-              fileref="../../resources/images/tracker_capture/tracker_capture_search_screen.png"/>
-          </imageobject>
-        </inlinemediaobject></para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/tracker_capture/tracker_capture_search_screen.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
       <para>After the search has been done, you will be presented with the search result. Whats
         displayed depends on the outcome of the search. </para>
       <para>For unique attribute search:<itemizedlist>
@@ -571,11 +585,16 @@ Do the data entry widgets look different depending on the program?"?>widgets<?ox
         <para><emphasis>Note that this will only work for events that are
           repeatable.</emphasis></para>
       </note>
-      <para><inlinemediaobject>
-          <imageobject>
-            <imagedata fileref="../../resources/images/tracker_capture/compareForm.png"/>
-          </imageobject>
-        </inlinemediaobject></para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/tracker_capture/compareForm.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
     </section>
   </section>
   <section xml:id="manage_tracked_entity_instance_enrollment">
@@ -989,11 +1008,16 @@ https://play.dhis2.org/demo/dhis-web-tracker-capture/index.html#/dashboard?tei=H
               would like to display in the top bar. </para>
           </listitem>
         </orderedlist></para>
-      <para><inlinemediaobject>
-          <imageobject>
-            <imagedata fileref="../../resources/images/tracker_capture/top_bar.png"/>
-          </imageobject>
-        </inlinemediaobject></para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/tracker_capture/top_bar.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
     </section>
   </section>
   <section xml:id="create_report_tracker_capture">
