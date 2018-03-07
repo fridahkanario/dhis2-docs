@@ -294,9 +294,7 @@ to &quot;User org unit&quot;. If you reload the dashboard, the filter will be cl
             <para>You can write interpretations for the chart, pivot table, map, event report, and
                 event chart items. Click on the interpretations button <inlinemediaobject>
                     <imageobject>
-                        <imagedata
-                            fileref="../../resources/images/dashboard/dashboard-interpretations-button.png"
-                        />
+                        <imagedata fileref="resources/images/dashboard/dashboard-interpretations-button.png"/>
                     </imageobject>
                 </inlinemediaobject>, and the item will be expanded vertically underneath to show
                 the interpretations and replies. You can like an interpretation, reply to an
