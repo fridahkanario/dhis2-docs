@@ -383,11 +383,10 @@ Verify with SME: correct with org units in plural?
                     <para>Select <emphasis role="bold">Automatically generated</emphasis> to allow
                         automatic generation of the tracked entity attribute value. When the
                         generate setting is selected on, an optional field for specifying pattern
-                        also displays. Enter an amount of numbers into this field equal to the
-                        ciphers you want in the generated value. A pattern of 0000 would result in a
-                        generated value above 1000 and below 9999. The number of ciphers should at
-                        least allow 20 % more values than you expect is needed for keeping the ID
-                        unique.</para>
+                        also displays. This field should contain a pattern based on the TextPattern
+                        syntax. When the value is automatically generated, it will be unique for
+                        this attribute for the entire system. See the TextPattern section for more
+                        information on how it works.</para>
                 </listitem>
                 <listitem>
                     <para><emphasis role="bold">Organisation unit</emphasis>: The values of the

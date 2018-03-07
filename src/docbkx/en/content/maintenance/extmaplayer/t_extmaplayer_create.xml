@@ -101,14 +101,18 @@
         <listitem>
             <para>Select a <emphasis role="bold">Placement</emphasis>: <itemizedlist>
                     <listitem>
-                        <para><emphasis role="bold">Bottom - basemap</emphasis>: places the external
-                            map layer above other DHIS2 base maps but below the thematic map
-                            layers.</para>
+                        <para><emphasis role="bold">Bottom - basemap</emphasis>: For the GIS app,
+                            this places the external map layer above other DHIS2 base maps but below
+                            the thematic map layers. For the Maps app, this makes the external map
+                            layer selectable as the base map (i.e. as an alternative to the DHIS2
+                            base maps).</para>
                     </listitem>
                     <listitem>
-                        <para><emphasis role="bold">Top - overlay</emphasis>: places the external
-                            map layer above the thematic map layers but below facility and event
-                            data layers.</para>
+                        <para><emphasis role="bold">Top - overlay</emphasis>: For the GIS app, this
+                            places the external map layer above the thematic map layers but below
+                            facility and event data layers. For the Maps app, this allows the
+                            external map to be added from the Add Layer selection and placed
+                            anywhere above the base map.</para>
                     </listitem>
                 </itemizedlist></para>
         </listitem>

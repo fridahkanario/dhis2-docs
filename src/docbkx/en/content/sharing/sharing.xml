@@ -30,7 +30,7 @@ Future releases: Legacy sharing dialog will be replaced with new in the analytic
       be shown. </para>
     <para>
       <screenshot>
-        <title>The sharing dialog in the Maintenance app</title>
+        <title>The new sharing dialog</title>
         <mediaobject>
           <imageobject>
             <imagedata width="40%" fileref="resources/images/maintainence/mtn_sharing_dialog.png"
