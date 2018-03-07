@@ -26,17 +26,39 @@
     <section xml:id="dashboards_setup">
         <title>Dashboard and control bar</title>
         <para>Dashboards have a title, description, and any number of dashboard items. The dashboard
-      items can be of many different types, including charts, maps, reports, tables, resources,
-      messages, and text items. Above the dashboard is the control bar, which shows all your available dashboards, including
-      search field, and a <emphasis role="bold">+</emphasis> button for creating a new dashboard.</para>
-        <para>In the screen shot below, the dashboard has already been populated with charts and maps.</para>
+            items can be of many different types, including charts, maps, reports, tables,
+            resources, messages, and text items. Above the dashboard is the control bar, which shows
+            all your available dashboards, including a dashboard search field, and a <emphasis
+                role="bold">+</emphasis> button for creating a new dashboard. </para>
+        <para>The dashboard has two modes: view and edit/create. When you first log in to DHIS2,
+            your most recently used dashboard will be displayed in view mode, if you are on the same
+            computer as you were previously. If you are using a different computer, then the first
+            starred dashboard will be displayed. if there are no starred dashboards, then the first
+            dashboard will be displayed. Starred dashboards always show first in the dashboard
+            list.</para>
+        <para>The screenshot below shows a dashboard called "Antenatal Care", which has been
+            populated with charts and maps.</para>
         <screenshot>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="resources/images/dashboard/dashboard-view-mode.png" align="center" format="PNG" scale="100"/>
+                    <imagedata fileref="resources/images/dashboard/dashboard-view-mode.png"
+                        align="center" format="PNG" width="100%"/>
                 </imageobject>
             </mediaobject>
         </screenshot>
+        <section>
+            <title>Searching in the list of dashboards</title>
+            <para>You can search for a specific dashboard using the search field in the upper left of the control bar entitled “Search for a dashboard”. The search is case insensitive, and as you type, the list of dashboards will filter down to those that match your search text.</para>
+        </section>
+        <section>
+            <title>Customizing the height of the control bar</title>
+            <para>You can set a specific height for the dashboards control bar by down-clicking and dragging the bottom edge of the control bar.
+            When you finish dragging, the new height will be set. Clicking on <emphasis role="bold">SHOW MORE</emphasis> will
+            expand the control bar to its maximum height (10 &quot;rows&quot;). Clicking on <emphasis role="bold">SHOW LESS</emphasis>
+            will reset the height to your customized height.
+            </para>
+        </section>
+
     </section>
     <section>
         <title>Creating a dashboard</title>
@@ -50,7 +72,7 @@
         <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-add-new.png" align="center" format="PNG" scale="100"/>
+                        <imagedata fileref="resources/images/dashboard/dashboard-add-new.png" align="center" format="PNG" width="50%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -58,7 +80,8 @@
         <screenshot>
             <mediaobject>
                 <imageobject>
-                    <imagedata fileref="resources/images/dashboard/dashboard-create-mode.png" align="center" format="PNG" scale="100"/>
+                    <imagedata fileref="resources/images/dashboard/dashboard-create-mode.png"
+                        align="center" format="PNG" width="100%"/>
                 </imageobject>
             </mediaobject>
         </screenshot>
@@ -108,7 +131,7 @@
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-item-selector.png" align="center" format="PNG" scale="100"/>
+                        <imagedata fileref="resources/images/dashboard/dashboard-item-selector.png" align="center" format="PNG" width="80%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -128,7 +151,9 @@ edit/create mode. In view mode, they are not displayed, but take up the defined 
 <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-spacer-edit-mode.png" align="center" format="PNG" scale="100"/>
+                        <imagedata
+                                fileref="resources/images/dashboard/dashboard-spacer-edit-mode.png"
+                                align="center" format="PNG" width="100%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -136,7 +161,9 @@ edit/create mode. In view mode, they are not displayed, but take up the defined 
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-spacer-view-mode.png" align="center" format="PNG" scale="100"/>
+                        <imagedata
+                                fileref="resources/images/dashboard/dashboard-spacer-view-mode.png"
+                                align="center" format="PNG" width="100%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -163,7 +190,8 @@ edit/create mode. In view mode, they are not displayed, but take up the defined 
     <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-title-bar.png" align="center" format="PNG" scale="100"/>
+                        <imagedata fileref="resources/images/dashboard/dashboard-title-bar.png"
+                        align="center" format="PNG" width="50%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -172,17 +200,21 @@ edit/create mode. In view mode, they are not displayed, but take up the defined 
     <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-edit-mode.png" align="center" format="PNG" scale="100"/>
+                        <imagedata fileref="resources/images/dashboard/dashboard-edit-mode.png" align="center" format="PNG" width="100%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
         <section>
             <title>Translating dashboard title and description</title>
-            <para>You can add translations for dashboard title and description while in edit mode.</para>
+            <para>You can add translations for dashboard title and description while in edit mode.
+                The dialog provides a list of languages to translate to, and shows the original
+                dashboard title underneath the name input field.</para>
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-translation-dialog.png" align="center" format="PNG" scale="100"/>
+                        <imagedata
+                            fileref="resources/images/dashboard/dashboard-translation-dialog.png"
+                            align="center" format="PNG" width="80%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -212,7 +244,8 @@ edit/create mode. In view mode, they are not displayed, but take up the defined 
         <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-title-bar.png" align="center" format="PNG" scale="100"/>
+                        <imagedata fileref="resources/images/dashboard/dashboard-title-bar.png"
+                        align="center" format="PNG" width="50%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -232,7 +265,9 @@ to &quot;User org unit&quot;. If you reload the dashboard, the filter will be cl
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-orgunit-filter-dialog.png" align="center" format="PNG" scale="100"/>
+                        <imagedata
+                            fileref="resources/images/dashboard/dashboard-orgunit-filter-dialog.png"
+                            align="center" format="PNG" width="60%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -246,7 +281,9 @@ to &quot;User org unit&quot;. If you reload the dashboard, the filter will be cl
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-pluginitem-buttons.png" align="center" format="PNG" scale="100"/>
+                        <imagedata
+                                fileref="resources/images/dashboard/dashboard-pluginitem-buttons.png"
+                                align="center" format="PNG" width="50%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -254,16 +291,24 @@ to &quot;User org unit&quot;. If you reload the dashboard, the filter will be cl
         </section>
         <section>
             <title>Interpretations</title>
-            <para>You can write interpretations for the chart, pivot table, map, event report,
-            and event chart items. Click on the interpretations button, and the item will be
-            expanded vertically to show the interpretations and replies. You can like an interpretation,
-            reply to an interpretation, and add your own interpretation. You can delete your own
-            interpretations and replies, and if you have moderator access, you can delete others’ interpretations.
-            </para>
+            <para>You can write interpretations for the chart, pivot table, map, event report, and
+                event chart items. Click on the interpretations button <inlinemediaobject>
+                    <imageobject>
+                        <imagedata
+                            fileref="../../resources/images/dashboard/dashboard-interpretations-button.png"
+                        />
+                    </imageobject>
+                </inlinemediaobject>, and the item will be expanded vertically underneath to show
+                the interpretations and replies. You can like an interpretation, reply to an
+                interpretation, and add your own interpretation. You can delete your own
+                interpretations and replies, and if you have moderator access, you can delete
+                others’ interpretations. </para>
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-interpretations.png" align="center" format="PNG" scale="100"/>
+                        <imagedata
+                            fileref="resources/images/dashboard/dashboard-interpretations.png"
+                            align="center" format="PNG" width="60%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -277,7 +322,8 @@ to &quot;User org unit&quot;. If you reload the dashboard, the filter will be cl
             <screenshot>
                 <mediaobject>
                     <imageobject>
-                        <imagedata fileref="resources/images/dashboard/dashboard-sharing-dialog.png" align="center" format="PNG" scale="100"/>
+                        <imagedata fileref="resources/images/dashboard/dashboard-sharing-dialog.png"
+                            align="center" format="PNG" width="60%"/>
                     </imageobject>
                 </mediaobject>
             </screenshot>
@@ -315,735 +361,6 @@ to &quot;User org unit&quot;. If you reload the dashboard, the filter will be cl
                     </listitem>
                 </itemizedlist>
             </para>
-        </section>
-    </section>
-    <section xml:id="dashboards_messages">
-        <?oxy_comment_start author="cecilia" timestamp="20160623T082359+0200" comment="Function is set up by system admin or similar role." flag="done"?>
-        <title xml:id="dashboard_messages">Manage messages and
-
-
-
-
-
-
-
-
-
-
-
-            <?oxy_comment_start author="cecilia" timestamp="20160623T083019+0200" comment="For next revision:
-Move section to a chapter called Communication within DHIS2 or similar
-Even Send message to other users." flag="done"?>feedback
-
-
-
-
-
-
-
-
-
-
-            <?oxy_comment_end?>
-      messages
-
-
-
-
-
-
-
-
-
-
-        </title>
-        <?oxy_comment_end?>
-        <section>
-            <title>About messages and feedback messages</title>
-            <para>
-                <screenshot>
-                    <mediaobject>
-                        <imageobject>
-                            <?oxy_comment_start author="cecilia" timestamp="20160623T084850+0200" comment="Will not replace graphic, do not want to show feedback message options to the &quot;normal&quot; user." flag="done"?>
-                            <imagedata width="80%" align="center" fileref="resources/images/dashboard/dashboard_messages_queue.png"/>
-                            <?oxy_comment_end?>
-                        </imageobject>
-                    </mediaobject>
-                </screenshot>
-            </para>
-            <para>Within DHIS2 you can send messages and feedback messages to users, user groups and
-        organisation units. When you send a feedback message, it is routed to a particular user
-        group. If you're a member of this user group, you've access to feedback handling tools. You
-        can for example set the status of an incoming feedback to "Pending" while you're waiting for
-        information. </para>
-      <para>In addition to the user-to-user and feedback messages, depending on your configuration
-        the system will also send you system-generated messages. These messages could be triggered
-        by different events, including system or background job failures and validation analysis
-        results. Feedback handling tools are also available for validation results and the priority
-        will be set to the importance of the validation rule violated. </para>
-      <note>
-        <para>Messages and feedback messages are not sent to users' e-mail addresses, the messages
-          only appear within DHIS2.</para>
-            </note>
-        </section>
-        <section>
-            <title>Create a message</title>
-            <para>
-                <screenshot>
-                    <mediaobject>
-                        <imageobject>
-                            <imagedata width="90%" align="center" scale="70" fileref="resources/images/dashboard/dashboard_message.png"/>
-                        </imageobject>
-                    </mediaobject>
-                </screenshot>
-            </para>
-            <orderedlist>
-                <listitem>
-                    <para>From the
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">Dashboard</emphasis>, click
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">Messages</emphasis>.
-
-
-
-
-
-
-
-
-
-
-                    </para>
-                </listitem>
-                <listitem>
-                    <para>Click
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">Write message</emphasis>.
-
-
-
-
-
-
-
-
-
-
-                    </para>
-                </listitem>
-                <listitem>
-                    <para>Define who you want to receive the message. You can send a message to organisation
-            units, users and user groups.</para>
-                    <itemizedlist>
-                        <listitem>
-                            <para>In the
-
-
-
-
-
-
-
-
-
-
-                                <emphasis role="bold">To org unit</emphasis> field, select the
-                organisation units or group of organisation units you want to send the message
-                to.
-
-
-
-
-
-
-
-
-
-
-                            </para>
-                        </listitem>
-                        <listitem>
-                            <para>In the
-
-
-
-
-
-
-
-
-
-
-                                <emphasis role="bold">To user</emphasis> field, select the users or user
-                groups you want to send the message to.
-
-
-
-
-
-
-
-
-
-
-                            </para>
-                        </listitem>
-                    </itemizedlist>
-                </listitem>
-                <listitem>
-                    <para>Type a subject and a message.</para>
-                </listitem>
-                <listitem>
-                    <para>Click
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">Send</emphasis>.
-
-
-
-
-
-
-
-
-
-
-                    </para>
-                </listitem>
-            </orderedlist>
-        </section>
-        <section>
-            <title>Read a message</title>
-            <orderedlist>
-                <listitem>
-                    <para>From the
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">Dashboard</emphasis>, click
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">Messages</emphasis>.
-
-
-
-
-
-
-
-
-
-
-                    </para>
-                </listitem>
-                <listitem>
-                    <para>Click a message.</para>
-                    <para>If the message is part of a conversation, you'll see all messages in this
-            conversation.</para>
-                </listitem>
-            </orderedlist>
-        </section>
-        <section>
-            <title>Create a feedback message</title>
-            <orderedlist>
-                <listitem>
-                    <para>From the
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">Dashboard</emphasis>, click
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">Write feedback</emphasis>.
-
-
-
-
-
-
-
-
-
-
-                    </para>
-                </listitem>
-                <listitem>
-                    <para>Type a subject and a feedback message.</para>
-                </listitem>
-                <listitem>
-                    <para>Click
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">Send</emphasis>.
-
-
-
-
-
-
-
-
-
-
-                    </para>
-                    <para>The feedback message will appear in all of the specified users' inboxes.</para>
-                </listitem>
-            </orderedlist>
-        </section>
-        <section>
-            <title>Manage feedback messages</title>
-            <para>
-                <note>
-                    <para>You'll only see feedback messages and have access to the feedback handling tools if
-            you are a member of the user group that is set up to handle feedback messages.</para>
-                </note>
-            </para>
-            <para>
-                <screenshot>
-                    <mediaobject>
-                        <imageobject>
-                            <imagedata fileref="resources/images/dashboard/dashboard_messages_manage.png" align="center" format="png" width="80%"/>
-                        </imageobject>
-                    </mediaobject>
-                </screenshot>
-            </para>
-            <para>You'll receive feedback messages to your
-
-
-
-
-
-
-
-
-
-
-                <emphasis role="bold">Messages</emphasis>
-        inbox. For feedback messages you've the following options in addition to the messages
-        options:
-
-
-
-
-
-
-
-
-
-
-            </para>
-            <table frame="all">
-                <title>Feedback handling tools</title>
-                <tgroup cols="2">
-                    <colspec colname="c1" colnum="1" colwidth="2.3*"/>
-                    <colspec colname="c2" colnum="2" colwidth="1*"/>
-                    <thead>
-                        <row>
-                            <entry>Function</entry>
-                            <entry>Description</entry>
-                        </row>
-                    </thead>
-                    <tbody>
-                        <row>
-                            <entry>
-                                <para>
-                                    <emphasis role="bold">Priority</emphasis>
-                                </para>
-                            </entry>
-                            <entry>
-                                <para>You can mark a feedback message with different priorities:
-
-
-
-
-
-
-
-
-
-
-                                    <emphasis role="bold">None</emphasis>,
-
-
-
-
-
-
-
-
-
-
-                                    <emphasis role="bold">Low</emphasis>,
-
-
-
-
-
-
-
-
-
-
-                                    <emphasis role="bold">Medium</emphasis> or
-
-
-
-
-
-
-
-
-
-
-                                    <emphasis role="bold">High</emphasis>.
-
-
-
-
-
-
-
-
-
-
-                                </para>
-                                <para>Setting the priority makes it easier to keep track of which feedback message
-                  you need resolved first, and which feedback messages that can wait.</para>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para>
-                                    <emphasis role="bold">Status</emphasis>
-                                </para>
-                            </entry>
-                            <entry>
-                                <para>All feedback messages get the status
-
-
-
-
-
-
-
-
-
-
-                                    <emphasis role="bold">Open</emphasis>
-                  when created.
-
-
-
-
-
-
-
-
-
-
-                                </para>
-                                <para>To keep track of existing feedback messages, you can change the status to
-
-
-
-
-
-
-
-
-
-
-
-                                    <emphasis role="bold">Pending</emphasis>,
-
-
-
-
-
-
-
-
-
-
-                                    <emphasis role="bold">Invalid</emphasis> or
-
-
-
-
-
-
-
-
-
-
-                                    <emphasis role="bold">Solved</emphasis>.
-
-
-
-
-
-
-
-
-
-
-                                </para>
-                                <para>You can filter feedback messages in your inbox based on their status. This
-                  makes it easier to switch between feedback messages and normal messages.</para>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para>
-                                    <emphasis role="bold">Assigned to</emphasis>
-                                </para>
-                            </entry>
-                            <entry>
-                                <para>You can assign a feedback message to any member of the user group that is set
-                  up to handle feedback messages.</para>
-                                <para>
-                                    <emphasis role="bold">None</emphasis> means that you haven't assigned a user
-                  to the feedback message.
-
-
-
-
-
-
-
-
-
-
-                                </para>
-                            </entry>
-                        </row>
-                        <row>
-                            <entry>
-                                <para>
-                                    <emphasis role="bold">Internal reply</emphasis>
-                                </para>
-                            </entry>
-                            <entry>
-                                <para>When you work in a feedback
-
-
-
-
-
-
-
-
-
-
-
-                                    <?oxy_comment_start author="cecilia" timestamp="20160623T101148+0200" comment="For SME: What&apos;s the correct role name?"?>handling
-
-
-
-
-
-
-
-
-
-
-
-                                    <?oxy_comment_end?>team you might want to discuss the feedback before sending an
-                  answer to the sender. You can keep this discussion in the same message
-                  conversation as the feedback itself.
-
-
-
-
-
-
-
-
-
-
-                                </para>
-                                <para>To send a reply that within the feedback handling user group, click
-
-
-
-
-
-
-
-
-
-
-                                    <emphasis role="bold">Internal reply</emphasis>.
-
-
-
-
-
-
-
-
-
-
-                                </para>
-                            </entry>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </table>
-        </section>
-        <section>
-            <title>Configure feedback message function</title>
-            <para>To configure the feedback message function, you must:</para>
-            <orderedlist>
-                <listitem>
-                    <?oxy_comment_start author="cecilia" timestamp="20160623T113416+0200" comment="At next revision:
-Add link to correct section in user guide.
-
-Removed text for now since it is unclear which section the reference point to:
-Refer to the section in this manual on &quot;User groups&quot; for more information of how to do this." flag="done"?>
-                    <para>Create a user group (for example &quot;Feedback message recipients&quot;) that
-            contains all the users who should receive feedback messages.</para>
-                    <?oxy_comment_end?>
-                </listitem>
-                <listitem>
-                    <para>Open the
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">System
-
-
-
-
-
-
-
-
-
-
-
-                            <?oxy_comment_start author="cecilia" timestamp="20161130T144441+0100" comment="System Settings app?"?>Settings
-
-
-
-
-
-
-
-
-
-
-                            <?oxy_comment_end?>
-                        </emphasis>
-            app and click
-
-
-
-
-
-
-
-
-
-
-                        <emphasis role="bold">General</emphasis> >
-                        <emphasis role="bold">Feedback
-              recipients</emphasis> and select the user group you created in the previous
-            step.
-
-
-
-
-
-
-
-
-
-
-                    </para>
-                </listitem>
-            </orderedlist>
         </section>
     </section>
 </chapter>
