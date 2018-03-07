@@ -5,15 +5,15 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook"
-    xml:id="configure_search">
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="configure_search">
     <title>Configure search</title>
     <para>Users can be given search organisation units, which makes it possible to search for
         tracked entity instances outside their data capture organisation units. </para>
-    <para>Searching can be done with or without a program. </para>
-    <para>To be able to search with a program, you will have to configure searching for a program </para>
-    <para>To be able to search without a program, you will have to configure searching for a tracked
-        entity type.</para>
+    <para>Searching can be done either in the context of a program, or in the context of a tracked
+        entity type. To be give users the option of searching in the context of a program, it is
+        necessary to configure which of the programs tracked entity attributes is searchable. To
+        give users the option of searching in the context of a tracked entity type, you will have to
+        configure which of the tracked entity type attributes is searchable.</para>
     <section>
         <title>Configure search for tracker program</title>
         <para>To be able to search with a program, you will have to make some of the program
@@ -52,22 +52,22 @@
                 </listitem>
             </itemizedlist>
         </para>
-        <para>There are two limits that can be set for a program search. These limits can be set by
-            selecting <emphasis role="bold">Program</emphasis></para>
+        <para>There are two limits that can be set for a program search, as part of the <emphasis
+                role="bold">Program</emphasis> configuration.</para>
         <para>
             <itemizedlist>
                 <listitem>
-                    <para>Minimum number of attributes required to search: This applies only to the
-                        non-unique search group. This makes it mandatory to fill out at least a
-                        number of attributes before a search is allowed to be executed. The default
-                        value is 1.</para>
+                    <para>Minimum number of attributes required to search: This property defines how
+                        many of the non-unique attributes that must be entered before a search can
+                        be performed.</para>
                 </listitem>
             </itemizedlist>
             <itemizedlist>
                 <listitem>
-                    <para>Maximum number of tracked entity instances to return: This applies only to
-                        the non-unique search group. If a too large number of tracked entity
-                        instances is found, the user must provide a more specific search.</para>
+                    <para>Maximum number of tracked entity instances to return: This property
+                        defines the maximum number of results a user will get in her search. If a
+                        too large number of tracked entity instances is found, the user must provide
+                        a more specific search.</para>
                 </listitem>
             </itemizedlist>
         </para>
@@ -113,17 +113,17 @@
         <para>
             <itemizedlist>
                 <listitem>
-                    <para>Minimum number of attributes required to search: This applies only to the
-                        non-unique search group. This makes it mandatory to fill out at least a
-                        number of attributes before a search is allowed to be executed. The default
-                        value is 1.</para>
+                    <para>Minimum number of attributes required to search: This property defines how
+                        many of the non-unique attributes that must be entered before a search can
+                        be performed.</para>
                 </listitem>
             </itemizedlist>
             <itemizedlist>
                 <listitem>
-                    <para>Maximum number of tracked entity instances to return: This applies only to
-                        the non-unique search group. If a too large number of tracked entity
-                        instances is found, the user must provide a more specific search.</para>
+                    <para>Maximum number of tracked entity instances to return: This property
+                        defines the maximum number of results a user will get in her search. If a
+                        too large number of tracked entity instances is found, the user must provide
+                        a more specific search.</para>
                 </listitem>
             </itemizedlist>
         </para>
@@ -148,7 +148,7 @@
                     <para>Select organisation units</para>
                 </listitem>
                 <listitem>
-                    <para>Click <emphasis role="bold">save</emphasis></para>
+                    <para>Click <emphasis role="bold">Save</emphasis></para>
                 </listitem>
             </orderedlist></para>
     </section>
