@@ -375,9 +375,14 @@ Even Send message to other users." flag="done"?>feedback
         organisation units. When you send a feedback message, it is routed to a particular user
         group. If you're a member of this user group, you've access to feedback handling tools. You
         can for example set the status of an incoming feedback to "Pending" while you're waiting for
-        information.</para>
-            <note>
-                <para>Messages and feedback messages are not sent to users' e-mail addresses, the messages
+        information. </para>
+      <para>In addition to the user-to-user and feedback messages, depending on your configuration
+        the system will also send you system-generated messages. These messages could be triggered
+        by different events, including system or background job failures and validation analysis
+        results. Feedback handling tools are also available for validation results and the priority
+        will be set to the importance of the validation rule violated. </para>
+      <note>
+        <para>Messages and feedback messages are not sent to users' e-mail addresses, the messages
           only appear within DHIS2.</para>
             </note>
         </section>
