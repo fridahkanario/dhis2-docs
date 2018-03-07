@@ -29,24 +29,25 @@
             <para>(Optional) Enter a <emphasis role="bold">Minimum number of attributes required to
                     search</emphasis>. This specifies the amount of attributes that need to be
                 filled out in order to be able to search for this <emphasis role="bold">tracked
-                    entity type</emphasis> in a <emphasis>global  search</emphasis>.  See <emphasis
-                    role="bold"
-                    ><?oxy_comment_start author="Lukas" timestamp="20180307T135042+0100" comment="Link"?>Configure
-                    Search<?oxy_comment_end?></emphasis> for more information.</para>
+                    entity type</emphasis> in a <emphasis>global search</emphasis>. See <link
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="../search/search.xml#configure_search">Configure Search</link> for more
+                information.</para>
         </listitem>
         <listitem>
             <para>(Optional) Enter a <emphasis role="bold">Maximum number of tracked entity
                     instances to return in search</emphasis>. This specifies the amount of tracked
                 entity instances that will be returned in a <emphasis>global search</emphasis>. See
-                    <emphasis role="bold"
-                    ><?oxy_comment_start author="Lukas" timestamp="20180307T135042+0100" comment="Link"?>Configure
-                    Search<?oxy_comment_end?></emphasis> for more information.</para>
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="../search/search.xml#configure_search">Configure Search</link> for
+                more information.</para>
         </listitem>
         <listitem>
             <para>(Optional) Add <emphasis role="bold">Tracked entity type attributes</emphasis>.
-                This is used to configure search, see <emphasis role="bold"
-                    ><?oxy_comment_start author="Lukas" timestamp="20180307T135042+0100" comment="Link"?>Configure
-                    Search<?oxy_comment_end?></emphasis> for more information.</para>
+                This is used to configure search, see <link
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="../search/search.xml#configure_search">Configure Search</link> for
+                more information.</para>
         </listitem>
         <listitem>
             <para>(Optional) Enter an <emphasis role="bold">Alternative name</emphasis> of the
@@ -57,4 +58,3 @@
         </listitem>
     </orderedlist>    
 </section>
-
