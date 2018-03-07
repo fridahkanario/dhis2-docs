@@ -20,6 +20,7 @@
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./pg_rule/toc_pg_rule.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./relationship_type/toc_reltype.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./tracked_entity/toc_te.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./search/search.xml" encoding="UTF-8"/>
     
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_clone.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../common/mtn_delete.xml" encoding="UTF-8"/>
