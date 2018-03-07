@@ -446,7 +446,9 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">V{due_date}</entry>
                     <entry align="left" valign="top">(date)</entry>
                     <entry align="left" valign="top">This variable will contain the current date
-                        whenever the rule is executed.</entry>
+                        when the rule is executed. Note: This means that the rule might produce
+                        different results at different times, even if nothing else has
+                        changed.</entry>
                 </row>
                 <row>
                     <entry align="left" valign="top">V{event_count}</entry>
