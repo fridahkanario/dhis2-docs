@@ -270,7 +270,7 @@ Does it search fin node + children or only children?"?>existing<?oxy_comment_end
           <mediaobject>
             <imageobject>
               <imagedata width="80%" align="center"
-                fileref="rresources/images/tracker_capture/tracker_capture_lists.png"/>
+                fileref="resources/images/tracker_capture/tracker_capture_lists.png"/>
             </imageobject>
           </mediaobject>
         </screenshot>
