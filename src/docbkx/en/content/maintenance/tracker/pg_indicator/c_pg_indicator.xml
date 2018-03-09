@@ -146,26 +146,61 @@
                         <para>Analytics period boundaries</para>
                     </entry>
                     <entry align="left" valign="top">
-                        <para>Defines the boundaries for the program indicator calculation. <itemizedlist>
+                        <para>Defines the boundaries for the program indicator calculation. The
+                            boundaries determine which events or enrollments gets included in
+                            aggregations, always relative to the aggregate reporting period start
+                            and end. When creating the program indicator, the default boundaries
+                            will get preselected based on analytics type. <itemizedlist>
+                                <listitem>
+                                    <para>For analytics type <emphasis>event</emphasis>, the default
+                                        boundaries will be configured to encapsulate any events with
+                                        an event date after the reporting period starts and before
+                                        the reporting period ends.</para>
+                                </listitem>
+                                <listitem>
+                                    <para>For analytics type <emphasis>enrollment</emphasis>, the
+                                        default boundaries will encapsulate all enrollments with an
+                                        enrollment date after the reporting date starts and before
+                                        the reporting period ends. In addition, the default
+                                        enrollment program indicator evaluates the newest event for
+                                        all program stages regardless of date. </para>
+                                </listitem>
+                            </itemizedlist> It is possible to change the upper and lower boundaries
+                            to include a longer or shorter period relative to the reporting period,
+                            or delete one of the boundaries - in effect returing all data before or
+                            after a certiain period. It is also possible to add more constraints,
+                            for example to make an enrollment program indicator only include event
+                            data up to a given point in time. <itemizedlist>
                                 <listitem>
                                     <para>Boundary target: Can be <emphasis>incident
                                         date</emphasis>, <emphasis>event date</emphasis> or
-                                            <emphasis>enrollment date</emphasis>.</para>
+                                            <emphasis>enrollment date</emphasis>. Designates what is
+                                        being constrained by the boundary.</para>
                                 </listitem>
                                 <listitem>
-                                    <para>Analytics period boundary type: Defines the type of
-                                        boundary for the period, e.g. if it should be before or
-                                        after the start or end of the reporting period.</para>
+                                    <para>Analytics period boundary type: Defines wether the
+                                        boundary is a end boundary - starting with "before...", or a
+                                        start boundary - "after...". Also defines whether the
+                                        boundary relates to the end of the aggregate reporting
+                                        period or the start of the aggregate reporting
+                                        period.</para>
                                 </listitem>
                                 <listitem>
-                                    <para>Offset period by amount: A positive or negative number by
-                                        which to offset the period.</para>
+                                    <para>Offset period by amount: In some cases, for example cohort
+                                        analytics, the boundary should be offset relative to the
+                                        aggregate reporting period when running pivots and reports.
+                                        The offset period by amount is used to move the current
+                                        boundary either back(negative) or forward(positive) in time.
+                                        The amount and period type together will determine how big
+                                        the offset will be. An example can be when making a simple
+                                        enrollment cohort porgram indicator for a 1 year cohort, it
+                                        might be enough to offset each boundary of the program
+                                        indicator with &quot;-1&quot; and &quot;Years&quot;</para>
                                 </listitem>
                                 <listitem>
-                                    <para>Period type: Can be any period, e.g.
+                                    <para>Period type: See above. Can be any period, e.g.
                                             <emphasis>Weekly</emphasis> or
-                                            <emphasis>Quarterly</emphasis>. The offset applies to
-                                        this.</para>
+                                            <emphasis>Quarterly</emphasis>.</para>
                                 </listitem>
                             </itemizedlist>
                         </para>
