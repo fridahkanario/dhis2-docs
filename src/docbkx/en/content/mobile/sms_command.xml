@@ -44,7 +44,8 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
         </mediaobject>
       </screenshot>
       </para>
-    <para>With KEY_VALUE_PARSER and J2ME_PARSER, the SMS command will have dataset because those are used for reporting data</para>
+    <para>With KEY_VALUE_PARSER and J2ME_PARSER, the SMS command will have dataset because those are used for reporting data. If data is reported for a Period which is already approved then SMS response will be sent back containing information about
+    approval status of the period.</para>
     <para>
         <screenshot>
         <mediaobject>
