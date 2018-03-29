@@ -142,6 +142,23 @@
                         <para/>
                     </entry>
                     <entry align="left" valign="top">
+                        <para>Visualize data in a better map</para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para><link
+                                xlink:href="https://docs.dhis2.org/master/en/user/html/using_maps.html"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">Using the Maps
+                            app</link></para>
+                    </entry>
+                    <entry align="left" valign="top">
+                        <para><emphasis role="bold">Maps</emphasis></para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">
+                        <para/>
+                    </entry>
+                    <entry align="left" valign="top">
                         <para>Analyze
                             <?oxy_comment_start author="cecilia" timestamp="20170509T133037+0200" comment="Both aggregate and tracker data?"?>data<?oxy_comment_end?>
                             in two types of reports.</para>

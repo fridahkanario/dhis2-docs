@@ -70,10 +70,10 @@
                             <thead>
                                 <row>
                                     <entry>
-                                        <para>Aggregate Function</para>
+                                        <para>Aggregate function</para>
                                     </entry>
                                     <entry>
-                                        <para>Meaning</para>
+                                        <para>Means</para>
                                     </entry>
                                 </row>
                             </thead>
@@ -147,7 +147,9 @@
                         numbers may be added by typing them. The
                         Days option inserts [days] into the expression which resolves to the
                         number of days in the period from which the data came.</para>
-                    <para>Examples:</para>
+                    <para>You can also use the following functions in your expression,
+                        either inside or containing aggregate functions,
+                        or independent of them:</para>
                     <informaltable frame="all">
                         <tgroup cols="2">
                             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
@@ -155,7 +157,63 @@
                             <thead>
                                 <row>
                                     <entry>
-                                        <para>Generator Expression</para>
+                                        <para>Function</para>
+                                    </entry>
+                                    <entry>
+                                        <para>Means</para>
+                                    </entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry align="left">
+                                        <para>IF(test, valueIfTrue, valueIfFalse)</para>
+                                    </entry>
+                                    <entry>
+                                        <para>Evaluates <emphasis role="bold">test</emphasis>
+                                            which is an expression that evaluates to a boolean value -- see
+                                            <emphasis role="bold">Boolean expression notes</emphasis>
+                                            below. If the test is <emphasis role="bold">true</emphasis>,
+                                            returns the <emphasis role="bold">valueIfTrue</emphasis>
+                                            expression. If it is <emphasis role="bold">false</emphasis>,
+                                            returns the <emphasis role="bold">valueIfFalse</emphasis>
+                                            expression.</para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left">
+                                        <para>ISNULL(item)</para>
+                                    </entry>
+                                    <entry>
+                                        <para>Returns the boolean value <emphasis role="bold">true</emphasis>
+                                            if the <emphasis role="bold">item</emphasis>
+                                            is null (missing), otherwise returns
+                                            <emphasis role="bold">false</emphasis>. The
+                                            <emphasis role="bold">item</emphasis> can
+                                            be any selected item from the right (data element,
+                                            program data element, etc.).
+                                        </para>
+                                    </entry>
+                                </row>
+                             </tbody>
+                        </tgroup>
+                    </informaltable>
+                    <para><emphasis role="bold">Boolean expression notes:</emphasis> A boolean
+                        expression must evaluate to <emphasis role="bold">true</emphasis>
+                        or <emphasis role="bold">false</emphasis>. The following operators may be used to compare two
+                        values resulting in a boolean expression: &lt;, >, !=, ==, >=, and &lt;=. The
+                        following operators may be used to combine two boolean expressions: &amp;&amp;
+                        (logical and), and || (logical or). The unary operator ! may be used to negate a
+                        boolean expression.</para>
+                    <para>Generator expression examples:</para>
+                    <informaltable frame="all">
+                        <tgroup cols="2">
+                            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                            <thead>
+                                <row>
+                                    <entry>
+                                        <para>Generator expression</para>
                                     </entry>
                                     <entry>
                                         <para>Means</para>
@@ -218,6 +276,15 @@
                                         </para>
                                     </entry>
                                 </row>
+                                <row>
+                                    <entry align="left">
+                                        <para>IF(ISNULL(#{T7OyqQpUpNd}), 10, 20)</para>
+                                    </entry>
+                                    <entry>
+                                        <para>If the data element T7OyqQpUpNd is null,
+                                            then 10, otherwise 20.</para>
+                                    </entry>
+                                </row>
                             </tbody>
                         </tgroup>
                     </informaltable>
@@ -238,14 +305,12 @@
                         data elements for aggregate data, or program data elements, attributes
                         or indicators. Organisation unit counts are not yet supported.
                         As with the generator function, you may click on (or type) any of the
-                        elements below the expression field: ( ) * / + - Days.</para>
-                     <para>The expression
-                        should evaluate to true or false. The following operators may be used to compare two
-                        values resulting in a boolean expression: &lt;, >, !=, ==, >=, and &lt;=. The
-                        following operators may be used to combine two boolean expressions: &amp;&amp;
-                        (logical and), and || (logical or). The unary operator ! may be used to negate a
-                        boolean expression.</para>
-                    <para>Examples:</para>
+                        elements below the expression field: ( ) * / + - Days.
+                        The functions IF() and ISNULL() as described above may also be used.</para>
+                    <para>The expression must evaluate to a boolean value of
+                        <emphasis role="bold">true</emphasis> or <emphasis role="bold">false</emphasis>.
+                         See <emphasis role="bold">Boolean expression notes</emphasis> above.</para>
+                    <para>Skip test expression examples:</para>
                     <informaltable frame="all">
                         <tgroup cols="2">
                             <colspec colname="c1" colnum="1" colwidth="1.0*"/>
@@ -253,7 +318,7 @@
                             <thead>
                                 <row>
                                     <entry>
-                                        <para>Skip test Expression</para>
+                                        <para>Skip test expression</para>
                                     </entry>
                                     <entry>
                                         <para>Means</para>

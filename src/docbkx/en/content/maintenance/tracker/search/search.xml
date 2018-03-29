@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section version="5.0"
+    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+    xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="configure_search">
+    <title>Configure search</title>
+    <para>Users can be given search organisation units, which makes it possible to search for
+        tracked entity instances outside their data capture organisation units. </para>
+    <para>Searching can be done either in the context of a program, or in the context of a tracked
+        entity type. To be give users the option of searching in the context of a program, it is
+        necessary to configure which of the programs tracked entity attributes is searchable. To
+        give users the option of searching in the context of a tracked entity type, you will have to
+        configure which of the tracked entity type attributes is searchable.</para>
+    <section>
+        <title>Configure search for tracker program</title>
+        <para>To be able to search with a program, you will have to make some of the program
+            attributes searchable. Unique program attributes will always be searchable.</para>
+        <para>
+            <orderedlist>
+                <listitem>
+                    <para>Open <emphasis role="bold">Program app</emphasis>
+                    </para>
+                </listitem>
+                <listitem>
+                    <para>Open or create a tracker program</para>
+                </listitem>
+                <listitem>
+                    <para>Go to <emphasis role="bold">Attributes</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para>If you have no attributes, add one</para>
+                </listitem>
+                <listitem>
+                    <para>Set the attribute searchable</para>
+                </listitem>
+            </orderedlist>
+        </para>
+        <para>Searchable program attributes will assigned to a search group.</para>
+        <para>
+            <itemizedlist>
+                <listitem>
+                    <para>Unique group. One group per unique program attribute. Unique attributes
+                        cannot be combined with other program attributes in a search. The result
+                        from the search can only be 0 or 1 tracked entity instance. </para>
+                </listitem>
+                <listitem>
+                    <para>Non-unique group. This group contains all non-unique program attributes
+                        and makes it possible to combine multiple attributes in a search.</para>
+                </listitem>
+            </itemizedlist>
+        </para>
+        <para>There are two limits that can be set for a program search, as part of the <emphasis
+                role="bold">Program</emphasis> configuration.</para>
+        <para>
+            <itemizedlist>
+                <listitem>
+                    <para>Minimum number of attributes required to search: This property defines how
+                        many of the non-unique attributes that must be entered before a search can
+                        be performed.</para>
+                </listitem>
+            </itemizedlist>
+            <itemizedlist>
+                <listitem>
+                    <para>Maximum number of tracked entity instances to return: This property
+                        defines the maximum number of results a user will get in her search. If a
+                        too large number of tracked entity instances is found, the user must provide
+                        a more specific search.</para>
+                </listitem>
+            </itemizedlist>
+        </para>
+    </section>
+    <section>
+        <title>Configure search for tracked entity type</title>
+        <note>
+            <para>TET = Tracked entity type</para>
+        </note>
+        <para>To be able to search without a program, you will have to make some of the TET
+            attributes searchable. Unique TET attributes will always be searchable.</para>
+        <para>
+            <orderedlist>
+                <listitem>
+                    <para>Open <emphasis role="bold">Tracked entity type app</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para>Open a Tracked entity type</para>
+                </listitem>
+                <listitem>
+                    <para>If the TET has no attributes, add one</para>
+                </listitem>
+                <listitem>
+                    <para>Set the attribute searchable</para>
+                </listitem>
+            </orderedlist>
+        </para>
+        <para>Searchable TET attributes will assigned to a search group.</para>
+        <para>
+            <itemizedlist>
+                <listitem>
+                    <para>Unique group. One group per unique TET attribute. Unique attributes cannot
+                        be combined with other TET attributes in a search. The result from the
+                        search can only be 0 or 1 tracked entity instance. </para>
+                </listitem>
+                <listitem>
+                    <para>Non-unique group. This group contains all non-unique TET attributes and
+                        makes it possible to combine multiple attributes in a search.</para>
+                </listitem>
+            </itemizedlist>
+        </para>
+        <para>There are two limits that can be set for a TET search</para>
+        <para>
+            <itemizedlist>
+                <listitem>
+                    <para>Minimum number of attributes required to search: This property defines how
+                        many of the non-unique attributes that must be entered before a search can
+                        be performed.</para>
+                </listitem>
+            </itemizedlist>
+            <itemizedlist>
+                <listitem>
+                    <para>Maximum number of tracked entity instances to return: This property
+                        defines the maximum number of results a user will get in her search. If a
+                        too large number of tracked entity instances is found, the user must provide
+                        a more specific search.</para>
+                </listitem>
+            </itemizedlist>
+        </para>
+    </section>
+    <section>
+        <title>Configure search organisation units for a user</title>
+        <para>To be able to search in other organisation units than the users data capture
+            organisation units, the user must be assigned with search organisation units. Giving a
+            user a search organisation unit will also give it access to search in all children of
+            that organisation unit.<orderedlist>
+                <listitem>
+                    <para>Open <emphasis role="bold">Users app</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para>Click on a user</para>
+                </listitem>
+                <listitem>
+                    <para>Open <emphasis role="bold">Assign search organisation
+                        units</emphasis></para>
+                </listitem>
+                <listitem>
+                    <para>Select organisation units</para>
+                </listitem>
+                <listitem>
+                    <para>Click <emphasis role="bold">Save</emphasis></para>
+                </listitem>
+            </orderedlist></para>
+    </section>
+</section>

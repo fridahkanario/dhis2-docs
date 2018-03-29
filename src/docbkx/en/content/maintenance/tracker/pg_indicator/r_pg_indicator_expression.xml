@@ -5,7 +5,8 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
     xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
-    xmlns:db="http://docbook.org/ns/docbook" xml:id="program_indicator_functions_variables_operators">
+    xmlns:db="http://docbook.org/ns/docbook"
+    xml:id="program_indicator_functions_variables_operators">
     <title>Reference information: Functions, variables and operators to use in program indicator
         expressions and filters</title>
     <para>
@@ -60,6 +61,19 @@
                                 used in filters to distinguish between the number 0 and no value,
                                 and to distinguish between exlicit "No" and no selection for a
                                 Yes/No field.</para>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry align="left" valign="top">
+                            <para>d2:minutesBetween</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>(datetime, datetime)</para>
+                        </entry>
+                        <entry align="left" valign="top">
+                            <para>Produces the number of minutes between two data
+                                elements/attributes of type &quot;date and time&quot;. The static
+                                datetime format is &apos;yyyy-MM-dd hh:mm&apos;.</para>
                         </entry>
                     </row>
                     <row>

@@ -1,16 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <chapter version="5.0"
-         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
-          xmlns="http://docbook.org/ns/docbook"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xs="http://www.w3.org/2001/XMLSchema"
-         xmlns:xl="http://www.w3.org/1999/xlink"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-         xmlns:svg="http://www.w3.org/2000/svg"
-         xmlns:mth="http://www.w3.org/1998/Math/MathML"
-         xmlns:db="http://docbook.org/ns/docbook"
-         xml:id="sharing">
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="sharing">
   <title>About sharing of
     <?oxy_comment_start author="cecilia" timestamp="20170509T142346+0200" comment="Section requires complete review.
 2.27: new sharing dialog in Mtn app.
@@ -19,25 +14,23 @@ Future releases: Legacy sharing dialog will be replaced with new in the analytic
   <para>This chapter discusses the sharing of entities feature in DHIS2.</para>
   <section>
     <title>Sharing of objects</title>
-    <para>Many objects in DHIS2, like reports, charts, maps and indicators, can be
-      shared. Sharing means making an object, like a report, available for reading or modification
-      to a group of users or to everyone. For instance for reports, the sharing dialog can be opened
-      by clicking on the &quot;Sharing settings&quot; button next to each report in the list. Implementers can use this feature to allow access to certain objects to only certain user groups. Users can use the feature to decide who they would like to share objects (such as pivot tables, charts, dashboards, etc) with. </para>
-    <para>If sharing is supported for a particular class of objects, a dialog will be available called &quot;Sharing settings&quot;, usually available by clicking on the name of the object or in the analytics tools, through an icon (Share with other people). Once you have accessed the sharing settings for the object you wish to share, a dialog similar to the one below will be shown. </para>
+    <para>Many objects in DHIS2, like reports, charts, maps and indicators, can be shared. DHIS
+      supports sharing of metadata or sharing of data. Sharing of metadata means making an object,
+      like a report, available for reading or modification to a group of users or to everyone.
+      Sharing of data means making the actual data captured available to others, and controlling who
+      can capture that kind of data. For instance for reports, the sharing dialog can be opened by
+      clicking on the &quot;Sharing settings&quot; button next to each report in the list.
+      Implementers can use this feature to allow access to certain objects to only certain user
+      groups. Users can use the feature to decide who they would like to share objects (such as
+      pivot tables, charts, dashboards, etc) with. </para>
+    <para>If sharing is supported for a particular class of objects, a dialog will be available
+      called &quot;Sharing settings&quot;, usually available by clicking on the name of the object
+      or in the analytics tools, through an icon (Share with other people). Once you have accessed
+      the sharing settings for the object you wish to share, a dialog similar to the one below will
+      be shown. </para>
     <para>
       <screenshot>
-        <title>The sharing dialog</title>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="40%" fileref="resources/images/sharing/sharing-dialog.png"
-              format="PNG" align="center"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-    </para>
-    <para>
-      <screenshot>
-        <title>The sharing dialog in the Maintenance app</title>
+        <title>The new sharing dialog</title>
         <mediaobject>
           <imageobject>
             <imagedata width="40%" fileref="resources/images/maintainence/mtn_sharing_dialog.png"
@@ -46,59 +39,68 @@ Future releases: Legacy sharing dialog will be replaced with new in the analytic
         </mediaobject>
       </screenshot>
     </para>
-    <para>You can share your report with everyone or with a number of user groups. &quot;External access&quot; can be enabled to allow this resource to be shared with everyone, including users which cannot logon to DHIS2. This is useful for sharing public resources with external systems. Note, that if objects are shared externally, then they are visible to anyone who has access to the URL which provides the resource without any login credentials. </para>
-    <para>Next to &quot;Public
-      access&quot; you can choose your public access option: &quot;None&quot;, &quot;Can view&quot; or &quot;Can edit and view&quot;.
- Public access refers to users which are logged into the system.       Edit also implies deleting the report. </para>
-    <para>To share with a group, simply start typing the name of
-      the group and the &quot;Search for user groups&quot; input field and select your desired group. Click on
-      the &quot;+&quot; icon next to the input field to share with that group. For each group you can set an
-      access option, similar to public access.</para>
+    <para>You can share your report with everyone or with a number of user groups. &quot;External
+      access&quot; can be enabled to allow this resource to be shared with everyone, including users
+      which cannot logon to DHIS2. This is useful for sharing public resources with external
+      systems. Note, that if objects are shared externally, then they are visible to anyone who has
+      access to the URL which provides the resource without any login credentials. </para>
+    <para>Next to &quot;Public access&quot; you can choose your public access option under
+      &quot;METADATA&quot;: &quot;No access&quot;, &quot;Can view only&quot; or &quot;Can edit and
+      view&quot;, and under &quot;DATA&quot;: &quot;No access&quot;, &quot;Can view data&quot;,
+      &quot;Can capture data&quot;. Public access refers to users which are logged into the system.
+      Edit also implies deleting the report. </para>
+    <para>To share with a group, simply start typing the name of the group and the &quot;Search for
+      user groups&quot; input field and select your desired group. Click on the &quot;+&quot; icon
+      next to the input field to share with that group. For each group you can set an access option,
+      similar to public access.</para>
     <para>Sharing with a user group implies that all users in that group will get access to the
-      shared object. To create a user group you can go to the dashboard module and click on &quot;Groups&quot;. This will lead you to the list of groups where you can click &quot;Add new&quot; in
-      the top right corner. Creating user groups is open for everyone from the dashboard
-      module.</para>
+      shared object. To create a user group you can go to the dashboard module and click on
+      &quot;Groups&quot;. This will lead you to the list of groups where you can click &quot;Add
+      new&quot; in the top right corner. Creating user groups is open for everyone from the
+      dashboard module.</para>
   </section>
   <section>
-    <title>Sharing and access control</title>
-    <para>The objects which support sharing are indicator, indicator group, indicator group set,
-      data dictionary, data set, program, standard report, resource, report table, chart, map and
-      user group. Out of those objects, report table, chart, map and user group are open for
+    <title>Metadata sharing and access control</title>
+    <para>The objects which support metadata sharing are indicator, indicator group, indicator group
+      set, data dictionary, data set, program, standard report, resource, report table, chart, map
+      and user group. Out of those objects, report table, chart, map and user group are open for
       everyone to create privately. Private means that the objects are available only to yourself or
       potentially to a number of user groups if you choose to share the object. These objects are
-      referred to as &quot;open&quot; objects and can be created by all users. The remaining objects require
-      that your user account has the authority to create them. These objects are referred to as
-      &quot;non-open&quot; objects.</para>
+      referred to as &quot;open&quot; objects and can be created by all users. The remaining objects
+      require that your user account has the authority to create them. These objects are referred to
+      as &quot;non-open&quot; objects.</para>
     <para>A user can be granted the authority to create publicly accessible objects or privately
       accessible objects. In order to create a publicly accessible object (available for viewing or
       editing by anyone) your user account must have the authority to do so. As an example, to
-      create a publicly accessible chart, your user must have the &quot;Create public chart&quot; authority
-      granted. The authority to create private objects applies only to non-open objects. For
-      example, to allow a user to create indicators which will only be accessible to that user and
-      not to everyone, the user can be issued with the &quot;Create private indicator&quot; authority.</para>
+      create a publicly accessible chart, your user must have the &quot;Create public chart&quot;
+      authority granted. The authority to create private objects applies only to non-open objects.
+      For example, to allow a user to create indicators which will only be accessible to that user
+      and not to everyone, the user can be issued with the &quot;Create private indicator&quot;
+      authority.</para>
     <para>Sharing a non-open object with another person and let her edit the object requires that
-      the person&apos;s user account has the authority for updating that type of objects granted. For
-      instance, if you want to let another person edit your indicator, that person&apos;s user account
-      must have the &quot;Update indicator&quot; authority granted. This does not apply for open
-      objects.</para>
+      the person&apos;s user account has the authority for updating that type of objects granted.
+      For instance, if you want to let another person edit your indicator, that person&apos;s user
+      account must have the &quot;Update indicator&quot; authority granted. This does not apply for
+      open objects.</para>
     <para>When you create a new object it will automatically become viewable for everyone if your
       user account has the authority to create public objects. As an example, if you create a
-      standard report and you have the &quot;Create public standard report&quot; authority granted, the report
-      will become viewable for everyone. If you do not have that authority granted the report will
-      be viewable only to yourself. After you have created an object, you may navigate to the
-      &quot;Sharing settings&quot; dialog and set your desired access control level.</para>
+      standard report and you have the &quot;Create public standard report&quot; authority granted,
+      the report will become viewable for everyone. If you do not have that authority granted the
+      report will be viewable only to yourself. After you have created an object, you may navigate
+      to the &quot;Sharing settings&quot; dialog and set your desired access control level.</para>
     <para>If you need a user account which is able to view absolutely all objects you can create a
-      user role with the &quot;ALL&quot; authority and assign a user to that role. If you need to switch
-      between a &quot;complete&quot; view of objects and a &quot;personal&quot; view of objects it is recommended to
-      create two user accounts, one assigned with the &quot;ALL&quot; authority and one without.</para>
+      user role with the &quot;ALL&quot; authority and assign a user to that role. If you need to
+      switch between a &quot;complete&quot; view of objects and a &quot;personal&quot; view of
+      objects it is recommended to create two user accounts, one assigned with the &quot;ALL&quot;
+      authority and one without.</para>
   </section>
   <section>
-    <title>Sharing applied</title>
-    <para>The sharing functionality is useful in several scenarios. One use-case is setting up a
-      DHIS2 instance for a global organisation with operations in multiple countries. Typically the
-      organisation has a set of global data sets, indicators and reports which should apply to all
-      countries, while all countries will have the need for country-specific data sets, indicators
-      and reports. In this scenario the following approach could work: </para>
+    <title>Metadata sharing applied</title>
+    <para>The metadata sharing functionality is useful in several scenarios. One use-case is setting
+      up a DHIS2 instance for a global organisation with operations in multiple countries. Typically
+      the organisation has a set of global data sets, indicators and reports which should apply to
+      all countries, while all countries will have the need for country-specific data sets,
+      indicators and reports. In this scenario the following approach could work: </para>
     <itemizedlist>
       <listitem>
         <para>Set up one user group for global personnel.</para>
@@ -132,5 +134,293 @@ Future releases: Legacy sharing dialog will be replaced with new in the analytic
       the reports will not be visible to other programs and users. This is beneficial because the
       reports are kept internal to the program and because the visible list of reports of other
       users are kept shorter and more relevant.</para>
+  </section>
+  <section>
+    <title>Data sharing and access control</title>
+    <para>The objects which support data sharing are data set, tracked entity type, program and
+      program stage. The purpose of data sharing is to control which users can capture data, and
+      which users can see the data captured.</para>
+    <section>
+      <title>Data sharing for event based programs</title>
+      <para>Applies to the object types of tracked entity type, program and program stage. When
+        working with single event programs in event capture, a user will have to possess the
+        &quot;DATA:Can view data&quot; sharing level to see the program and its data. Without this
+        sharing level, the program and its data will not be visible to the user. When working with
+        tracker programs in tracker capture, the user will need to have &quot;DATA:Can view
+        data&quot; to both the tracked entity type and program. In case of a tracker program, the
+        user will also need &quot;DATA:Can view data&quot; on each program stage individually to be
+        able to see the data within the program. To capture data the user needs the &quot;DATA:Can
+        capture data&quot; sharing level. <note>
+          <para>To see and capture data for a program, a data capture user also needs to report for
+            an organisaction unit to where the program has been assigned.</para>
+        </note>
+      </para>
+      <table frame="all">
+        <title>Data sharing for tracker programs</title>
+        <tgroup cols="4">
+          <colspec colname="c1" colnum="1" colwidth="2*"/>
+          <colspec colname="c2" colnum="2" colwidth="4*"/>
+          <colspec colname="c3" colnum="3" colwidth="4*"/>
+          <colspec colname="c4" colnum="4" colwidth="3*"/>
+          <thead>
+            <row>
+              <entry>Object type</entry>
+              <entry>Can view data</entry>
+              <entry>Can capture data</entry>
+              <entry>Comment</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <para><emphasis role="bold">Tracked entity type</emphasis></para>
+              </entry>
+              <entry>
+                <para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Search for tracked entities with this tracked entity type.</para>
+                    </listitem>
+                    <listitem>
+                      <para>See tracked entity type attribute values for this tracked entity
+                        type.</para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </entry>
+              <entry>
+                <para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Edit visible tracked entity attributes for tracked entity instances of
+                        this type.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Register/create new tracked entity instances of this type.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Delete tracked entity instances of this type.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Deactivate/reactivate tracked entity instances of this type.</para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </entry>
+              <entry>
+                <para/>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para><emphasis role="bold">Program</emphasis></para>
+              </entry>
+              <entry>
+                <para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Search for tracked entities within this program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>See tracked entity attributes specific to this program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>See enrollment details for the program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>See notes for the enrollment.</para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </entry>
+              <entry>
+                <para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Enroll into the program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Edit enrollment details for the program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Complete/reopen enrollments into the program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Add notes for the program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Edit relationships for the program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Send message to tracked entity instance.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Delete enrollments in the program.</para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </entry>
+              <entry>
+                <para>Both &quot;Can view data&quot; and &quot;Can capture data&quot; also requires
+                  the user to have &quot;Can view data&quot; for the tracked entity type.</para>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                <para><emphasis role="bold">Program stage</emphasis></para>
+              </entry>
+              <entry>
+                <para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>See the program stage and its events and data within an
+                        enrollment.</para>
+                    </listitem>
+                    <listitem>
+                      <para>See the program stage notes.</para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </entry>
+              <entry>
+                <para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Add/schedule/refer a new event within the program stage.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Complete/reopen the events within the program stage.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Edit tracked entity data values within events in the program
+                        stage.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Add notes for events in the program stage.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Delete events in the program stage.</para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </entry>
+              <entry>
+                <para>Both &quot;Can view data&quot; and &quot;Can capture data&quot; also requires
+                  the user to have &quot;Can view data&quot; for the program and the tracked entity
+                  type.</para>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="all">
+        <title>Data sharing for single event programs</title>
+        <tgroup cols="4">
+          <colspec colname="c1" colnum="1" colwidth="2*"/>
+          <colspec colname="c2" colnum="2" colwidth="4*"/>
+          <colspec colname="c3" colnum="3" colwidth="4*"/>
+          <colspec colname="c4" colnum="4" colwidth="3*"/>
+          <thead>
+            <row>
+              <entry>Object type</entry>
+              <entry>Can view data</entry>
+              <entry>Can capture data</entry>
+              <entry>Comment</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <para><emphasis role="bold">Program</emphasis></para>
+              </entry>
+              <entry>
+                <para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>See list of events within the program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>See tracked entity data values for events in the program.</para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </entry>
+              <entry>
+                <para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Add new events into the program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Edit data for events in the program.</para>
+                    </listitem>
+                    <listitem>
+                      <para>Delete events in the program.</para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </entry>
+              <entry>
+                <para/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Data sharing for data sets</title>
+      <para>Applies to the object types of data set. When working with data sets, the user will need
+        to have &quot;DATA:Can capture data&quot; to both see and capture data in the data set. <note>
+          <para>To see and capture data for a data set, a data capture user also needs to report for
+            an organisaction unit to where the data set has been assigned.</para>
+        </note>
+      </para>
+      <table frame="all">
+        <title>Data sharing for data sets</title>
+        <tgroup cols="4">
+          <colspec colname="c1" colnum="1" colwidth="2*"/>
+          <colspec colname="c2" colnum="2" colwidth="4*"/>
+          <colspec colname="c3" colnum="3" colwidth="4*"/>
+          <colspec colname="c4" colnum="4" colwidth="3*"/>
+          <thead>
+            <row>
+              <entry>Object type</entry>
+              <entry>Can view data</entry>
+              <entry>Can capture data</entry>
+              <entry>Comment</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <para><emphasis role="bold">Data set</emphasis></para>
+              </entry>
+              <entry>
+                <para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>See data for the data set.</para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </entry>
+              <entry>
+                <para>
+                  <itemizedlist>
+                    <listitem>
+                      <para>Add/edit data sets.</para>
+                    </listitem>
+                  </itemizedlist>
+                </para>
+              </entry>
+              <entry>
+                <para/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
   </section>
 </chapter>
