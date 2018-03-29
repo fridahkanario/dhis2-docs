@@ -848,6 +848,18 @@ LAST_FINANCIAL_YEAR, LAST_5_FINANCIAL_YEARS</screen>
               <entry>Collection is empty</entry>
             </row>
             <row>
+              <entry>token</entry>
+              <entry> string </entry>
+              <entry>true</entry>
+              <entry>Match on multiple tokens in search property</entry>
+            </row>
+            <row>
+              <entry>!token</entry>
+              <entry> string </entry>
+              <entry>true</entry>
+              <entry>Not match on multiple tokens in search property</entry>
+            </row>
+            <row>
               <entry>in</entry>
               <entry> string | boolean | integer | float | date</entry>
               <entry>true</entry>
@@ -1531,6 +1543,390 @@ http://server/api/26/constants/ID</screen></para>
     <para>We do not recommended enabling these options on a empty database if you intend to import a
       lot of metadata, as it slows down the import and the audit might not be that useful if you are
       bootstrapping a new system.</para>
+    <section>
+      <title>Metadata Audit API</title>
+      <para>If you have enabled persisted metadata audits on your DHIS2 instance we also expose a
+        web-api for looking at and filtering the audit log, this requires superuser privilege. The
+        endpoint is available on <emphasis>/api/29/metadataAudits</emphasis> and support the
+        following query parameters:<table frame="void">
+          <caption>Metadata audit API query parameters</caption>
+          <col width="22%"/>
+          <col width="27%"/>
+          <col width="51%"/>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Values</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>uid</td>
+              <td/>
+              <td>Object uid to query by (can be more than one)</td>
+            </tr>
+            <tr>
+              <td>code</td>
+              <td/>
+              <td>Object code to query by (can be more than one)</td>
+            </tr>
+            <tr>
+              <td>klass</td>
+              <td/>
+              <td>Object class to query by (can be more than one), please note that the full java
+                package name is required here (to avoid name collisions)</td>
+            </tr>
+            <tr>
+              <td>createdAt</td>
+              <td/>
+              <td>Query by creation date</td>
+            </tr>
+            <tr>
+              <td>createdBy</td>
+              <td/>
+              <td>Query by who made the change (username)</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>CREATE, UPDATE, DELETE</td>
+              <td>Query by audit type</td>
+            </tr>
+          </tbody>
+        </table></para>
+    </section>
+  </section>
+  <section>
+    <title>Render type (Experimental)</title>
+    <para>Some metadata types have a property named <emphasis>renderType</emphasis>. The render type
+      property is a map between a <emphasis>device</emphasis> and a
+        <emphasis>renderingType</emphasis>. Applications can use this information as a hint on how
+      the object should be rendered on a specific device. For example, a mobile device might want to
+      render a data element differently than a desktop computer.</para>
+    <para>There is currently two different kinds of renderingTypes available:<orderedlist>
+        <listitem>
+          <para>Value type rendering</para>
+        </listitem>
+        <listitem>
+          <para>Program stage section rendering</para>
+        </listitem>
+      </orderedlist></para>
+    <para>There is also 2 device types available:<orderedlist>
+        <listitem>
+          <para>MOBILE</para>
+        </listitem>
+        <listitem>
+          <para>DESKTOP</para>
+        </listitem>
+      </orderedlist></para>
+    <para>The following table lists the metadata and rendering types available. The value type
+      rendering has addition constraints based on the metadata configuration, which will be shown in
+      a second table.<table frame="all">
+        <title>Metadata and RenderingType overview</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Metadata type</entry>
+              <entry>Available RenderingTypes</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Program Stage Section</entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>LISTING (default)</para>
+                  </listitem>
+                  <listitem>
+                    <para>SEQUENTIAL</para>
+                  </listitem>
+                  <listitem>
+                    <para>MATRIX</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>Data element</entry>
+              <entry morerows="1">
+                <itemizedlist>
+                  <listitem>
+                    <para>DEFAULT</para>
+                  </listitem>
+                  <listitem>
+                    <para>DROPDOWN</para>
+                  </listitem>
+                  <listitem>
+                    <para>VERTICAL_RADIOBUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>HORIZONTAL_RADIOBUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>VERTICAL_CHECKBOXES</para>
+                  </listitem>
+                  <listitem>
+                    <para>HORIZONTAL_CHECKBOXES</para>
+                  </listitem>
+                  <listitem>
+                    <para>SHARED_HEADER_RADIOBUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>ICONS_AS_BUTTONS</para>
+                  </listitem>
+                  <listitem>
+                    <para>SPINNER</para>
+                  </listitem>
+                  <listitem>
+                    <para>ICON</para>
+                  </listitem>
+                  <listitem>
+                    <para>TOGGLE</para>
+                  </listitem>
+                  <listitem>
+                    <para>VALUE</para>
+                  </listitem>
+                  <listitem>
+                    <para>SLIDER</para>
+                  </listitem>
+                  <listitem>
+                    <para>LINEAR_SCALE</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>Tracked entity attribute</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>Since handling the default rendering of data elements and tracked entity attributes are
+      depending on the value type of the object, there is also a DEFAULT type to tell the client it
+      should be handled as normal. Program Stage Section are LISTING as default.<table frame="all">
+        <title>RenderingTypes allowed based on value types</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Value type</entry>
+              <entry>Is object an optionset?</entry>
+              <entry>RenderingTypes allowed</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>TRUE_ONLY</entry>
+              <entry>No</entry>
+              <entry morerows="1">DEFAULT, VERTICAL_RADIOBUTTONS, HORIZONTAL_RADIOBUTTONS,
+                VERTICAL_CHECKBOXES, HORIZONTAL_CHECKBOXES, TOGGLE </entry>
+            </row>
+            <row>
+              <entry>BOOLEAN</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>-</entry>
+              <entry>Yes</entry>
+              <entry>DEFAULT, DROPDOWN, VERTICAL_RADIOBUTTONS, HORIZONTAL_RADIOBUTTONS,
+                VERTICAL_CHECKBOXES, HORIZONTAL_CHECKBOXES, SHARED_HEADER_RADIOBUTTONS,
+                ICONS_AS_BUTTONS, SPINNER, ICON</entry>
+            </row>
+            <row>
+              <entry>INTEGER</entry>
+              <entry>No</entry>
+              <entry morerows="6">DEFAULT, VALUE, SLIDER, LINEAR_SCALE, SPINNER</entry>
+            </row>
+            <row>
+              <entry>INTEGER_POSITIVE</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>INTEGER_NEGATIVE</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>INTEGER_ZERO_OR_POSITIVE</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>NUMBER</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>UNIT_INTERVAL</entry>
+              <entry>No</entry>
+            </row>
+            <row>
+              <entry>PERCENTAGE</entry>
+              <entry>No</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>A complete reference of the previous table can also be retrieved using the following
+      endpoint:<screen>GET /api/staticConfiguration/renderingOptions</screen></para>
+    <para>Value type rendering also has some additional properties that can be set, which is usually
+      needed when rendering some of the specific types:<table frame="all">
+        <title>renderType object properties</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Property</entry>
+              <entry>Description</entry>
+              <entry>Type</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>type</entry>
+              <entry>The RenderingType of the object, as seen in the first table. This property is
+                the same for both value type and program stage section, but is the only property
+                available for program stage section. </entry>
+              <entry>Enum (See list in the Metadata and Rendering Type table)</entry>
+            </row>
+            <row>
+              <entry>min</entry>
+              <entry>Only for value type rendering. Represents the minimum value this field can
+                have.</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>max</entry>
+              <entry>Only for value type rendering. Represents the maximum value this field can
+                have.</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>step</entry>
+              <entry>Only for value type rendering. Represents the size of the steps the value
+                should increase, for example for SLIDER og LINEAR_SCALE</entry>
+              <entry>Integer</entry>
+            </row>
+            <row>
+              <entry>decimalPoints</entry>
+              <entry>Only for value type rendering. Represents the number of decimal points the
+                value should use.</entry>
+              <entry>Integer</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para><emphasis>renderingType</emphasis> can be set when creating or updating the metadata
+      listed in the first table. An example payload for the renderingType looks like
+      this:<screen>Program Stage Section:
+{
+  ...
+  "renderingType": {
+    "type": "MATRIX"
+  }
+  ...
+}
+
+Value type (Data Element, Tracked Entity Attribute)
+{
+  ...
+  "renderingType": {
+    "type": "SLIDER",
+    "min": 0,
+    "max": 1000,
+    "step": 50,
+    "decimalPoints": 0
+  }
+  ...
+}</screen></para>
+  </section>
+  <section>
+    <title>Object Style (Experimental)</title>
+    <para>Most metadata have a property names "style". This property can be used by clients to
+      represent the object in a certain way. The properties currently supported by style is as
+        follows:<table frame="all">
+        <title>Style properties</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Property</entry>
+              <entry>Description</entry>
+              <entry>Type</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>color</entry>
+              <entry>A color, represented by a hexadecimal.</entry>
+              <entry>String (#000000)</entry>
+            </row>
+            <row>
+              <entry>icon</entry>
+              <entry>An icon, represented by a icon-name.</entry>
+              <entry>String</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>Currently there is no official list or support for icon-libraries, so this is currently up
+      to the client to provide. The following list shows all objects that supports style:<itemizedlist>
+        <listitem>
+          <para>Data element</para>
+        </listitem>
+        <listitem>
+          <para>Data element category option</para>
+        </listitem>
+        <listitem>
+          <para>Data set</para>
+        </listitem>
+        <listitem>
+          <para>Indicator</para>
+        </listitem>
+        <listitem>
+          <para>Option</para>
+        </listitem>
+        <listitem>
+          <para>Program</para>
+        </listitem>
+        <listitem>
+          <para>Program Indicator</para>
+        </listitem>
+        <listitem>
+          <para>Program Section</para>
+        </listitem>
+        <listitem>
+          <para>Program Stage</para>
+        </listitem>
+        <listitem>
+          <para>Program Stage Section</para>
+        </listitem>
+        <listitem>
+          <para>Relationship (Tracker)</para>
+        </listitem>
+        <listitem>
+          <para>Tracked Entity Attribute</para>
+        </listitem>
+        <listitem>
+          <para>Tracked Entity Type</para>
+        </listitem>
+      </itemizedlist></para>
+    <para>When creating or updating any of these objects, you can include the following payload to
+      change the
+      style:<screen>{
+  ...
+  "style": {
+    "color": "#ffffff",
+    "icon": "my-beautiful-icon"
+  }
+  ...
+}</screen></para>
   </section>
   <section xml:id="webapi_amqp_rabbitmq_integration">
     <title>AMQP/RabbitMQ integration</title>
@@ -3917,6 +4313,22 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
                 <entry>true | false</entry>
                 <entry>Indicates whether to send notifications for completed events.</entry>
               </row>
+              <row>
+                <entry/>
+                <entry/>
+                <entry/>
+              </row>
+              <row>
+                <entry>importReportMode</entry>
+                <entry>FULL, ERRORS, DEBUG</entry>
+                <entry>Sets the <emphasis role="bold">ImportReport</emphasis> mode, controls how
+                  much is reported back after the import is done. <emphasis role="bold"
+                    >ERRORS</emphasis> only includes <emphasis role="italic"
+                    >ObjectReports</emphasis> for object which has errors. <emphasis role="bold"
+                    >FULL</emphasis> returns an <emphasis role="italic">ObjectReport</emphasis> for
+                  all objects imported, and <emphasis role="bold">DEBUG</emphasis> returns the same
+                  plus a name for the object (if available).</entry>
+              </row>
             </tbody>
           </tgroup>
         </table>
@@ -4585,6 +4997,15 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                         </listitem>
                       </itemizedlist>
                     </listitem>
+                  <listitem>
+                    <para><emphasis role="bold">SENDMESSAGE</emphasis> - Send message at completion of event/enrollment</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><emphasis role="italic">messageTemplate</emphasis> - if defined, this
+                          template will be delivered either as SMS or EMAIL depending upon DeliveryChannel value in message template.</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
                   </itemizedlist></entry>
                 <entry>Compulsory</entry>
               </row>
@@ -4792,6 +5213,54 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     <screen>curl -d @form.html &quot;localhost/api/26/dataSets/BfMAe6Itzgt/form&quot; 
   -H &quot;Content-Type:text/html&quot; -u admin:district -X PUT -v</screen>
   </section>
+  <section>
+    <title>Documents</title>
+    <para>References to files can be stored with the document resource. <table frame="all">
+        <title>Document fields</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>Field name</entry>
+              <entry>Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>name</entry>
+              <entry>unique name of document</entry>
+            </row>
+            <row>
+              <entry>external</entry>
+              <entry>flag identifying the location of the document. TRUE for external files, FALSE
+                for internal ones</entry>
+            </row>
+            <row>
+              <entry>url</entry>
+              <entry>the location of the file. URL for external files. File resource id for internal
+                ones (see <xref xmlns:xlink="http://www.w3.org/1999/xlink"
+                  linkend="webapi_file_resources"/>)</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></para>
+    <para>A GET request to the documents endpoint will return all
+      documents:<screen>/api/29/documents</screen></para>
+    <para>A POST request to the doucuments endpoint will create a new
+      document:<screen>curl -X POST -d @document.json -H "Content-type: allication/json"
+  http://dhis.domain/api/29/documents</screen></para>
+    <screen>{
+  "name": "dhis home",
+  "external": true,
+  "url": "https://www.dhis2.org"
+}</screen>
+    <para>A GET request with the id of a document appended will return information about the
+      document. A PUT request to the same endpoint will update the fields of the
+      document:<screen>/api/29/documents/&lt;documentId></screen></para>
+    <para>Appending <emphasis>/data</emphasis> to the GET request will return the actual file
+      content of the document:<screen>/api/29/documents/&lt;documentId>/data</screen></para>
+  </section>
   <section xml:id="webapi_validation">
     <title>Validation</title>
     <para>To generate a data validation summary you can interact with the validation resource. The
@@ -4802,17 +5271,11 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       performing validation: Custom validation and Scheduled validation.</para>
     <para>Custom validation can be initiated through the "Data Quality" app, where you can configure
       the periods, validation rule groups and organisation units to be included in the analysis and
-      if you want to send out notifications for the results found. The result of this analysis will
-      be a list of violations found using your criteria.</para>
-    <para>The scheduled validation on the other hand, is an async task you can chose to scheduled to
-      run once a day, or you can trigger it using the resource table endpoint as described in  <link
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        xlink:href="https://docs.dhis2.org/master/en/developer/html/dhis2_developer_manual_full.html#webapi_generating_resource_analytics_tables"
-        >resource tables</link> When running the scheduled validation task, any violations found
-      will be persisted as validation results. These results can be accessed trouh the <link
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        xlink:href="https://docs.dhis2.org/master/en/developer/html/dhis2_developer_manual_full.html#webapi_validation_results"
-        >validation result api</link>.</para>
+      if you want to send out notifications for and/or persist the results found. The result of this
+      analysis will be a list of violations found using your criteria.</para>
+    <para>The way server jobs was scheduled was changed in 2.29. It now has options for
+      configuration. See the <link xmlns:xlink="http://www.w3.org/1999/xlink"
+        linkend="webapi_scheduling">Scheduling</link> api for more information.</para>
     <para>The first path variable is an identifier referring to the data set to validate. XML and
       JSON resource representations are supported. The response contains violations to validation
       rules. This will be extended with more validation types in coming versions.</para>
@@ -4911,8 +5374,28 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
   </section>
   <section xml:id="webapi_validation_results">
     <title>Validation Results</title>
-    <para>Validation results are objects created when violations are found during a scheduled
-      validation analysis. These results can be accessed through the api using the following
+    <para>Validation results are persisted results of violations found during a validation analysis.
+      If you choose "persist results" when starting or scheduling a validation analysis, any
+      violations found will be stored in the database. When a result is stored in the database it
+      will be used for 3 things:<orderedlist>
+        <listitem>
+          <para>Generating analytics based on the stored results.</para>
+        </listitem>
+        <listitem>
+          <para>Peristed results that has not generated a notification, will do so, once.</para>
+        </listitem>
+        <listitem>
+          <para>Keeping track of whether or not the result has generated a notification.</para>
+        </listitem>
+        <listitem>
+          <para>Skipping rules that have been already checked when running validation
+            analysis.</para>
+        </listitem>
+      </orderedlist></para>
+    <para>This means if you don't persist your results, you will be unable to generate analytics for
+      validation results, if checked, results will generate notfications every time it's found and
+      running validation analysis might be slower.</para>
+    <para>The validation results persisted can be viewed at the following
       endpoint:<screen>/api/26/validationResults</screen></para>
     <para>You can also inspect an individual result using the validation result id in this
       endpoint:<screen>/api/26/validationResults/&lt;id></screen></para>
@@ -6090,11 +6573,15 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         body:<screen>{ &quot;markedRead&quot; : [ &quot;ZrKML5WiyFm&quot;, &quot;Gc03smoTm6q&quot; ] }</screen></para>
     </section>
     <section xml:id="webapi_messaging_tickets">
-      <title>Tickets</title>
+      <title>Tickets and Validation Result Notifications</title>
       <para>You can use the "write feedback" tool to create tickets and messages. The only
         difference between a ticket and a message is that you can give a status and a priority to a
         ticket. To do this, use these
         API<screen>POST https://play.dhis2.org/demo/api/26/messageConversations/&lt;uid>/status</screen><screen>POST https://play.dhis2.org/demo/api/26/messageConversations/&lt;uid>/priority</screen></para>
+      <para>In 2.29, messages generated by validation analysis now also be used in the status and
+        priority properties. By default, messages generated by validation analysis will inherit the
+        priority of the validation rule in question, or the highest importance if the message
+        contains multiple rules.</para>
       <para>
         <table frame="all">
           <title>A list of valid status and priority values</title>
@@ -8033,6 +8520,12 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>Dimensions to use as rows for table layout.</entry>
                 <entry>Any dimension (must be query dimension)</entry>
               </row>
+              <row>
+                <entry>order</entry>
+                <entry>No</entry>
+                <entry>Specify ordering of rows based on value</entry>
+                <entry>ASC | DESC</entry>
+              </row>
             </tbody>
           </tgroup>
         </table>The <emphasis role="italic">dimension</emphasis> query parameter defines which
@@ -8086,6 +8579,9 @@ ORDER BY oul.level, par.name, ou.name</screen>
         query (not a filter). Such a request can look like this:</para>
       <screen>/api/26/analytics.html?dimension=dx:fbfJHSPpUQD;cYeuwXTCPkU&amp;dimension=pe:2014Q1;2014Q2
   &amp;dimension=ou:O6uvpzGd5pu&amp;tableLayout=true&amp;columns=dx;ou&amp;rows=pe</screen>
+  <para>The <emphasis role="italic">order</emphasis> parameter can be used for analytics resource to generate ordered data. 
+  The data will be ordered in ascending(or descending) order of values. An example request for ordering the values in descending order is:</para>
+      <screen>/api/26/analytics?dimension=dx:fbfJHSPpUQD&amp;dimension=pe:LAST_12_MONTHS&amp;dimension=ou:O6uvpzGd5pu&amp;order=DESC</screen>
     </section>
     <section xml:id="webapi_analytics_dimensions_and_items">
       <title>Dimensions and items</title>
@@ -8905,6 +9401,18 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Date identifier e.g: "2016-01-01". Overrides the start date of the relative
                 period</entry>
             </row>
+            <row>
+              <entry>columns</entry>
+              <entry>No</entry>
+              <entry>Dimensions to use as columns for table layout.</entry>
+              <entry>Any dimension (must be query dimension)</entry>
+            </row>
+            <row>
+              <entry>rows</entry>
+              <entry>No</entry>
+              <entry>Dimensions to use as rows for table layout.</entry>
+              <entry>Any dimension (must be query dimension)</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
@@ -9337,6 +9845,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
           the response mapped to their names.</para>
         <para>The <emphasis role="italic">rows</emphasis> section contains the events produced by
           the query. Each row represents exactly one event.</para>
+        <para>In order to have the event analytics resource generate the data in the shape of a ready-made
+          table, you can provide <emphasis role="italic">rows</emphasis> and <emphasis role="italic">columns</emphasis>
+          parameters with requested dimension identifiers separated by semi-colons as values to indicate which ones to use as table
+          columns and rows. Instead of generating a plain, normalized data source, the event analytics resource
+          will now generate the data in table layout. The column and rows dimensions must be present as a data dimension in the
+          query (not a filter). Such a request can look like this:</para>
+        <screen>/api/29/analytics.html+css?dimension=dx:cYeuwXTCPkU;fbfJHSPpUQD&amp;dimension=pe:WEEKS_THIS_YEAR&amp;filter=ou:ImspTQPwCqd&amp;displayProperty=SHORTNAME&amp;columns=dx&amp;rows=pe</screen>
       </section>
     </section>
     <section xml:id="webapi_event_aggregate_analytics">
@@ -10535,6 +11050,7 @@ interval=WEEK" -u admin:district</screen>
         single or multiple destinations. One or more gateways need to be configured before using the
         service. An SMS will not be sent if there is no gateway configured.  It needs a set of
         recipients and message text in JSON format as shown below. </para>
+      <para>NOTE: Recipients list will be partitioned if its size exceed MAX_ALLOWED_RECIPIENTS limit which is 200.</para>
       <screen>/api/26/sms/outbound</screen>
       <screen>{ 
   &quot;message&quot;:&quot;Sms Text&quot;,  
@@ -11591,6 +12107,16 @@ interval=WEEK" -u admin:district</screen>
               <entry>Do not require recaptcha for self registration. Default: "false"</entry>
             </row>
             <row>
+              <entry>recaptchaSecret</entry>
+              <entry>Google API recaptcha secret. Default: dhis2 play instance API secret, but 
+                this will only works on you local instance and not in production.</entry>
+            </row>
+            <row>
+              <entry>recaptchaSite</entry>
+              <entry>Google API recaptcha site. Default: dhis2 play instance API site, but
+                this will only works on you local instance and not in production.</entry>
+            </row>
+            <row>
               <entry>keyOpenIdProvider</entry>
               <entry>OpenID provider</entry>
             </row>
@@ -11607,6 +12133,10 @@ interval=WEEK" -u admin:district</screen>
               <entry>keyCacheAnalyticsDataYearThreshold</entry>
               <entry>Analytics data older than this value (in years) will always be cached. "0"
                 disabled this setting. Default: 0</entry>
+            </row>
+            <row>
+              <entry>analyticsFinancialYearStart</entry>
+              <entry>Set financial year start. Default: October</entry>
             </row>
             <row>
               <entry>keyIgnoreAnalyticsApprovalYearThreshold</entry>
@@ -11730,6 +12260,11 @@ interval=WEEK" -u admin:district</screen>
             <row>
               <entry>keyMapzenSearchApiKey</entry>
               <entry>Key for the Mapzen geo search API</entry>
+            </row>
+            <row>
+              <entry>keyFileResourceRetentionStrategy</entry>
+              <entry>Determines how long file resources associated with deleted or updated values
+                are kept. NONE, THREE_MONTHS, ONE_YEAR, or FOREVER.</entry>
             </row>
           </tbody>
         </tgroup>
@@ -12275,15 +12810,18 @@ interval=WEEK" -u admin:district</screen>
     <section xml:id="webapi_creating_tei">
       <title>Creating a new tracked entity instance</title>
       <para>For creating a new person in the system, you will be working with the <emphasis
-          role="italic">trackedEntityInstances</emphasis> resource. A template payload can be seen
-        below:<screen>{
+          role="italic">trackedEntityInstances</emphasis> resource. A template payload can be seen below:<screen>{
     &quot;trackedEntity&quot;: &quot;tracked-entity-id&quot;,
     &quot;orgUnit&quot;: &quot;org-unit-id&quot;,
+    "coordinates": "[1, 1]",
     &quot;attributes&quot;: [ {
         &quot;attribute&quot;: &quot;attribute-id&quot;,
         &quot;value&quot;: &quot;attribute-value&quot;
     } ]
-}</screen></para>
+}</screen><note>
+          <para>The "coordinates" field was introduced in 2.29, and accepts a coordinate or polygon
+            as a value.</para>
+        </note></para>
       <para>For getting the IDs for <emphasis role="italic">relationship</emphasis>, <emphasis
           role="italic">attributes</emphasis> you can have a look at the respective resources
           <emphasis role="italic">relationshipTypes</emphasis>,, <emphasis role="italic"
@@ -12449,16 +12987,56 @@ interval=WEEK" -u admin:district</screen>
     <section xml:id="webapi_generate_tei_attributes">
       <title>Generated tracked entity instance attributes</title>
       <para>Tracked entity instance attributes that is using automatic generation of unique values
-        has two endpoints that is used by apps. One is used to generate values, the other to
-        generate and reserve one or more values for use later.</para>
+        has three endpoints that is used by apps. The endpoints are all used for generating and
+        reserving values.</para>
+      <para>In 2.29 we introduced TextPattern for defining and generating these patterns. You can
+        read more about <link xmlns:xlink="http://www.w3.org/1999/xlink"
+          linkend="create-scorecards-pivot-table">working with TextPattern here</link>. All existing
+        patterns will be converted to a valid TextPattern when upgrading to 2.29.<note>
+          <para>As of 2.29, all these endpoint will require you to include any variables reported by
+            the <emphasis>requiredValues</emphasis> endpoint listed as required. Existing patterns,
+            consisting of only “#”, will be upgraded to the new TextPattern syntax
+            “RANDOM(&lt;old-pattern>)”. The RANDOM segment of the TextPattern is not a required
+            variable, so this endpoint will work as before for patterns defined before 2.29. </para>
+        </note></para>
+      <section>
+        <title>Finding required values</title>
+        <para>A TextPattern can contain variables that change based on different factors. Some of
+          these factors will be unknown to the server, so the values for these variables have to be
+          supplied when generating and reserving values.</para>
+        <para>This endpoint will return a map of required and optional values, that the server will
+          inject into the TextPattern when generating new values. Required variables have to be
+          supplied for the generation, but optional variables should only be supplied if you know
+          what you are
+          doing.<screen>GET /api/trackedEntityAttributes/Gs1ICEQTPlG/requiredValues</screen><screen>{
+	"REQUIRED": [
+		"ORG_UNIT_CODE"
+	],
+	"OPTIONAL": [
+		"RANDOM"
+	]
+}</screen></para>
+      </section>
       <section xml:id="webapi_generate_values">
         <title>Generate value endpoint</title>
         <para>Online web apps and other clients that wants to generate a value that will be used
           right away can use the simple generate endpoint. This endpoint will generate a value that
           is guaranteed to be unique at the time of generation. The value is also guaranteed not to
-          be reserved by use of the generateAndReseve endpoint.</para>
-        <screen>curl -X GET -H "Content-Type: application/json" -u admin:district 
-          https://play.dhis2.org/dev/api/trackedEntityAttributes/lZGmxYbs97q/generate</screen>
+          be reserved. As of 2.29, this endpoint will also reserve the value generated for 3
+          days.</para>
+        <para>If your TextPattern includes required values, you can pass them as paramaters like the
+          example below:</para>
+        <para>The expiration time can also be overridden at the time of generation, by adding the
+          ?expiration=&lt;number-of-days> to the request.</para>
+        <screen>GET /api/trackedEntityAttributes/Gs1ICEQTPlG/generate?ORG_UNIT_CODE=OSLO</screen>
+        <screen>{
+	"ownerObject": "TRACKEDENTITYATTRIBUTE",
+	"ownerUid": "Gs1ICEQTPlG",
+	"key": "RANDOM(X)-OSL",
+	"value": "C-OSL",
+	"created": "2018-03-02T12:01:36.680",
+	"expiryDate": "2018-03-05T12:01:36.678"
+}</screen>
       </section>
       <section xml:id="webapi_generate_reserve_values">
         <title>Generate and reserve value endpoint</title>
@@ -12466,33 +13044,49 @@ interval=WEEK" -u admin:district</screen>
           register tracked entities with unique ids. They will reserve a number of unique ids that
           this device will then use when registering new tracked entity instances. The endpoint is
           called to retreieve a number of tracked entity instance reserved values. An optional
-          parameter numberToReserve specifies how many ids to generate (default is 1). </para>
-        <screen>curl -X GET -H "Content-Type: application/json" -u admin:district 
-          https://play.dhis2.org/dev/api/trackedEntityAttributes/lZGmxYbs97q/generateAndReserve?numberToReserve=3</screen>
+          parameter numberToReserve specifies how many ids to generate (default is 1).</para>
+        <para>If your TextPattern includes required values, you can pass them as paramaters like the
+          example below:</para>
+        <para>Similar to the /generate endpoint, this endpoint can also specify the expiration time
+          in the same way. By adding the ?expiration=&lt;number-of-days> you can override the
+          default 60 days. </para>
+        <screen>GET /api/trackedEntityAttributes/Gs1ICEQTPlG/generateAndReserve?numberToReserve=3&amp;ORG_UNIT_CODE=OSLO</screen>
         <screen>[
-   {
-      "created":"2016-06-25T07:52:26.466+0000",
-      "expiryDate":"2017-06-25T07:52:26.466+0000",
-      "value":"43327401",
-      "trackedEntityAttribute":{  }
-   },
-   {
-      "created":"2016-06-25T07:52:26.468+0000",
-      "expiryDate":"2017-06-25T07:52:26.468+0000",
-      "value":"82676084",
-      "trackedEntityAttribute":{  }
-   },
-   {
-      "created":"2016-06-25T07:52:26.471+0000",
-      "expiryDate":"2017-06-25T07:52:26.471+0000",
-      "value":"91700776",
-      "trackedEntityAttribute":{  }
-   }
-]
-        </screen>
-        <para>The generate and reserve endpoint returns an array of reserved values:</para>
+	{
+		"ownerObject": "TRACKEDENTITYATTRIBUTE",
+		"ownerUid": "Gs1ICEQTPlG",
+		"key": "RANDOM(X)-OSL",
+		"value": "B-OSL",
+		"created": "2018-03-02T13:22:35.175",
+		"expiryDate": "2018-05-01T13:22:35.174"
+	},
+	{
+		"ownerObject": "TRACKEDENTITYATTRIBUTE",
+		"ownerUid": "Gs1ICEQTPlG",
+		"key": "RANDOM(X)-OSL",
+		"value": "Q-OSL",
+		"created": "2018-03-02T13:22:35.175",
+		"expiryDate": "2018-05-01T13:22:35.174"
+	},
+	{
+		"ownerObject": "TRACKEDENTITYATTRIBUTE",
+		"ownerUid": "Gs1ICEQTPlG",
+		"key": "RANDOM(X)-OSL",
+		"value": "S-OSL",
+		"created": "2018-03-02T13:22:35.175",
+		"expiryDate": "2018-05-01T13:22:35.174"
+	}
+]</screen>
+      </section>
+      <section>
+        <title>Reserved values</title>
+        <para>Reserved values is currently not accessible trough the api, however they are returned
+          by the <emphasis>generate</emphasis> and <emphasis>generateAndReserve</emphasis>endpoints.
+          The following table explains the properties of the reserved value object:</para>
+      </section>
+      <section>
         <table frame="all">
-          <title>Tracked entity reserved values</title>
+          <title>Reserved values</title>
           <tgroup cols="2">
             <colspec colnum="1" colname="c1" colwidth="1.38*"/>
             <colspec colnum="2" colname="c3" colwidth="7.25*"/>
@@ -12504,28 +13098,51 @@ interval=WEEK" -u admin:district</screen>
             </thead>
             <tbody>
               <row>
-                <entry>created</entry>
-                <entry>The date the reserved value was created.</entry>
+                <entry>ownerObject</entry>
+                <entry>The metadata type referenced when generating and reserving the value.
+                  Currently only TRACKEDENTITYATTRIBUTE is supported.</entry>
               </row>
               <row>
-                <entry>expiryDate</entry>
-                <entry>After this date the value can be deleted/unreserved by the server if  no
-                  tracked entity has been registered with the value. The deletion does not happen
-                  automatically at the exact time of the expiration, but can/will be done with
-                  scripts or mechanisms implemneted later.</entry>
+                <entry>ownerUid</entry>
+                <entry>The uid of the metadata object referenced when generating and reserving the
+                  value.</entry>
+              </row>
+              <row>
+                <entry>key</entry>
+                <entry>A partially generated value where generated segments are not yet
+                  added.</entry>
               </row>
               <row>
                 <entry>value</entry>
-                <entry>The actual generated value that is reserved.</entry>
+                <entry>The fully resolved value reserved. This is the value you send to the server
+                  when storing data.</entry>
               </row>
               <row>
-                <entry>trackedEntityAttribute</entry>
-                <entry>The tracked entity attribute that the value was generated for.</entry>
+                <entry>created</entry>
+                <entry>The timestamp when the reservation was made</entry>
+              </row>
+              <row>
+                <entry>expiryDate</entry>
+                <entry>The timestamp when the reservation will no longer be reserved</entry>
               </row>
             </tbody>
           </tgroup>
         </table>
+        <para>Expired reservations are removed daily. If a pattern changes, values that was already
+          reserved will be accepted when storing data, even if they don't match the new pattern, as
+          long as the reservation has not expired.</para>
       </section>
+    </section>
+    <section>
+      <title>Image attributes</title>
+      <para>Working with image attributes is a lot like working with file data values. The value of
+        an attribute with the image value type is the id of the associated file resource. A GET
+        request to the
+          <emphasis>/api/trackedEntityInstances/&lt;entityId>/&lt;attributeId>/image</emphasis>
+        endpoint will return the actual image. The optional height and width parameters can be used
+        to specify the dimensions of the
+        image.<screen>curl http://server/api/29/trackedEntityInstances/ZRyCnJ1qUXS/zDhUuAYrxNC/image?height=200&amp;width=200
+  > image.jpg</screen></para>
     </section>
   </section>
   <section xml:id="webapi_tracked_entity_instance_query">
@@ -13339,6 +13956,172 @@ interval=WEEK" -u admin:district</screen>
 }</screen>
     </section>
   </section>
+  <section>
+    <title>Tracked entity instance filter definitions</title>
+    <para>To create, read, update and delete tracked entity instance filters you can interact with
+      the <emphasis>/api/trackedEntityInstanceFilters</emphasis>
+      resource.<screen>/api/trackedEntityInstanceFilters</screen></para>
+    <section>
+      <title>Create and update a tracked entity instance filter definiton</title>
+      <para>For creating and updating a tracked entity instance filter in the system, you will be
+        working with the <emphasis role="italic">trackedEntityInstanceFilters</emphasis> resource.
+        The tracked entity instance filter defintions are used in the Tracker Capture app to display
+        relevant predefined &quot;Working lists&quot; in the tracker user interface.</para>
+      <table frame="all">
+        <title>Payload</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <colspec colname="c3" colnum="3" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>Payload values</entry>
+              <entry>Description</entry>
+              <entry>Example</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>name</entry>
+              <entry>Name of the filter. Required.</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>description</entry>
+              <entry>A description of the filter.</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>sortOrder</entry>
+              <entry>The sort order of the filter. Used in Tracker Capture to order the filters in
+                the program dashboard.</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>style</entry>
+              <entry>Object containing css style.</entry>
+              <entry>( "color": "blue", "icon": "fa fa-calendar"}</entry>
+            </row>
+            <row>
+              <entry>program</entry>
+              <entry>Object containing the id of the program. Required.</entry>
+              <entry>{ "id" : "uy2gU8kTjF"}</entry>
+            </row>
+            <row>
+              <entry>enrollmentStatus</entry>
+              <entry>The TEIs enrollment status. Can be none(any enrollmentstatus) or
+                ACTIVE|COMPLETED|CANCELED</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>followup</entry>
+              <entry>When this parameter is true, the filter only returns TEIs that has an
+                enrollment with status followup.</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>enrollmentCreatedPeriod</entry>
+              <entry>Period object containing a period which the enrollment must be created. See
+                  <emphasis>Period</emphasis> definition table below.</entry>
+              <entry>{ "periodFrom": -15, "periodTo": 15}</entry>
+            </row>
+            <row>
+              <entry>eventFilters</entry>
+              <entry>A list of eventFilters. See <emphasis>Event filters</emphasis> definition table
+                below.</entry>
+              <entry>[{"programStage": "eaDH9089uMp", "eventStatus": "OVERDUE",
+                "eventCreatedPeriod": {"periodFrom": -15, "periodTo": 15}}]</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="all">
+        <title>Event filters definition</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <colspec colname="c3" colnum="3" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry/>
+              <entry/>
+              <entry/>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>programStage</entry>
+              <entry>Which programStage the TEI needs an event in to be returned.</entry>
+              <entry>"eaDH9089uMp"</entry>
+            </row>
+            <row>
+              <entry>eventStatus</entry>
+              <entry>The events status. Can be none(any event status) or
+                ACTIVE|COMPLETED|SCHEDULED|OVERDUE</entry>
+              <entry>ACTIVE</entry>
+            </row>
+            <row>
+              <entry>eventCreatedPeriod</entry>
+              <entry>Period object containing a period in which the event must be created. See
+                  <emphasis>Period</emphasis> definition delow.</entry>
+              <entry>{ "periodFrom": -15, "periodTo": 15}</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="all">
+        <title>Period definition</title>
+        <tgroup cols="3">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1*"/>
+          <colspec colname="c3" colnum="3" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry/>
+              <entry/>
+              <entry/>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>periodFrom</entry>
+              <entry>Number of days from current day. Can be positive or negative integer.</entry>
+              <entry>-15</entry>
+            </row>
+            <row>
+              <entry>periodTo</entry>
+              <entry>Number of days from current day. Must be bigger than periodFrom. Can be
+                positive or negative integer.</entry>
+              <entry>15</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section>
+      <title>Tracked entity instance filters query</title>
+      <para>To query for tracked entity instance filters in the system, you can interact with the
+          <emphasis>/api/trackedEntityInstanceFilters</emphasis> resource.<table frame="all">
+          <title>Tracked entity instance filters query paramateres</title>
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="newCol2" colnum="2" colwidth="1*"/>
+            <thead>
+              <row>
+                <entry>Query parameter</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>program</entry>
+                <entry>Program identifier. Restricts filters to the given program.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
+    </section>
+  </section>
   <section xml:id="webapi_enrollment_instance_query">
     <title>Enrollment instance query</title>
     <para>To query for tracked entity instances you can interact with the <emphasis role="italic"
@@ -13685,51 +14468,328 @@ interval=WEEK" -u admin:district</screen>
     </section>
   </section>
   <section xml:id="webapi_scheduling">
-    <title>Scheduling</title>
-    <para>To schedule tasks to run at fixed intervals you can interact with the scheduling resource.
-      To configure tasks you can do a POST request to the following
-      resource:<screen>/api/26/scheduling</screen></para>
-    <para>The payload in JSON format is described
-      below.<screen>{
-    &quot;resourceTableStrategy&quot;: &quot;allDaily&quot;,
-    &quot;analyticsStrategy&quot;: &quot;allDaily&quot;,
-    &quot;monitoringStrategy&quot;: &quot;allDaily&quot;,
-    &quot;dataSynchStrategy&quot;: &quot;enabled&quot;
-}</screen></para>
-    <para>An example using
-      curl:<screen>curl &quot;localhost/dhis/api/26/scheduling&quot; -d @scheduling.json -X POST 
-  -H &quot;Content-Type:application/json&quot; -u admin:district -v</screen></para>
-    <para>The table below lists available task strategies.<table frame="all">
-        <title>Task strategies</title>
-        <tgroup cols="2">
-          <colspec colnum="1" colname="c1" colwidth="1*"/>
-          <colspec colnum="2" colname="c2" colwidth="1.27*"/>
+    <title>Scheduling (Experimental)</title>
+    <para>
+      In 2.29 we introduced a new way of scheduling jobs on the server. Each type of job has
+      different properties for configuration, giving you more control over how jobs are run. In
+      addition, you can configure the same job to run with different configurations and at different
+      intervals if required.
+      <table frame="all">
+        <title>Main properties</title>
+        <tgroup cols="3">
           <thead>
             <row>
-              <entry>Task</entry>
-              <entry>Strategies</entry>
+              <entry>Property</entry>
+              <entry>Description</entry>
+              <entry>Type</entry>
             </row>
           </thead>
           <tbody>
             <row>
-              <entry>Resource table task</entry>
-              <entry>allDaily | allEvery15Min</entry>
+              <entry>name</entry>
+              <entry>Name of the job</entry>
+              <entry>String</entry>
             </row>
             <row>
-              <entry>Analytics task</entry>
-              <entry>allDaily | last3YearsDaily</entry>
+              <entry>cronExpression</entry>
+              <entry>The cron expression resembles a time interval. It must follow a specific
+                pattern, see <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm"
+                  >https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm</link>
+                for guidelines</entry>
+              <entry>String (Cron expression)</entry>
             </row>
             <row>
-              <entry>Monitoring</entry>
-              <entry>allDaily</entry>
+              <entry>jobType</entry>
+              <entry>The job type represent which task is run. In the next table, you can get an
+                overview of existing job types. Each job type can have a a specific set of
+                parameters for job configuration
+                https://play.dhis2.org/dev/api/jobConfigurations/jobTypesExtended for an overview of
+                the parameters designed for a job type. A JobConfiguration has a "configurable"
+                property which is adopted by the job type. Some jobs are system jobs which only
+                allows for altering of the cron expression. </entry>
+              <entry>String (Enum)</entry>
             </row>
             <row>
-              <entry>Data synch task</entry>
+              <entry>jobParameters</entry>
+              <entry>Parameters of job if applicable for job type</entry>
+              <entry>(See list of job types)</entry>
+            </row>
+            <row>
+              <entry>continuousExecution</entry>
+              <entry>A job may be added as a continuous job which means, as soon as the job
+                finished, it will be scheduled to run again right away. Set "continuouseExecution"
+                to true in the payload if continuous execution is desired </entry>
+              <entry>Boolean</entry>
+            </row>
+            <row>
               <entry>enabled</entry>
+              <entry>A job can be added to the system without it being scheduled by setting
+                "enabled" to false in the JSON payload. Use this if you want to temporarily stop
+                scheduling for a job, or if a job configuration is not complete yet.</entry>
+              <entry>Boolean</entry>
             </row>
           </tbody>
         </tgroup>
-      </table></para>
+      </table>
+      <table frame="all">
+        <title>Available job types</title>
+        <tgroup cols="3">
+          <thead>
+            <row>
+              <entry>Job type</entry>
+              <entry>Parameters</entry>
+              <entry>Param(Type:Default)</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>DATA_INTEGRITY</entry>
+              <entry>NONE</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>ANALYTICS_TABLE</entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>lastYears: Number of years back to include</para>
+                  </listitem>
+                  <listitem>
+                    <para>skipTableTypes: Skip generation of tables</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para>Possible values: DATA_VALUE, COMPLETENESS, COMPLETENESS_TARGET,
+                          ORG_UNIT_TARGET, EVENT, ENROLLMENT, VALIDATION_RESULT</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                  <listitem>
+                    <para>skipResourceTables: Skip generation of resource tables</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>lastYears (int:0)</para>
+                  </listitem>
+                  <listitem>
+                    <para>skipTableTypes (Array of String (Enum):None )</para>
+                  </listitem>
+                  <listitem>
+                    <para>skipResourceTables (Boolean)</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>DATA_SYNC</entry>
+              <entry>NONE</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>META_DATA_SYNC</entry>
+              <entry>NONE</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>SEND_SCHEDULED_MESSAGE</entry>
+              <entry>NONE</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>PROGRAM_NOTIFICATIONS</entry>
+              <entry>NONE</entry>
+              <entry/>
+            </row>
+            <row>
+              <entry>MONITORING (Validation rule analysis)</entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>relativeStart: A number related to date of execution which resembles the
+                      start of the period to monitor</para>
+                  </listitem>
+                  <listitem>
+                    <para>relativeEnd: A number related to date of execution which resembles the end
+                      of the period to monitor</para>
+                  </listitem>
+                  <listitem>
+                    <para>validationRuleGroups: Validation rule groups(UIDs) to include in
+                      job</para>
+                  </listitem>
+                  <listitem>
+                    <para>sendNotification: Set "true" if job should send notifications based on
+                      validation rule groups</para>
+                  </listitem>
+                  <listitem>
+                    <para>persistsResults: Set "true" if job should persist validation
+                      results</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>relativeStart (int:0)</para>
+                  </listitem>
+                  <listitem>
+                    <para>relativeEnd (int:0)</para>
+                  </listitem>
+                  <listitem>
+                    <para>validationRuleGroups (Array of String (UIDs):None )</para>
+                  </listitem>
+                  <listitem>
+                    <para>sendNotification (Boolean:false)</para>
+                  </listitem>
+                  <listitem>
+                    <para>persistsResults (Boolean:false)</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>PUSH_ANALYSIS</entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>pushAnalysis: The uid of the push analysis you want to run</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>pushAnalysis (String:None)</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+            <row>
+              <entry>PREDICTOR</entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>relativeStart: A number related to date of execution which resembles the
+                      start of the period to monitor</para>
+                  </listitem>
+                  <listitem>
+                    <para>relativeEnd: A number related to date of execution which resembles the
+                      start of the period to monitor</para>
+                  </listitem>
+                  <listitem>
+                    <para>predictors: Predictors(UIDs) to include in job</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>relativeStart (int:0)</para>
+                  </listitem>
+                  <listitem>
+                    <para>relativeEnd (int:0)</para>
+                  </listitem>
+                  <listitem>
+                    <para>predictors (Array of String (UIDs):None )</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table> To configure jobs you can do a POST request to the following resource:
+      <screen>/api/jobConfigurations</screen>
+    </para>
+    <para>Adding job without parameters in JSON format:
+      <screen>
+        {
+          "name": "",
+          "jobType": "JOBTYPE",
+          "cronExpression": "0 * * ? * *",
+        }
+      </screen>
+    </para>
+    <para>Adding job with parameters in JSON format (ANALYTICS_TABLE example):
+      <screen>
+        {
+          "name": "Analytics last two years",
+          "jobType": "ANALYTICS_TABLE",
+          "cronExpression": "0 * * ? * *",
+          "jobParameters":
+          {
+              "lastYears": "2",
+              "skipTableTypes": [],
+              "skipResourceTables": false
+          }
+        }
+      </screen></para>
+    <para>List all jobConfigurations:<screen>GET /api/jobConfigurations</screen>
+    </para>
+    <para>Retrieve a job: (ANALYTICS_TABLE example):
+      <screen>GET /api/jobConfigurations/KBcP6Qw37gT</screen><screen>
+        {
+          "lastUpdated": "2018-02-22T15:15:34.067",
+          "id": "KBcP6Qw37gT",
+          "href": "http://localhost:8080/api/jobConfigurations/KBcP6Qw37gT",
+          "created": "2018-02-22T15:15:34.067",
+          "name": "analytics last two years",
+          "jobStatus": "SCHEDULED",
+          "displayName": "analytics last two years",
+          "enabled": true,
+          "externalAccess": false,
+          "continuousExecution": false,
+          "jobType": "ANALYTICS_TABLE",
+          "nextExecutionTime": "2018-02-26T03:00:00.000",
+          "cronExpression": "0 0 3 ? * MON",
+          "jobParameters": {
+            "lastYears": 2,
+            "skipTableTypes": [],
+            "skipResourceTables": false
+          },
+          "favorite": false,
+          "configurable": true,
+          "access": {
+            "read": true,
+            "update": true,
+            "externalize": true,
+            "delete": true,
+            "write": true,
+            "manage": true
+          },
+          "lastUpdatedBy": {
+            "id": "GOLswS44mh8"
+          },
+          "favorites": [],
+          "translations": [],
+          "userGroupAccesses": [],
+          "attributeValues": [],
+          "userAccesses": []
+        }
+      </screen>
+    </para>
+    <para>Updating job with parameters in JSON format (ANALYTICS_TABLE example):
+      <screen>PUT /api/jobConfiguration/KBcP6Qw37gT</screen><screen>
+        {
+          "name": "analytics last two years",
+          "enabled": true,
+          "cronExpression": "0 0 3 ? * MON",
+          "continuousExecution": false,
+          "jobType": "ANALYTICS_TABLE",
+          "jobParameters": {
+            "lastYears": "3",
+            "skipTableTypes": [],
+            "skipResourceTables": false
+          }
+        }
+      </screen>
+    </para>
+    <para>Deleting a job:<screen>DELETE /api/jobConfiguration/KBcP6Qw37gT</screen></para>
+
+    <para>Some jobs with custom configuration parameters may not be added if the required system
+      settings are not configured. An example of this is data synchronization, which requires remote
+      server configuration. </para>
   </section>
   <section xml:id="webapi_schema">
     <title>Schema</title>
@@ -14465,11 +15525,8 @@ interval=WEEK" -u admin:district</screen>
               <row>
                 <entry>resourceTableType</entry>
                 <entry>
-                  <para>ORG_UNIT_STRUCTURE, DATA_SET_ORG_UNIT_CATEGORY, CATEGORY_OPTION_COMBO_NAME,
-                    DATA_ELEMENT_GROUP_SET_STRUCTURE, INDICATOR_GROUP_SET_STRUCTURE,
-                    ORG_UNIT_GROUP_SET_STRUCTURE, CATEGORY_STRUCTURE, DATA_ELEMENT_STRUCTURE
-                    PERIOD_STRUCTURE, DATE_PERIOD_STRUCTURE, DATA_ELEMENT_CATEGORY_OPTION_COMBO,
-                    DATA_APPROVAL_MIN_LEVEL</para>
+                  <para>See "Table type" in "Overview of phases, table types and temporary
+                    tables"</para>
                 </entry>
                 <entry>The type of resource table for which to invoke the SQL script. Applies only
                   for hooks defined with the RESOURCE_TABLE_POPULATED phase.</entry>
@@ -14505,6 +15562,103 @@ interval=WEEK" -u admin:district</screen>
       <para>You should define only one of the <emphasis>resourceTableType</emphasis> and
           <emphasis>analyticsTableType</emphasis> fields, depending on which
           <emphasis>phase</emphasis> is defined.</para>
+      <para>Only the table type you select will have it's temporary table available when the hook is
+        run. The following table shows the valid combinations of phase, table types and temporary
+          tables.<table frame="all">
+          <title>Overview of phases, table types and temporary tables</title>
+          <tgroup cols="3">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.44*"/>
+            <colspec colname="c3" colnum="3" colwidth="1.24*"/>
+            <thead>
+              <row>
+                <entry>Phase</entry>
+                <entry>Table type</entry>
+                <entry>Temporary table</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry morerows="11">RESOURCE_TABLE_POPULATED</entry>
+                <entry>ORG_UNIT_STRUCTURE</entry>
+                <entry>_orgunitstructure_temp</entry>
+              </row>
+              <row>
+                <entry>DATA_SET_ORG_UNIT_CATEGORY</entry>
+                <entry>_datasetorgunitcategory_temp</entry>
+              </row>
+              <row>
+                <entry>CATEGORY_OPTION_COMBO_NAME</entry>
+                <entry>_categoryoptioncomboname_temp</entry>
+              </row>
+              <row>
+                <entry>DATA_ELEMENT_GROUP_SET_STRUCTURE</entry>
+                <entry>_dataelementgroupsetstructure_temp</entry>
+              </row>
+              <row>
+                <entry>INDICATOR_GROUP_SET_STRUCTURE</entry>
+                <entry>_indicatorgroupsetstructure_temp</entry>
+              </row>
+              <row>
+                <entry>ORG_UNIT_GROUP_SET_STRUCTURE</entry>
+                <entry>_organisationunitgroupsetstructure_temp</entry>
+              </row>
+              <row>
+                <entry>CATEGORY_STRUCTURE</entry>
+                <entry>_categorystructure_temp</entry>
+              </row>
+              <row>
+                <entry>DATA_ELEMENT_STRUCTURE</entry>
+                <entry>_dataelementstructure_temp</entry>
+              </row>
+              <row>
+                <entry>PERIOD_STRUCTURE</entry>
+                <entry>_periodstructure_temp</entry>
+              </row>
+              <row>
+                <entry>DATE_PERIOD_STRUCTURE</entry>
+                <entry>_dateperiodstructure_temp</entry>
+              </row>
+              <row>
+                <entry>DATA_ELEMENT_CATEGORY_OPTION_COMBO</entry>
+                <entry>_dataelementcategoryoptioncombo_temp</entry>
+              </row>
+              <row>
+                <entry>DATA_APPROVAL_MIN_LEVEL</entry>
+                <entry>_dataapprovalminlevel_temp</entry>
+              </row>
+              <row>
+                <entry morerows="6">ANALYTICS_TABLE_POPULATED</entry>
+                <entry>DATA_VALUE, COMPLETENESS</entry>
+                <entry>analytics_temp</entry>
+              </row>
+              <row>
+                <entry>COMPLETENESS</entry>
+                <entry>analytics_completeness_temp</entry>
+              </row>
+              <row>
+                <entry>COMPLETENESS_TARGET</entry>
+                <entry>analytics_completenesstarget_temp</entry>
+              </row>
+              <row>
+                <entry>ORG_UNIT_TARGET</entry>
+                <entry>analytics_orgunittarget_temp</entry>
+              </row>
+              <row>
+                <entry>EVENT</entry>
+                <entry>analytics_event_temp_&lt;program-uid></entry>
+              </row>
+              <row>
+                <entry>ENROLLMENT</entry>
+                <entry>analytics_enrollment_temp_&lt;program-uid></entry>
+              </row>
+              <row>
+                <entry>VALIDATION_RESULT</entry>
+                <entry>analytics_validationresult_temp</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></para>
     </section>
     <section>
       <title>Creating hooks</title>

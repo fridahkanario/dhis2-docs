@@ -537,67 +537,127 @@
   </section>
   <section xml:id="dataAdmin_scheduling">
     <title>Scheduling</title>
-    <para>The analytics, resource tables, data sync, metadata sync and data mart can be
-      automatically scheduled to run on regular intervals. Simply select the aggregation period
-      types, organisation unit group set aggregation level, and strategy to configure how the
-      scheduled job should run. If you are using surveillance rules, you can choose to run them
-      &quot;All daily&quot; by selecting this option.</para>
-    <para>Pressing &quot;Start&quot; will enable the scheduled job to run at a pre-determined time
-      (always at midnight based on the server time).</para>
-    <screenshot>
-      <mediaobject>
-        <imageobject>
-          <imagedata width="70%" align="center"
-            fileref="resources/images/maintainence/scheduling_management.png"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
-    <para>Starting 2.24 you can also schedule metadata synchronization on regular intervals. Simply
-      select &quot;Enabled&quot; from the drop-down, select the time-period during which you want to
-      run the task. Pressing &quot;Start&quot; will enable the scheduled job to run at that specific
-      time selected.</para>
-    <screenshot>
-      <mediaobject>
-        <imageobject>
-          <imagedata width="60%" align="center"
-            fileref="resources/images/maintainence/metadata_synchronization.png"/>
-        </imageobject>
-      </mediaobject>
-    </screenshot>
-    <para>As depicted in the screenshot, you can select the time period as daily, weekly, monthly or
-      yearly.</para>
-    <itemizedlist>
-      <listitem>
-        <para>Daily: On selecting this checkbox, you will need to select the time at which it needs
-          to run daily.</para>
-      </listitem>
-      <listitem>
-        <para>Weekly: On selecting this checkbox, you need to select the day of the week and time on
-          that day on which it needs to run.</para>
-      </listitem>
-      <listitem>
-        <para>Monthly: On selecting this checkbox, you need to select a day of the week, say Every
-          1st Sunday, Every 2nd Saturday, etc. and time on that day on which it needs to run.</para>
-      </listitem>
-      <listitem>
-        <para>Yearly: On Selecting this check box, you need to select the month, specific day of the
-          month and time on that day on which it needs to run.</para>
-      </listitem>
-    </itemizedlist>
-    <para>There is also the capability for running the meta data synchronization immediately. Using
-        &quot;<emphasis role="bold">Sync Now</emphasis>&quot; button you can run the meta data
-      synchronization task immediately even if the scheduler is scheduled to run at specific time or
-      not.</para>
-    <itemizedlist>
-      <listitem>
-        <para>If the scheduler is already enabled, you will see the &quot;Sync Now&quot; button on
-          the page itself.</para>
-      </listitem>
-      <listitem>
-        <para>If the scheduler is not enabled, simply select &quot;Enabled&quot; from the drop-down
-          for Metadata Synchronization and click &quot;Sync Now&quot; button.</para>
-      </listitem>
-    </itemizedlist>
+    <para>The Scheduler is an application for managing background jobs in DHIS2. Background jobs
+      can do a number of tasks, such as running analytics, synchronizing data and meta data, or sending
+      a push analysis report. The application provides the ability to create, modify and delete
+      such jobs.</para>
+    <para>The Scheduler comes bundled with DHIS2 and is accessed through the App Menu.</para>
+    <para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="80%" align="center"
+              fileref="resources/images/scheduler/overview.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </para>
+    <para>The start page of the Scheduler app shows an overview of existing jobs. By default, pre-defined
+      system jobs are hidden. To view these, toggle <emphasis role="bold">Show system jobs</emphasis> in the
+      top right corner.</para>
+    <para>When you create or modify a job, it will be rescheduled according to selected preferences. To run
+      a job on demand, press the green triangle labeled "Run now". This action is only available for enabled
+      jobs.</para>
+    <section xml:id="dataAdmin_scheduling_config">
+      <title>Creating a job</title>
+      <para>
+        <orderedlist>
+          <listitem>
+            <para>Open the <emphasis role="bold">Scheduler</emphasis> app and click the add button in the
+              bottom right corner.</para>
+          </listitem>
+          <listitem>
+            <para>Choose a suitable <emphasis role="bold">Name</emphasis> for the new job.</para>
+          </listitem>
+          <listitem>
+            <para>Select a running frequency for the job, i.e. when and how often the job should run.</para>
+            <orderedlist>
+              <listitem>
+                <para>You can either select a pre-defined frequency from the dropdown-menu, or ...</para>
+              </listitem>
+              <listitem>
+                <para>You can give the job a custom <emphasis role="bold">Cron
+                    expresssion</emphasis> if you want a specific schedule.</para>
+              </listitem>
+              <listitem>
+                <para>Enabling the <emphasis role="bold">Continuous execution</emphasis> option will make
+                  the job run constantly. In other words, as soon as the job finishes, it will be scheduled to
+                  run again right away. Selecting this option will disable the other fields.</para>
+              </listitem>
+            </orderedlist>
+          </listitem>
+          <listitem>
+            <para>Select the <emphasis role="bold">Job type</emphasis> you want to schedule using the
+              dropdown-menu.</para>
+          </listitem>
+          <listitem>
+            <para>If the job type is customizable, a <emphasis role="bold">Parameters</emphasis> section will
+              appear below. These additional options specify the details of the scheduled job, and will vary 
+              greatly depending on the job type.</para>
+          </listitem>
+          <listitem>
+            <para>Press the <emphasis role="bold">Add job</emphasis> button to confirm the job
+              creation. The newly created job should now be listed in the job overview, given that
+              the <emphasis role="bold">Show system jobs</emphasis> setting is not enabled.</para>
+          </listitem>
+        </orderedlist>
+      </para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/scheduler/add_new_job.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
+      <para>Jobs are enabled by default.</para>
+    </section>
+    <section xml:id="dataAdmin_scheduler_config">
+      <title>Configuring a job</title>
+      <para>With the proper permissions, you can modify the details of user-created jobs. Note that for
+        system jobs, only the schedule (cron expression) can be changed.</para>
+      <para>To quickly enable or disable a user created job from running, use the <emphasis role="bold">Enabled</emphasis>
+        column on the landing page of the Scheduler app. System jobs are always enabled.</para>
+      <para>Further configuring a job:</para>
+      <para>
+        <orderedlist>
+          <listitem>
+            <para>Select a job from the landing page to unveil the <emphasis role="bold">Attributes</emphasis>
+              and change them to accordingly. See the previous section for scheduling details.</para>
+            </listitem>
+            <listitem>
+              <para>If the job type supports extra options, the <emphasis role="bold">Parameters</emphasis> section
+                will also be available.</para>
+            </listitem>
+            <listitem>
+              <para>When done, press the <emphasis role="bold">Save changes</emphasis> button to persist the
+                changes.</para>
+            </listitem>
+        </orderedlist>
+        </para>
+    </section>
+    <section xml:id="dataAdmin_scheduler_delete">
+      <title>Deleting a job</title>
+      <para>
+        <orderedlist>
+          <listitem><para>Select the job you want to delete.</para></listitem>
+          <listitem><para>Press the <emphasis role="bold">Delete</emphasis> button in the bottom right corner.</para></listitem>
+          <listitem><para>Confirm by pressing <emphasis role="bold">Delete</emphasis> again in the popup window.</para></listitem>
+        </orderedlist>
+      </para>
+      <para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata width="80%" align="center"
+                fileref="resources/images/scheduler/delete_job.png"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+      </para>
+    </section>
   </section>
   <section xml:id="dataAdmin_dataSync">
     <title>Data synchronization</title>

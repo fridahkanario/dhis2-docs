@@ -44,7 +44,8 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
         </mediaobject>
       </screenshot>
       </para>
-    <para>With KEY_VALUE_PARSER and J2ME_PARSER, the SMS command will have dataset because those are used for reporting data</para>
+    <para>With KEY_VALUE_PARSER and J2ME_PARSER, the SMS command will have dataset because those are used for reporting data. If data is reported for a Period which is already approved then SMS response will be sent back containing information about
+    approval status of the period.</para>
     <para>
         <screenshot>
         <mediaobject>
@@ -163,7 +164,7 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
         <screenshot>
           <mediaobject>
             <imageobject>
-              <imagedata width="40%" align="center" fileref="resources/images/dhis2_mobile/tracker.png"/>
+              <imagedata width="40%" align="center" fileref="resources/images/dhis2_mobile_sms/TEI_parser.png"/>
             </imageobject>
           </mediaobject>
         </screenshot>
@@ -183,7 +184,7 @@ form: reporting data from phones or j2me apps, alerting users, registering patie
         <screenshot>
           <mediaobject>
             <imageobject>
-              <imagedata width="40%" align="center" fileref="resources/images/dhis2_mobile/program-stage-parser.png"/>
+              <imagedata width="40%" align="center" fileref="resources/images/dhis2_mobile_sms/programstage_data_parser.png"/>
             </imageobject>
           </mediaobject>
         </screenshot>

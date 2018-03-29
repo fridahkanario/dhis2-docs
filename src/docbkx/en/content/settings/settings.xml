@@ -1385,59 +1385,6 @@ SME:
       </tgroup>
     </table>
   </section>
-  <section xml:id="system_monitoring_settings">
-    <title>System
-      <?oxy_comment_start author="cecilia" timestamp="20170321T145618+0100" comment="Add content.
-Why would you use this?
-How do you set it up?
-
-According to SME: Disse brukes for å gjøre en kall mot URL med username og password." flag="done"?>monitoring<?oxy_comment_end?></title>
-    <para>Use the system monitoring settings when you want to make a call to a remote server for
-      system monitoring purposes. </para>
-    <table frame="all">
-      <title>System monitoring settings</title>
-      <tgroup cols="2">
-        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-        <thead>
-          <row>
-            <entry valign="top">
-              <para>Setting</para>
-            </entry>
-            <entry valign="top">
-              <para>Description</para>
-            </entry>
-          </row>
-        </thead>
-        <tbody>
-          <row>
-            <entry valign="top">
-              <para><emphasis role="bold">System monitoring URL</emphasis></para>
-            </entry>
-            <entry valign="top">
-              <para>The URL you want to make the call to.</para>
-            </entry>
-          </row>
-          <row>
-            <entry valign="top">
-              <para><emphasis role="bold">System monitoring user name</emphasis></para>
-            </entry>
-            <entry valign="top">
-              <para>The user name you want to use in the call.</para>
-            </entry>
-          </row>
-          <row>
-            <entry valign="top">
-              <para><emphasis role="bold">System monitoring password</emphasis></para>
-            </entry>
-            <entry valign="top">
-              <para>The password for the user name you use in the call.</para>
-            </entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </table>
-  </section>
   <section xml:id="system_oauth2_settings">
     <title><?oxy_comment_start author="cecilia" timestamp="20170321T112513+0100" comment="What is this?
 Info from SME: 

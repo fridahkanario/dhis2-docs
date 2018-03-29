@@ -7,16 +7,16 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"
     xml:id="create_tracked_entity">
-    <title>Create or edit a tracked
-        <?oxy_comment_start author="cecilia" timestamp="20160926T154018+0200" comment="Add concept info about tracked entity."?>entity<?oxy_comment_end?></title>
+    <title>Create or edit a tracked entity type</title>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Maintenance</emphasis> app and click <emphasis
-                    role="bold">Program</emphasis> > <emphasis role="bold">Tracked
-                entity</emphasis>.</para>
+                    role="bold">Program</emphasis> > <emphasis role="bold">Tracked entity
+                    type</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>Click the add button.</para>
+            <para>Click the add button or an already exsisting <emphasis role="bold">tracked entity
+                    type</emphasis>.</para>
         </listitem>
         <listitem>
             <para>Type a <emphasis role="bold">Name</emphasis> of the tracked entity.</para>
@@ -24,6 +24,30 @@
         <listitem>
             <para>(Optional) Enter a <emphasis role="bold">Description</emphasis> of the tracked
                 entity.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Enter a <emphasis role="bold">Minimum number of attributes required to
+                    search</emphasis>. This specifies the amount of attributes that need to be
+                filled out in order to be able to search for this <emphasis role="bold">tracked
+                    entity type</emphasis> in a <emphasis>global search</emphasis>. See <link
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="../search/search.xml#configure_search">Configure Search</link> for more
+                information.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Enter a <emphasis role="bold">Maximum number of tracked entity
+                    instances to return in search</emphasis>. This specifies the amount of tracked
+                entity instances that will be returned in a <emphasis>global search</emphasis>. See
+                    <link xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="../search/search.xml#configure_search">Configure Search</link> for
+                more information.</para>
+        </listitem>
+        <listitem>
+            <para>(Optional) Add <emphasis role="bold">Tracked entity type attributes</emphasis>.
+                This is used to configure search, see <link
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="../search/search.xml#configure_search">Configure Search</link> for
+                more information.</para>
         </listitem>
         <listitem>
             <para>(Optional) Enter an <emphasis role="bold">Alternative name</emphasis> of the
@@ -34,4 +58,3 @@
         </listitem>
     </orderedlist>    
 </section>
-
