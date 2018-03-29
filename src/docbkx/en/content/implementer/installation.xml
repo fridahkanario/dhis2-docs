@@ -17,9 +17,8 @@
     <title>Introduction</title>  
   <para>DHIS2 runs on all platforms for which there exists a Java Runtime Environment version 8 or
       higher, which includes most popular operating systems such as Windows, Linux and Mac. DHIS2
-      also runs on many relational database systems such as PostgreSQL, MySQL, H2 and Derby. DHIS2
-      is packaged as a standard Java Web Archive (WAR-file) and thus runs on any Servlet containers
-      such as Tomcat and Jetty.</para>
+      runs on the PostgreSQL database system. DHIS2 is packaged as a standard Java Web Archive (WAR-file) 
+      and thus runs on any Servlet containers such as Tomcat and Jetty.</para>
   <para>The DHIS2 team recommends Ubuntu 16.04 LTS operating system, PostgreSQL database system and
       Tomcat Servlet container as the preferred environment for server installations.</para>
   <para>This chapter provides a guide for setting up the above technology stack. It should however
@@ -56,6 +55,18 @@
           needed.</para>
       </listitem>
     </itemizedlist>
+  </section>
+  <section xml:id="install_software_requirements">
+    <title>Software requirements</title>
+    <para>Later DHIS2 versions require the following software versions to operate.</para>
+    <itemizedlist>
+	    <listitem><para>Java JRE version 8 or later.</para></listitem>
+      <listitem><para>Any operating system for which a Java JRE version 8 exists.</para></listitem>
+      <listitem><para>PostgreSQL database version 9.4 or later.</para></listitem>
+      <listitem><para>PostGIS database extension version 2.2 or later.</para></listitem>
+      <listitem><para>Tomcat servlet container version 8 or later, or other Servlet API 3.1 compliant servlet
+          containers like Jetty 9.</para></listitem>
+	</itemizedlist>
   </section>
   <section xml:id="install_server_setup">
     <title>Server setup</title>
