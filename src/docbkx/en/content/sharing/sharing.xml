@@ -370,8 +370,23 @@ Future releases: Legacy sharing dialog will be replaced with new in the analytic
     </section>
     <section>
       <title>Data sharing for data sets</title>
-      <para>Applies to the object types of data set. When working with data sets, the user will need
-        to have &quot;DATA:Can capture data&quot; to both see and capture data in the data set. <note>
+      <para>Applies to the object types of data set and category option . When working in Data Entry
+        app,  the user will need to have &quot;DATA:Can capture data&quot; to both see and capture
+        data in the data set. To save data for an entry field in Data Set users need: <orderedlist>
+          <listitem>
+            <para>Authority: F_DATAVALUE_ADD ( Can add data value )</para>
+          </listitem>
+          <listitem>
+            <para>Data Set is shared with "Data: Can capture data"</para>
+          </listitem>
+          <listitem>
+            <para>Data Element is shared with "Metadata: Can View"</para>
+          </listitem>
+          <listitem>
+            <para>All Category Options used by selected Data Set are shared with "Data: Can capture
+              data"</para>
+          </listitem>
+        </orderedlist><note>
           <para>To see and capture data for a data set, a data capture user also needs to report for
             an organisaction unit to where the data set has been assigned.</para>
         </note>
@@ -400,7 +415,7 @@ Future releases: Legacy sharing dialog will be replaced with new in the analytic
                 <para>
                   <itemizedlist>
                     <listitem>
-                      <para>See data for the data set.</para>
+                      <para>View Data Set's data in Analytics</para>
                     </listitem>
                   </itemizedlist>
                 </para>
@@ -409,14 +424,38 @@ Future releases: Legacy sharing dialog will be replaced with new in the analytic
                 <para>
                   <itemizedlist>
                     <listitem>
-                      <para>Add/edit data sets.</para>
+                      <para>Can see DataSet in Data Entry app</para>
+                    </listitem>
+                    <listitem>
+                      <para>Can save data for Data Set using API</para>
                     </listitem>
                   </itemizedlist>
                 </para>
               </entry>
               <entry>
-                <para/>
+                <para>For saving data value in Data Entry app, users also need "Can capture data"
+                  for Category Options within selected Data Set.</para>
               </entry>
+            </row>
+            <row>
+              <entry><emphasis role="bold">CategoryOption</emphasis></entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>Can view data values belong to shared Category Option in analytics</para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>
+                <itemizedlist>
+                  <listitem>
+                    <para>Can save data value for input fields in Data Entry app which belongs to
+                      shared Category Options. </para>
+                  </listitem>
+                </itemizedlist>
+              </entry>
+              <entry>For CategoryOptionCombo and AttributeOptionCombo to be writable, all belongs
+                CategoryOptions must be shared with "Can capture data".</entry>
             </row>
           </tbody>
         </tgroup>
