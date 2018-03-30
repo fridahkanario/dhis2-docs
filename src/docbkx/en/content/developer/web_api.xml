@@ -1501,7 +1501,8 @@ http://server/api/26/constants/ID</screen></para>
             <entry>async</entry>
             <entry>false, true</entry>
             <entry>Asynchronous import, returns immediately with a <emphasis>Location</emphasis>
-              header pointing to the location of the <emphasis>importReport</emphasis>.</entry>
+              header pointing to the location of the <emphasis>importReport</emphasis>. The payload
+              also contains a json object of the job created.</entry>
           </row>
           <row>
             <entry>inclusionStrategy</entry>
@@ -5418,10 +5419,11 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           >dataIntegrity</emphasis> endpoint like so (demonstrated in curl
         syntax):<screen>curl -X POST https://dhis.domain/api/26/dataIntegrity</screen></para>
       <para>If successful the request will return HTTP 202 immediately. The location header of the
-        response points to the resource used to check the status of the request. Forming a GET
-        request to the given location yields an empty JSON response if the task has not yet
-        completed and a JSON taskSummary object when the task is done. Polling (conservatively) to
-        this resource can hence be used to wait for the task to finish.</para>
+        response points to the resource used to check the status of the request. The payload
+        also contains a json object of the job created. Forming a GET request to the given location
+        yields an empty JSON response if the task has not yet completed and a JSON taskSummary object
+        when the task is done. Polling (conservatively) to this resource can hence be used to
+        wait for the task to finish.</para>
     </section>
     <section xml:id="webapi_data_integrity_fetch_results">
       <title>Fetching the result</title>
@@ -10801,11 +10803,11 @@ interval=WEEK" -u admin:district</screen>
             </thead>
             <tbody>
               <row>
-                <entry>ANALYTICSTABLE_UPDATE</entry>
+                <entry>ANALYTICS_TABLE</entry>
                 <entry>Generation of the analytics tables.</entry>
               </row>
               <row>
-                <entry>RESOURCETABLE_UPDATE</entry>
+                <entry>RESOURCE_TABLE</entry>
                 <entry>Generation of the resource tables.</entry>
               </row>
               <row>
@@ -10825,7 +10827,7 @@ interval=WEEK" -u admin:district</screen>
                 <entry>Import of metadata.</entry>
               </row>
               <row>
-                <entry>DATAINTEGRITY</entry>
+                <entry>DATA_INTEGRITY</entry>
                 <entry>Processing of data integrity checks.</entry>
               </row>
             </tbody>
@@ -10849,6 +10851,65 @@ interval=WEEK" -u admin:district</screen>
         &quot;completed&quot;: true
     }
 ]</screen></para>
+      <section>
+        New in 2.29 is that each asynchronous task is assigned an id. Each time you initiate a new task a new JobConfiguration
+        object is created and the id assigned can be used to view the status of the task. You can poll the task through a GET
+        request to the system tasks resource:<screen>/api/29/system/tasks/{task-category-id}/{task-id}</screen>
+
+        Since we have added id's for system tasks you can now request a list of all tasks in the system, or all tasks in one
+        category. Requesting all tasks can be achieved with a GET request to the system tasks resouce:<screen>/api/29/system/tasks</screen>
+        <screen>[
+    {
+      "EVENT_IMPORT": {},
+      "DATA_STATISTICS": {},
+      "RESOURCE_TABLE": {},
+      "FILE_RESOURCE_CLEANUP": {},
+      "METADATA_IMPORT": {},
+      "CREDENTIALS_EXPIRY_ALERT": {},
+      "SMS_SEND": {},
+      "MOCK": {},
+      "ANALYTICSTABLE_UPDATE": {},
+      "COMPLETE_DATA_SET_REGISTRATION_IMPORT": {},
+      "DATAVALUE_IMPORT": {},
+      "DATA_SET_NOTIFICATION": {},
+      "DATA_INTEGRITY": {
+        "OB1qGRlCzap": [
+          {
+          "uid": "LdHQK0PXZyF",
+          "level": "INFO",
+          "category": "DATA_INTEGRITY",
+          "time": "2018-03-26T15:02:32.171",
+          "message": "Data integrity checks completed in 38.31 seconds.",
+          "completed": true
+          }
+        ]
+      },
+      "PUSH_ANALYSIS": {},
+      "MONITORING": {},
+      "VALIDATION_RESULTS_NOTIFICATION": {},
+      "REMOVE_EXPIRED_RESERVED_VALUES": {},
+      "DATA_SYNC": {},
+      "SEND_SCHEDULED_MESSAGE": {},
+      "DATAVALUE_IMPORT_INTERNAL": {},
+      "PROGRAM_NOTIFICATIONS": {},
+      "META_DATA_SYNC": {},
+      "ANALYTICS_TABLE": {},
+      "PREDICTOR": {}
+    }
+]</screen>
+
+        By specifying category you can get a list of tasks for one category like this: <screen>/api/29/system/tasks/DATA_INTEGRITY</screen>
+        <screen>[
+    {
+      "uid": "LdHQK0PXZyF",
+      "level": "INFO",
+      "category": "DATA_INTEGRITY",
+      "time": "2018-03-26T15:02:32.171",
+      "message": "Data integrity checks completed in 38.31 seconds.",
+      "completed": true
+    }
+]</screen>
+      </section>
     </section>
     <section>
       <title>Get appearance information</title>
