@@ -15586,16 +15586,14 @@ interval=WEEK" -u admin:district</screen>
               <row>
                 <entry>resourceTableType</entry>
                 <entry>
-                  <para>See "Table type" in "Overview of phases, table types and temporary
-                    tables"</para>
+                  <para>See column "Table type" in table "Overview of phases, table types and temporary tables" below</para>
                 </entry>
                 <entry>The type of resource table for which to invoke the SQL script. Applies only
                   for hooks defined with the RESOURCE_TABLE_POPULATED phase.</entry>
               </row>
               <row>
                 <entry>analyticsTableType</entry>
-                <entry>DATA_VALUE, COMPLETENESS, COMPLETENESS_TARGET, ORG_UNIT_TARGET, EVENT,
-                  ENROLLMENT, VALIDATION_RESULT</entry>
+                <entry>See column "Table type" in table "Overview of phases, table types and temporary tables" below</entry>
                 <entry>The type of analytics table for which to invoke the SQL script. Applies only
                   for hooks defined with the ANALYTICS_TABLE_POPULATED phase.</entry>
               </row>
