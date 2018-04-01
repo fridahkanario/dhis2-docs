@@ -341,6 +341,9 @@
             attribute weekly data to the month which contains four days or more of the week.</para>
         </listitem>
         <listitem>
+          <para>Bi-weekly: Two week periods beginning with the first week of the year.</para>
+        </listitem>
+        <listitem>
           <para>Monthly: Refers to standard calendar months.</para>
         </listitem>
         <listitem>
