@@ -1597,7 +1597,7 @@ http://server/api/26/constants/ID</screen></para>
         </table></para>
     </section>
   </section>
-  <section>
+  <section xml:id="webapi_render_type">
     <title>Render type (Experimental)</title>
     <para>Some metadata types have a property named <emphasis>renderType</emphasis>. The render type
       property is a map between a <emphasis>device</emphasis> and a
@@ -1845,7 +1845,7 @@ Value type (Data Element, Tracked Entity Attribute)
   ...
 }</screen></para>
   </section>
-  <section>
+  <section xml:id="webapi_object_style">
     <title>Object Style (Experimental)</title>
     <para>Most metadata have a property names "style". This property can be used by clients to
       represent the object in a certain way. The properties currently supported by style is as
@@ -5214,7 +5214,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
     <screen>curl -d @form.html &quot;localhost/api/26/dataSets/BfMAe6Itzgt/form&quot; 
   -H &quot;Content-Type:text/html&quot; -u admin:district -X PUT -v</screen>
   </section>
-  <section>
+  <section xml:id="webapi_documents">
     <title>Documents</title>
     <para>References to files can be stored with the document resource. <table frame="all">
         <title>Document fields</title>
@@ -10851,7 +10851,7 @@ interval=WEEK" -u admin:district</screen>
         &quot;completed&quot;: true
     }
 ]</screen></para>
-      <section>
+      <para>
         New in 2.29 is that each asynchronous task is assigned an id. Each time you initiate a new task a new JobConfiguration
         object is created and the id assigned can be used to view the status of the task. You can poll the task through a GET
         request to the system tasks resource:<screen>/api/29/system/tasks/{task-category-id}/{task-id}</screen>
@@ -10909,7 +10909,7 @@ interval=WEEK" -u admin:district</screen>
       "completed": true
     }
 ]</screen>
-      </section>
+      </para>
     </section>
     <section>
       <title>Get appearance information</title>
@@ -13050,9 +13050,7 @@ interval=WEEK" -u admin:district</screen>
       <para>Tracked entity instance attributes that is using automatic generation of unique values
         has three endpoints that is used by apps. The endpoints are all used for generating and
         reserving values.</para>
-      <para>In 2.29 we introduced TextPattern for defining and generating these patterns. You can
-        read more about <link xmlns:xlink="http://www.w3.org/1999/xlink"
-          linkend="create-scorecards-pivot-table">working with TextPattern here</link>. All existing
+      <para>In 2.29 we introduced TextPattern for defining and generating these patterns. All existing
         patterns will be converted to a valid TextPattern when upgrading to 2.29.<note>
           <para>As of 2.29, all these endpoint will require you to include any variables reported by
             the <emphasis>requiredValues</emphasis> endpoint listed as required. Existing patterns,
@@ -14017,8 +14015,8 @@ interval=WEEK" -u admin:district</screen>
 }</screen>
     </section>
   </section>
-  <section>
-    <title>Tracked entity instance filter definitions</title>
+  <section xml:id="webapi_tei_filters">
+    <title>Tracked entity instance filters</title>
     <para>To create, read, update and delete tracked entity instance filters you can interact with
       the <emphasis>/api/trackedEntityInstanceFilters</emphasis>
       resource.<screen>/api/trackedEntityInstanceFilters</screen></para>
@@ -15609,10 +15607,7 @@ interval=WEEK" -u admin:district</screen>
         table has been populated, but before indexes have been created and the temp table has been
         swapped with the main table. As a result, the SQL script should refer to the analytics temp
         table, e.g. <emphasis>analytics_temp</emphasis>,
-          <emphasis>analytics_completeness_temp</emphasis>,
-          <emphasis>analytics_completenesstarget_temp</emphasis>,
-          <emphasis>analytics_orgunittarget_temp</emphasis>,
-          <emphasis>analytics_event_temp_&lt;program-uid></emphasis>.</para>
+          <emphasis>analytics_completeness_temp</emphasis>.</para>
       <para>This applies also to the <emphasis>RESOURCE_TABLE_POPULATED</emphasis> phase, which
         takes place after the resource table has been populated, but before indexes have been
         created and the temp table has been swapped with the main table. As a result, the SQL script
@@ -15621,8 +15616,10 @@ interval=WEEK" -u admin:district</screen>
       <para>You should define only one of the <emphasis>resourceTableType</emphasis> and
           <emphasis>analyticsTableType</emphasis> fields, depending on which
           <emphasis>phase</emphasis> is defined.</para>
-      <para>Only the table type you select will have it's temporary table available when the hook is
-        run. The following table shows the valid combinations of phase, table types and temporary
+      <para>You can refer to the temporary database table which matches the specified hook table type only (other temporary tables will
+        not be available). As an example, if you specify <emphasis>ORG_UNIT_STRUCTURE</emphasis> as the resource table type, you can 
+        refer to the <emphasis>_orgunitstructure_temp</emphasis> temporary database table only.</para>
+      <para>The following table shows the valid combinations of phases, table types and temporary
           tables.<table frame="all">
           <title>Overview of phases, table types and temporary tables</title>
           <tgroup cols="3">
