@@ -15596,14 +15596,14 @@ interval=WEEK" -u admin:district</screen>
               <row>
                 <entry>resourceTableType</entry>
                 <entry>
-                  <para>See column "Table type" in table "Overview of phases, table types and temporary tables" below</para>
+                  <para>See column "Table type" in table "Phases, table types and temporary tables" below</para>
                 </entry>
                 <entry>The type of resource table for which to invoke the SQL script. Applies only
                   for hooks defined with the RESOURCE_TABLE_POPULATED phase.</entry>
               </row>
               <row>
                 <entry>analyticsTableType</entry>
-                <entry>See column "Table type" in table "Overview of phases, table types and temporary tables" below</entry>
+                <entry>See column "Table type" in table "Phases, table types and temporary tables" below</entry>
                 <entry>The type of analytics table for which to invoke the SQL script. Applies only
                   for hooks defined with the ANALYTICS_TABLE_POPULATED phase.</entry>
               </row>
@@ -15633,7 +15633,7 @@ interval=WEEK" -u admin:district</screen>
         refer to the <emphasis>_orgunitstructure_temp</emphasis> temporary database table only.</para>
       <para>The following table shows the valid combinations of phases, table types and temporary
           tables.<table frame="all">
-          <title>Overview of phases, table types and temporary tables</title>
+          <title>Phases, table types and temporary tables</title>
           <tgroup cols="3">
             <colspec colname="c1" colnum="1" colwidth="1*"/>
             <colspec colname="c2" colnum="2" colwidth="1.44*"/>
