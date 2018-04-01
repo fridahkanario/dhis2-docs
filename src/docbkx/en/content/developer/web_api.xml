@@ -314,12 +314,24 @@ curl -X POST -u demo:$SECRET -H &quot;Accept: application/json&quot; $SERVER/uaa
             <entry>Week 8 with start Sunday</entry>
           </row>
           <row>
+            <entry>Bi-week</entry>
+            <entry><emphasis>yyyy</emphasis>BiW<emphasis>n</emphasis></entry>
+            <entry>2015BiW1</entry>
+            <entry>Week 1-2 20015</entry>
+          </row>
+          <row>
             <entry>Month</entry>
             <entry>
               <emphasis>yyyyMM</emphasis>
             </entry>
             <entry>200403</entry>
             <entry>March 2004</entry>
+          </row>
+          <row>
+            <entry>Bi-month</entry>
+            <entry><emphasis>yyyyMM</emphasis>B</entry>
+            <entry>200401B</entry>
+            <entry>January-February 2004</entry>
           </row>
           <row>
             <entry>Quarter</entry>
