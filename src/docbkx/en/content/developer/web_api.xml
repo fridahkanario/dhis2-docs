@@ -1543,69 +1543,70 @@ http://server/api/26/constants/ID</screen></para>
   </section>
   <section xml:id="webapi_metadata_audit">
     <title>Metadata audit</title>
-    <para>If you need information about who created, edited, or deleted some part of the DHIS2
-      metadata, you can enable metadata audit, there are two configuration options (your in your
-      `dhis.conf`) you can enable to support this:<screen>metadata.audit.log = on</screen></para>
-    <para>This enabled additional log output in your servlet container  (e.g. tomcat catalina.log)
+    <para>If you need information about who created, edited, or deleted DHIS2 metadata objects you
+      can enable metadata audit. There are two configuration options (dhis.conf) you can enable to
+      support this:<screen>metadata.audit.log = on</screen></para>
+    <para>This enables additional log output in your servlet container (e.g. tomcat catalina.log)
       which contains full information about the object created, object edited, or object deleted
       including full JSON payload, date of audit event, and the user who did the
       action.<screen>metadata.audit.persist = on</screen></para>
-    <para>This enables persisted audits (audits saved to the database) the information stored is the
-      same as with audit log, but this information is now placed into the `metadataaudit` table in
-      your database.</para>
-    <para>We do not recommended enabling these options on a empty database if you intend to import a
-      lot of metadata, as it slows down the import and the audit might not be that useful if you are
-      bootstrapping a new system.</para>
-    <section>
-      <title>Metadata Audit API</title>
-      <para>If you have enabled persisted metadata audits on your DHIS2 instance we also expose a
-        web-api for looking at and filtering the audit log, this requires superuser privilege. The
-        endpoint is available on <emphasis>/api/29/metadataAudits</emphasis> and support the
-        following query parameters:<table frame="void">
-          <caption>Metadata audit API query parameters</caption>
-          <col width="22%"/>
-          <col width="27%"/>
-          <col width="51%"/>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Values</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>uid</td>
-              <td/>
-              <td>Object uid to query by (can be more than one)</td>
-            </tr>
-            <tr>
-              <td>code</td>
-              <td/>
-              <td>Object code to query by (can be more than one)</td>
-            </tr>
-            <tr>
-              <td>klass</td>
-              <td/>
-              <td>Object class to query by (can be more than one), please note that the full java
-                package name is required here (to avoid name collisions)</td>
-            </tr>
-            <tr>
-              <td>createdAt</td>
-              <td/>
-              <td>Query by creation date</td>
-            </tr>
-            <tr>
-              <td>createdBy</td>
-              <td/>
-              <td>Query by who made the change (username)</td>
-            </tr>
-            <tr>
-              <td>type</td>
-              <td>CREATE, UPDATE, DELETE</td>
-              <td>Query by audit type</td>
-            </tr>
-          </tbody>
+    <para>This enables persisted audits, i.e. audits saved to the database. The information stored
+      is the same as with audit log; however this information is now placed into the
+        <emphasis>metadataaudit</emphasis> table in the database.</para>
+    <para>We do not recommended enabling these options on a empty database if you intend to
+      bootstrap your system, as it slows down the import and the audit might not be that
+      useful.</para>
+    <section xml:id="webapi_metadata_audit_query">
+      <title>Metadata audit query</title>
+      <para>If you have enabled persisted metadata audits on your DHIS2 instance, you can access
+        metadata audits at the following endpoint:<screen>/api/29/metadataAudits</screen>The
+        endpoints supports the following query parameters:<table frame="all">
+          <title>Metadata audit API query parameters</title>
+          <tgroup cols="3">
+            <colspec colwidth="22%"/>
+            <colspec colwidth="27%"/>
+            <colspec colwidth="51%"/>
+            <thead>
+              <row>
+                <entry>Name</entry>
+                <entry>Values</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>uid</entry>
+                <entry/>
+                <entry>Object uid to query by (can be more than one)</entry>
+              </row>
+              <row>
+                <entry>code</entry>
+                <entry/>
+                <entry>Object code to query by (can be more than one)</entry>
+              </row>
+              <row>
+                <entry>klass</entry>
+                <entry/>
+                <entry>Object class to query by (can be more than one), please note that the full
+                  java package name is required here (to avoid name collisions)</entry>
+              </row>
+              <row>
+                <entry>createdAt</entry>
+                <entry/>
+                <entry>Query by creation date</entry>
+              </row>
+              <row>
+                <entry>createdBy</entry>
+                <entry/>
+                <entry>Query by who made the change (username)</entry>
+              </row>
+              <row>
+                <entry>type</entry>
+                <entry>CREATE, UPDATE, DELETE</entry>
+                <entry>Query by audit type</entry>
+              </row>
+            </tbody>
+          </tgroup>
         </table></para>
     </section>
   </section>
