@@ -14952,7 +14952,7 @@ interval=WEEK" -u admin:district</screen>
     <para>
       <screen>/api/26/apps</screen>
     </para>
-    <section>
+    <section xml:id="webapi_get_apps">
       <title>Get apps</title>
       <note>
         <para>Previous to 2.28 the app property folderName referred to the actual path of the
@@ -14972,25 +14972,25 @@ interval=WEEK" -u admin:district</screen>
       <para>App names support the <emphasis>eq</emphasis> and <emphasis>ilike</emphasis> filter
         operators, while <emphasis>appType</emphasis> supports <emphasis>eq</emphasis> only.</para>
     </section>
-    <section>
+    <section xml:id="webapi_install_app">
       <title>Install an app</title>
       <para>To install an app, the following command can be issued:
         <screen>curl -X POST -u user:pass -F file=@app.zip http://server.com/api/26/apps</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_delete_app">
       <title>Delete an app</title>
       <para>To delete an app, you can issue the following command:
         <screen>curl -X DELETE -u user:pass http://server.com/api/26/apps/&lt;app-key&gt;</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_reload_apps">
       <title>Reload apps</title>
       <para>To force a reload of currently installed apps, you can issue the following command. This
         is useful if you added a file manually directly to the file system, instead of uploading
         through the DHIS2 user interface.
         <screen>curl -X PUT -u user:pass http://server.com/api/26/apps</screen></para>
     </section>
-    <section>
-      <title>Apps shared between instances</title>
+    <section xml:id="webapi_share_apps_between_instances">
+      <title>Share apps between instances</title>
       <para><note>
           <para>Previous to 2.28, installed apps would only be stored on the instace's local
             filesystem.</para>
@@ -15008,7 +15008,7 @@ interval=WEEK" -u admin:district</screen>
     <para>The Web API exposes the content of the DHIS2 App Store as a JSON representation which can
       found at the <emphasis role="italic">api/appStore</emphasis>
       resource.<screen>/api/26/appStore</screen></para>
-    <section>
+    <section xml:id="webapi_get_app_store_apps">
       <title>Get apps</title>
       <para>You can retrieve apps with a GET request: <screen>GET /api/28/appStore</screen></para>
       <para>A sample JSON response is described below.
@@ -15050,7 +15050,7 @@ interval=WEEK" -u admin:district</screen>
   ]
 }</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_install_app_store_apps">
       <title>Install apps</title>
       <para>You can install apps on your instance of DHIS2 assuming you have the appropriate
         permissions. An app is referred to using the <emphasis role="italic">id</emphasis> property
@@ -15067,7 +15067,7 @@ interval=WEEK" -u admin:district</screen>
       the &quot;sampleApp&quot; application will also be able to use the sampleApp namespace in the
       datastore. If a namespace is not reserved, no specific access is required to use
       it.<screen>/api/26/dataStore</screen></para>
-    <section>
+    <section xml:id="webapi_data_store_structure">
       <title>Data store structure</title>
       <para>Data store entries consist of a namespace, key and value. The combination of namespace
         and key is unique. The value data type is JSON.</para>
@@ -15109,7 +15109,7 @@ interval=WEEK" -u admin:district</screen>
         </tgroup>
       </table>
     </section>
-    <section>
+    <section xml:id="webapi_data_store_get_keys_and_namespaces">
       <title>Get keys and namespaces</title>
       <para>For a list of all existing namespaces:<screen>GET /api/26/dataStore</screen></para>
       <para>Example curl request for
@@ -15150,7 +15150,7 @@ interval=WEEK" -u admin:district</screen>
     &quot;key&quot;: &quot;key_1&quot;
 }</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_data_store_create_values">
       <title>Create values</title>
       <para>To create a new key and value for a
         namespace:<screen>POST /api/26/dataStore/&lt;namespace&gt;/&lt;key&gt;</screen></para>
@@ -15168,7 +15168,7 @@ interval=WEEK" -u admin:district</screen>
         similar) you can append a query to the url like
         this:<screen>GET /api/26/dataStore/&lt;namespace>/&lt;key>?encrypt=true</screen></para>
       </section>
-      <section>
+    <section xml:id="webapi_data_store_update_values">
         <title>Update values</title>
       <para>To update a key that exists in a
         namespace:<screen>PUT /api/26/dataStore/&lt;namespace&gt;/&lt;key&gt;</screen></para>
@@ -15183,7 +15183,7 @@ interval=WEEK" -u admin:district</screen>
     &quot;message&quot;: &quot;Key &apos;key_1&apos; updated.&quot;
 }</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_data_store_delete_keys">
       <title>Delete keys</title>
       <para>To delete an existing key from a
         namespace:<screen>DELETE /api/26/dataStore/&lt;namespace&gt;/&lt;key&gt;</screen></para>
@@ -15218,7 +15218,7 @@ interval=WEEK" -u admin:district</screen>
         <emphasis>userDataStore</emphasis> will be associated with the logged in user. This means
       one can only see, change, remove and add values associated with the currently logged in
       user.<screen>/api/26/userDataStore</screen></para>
-    <section>
+    <section xml:id="webapi_user_data_store_structure">
       <title>User data store structure</title>
       <para><emphasis>userDataStore</emphasis> consists of a user, a namespace, keys and associated
         values. The combination of user, namespace and key is unique.<table frame="all">
@@ -15264,7 +15264,7 @@ interval=WEEK" -u admin:district</screen>
           </tgroup>
         </table></para>
     </section>
-    <section>
+    <section xml:id="webapi_user_data_store_get_namespaces">
       <title>Get namespaces</title>
       <para>Returns an array of all existing
         namespaces<screen>GET /api/26/userDataStore</screen></para>
@@ -15277,7 +15277,7 @@ interval=WEEK" -u admin:district</screen>
 ]</screen>
       </para>
     </section>
-    <section>
+    <section xml:id="webapi_user_data_store_get_keys">
       <title>Get keys</title>
       <para>Returns an array of all existing keys in a given
         namespace<screen>GET /api/userDataStore/&lt;namespace></screen></para>
@@ -15290,8 +15290,8 @@ interval=WEEK" -u admin:district</screen>
 ]</screen>
       </para>
     </section>
-    <section>
-      <title>Get value</title>
+    <section xml:id="webapi_user_data_store_get_values">
+      <title>Get values</title>
       <para>Returns the value for a given namespace and
         key<screen>GET /api/26/userDataStore/&lt;namespace>/&lt;key></screen></para>
       <para>Example
@@ -15299,7 +15299,7 @@ interval=WEEK" -u admin:district</screen>
   "some": "value"
 }</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_user_data_store_create_values">
       <title>Create value</title>
       <para>Adds a new value to a given key in a given
         namespace.<screen>POST /api/26/userDataStore/&lt;namespace>/&lt;key></screen></para>
@@ -15315,8 +15315,8 @@ interval=WEEK" -u admin:district</screen>
         append a query to the url like
         this:<screen>GET /api/26/userDataStore/&lt;namespace>/&lt;key>?encrypt=true</screen></para>
     </section>
-    <section>
-      <title>Update existing value</title>
+    <section xml:id="webapi_user_data_store_update_values">
+      <title>Update values</title>
       <para>Updates an existing
         value<screen>PUT /api/26/userDataStore/&lt;namespace>/&lt;key></screen></para>
       <para>Example
@@ -15328,7 +15328,7 @@ interval=WEEK" -u admin:district</screen>
   "message":"Key 'bar' in namespace 'foo' updated."
 }</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_user_data_store_delete_key">
       <title>Delete key</title>
       <para>Delete a key<screen>DELETE /api/26/userDataStore/&lt;namespace>/&lt;key></screen></para>
       <para>Example
@@ -15339,7 +15339,7 @@ interval=WEEK" -u admin:district</screen>
   "message":"Key 'bar' deleted from the namespace 'foo."
 }</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_user_data_store_delete_namespace">
       <title>Delete namespace</title>
       <para>Delete all keys in the given
         namespace<screen>DELETE /api/26/userDataStore/&lt;namespace></screen></para>
@@ -15358,7 +15358,7 @@ interval=WEEK" -u admin:district</screen>
       generate targets, thresholds and estimated values. You can interact with predictors through
       the <emphasis>/api/26/predictors</emphasis>
       resource.<screen>/api/26/predictors</screen></para>
-    <section>
+    <section xml:id="webapi_create_predictor">
       <title>Creating a predictor</title>
       <para>You can create a predictor with a POST request to the predictors
         resource:<screen>POST /api/26/predictors</screen></para>
@@ -15389,7 +15389,7 @@ interval=WEEK" -u admin:district</screen>
         predited data values. The generator element refers to the expression to use when calculating
         the predicted values.</para>
     </section>
-    <section>
+    <section xml:id="webapi_generating_predicted_values">
       <title>Generating predicted values</title>
       <para>To run all predictors (generating predicted values) you can make a POST request to the
         run resource:<screen>POST /api/26/predictors/run</screen></para>
@@ -15461,9 +15461,9 @@ interval=WEEK" -u admin:district</screen>
     <para>The filter parameter for min-max data elements supports two operators: eq and in.</para>
     <para><emphasis role="bold">Use fields paremeter</emphasis></para>
     <para><screen>GET /api/minMaxDataElements.json?fields=:all,dataElement[id,name]</screen></para>
-    <section>
+    <section xml:id="webapi_add_update_min_max_data_element">
       <title>Add/Update min-max data element</title>
-      <para>To add new min-max data element, use POST request with JSON content with below format:</para>
+      <para>To add a new min-max data element, use POST request with JSON content with below format:</para>
       <para><screen>POST /api/minMaxDataElements.json</screen></para>
       <para><screen>{
   "min": 1,
@@ -15483,7 +15483,7 @@ interval=WEEK" -u admin:district</screen>
         will be updated.</para>
       <para/>
     </section>
-    <section>
+    <section xml:id="webapi_delete_min_max_data_element">
       <title>Delete min-max data element</title>
       <para>To delete a min-max data element, send a request with DELETE method and JSON content with same format as above:</para>
       <para><screen>DELETE /api/minMaxDataElements.json</screen></para>
@@ -15518,7 +15518,7 @@ interval=WEEK" -u admin:district</screen>
     <title>Tokens</title>
     <para>The <emphasis>tokens</emphasis> resource provides access tokens to various
       services.</para>
-    <section>
+    <section xml:id="webapi_tokens_google_service_account">
       <title>Google Service Account</title>
       <para>You can retrieve a Google service account OAuth 2.0 access token with a GET request to
         the following resource.<screen>GET /api/tokens/google</screen></para>
@@ -15567,7 +15567,7 @@ interval=WEEK" -u admin:district</screen>
       endpoint:<screen>/api/analyticsTableHooks</screen></para>
     <para>The analytics table hooks API supports the standard HTTP CRUD operations for creating
       (POST), updating (PUT), retrieveing (GET) and deleting (DELETE) entities.</para>
-    <section>
+    <section xml:id="webapi_analytics_table_hook_fields">
       <title>Hook fields</title>
       <para>Analytics table hooks have the following fields:<table frame="all">
           <title>Analytics table hook fields</title>
@@ -15728,7 +15728,7 @@ interval=WEEK" -u admin:district</screen>
           </tgroup>
         </table></para>
     </section>
-    <section>
+    <section xml:id="webapi_create_analytics_table_hook">
       <title>Creating hooks</title>
       <para>To create a hook which should run after the resource tables have been populated you can
         do a <emphasis>POST</emphasis> request like this using <emphasis>JSON</emphasis>
