@@ -14196,12 +14196,12 @@ interval=WEEK" -u admin:district</screen>
   </section>
   <section xml:id="webapi_enrollment_instance_query">
     <title>Enrollment instance query</title>
-    <para>To query for tracked entity instances you can interact with the <emphasis role="italic"
+    <para>To query for enrollments you can interact with the <emphasis role="italic"
         >/api/enrollments</emphasis> resource. <screen>/api/26/enrollments</screen></para>
     <section xml:id="webapi_enrollment_query_request_syntax">
       <title>Request syntax</title>
       <table frame="all">
-        <title>Tracked entity instances query parameters</title>
+        <title>Enrollment query parameters</title>
         <tgroup cols="2">
           <colspec colnum="1" colname="c1" colwidth="1.38*"/>
           <colspec colnum="2" colname="c3" colwidth="7.25*"/>
@@ -14275,6 +14275,11 @@ interval=WEEK" -u admin:district</screen>
               <entry>Indicates whether paging should be ignored and all rows should be
                 returned.</entry>
             </row>
+            <row>
+              <entry>includeDeleted</entry>
+              <entry>Indicates whether to include soft deleted enrollments or not. It is false by
+                default.</entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
@@ -14319,11 +14324,7 @@ interval=WEEK" -u admin:district</screen>
           </tbody>
         </tgroup>
       </table>
-      <para>You can specify queries with words separated by space - in that situation the system
-        will query for each word independently and return records where each word is contained in
-        any attribute. A query item can be specified once as an attribute and once as a filter if
-        needed. The query is case insensitive. The following rules apply to the query
-        parameters.</para>
+      <para>The query is case insensitive. The following rules apply to the query parameters.</para>
       <itemizedlist>
         <listitem>
           <para>At least one organisation unit must be specified using the <emphasis role="italic"
@@ -14349,22 +14350,22 @@ interval=WEEK" -u admin:district</screen>
               >program</emphasis> must also be specified.</para>
         </listitem>
       </itemizedlist>
-      <para>A query for all instances associated with a specific organisation unit can look like
+      <para>A query for all enrollments associated with a specific organisation unit can look like
         this:</para>
       <screen>/api/26/enrollments.json?ou=DiszpKrYNg8</screen>
-      <para>To constrain the response to instances which are part of a specific program you can
+      <para>To constrain the response to enrollments which are part of a specific program you can
         include a program query parameter:</para>
       <screen>/api/26/enrollments.json?ou=O6uvpzGd5pu&amp;ouMode=DESCENDANTS&amp;program=ur1Edk5Oe2n</screen>
       <para>To specify program enrollment dates as part of the query:</para>
       <screen>/api/26/enrollments.json?&amp;ou=O6uvpzGd5pu&amp;program=ur1Edk5Oe2n&amp;programStartDate=2013-01-01&amp;programEndDate=2013-09-01</screen>
-      <para>To constrain the response to instances of a specific tracked entity you can include a
+      <para>To constrain the response to enrollments of a specific tracked entity you can include a
         tracked entity query parameter:</para>
       <screen>/api/26/enrollments.json?ou=O6uvpzGd5pu&amp;ouMode=DESCENDANTS&amp;trackedEntity=cyl5vuJ5ETQ</screen>
-      <para>To constrain the response to instances of a specific tracked entity instance you can
-        include a tracked entity instance query parameter, in this case we are restricted it to
+      <para>To constrain the response to enrollments of a specific tracked entity instance you can
+        include a tracked entity instance query parameter, in this case we have restricted it to
         available enrollments viewable for current
         user:<screen>/api/26/enrollments.json?ouMode=ACCESSIBLE&amp;trackedEntityInstance=tphfdyIiVL6</screen></para>
-      <para>By default the instances are returned in pages of size 50, to change this you can use
+      <para>By default the enrollments are returned in pages of size 50, to change this you can use
         the page and pageSize query parameters:</para>
       <screen>/api/26/enrollments.json?ou=O6uvpzGd5pu&amp;ouMode=DESCENDANTS&amp;page=2&amp;pageSize=3</screen>
     </section>
