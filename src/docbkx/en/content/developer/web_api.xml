@@ -6317,7 +6317,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       <para>Get all audits which have attribute with ID
         VqEFza8wbwA:<screen>/api/26/audits/trackedEntityAttributeValue?tea=VqEFza8wbwA</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_tracked_entity_instance_audits">
       <title>Tracked entity instance audits</title>
       <para>Once auditing is enabled for tracked entity instances (by setting allowAuditLog of
         tracked entity types to true), all read and search operations are logged. The endpoint for
@@ -6382,12 +6382,10 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           </tgroup>
         </table>
       </para>
-    </section>
-  </section>
-  <section>
-    <para>Example to get tracked entity instance audits of type READ with startDate=2018-03-01,
-      endDate=2018-04-24 in a page size of 5 is:</para>
-    <screen>api/27/audits/trackedEntityInstance.json?startDate=2018-03-01&amp;endDate=2018-04-24&amp;auditType=READ&amp;pageSize=5</screen>
+      <para>Get all tracked entity instance audits of type READ with startDate=2018-03-01 and
+        endDate=2018-04-24 in a page size of 5:</para>
+      <screen>api/27/audits/trackedEntityInstance.json?startDate=2018-03-01&amp;endDate=2018-04-24&amp;auditType=READ&amp;pageSize=5</screen>      
+    </section>  
     <section>
       <title>Data approval audits</title>
       <para>The endpoint for data approval audits is located at /api/audits/dataApproval, and the
