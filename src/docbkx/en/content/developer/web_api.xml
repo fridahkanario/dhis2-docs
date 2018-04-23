@@ -6318,6 +6318,77 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         VqEFza8wbwA:<screen>/api/26/audits/trackedEntityAttributeValue?tea=VqEFza8wbwA</screen></para>
     </section>
     <section>
+      <title>Tracked entity instance audits</title>
+      <para>Once auditing is enabled for tracked entity instances (by setting allowAuditLog of
+        tracked entity types to true), all read and search operations are logged. The endpoint for
+        accessing audit logs is api/audits/trackedEntityInstance. Below are available parameters to
+        interact with this endpoint.</para>
+      <para>
+        <table frame="all">
+          <title>Tracked entity instance audit query parameters</title>
+          <tgroup cols="3">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="newCol2" colnum="2" colwidth="1*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Parameter</entry>
+                <entry>Option</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>tei</entry>
+                <entry>Tracked Entity Instance</entry>
+                <entry>One or more tracked entity instance idenitifiers</entry>
+              </row>
+              <row>
+                <entry>user</entry>
+                <entry>User</entry>
+                <entry>One or more user identifiers</entry>
+              </row>
+              <row>
+                <entry>auditType</entry>
+                <entry>SEARCH | READ</entry>
+                <entry>Audit type to filter for</entry>
+              </row>
+              <row>
+                <entry>startDate</entry>
+                <entry>Start date</entry>
+                <entry>Start date for audit filtering in yyyy-mm-dd format.</entry>
+              </row>
+              <row>
+                <entry>endDate</entry>
+                <entry>End date</entry>
+                <entry>End date for audit filtering in yyyy-mm-dd format.</entry>
+              </row>
+              <row>
+                <entry>skipPaging</entry>
+                <entry>false | true</entry>
+                <entry>Turn paging on / off.</entry>
+              </row>
+              <row>
+                <entry>page</entry>
+                <entry>1 (default)</entry>
+                <entry>Specific page to ask for.</entry>
+              </row>
+              <row>
+                <entry>pageSize</entry>
+                <entry>50 (default)</entry>
+                <entry>Page size.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </para>
+    </section>
+  </section>
+  <section>
+    <para>Example to get tracked entity instance audits of type READ with startDate=2018-03-01,
+      endDate=2018-04-24 in a page size of 5 is:</para>
+    <screen>api/27/audits/trackedEntityInstance.json?startDate=2018-03-01&amp;endDate=2018-04-24&amp;auditType=READ&amp;pageSize=5</screen>
+    <section>
       <title>Data approval audits</title>
       <para>The endpoint for data approval audits is located at /api/audits/dataApproval, and the
         available parameters are displayed in the table below.</para>
