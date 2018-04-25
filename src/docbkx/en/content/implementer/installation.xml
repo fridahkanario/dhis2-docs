@@ -652,7 +652,7 @@ cluster.members = 193.157.199.131:4001</screen></para>
         have now been made aware of each other and DHIS 2 will ensure that their caches are kept in
         sync.</para>
 
-       <para> DHIS 2 can also connect to a <emphasis>Redis</emphasis> server for handling user sessions, for using a shared cache and for automatic cluster leader management. Using redis is recommended for a clustered configuration when there are more than one instances of DHIS2 running.</para>
+       <para> DHIS2 can also connect to a <emphasis>Redis</emphasis> server for handling user sessions, for using a shared cache and for automatic cluster leader management. Using redis is recommended for a clustered configuration when there are more than one instances of DHIS2 running.</para>
  <para>DHIS2 will connect to redis if the   <emphasis>redis.enabled </emphasis>  configuration property in  <emphasis>dhis.conf </emphasis> is set to  <emphasis>true </emphasis> along with the following 4 properties.</para>
  <orderedlist>
 <listitem>
