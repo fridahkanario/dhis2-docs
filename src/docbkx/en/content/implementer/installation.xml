@@ -602,7 +602,7 @@ read3.connection.url = jdbc:postgresql://127.0.0.13/dbread3</screen></para>
       for <emphasis>high availability</emphasis> as the system can tolerate instances going down
       without making the system inaccessible to users.</para>
     <para>When setting up multiple Tomcat instances there is a need for making the instances aware
-      of each other. Each DHIS 2 instance will keep a local data cache. When an update is done on
+      of each other. The cluster should be aware of its members. This awareness will enable DHIS 2 to keep the local data caches in sync and in a consistent state at all times. When an update is done on
       one instance, the caches on the other instances must be notified so that they can be
       invalidated and avoid becoming stale.</para>
     <section xml:id="install_cluster_configuration">
@@ -651,6 +651,53 @@ cluster.members = 193.157.199.131:4001</screen></para>
       <para>You must restart each Tomcat instance to make the changes take effect. The two instances
         have now been made aware of each other and DHIS 2 will ensure that their caches are kept in
         sync.</para>
+
+       <para> DHIS 2 can also connect to a <emphasis>Redis</emphasis> server for handling user sessions, for using a shared cache and for automatic cluster leader management. Using redis is recommended for a clustered configuration when there are more than one instances of DHIS2 running.</para>
+ <para>DHIS2 will connect to redis if the   <emphasis>redis.enabled </emphasis>  configuration property in  <emphasis>dhis.conf </emphasis> is set to  <emphasis>true </emphasis> along with the following 4 properties.</para>
+ <orderedlist>
+<listitem>
+<para><emphasis>redis.host</emphasis>  , specifies where the redis server is running. Defaults to <emphasis> localhost</emphasis> </para>
+</listitem>
+<listitem>
+<para><emphasis>redis.port</emphasis> , specifies the port in which the redis server is listening. Defaults to <emphasis> 6379</emphasis> </para>
+</listitem>
+<listitem>
+<para><emphasis>redis.password</emphasis> , specifies the authentication password.</para>
+</listitem>
+<listitem>
+<para><emphasis>redis.use.ssl</emphasis> , specifies whether the redis server has ssl enabled. Defaults to <emphasis> false</emphasis> </para>
+</listitem>
+</orderedlist>
+
+ <para>
+ 	
+Whenever redis is enabled, DHIS2 will automatically assign one of the running instances as the leader of the cluster. The leader instance will be used to execute any jobs or scheduled tasks that should be run exclusively in one instance.
+ Optionally, you can configure the <emphasis>leader.time.to.live.minutes</emphasis> property in  <emphasis>dhis.conf </emphasis> to set up how frequently the leader election needs to occur. It also gives an indication of how long it would take for another instance to take over as the leader, after the previous leader has shutdown/crashed. The default is 2 minutes, for leader election job. Note that assigning a leader in the cluster is only done if redis is enabled. An example snippet of the dhis.conf configuration file with redis enabled and leader election time configured is shown below
+
+ <screen>
+# Redis Configuration
+
+//Mandatory if redis has to be enabled.
+redis.enabled = true
+
+redis.host = 193.158.100.111
+
+redis.port = 6379
+
+redis.password = yourpassword
+
+//Optional. Defaults to false.
+redis.use.ssl = false
+
+//Optional. Defaults to 2 minutes.
+leader.time.to.live.minutes=4
+
+ </screen>
+
+
+
+ </para>
+
     </section>
     <section>
       <title>Load balancing</title>
