@@ -722,6 +722,12 @@
             internally use different properties and so last successful time is set separately for
             each of them.</para>
         </listitem>
+        <listitem>
+          <para>The attributes of TrackedEntityInstances (TrackedEntityAttribute) which have an
+            option "Skip synchronization" turned on will not be synchronized. This feature allows
+            you to decide to not synchronize some sensitive or not relevant data and to keep them
+            only locally.</para>
+        </listitem>
       </itemizedlist></para>
   </section>
   <section xml:id="dataAdmin_metaDataSync">
