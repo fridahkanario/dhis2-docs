@@ -4662,6 +4662,20 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
                     role="italic">event=id1;id2</emphasis>.</entry>
               </row>
               <row>
+                <entry>attributeCc**</entry>
+                <entry>string</entry>
+                <entry>false</entry>
+                <entry>Attribute category combo identifier (must be combined with
+                    <emphasis>attributeCos</emphasis>)</entry>
+              </row>
+              <row>
+                <entry>attributeCos**</entry>
+                <entry>string</entry>
+                <entry>false</entry>
+                <entry>Attribute category option identifiers, separated with ; (must be combined
+                  with <emphasis>attributeCc</emphasis>)</entry>
+              </row>
+              <row>
                 <entry>includeDeleted</entry>
                 <entry>boolean</entry>
                 <entry>false</entry>
@@ -4671,6 +4685,9 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
           </tgroup>
         </table>
       </para>
+      <para>**<emphasis role="bold">Note:</emphasis> If the query contains neither
+          <emphasis>attributeCC</emphasis> nor <emphasis>attributeCos</emphasis>, the server returns
+        events for all attribute option combos where the user has read access.</para>
       <section>
         <title>Examples</title>
         <para>Query for all events with children of a certain organisation unit:
