@@ -197,7 +197,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">d2:ceil</entry>
                     <entry align="left" valign="top">(number)</entry>
                     <entry align="left" valign="top">Rounds the input argument <emphasis role="bold"
-                            >up</emphasis> to the nearest whole number. <para> Example:
+                            >up</emphasis> to the nearest whole number. <para>Example:
                             <screen>d2:ceil(#{hemoglobinValue})</screen>
                         </para></entry>
                 </row>
@@ -205,10 +205,10 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">d2:floor</entry>
                     <entry align="left" valign="top">(number)</entry>
                     <entry align="left" valign="top">Rounds the input argument <emphasis role="bold"
-                            >down</emphasis> to the nearest whole number. <para> An example
-                            producing the number of weeks the woman is pregnant. Notice that the
-                            subexpression #{gestationalAgeDays}/7 is evaluated before the floor
-                            function is executed: <screen>d2:floor(#{gestationalAgeDays}/7)</screen>
+                            >down</emphasis> to the nearest whole number. <para>An example producing
+                            the number of weeks the woman is pregnant. Notice that the subexpression
+                            #{gestationalAgeDays}/7 is evaluated before the floor function is
+                            executed: <screen>d2:floor(#{gestationalAgeDays}/7)</screen>
                         </para></entry>
                 </row>
                 <row>
@@ -221,7 +221,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">d2:modulus</entry>
                     <entry align="left" valign="top">(number,number)</entry>
                     <entry align="left" valign="top">Produces the modulus when dividing the first
-                        with the second argument. <para> An example producing the number of days the
+                        with the second argument. <para>An example producing the number of days the
                             woman is into her current pregnancy week:
                             <screen>d2:modulus(#{gestationalAgeDays},7)</screen>
                         </para></entry>
@@ -253,7 +253,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">Produces the number of days between the first
                         and second argument. If the second argument date is before the first
                         argument the return value will be the negative number of days between the
-                        two dates. The static date format is &apos;yyyy-MM-dd&apos;. <para> Example,
+                        two dates. The static date format is &apos;yyyy-MM-dd&apos;. <para>Example,
                             calculating the gestational age(in days) of a woman, based on the last
                             menstrual period and the current event date:
                             <screen>d2:daysBetween(#{lastMenstrualDate},V{event_date})</screen>
@@ -287,7 +287,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">d2:addDays</entry>
                     <entry align="left" valign="top">(date, number)</entry>
                     <entry align="left" valign="top">Produces a date based on the first argument
-                        date, adding the second argument number of days. <para> An example
+                        date, adding the second argument number of days. <para>An example
                             calculating the pregnancy due date based on the last menstrual period:
                             <screen>d2:addDays(#{lastMenstrualDate},283)</screen>
                         </para></entry>
@@ -297,7 +297,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">(sourcefield)</entry>
                     <entry align="left" valign="top">Counts the number of values that is entered for
                         the source field in the argument. The source field parameter is the name of
-                        one of the defined source fields in the program - see example <para> Example
+                        one of the defined source fields in the program - see example <para>Example
                             usage where #{previousPregnancyOutcome} is one of the source fields in a
                             repeatable program stage &quot;previous pregnancy&quot;:
                             <screen>d2:count(&apos;previousPregnancyOutcome&apos;)</screen>
@@ -310,7 +310,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                         entered for the source field in the first argument. Only occurrences that
                         matches the second argument is counted. The source field parameter is the
                         name of one of the defined source fields in the program - see example.
-                            <para> Example usage where #{previousPregnancyOutcome} is one of the
+                            <para>Example usage where #{previousPregnancyOutcome} is one of the
                             source fields in a repeatable program stage &quot;previous
                             pregnancy&quot;. The following function will produce the number of
                             previous pregnancies that ended with abortion:
@@ -324,7 +324,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">Counts the number of values that is zero or
                         positive entered for the source field in the argument. The source field
                         parameter is the name of one of the defined source fields in the program -
-                        see example. <para> Example usage where #{fundalHeightDiscrepancy} is one of
+                        see example. <para>Example usage where #{fundalHeightDiscrepancy} is one of
                             the source fields in program, and it can be either positive or negative.
                             The following function will produce the number of positive occurrences:
                             <screen>d2:countIfZeroPos(&apos;fundalHeightDiscrepancy&apos;)
@@ -335,8 +335,8 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">d2:hasValue</entry>
                     <entry align="left" valign="top">(sourcefield)</entry>
                     <entry align="left" valign="top">Evaluates to true of the argument source field
-                        contains a value, false if no value is entered. <para> Example usage, to
-                            find if the source field #{currentPregnancyOutcome} is yet filled in:
+                        contains a value, false if no value is entered. <para>Example usage, to find
+                            if the source field #{currentPregnancyOutcome} is yet filled in:
                             <screen>d2:hasValue(&apos;currentPregnancyOutcome&apos;)
                                     </screen>
                         </para></entry>
@@ -353,8 +353,8 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">(text, regex-pattern)</entry>
                     <entry align="left" valign="top">Evaluates to true if the input text is an exact
                         match with the supplied regular expression pattern. The regular expression
-                        needs to be escaped.<para> Example expression, triggering actions if a
-                            number is not on the pattern 9999/99/9:
+                        needs to be escaped.<para>Example expression, triggering actions if a number
+                            is not on the pattern 9999/99/9:
                             <screen>!d2:validatePattern(A{nrc},'\\d{6}\/\\d{2}\/\\d')</screen></para>
                         <para>Example expression, triggering actions that if the address is not
                             consisting of letters or white spaces, then a white space, then a
@@ -371,7 +371,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">d2:left</entry>
                     <entry align="left" valign="top">(text, num-chars)</entry>
                     <entry align="left" valign="top">Evaluates to the left part of a text, num-chars
-                        from the first character. <para> The text can be quoted or evaluated from a
+                        from the first character. <para>The text can be quoted or evaluated from a
                             variable: <screen>d2:left(#{variableWithText}, 3)</screen></para>
                     </entry>
                 </row>
@@ -379,8 +379,8 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">d2:right</entry>
                     <entry align="left" valign="top">(text, num-chars)</entry>
                     <entry align="left" valign="top">Evaluates to the right part of a text,
-                        num-chars from the last character. <para> The text can be quoted or
-                            evaluated from a variable:
+                        num-chars from the last character. <para>The text can be quoted or evaluated
+                            from a variable:
                             <screen>d2:right(#{variableWithText}, 2)</screen></para>
                     </entry>
                 </row>
@@ -397,7 +397,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">d2:split</entry>
                     <entry align="left" valign="top">(text, delimiter, element-num)</entry>
                     <entry align="left" valign="top">Split the text by delimiter, and keep the nth
-                        element(0 is the first).<para> The text can be quoted or evaluated from a
+                        element(0 is the first).<para>The text can be quoted or evaluated from a
                             variable, the delimiter must be quoted:
                             <screen>d2:split(#{variableWithText}, '-', 1)</screen> Note: comma
                             delimiter(,) is not supported.</para>
@@ -406,8 +406,19 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                 <row>
                     <entry align="left" valign="top">d2:length</entry>
                     <entry align="left" valign="top">(text)</entry>
-                    <entry align="left" valign="top">Find the length of a string. <para> Example:
+                    <entry align="left" valign="top">Find the length of a string. <para>Example:
                             <screen>d2:length(#{variableWithText})</screen></para></entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">d2:inOrgUnitGroup</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">The function will return TRUE if: The
+                        Organisation unit for the current event/enrollment belongs to the
+                        Organisation unit group ("orgunit_group_code"). <para>The function will return
+                            FALSE if: The code does not match any of the group the organisation unit
+                            belongs to.</para><para>Example expression<screen>d2:inOrgUnitGroup(orgunit_group_code)</screen>
+                        </para>
+                    </entry>
                 </row>
             </tbody>
         </tgroup>
@@ -430,7 +441,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">V{current_date}</entry>
                     <entry align="left" valign="top">(date)</entry>
                     <entry align="left" valign="top">Contains the current date whenever the rule is
-                        executed. <para> Example expression:
+                        executed. <para>Example expression:
                             <screen>d2:daysBetween(#{symptomDate},V{current_date}) &lt; 0 </screen>
                         </para></entry>
                 </row>
@@ -491,8 +502,8 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">(string)</entry>
                     <entry align="left" valign="top">Contains the code of the orgunit that is linked
                         to the current enrollment. For single event programs the code from the
-                        current event orgunit will be used instead.<para> Example expression to
-                            check wether orgunit code starts with WB_:
+                        current event orgunit will be used instead.<para>Example expression to check
+                            wether orgunit code starts with WB_:
                             <screen>d2:left(V{orgunit_code},3) == 'WB_'</screen>
                         </para>
                     </entry>
