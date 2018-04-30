@@ -391,6 +391,32 @@
                                     <para>-</para>
                                 </entry>
                             </row>
+                            <row>
+                                <entry>
+                                    <para>Limit To Hierarchy</para>
+                                </entry>
+                                <entry>
+                                    <para>Send notification only  to those users who belong to any of the organisation unit in the hierarchy.</para>
+                                </entry>
+                                <entry>
+                                    <para>-</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <para>Parent OrgUnit Only</para>
+                                </entry>
+                                <entry>
+                                    <para>Send notification only to those users who belong to parent organisation unit.</para>
+                                </entry>
+                                <entry>
+                                    <para>-</para>
+                                </entry>
+                            </row>
+                            
+                            
+                            
+                            
                         </tbody>
                     </tgroup>
                 </table>
@@ -580,6 +606,28 @@
                                 <entry>
                                     <para>All members of the selected user group receive the program
                                         notifications via the internal DHIS2 messaging system</para>
+                                </entry>
+                                <entry>
+                                    <para>-</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <para>Limit To Hierarchy</para>
+                                </entry>
+                                <entry>
+                                    <para>Send notification only  to those users who belong to any of the organisation unit in the hierarchy.</para>
+                                </entry>
+                                <entry>
+                                    <para>-</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <para>Parent OrgUnit Only</para>
+                                </entry>
+                                <entry>
+                                    <para>Send notification only to those users who belong to parent organisation unit.</para>
                                 </entry>
                                 <entry>
                                     <para>-</para>
