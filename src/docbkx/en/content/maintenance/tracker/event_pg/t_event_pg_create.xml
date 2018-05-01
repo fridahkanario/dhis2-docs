@@ -147,6 +147,46 @@ Verifed with SME that it should be added, submitted JIRA issue."?>days<?oxy_comm
                                     </para>
                                 </entry>
                             </row>
+                            <row>
+                                <entry align="left" valign="top"><emphasis role="bold">Block entry
+                                        form after completed</emphasis></entry>
+                                <entry align="left" valign="top">
+                                    <para>Select checkbox to block the entry form after completion
+                                        of the event of this program.</para>
+                                    <para>This means that the data in the entry form can't be
+                                        changed until you reset the status to incomplete.</para>
+                                </entry>
+                            </row>
+                            <row><emphasis role="bold">
+                                    <entry align="left" valign="top">Capture coordinates</entry>
+                                </emphasis><entry align="left" valign="top">
+                                    <para>Select checkbox to capture an event's coordinates.</para>
+                                    <para>Many types of events may be recorded at a facility or be
+                                        owned-by a health worker at a facility, but actually take
+                                        place somewhere in the community.</para>
+                                </entry></row>
+                            <row>
+                                <entry align="left" valign="top"><emphasis role="bold">Complete
+                                        allowed only if validation passes</emphasis></entry>
+                                <entry align="left" valign="top">Select checkbox to enforce that an
+                                    event created by this program is only completed when all
+                                    validation rules have passed.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top"><emphasis role="bold">Pre-generate
+                                        event UID</emphasis></entry>
+                                <entry align="left" valign="top">Select checkbox to pre-generate
+                                    unique event id numbers.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top"><emphasis role="bold">Description
+                                        of report date</emphasis></entry>
+                                <entry align="left" valign="top">
+                                    <para>Type a description of the report date.</para>
+                                    <para>This description is displayed in the case entry
+                                        form.</para>
+                                </entry>
+                            </row>
                         </tbody>
                     </tgroup>
                 </informaltable>
