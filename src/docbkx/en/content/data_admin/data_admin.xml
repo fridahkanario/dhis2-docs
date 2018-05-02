@@ -669,13 +669,14 @@
     <para>These are the steps to enable data synchronization:<itemizedlist>
         <listitem>
           <para>Go to Synchronization Settings, enter the remote server URL, username and password.
-            Move the cursor out of the password field so the value can be saved. Refresh the page
-            and check that the filled values are still present. </para>
+            Press the TAB button to automatically save the new password. Refresh the page and check
+            that the filled values are still present. Note that the [assword field will be empty
+            after the refresh. This is OK. Value is encrypted and saved and it is not possible to
+            reproduce it. Therefore, consider it as saved. </para>
         </listitem>
         <listitem>
-          <para>Go to Scheduler. If there is already present a job of type "Program Data
-            Synchronization", enable it if it is disabled. If the job is not present, add it with
-            the configuration you want.</para>
+          <para>Using the Scheduler app, create a new job using the "Program Data Synchronization".
+            Make sure it is enabled when you finish.</para>
         </listitem>
       </itemizedlist></para>
     <para>Some aspects of the data synchronization feature to be aware of:<itemizedlist>
@@ -698,29 +699,29 @@
             instance in order to work appropriately.</para>
         </listitem>
         <listitem>
-          <para>The very first time DHIS2 attempts to synchronize data the system will include all
-            the data present at the local machine. For the subsequent attempts the system will store
-            the time of the last successful data synchronization and only include data saved or
-            edited since that time. A synchronization job is considered successful only if all the
-            data was submitted, authenticated and saved successfully on the remote server.</para>
+          <para>The first time DHIS2 runs the synchronization job, it will include any data
+            available. The subsequent synchronization jobs will only include data added and changed
+            since the last successfull job. A synchronization job is considered successful only if
+            all the data was saved successfully on the remote server. Whether the job was successful
+            or not can be decided from the import summary returned from the central server.</para>
         </listitem>
         <listitem>
-          <para>The very first synchronization attempt can take a significant amount of time. This
-            depends on how much data are going to be synchronized.</para>
+          <para>The initial synchronization job may take a significant amount of time, possibly
+            slowing down your instance, depending on how much data is being synchronized. It could
+            be a good idea to configure the job to run when there are few online users, then later
+            change this to your own preference.</para>
         </listitem>
         <listitem>
-          <para>The system will attempt a synchronization based on the rules set in the
-            configuration of the job. If the local server does not have a working Internet
-            connection at the time, the job retries the network 3 times and then the synchronization
-            will be silenly aborted. Next attempt will start at regular scheduled time.</para>
+          <para>The system will start a synchronization job based on the rules set in the
+            configuration of the job. If the synchronization job starts while there is no connection
+            to the remote server, it will retry up to three times before it aborts. The job will run
+            again at a scheduled time.</para>
         </listitem>
         <listitem>
-          <para>Data synchronization job is synchronizing both tracker programs and event programs.
-            Although, internally this is done as two separate logical units. Therefore, it can
-            happen that event programs will be synchronized correctly while tracker programs can
-            fail and vice versa. Failure/success of one doesn't influence the other as they
-            internally use different properties and so last successful time is set separately for
-            each of them.</para>
+          <para>The server handles each set of programs separately, which means one set of programs
+            can be synchronized successfully, while the other fails. The failure or success of one
+            doesn't influence the other, as the last successful synchronization time is tracked
+            individually for each set of programs.</para>
         </listitem>
         <listitem>
           <para>The attributes of TrackedEntityInstances (TrackedEntityAttribute) which have an
