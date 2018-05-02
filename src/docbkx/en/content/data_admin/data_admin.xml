@@ -670,9 +670,9 @@
         <listitem>
           <para>Go to Synchronization Settings, enter the remote server URL, username and password.
             Press the TAB button to automatically save the new password. Refresh the page and check
-            that the filled values are still present. Note that the [assword field will be empty
-            after the refresh. This is OK. Value is encrypted and saved and it is not possible to
-            reproduce it. Therefore, consider it as saved. </para>
+            that the filled values are still present. Note that the password field will be empty
+            after the refresh, since this value is encrypted, so you can consider it saved.
+          </para>
         </listitem>
         <listitem>
           <para>Using the Scheduler app, create a new job using the "Program Data Synchronization".
