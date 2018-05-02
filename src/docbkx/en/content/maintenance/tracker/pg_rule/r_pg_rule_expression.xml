@@ -443,6 +443,15 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     </entry>
                 </row>
                 <row>
+                    <entry align="left" valign="top">V{event_status}</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">Contains status of the current event or enrollment.<para> Example expression to
+                        check status is:
+                        <screen>V{event_status) == 'COMPLETED'</screen>
+                    </para>
+                    </entry>
+                </row>
+                <row>
                     <entry align="left" valign="top">V{due_date}</entry>
                     <entry align="left" valign="top">(date)</entry>
                     <entry align="left" valign="top">This variable will contain the current date
@@ -496,7 +505,7 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                             <screen>d2:left(V{orgunit_code},3) == 'WB_'</screen>
                         </para>
                     </entry>
-                </row>
+                </row>     
             </tbody>
         </tgroup>
     </table>
