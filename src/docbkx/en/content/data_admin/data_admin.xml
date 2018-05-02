@@ -668,13 +668,15 @@
       events data (line list) will also be synced.</para>
     <para>These are the steps to enable data synchronization:<itemizedlist>
         <listitem>
-          <para>Go to Settings &gt; Synchronization, enter the remote server URL, username and
-            password and click Save. You can test your settings by clicking on the &quot;Test
-            settings&quot; link.</para>
+          <para>Go to Synchronization Settings, enter the remote server URL, username and password.
+            Press the TAB button to automatically save the new password. Refresh the page and check
+            that the filled values are still present. Note that the password field will be empty
+            after the refresh, since this value is encrypted, so you can consider it saved.
+          </para>
         </listitem>
         <listitem>
-          <para>Go to Data administration &gt; Scheduling. Under Data synchronization set strategy
-            to Enabled, and click Start.</para>
+          <para>Using the Scheduler app, create a new job using the "Program Data Synchronization".
+            Make sure it is enabled when you finish.</para>
         </listitem>
       </itemizedlist></para>
     <para>Some aspects of the data synchronization feature to be aware of:<itemizedlist>
@@ -697,20 +699,35 @@
             instance in order to work appropriately.</para>
         </listitem>
         <listitem>
-          <para>The very first time DHIS2 attempts to synchronize data the system will include data
-            entered during the last three days. For the subsequent attempts the system will store
-            the time of the last successful data synchronization and only include data saved or
-            edited since that time. A synchronization job is considered successful only if data was
-            submitted, authenticated and saved successfully on the remote server,.</para>
+          <para>The first time DHIS2 runs the synchronization job, it will include any data
+            available. The subsequent synchronization jobs will only include data added and changed
+            since the last successfull job. A synchronization job is considered successful only if
+            all the data was saved successfully on the remote server. Whether the job was successful
+            or not can be decided from the import summary returned from the central server.</para>
         </listitem>
         <listitem>
-          <para>The system will attempt a synchronization every minute. If the local server does not
-            have a working Internet connection at the time, the synchronization will be silenly
-            aborted and re-attempted after a minute.</para>
+          <para>The initial synchronization job may take a significant amount of time, possibly
+            slowing down your instance, depending on how much data is being synchronized. It could
+            be a good idea to configure the job to run when there are few online users, then later
+            change this to your own preference.</para>
         </listitem>
         <listitem>
-          <para>You can see the time of last successful synchronization with remote server in the
-            scheduling screen next to the &quot;Last success&quot; label.</para>
+          <para>The system will start a synchronization job based on the rules set in the
+            configuration of the job. If the synchronization job starts while there is no connection
+            to the remote server, it will retry up to three times before it aborts. The job will run
+            again at a scheduled time.</para>
+        </listitem>
+        <listitem>
+          <para>The server handles each set of programs separately, which means one set of programs
+            can be synchronized successfully, while the other fails. The failure or success of one
+            doesn't influence the other, as the last successful synchronization time is tracked
+            individually for each set of programs.</para>
+        </listitem>
+        <listitem>
+          <para>The attributes of TrackedEntityInstances (TrackedEntityAttribute) which have an
+            option "Skip synchronization" turned on will not be synchronized. This feature allows
+            you to decide to not synchronize some sensitive or not relevant data and to keep them
+            only locally.</para>
         </listitem>
       </itemizedlist></para>
   </section>
