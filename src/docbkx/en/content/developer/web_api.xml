@@ -4271,13 +4271,15 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
           role="italic">unique</emphasis> metadata attribute value.</para>
       <para><emphasis role="bold">Update</emphasis>: To update an existing event, the format of the
         payload is the same, but the URL you are posting to must add the identifier to the end of
-        the URL string and the request must be PUT.
-        <screen>curl -X PUT -d @updated_event.xml &quot;localhost/api/26/events/ID&quot; 
+        the URL string and the request must be PUT. </para>
+      <para>It is not allowed to update an already deleted event. (The same applies to tracked
+        entity instance and
+        enrollment.)<screen>curl -X PUT -d @updated_event.xml &quot;localhost/api/26/events/ID&quot; 
   -H &quot;Content-Type: application/xml&quot; -u admin:district</screen><screen>curl -X PUT -d @updated_event.json &quot;localhost/api/26/events/ID&quot; 
   -H &quot;Content-Type: application/json&quot; -u admin:district</screen></para>
       <para><emphasis role="bold">Delete</emphasis>: To delete an existing event, all you need is to
-        send a DELETE request with a identifier reference to the server you are
-        using.<screen>curl -X DELETE &quot;localhost/api/26/events/ID&quot; -u admin:district</screen></para>
+        send a DELETE request with a identifier reference to the server you are using.</para>
+      <screen>curl -X DELETE &quot;localhost/api/26/events/ID&quot; -u admin:district</screen>
       <para><emphasis role="bold">Get</emphasis>: To get an existing event you can issue a GET
         request including the identifier like
         this:<screen>curl &quot;localhost/api/26/events/ID&quot; -H &quot;Content-Type: application/xml&quot; -u admin:district</screen></para>
@@ -13042,6 +13044,9 @@ interval=WEEK" -u admin:district</screen>
     }
   ]
 }</screen></para>
+      <para>The system does not allow to create a tracked entity instance (as well as enrollment and
+        event) with an UID that was already used in the system. That means that UIDs cannot be
+        reused.</para>
     </section>
     <section xml:id="webapi_updating_tei">
       <title>Updating a tracked entity instance</title>
@@ -13052,6 +13057,9 @@ interval=WEEK" -u admin:district</screen>
         URL like this, where &lt;tracked-entity-instance-identifier&gt; should be replaced by the
         identifier of the tracked entity instance:</para>
       <screen>/api/trackedEntityInstances/&lt;tracked-entity-instance-id&gt;</screen>
+      <para>It is not allowed to update an already deleted tracked entity instance. Also, it is not
+        allowed to mark a tracked entity instance as deleted via an update request. The same rules
+        apply to enrollments and events.</para>
     </section>
     <section xml:id="webapi_deleting_tei">
       <title>Deleting a tracked entity instance</title>
@@ -14526,6 +14534,20 @@ interval=WEEK" -u admin:district</screen>
 }</screen></para>
     <screen>curl -X POST -d @data.json -H &quot;Content-Type: application/json&quot;
   &quot;http://server/api/26/events?strategy=DELETE&quot;</screen>
+  </section>
+  <section>
+    <title>Delete and Update Methods in Tracker and Events API</title>
+    <para>Events and Tracker endpoints <emphasis>/trackedEntityInstances</emphasis>,
+        <emphasis>/enrollments</emphasis>, <emphasis>/events</emphasis> fully support CRUD. What is
+      important to mention is that the system keeps track of used UIDs. Therefore, once created and
+      then deleted item (event, enrollment, …) cannot be created and/or updated again. If you try to
+      delete an already deleted item, system is transparent and does return a success as deletion an
+      already deleted item mean no change.</para>
+    <para>Second thing to note is that it is not allowed to delete an item via an update
+        (<emphasis>PUT</emphasis>) or create (<emphasis>POST</emphasis>) method. Therefore, an
+      attribute <emphasis>deleted</emphasis> is completely ignored in both <emphasis>PUT</emphasis>
+      and <emphasis>POST</emphasis> method, and in <emphasis>POST</emphasis> method it is by default
+      set to <emphasis>false</emphasis>.</para>
   </section>
   <section xml:id="webapi_email">
     <title>Email</title>
