@@ -4278,8 +4278,8 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
   -H &quot;Content-Type: application/xml&quot; -u admin:district</screen><screen>curl -X PUT -d @updated_event.json &quot;localhost/api/26/events/ID&quot; 
   -H &quot;Content-Type: application/json&quot; -u admin:district</screen></para>
       <para><emphasis role="bold">Delete</emphasis>: To delete an existing event, all you need is to
-        send a DELETE request with a identifier reference to the server you are using.</para>
-      <screen>curl -X DELETE &quot;localhost/api/26/events/ID&quot; -u admin:district</screen>
+        send a DELETE request with a identifier reference to the server you are using.
+        <screen>curl -X DELETE &quot;localhost/api/26/events/ID&quot; -u admin:district</screen></para>
       <para><emphasis role="bold">Get</emphasis>: To get an existing event you can issue a GET
         request including the identifier like
         this:<screen>curl &quot;localhost/api/26/events/ID&quot; -H &quot;Content-Type: application/xml&quot; -u admin:district</screen></para>
@@ -14535,7 +14535,7 @@ interval=WEEK" -u admin:district</screen>
     <screen>curl -X POST -d @data.json -H &quot;Content-Type: application/json&quot;
   &quot;http://server/api/26/events?strategy=DELETE&quot;</screen>
   </section>
-  <section>
+  <section xml:id="webapi_updating_and_deleting_items">
     <title>Delete and Update Methods in Tracker and Events API</title>
     <para>Events and Tracker endpoints <emphasis>/trackedEntityInstances</emphasis>,
         <emphasis>/enrollments</emphasis>, <emphasis>/events</emphasis> fully support CRUD. What is
