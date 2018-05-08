@@ -576,8 +576,9 @@
                 <para>You can either select a pre-defined frequency from the dropdown-menu, or ...</para>
               </listitem>
               <listitem>
-                <para>You can give the job a custom <emphasis role="bold">Cron
-                    expresssion</emphasis> if you want a specific schedule.</para>
+                <para>You can give the job a custom <emphasis role="bold">Cron expression</emphasis> if you
+                want a specific schedule, using the <link xl:href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/support/CronSequenceGenerator.html">
+                Spring scheduling</link> syntax.</para>
               </listitem>
               <listitem>
                 <para>Enabling the <emphasis role="bold">Continuous execution</emphasis> option will make
