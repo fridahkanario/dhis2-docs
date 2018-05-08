@@ -13044,7 +13044,7 @@ interval=WEEK" -u admin:district</screen>
     }
   ]
 }</screen></para>
-      <para>The system does not allow to create a tracked entity instance (as well as enrollment and
+      <para>The system does not allow the creation of a tracked entity instance (as well as enrollment and
         event) with an UID that was already used in the system. That means that UIDs cannot be
         reused.</para>
     </section>
