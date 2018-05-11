@@ -505,7 +505,22 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                             <screen>d2:left(V{orgunit_code},3) == 'WB_'</screen>
                         </para>
                     </entry>
-                </row>     
+                </row>
+                
+                <row>
+                    <entry align="left" valign="top">V{program_stage_id}</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">Contains uid of the program stage which this event belongs to.
+                    </entry>
+                </row>    
+                
+                <row>
+                    <entry align="left" valign="top">V{program_stage_name}</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">Contains name of the program stage which this event belongs to.
+                    </entry>
+                </row>    
+                
             </tbody>
         </tgroup>
     </table>
