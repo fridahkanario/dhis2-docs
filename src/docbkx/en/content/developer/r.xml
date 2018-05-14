@@ -1,33 +1,42 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <appendix version="5.0"
   xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
-  xmlns="http://docbook.org/ns/docbook"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xl="http://www.w3.org/1999/xlink"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  xmlns:svg="http://www.w3.org/2000/svg"
-  xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
   xmlns:db="http://docbook.org/ns/docbook" xml:id="rsetup">
   <title>DHIS2 and R integration</title>
   <section xml:id="rsetup_intro">
     <title>Introduction</title>
-    <para>R is freely available, open source statistical computing environment. R refers to  both the computer programming language, as well as the software which can be used to create and run R scripts. There are <link xl:href="http://cran.r-project.org/">numerous sources on the web</link> which describe the extensive set of features of R. </para>
-    <para>R is a natural extension to DHIS2, as it provides  powerful statistical routines, data manipulation functions, and visualization tools. This chapter will describe how to setup R and DHIS2 on the same server, and will provide a simple example of how to retrieve data from the DHIS2 database into an R data frame and perform some basic calculations.</para>
+    <para>R is freely available, open source statistical computing environment. R refers to both the
+      computer programming language, as well as the software which can be used to create and run R
+      scripts. There are <link xl:href="http://cran.r-project.org/">numerous sources on the
+        web</link> which describe the extensive set of features of R. </para>
+    <para>R is a natural extension to DHIS2, as it provides powerful statistical routines, data
+      manipulation functions, and visualization tools. This chapter will describe how to setup R and
+      DHIS2 on the same server, and will provide a simple example of how to retrieve data from the
+      DHIS2 database into an R data frame and perform some basic calculations.</para>
   </section>
   <section xml:id="rsetup_install">
     <title>Installing R</title>
-    <para>If you are installing R on the same server as DHIS, you should consider using the Comprehensive R Archive Network (CRAN) to get the latest distribution of R. All you need to do is to add the following like to you <filename>/etc/apt/source.list</filename> file. </para>
-    <para><emphasis role="bold">deb &lt;your R mirror&gt;/bin/linux/ubuntu &lt;your Ubuntu distribution&gt;</emphasis></para>
-    <para>You will need to replace <emphasis role="bold">&lt;your R mirror&gt;</emphasis> with one from the list available <link xl:href="http://cran.r-project.org/mirrors.html">here.</link> You will also need to replace <emphasis role="bold">&lt;your Ubuntu distribution&gt;</emphasis> with the name of the distribution you are using. </para>
+    <para>If you are installing R on the same server as DHIS, you should consider using the
+      Comprehensive R Archive Network (CRAN) to get the latest distribution of R. All you need to do
+      is to add the following like to you <filename>/etc/apt/source.list</filename> file. </para>
+    <para><emphasis role="bold">deb &lt;your R mirror&gt;/bin/linux/ubuntu &lt;your Ubuntu
+        distribution&gt;</emphasis></para>
+    <para>You will need to replace <emphasis role="bold">&lt;your R mirror&gt;</emphasis> with one
+      from the list available <link xl:href="http://cran.r-project.org/mirrors.html">here.</link>
+      You will also need to replace <emphasis role="bold">&lt;your Ubuntu
+        distribution&gt;</emphasis> with the name of the distribution you are using. </para>
     <para>Once you have done this, invoke the following commands</para>
     <para><screen>sudo apt-get update
 gpg --keyserver pgp.mit.edu --recv-keys 51716619E084DAB9
 gpg --armor --export 51716619E084DAB9 | apt-key add -
 sudo apt-get install r-base r-cran-dbi</screen></para>
     <para>At this point, you should have a functional R installation on your machine. </para>
-    <para>Next, lets see if everything   is working by simpling invoking <command>R</command> from the command line. </para>
+    <para>Next, lets see if everything is working by simpling invoking <command>R</command> from the
+      command line. </para>
     <para><screen>foo@bar:~$ R
 
 R version 2.14.1 (2011-12-22)
@@ -60,9 +69,12 @@ Type &apos;q()&apos; to quit R.
       the use of the <link xl:href="http://dirk.eddelbuettel.com/code/rpostgresql.html"
         >RPostgreSQL</link> package, which can interface directly through the PostgreSQL driver
       described in the next section.</para>
-    <para>Assuming you have already installed R from the procedure in the previous section. Invoke the following command to add the required libraries for this example.</para>
-    <para><command>apt-get install r-cran-rodbc r-cran-lattice odbc-postgresql</command> </para>
-    <para>Next, we need to configure the ODBC connection. Edit the file to suit your local situation using the following template as a guide. Lets create and edit a file called odbc.ini</para>
+    <para>Assuming you have already installed R from the procedure in the previous section. Invoke
+      the following command to add the required libraries for this example.</para>
+    <para><command>apt-get install r-cran-rodbc r-cran-lattice odbc-postgresql</command>
+    </para>
+    <para>Next, we need to configure the ODBC connection. Edit the file to suit your local situation
+      using the following template as a guide. Lets create and edit a file called odbc.ini</para>
     <para><screen>[dhis2]
 Description         = DHIS2 Database
 Driver              = /usr/lib/odbc/psqlodbcw.so
@@ -81,8 +93,9 @@ ShowOidColumn       = No
 FakeOidIndex        = No
 ConnSettings        =
 Debug = 0</screen>
-</para>
-    <para>Finally, we need to install the ODBC connection with <command>odbcinst -i -d -f odbc.ini</command></para>
+    </para>
+    <para>Finally, we need to install the ODBC connection with <command>odbcinst -i -d -f
+        odbc.ini</command></para>
     <para/>
     <para>From the R prompt, execute the following commands to connect to the DHIS2 database. </para>
     <para><screen>&gt; library(RODBC)
@@ -103,7 +116,9 @@ Debug = 0</screen>
 &gt;
 </screen></para>
     <para>It seems R is able to retrieve data from the DHIS2 database. </para>
-    <para>As an illustrative example, lets say we have been asked to calculate the relative percentage of OPD male and female under 5 attendances for the last twelve months.First, lets create an SQL query which will provide us the basic information which will be required.</para>
+    <para>As an illustrative example, lets say we have been asked to calculate the relative
+      percentage of OPD male and female under 5 attendances for the last twelve months.First, lets
+      create an SQL query which will provide us the basic information which will be required.</para>
     <para><screen>OPD&lt;-sqlQuery(channel,&quot;SELECT p.startdate, de.name as de, sum(dv.value::double precision)
  FROM datavalue dv
  INNER JOIN period p on dv.periodid = p.periodid
@@ -112,7 +127,8 @@ Debug = 0</screen>
  and p.enddate &lt;= &apos;2011-12-31&apos;
  and de.name ~*(&apos;Attendance OPD&apos;)
  GROUP BY p.startdate, de.name;&quot;)</screen></para>
-    <para>We have stored the result of the SQL query in an R data frame called &quot;OPD&quot;. Lets take a look at what the data looks like. </para>
+    <para>We have stored the result of the SQL query in an R data frame called &quot;OPD&quot;. Lets
+      take a look at what the data looks like. </para>
     <para><screen>&gt; head(OPD)
    startdate                                 de    sum
 1 2011-12-01   Attendance OPD &lt;12 months female  42557
@@ -128,16 +144,22 @@ Debug = 0</screen>
 6 Levels: Attendance OPD 12-59 months female ... Attendance OPD &gt;5 years male
 &gt; 
           </screen>
-</para>
-    <para>We can see that we need to aggregate the two age groups (&lt; 12 months and 12-59 months) into a single variable, based on the gender. Lets reshape the data into a crosstabulated table  to make this easier to visualize and calculate the summaries.</para>
+    </para>
+    <para>We can see that we need to aggregate the two age groups (&lt; 12 months and 12-59 months)
+      into a single variable, based on the gender. Lets reshape the data into a crosstabulated table
+      to make this easier to visualize and calculate the summaries.</para>
     <para><screen>&gt;OPD.ct&lt;-cast(OPD,startdate ~ de) 
 &gt;colnames(OPD.ct)
 [1] &quot;startdate&quot;                          &quot;Attendance OPD 12-59 months female&quot;
 [3] &quot;Attendance OPD 12-59 months male&quot;   &quot;Attendance OPD &lt;12 months female&quot;  
 [5] &quot;Attendance OPD &lt;12 months male&quot;     &quot;Attendance OPD &gt;5 years female&quot;    
-[7] &quot;Attendance OPD &gt;5 years male&quot; </screen>     
-</para>
-    <para>We have reshaped the data so that the data elements are individual columns. It looks like we need to aggregate the second and fourth columns together to get the under 5 female attendance, and then the third and fifth columns to get the male under 5 attendance.After this, lets subset the data into a new data frame just to get the required information and display the results.</para>
+[7] &quot;Attendance OPD &gt;5 years male&quot; </screen>
+    </para>
+    <para>We have reshaped the data so that the data elements are individual columns. It looks like
+      we need to aggregate the second and fourth columns together to get the under 5 female
+      attendance, and then the third and fifth columns to get the male under 5 attendance.After
+      this, lets subset the data into a new data frame just to get the required information and
+      display the results.</para>
     <para><screen>&gt; OPD.ct$OPDUnder5Female&lt;-OPD.ct[,2]+OPD.ct[,4]#Females
 &gt; OPD.ct$OPDUnder5Male&lt;-OPD.ct[,3]+OPD.ct[,5]#males
 &gt; OPD.ct.summary&lt;-OPD.ct[,c(1,8,9)]#new summary data frame
@@ -147,7 +169,9 @@ OPD.ct.summary$OPDUnder5Female/
 &gt;OPD.ct.summary$MalePercent&lt;-
 OPD.ct.summary$OPDUnder5Male/
 (OPD.ct.summary$OPDUnder5Female + OPD.ct.summary$OPDUnder5Male)*100#Males </screen></para>
-    <para>Of course, this could be accomplished much more elegantly, but for the purpose of the illustration, this code is rather verbose.Finally, lets display the required information.</para>
+    <para>Of course, this could be accomplished much more elegantly, but for the purpose of the
+      illustration, this code is rather verbose.Finally, lets display the required
+      information.</para>
     <para><screen>&gt; OPD.ct.summary[,c(1,4,5)]
     startdate FemalePercent MalePercent
 1  2011-01-01      51.13360    48.86640
@@ -162,22 +186,37 @@ OPD.ct.summary$OPDUnder5Male/
 10 2011-10-01      51.34465    48.65535
 11 2011-11-01      51.42526    48.57474
 12 2011-12-01      50.68933    49.31067</screen></para>
-    <para>We can see that the male and female attendances are very similar for each month of the year, with seemingly higher male attendance relative to female attendance in the month of December.</para>
-    <para>In this example, we showed how to retrieve data from the DHIS2 database and manipulate in with some simple R commands. The basic pattern for using DHIS2 and R together, will be the retrieval of data from the DHIS2 database with an SQL query into an R data frame, followed by whatever routines (statistical analysis, plotting, etc) which may be required.  </para>
+    <para>We can see that the male and female attendances are very similar for each month of the
+      year, with seemingly higher male attendance relative to female attendance in the month of
+      December.</para>
+    <para>In this example, we showed how to retrieve data from the DHIS2 database and manipulate in
+      with some simple R commands. The basic pattern for using DHIS2 and R together, will be the
+      retrieval of data from the DHIS2 database with an SQL query into an R data frame, followed by
+      whatever routines (statistical analysis, plotting, etc) which may be required. </para>
   </section>
   <section xml:id="rsetup_mydatamart">
     <title>Using R with MyDatamart</title>
-    <para>MyDatamart provides  useful interface to the DHIS2 database by making a local copy of the database available on a users desktop. This means that the user does not need direct access to the database and the data can be worked with offline on the users local machine. In this example, we will have used the <link xl:href="http://apps.dhis2.org/demo">demo database</link>. Data was downloaded at the district level for Jan 2011-Dec 201l. Consult the MyDatamart section in this manual for more detailed information. </para>
-    <para>First, lets load some required R packages. If you do not have these packages already installed in your version of R, you will need to do so before proceeding with the example.</para>
+    <para>MyDatamart provides useful interface to the DHIS2 database by making a local copy of the
+      database available on a users desktop. This means that the user does not need direct access to
+      the database and the data can be worked with offline on the users local machine. In this
+      example, we will have used the <link xl:href="http://apps.dhis2.org/demo">demo
+      database</link>. Data was downloaded at the district level for Jan 2011-Dec 201l. Consult the
+      MyDatamart section in this manual for more detailed information. </para>
+    <para>First, lets load some required R packages. If you do not have these packages already
+      installed in your version of R, you will need to do so before proceeding with the
+      example.</para>
     <screen>library(&quot;DBI&quot;)
 library(&quot;RSQLite&quot;)
 library(&quot;lattice&quot;)
 library(&quot;latticeExtra&quot;)</screen>
-    <para>Next, we are going to connect to the local copy of the MyDatamart database. In this case, it was located at C:\dhis2\sl.dmart. </para>
+    <para>Next, we are going to connect to the local copy of the MyDatamart database. In this case,
+      it was located at C:\dhis2\sl.dmart. </para>
     <screen>dbPath&lt;-&quot;C:\\dhis2\\sl.dmart&quot;
 drv&lt;-dbDriver(&quot;SQLite&quot;)
 db&lt;-dbConnect(drv,dbPath)</screen>
-    <para>Let suppose we have been asked to compare ANC 1, 2, 3 coverage rates for each district for 2011. We can define an SQL query to retrieve data from the MyDatamart database into an R data frame as follows.</para>
+    <para>Let suppose we have been asked to compare ANC 1, 2, 3 coverage rates for each district for
+      2011. We can define an SQL query to retrieve data from the MyDatamart database into an R data
+      frame as follows.</para>
     <screen>#An SQL query which will retreive all indicators 
 #at OU2 le
 sql&lt;-&quot;SELECT * FROM pivotsource_indicator_ou2_m 
@@ -189,24 +228,37 @@ Inds&lt;-fetch(rs,n=-1)
 #Clean up a bit
 dbClearResult(rs)
 dbDisconnect(db)</screen>
-    <para>We used one of the pre-existing Pivot Source queries in the database to get all of the indicator values. Of course, we could have retrieved only the ANC indicators, but we did not exactly know how the data was structured, or how the columns were named, so lets take a closer look. </para>
+    <para>We used one of the pre-existing Pivot Source queries in the database to get all of the
+      indicator values. Of course, we could have retrieved only the ANC indicators, but we did not
+      exactly know how the data was structured, or how the columns were named, so lets take a closer
+      look. </para>
     <screen>#Get the name of the columns
 colnames(Inds)
 #output not shown for brevity
 levels(as.factor(Inds$indshort)) </screen>
-    <para>We see from the <command>colnames</command> command that there is an column called &quot;indshort&quot; which looks like it contains some indicator names. We can see the names using the second command. After we have determined which ones we need (ANC 1, 2, and 3), lets further subset the data so that we only have these. </para>
+    <para>We see from the <command>colnames</command> command that there is an column called
+      &quot;indshort&quot; which looks like it contains some indicator names. We can see the names
+      using the second command. After we have determined which ones we need (ANC 1, 2, and 3), lets
+      further subset the data so that we only have these. </para>
     <screen>#Subset the data for ANC
 ANC&lt;-Inds[grep(&quot;ANC (1|2|3) Coverage&quot;,as.factor(Inds$indshort)),]</screen>
-    <para>We just used R&apos;s grep function to retrieve all the rows and columns of the Inds data frame which matched the regular expression &quot;ANC (1|2|3) Coverage&quot; and put this into a new data frame called &quot;ANC&quot;. </para>
-    <para>By looking at the data with the <command>str(ANC)</command> command, we will notice that the time periods are not ordered correctly, so lets fix this before we try and create a plot of the data.  </para>
+    <para>We just used R&apos;s grep function to retrieve all the rows and columns of the Inds data
+      frame which matched the regular expression &quot;ANC (1|2|3) Coverage&quot; and put this into
+      a new data frame called &quot;ANC&quot;. </para>
+    <para>By looking at the data with the <command>str(ANC)</command> command, we will notice that
+      the time periods are not ordered correctly, so lets fix this before we try and create a plot
+      of the data. </para>
     <screen>#Lets reorder the months
 MonthOrder&lt;-c(&apos;Jan&apos;,&apos;Feb&apos;,&apos;Mar&apos;,&apos;Apr&apos;,
 &apos;May&apos;,&apos;Jun&apos;,&apos;Jul&apos;,&apos;Aug&apos;,&apos;Sep&apos;,&apos;Oct&apos;,&apos;Nov&apos;,&apos;Dec&apos;)
 ANC$month&lt;-factor(ANC$month,levels=MonthOrder)</screen>
-    <para>Next, we need to actually calculate the indicator value from the numerator, factor and denominator. </para>
+    <para>Next, we need to actually calculate the indicator value from the numerator, factor and
+      denominator. </para>
     <screen>#Calculate the indicator value
 ANC$value&lt;-ANC$numxfactor/ANC$denominatorvalue</screen>
-    <para>Finally, lets create a simple trellis plot which compares ANC 1, 2, 3 for each district by month and save it to our local working directory in a file called &quot;District_ANC.png&quot;. </para>
+    <para>Finally, lets create a simple trellis plot which compares ANC 1, 2, 3 for each district by
+      month and save it to our local working directory in a file called
+      &quot;District_ANC.png&quot;. </para>
     <screen>png(filename=&quot;District_ANC.png&quot;,width=1024,height=768)
 plot.new()
  xyplot(value ~ month | ou2, data=ANC, type=&quot;a&quot;, main=&quot;District ANC Comparison Sierra Leone 2011&quot;,
@@ -225,7 +277,9 @@ dev.off()</screen>
   </section>
   <section xml:id="rsetup_maps">
     <title>Mapping with R and PostgreSQL</title>
-    <para>A somewhat more extended example, will use the RPostgreSQL library and several other libraries to produce a map from the coordinates stored in the database. We will define a few helper functions to provide a layer of abstraction, which will make the R code more reusable. </para>
+    <para>A somewhat more extended example, will use the RPostgreSQL library and several other
+      libraries to produce a map from the coordinates stored in the database. We will define a few
+      helper functions to provide a layer of abstraction, which will make the R code more reusable. </para>
     <programlisting>#load some dependent libraries
  library(maps)
  library(maptools)
@@ -323,7 +377,10 @@ return(myPlot) }
 
 
 </programlisting>
-    <para>Up until this point, we have defined a few functions to help us make a map. We need to get the coordinates stored in the database and merge these with the indicator which we plan to map. We then retrieve the data from the aggregated indicator table, create a special type of data frame (SpatialPointsDataFrame), apply some styling to this, and then create the plot. </para>
+    <para>Up until this point, we have defined a few functions to help us make a map. We need to get
+      the coordinates stored in the database and merge these with the indicator which we plan to
+      map. We then retrieve the data from the aggregated indicator table, create a special type of
+      data frame (SpatialPointsDataFrame), apply some styling to this, and then create the plot. </para>
     <programlisting>
 #Now we define the actual thing to do
 #Lets get a connection to the database
@@ -348,11 +405,20 @@ plotIndicator(con,MyIndicatorName,MyStartDate,MyPeriodType,MyLevel,gadm)</progra
         <imagedata fileref="resources/images/r/OPDAttendance.png"/>
       </imageobject>
     </mediaobject>
-    <para>In this example, we showed how to use the RPostgreSQL library and other helper libraries(Maptools, ColorBrewer) to create a simple map from the DHIS2 data mart. </para>
+    <para>In this example, we showed how to use the RPostgreSQL library and other helper
+      libraries(Maptools, ColorBrewer) to create a simple map from the DHIS2 data mart. </para>
   </section>
   <section xml:id="rsetup_google_visualization_api">
     <title>Using R, DHIS2 and the Google Visualization API</title>
-    <para>Google&apos;s Visualization API provides a very rich set of tools for the visualization of multi-dimensional data. In this simple example, we will show how to create a simple motion chart with the Google Visualization API using the &quot;googleVis&quot; R package. Full information on the package can be found <link xl:href="http://code.google.com/p/google-motion-charts-with-r/">here.</link>. The basic principle, as with the other examples, is to get some data from the DHIS2 database, and bring it into R, perform some minor alterations on the data to make it easier to work with, and then create the chart. In this case, we will compare ANC1,2,3 data over time and see how they are related with a motion chart.</para>
+    <para>Google&apos;s Visualization API provides a very rich set of tools for the visualization of
+      multi-dimensional data. In this simple example, we will show how to create a simple motion
+      chart with the Google Visualization API using the &quot;googleVis&quot; R package. Full
+      information on the package can be found <link
+        xl:href="http://code.google.com/p/google-motion-charts-with-r/">here.</link>. The basic
+      principle, as with the other examples, is to get some data from the DHIS2 database, and bring
+      it into R, perform some minor alterations on the data to make it easier to work with, and then
+      create the chart. In this case, we will compare ANC1,2,3 data over time and see how they are
+      related with a motion chart.</para>
     <screen>#Load some libraries
 library(RPostgreSQL)
 library(googleVis)
@@ -407,12 +473,26 @@ plot(M)</screen>
         </imageobject>
       </mediaobject>
     </screenshot>
-    <para>Using packages like <link xl:href="http://cran.r-project.org/package=brew">brew</link> or <link xl:href="http://rapache.net">Rapache</link>, these types of graphs could be easily integrated into external web sites. A fully functional version of the chart shown above can be accessed <link xl:href="http://dhis2.net/R/google-motion-chart.html">here.</link></para>
+    <para>Using packages like <link xl:href="http://cran.r-project.org/package=brew">brew</link> or
+        <link xl:href="http://rapache.net">Rapache</link>, these types of graphs could be easily
+      integrated into external web sites. A fully functional version of the chart shown above can be
+      accessed <link xl:href="http://dhis2.net/R/google-motion-chart.html">here.</link></para>
   </section>
   <section xml:id="rsetup_plr">
     <title>Using PL/R with DHIS2</title>
-    <para>The procedural language for R is an extension to the core of PostgreSQL which allows data to be passed from the database to R, where calculations in R can be performed. The data can then be passed back to the database for further processing.. In this example, we will create a function to calculate some summary statistics which do not exist by default in SQL by using R. We will then create an SQL View in DHIS2 to display the results. The advantage of utilizing R in this context is that we do not need to write any significant amount of code to return these summary statistics, but simply utilize the built-in functions of R to do the work for us. </para>
-    <para> First, you will need to install <link xl:href="http://www.joeconway.com/plr/">PL/R</link>, which is described in detail <link xl:href="http://www.joeconway.com/plr/doc/plr-install.html">here.</link>. Following the example from the PL/R site, we will create some custom aggregate functions as detailed <link xl:href="http://www.joeconway.com/plr/doc/plr-aggregate-funcs.html">here.</link>  We will create two functions, to return the median and the skewness of a range of values.</para>
+    <para>The procedural language for R is an extension to the core of PostgreSQL which allows data
+      to be passed from the database to R, where calculations in R can be performed. The data can
+      then be passed back to the database for further processing.. In this example, we will create a
+      function to calculate some summary statistics which do not exist by default in SQL by using R.
+      We will then create an SQL View in DHIS2 to display the results. The advantage of utilizing R
+      in this context is that we do not need to write any significant amount of code to return these
+      summary statistics, but simply utilize the built-in functions of R to do the work for us. </para>
+    <para> First, you will need to install <link xl:href="http://www.joeconway.com/plr/"
+      >PL/R</link>, which is described in detail <link
+        xl:href="http://www.joeconway.com/plr/doc/plr-install.html">here.</link>. Following the
+      example from the PL/R site, we will create some custom aggregate functions as detailed <link
+        xl:href="http://www.joeconway.com/plr/doc/plr-aggregate-funcs.html">here.</link> We will
+      create two functions, to return the median and the skewness of a range of values.</para>
     <para><screen>CREATE OR REPLACE FUNCTION r_median(_float8) returns float as &apos;
   median(arg1)
 &apos; language &apos;plr&apos;;
@@ -435,7 +515,11 @@ CREATE AGGREGATE skewness (
   stype = _float8,
   finalfunc = r_skewness
 );</screen></para>
-    <para>Next, we will define an SQL query which will be used to retrieve the two new aggregate functions (median and skewness) which will be calculated using R. In this case, we will just get a single indicator from the data mart at the district level and calculate the summary values based on the name of the district which the values belong to. This query is very specific, but could be easily adapted to your own database.</para>
+    <para>Next, we will define an SQL query which will be used to retrieve the two new aggregate
+      functions (median and skewness) which will be calculated using R. In this case, we will just
+      get a single indicator from the data mart at the district level and calculate the summary
+      values based on the name of the district which the values belong to. This query is very
+      specific, but could be easily adapted to your own database.</para>
     <para><screen>SELECT  ou.shortname,avg(dv.value),
 median(dv.value),skewness(dv.value) FROM aggregatedindicatorvalue dv
 INNER JOIN period p on p.periodid = dv.periodid
@@ -446,7 +530,8 @@ AND dv.level = 3
 AND dv.periodtypeid = 3
 AND p.startdate &gt;=&apos;2009-01-01&apos;
 GROUP BY ou.shortname;</screen></para>
-    <para>We can then save this query in the form of SQL View in DHIS2. A clipped version of the results are shown below. </para>
+    <para>We can then save this query in the form of SQL View in DHIS2. A clipped version of the
+      results are shown below. </para>
     <screenshot>
       <mediaobject>
         <imageobject>
@@ -454,11 +539,17 @@ GROUP BY ou.shortname;</screen></para>
         </imageobject>
       </mediaobject>
     </screenshot>
-    <para>In this simple example, we have shown how to use PL/R with the DHIS2 database and web interface to display some summary statistics using R to  perform the calculations. </para>
+    <para>In this simple example, we have shown how to use PL/R with the DHIS2 database and web
+      interface to display some summary statistics using R to perform the calculations. </para>
   </section>
   <section xml:id="rsetup_web_api">
     <title>Using this DHIS2 Web API with R</title>
-    <para>DHIS2 has a powerful Web API which can be used to integrate applications together. In this section, we will illustrate a few trivial examples of the use of the Web API, and how we can retrieve data and metadata for use in R. The Web API uses basic HTTP authentication (as described in the Web API section of this document). Using two R packages &quot;RCurl&quot; and &quot;XML&quot;, we will be able to work with the output of the API in R. In the first example, we will get some metadata from the database. </para>
+    <para>DHIS2 has a powerful Web API which can be used to integrate applications together. In this
+      section, we will illustrate a few trivial examples of the use of the Web API, and how we can
+      retrieve data and metadata for use in R. The Web API uses basic HTTP authentication (as
+      described in the Web API section of this document). Using two R packages &quot;RCurl&quot; and
+      &quot;XML&quot;, we will be able to work with the output of the API in R. In the first
+      example, we will get some metadata from the database. </para>
     <screen>#We are going to need these two libraries
 require(RCurl)
 require(XML)
@@ -477,8 +568,10 @@ data&lt;-noquote(response)
 mydata&lt;-read.table(textConnection(data),sep=&quot;,&quot;,header=T)
 head(mydata)
 </screen>
-    <para>Here, we have shown how to get some aggregate data from the DHIS2 demo database using the DHIS2&apos;s Web API.</para>
-    <para>In the next code example, we will retrieve some metadata, namely a list of data elements and their unique identifiers.</para>
+    <para>Here, we have shown how to get some aggregate data from the DHIS2 demo database using the
+      DHIS2&apos;s Web API.</para>
+    <para>In the next code example, we will retrieve some metadata, namely a list of data elements
+      and their unique identifiers.</para>
     <screen>#Get the list of data elements. Turn off paging and links
 #This site has some issues with its SSL certificate
 #so lets not verify it.
@@ -502,6 +595,7 @@ data_elements&lt;-as.data.frame(foo,
 stringsAsFactors=FALSE,row.names=1:nrow(foo))
 head(data_elements)
 </screen>
-    <para>Note that the values which we are interested in are stored as XML attributes and were parsed into two separate matrices and then combined together into a single data frame. </para>
+    <para>Note that the values which we are interested in are stored as XML attributes and were
+      parsed into two separate matrices and then combined together into a single data frame. </para>
   </section>
 </appendix>

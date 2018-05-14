@@ -1,25 +1,21 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version='1.0' encoding='UTF-8'?>
 <chapter version="5.0"
   xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
-  xmlns="http://docbook.org/ns/docbook"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:xl="http://www.w3.org/1999/xlink"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  xmlns:svg="http://www.w3.org/2000/svg"
-  xmlns:mth="http://www.w3.org/1998/Math/MathML"
-  xmlns:db="http://docbook.org/ns/docbook"
-  xml:id="dev_infrastructure">
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="dev_infrastructure">
   <title>Development Infrastructure</title>
-  <para></para>
+  <para/>
   <section xml:id="dev_inf_release_process">
     <title>Release process</title>
     <para>Checklist for release.<orderedlist>
         <listitem>
-          <para>In order to tag  the source source code with new release. First temporarily add a dependency to
-            dhis-web in the root pom.xml:<screen>&lt;module>dhis-web&lt;/module></screen>Use the mvn
-            version plugin with:</para>
+          <para>In order to tag the source source code with new release. First temporarily add a
+            dependency to dhis-web in the root
+            pom.xml:<screen>&lt;module>dhis-web&lt;/module></screen>Use the mvn version plugin
+            with:</para>
           <screen>mvn versions:set
 mvn versions:commit</screen>
           <para>This will prompt you to enter the version. Include pom-full.xml. Remove the dhis-web
@@ -68,8 +64,9 @@ tar zcvf db.tar.gz db.pgdump</screen></para>
             directory.</para>
         </listitem>
         <listitem>
-          <para>Update the version info on the play server home page at https://play.dhis2.org/. The 
-            index file is found on the play server at: <screen>/usr/share/nginx/html/index.html</screen>            
+          <para>Update the version info on the play server home page at https://play.dhis2.org/. The
+            index file is found on the play server at:
+            <screen>/usr/share/nginx/html/index.html</screen>
           </para>
         </listitem>
         <listitem>
@@ -86,6 +83,6 @@ tar zcvf db.tar.gz db.pgdump</screen></para>
         <listitem>
           <para>Write and send release email.</para>
         </listitem>
-        </orderedlist></para>
+      </orderedlist></para>
   </section>
 </chapter>

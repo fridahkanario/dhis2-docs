@@ -1,31 +1,28 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <chapter version="5.0"
-         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
-          xmlns="http://docbook.org/ns/docbook"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xs="http://www.w3.org/2001/XMLSchema"
-         xmlns:xl="http://www.w3.org/1999/xlink"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-         xmlns:svg="http://www.w3.org/2000/svg"
-         xmlns:mth="http://www.w3.org/1998/Math/MathML"
-         xmlns:db="http://docbook.org/ns/docbook"
-         xml:id="apps">
+  xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
+  xmlns="http://docbook.org/ns/docbook" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
+  xmlns:db="http://docbook.org/ns/docbook" xml:id="apps">
   <title>Apps</title>
-  <para>A packaged app is an <link xl:href="https://developer.mozilla.org/en-US/docs/Open_Web_apps_and_Web_standards">Open Web
+  <para>A packaged app is an <link
+      xl:href="https://developer.mozilla.org/en-US/docs/Open_Web_apps_and_Web_standards">Open Web
       App</link> that has all of its resources (HTML, CSS, JavaScript, app manifest, and so on)
     contained in a zip file. It can be uploaded to a DHIS2 installation directly through the user
-    interface at runtime. A packaged app is a ZIP file with an <link xl:href="http://www.w3.org/2008/webapps/manifest/">app manifest</link> in its root directory. The
-    manifest must be named <filename>manifest.webapp</filename>. A throrough description of apps can
-    be obtained <link xl:href="https://developer.mozilla.org/en-US/Apps/Quickstart"
+    interface at runtime. A packaged app is a ZIP file with an <link
+      xl:href="http://www.w3.org/2008/webapps/manifest/">app manifest</link> in its root directory.
+    The manifest must be named <filename>manifest.webapp</filename>. A throrough description of apps
+    can be obtained <link xl:href="https://developer.mozilla.org/en-US/Apps/Quickstart"
     >here</link>.</para>
   <section xml:id="apps_purpose_packaged_apps">
     <title>Purpose of packaged Apps</title>
     <para>The purpose of packaged apps is to extend the web interface of DHIS2, without the need to
       modify the source code of DHIS2 itself. A system deployment will often have custom and unique
       requirements. The apps provide a convenient extension point to the user interface. Through
-      apps, you can complement and customize the DHIS2 core functionality with custom solutions in
-      a loosely coupled and clean manner.</para>
+      apps, you can complement and customize the DHIS2 core functionality with custom solutions in a
+      loosely coupled and clean manner.</para>
     <para>Apps do not have permissions to interact directly with DHIS2 Java API. Instead, apps are
       expected to use functionality and interact with the DHIS2 services and data by utilizing the
       DHIS2 Web API.</para>
@@ -176,28 +173,26 @@ Explain all properties that are in activities." flag="done"?>activities<?oxy_com
     </note>
     <para>All the files in the project should be compressed into a standard zip archive. Note that
       the manifest.webapp file must be located on the root of the zip archive (do not include a
-      parent directory in the archive). The zip archive can then be installed into DHIS2 as you
-      will see in the next section.</para>
+      parent directory in the archive). The zip archive can then be installed into DHIS2 as you will
+      see in the next section.</para>
   </section>
   <section xml:id="apps_installing_apps">
     <title>Installing Apps into DHIS2</title>
-    <para>Apps can be installed by uploading zip file into the App Manager. In, Services →
-      Apps, click on the <emphasis role="italic">App Store</emphasis> menu item.
-      <inlinemediaobject>      
+    <para>Apps can be installed by uploading zip file into the App Manager. In, Services → Apps,
+      click on the <emphasis role="italic">App Store</emphasis> menu item. <inlinemediaobject>
         <imageobject>
-          <imagedata fileref="resources/images/apps/app-management.png" format="PNG"></imagedata>
+          <imagedata fileref="resources/images/apps/app-management.png" format="PNG"/>
         </imageobject>
-        </inlinemediaobject>
-The app can be uploaded by pressing the Browse button and after selecting the zip package,
-      the file is uploaded automatically and installed in DHIS2. You can also browse through apps
-      in the DHIS2 <link xl:href="https://www.dhis2.org/appstore">app store</link> and download apps
-      from there. The DHIS2 app store allows for app searching, reviewing, commenting, requesting
-      features, rating on the apps by the community.</para>
+      </inlinemediaobject> The app can be uploaded by pressing the Browse button and after selecting
+      the zip package, the file is uploaded automatically and installed in DHIS2. You can also
+      browse through apps in the DHIS2 <link xl:href="https://www.dhis2.org/appstore">app
+        store</link> and download apps from there. The DHIS2 app store allows for app searching,
+      reviewing, commenting, requesting features, rating on the apps by the community.</para>
   </section>
   <section xml:id="apps_launching_apps">
     <title>Launching Apps</title>
     <para>After installation, your apps will be integrated with the menu system and can be accessed
       under services and from the module overview page. It can also be accessed from the home page
-      of the apps module.  Click on an app in the list in order to launch it.</para>
+      of the apps module. Click on an app in the list in order to launch it.</para>
   </section>
 </chapter>
