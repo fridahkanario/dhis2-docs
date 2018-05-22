@@ -7,21 +7,17 @@
     xmlns:svg="http://www.w3.org/2000/svg" xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook">
     <!-- xml:id="about_user_userrole">-->
-    <title>About user
-        <?oxy_comment_start author="cecilia" timestamp="20161110T105014+0100" comment="Permissions or authorities?"?>management<?oxy_comment_end?></title>
+    <title>About user management</title>
     <para>Multiple users can access DHIS2 simultaneously and each user can have different
         authorities. You can fine-tune these authorities so that certain users can only enter data,
         while others can only generate reports.</para>
     <itemizedlist>
         <listitem>
-            <para>You
-                <?oxy_comment_start author="cecilia" timestamp="20161111T134124+0100" comment="review wording &quot;you can&quot;
-"?>can<?oxy_comment_end?>
-                create as many users, user roles and user groups as you need.</para>
+            <para>You can create as many users, user roles and user groups as you need.</para>
         </listitem>
         <listitem>
-            <para>You can assign specific authorities to each
-                <?oxy_comment_start author="cecilia" timestamp="20161107T150628+0100" comment="Directly on the user or via a user role?"?>user<?oxy_comment_end?>.</para>
+            <para>You can assign specific authorities to user groups or individual users via user
+                roles.</para>
         </listitem>
         <listitem>
             <para>You can create multiple user roles each with their own authorities.</para>
@@ -31,10 +27,8 @@
                 authorities.</para>
         </listitem>
         <listitem>
-            <para>You can assign each user to
-                <?oxy_comment_start author="cecilia" timestamp="20161107T145705+0100" comment="The only thing that happens when you assign a user to an org unit? 
-You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
-                units. Then the user can enter data for the assigned organisation units.</para>
+            <para>You can assign each user to organisation units. Then the user can enter data for
+                the assigned organisation units.</para>
         </listitem>
     </itemizedlist>
     <table frame="all">
@@ -101,8 +95,7 @@ You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
                         <para>User group</para>
                     </entry>
                     <entry align="left" valign="top">
-                        <para>A group of
-                            <?oxy_comment_start author="cecilia" timestamp="20161115T152054+0100" comment="A group of user accounts?"?>users<?oxy_comment_end?></para>
+                        <para>A group of users</para>
                     </entry>
                     <entry align="left" valign="top">
                         <para>Kenya staff</para>
@@ -114,8 +107,7 @@ You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
         </tgroup>
     </table>
     <para>You manager users, user roles and user groups in the <emphasis role="bold"
-            >Users</emphasis>
-        <?oxy_comment_start author="cecilia" timestamp="20161110T134939+0100" comment="Correct that you can&apos;t translate the user objects?"?>app<?oxy_comment_end?>.</para>
+            >Users</emphasis> app.</para>
     <table frame="all">
         <title>Objects in the Users app</title>
         <tgroup cols="2">
@@ -137,8 +129,8 @@ You don&apos;t have to do it?"?>organisation<?oxy_comment_end?>
                         <para>User</para>
                     </entry>
                     <entry align="left" valign="top">
-                        <para>Create, edit, clone, disable, assign search organisation units,
-                            display by organisation unit, delete and show details</para>
+                        <para>Create, edit, invite, clone, disable, display by organisation unit,
+                            delete and show details</para>
                     </entry>
                 </row>
                 <row>
@@ -205,13 +197,15 @@ Review the term&quot;associated&quot;, might be better with &quot;assigned&quot;
         </itemizedlist>
         <para>An important part of user management is to control which users are allowed to create
             new users with which authorities. In DHIS2, you can control which users are allowed to
-            perform this task. The key principle is that a user can only grant authorities and
-            access to data sets that the user itself has access to. The number of users at national,
-            province and district level are often relatively few and can be created and managed by
-            the system administrators. If a large proportion of the facilities are entering data directly
-            into the system, the number of users might become unwieldy. It is recommended to
-            delegate and decentralize this task to the district officers, it  will make the process
-            more efficient and support the facility users better.</para>
+            perform this task. The key principle is that a user
+            <?oxy_comment_start author="hendrik" timestamp="20180515T163934+0200" comment="Currently not true. A user role manager can also create a new role with ALL authority"?>can
+            only grant authorities<?oxy_comment_end?> and access to data sets that the user itself
+            has access to. The number of users at national, province and district level are often
+            relatively few and can be created and managed by the system administrators. If a large
+            proportion of the facilities are entering data directly into the system, the number of
+            users might become unwieldy. It is recommended to delegate and decentralize this task to
+            the district officers, it will make the process more efficient and support the facility
+            users better.</para>
     </section>
     <section>
         <title>About user roles</title>
