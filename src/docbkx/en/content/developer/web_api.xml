@@ -13191,7 +13191,7 @@ interval=WEEK" -u admin:district</screen>
             <row>
               <entry>ouMode</entry>
               <entry>The mode of selecting organisation units, can be SELECTED | CHILDREN |
-                DESCENDANTS | ACCESSIBLE | ALL. Default is SELECTED, which refers to the selected
+                DESCENDANTS | ACCESSIBLE | CAPTURE | ALL. Default is SELECTED, which refers to the selected
                 organisation units only. See table below for explanations.</entry>
             </row>
             <row>
@@ -13287,6 +13287,11 @@ interval=WEEK" -u admin:district</screen>
                 children, i.e. all organisation units in the subhierarchy. Will fall back to data
                 capture organisation units associated with the current user if the former is not
                 defined.</entry>
+            </row>
+             <row>
+              <entry>CAPTURE</entry>
+              <entry>The data capture organisation units associated with the current user and all
+                children, i.e. all organisation units in the subhierarchy.</entry>
             </row>
             <row>
               <entry>ALL</entry>
