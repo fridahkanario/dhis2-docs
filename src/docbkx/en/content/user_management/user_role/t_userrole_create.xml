@@ -41,34 +41,12 @@ For SME: Must the name be unique?"?><emphasis
             <para>Enter a <emphasis role="bold">Description</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>In the <emphasis role="bold">Data sets</emphasis> section, double-click the data
-                sets you want the user role to have access to.</para>
-        </listitem>
-        <listitem>
-            <para>In the <emphasis role="bold">Programs</emphasis> section, double-click the
-                <?oxy_comment_start author="cecilia" timestamp="20161110T163046+0100" comment="Which type of access? read and write?"?>programs<?oxy_comment_end?>
-                you want the user role to have access to.</para>
-        </listitem>
-        <listitem>
-            <para><emphasis role="bold">Authorities</emphasis> section, double-click the authorities
-                you want to give to the user role.</para>
+            <para>In the <emphasis role="bold">Authorities</emphasis> section, select the
+                authorities you want to give to the user role. You can also use the filter inputs
+                above the authority section to search for a specific authority.</para>
         </listitem>
         <listitem>
             <para>Click <emphasis role="bold">Add</emphasis>.</para>
         </listitem>
     </orderedlist>
-    <tip>
-        <para>You can select multiple data sets, programs or
-            <?oxy_comment_start author="cecilia" timestamp="20161110T172105+0100" comment="Review tip, verify that it is inline with the Mtn app."?>authorities<?oxy_comment_end?>:</para>
-        <itemizedlist>
-            <listitem>
-                <para>One by one: press the Ctrl key and click the items one by one, then click the
-                    right arrow.</para>
-            </listitem>
-            <listitem>
-                <para>In a series: press the Shift key and select the first and last item in the
-                    series, then click the right arrow.</para>
-            </listitem>
-        </itemizedlist>
-    </tip>
 </section>
