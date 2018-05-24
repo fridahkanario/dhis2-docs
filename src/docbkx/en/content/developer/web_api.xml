@@ -12337,7 +12337,7 @@ interval=WEEK" -u admin:district</screen>
           </note></para>
         <para>For getting the IDs for <emphasis role="italic">relationship</emphasis>, <emphasis
             role="italic">attributes</emphasis> you can have a look at the respective resources
-            <emphasis role="italic">relationshipTypes</emphasis>,, <emphasis role="italic"
+            <emphasis role="italic">relationshipTypes</emphasis>, <emphasis role="italic"
             >trackedEntityAttributes</emphasis>. To create a tracked entity instance you must use
           the HTTP <emphasis role="bold">POST</emphasis> method. You can post the payload the the
           following URL:</para>
