@@ -63,7 +63,9 @@ Revise phrase to &quot;A pivot table arranges data...&quot; = correct?"?>can
           <listitem>
             <para>A pivot table can't contain more than the maximum number of analytic records which
               have been specified in the system settings. The maximum number of records could also
-              be constrained by the maximum RAM which is available to your browser. Consider making
+              be constrained by the maximum RAM which is available to your browser. You will be prompted
+              with a warning if your requested table exceeds a particular size. From this prompt,
+              you can either cancel the request or continue building the table. Consider making
               smaller tables instead of one table which displays all of your data elements and
               indicators together.</para>
           </listitem>
