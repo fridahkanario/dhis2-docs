@@ -13986,6 +13986,27 @@ interval=WEEK" -u admin:district</screen>
     ] }
   ]
 }</screen>
+      </section>
+      <section>
+        <para>From 2.30 you can also use GeoJson to store any kind of geometry on your event. An
+          example payload using GeoJson instead of the former latitude and longitude properties can
+          be seen
+          here:<screen>{
+  &quot;program&quot;: &quot;eBAyeGv0exc&quot;,
+  &quot;orgUnit&quot;: &quot;DiszpKrYNg8&quot;,
+  &quot;eventDate&quot;: &quot;2013-05-17&quot;,
+  &quot;status&quot;: &quot;COMPLETED&quot;,
+  &quot;storedBy&quot;: &quot;admin&quot;,
+  &quot;geometry&quot;: {
+    &quot;type&quot;: "POINT",
+    &quot;coordinates&quot;: [59.8, 10.9]
+  },
+  &quot;dataValues&quot;: [
+    { &quot;dataElement&quot;: &quot;qrur9Dvnyt5&quot;, &quot;value&quot;: &quot;22&quot; },
+    { &quot;dataElement&quot;: &quot;oZg33kd9taw&quot;, &quot;value&quot;: &quot;Male&quot; },
+    { &quot;dataElement&quot;: &quot;msodh3rEMJa&quot;, &quot;value&quot;: &quot;2013-05-18&quot; }
+  ]
+}</screen></para>
         <para>As part of the import summary you will also get the identifier <emphasis role="italic"
             >reference</emphasis> to the event you just sent, together with a <emphasis
             role="italic">href</emphasis> element which points to the server location of this event.
@@ -14034,8 +14055,9 @@ interval=WEEK" -u admin:district</screen>
                 <entry>date</entry>
                 <entry>false</entry>
                 <entry/>
-                <entry>The date of when the event is completed. If not provided, the current date is selected as the event completed date</entry>
-            </row>
+                <entry>The date of when the event is completed. If not provided, the current date is
+                  selected as the event completed date</entry>
+              </row>
               <row>
                 <entry>status</entry>
                 <entry>enum</entry>
