@@ -677,7 +677,7 @@ Whenever redis is enabled, DHIS2 will automatically assign one of the running in
  <screen>
 # Redis Configuration
 
-//Mandatory if redis has to be enabled.
+# Mandatory if redis has to be enabled.
 redis.enabled = true
 
 redis.host = 193.158.100.111
@@ -686,12 +686,11 @@ redis.port = 6379
 
 redis.password = yourpassword
 
-//Optional. Defaults to false.
+# Optional, defaults to false.
 redis.use.ssl = false
 
-//Optional. Defaults to 2 minutes.
+# Optional, defaults to 2 minutes.
 leader.time.to.live.minutes=4
-
  </screen>
 
 
