@@ -10,19 +10,22 @@
     xmlns:svg="http://www.w3.org/2000/svg"
     xmlns:mth="http://www.w3.org/1998/Math/MathML"
     xmlns:db="http://docbook.org/ns/docbook"    >
-    <title>View users by organisation unit</title>
+    <title>Filter users by organisation unit</title>
     <para>You can view all users that have been assigned to a particular organisation unit.</para>
     <orderedlist>
         <listitem>
             <para>Open the <emphasis role="bold">Users</emphasis> app and click <emphasis
-                    role="bold">User by organisation unit</emphasis>.</para>
+                    role="bold">Users</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>In the left-hand organisation unit tree, click an organisation unit.</para>
-            <?oxy_comment_start author="cecilia" timestamp="20161111T145341+0100" comment="Reword para."?>
-            <para>A list of users which have been assigned to this organisation unit is
-                displayed.</para>
-            <?oxy_comment_end?>
+            <para>Above the user list, click on the <emphasis role="bold">Organisation
+                    Unit</emphasis> filter input.</para>
+        </listitem>
+        <listitem>
+            <para>A popup will appear in which you can select the organisation units you would like
+                to filter by.</para>
         </listitem>
     </orderedlist>
+    <para>The list of users will be filtered to only include users which have been assigned
+                to the selected organisation units.</para>
 </section>
