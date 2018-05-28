@@ -692,9 +692,6 @@ redis.use.ssl = false
 # Optional, defaults to 2 minutes.
 leader.time.to.live.minutes=4
  </screen>
-
-
-
  </para>
 
     </section>
