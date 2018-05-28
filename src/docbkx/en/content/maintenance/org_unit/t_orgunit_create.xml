@@ -140,6 +140,19 @@ A user can only register data for a data set if that data set is assigned to the
             </note>
         </listitem>
         <listitem>
+            <para>If applicable, select <emphasis role="bold">Programs</emphasis> and assign
+                <?oxy_comment_start author="cecilia" timestamp="20161205T120116+0100" comment="What is the purpose of having them here?
+A user can only register data for a data set if that data set is assigned to the same org unit as the user." flag="done"?>them<?oxy_comment_end?>.</para>
+            <note>
+                <para>You control whether a user should be able to assign programs to an
+                    organisation unit in the <emphasis role="bold">System Settings</emphasis>
+                    app:</para>
+                <para>Open the <emphasis role="bold">System Settings</emphasis> app, click <emphasis
+                        role="bold">Access</emphasis> and select <emphasis role="bold">Allow
+                        assigning object to related objects during add or update</emphasis>.</para>
+            </note>
+        </listitem>
+        <listitem>
             <para>If applicable, enter custom attributes values, for example <emphasis role="bold"
                     >HR identifier</emphasis>.</para>
             <note>
