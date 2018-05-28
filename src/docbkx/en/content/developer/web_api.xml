@@ -758,7 +758,7 @@ LAST_FINANCIAL_YEAR, LAST_5_FINANCIAL_YEARS</screen>
               <entry>Case sensitive string, not match anywhere</entry>
             </row>
             <row>
-              <entry>$ike</entry>
+              <entry>$like</entry>
               <entry>string</entry>
               <entry>true</entry>
               <entry>Case sensitive string, match start</entry>
