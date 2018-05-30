@@ -18,8 +18,8 @@
                     role="bold">User</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>In the list, click the relevant user and <?oxy_comment_start author="cecilia" timestamp="20161111T145802+0100" comment="Which app opens??"?>select<?oxy_comment_end?>
-                <emphasis role="bold">Profile</emphasis>.</para>
+            <para>In the list, click the menu icon of the relevant user and select <emphasis
+                    role="bold">Profile</emphasis>.</para>
         </listitem>
     </orderedlist>
 </section>

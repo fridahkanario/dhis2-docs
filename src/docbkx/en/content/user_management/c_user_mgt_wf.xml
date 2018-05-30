@@ -27,20 +27,21 @@
             <para>Assign user roles to the users.</para>
         </listitem>
         <listitem>
-            <?oxy_comment_start author="cecilia" timestamp="20170412T092659+0200" comment="At next release, verify these two steps"?>
             <para>Assign the users to organisation units.</para>
         </listitem>
         <listitem>
-            <para>Assign data sets to the user role.<?oxy_comment_end?></para>
+            <para>(Optional) Group users in user groups.</para>
         </listitem>
         <listitem>
-            <para>(Optional) Group users in user groups.</para>
+            <para>Share datasets with users or user-groups via the Sharing Dialog in Data set
+                management section of the Maintenance app</para>
         </listitem>
     </orderedlist>
     <tip>
         <para>For users to be able to enter data, you must
             <?oxy_comment_start author="cecilia" timestamp="20161114T111602+0100" comment="Or assign to?"?>add<?oxy_comment_end?>
-            them to both a data set and an organisational unit
-            <?oxy_comment_start author="cecilia" timestamp="20161110T141614+0100" comment="Organisation unit or organisation unit level?"?>level<?oxy_comment_end?>.</para>
+            them to an organisational unit
+            <?oxy_comment_start author="cecilia" timestamp="20161110T141614+0100" comment="Organisation unit or organisation unit level?"?>level<?oxy_comment_end?>
+            and share a dataset with them.</para>
     </tip>
 </section>

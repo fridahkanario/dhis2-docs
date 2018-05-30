@@ -393,8 +393,27 @@ Kolla med mArkus"?>
                                         <para><emphasis role="bold">Message template to send</emphasis></para>
                                     </entry>
                                     <entry align="left" valign="top">
-                                        <para>Send Message triggers a notification based on provided message template. This action will be taken at event/enrollment 
-                                            <emphasis role="bold">completion.</emphasis> </para>
+                                        <para>Send Message triggers a notification based on provided message template. This action will be taken when ever there is a change in <emphasis role="bold">data value</emphasis>.
+                                            However this behaviour can be controled by providing event/enrollment status in program rule expression for example.
+                                            <screen>V{event_status} == 'COMPLETED'</screen>
+                                        </para>
+                                        <para>Message template will be parsed and variables will be substituted with actual values.</para>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Schedule Message
+                                        </emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para><emphasis role="bold">Message template to send</emphasis></para>
+                                        <para><emphasis role="bold">Data field which contains expression to evaluate the date which notification should be sent at.                               
+                                        </emphasis></para>
+                                    </entry>
+                                    <entry align="left" valign="top">
+                                        <para>Schedule Message will schedule notification at date provided by Expression in the data field. Sample expression is given below
+                                            <screen>d2:addDays( '2018-04-20', '2' )</screen>
+                                        </para>
                                         <para>Message template will be parsed and variables will be substituted with actual values.</para>
                                     </entry>
                                 </row>
