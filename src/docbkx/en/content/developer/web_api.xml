@@ -10114,7 +10114,7 @@ interval=WEEK" -u admin:district</screen>
     <title>System resource</title>
     <para>The system resource provides you with convenient information and functions. The system
       resource can be found at <emphasis role="italic">/api/system</emphasis>. </para>
-    <section>
+    <section xml:id="webapi_system_resource_generate_identifiers">
       <title>Generate identifiers</title>
       <para>To generate valid, random DHIS2 identifiers you can do a GET request to this
         resource:</para>
@@ -10144,7 +10144,7 @@ interval=WEEK" -u admin:district</screen>
         </listitem>
       </itemizedlist>
     </section>
-    <section>
+    <section xml:id="webapi_system_resource_view_system_information">
       <title>View system information</title>
       <para>To get information about the current system you can do a GET request to this URL:</para>
       <screen>/api/26/system/info</screen>
@@ -10182,7 +10182,7 @@ interval=WEEK" -u admin:district</screen>
         a GET request to the below URL. JSON and JSONP response formats are supported:
         <screen>/api/26/system/context</screen></para>
     </section>
-    <section>
+    <section xml:id="webapi_system_resource_check_username_password">
       <title>Check if username and password combination is correct</title>
       <para>To check if some user credentials (a username and password combination) is correct you
         can make a <emphasis role="italic">GET</emphasis> request to the following resource using
@@ -10227,13 +10227,14 @@ interval=WEEK" -u admin:district</screen>
         </tgroup>
       </table>
     </section>
-    <section>
+    <section xml:id="webapi_system_resource_view_async_task_status">
       <title>View asynchronous task status</title>
-      <para>Several tasks which typically take a significant time to complete can be performed
-        asynchronously. After initiating an async task you can poll the status through the <emphasis
-          role="italic">system/tasks</emphasis> resource by suppling the task category of interest. </para>
+      <para>Tasks which often take a long time to complete can be performed asynchronously. After
+        initiating an async task you can poll the status through the <emphasis role="italic"
+          >system/tasks</emphasis> resource by suppling the task category and the task identfier of
+        interest. </para>
       <para>When polling for the task status you need to authenticate as the same user which
-        initiated the task. The following task categories are supported.</para>
+        initiated the task. The following task categories are supported:</para>
       <para>
         <table frame="all">
           <title>Task categories</title>
@@ -10279,84 +10280,125 @@ interval=WEEK" -u admin:district</screen>
           </tgroup>
         </table>
       </para>
-      <para>You can poll tasks through a GET request to the system tasks
-        resource:<screen>/api/26/system/tasks/{task-category-id}</screen></para>
-      <para>A request to poll for the status of a data value import task looks like
-        this:<screen>/api/26/system/tasks/DATAVALUE_IMPORT</screen></para>
-      <para>The response will provide information about the status, such as the notification level,
-        category, time and status. The completed property indicates whether the process is
-        considered to be
-        complete.<screen>[
-    {
-        &quot;uid&quot;: &quot;hpiaeMy7wFX&quot;,
-        &quot;level&quot;: &quot;INFO&quot;,
-        &quot;category&quot;: &quot;DATAVALUE_IMPORT&quot;,
-        &quot;time&quot;: &quot;2015-09-02T07:43:14.595+0000&quot;,
-        &quot;message&quot;: &quot;Import done&quot;,
-        &quot;completed&quot;: true
-    }
-]</screen></para>
-      <para>
-        New in 2.29 is that each asynchronous task is assigned an id. Each time you initiate a new task a new JobConfiguration
-        object is created and the id assigned can be used to view the status of the task. You can poll the task through a GET
-        request to the system tasks resource:<screen>/api/29/system/tasks/{task-category-id}/{task-id}</screen>
-
-        Since we have added id's for system tasks you can now request a list of all tasks in the system, or all tasks in one
-        category. Requesting all tasks can be achieved with a GET request to the system tasks resouce:<screen>/api/29/system/tasks</screen>
-        <screen>[
-    {
-      "EVENT_IMPORT": {},
-      "DATA_STATISTICS": {},
-      "RESOURCE_TABLE": {},
-      "FILE_RESOURCE_CLEANUP": {},
-      "METADATA_IMPORT": {},
-      "CREDENTIALS_EXPIRY_ALERT": {},
-      "SMS_SEND": {},
-      "MOCK": {},
-      "ANALYTICSTABLE_UPDATE": {},
-      "COMPLETE_DATA_SET_REGISTRATION_IMPORT": {},
-      "DATAVALUE_IMPORT": {},
-      "DATA_SET_NOTIFICATION": {},
-      "DATA_INTEGRITY": {
-        "OB1qGRlCzap": [
-          {
-          "uid": "LdHQK0PXZyF",
-          "level": "INFO",
-          "category": "DATA_INTEGRITY",
-          "time": "2018-03-26T15:02:32.171",
-          "message": "Data integrity checks completed in 38.31 seconds.",
-          "completed": true
-          }
-        ]
-      },
-      "PUSH_ANALYSIS": {},
-      "MONITORING": {},
-      "VALIDATION_RESULTS_NOTIFICATION": {},
-      "REMOVE_EXPIRED_RESERVED_VALUES": {},
-      "DATA_SYNC": {},
-      "SEND_SCHEDULED_MESSAGE": {},
-      "DATAVALUE_IMPORT_INTERNAL": {},
-      "PROGRAM_NOTIFICATIONS": {},
-      "META_DATA_SYNC": {},
-      "ANALYTICS_TABLE": {},
-      "PREDICTOR": {}
-    }
-]</screen>
-
-        By specifying category you can get a list of tasks for one category like this: <screen>/api/29/system/tasks/DATA_INTEGRITY</screen>
-        <screen>[
-    {
-      "uid": "LdHQK0PXZyF",
-      "level": "INFO",
-      "category": "DATA_INTEGRITY",
-      "time": "2018-03-26T15:02:32.171",
-      "message": "Data integrity checks completed in 38.31 seconds.",
-      "completed": true
-    }
-]</screen>
-      </para>
+      <para>Each asynchronous task is automatically assigned an identifier which can be used to
+        monitor the status of the task. This task identifier is returned by the API when you initate
+        an async task through the various async-enabled endpoints.</para>
+      <section>
+        <title>Monitoring a task</title>   
+        <para>You can poll the task status through a GET request to the
+          system tasks resource like this:<screen>/api/29/system/tasks/{task-category-id}/{task-id}</screen></para>
+        <para>An example request may look like this:
+          <screen>/api/29/system/tasks/DATAVALUE_IMPORT/j8Ki6TgreFw</screen></para>
+        <para>The response will provide information about the status, such as the notification
+          level, category, time and status. The <emphasis>completed</emphasis> property indicates
+          whether the process is considered to be
+          complete.<screen>[{
+    &quot;uid&quot;: &quot;hpiaeMy7wFX&quot;,
+    &quot;level&quot;: &quot;INFO&quot;,
+    &quot;category&quot;: &quot;DATAVALUE_IMPORT&quot;,
+    &quot;time&quot;: &quot;2015-09-02T07:43:14.595+0000&quot;,
+    &quot;message&quot;: &quot;Import done&quot;,
+    &quot;completed&quot;: true
+}]</screen></para>
+      </section>
+      <section>
+        <title>Monitoring all tasks for a category</title>
+        <para>You can poll all tasks for a specific category through a GET request to the system tasks
+          resource:<screen>/api/26/system/tasks/{task-category-id}</screen></para>
+        <para>An example equest to poll for the status of data value import tasks looks like
+          this:<screen>/api/26/system/tasks/DATAVALUE_IMPORT</screen></para>
+      </section>
+      <section>
+        <title>Monitor all tasks</title>
+      
+        <para>
+          You can request a list of all currently running tasks in the system with a GET request to the system tasks
+          resource:<screen>/api/29/system/tasks</screen></para>
+        <para> The response will look similar to this:
+          <screen>[{
+    "EVENT_IMPORT": {},
+    "DATA_STATISTICS": {},
+    "RESOURCE_TABLE": {},
+    "FILE_RESOURCE_CLEANUP": {},
+    "METADATA_IMPORT": {},
+    "CREDENTIALS_EXPIRY_ALERT": {},
+    "SMS_SEND": {},
+    "MOCK": {},
+    "ANALYTICSTABLE_UPDATE": {},
+    "COMPLETE_DATA_SET_REGISTRATION_IMPORT": {},
+    "DATAVALUE_IMPORT": {},
+    "DATA_SET_NOTIFICATION": {},
+    "DATA_INTEGRITY": {
+        "OB1qGRlCzap": [{
+            "uid": "LdHQK0PXZyF",
+            "level": "INFO",
+            "category": "DATA_INTEGRITY",
+            "time": "2018-03-26T15:02:32.171",
+            "message": "Data integrity checks completed in 38.31 seconds.",
+            "completed": true
+        }]
+    },
+    "PUSH_ANALYSIS": {},
+    "MONITORING": {},
+    "VALIDATION_RESULTS_NOTIFICATION": {},
+    "REMOVE_EXPIRED_RESERVED_VALUES": {},
+    "DATA_SYNC": {},
+    "SEND_SCHEDULED_MESSAGE": {},
+    "DATAVALUE_IMPORT_INTERNAL": {},
+    "PROGRAM_NOTIFICATIONS": {},
+    "META_DATA_SYNC": {},
+    "ANALYTICS_TABLE": {},
+    "PREDICTOR": {}
+}]</screen>
+        </para>
+      </section>
     </section>
-    <section>
+      <section>
+        <title>View asynchronous task summaries</title>
+        <para>The task summaries resource allows you to retrieve a summary of an asynchronous task
+        invocation. You need to specify the category and optionally the identifier of the task. The
+        task identifier can be retrieved from the response of the API request which initated the
+        asynchronous task.</para>
+      <para>To retrieve the summary of a specific task you can issue a request
+        to:<screen>/api/29/system/taskSummaries/{task-category-id}/{task-id}</screen></para>
+      <para>An example request might look like
+        this:<screen>/api/29/system/taskSummaries/DATAVALUE_IMPORT/k72jHfF13J1</screen></para>
+      <para>The response will look similar to
+        this:<screen>{
+    "responseType": "ImportSummary",
+    "status": "SUCCESS",
+    "importOptions": {
+        "idSchemes": {},
+        "dryRun": false,
+        "async": true,
+        "importStrategy": "CREATE_AND_UPDATE",
+        "mergeMode": "REPLACE",
+        "reportMode": "FULL",
+        "skipExistingCheck": false,
+        "sharing": false,
+        "skipNotifications": false,
+        "datasetAllowsPeriods": false,
+        "strictPeriods": false,
+        "strictCategoryOptionCombos": false,
+        "strictAttributeOptionCombos": false,
+        "strictOrganisationUnits": false,
+        "requireCategoryOptionCombo": false,
+        "requireAttributeOptionCombo": false,
+        "skipPatternValidation": false
+    },
+    "description": "Import process completed successfully",
+    "importCount": {
+        "imported": 0,
+        "updated": 431,
+        "ignored": 0,
+        "deleted": 0
+    },
+    "dataSetComplete": "false"
+}</screen></para>
+      <para>You might also retrieve import summaries for multiple tasks of a specific category with
+        a request like this:<screen>/api/29/system/taskSummaries/{task-category-id}</screen></para>
+      </section>
+    <section xml:id="webapi_system_resource_get_appearance_information">
       <title>Get appearance information</title>
       <para>You can retrieve the available flag icons in JSON format with a GET
         request:<screen>/api/26/system/flags</screen></para>
