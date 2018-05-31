@@ -5748,7 +5748,73 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
       <para>Get all tracked entity instance audits of type READ with startDate=2018-03-01 and
         endDate=2018-04-24 in a page size of 5:</para>
       <screen>api/27/audits/trackedEntityInstance.json?startDate=2018-03-01&amp;endDate=2018-04-24&amp;auditType=READ&amp;pageSize=5</screen>      
-    </section>  
+    </section>
+    <section xml:id="webapi_enrollment_audits">
+      <title>Enrollment audits</title>
+      <para>Once auditing is enabled for enrollments (<emphasis role="bold">by setting allowAuditLog
+          of tracker programs to true</emphasis>), all read operations are logged. The endpoint for
+        accessing audit logs is api/audits/enrollment. Below are available parameters to interact
+        with this endpoint.</para>
+      <para>
+        <table frame="all">
+          <title>Enrollment audit query parameters</title>
+          <tgroup cols="3">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="newCol2" colnum="2" colwidth="1*"/>
+            <colspec colname="c2" colnum="3" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>Parameter</entry>
+                <entry>Option</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>en</entry>
+                <entry>Enrollment</entry>
+                <entry>One or more tracked entity instance idenitifiers</entry>
+              </row>
+              <row>
+                <entry>user</entry>
+                <entry>User</entry>
+                <entry>One or more user identifiers</entry>
+              </row>
+              <row>
+                <entry>startDate</entry>
+                <entry>Start date</entry>
+                <entry>Start date for audit filtering in yyyy-mm-dd format.</entry>
+              </row>
+              <row>
+                <entry>endDate</entry>
+                <entry>End date</entry>
+                <entry>End date for audit filtering in yyyy-mm-dd format.</entry>
+              </row>
+              <row>
+                <entry>skipPaging</entry>
+                <entry>false | true</entry>
+                <entry>Turn paging on / off.</entry>
+              </row>
+              <row>
+                <entry>page</entry>
+                <entry>1 (default)</entry>
+                <entry>Specific page to ask for.</entry>
+              </row>
+              <row>
+                <entry>pageSize</entry>
+                <entry>50 (default)</entry>
+                <entry>Page size.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </para>
+      <para>Get all enrollment audits with startDate=2018-03-01 and endDate=2018-04-24 in a page
+        size of 5:</para>
+      <screen>api/audits/enrollment.json?startDate=2018-03-01&amp;endDate=2018-04-24&amp;pageSize=5</screen>
+      <para>Get all enrollment audits for user admin</para>
+      <screen>api/audits/enrollment.json?user=admin</screen>
+    </section>
     <section>
       <title>Data approval audits</title>
       <para>The endpoint for data approval audits is located at /api/audits/dataApproval, and the
