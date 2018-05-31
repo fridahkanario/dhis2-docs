@@ -14602,6 +14602,33 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
       </section>
     </section>
 
+    <section>
+      <title>Event grid query</title>
+      <para>In addition to the above event query end point, there is an event grid query end point
+        where a more compact "grid" format of events are returned. This is possible by interacting
+        with /api/events/query.json|xml|xls|csv endpoint. <screen>/api/26/events/query</screen></para>
+      <para>Most of the query parameters mentioned in event querying and reading section above are
+        valid here. However, since the grid to be returned comes with specific set of columns that
+        apply to all rows (events), it is mandatory to specifiy a program stage. It is not possible
+        to mix events from different programs or program stages in the return.</para>
+      <para>Returning events from a single program stage, also opens up for new functionality - for
+        example sorting and searching events based on their data element values. api/events/query has
+        support for this. Below are some examples</para>
+      <para>A query to return an event grid containing only selected data elemens for a program
+        stage<screen>/api/28/events/query.json?orgUnit=DiszpKrYNg8&amp;programStage=Zj7UnCAulEk&amp;<emphasis role="bold">dataElement=qrur9Dvnyt5,fWIAEtYVEGk,K6uUAvq500H</emphasis>&amp;order=lastUpdated:desc&amp;pageSize=50&amp;page=1&amp;totalPages=true</screen></para>
+      <para>A query to return an event grid containing all data elements of a program
+        stage<screen>/api/28/events/query.json?orgUnit=DiszpKrYNg8&amp;programStage=Zj7UnCAulEk&amp;<emphasis role="bold">includeAllDataElements=true</emphasis></screen></para>
+      <para>A query to filter events based on data element
+        value<screen>/api/28/events/query.json?orgUnit=DiszpKrYNg8&amp;programStage=Zj7UnCAulEk&amp;<emphasis role="bold">filter=qrur9Dvnyt5:GT:20:LT:50</emphasis></screen></para>
+      <para>In addition to the filtering, the above example also illustrates one thing: the fact that
+        there are no data elements mentioned to be returned in the grid. When this happens, the system
+        defaults back to return only those data elements marked "Display in report" under program
+        stage configuration.</para>
+      <para>We can also extend the above query to return us a grid sorted (asc|desc) based on data
+        element
+        value<screen>/api/28/events/query.json?orgUnit=DiszpKrYNg8&amp;programStage=Zj7UnCAulEk&amp;filter=qrur9Dvnyt5:GT:20:LT:50&amp;<emphasis role="bold">order=qrur9Dvnyt5:desc</emphasis></screen></para>
+    </section>
+    
     <section xml:id="webapi_tei_update_strategies">
       <title>Update strategies</title>
       <para>Two update strategies for all 3 tracker endpoints are supported: enrollment and event
