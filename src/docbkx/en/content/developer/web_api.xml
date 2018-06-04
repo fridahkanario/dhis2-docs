@@ -1969,6 +1969,37 @@ rabbitmq.connection-timeout = 60000</screen></para>
         <emphasis>UPDATE</emphasis> its a patch containing the updates that are happening on that
       object.</para>
   </section>
+  <section>
+    <title>Kafka integration</title>
+    <para>Kafka integration was added in 2.30 and is currently supported for doing bulk imports of
+      tracker data (tracked entities, enrollments, events), to integrate with kafka you need to
+      first install and configure kafka (see <link xlink:href="https://kafka.apache.org/"
+        xmlns:xlink="http://www.w3.org/1999/xlink"/> for more information), then update your
+      "dhis.conf" with at least the "<emphasis>kafka.bootstrap-servers</emphasis>" key, an example
+      can be seen below (only <emphasis>bootstrap-servers</emphasis> is required, the rest is just
+      to show the
+      defaults):<screen>kafka.bootstrap-servers = localhost:9092
+kafka.client-id = dhis2
+kafka.retries = 10
+kafka.poll-records = 100</screen></para>
+    <para>After adding this, you will need to create the topics that you are interested in using,
+      below we will show how that is done for tracker data (the only currently supported
+      topics).</para>
+    <section>
+      <title>Kafka tracker integration</title>
+      <para>For doing bulk imports of tracker data, 3 new endpoints has been
+        created:<screen>/api/trackedEntityInstances/queue
+/api/enrollments/queue
+/api/events/queue</screen></para>
+      <para>You can use these endpoints exactly as you would with the normal tracker endpoint, the
+        only difference is that they are all asynchronous, and you will need to get the import
+        summaries using normal task summary approach. You will also need to schedule a "Kafka Job"
+        in the scheduler app (there is one defined already, but you might want to change the time,
+        or also add more as the default will only run once a day). Depending on what you have
+        defined in the "kafka.poll-records"  key, 100 or more objects will be handled each time the
+        scheduled job is run.</para>
+    </section>
+  </section>
   <section xml:id="webapi_csv_metadata_import">
     <title>CSV metadata import</title>
     <para>DHIS2 supports import of metadata in the CSV format. Columns which are not required can
