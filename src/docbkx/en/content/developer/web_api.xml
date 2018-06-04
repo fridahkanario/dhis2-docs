@@ -1969,7 +1969,7 @@ rabbitmq.connection-timeout = 60000</screen></para>
         <emphasis>UPDATE</emphasis> its a patch containing the updates that are happening on that
       object.</para>
   </section>
-  <section>
+  <section xml:id="webapi_kafka_integration">
     <title>Kafka integration</title>
     <para>Kafka integration was added in 2.30 and is currently supported for doing bulk imports of
       tracker data (tracked entities, enrollments, events), to integrate with kafka you need to
@@ -1988,9 +1988,9 @@ kafka.poll-records = 100</screen></para>
     <section>
       <title>Kafka tracker integration</title>
       <para>For doing bulk imports of tracker data, 3 new endpoints has been
-        created:<screen>/api/trackedEntityInstances/queue
-/api/enrollments/queue
-/api/events/queue</screen></para>
+        created:<screen>/api/trackedEntityInstances/queue (topic: bulk-tracked-entities)
+/api/enrollments/queue (topic: bulk-enrollments)
+/api/events/queue (topic: bulk-events)</screen></para>
       <para>You can use these endpoints exactly as you would with the normal tracker endpoint, the
         only difference is that they are all asynchronous, and you will need to get the import
         summaries using normal task summary approach. You will also need to schedule a "Kafka Job"
