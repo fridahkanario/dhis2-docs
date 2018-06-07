@@ -10380,6 +10380,14 @@ interval=WEEK" -u admin:district</screen>
                 <entry>Import of events.</entry>
               </row>
               <row>
+                <entry>ENROLLMENT_IMPORT</entry>
+                <entry>Import of enrollments.</entry>
+              </row>
+              <row>
+                <entry>TEI_IMPORT</entry>
+                <entry>Import of tracked entity instances.</entry>
+              </row>
+              <row>
                 <entry>METADATA_IMPORT</entry>
                 <entry>Import of metadata.</entry>
               </row>
