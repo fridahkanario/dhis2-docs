@@ -4456,6 +4456,20 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
                 <entry>See description</entry>
               </row>
               <row>
+                <entry>option</entry>
+                <entry>Used for linking rule actions to options. See the actionType overview for a
+                  detailed explanation for how it is used in each of the action types. Optional for
+                  HIDEOPTION</entry>
+                <entry>See description</entry>
+              </row>
+              <row>
+                <entry>optionGroup</entry>
+                <entry>Used for linking rule actions to optionGroups. See the actionType overview
+                  for a detailed explanation for how it is used in each of the action types.
+                  Compulsory for SHOWOPTIONGROUP, HIDEOPTIONGROUP.</entry>
+                <entry>See description</entry>
+              </row>
+              <row>
                 <entry>programStage</entry>
                 <entry>Only used for CREATEEVENT rule actions. Compulsory for CREATEEEVENT.</entry>
                 <entry>See description</entry>
