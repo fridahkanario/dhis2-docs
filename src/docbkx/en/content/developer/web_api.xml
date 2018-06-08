@@ -15455,6 +15455,25 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
         resource:<screen>/api/26/synchronization/availability</screen></para>
     </section>
   </section>
+  <section xml:id="webapi_program_data_synchronization">
+    <title>Program Data Synchronization</title>
+    <para>Starting from 2.30 DHIS2 introduces the Program Data Synchronization. The basic, user,
+      details can be found in User manual. (see: <link xlink:title="User manual: Data synchronization" 
+          xlink:href="https://docs.dhis2.org/master/en/user/html/dhis2_user_manual_en_full.html#dataAdmin_dataSync"
+          xmlns:xlink="http://www.w3.org/1999/xlink">User manual: Data synchronization</link>)</para>
+    <section xml:id="webapi_skip_initial_synchronization">
+      <title>Option to skip the initial synchronization</title>
+      <para>The initial synchronization job may take a significant amount of time, possibly slowing
+        down your instance, depending on how much data is being synchronized. In cases when it is
+        possible to manually import the same database backup dump to both the central and the local
+        instance, the initial synchronization could be skipped. In order to skip the initial
+        synchronization job, the followin SQL queries has to be run on the local instance. The date
+        in the SQL query should be carefully chosen so you avoid not synchronizing items that should
+        be synchronized.
+        <screen>UPDATE programstageinstance SET lastsynchronized = '2018-04-08 11:30:00';</screen><screen>UPDATE trackedentityinstance SET lastsynchronized = '2018-04-08 00:00:00';</screen></para>
+      
+    </section>
+  </section>
   <section xml:id="webapi_apps">
     <title>Apps</title>
     <para> The <emphasis role="italic">/api/apps</emphasis> endpoint can be used for installing,

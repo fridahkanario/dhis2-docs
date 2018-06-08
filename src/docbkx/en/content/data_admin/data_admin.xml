@@ -663,10 +663,10 @@
   <section xml:id="dataAdmin_dataSync">
     <title>Data synchronization</title>
     <para>DHIS2 provides a feature for synchronizing data being captured on the local instance with
-      a another, remote instance of DHIS2. This can be useful e.g. when you have deployed multiple
+      an another, remote instance of DHIS2. This can be useful e.g. when you have deployed multiple
       stand-alone instances of DHIS2 which are required to submit data values to a central DHIS2
       instance. Till now only aggregate data was being synced. Starting from 2.24 even non anonymous
-      events data (line list) will also be synced.</para>
+      events data (line list) and starting from 2.30 also the tracker data will be synced.</para>
     <para>These are the steps to enable data synchronization:<itemizedlist>
         <listitem>
           <para>Go to Synchronization Settings, enter the remote server URL, username and password.
@@ -703,14 +703,19 @@
           <para>The first time DHIS2 runs the synchronization job, it will include any data
             available. The subsequent synchronization jobs will only include data added and changed
             since the last successfull job. A synchronization job is considered successful only if
-            all the data was saved successfully on the remote server. Whether the job was successful
-            or not can be decided from the import summary returned from the central server.</para>
+            all the data was saved successfully on the remote server (however, even when the whole
+            job fails, there can be some partly updates that can be synced successfully). Whether
+            the job was successful or not can be decided from the import summary returned from the
+            central server.</para>
         </listitem>
         <listitem>
           <para>The initial synchronization job may take a significant amount of time, possibly
             slowing down your instance, depending on how much data is being synchronized. It could
             be a good idea to configure the job to run when there are few online users, then later
-            change this to your own preference.</para>
+            change this to your own preference. There is also a second option how to skip the
+            initial sync. The details can be found in the developer manual. (See: <link xlink:title="Option to skip the initial synchronization" 
+              xlink:href="https://docs.dhis2.org/master/en/developer/html/dhis2_developer_manual_full.html#webapi_skip_initial_synchronization"
+              xmlns:xlink="http://www.w3.org/1999/xlink">Option to skip the initial synchronization</link>) </para>
         </listitem>
         <listitem>
           <para>The system will start a synchronization job based on the rules set in the
@@ -722,7 +727,7 @@
           <para>The server handles each set of programs separately, which means one set of programs
             can be synchronized successfully, while the other fails. The failure or success of one
             doesn't influence the other, as the last successful synchronization time is tracked
-            individually for each set of programs.</para>
+            individually for each item (tracked entity instance and event).</para>
         </listitem>
         <listitem>
           <para>The attributes of TrackedEntityInstances (TrackedEntityAttribute) which have an
