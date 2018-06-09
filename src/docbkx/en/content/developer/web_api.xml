@@ -4406,11 +4406,23 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
                       </itemizedlist>
                     </listitem>
                   <listitem>
-                    <para><emphasis role="bold">SENDMESSAGE</emphasis> - Send message at completion of event/enrollment</para>
+                    <para><emphasis role="bold">SENDMESSAGE</emphasis> - To send message at completion of event/enrollment or at data value update.</para>
                     <itemizedlist>
                       <listitem>
                         <para><emphasis role="italic">messageTemplate</emphasis> - if defined, this
                           template will be delivered either as SMS or EMAIL depending upon DeliveryChannel value in message template.</para>
+                      </listitem>
+                    </itemizedlist>
+                  </listitem>
+                  <listitem>
+                    <para><emphasis role="bold">SCHEDULEMESSAGE</emphasis> - To schedule message at completion of event/enrollment or at data value update.</para>
+                    <itemizedlist>
+                      <listitem>
+                        <para><emphasis role="italic">messageTemplate</emphasis> - if defined, this
+                          template will be delivered either as SMS or EMAIL depending upon DeliveryChannel value in message template.</para>
+                      </listitem>
+                      <listitem>
+                        <para><emphasis role="italic">Date to send message</emphasis> - Expression which is going to be used for evaluation of scheduled date.</para>
                       </listitem>
                     </itemizedlist>
                   </listitem>
