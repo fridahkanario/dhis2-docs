@@ -14,7 +14,8 @@
                     role="bold">User</emphasis>.</para>
         </listitem>
         <listitem>
-            <para>In the object list, click the relevant user and select <emphasis role="bold"
+            <para>In the object list, click the menu icon of the relevant user and select <emphasis
+                    role="bold"
                     ><?oxy_comment_start author="cecilia" timestamp="20161110T114955+0100" comment="Suggest UI change:
 rename to Clone like in the Maintenance app."?>Replicate<?oxy_comment_end?></emphasis>.</para>
         </listitem>

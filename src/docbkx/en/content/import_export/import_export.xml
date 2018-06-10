@@ -1,553 +1,398 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<chapter version="5.0"
-         xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd"
-          xmlns="http://docbook.org/ns/docbook"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns:xs="http://www.w3.org/2001/XMLSchema"
-         xmlns:xl="http://www.w3.org/1999/xlink"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-         xmlns:svg="http://www.w3.org/2000/svg"
-         xmlns:mth="http://www.w3.org/1998/Math/MathML"
-         xmlns:db="http://docbook.org/ns/docbook"
-         xml:id="import_export">
-  <title>Import and export data and
-    <?oxy_comment_start author="cecilia" timestamp="20170529T135109+0200" comment="This section needs a complete restructure and editorial review."?>metadata<?oxy_comment_end?></title>
-  <para>In a primary health system, the HMIS typically involves a distributed application, where the
-    same application is running in different geographical locations (PHCs,CHCs, hospitals,
-    districts, and state). Most of these physical locations do not have Internet connectivity, and
-    hence they work off-line. At some point (normally at the district level), the data needs to be
-    synchronised in order to have a consolidated database for the a particular geographical region.
-    For this, it is important to be able to export data from one location (which is working offline,
-    say at the health facility level) to another one say at the district level where the data would
-    need to be imported. This feature of exporting and importing is thus a crucial function of a
-    HMIS. This feature also helps us overcome the dependency on Internet to some degree, as data
-    updates can be transferred via USB key where there is no connectivity, or through email where
-    there is limited Internet connectivity. DHIS2 provides robust export-import functionality to
-    fulfill these needs. </para>
-  <para>To access the main Import-Export module, choose <guimenu>Services-&gt;Import-Export. </guimenu>A number of services are available, all of which will be described in detail in respective sections below. </para>
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:db="http://docbook.org/ns/docbook" xmlns:mth="http://www.w3.org/1998/Math/MathML" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="5.0" xml:id="import_export" xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd">
+  <title>Import/Export App</title>
+  <para>In a primary health system, the HMIS typically involves a distributed application, where the same application is running in different geographical locations (PHCs,CHCs, hospitals, districts, and state). Most of these physical locations do not have Internet connectivity, and hence they work off-line. At some point (normally at the district level), the data needs to be synchronised in order to have a consolidated database for the a particular geographical region. For this, it is important to be able to export data from one location (which is working offline, say at the health facility level) to another one say at the district level where the data would need to be imported. This feature of exporting and importing is thus a crucial function of a HMIS. This feature also helps us overcome the dependency on Internet to some degree, as data updates can be transferred via USB key where there is no connectivity, or through email where there is limited Internet connectivity. DHIS2 provides robust export-import functionality to fulfill these needs.</para>
+  <para>To access the Import/Export app, search in the top header bar for Import/Export. Import/Export app offers a number of services details for which can be found below.</para>
   <para>
     <screenshot>
       <mediaobject>
         <imageobject>
-          <imagedata width="80%" align="center"
-            fileref="resources/images/import_export/import_export_overview.png" format="PNG"/>
+          <imagedata align="center" fileref="resources/images/import_export/overview.png" format="PNG" width="100%" />
         </imageobject>
       </mediaobject>
     </screenshot>
   </para>
   <section>
-    <title>Meta-data import</title>
+    <title>Metadata Import</title>
+    <para>Metadata Import can be accessed from the left sidebar by clicking on Metadata Import.</para>
+    <screenshot>
+      <title>Default import screen</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata align="left" fileref="resources/images/import_export/metadata_import.png" format="PNG" width="70%" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <orderedlist>
+      <listitem>
+        <para>Choose a file to upload</para>
+      </listitem>
+      <listitem>
+        <para>Select from the available formats e.g. <emphasis role="italic">JSON</emphasis> , <emphasis role="italic">XML</emphasis> or <emphasis role="italic">CSV</emphasis></para>
+      </listitem>
+      <listitem>
+        <para>Choose <emphasis role="bold">Dry Run</emphasis> . <emphasis role="italic">Yes</emphasis> will do a test import without importing any data into the database.</para>
+      </listitem>
+      <listitem>
+        <para>Choose a import strategy from</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">MORE OPTIONS</emphasis> if you want to adjust Reference Mode or Object Type before importing.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Import</emphasis> which will bring up the <emphasis role="bold">Logger</emphasis> at the bottom of the page to show the progress.</para>
+      </listitem>
+    </orderedlist>
+    <note>
+      <para><emphasis role="bold">It is highly recommend always using the Dry run option</emphasis> when importing data to make sure you keep control over any changes to your Metadata and database being out of sync on data elements or organisation unit names</para>
+    </note>
+    <para>Clicking <emphasis role="bold">Import</emphasis> will bring up <emphasis role="bold">Logger</emphasis> at the bottom of the screen. As import process happens it's log would show up here.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata align="left" fileref="resources/images/import_export/logger_metadata_import.png" format="PNG" width="100%" />
+      </imageobject>
+    </mediaobject>
+    <para />
+    <note><emphasis role="bold">Note</emphasis> If an organisation unit e.g. <emphasis role="bold">Nduvuibu MCHP</emphasis> had a unknown reference to an object with ID <emphasis role="italic">aaaU6Kr7Gtpidn</emphasis> . It means that the object with ID <emphasis role="italic">aaaU6Kr7Gtpidn</emphasis> was not present in your imported file, and it was not found in the existing database. You can control this using <emphasis role="bold">Reference Mode</emphasis> option available under <emphasis role="bold">MORE OPTIONS</emphasis> . If you want to allow objects with such references to be imported or not. If you choose to import invalid references you will have to fix this manually in DHIS2 later, if the reference should have pointed to something else.</note>
     <section>
-      <title>Meta-data import</title>
-      <para>Meta-data objects can be easily imported by accessing Import-Export-&gt;Meta-Data import. Select the file to import  by pressing &quot;Select&quot; and choose the file from your local file system. When importing XML and JSON files, the system will automatically detect which type of objects which should be imported. When importing CSV metadata, you will need to specify the object type. Consult the corresponding section in this manual on &quot;CSV Metadata import&quot; for more specific information on how the CSV file should be created.  </para>
-      <screenshot>
-        <title>Default import screen</title>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="80%" align="center" fileref="resources/images/import_export/import_default.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-      <para>There are two separate options for importing data. </para>
-      <itemizedlist>
-        <listitem>
-          <para>Dry run: This is similar to the old preview option, this will do a dry run import,
-            and give you information about any errors.</para>
-        </listitem>
-        <listitem>
-          <para>Strategy: There are three options here, &quot;New and Updates&quot;, &quot;New only&quot;, and &quot;Update
-            only&quot;. New and updates tells the importer to expect both new meta-data, and updates to
-            existing ones. New only will only accept fresh meta-data, usually you would use this on a
-            empty database. Updates only will only allow the meta-data to match meta-data that is
-            already there (same identifiers, new name etc).</para>
-        </listitem>
-      </itemizedlist>
-      <note>
-        <para><emphasis role="bold">It is highly recommend always using the Dry run option</emphasis> when importing data to make sure you keep control over any changes
-            to your meta-data and databases being out of synch on data elements or organisation unit            names</para>
-      </note>
-      <section>
-        <title>Dry run before importing</title>
-        <para>Before doing the import into your database, it is highly recommended that you run the
-          import with the dry run option set to true first. This will enabled you to have a look at
-          how many new, updates, and ignored meta-data there will be. After you have selected your
-          file, set dry run to true, you can now click the import button. After doing this, you will
-          be greeted by this window.</para>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="80%" align="center" fileref="resources/images/import_export/display_import_summary.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-        <para>Here you can see a short summary of what was contained in your import file. To see
-          further details, please click on the &quot;Display import summary&quot; link.</para>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="80%" align="center" fileref="resources/images/import_export/import_summary.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-        <para>Here you can see that the import dry run was successful and the import contained
-            <emphasis role="bold">1</emphasis> new organisation unit, <emphasis role="bold">1332</emphasis> updated, and <emphasis role="bold">4</emphasis> organisation unit
-          levels.</para>
-        <para>Below you can see another example.</para>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="80%" align="center" fileref="resources/images/import_export/import_summary_conflicts.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-        <para>Here you can see that the organisation unit &quot;Nduvuibu MCHP&quot; had a unknown reference to
-          an object with ID &quot;aaaU6Kr7Gtpidn&quot;, which means that an object with this ID was not
-          present in your imported file, and it could not be found in the existing database. Its
-          important to note that even if a reference could not be found, the object will still be
-          imported, but you might have to fix this directly in DHIS2 later, if the reference should
-          have pointed to something else.</para>
-      </section>
-      <section>
-        <title>Matching identifiers in DXF2</title>
-        <para>The DXF2 format currently support matching for two identifiers, the internal DHIS2 identifier (known as a UID), and also using an  external identifier called called a &quot;code&quot;. When the importer is trying to search for
-        references (like the one above), it will first go to the UID field, and then to the code
-        field. This allows you to import from legacy systems without having a UID for every meta-data
-        object. I.e. if you are importing facility data from a legacy system, you can leave out the
-        ID field completely (DHIS2 will fill this in for you) and the put the legacy systems own
-        identifiers in the code field, this identifier is required to be unique. This not only works
-        for organisation units, but for all kinds of meta-data, allowing for easy import from other
-        systems.</para>
-      </section>
-    </section>
-    <section>
-      <title>Import CSV meta-data</title>
-      <para>To import CV meta-data go to import-export module and select CSV Meta-Data Import form
-        the left side menu. You must select the object type which your CSV file contains. You can
-        only upload one type of objects at the time. Upload your file and click update. For the CSV
-        format, please visit the Web API chapter > CSV meta-data import in the developer
-        guide.</para>
-    </section>
-    <section>
-      <title>GML data import</title>
-      <para>The GML import function can be used to import data prepared in the Geography Markup Language (GML). GML can be used to update the coordinates (both polygons and points). Once you have prepared your GML file as detailed in the chapter on &quot;Importing coordinates&quot;, you can load the file with this function. </para>
-      <para>Importing the organisation unit hierarchy from GML is not supported. Therefore you
-        should create the organisation unit hierarchy separately, and then use GML to update the
-        coordinates once the hierarchy has been created. </para>
+      <title>Matching identifiers in DXF2</title>
+      <para>The DXF2 format currently support matching for two identifiers, the internal DHIS2 identifier (known as a UID), and also using an external identifier called called a "code". When the importer is trying to search for references (like the one above), it will first go to the UID field, and then to the code field. This allows you to import from legacy systems without having a UID for every meta-data object. I.e. if you are importing facility data from a legacy system, you can leave out the ID field completely (DHIS2 will fill this in for you) and the put the legacy systems own identifiers in the code field, this identifier is required to be unique. This not only works for organisation units, but for all kinds of meta-data, allowing for easy import from other systems.</para>
     </section>
   </section>
   <section xml:id="import">
-    <title>Import data</title>
-    <para>The import option allows different instance of DHIS2 to receive standardised sets of data in the absence of a networked system. The functionality can also be used to import data produced by another system (perhaps on a regular basis) or to import legacy data which has been transformed into a format which DHIS2 can understand. Typically, a data set is exported from one DHIS2 instance (e.g. a district level system) to another system (e.g. a provincial level system).  DHIS2 is also capable of importing data directly from a DHIS2 1.4 Access database. Each of these options will be discussed in the following sections. </para>
-    <section xml:id="import_another_instance">
-      <title>XML data import</title>
-      <para>To import data in XML format, simply select Services-&gt;Import-export-&gt;XML data
-        import. Similar options to the XML meta-data import facility are available. Please refer to
-        the Developer guide > Web API > Data values chapter on XML data import for details on the
-        XML format which is used by DHIS2 for aggregate data import. </para>
-    </section>
-    <section xml:id="importCSVdata">
-      <title>Import CSV data</title>
-      <para>DHIS2 supports import of data in the CSV (Comma Separated Values)  format. This can be used to import exchange file produced by DHIS2 itself. It also comes in handy when you want to import data from a third-party system as CSV is widely supported in applications and is easy to produce manually.</para>
-      <para>To import a CSV data exchange file navigate to the <emphasis role="italic">CSV Data
-          Import </emphasis>item in the left-side menu. Upload the exchange file and click <emphasis
-          role="italic">Import</emphasis>. CSV files can be imported both as plain text file or as
-        compressed ZIP file archive.</para>
-      <para>Please refer to the Developer guide > Web API > Data values chapter on CSV data import
-        for a description of the CSV format to use.</para>
-    </section>
-    <section>
-      <title>Event data import</title>
-      <para>Event data can also be easily imported with the &quot;Event data import&quot; function. Refer to the section in the WebAPI for more information on the format used for importing events. Otherwise, the functionality is the same as the XML data import used for aggregate data. </para>
-    </section>
+    <title>Data Import</title>
+    <para>Data Import can be accessed from the left sidebar by clicking on Data Import.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata align="left" fileref="resources/images/import_export/data_import.png" format="PNG" width="70%" />
+      </imageobject>
+    </mediaobject>
+    <orderedlist>
+      <listitem>
+        <para>Choose a file to upload</para>
+      </listitem>
+      <listitem>
+        <para>Select from the available formats e.g. <emphasis role="italic">JSON</emphasis> , <emphasis role="italic">XML</emphasis> , <emphasis role="italic">PDF</emphasis> or <emphasis role="italic">ADX</emphasis></para>
+      </listitem>
+      <listitem>
+        <para>Select from the available formats e.g. <emphasis role="italic">JSON</emphasis> , <emphasis role="italic">XML</emphasis> , <emphasis role="italic">PDF</emphasis> or <emphasis role="italic">ADX</emphasis></para>
+      </listitem>
+      <listitem>
+        <para>Choose a import strategy from</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="italic">MORE OPTIONS</emphasis> if you want to adjust Data Element ID Scheme, Org. Unit ID Scheme, ID Scheme or Existing Record Check before importing.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="italic">Import</emphasis> which will bring up the <emphasis role="italic">Logger</emphasis> at the bottom of the page to show the progress.</para>
+      </listitem>
+    </orderedlist>
     <section xml:id="importPDFdata">
-      <title>Import PDF data</title>
-      <para>DHIS2 supports import of data in the PDF format. This can be used to import data produced by off-line PDF data entry forms. Please refer to the section &quot;Data set management&quot; for details on how to produce a PDF form which can be used for off-line data entry. </para>
-      <para>To import a PDF data file, navigate to the <emphasis role="italic">PDF Data Import </emphasis>item in the left-side menu. Upload the completed PDF file and click <emphasis role="italic">Import</emphasis>.</para>
-      <para>After the import process is finished, you can follow the link to the import summary, which will inform you about the outcome of the import process in terms of number of records imported, updated and ignored and potential conflicts.</para>
-    </section>
-    <section xml:id="dhis14import">
-      <title>Import data from DHIS2 1.4</title>
-      <para>There are two ways to import data from a DHIS2 1.4 database; 1) through the 1.4 XML-based export files, or 2) directly from the DHIS2 1.4 data file (.mdb). Both are accessible from the DHIS2 1.4 Import menu under Import in the Import-Export module.</para>
-      <para>It is critical that all data integrity violations which are present in the DHIS2 1.4
-        database be fully resolved before attempting an import into DHIS2. You can check the data
-        integrity of DHIS2 1.4 through the CORE Module-&gt;Advanced-&gt;Data integrity checks. A
-        report will be generated of all data integrity violations which should be resolved prior to
-        importing into DHIS2.</para>
-      <warning>
-        <para>When data is imported from DHIS2 1.4, both the meta-data as well as data are imported. You should therefore be exceedingly careful that the meta-data present in DHIS2 1.4 is compatible with your DHIS2 data, otherwise during a DHIS2 1.4 data import, the meta-data in the DHIS2 system will be potentially overwritten by the i</para>
-      </warning>
-      <section>
-        <title>DHIS2 1.4 File (database) Import</title>
-        <para>This method is recommend when doing large imports from 1.4, and especially when importing into a new  DHIS2 database.</para>
-        <para><emphasis role="bold">DHIS2 1.4 File Configuration</emphasis> </para>
-        <para>Before you can start the 1.4 file import you need to provide a  few details about the 1.4 database:</para>
-        <para><emphasis role="italic">Datafile(#):</emphasis> Here you put the full path to the DHIS2 1.4 data file you want to import from, e.g. C:\DHIS14\DHIS_#LR_LIBERIA.mdb. </para>
-        <para><emphasis role="italic">Username:</emphasis>  Leave blank (unless you have set up extra security measures on the file)</para>
-        <para><emphasis role="italic">Password:</emphasis> Leave blank (unless you have set up extra security measures on the file)</para>
-        <para><emphasis role="italic">Levels:</emphasis> Provide the number of levels in the orgunit hierarchy in your 1.4 database, e.g. 5.</para>
-        <para>Click &quot;Save&quot; and you will return to the DHIS2 1.4 File Import window. </para>
-        <para><emphasis role="bold">Import Type:</emphasis></para>
-        <para>As with other imports you have the options to Import (directly), Preview, or Analyse the import. We recommend using the Analyse option first to check that the 1.4 database is OK and ready to be imported. </para>
-        <para>When importing a large database into a new blank DHIS2 database we recommend using the Import option to save time. </para>
-        <para>For smaller incremental imports the Preview is OK.</para>
-        <para><emphasis role="bold">Last Updated:</emphasis> </para>
-        <para>If you want the full import, all the data in the 1.4 database you leave this field blank.</para>
-        <para>If you only want to do an incremental import into an already existing DHIS2 database you can use this field to filter which data values to import. Only values added or edited after the date you specify will be imported. This filter makes use of the LastUpdated column in the RoutineData table in the DHIS2 1.4 data file.</para>
-        <para><emphasis role="bold">Import process:</emphasis></para>
-        <para>When you are done selecting Method, and LastUpdated you can begin the import by
-          clicking on the Import button. This process might take a long time, depending on how many
-          data values you are importing. On a reasonable spec. computer the import takes about 2
-          million records per 30 minutes.</para>
-      </section>
-      <section>
-        <title>DHIS2 1.4 XML Import</title>
-        <para>Import though XML data from DHIS2 1.4 is also possible using the standard DHIS2 1.4
-          export format. Just be sure that the DHIS2 1.4 export format has been set to &quot;DHIS
-          2&quot; as illustrated in the screen shot below. After the data has been exported by
-          DHIS2 1.4, you can import the data by choosing &quot;Services-&gt;Import-Export-&gt;DHIS
-          1.4 Import-&gt;DHIS2 1.4 XML Import&quot; and proceeding via the procedure outline in the
-            <link linkend="import_another_instance">previous section</link>. </para>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata width="70%" align="center" fileref="resources/images/import_export/dhis14_export.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </section>
-      <section>
-        <title>Limitations to DHIS2 1.4 imports</title>
-        <para>Although it is possible to import and export data between instances of DHIS2 1.4 and
-          DHIS2, there are significant limitations. Currently, the import of some metadata is not
-          supported from DHIS2 1.4 to DHIS2. This includes:</para>
-        <itemizedlist>
-          <listitem>
-            <para>Organisational unit alternate names</para>
-          </listitem>
-          <listitem>
-            <para>Compulsory data element pairings</para>
-          </listitem>
-          <listitem>
-            <para>Custom data entry forms</para>
-          </listitem>
-          <listitem>
-            <para>Dataset data entry levels</para>
-          </listitem>
-        </itemizedlist>
-        <para>It is also important that the aggregation operator defined in DHIS2 1.4 be set to the correct value. Some data, such as population, should have their aggregation operator set to &quot;Average&quot; in DHIS2, as this controls how the aggregation of data is handled over time (but not within the organisational unit hierarchy). </para>
-      </section>
+      <title>PDF data</title>
+      <para>DHIS2 supports import of data in the PDF format. This can be used to import data produced by off-line PDF data entry forms. Please refer to the section <emphasis role="bold">Data set management</emphasis> for details on how to produce a PDF form which can be used for off-line data entry.</para>
+      <para>To import a PDF data file, navigate to the <emphasis role="italic">PDF Data Import</emphasis> item in the left-side menu. Upload the completed PDF file and click <emphasis role="italic">Import</emphasis>.</para>
     </section>
   </section>
-  <section xml:id="export">
-    <title>Export data and meta-data</title>
-    <para>DHIS2 makes it possible to export various types of data in multiple data formats. You can
-      export your data, also referred to as measures or facts; and your meta-data, which refers to
-      the information describing your data. Data can be exported both in raw, non-aggregated format
-      and in aggregated format. It is also possible to export a combination of data and meta-data in
-      case you have special requirements. This chapter covers mainly how to export data and
-      meta-data through the user interface of the import-export DHIS2 module. Data can also be
-      exported programmatically through the DHIS2 Web API, and it is useful to be aware of the
-      various options available:</para>
-    <itemizedlist>
+  <section xml:id="gml_import">
+    <title>GML Import</title>
+    <para>GML Import can be accessed from the left sidebar by clicking on GML Import.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata align="left" fileref="resources/images/import_export/gml_import.png" format="PNG" width="65%" />
+      </imageobject>
+    </mediaobject>
+    <orderedlist>
       <listitem>
-        <para>Export raw, non-aggregated data through the user interface: Covered in this
-          chapter.</para>
+        <para>Upload a file using the <emphasis role="italic">GML</emphasis> (Geographic Markup Language) format.</para>
       </listitem>
       <listitem>
-        <para>Export aggregated data programmatically through the Web API: Please refer to the Web
-          API chapter, section on Analytics.</para>
+        <para>Choose <emphasis role="bold">Dry Run</emphasis> . <emphasis role="italic">Yes</emphasis> will do a test import without importing any data into the database.</para>
       </listitem>
       <listitem>
-        <para>Export a combination of data and meta-data: Please refer to the SQL view sections in
-          the Data administration chapter and Web API chapter.</para>
+        <para>Click <emphasis role="bold">Import</emphasis> which will bring up the <emphasis role="bold">Logger</emphasis> at the bottom of the page to show the progress.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="event_import">
+    <title>Event Import</title>
+    <para>Event can be access from the left sidebar by by clicking on Event import.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata align="left" fileref="resources/images/import_export/event_import.png" format="PNG" width="65%" />
+      </imageobject>
+    </mediaobject>
+    <orderedlist>
+      <listitem>
+        <para>Select from the available formats e.g. <emphasis role="italic">JSON</emphasis> , <emphasis role="italic">XML</emphasis> or <emphasis role="italic">CSV</emphasis></para>
       </listitem>
       <listitem>
-        <para>Export meta-data through the user interface: Covered in this chapter.</para>
+        <para>Choose <emphasis role="bold">Dry Run</emphasis> . <emphasis role="italic">Yes</emphasis> will do a test import without importing any data into the database.</para>
       </listitem>
       <listitem>
-        <para>Export meta-data programmatically through the Web API: Please refer to the Web API
-          chapter, section on meta data.</para>
+        <para>Choose <emphasis role="bold">Event ID Scheme</emphasis>.</para>
       </listitem>
-    </itemizedlist>
-    <para>Data can be exported on various formats, including DXF 2 (the DHIS2 meta-data and data
-      exchange format based on XML), CSV, PDF, MS Excel and the DHIS2 1.4 XML format. </para>
-    <para>Another aspect of data export is the type of DHIS2 deployment. In the case of online
-      deployment, all data is saved into a single database only. In an offline deployment, each
-      instance will store data in a separate database in their local system. In an offline
-      deployment, after the data entry is finished, data will have to be manually sent to the next
-      level in the organizational hierarchy. In an on-line application this is not required, as all
-      data is captured over an Internet connection and stored in a central location.</para>
-    <section>
-      <title>Metadata export</title>
-      <para>Meta-data is &quot;data about data&quot;. In the context of DHIS2, meta-data consists
-          of definitions of data elements, indicators, the structure and names contained in the
-          organizational hierarchy, and other options. Click on the &quot;Meta-data export&quot; link
-          from the main &quot;Data export&quot; screen in order to access this. Just select the
-          features, format, and the compression that you want and click &quot;Export&quot;. This
-          metadata file can then be transmitted just like a data file, except it will contain
-          information on the definitions of the various features, as opposed to the values of the
-          data themselves. </para>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="80%" align="center" fileref="resources/images/import_export/metadata_export.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-      <para>Simply choose the objects which you would like to export, and click <guibutton>&quot;Export&quot;</guibutton>. </para>
-    </section>
-    <section xml:id="metadata_export_dependencies">
-      <title>Metadata export with dependencies</title>
-      <para>Metadata export with dependencies lets you create canned exports for metadata objects.
-        This type of  export will include the metadata objects and the metadata object's related
-        objects, that is the metadata which belong together with the main object.</para>
-      <table frame="all">
-        <title>Object types and their dependencies</title>
-        <tgroup cols="2" align="left">
-          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
-          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
-          <thead>
-            <row>
-              <entry align="left" valign="top">
-                <para>Object type</para>
-              </entry>
-              <entry align="left" valign="top">
-                <para>Dependencies included in export</para>
-              </entry>
-            </row>
-          </thead>
-          <tbody>
-            <row>
-              <entry align="left" valign="top">
-                <para><emphasis role="bold"
-                    xml:id="docs-internal-guid-4a3662ce-63b9-1efd-e640-8ba874d1bcde">Data
-                    set</emphasis></para>
-              </entry>
-              <entry align="left" valign="top">
-                <para dir="ltr">Data elements</para>
-                <para dir="ltr">Sections</para>
-                <para dir="ltr">Indicators</para>
-                <para dir="ltr">Indicator types</para>
-                <para dir="ltr">Attributes</para>
-                <para dir="ltr">Data entry forms</para>
-                <para dir="ltr">Legend sets</para>
-                <para dir="ltr">Legends</para>
-                <para dir="ltr">Category combinations</para>
-                <para dir="ltr">Categories</para>
-                <para dir="ltr">Category options</para>
-                <para dir="ltr">Category option combinations</para>
-                <para>Option sets</para>
-              </entry>
-            </row>
-            <row>
-              <entry align="left" valign="top">
-                <para>Program</para>
-              </entry>
-              <entry align="left" valign="top">
-                <para dir="ltr">Data entry form</para>
-                <para dir="ltr">Tracked entity</para>
-                <para dir="ltr">Program stages</para>
-                <para dir="ltr">Program attributes</para>
-                <para dir="ltr">Program indicators</para>
-                <para dir="ltr">Program rules</para>
-                <para dir="ltr">Program rule actions</para>
-                <para dir="ltr">Program rule variables</para>
-                <para dir="ltr">Program attributes</para>
-                <para dir="ltr">Data elements</para>
-                <para dir="ltr">Category combinations</para>
-                <para dir="ltr">Categories</para>
-                <para dir="ltr">Category options</para>
-                <para dir="ltr">Category option combinations</para>
-                <para>Option sets</para>
-              </entry>
-            </row>
-            <row>
-              <entry align="left" valign="top">
-                <para>Category combination </para>
-              </entry>
-              <entry align="left" valign="top">
-                <para dir="ltr">Category combinations</para>
-                <para dir="ltr">Categories</para>
-                <para dir="ltr">Category options</para>
-                <para dir="ltr">Category option combinations</para>
-                <para>Attributes</para>
-              </entry>
-            </row>
-            <row>
-              <entry align="left" valign="top">
-                <para>Dashboard</para>
-              </entry>
-              <entry align="left" valign="top">
-                <para dir="ltr">Dashboard items</para>
-                <para dir="ltr">Charts</para>
-                <para dir="ltr">Event charts</para>
-                <para dir="ltr">Pivot tables</para>
-                <para dir="ltr">Event reports</para>
-                <para dir="ltr">Maps</para>
-                <para dir="ltr">Reports</para>
-                <para>Resources</para>
-              </entry>
-            </row>
-            <row>
-              <entry align="left" valign="top">
-                <para>Data element group</para>
-              </entry>
-              <entry align="left" valign="top">
-                <para dir="ltr">Data elements</para>
-                <para dir="ltr">Category combinations</para>
-                <para dir="ltr">Categories</para>
-                <para dir="ltr">Category options</para>
-                <para dir="ltr">Category option combinations</para>
-                <para dir="ltr">Option sets</para>
-                <para dir="ltr">Attributes</para>
-                <para dir="ltr">Legend sets</para>
-                <para>Legends</para>
-              </entry>
-            </row>
-          </tbody>
-        </tgroup>
-      </table>
-      <orderedlist>
-        <listitem>
-          <para>Open the <emphasis role="bold">Import-Export</emphasis> app.</para>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Metadata dependency export</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Select an <emphasis role="bold">Object type</emphasis>: <emphasis role="bold">Data
-              set</emphasis>, <emphasis role="bold">Program</emphasis>, <emphasis role="bold"
-              >category combo</emphasis>, <emphasis role="bold">Dashboard</emphasis> or <emphasis
-              role="bold">Data element group</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Select an <emphasis role="bold">Object</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Select a <emphasis role="bold">Format</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Select a format: <emphasis role="bold">XML</emphasis> or <emphasis role="bold"
-              >JSON</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Select <emphasis role="bold">Compression</emphasis>: <emphasis role="bold"
-              >Zip</emphasis>, <emphasis role="bold">Gzip</emphasis> or <emphasis role="bold"
-              >Uncompressed</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Export</emphasis>. The export file is downloaded to your
-            local computer.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section>
-      <title>Data export</title>
-      <para>To export  raw data from DHIS2, choose &quot;Import-export-&gt;Data export&quot;. Select the organisation unit(s), the start and end date,  and dataset or data sets for which data export should be selected. You can also select which types of identifiers which will be exported by pressing &quot;More options&quot; and then selecting either UID, Code, or Name for data elements, organisation units and category options. Once you have specified all options as required, press &quot;Export as...&quot; along with the format which you would like to export the data as (XML, JSON or CSV).</para>
-      <screenshot>
-        <mediaobject>
-          <imageobject>
-            <imagedata width="80%" align="center" fileref="resources/images/import_export/export_to_dhis2.png" format="PNG"/>
-          </imageobject>
-        </mediaobject>
-      </screenshot>
-      <para>A pop-up save option will appear on the displayed screen (see picture below) prompting the saving of the exported data. You may save the export folder on your desktop or any other folder by selecting the ‘Save to Disk’ option from the pop-up prompt.
-</para>
-    </section>
-    <section>
-      <title>Event data export</title>
-      <para>You can export event or tracker data in <emphasis role="bold">XML</emphasis>, <emphasis
-          role="bold">JSON</emphasis> or <emphasis role="bold">CSV</emphasis> formats.</para>
-      <orderedlist>
-        <listitem>
-          <para>Open the <emphasis role="bold">Import-Export</emphasis> app.</para>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Event Export</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Select an organisation unit.</para>
-        </listitem>
-        <listitem>
-          <para>Select a program and a program stage (if applicable).</para>
-        </listitem>
-        <listitem>
-          <para>Select the <emphasis role="bold">ID scheme</emphasis> to use for export: <emphasis
-              role="bold">UID</emphasis> (default) or <emphasis role="bold">CODE</emphasis>.</para>
-          <para> If you select <emphasis role="bold">CODE</emphasis> but the object's attribute does
-            not have code, it will not be included in the return payload.</para>
-        </listitem>
-        <listitem>
-          <para>Select <emphasis role="bold">Start date</emphasis> and <emphasis role="bold">End
-              date</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Select the <emphasis role="bold">Inclusion</emphasis>:</para>
-          <itemizedlist>
-            <listitem>
-              <para><emphasis role="bold">Selected organisation unit</emphasis>: Export event data
-                only for the selected organisation unit</para>
-            </listitem>
-            <listitem>
-              <para><emphasis role="bold">Include children of organisation unit</emphasis>: Export
-                event data for the children of the organisation unit as well as the selected
-                organisation unit itself.</para>
-            </listitem>
-            <listitem>
-              <para><emphasis role="bold">Include descendants of organisation unit</emphasis>:
-                Export event data for the descendants of the organisation unit as well as the
-                selected organisation unit itself.</para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-        <listitem>
-          <para>Select a format: <emphasis role="bold">XML</emphasis>, <emphasis role="bold"
-              >JSON</emphasis> or <emphasis role="bold">CSV</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Select <emphasis role="bold">Compression</emphasis>: <emphasis role="bold"
-              >Zip</emphasis>, <emphasis role="bold">Gzip</emphasis> or <emphasis role="bold"
-              >Uncompressed</emphasis>.</para>
-        </listitem>
-        <listitem>
-          <para>Click <emphasis role="bold">Export</emphasis>. The export file is downloaded to your
-            local computer.</para>
-        </listitem>
-      </orderedlist>
-    </section>
-    <section>
-      <title>Export data to other systems</title>
-      <section>
-        <title>DHIS2 1.4 Meta-data export</title>
-        <para>The DHIS2 1.4 Meta-data export functionality provides the same functionality as the standard DHIS2 meta-data export, except that the resulting file can be used to transmit meta-data information to DHIS2 1.4 systems. </para>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata width="40%" align="center" fileref="resources/images/dhis2UserManual/dhis14_xml_metadata_export.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </section>
-      <section>
-        <title>DHIS2 1.4 Detailed Metadata Export</title>
-        <para>The DHIS2 1.4 Metadata export functionality provides the same functionality as the detailed DHIS2 metadata export, except that the resulting file can be used to transmit meta-data information to DHIS2 1.4 systems. Simply select the data elements and indicators that you want and click &quot;Export&quot; to begin the export process.<screenshot>
-            <mediaobject>
-              <imageobject>
-                <imagedata width="70%" align="center" fileref="resources/images/dhis2UserManual/dhis14_xml_metadata_detailed_export.png" format="PNG"/>
-              </imageobject>
-            </mediaobject>
-          </screenshot></para>
-      </section>
-      <section>
-        <title>DHIS2 1.4 Data export</title>
-        <para>This service allows you to export data to a format which can easily be imported into a compatible DHIS2 1.4 database. </para>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata width="60%" align="center" fileref="resources/images/dhis2UserManual/dhis14_data_export.png" format="PNG"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
-      </section>
-      <section>
-        <title>XLS metadata export</title>
-        <para>Meta-data can be exported directly to the XLS format with this function. Simply click all of the available object which you wish to export and click &quot;Export&quot;. </para>
-      </section>
-    </section>
+      <listitem>
+        <para>Choose <emphasis role="bold">Org Unit ID Scheme</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Import</emphasis> which will bring up the <emphasis role="bold">Logger</emphasis> at the bottom of the page to show the progress.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="metadata_export">
+    <title>Metadata export</title>
+    <para>Metadata export can be accessed from the left sidebar by clicking on Metadata export.</para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="resources/images/import_export/metadata_export.png" format="PNG" width="100%" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <orderedlist>
+      <listitem>
+        <para>Choose the list of objects you would like to export.</para>
+      </listitem>
+      <listitem>
+        <para>Choose export <emphasis role="italic">format</emphasis> <emphasis role="italic">JSON</emphasis> or <emphasis role="italic">XML</emphasis></para>
+      </listitem>
+      <listitem>
+        <para>Choose <emphasis role="italic">compression</emphasis> type <emphasis role="italic">zip</emphasis> , <emphasis role="italic">gzip</emphasis> or <emphasis role="italic">uncompressed</emphasis></para>
+      </listitem>
+      <listitem>
+        <para>Choose option <emphasis role="italic">Sharing</emphasis> with or without sharing.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Export</emphasis> which will bring up the <emphasis role="bold">Logger</emphasis> at the bottom of the page to show the progress.</para>
+      </listitem>
+      <listitem>
+        <para>The exported file is downloaded to your local computer.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section xml:id="metadata_export_dependencies">
+    <title>Metadata export with dependencies</title>
+    <para>Metadata export with dependencies lets you create canned exports for metadata objects. This type of export will include the metadata objects and the metadata object's related objects, that is the metadata which belong together with the main object.</para>
+    <table frame="all">
+      <title>Object types and their dependencies</title>
+      <tgroup align="left" cols="2">
+        <colspec colname="c1" colnum="1" colwidth="1.0*" />
+        <colspec colname="c2" colnum="2" colwidth="1.0*" />
+        <thead>
+          <row>
+            <entry align="left" valign="top">
+              <para>Object type</para>
+            </entry>
+            <entry align="left" valign="top">
+              <para>Dependencies included in export</para>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry align="left" valign="top">
+              <para><emphasis role="bold" xml:id="docs-internal-guid-4a3662ce-63b9-1efd-e640-8ba874d1bcde">Data sets</emphasis></para>
+            </entry>
+            <entry align="left" valign="top">
+              <para dir="ltr">Data elements</para>
+              <para dir="ltr">Sections</para>
+              <para dir="ltr">Indicators</para>
+              <para dir="ltr">Indicator types</para>
+              <para dir="ltr">Attributes</para>
+              <para dir="ltr">Data entry forms</para>
+              <para dir="ltr">Legend sets</para>
+              <para dir="ltr">Legends</para>
+              <para dir="ltr">Category combinations</para>
+              <para dir="ltr">Categories</para>
+              <para dir="ltr">Category options</para>
+              <para dir="ltr">Category option combinations</para>
+              <para>Option sets</para>
+            </entry>
+          </row>
+          <row>
+            <entry align="left" valign="top">
+              <para>Programs</para>
+            </entry>
+            <entry align="left" valign="top">
+              <para dir="ltr">Data entry form</para>
+              <para dir="ltr">Tracked entity</para>
+              <para dir="ltr">Program stages</para>
+              <para dir="ltr">Program attributes</para>
+              <para dir="ltr">Program indicators</para>
+              <para dir="ltr">Program rules</para>
+              <para dir="ltr">Program rule actions</para>
+              <para dir="ltr">Program rule variables</para>
+              <para dir="ltr">Program attributes</para>
+              <para dir="ltr">Data elements</para>
+              <para dir="ltr">Category combinations</para>
+              <para dir="ltr">Categories</para>
+              <para dir="ltr">Category options</para>
+              <para dir="ltr">Category option combinations</para>
+              <para>Option sets</para>
+            </entry>
+          </row>
+          <row>
+            <entry align="left" valign="top">
+              <para>Category combination</para>
+            </entry>
+            <entry align="left" valign="top">
+              <para dir="ltr">Category combinations</para>
+              <para dir="ltr">Categories</para>
+              <para dir="ltr">Category options</para>
+              <para dir="ltr">Category option combinations</para>
+              <para>Attributes</para>
+            </entry>
+          </row>
+          <row>
+            <entry align="left" valign="top">
+              <para>Dashboard</para>
+            </entry>
+            <entry align="left" valign="top">
+              <para dir="ltr">Dashboard items</para>
+              <para dir="ltr">Charts</para>
+              <para dir="ltr">Event charts</para>
+              <para dir="ltr">Pivot tables</para>
+              <para dir="ltr">Event reports</para>
+              <para dir="ltr">Maps</para>
+              <para dir="ltr">Reports</para>
+              <para>Resources</para>
+            </entry>
+          </row>
+          <row>
+            <entry align="left" valign="top">
+              <para>Data element groups</para>
+            </entry>
+            <entry align="left" valign="top">
+              <para dir="ltr">Data elements</para>
+              <para dir="ltr">Category combinations</para>
+              <para dir="ltr">Categories</para>
+              <para dir="ltr">Category options</para>
+              <para dir="ltr">Category option combinations</para>
+              <para dir="ltr">Option sets</para>
+              <para dir="ltr">Attributes</para>
+              <para dir="ltr">Legend sets</para>
+              <para>Legends</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata align="center" fileref="resources/images/import_export/metadata_dependency_export.png" format="PNG" width="100%" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <orderedlist>
+      <listitem>
+        <para>Select an <emphasis role="bold">Object type</emphasis> : <emphasis role="bold">Data sets</emphasis> , <emphasis role="bold">Programs</emphasis> , <emphasis role="bold">Category combination</emphasis> , <emphasis role="bold">Dashboard</emphasis> or <emphasis role="bold">Data element group</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Select an <emphasis role="bold">Object</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Select a format: <emphasis role="bold">XML</emphasis> or <emphasis role="bold">JSON</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Select <emphasis role="bold">Compression</emphasis> : <emphasis role="bold">Zip</emphasis> , <emphasis role="bold">Gzip</emphasis> or <emphasis role="bold">Uncompressed</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Export</emphasis> which will bring up the <emphasis role="bold">Logger</emphasis> at the bottom of the page to show the progress.</para>
+      </listitem>
+      <listitem>
+        <para>The exported file is downloaded to your local computer.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section>
+    <title>Data export</title>
+    <para>Data export can be accessed from the left sidebar by clicking on Data export.</para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata align="left" fileref="resources/images/import_export/data_export.png" format="PNG" width="65%" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <orderedlist>
+      <listitem>
+        <para>Select the <emphasis role="italic">Organisation Units</emphasis> .</para>
+      </listitem>
+      <listitem>
+        <para>Set the <emphasis role="italic">Start</emphasis> and <emphasis role="italic">End Date</emphasis> .</para>
+      </listitem>
+      <listitem>
+        <para>Choose the <emphasis role="italic">Data Sets</emphasis></para>
+      </listitem>
+      <listitem>
+        <para>Select a format: <emphasis role="bold">XML</emphasis> or <emphasis role="bold">JSON</emphasis> .</para>
+      </listitem>
+      <listitem>
+        <para>Select <emphasis role="bold">Compression</emphasis> : <emphasis role="bold">Zip</emphasis> , <emphasis role="bold">Gzip</emphasis> or <emphasis role="bold">Uncompressed</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="italic">MORE OPTIONS</emphasis> If you want to adjust Data Element ID Scheme, Org. Unit ID Scheme or Category ID Scheme before export.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Export</emphasis> which will bring up the <emphasis role="bold">Logger</emphasis> at the bottom of the page to show the progress.</para>
+      </listitem>
+      <listitem>
+        <para>The exported file is downloaded to your local computer.</para>
+      </listitem>
+    </orderedlist>
+  </section>
+  <section>
+    <title>Event export</title>
+    <para>Event export can be accessed from the left sidebar by clicking on Event export.</para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata align="left" fileref="resources/images/import_export/event_export.png" format="PNG" width="90%" />
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>You can export event or tracker data in <emphasis role="bold">XML</emphasis> , <emphasis role="bold">JSON</emphasis> or <emphasis role="bold">CSV</emphasis> formats.</para>
+    <orderedlist>
+      <listitem>
+        <para>Select an organisation unit.</para>
+      </listitem>
+      <listitem>
+        <para>Select a program and a program stage (if applicable).</para>
+      </listitem>
+      <listitem>
+        <para>Select the <emphasis role="bold">ID scheme</emphasis> to use for export: <emphasis role="bold">UID</emphasis> (default) or <emphasis role="bold">CODE</emphasis> .</para>
+        <para>If you select <emphasis role="bold">CODE</emphasis> but the object's attribute does not have code, it will not be included in the return payload.</para>
+      </listitem>
+      <listitem>
+        <para>Select <emphasis role="bold">Start date</emphasis> and <emphasis role="bold">End date</emphasis> .</para>
+      </listitem>
+      <listitem>
+        <para>Select the <emphasis role="bold">Inclusion</emphasis>:</para>
+        <itemizedlist>
+          <listitem>
+            <para><emphasis role="bold">Selected organisation unit</emphasis> : Export event data only for the selected organisation unit</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Include children of organisation unit</emphasis> : Export event data for the children of the organisation unit as well as the selected organisation unit itself.</para>
+          </listitem>
+          <listitem>
+            <para><emphasis role="bold">Include descendants of organisation unit</emphasis> : Export event data for the descendants of the organisation unit as well as the selected organisation unit itself.</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+      <listitem>
+        <para>Select a format: <emphasis role="bold">XML</emphasis> , <emphasis role="bold">JSON</emphasis> or <emphasis role="bold">CSV</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Select <emphasis role="bold">Compression</emphasis> : <emphasis role="bold">Zip</emphasis> , <emphasis role="bold">Gzip</emphasis> or <emphasis role="bold">Uncompressed</emphasis>.</para>
+      </listitem>
+      <listitem>
+        <para>Click <emphasis role="bold">Export</emphasis> which will bring up the <emphasis role="bold">Logger</emphasis> at the bottom of the page to show the progress.</para>
+      </listitem>
+      <listitem>
+        <para>The exported file is downloaded to your local computer.</para>
+      </listitem>
+    </orderedlist>
   </section>
 </chapter>

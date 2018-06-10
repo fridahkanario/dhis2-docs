@@ -22,11 +22,9 @@
     </screenshot>
     <orderedlist>
         <listitem>
-            <para>Open the <emphasis role="bold">Users</emphasis> app and click <emphasis
-                    role="bold">User</emphasis>.</para>
-        </listitem>
-        <listitem>
-            <para>Click <emphasis role="bold">Add new</emphasis>.</para>
+            <para>Open the <emphasis role="bold">Users</emphasis> app and click on the <emphasis
+                    role="bold">+</emphasis> in the <emphasis role="bold">Users</emphasis>
+                card.</para>
         </listitem>
         <listitem>
             <para>Select whether you want to fill in all the personal user information, or invite
@@ -43,10 +41,10 @@
                             </imageobject>
                         </mediaobject>
                     </screenshot>
-                    <para>Choose this option if you would like to enter all the details of the new
-                        user such as name, password, etc.</para>
-                    <para>Enter the following information: user name, password, surname, first name,
-                        email, OpenID account (if any) and mobile phone number (if any).</para>
+                    <para>Choose this option if you would like to enter all the login details of the
+                        new user such as username, password, etc.</para>
+                    <para>Under these conditions, the fields username, password, surname, first
+                        name, and roles are mandatory.</para>
                     <para>After you've created the user, the account is ready for the user to use
                         with the user name and password that you provide.</para>
                 </listitem>
@@ -65,16 +63,9 @@
                         Then she/he must return to DHIS2 and finish setting up their user account.
                         The account that the user finishes setting up will be limited according to
                         how you configure the account.</para>
-                    <note>
-                        <para>You may not select this option to create an account with
-                            &quot;critical&quot; system authorities such as All, Scheduling
-                            Administration, Perform maintenance tasks, Merge organisation units,
-                            Eliminate duplicate data elements, SQL View Management, Change system
-                            settings, and List, Add or Delete user roles.</para>
-                    </note>
-                    <para>
-                        In order to use this feature "Enable email message notifications"  in SystemSettings -> Messaging should be checked.
-                    </para>
+                    <?oxy_comment_start author="hendrik" timestamp="20180522T165338+0200" comment="Deleted note that said you are not allowed to invite critical roles, because that is no longer true."?>
+                    <para><?oxy_comment_end?> In order to use this feature "Enable email message
+                        notifications" in SystemSettings -> Messaging should be checked. </para>
                     <para>Enter the email address to which the invitation should be sent. If you
                         want to, you may also enter the user name that the account will have. If you
                         leave the user name empty, then the user may choose their own user name when
@@ -160,22 +151,16 @@
             <?oxy_comment_end?>
         </listitem>
         <listitem>
-            <para>Click <emphasis role="bold">Show more options</emphasis>.</para>
-            <screenshot>
-                <mediaobject>
-                    <imageobject>
-                        <imagedata width="80%" align="center"
-                            fileref="resources/images/dhis2UserManual/user_management_more_options.png"
-                            format="PNG"/>
-                    </imageobject>
-                </mediaobject>
-            </screenshot>
+            <para>Click <emphasis role="bold">Show more options</emphasis> and an additional three
+                fields will show.</para>
         </listitem>
         <listitem>
-            <?oxy_comment_start author="cecilia" timestamp="20161111T160625+0100" comment="Verify step with SME."?>
+            <para>(Optional) In the <emphasis role="bold">Search organisation units</emphasis>
+                select the organisation units you want the user to be able to search in.</para>
+        </listitem>
+        <listitem>
             <para>(Optional) In the <emphasis role="bold">Available user groups</emphasis> section,
                 double-click the user groups you want to assign to the user.</para>
-            <?oxy_comment_end?>
         </listitem>
         <listitem>
             <?oxy_comment_start author="cecilia" timestamp="20161111T160625+0100" comment="More information needed. What do you do in this step?"?>
@@ -198,7 +183,7 @@
             </example>
         </listitem>
         <listitem>
-            <para>Click <emphasis role="bold">Add</emphasis>.</para>
+            <para>Click <emphasis role="bold">Save</emphasis>.</para>
         </listitem>
     </orderedlist>
 </section>

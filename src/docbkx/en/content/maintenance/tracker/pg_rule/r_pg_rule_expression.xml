@@ -411,14 +411,14 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                 </row>
                 <row>
                     <entry align="left" valign="top">d2:inOrgUnitGroup</entry>
-                    <entry align="left" valign="top">(string)</entry>
-                    <entry align="left" valign="top">The function will return TRUE if: The
-                        Organisation unit for the current event/enrollment belongs to the
-                        Organisation unit group ("orgunit_group_code"). <para>The function will return
-                            FALSE if: The code does not match any of the group the organisation unit
-                            belongs to.</para><para>Example expression<screen>d2:inOrgUnitGroup(orgunit_group_code)</screen>
-                        </para>
-                    </entry>
+                    <entry align="left" valign="top">(text)</entry>
+                    <entry align="left" valign="top">Evaluates wether the current organisation unit
+                        is in the argument group. The argument can be defined with either ID or
+                        organisation unit group code. The current organisation unit will be the
+                        event organisation unit when the rules is triggered in the context of an
+                        event, and the enrolling organisation unit when the rules is triggered in
+                        the event of a tei registration form.<para>Example
+                            expression:<screen>d2:inOrgUnitGroup('HIGH_RISK_FACILITY')</screen></para></entry>
                 </row>
             </tbody>
         </tgroup>
@@ -451,6 +451,15 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                     <entry align="left" valign="top">Contains the event date of the current event
                         execution. Will not have a value at the moment the rule is executed as part
                         of the registration form.<para> </para>
+                    </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{event_status}</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">Contains status of the current event or
+                            enrollment.<para> Example expression to check status is:
+                            <screen>V{event_status) == 'COMPLETED'</screen>
+                        </para>
                     </entry>
                 </row>
                 <row>
@@ -507,6 +516,31 @@ Not same operators as for program indicators? Verify. If yes, why?"?>perators<?o
                             <screen>d2:left(V{orgunit_code},3) == 'WB_'</screen>
                         </para>
                     </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{environment}</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">Contains a code representing the current
+                        runtime environment for the rules. The possible values is
+                        &quot;WebClient&quot;, &quot;AndroidClient&quot; and &quot;Server&quot;. Can
+                        be used when a program rule is only supposed to run in one or more of the
+                        client types. </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{program_stage_id}</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">Contains the ID of the current program stage
+                        that triggered the rules. This can be used to run rules in specific program
+                        stages, or avoid execution in certain stages. When executing the rules in
+                        the context of a TEI registration form the variable will be empty. </entry>
+                </row>
+                <row>
+                    <entry align="left" valign="top">V{program_stage_name}</entry>
+                    <entry align="left" valign="top">(string)</entry>
+                    <entry align="left" valign="top">Contains the name of the current program stage
+                        that triggered the rules. This can be used to run rules in specific program
+                        stages, or avoid execution in certain stages. When executing the rules in
+                        the context of a TEI registration form the variable will be empty.</entry>
                 </row>
             </tbody>
         </tgroup>
