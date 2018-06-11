@@ -67,6 +67,8 @@
   <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/config/toc_tracker_config.xml" encoding="UTF-8"/>
   <!-- <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/program_indicators.xml" encoding="UTF-8"/> -->
   <!-- <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/events/program_rules.xml" encoding="UTF-8"/> -->
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/maintenance/sql_view/sql_view.xml" encoding="UTF-8"/>
+  <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" href="content/maintenance/locale/locale.xml" encoding="UTF-8"/>
 
 
   <!-- Configure the system -->

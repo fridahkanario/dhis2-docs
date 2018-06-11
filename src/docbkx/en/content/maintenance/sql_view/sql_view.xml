@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<chapter version="5.0" xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd" 
+    xmlns="http://docbook.org/ns/docbook" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xl="http://www.w3.org/1999/xlink" 
+    xmlns:xi="http://www.w3.org/2001/XInclude" 
+    xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+    xmlns:svg="http://www.w3.org/2000/svg" 
+    xmlns:mth="http://www.w3.org/1998/Math/MathML" 
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="maintenance_sql_view">
+    <title>Configure SQL Views in the Maintenance app</title>
+    <para>The SQL View functionality of DHIS2 will store the SQL view definition internally, and
+      then materialize the view when requested. </para>
+    <para>Database administrators must be careful about creating database views directly in the DHIS
+      2 database. For instance, when the resource tables are generated, all of them will first be
+      dropped and then re-created. If any SQL views depend on these tables, an integrity violation
+      exception will be thrown and the process will be aborted.</para>
+    <para>The SQL views are dropped in reverse alphabetical order based on their names in DHIS2, and
+      created in regular alphabetical order. This allows you to have dependencies between SQL views,
+      given that views only depend on other views which come earlier in the alphabetical order. For
+      instance, &quot;ViewB&quot; can safely depend on &quot;ViewA&quot;. Otherwise, having views
+      depending on other view result in an integrity violation error.</para>
+    <section>
+      <title>Creating a new SQL view</title>
+      <para>To create a new SQL view, click <emphasis role="bold">Apps</emphasis> > <emphasis
+          role="bold">Data administration</emphasis> &gt;<emphasis role="bold">SQL view</emphasis>
+        and click <emphasis role="bold">Add new</emphasis>. </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata width="90%" align="center"
+              fileref="resources/images/maintainence/create_sql_view.png"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>The &quot;Name&quot; attribute of the SQL view will be used to determine the name of the
+        table that DHIS2 will create when the view is materialized by the user. The
+        &quot;Description&quot; attribute allows one to provide some descriptive text about what the
+        SQL view actually does. Finally, the &quot;SQL statement&quot; should contain the SQL view
+        definition. Only SQL &quot;SELECT&quot; statements are allowed and certain sensitive tables
+        (i.e. user information) are not accessible Press &quot;Save&quot; to store the SQL view
+        definition.</para>
+    </section>
+    <section>
+      <title>SQL View management</title>
+      <para>In order to utilize the SQL views, simply click the view and from the context menu,
+        choose &quot;Execute query&quot;. Once the process is completed, you will be informed that a
+        table has been created. The name of the table will be provided, and is composed from the
+        &quot;Description&quot; attribute provided in the SQL view definition. Once the view has
+        been generated, you can view it by clicking the view again, and selecting "Show SQL View". </para>
+      <tip>
+        <para>If you have a view which depends on another view, you should be careful about how the
+          views are named. When analytics is run on the DHIS2 server, all views must be dropped, and
+          are recreated. When analytics starts, the views are dropped in alphabetical order, and
+          then recreated in reverse alphabetical order. Thus, if view A depends on view B, it must
+          appear before view B in alphabetical order. If it appears after view B in alphabetical
+          order, analytics may fail, as the view with dependencies will not be dropped in the
+          correct order.</para>
+      </tip>
+    </section>
+  </chapter>
