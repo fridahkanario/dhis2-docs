@@ -712,10 +712,13 @@
           <para>The initial synchronization job may take a significant amount of time, possibly
             slowing down your instance, depending on how much data is being synchronized. It could
             be a good idea to configure the job to run when there are few online users, then later
-            change this to your own preference. There is also a second option how to skip the
-            initial sync. The details can be found in the developer manual. (See: <link xlink:title="Option to skip the initial synchronization" 
-              xlink:href="https://docs.dhis2.org/master/en/developer/html/dhis2_developer_manual_full.html#webapi_skip_initial_synchronization"
-              xmlns:xlink="http://www.w3.org/1999/xlink">Option to skip the initial synchronization</link>) </para>
+            change this to your own preference. </para>
+          <para>The synchronization job decision about which items should be synchronized is based
+            on the <emphasis>lastsynchronized</emphasis> timestamp in the
+              <emphasis>trackedentityinstance</emphasis> and
+              <emphasis>programstageinstance</emphasis> tables. Therefore, if you are not in need
+            for an initial synchronization, you can avoid it by manually updating the
+              <emphasis>lastsynchronized</emphasis> timestamp. </para>
         </listitem>
         <listitem>
           <para>The system will start a synchronization job based on the rules set in the
