@@ -23,5 +23,7 @@
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./predictor/toc_predictor.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./push_analysis/toc_push_analysis.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./extmaplayer/toc_extmaplayer.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./sql_view/sql_view.xml" encoding="UTF-8"/>
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./locale/locale.xml" encoding="UTF-8"/>
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mtn_batchgroupupdate.xml" encoding="UTF-8"/>
 </chapter>
