@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section version="5.0" xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd" 
+    xmlns="http://docbook.org/ns/docbook" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xl="http://www.w3.org/1999/xlink" 
+    xmlns:xi="http://www.w3.org/2001/XInclude" 
+    xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+    xmlns:svg="http://www.w3.org/2000/svg" 
+    xmlns:mth="http://www.w3.org/1998/Math/MathML" 
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="maintenance_locale_management">
+    <title>Manage Locales</title>
+    <para>It is possible to create custom locales in DHIS2. In addition to the locales available
+      through the system, you might want to add a custom locale such as &quot;English&quot; and
+      &quot;Zambia&quot; to the system. This would allow you to translate metadata objects to local
+      languages, or to account for slight variants between countries which use a common metadata
+      definition. </para>
+    <screenshot>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="90%" align="center" fileref="resources/images/maintainence/locale_management.png"/>
+            </imageobject>
+        </mediaobject>
+    </screenshot>
+    <para>The locale is composed of a language along with a country. Select the desired values and
+      press &quot;Add&quot;. This custom locale will now be available as one of the translation
+      locales in the system. </para>
+
+</section>
