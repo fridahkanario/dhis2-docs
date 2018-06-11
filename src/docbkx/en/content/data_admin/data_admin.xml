@@ -662,11 +662,10 @@
   </section>
   <section xml:id="dataAdmin_dataSync">
     <title>Data synchronization</title>
-    <para>DHIS2 provides a feature for synchronizing data being captured on the local instance with
-      an another, remote instance of DHIS2. This can be useful e.g. when you have deployed multiple
-      stand-alone instances of DHIS2 which are required to submit data values to a central DHIS2
-      instance. Till now only aggregate data was being synced. Starting from 2.24 even non anonymous
-      events data (line list) and starting from 2.30 also the tracker data will be synced.</para>
+    <para>DHIS2 provides synchronisation of data between remotely distributed instances and a
+      central instance of DHIS2. This can be useful e.g. when you have deployed multiple stand-alone
+      instances of DHIS2 which are required to submit data values to a central DHIS2 instance. Both
+      tracker data and aggregate data synchronisation is supported..</para>
     <para>These are the steps to enable data synchronization:<itemizedlist>
         <listitem>
           <para>Go to Synchronization Settings, enter the remote server URL, username and password.
@@ -703,8 +702,8 @@
           <para>The first time DHIS2 runs the synchronization job, it will include any data
             available. The subsequent synchronization jobs will only include data added and changed
             since the last successfull job. A synchronization job is considered successful only if
-            all the data was saved successfully on the remote server (however, even when the whole
-            job fails, there can be some partly updates that can be synced successfully). Whether
+            all the data was saved successfully on the remote server (Any data successfully synced
+            will remain on the receiving instance, regardless if the job eventually fails). Whether
             the job was successful or not can be decided from the import summary returned from the
             central server.</para>
         </listitem>
@@ -713,12 +712,9 @@
             slowing down your instance, depending on how much data is being synchronized. It could
             be a good idea to configure the job to run when there are few online users, then later
             change this to your own preference. </para>
-          <para>The synchronization job decision about which items should be synchronized is based
-            on the <emphasis>lastsynchronized</emphasis> timestamp in the
-              <emphasis>trackedentityinstance</emphasis> and
-              <emphasis>programstageinstance</emphasis> tables. Therefore, if you are not in need
-            for an initial synchronization, you can avoid it by manually updating the
-              <emphasis>lastsynchronized</emphasis> timestamp. </para>
+          <para>When DHIS2 synchronises tracker data, it determines the set of data to synchronise
+            based on the last time it was synchronised. Each of the tracked entity instances and
+            events have their own records of when they where last successfully synchronised.</para>
         </listitem>
         <listitem>
           <para>The system will start a synchronization job based on the rules set in the
@@ -730,7 +726,7 @@
           <para>The server handles each set of programs separately, which means one set of programs
             can be synchronized successfully, while the other fails. The failure or success of one
             doesn't influence the other, as the last successful synchronization time is tracked
-            individually for each item (tracked entity instance and event).</para>
+            individually for each item as previously mentioned.</para>
         </listitem>
         <listitem>
           <para>The attributes of TrackedEntityInstances (TrackedEntityAttribute) which have an
