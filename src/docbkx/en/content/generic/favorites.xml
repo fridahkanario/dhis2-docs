@@ -79,7 +79,7 @@
                         interpretation</emphasis>.</para>
             </listitem>
             <listitem>
-<para>In the text field, type a comment, question or interpretation. You can see this information in
+                <para>In the text field, type a comment, question or interpretation. You can also mention other users with '@username'. Start by typing '@' plus the first letters of the username or real name and a mentioning bar will display the available users. Mentioned users will receive an internal DHIS2 message with the interpretation or comment. You can see the interpretation in
                     the <emphasis role="bold">Dashboard</emphasis> app.</para>
             </listitem>
             <listitem>
