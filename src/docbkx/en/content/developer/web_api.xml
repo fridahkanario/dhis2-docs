@@ -11383,6 +11383,12 @@ interval=WEEK" -u admin:district</screen>
                   identifier.</entry>
               </row>
               <row>
+                <entry>userOrgUnits</entry>
+                <entry>false | true</entry>
+                <entry>Filter on users who are associated with the organisation units linked to the
+				  currently logged in user.</entry>
+              </row>
+              <row>
                 <entry>includeChildren</entry>
                 <entry>false | true</entry>
                 <entry>Includes users from all children organisation units of the ou
