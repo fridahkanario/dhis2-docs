@@ -6078,9 +6078,10 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
   -H &quot;Content-Type:text/plain&quot; -u mobile:district -X POST -v</screen>
       <para>If all went according to plan you will receive a <emphasis role="italic">200
           OK</emphasis> status code.</para>
-      <para>In 2.30 we added an URL search parameter: <screen>queryString=?&amp;queryOperator=?</screen> The filter
-        searches for matches in userMessages, subject and messages for message conversations. The default query operator
-      is token due to better text search, but you can supply your own operator.</para>
+      <para>In 2.30 we added an URL search parameter:
+        <screen>queryString=?&amp;queryOperator=?</screen> The filter searches for matches in
+        subject, messages' text and messages' senders for message conversations. The default query
+        operator is token due to better text search, but you can supply your own operator.</para>
     </section>
     <section xml:id="webapi_managing_messages">
       <title>Managing messages</title>
