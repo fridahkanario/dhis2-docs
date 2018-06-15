@@ -1987,7 +1987,7 @@ rabbitmq.connection-timeout = 60000</screen></para>
       defaults):<screen>kafka.bootstrap-servers = localhost:9092
 kafka.client-id = dhis2
 kafka.retries = 10
-kafka.poll-records = 100</screen></para>
+kafka.max-poll-records = 1000</screen></para>
     <para>After adding this, you will need to create the topics that you are interested in using,
       below we will show how that is done for tracker data (the only currently supported
       topics).</para>
@@ -1999,11 +1999,8 @@ kafka.poll-records = 100</screen></para>
 /api/events/queue (topic: bulk-events)</screen></para>
       <para>You can use these endpoints exactly as you would with the normal tracker endpoint, the
         only difference is that they are all asynchronous, and you will need to get the import
-        summaries using normal task summary approach. You will also need to schedule a "Kafka Job"
-        in the scheduler app (there is one defined already, but you might want to change the time,
-        or also add more as the default will only run once a day). Depending on what you have
-        defined in the "kafka.poll-records"  key, 100 or more objects will be handled each time the
-        scheduled job is run.</para>
+        summaries using normal task summary approach. Internally there is a scheduled system job
+        called "Kafka Job" which runs every second to check for new objects waiting in Kafka.</para>
     </section>
   </section>
   <section xml:id="webapi_csv_metadata_import">
