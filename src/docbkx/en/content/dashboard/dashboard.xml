@@ -359,9 +359,12 @@ to &quot;User org unit&quot;. If you reload the dashboard, the filter will be cl
                     </listitem>
                 </itemizedlist>
             </para>
-            <para>You can provide users with the url of the dashboard, allowing them to navigate
+            <para>
+                <para>You can provide users with the url of the dashboard, allowing them to navigate
              directly to the dashboard. To get the dashboard url, just access the dashboard in view mode, and copy
-             the browser url.</para>
+             the browser url. For example, the url to the Antenatal Care dashboard in play.dhis2.org/demo is:</para>
+                 <example><para>https://play.dhis2.org/demo/dhis-web-dashboard/#/nghVC4wtyzi</para></example>
+            </para>
         </section>
     </section>
 </chapter>
