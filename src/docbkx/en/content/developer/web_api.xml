@@ -9181,12 +9181,12 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 items).</entry>
               <entry>false | true</entry>
             </row>            
-		    <row>
-			  <entry>timeField</entry>
+            <row>
+            <entry>timeField</entry>
 			  <entry>No</entry>
-			  <entry>The time field to base event aggregation on. Applies to event data items only. Can be a predefined option or the ID of an attribute or data element having a time-based value type.</entry>
-			  <entry>EVENT_DATE | ENROLLMENT_DATE | INCIDENT_DATE | DUE_DATE | COMPLETED_DATE | &lt;Attribute ID> | &lt;Data element ID></entry>
-		    </row>
+              <entry>The time field to base event aggregation on. Applies to event data items only. Can be a predefined option or the ID of an attribute or data element having a time-based value type.</entry>
+              <entry>EVENT_DATE | ENROLLMENT_DATE | INCIDENT_DATE | DUE_DATE | COMPLETED_DATE | &lt;Attribute ID> | &lt;Data element ID></entry>
+            </row>
           </tbody>
         </tgroup>
       </table>
