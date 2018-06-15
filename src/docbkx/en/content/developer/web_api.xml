@@ -7993,7 +7993,7 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>aggregationType</entry>
                 <entry>No</entry>
                 <entry>Aggregation type to use in the aggregation process.</entry>
-                <entry>SUM | AVERAGE |AVERAGE_SUM_ORG_UNIT|LAST|LAST_AVERAGE_ORG_UNIT| COUNT | STDDEV | VARIANCE|MIN|MAX</entry>
+                <entry>SUM | AVERAGE | AVERAGE_SUM_ORG_UNIT | LAST | LAST_AVERAGE_ORG_UNIT | COUNT | STDDEV | VARIANCE | MIN | MAX</entry>
               </row>
               <row>
                 <entry>measureCriteria</entry>
@@ -8086,13 +8086,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
                 <entry>outputIdScheme</entry>
                 <entry>No</entry>
                 <entry>Identifier scheme to use for metadata items the query response, can be identifier, code or attributes.</entry>
-                <entry>UID | CODE |NAME| ATTRIBUTE:&lt;UID></entry>
+                <entry>UID | CODE |NAME| ATTRIBUTE:&lt;ID></entry>
               </row>
               <row>
                 <entry>inputIdScheme</entry>
                 <entry>No</entry>
                 <entry>Identifier scheme to use for metadata items in the query request, can be identifier, code or attributes.</entry>
-                <entry>UID | CODE | ATTRIBUTE:&lt;UID></entry>
+                <entry>UID | CODE | ATTRIBUTE:&lt;ID></entry>
               </row>
               <row>
                 <entry>approvalLevel</entry>
@@ -8130,8 +8130,14 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <row>
                 <entry>order</entry>
                 <entry>No</entry>
-                <entry>Specify ordering of rows based on value</entry>
+                <entry>Specify ordering of rows based on value.</entry>
                 <entry>ASC | DESC</entry>
+              </row>
+              <row>
+                <entry>timeField</entry>
+                <entry>No</entry>
+                <entry>The time field to base event aggregation on. Applies to event data items only. Can be a predefined option or the ID of an attribute or data element having a time-based value type.</entry>
+                <entry>EVENT_DATE | ENROLLMENT_DATE | INCIDENT_DATE | DUE_DATE | COMPLETED_DATE | &lt;Attribute ID> | &lt;Data element ID></entry>
               </row>
             </tbody>
           </tgroup>
@@ -9174,7 +9180,13 @@ ORDER BY oul.level, par.name, ou.name</screen>
               <entry>Produce aggregate values for the data dimensions (as opposed to dimension
                 items).</entry>
               <entry>false | true</entry>
-            </row>
+            </row>            
+		    <row>
+			  <entry>timeField</entry>
+			  <entry>No</entry>
+			  <entry>The time field to base event aggregation on. Applies to event data items only. Can be a predefined option or the ID of an attribute or data element having a time-based value type.</entry>
+			  <entry>EVENT_DATE | ENROLLMENT_DATE | INCIDENT_DATE | DUE_DATE | COMPLETED_DATE | &lt;Attribute ID> | &lt;Data element ID></entry>
+		    </row>
           </tbody>
         </tgroup>
       </table>
