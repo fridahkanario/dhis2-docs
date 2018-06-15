@@ -6149,7 +6149,7 @@ FTRrcoaog83,201401,DiszpKrYNg8,bRowv6yZOF2,bRowv6yZOF2,12,system,2014-03-02T21:4
       <para>The response is a <emphasis role="italic">200 OK</emphasis> with the following JSON
         body:<screen>{ &quot;markedRead&quot; : [ &quot;ZrKML5WiyFm&quot;, &quot;Gc03smoTm6q&quot; ] }</screen></para>
       <para>In 2.30 we have included the option to add recipients to an existing message
-      conversation. The resource is located at <screen>https://play.dhis2.org/demo/api/30/messageConversations/id/addRecipients</screen>
+      conversation. The resource is located at <screen>https://play.dhis2.org/demo/api/30/messageConversations/id/recipients</screen>
       The options for this resource is a list of users, user groups and organisation units. The request should look like this:
       <screen>
 {
