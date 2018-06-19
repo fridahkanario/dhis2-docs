@@ -15008,7 +15008,7 @@ qPEdI1xn7k0,COMPLETED,&lt;pid>,&lt;psid>,&lt;enrollment-id>,&lt;ou>,2016-01-01,2
 
     <section xml:id="webapi_tracker_ownership_management">
       <title>Tracker Ownership Management</title>
-      <para>A new concept called Tracker Ownership is introduced from 2.30. There will be only one owner organisation unit for a tracked entity instance in the context of a program. Programs that are configured with an access level of <emphasis>PROTECTED</emphasis> or <emphasis>CLOSED</emphasis> will adhere to the ownership privileges. Only those users belonging to the owning org unit for a tracked entity-program combination will be able to access the data related to that program.
+      <para>A new concept called Tracker Ownership is introduced from 2.30. There will now be one owner organisation unit for a tracked entity instance in the context of a program. Programs that are configured with an access level of <emphasis>PROTECTED</emphasis> or <emphasis>CLOSED</emphasis> will adhere to the ownership privileges. Only those users belonging to the owning org unit for a tracked entity-program combination will be able to access the data related to that program for that tracked entity.
       </para>
        <section xml:id="webapi_tracker_ownership_override_api">
         <title>Tracker Ownership Override : Break the Glass</title>
