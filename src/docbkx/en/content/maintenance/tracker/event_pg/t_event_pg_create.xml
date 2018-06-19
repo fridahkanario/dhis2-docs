@@ -267,12 +267,19 @@ Verifed with SME that it should be added, submitted JIRA issue."?>days<?oxy_comm
                             </row>
                             <row>
                                 <entry align="left" valign="top">
-                                    <para><emphasis role="bold">Render option as
-                                        radio</emphasis></para>
+                                    <para><emphasis role="bold">Mobile render type</emphasis></para>
                                 </entry>
                                 <entry align="left" valign="top">
-                                    <para>Displays a radio button in the data entry form. It's only
-                                        possible to use for option sets.</para>
+                                    <para>Can be used to select different render types for mobile devices. Available options vary depending on the data element's value type. For example, for a numerical value you may select "Default", "Value", "Slider", "Linear scale", and "Spinner".</para>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="top">
+                                    <para><emphasis role="bold">Desktop render type</emphasis></para>
+                                </entry>
+                                <entry align="left" valign="top">
+                                    <para>WARNING: NOT IMPLEMENTED YET.</para>
+                                    <para>Can be used to select different render types for desktop (i.e. the web interface). Available options vary depending on the data element's value type. For example, for a numerical value you may select "Default", "Value", "Slider", "Linear scale", and "Spinner".</para>
                                 </entry>
                             </row>
                         </tbody>
@@ -304,7 +311,7 @@ Verifed with SME that it should be added, submitted JIRA issue."?>days<?oxy_comm
                 <para>To create a <emphasis role="bold">Section</emphasis> data entry form:</para>
                 <orderedlist>
                     <listitem>
-                        <para>Click the add button and enter a section name.</para>
+                        <para>Click the add button and enter a section's name, description and render type for desktop and mobile.</para>
                     </listitem>
                     <listitem>
                         <para>Click the section so it's highlighted by a black line.</para>
