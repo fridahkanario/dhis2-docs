@@ -1389,6 +1389,14 @@ http://server/api/26/constants/ID</screen></para>
               are moving metadata between 2 non-synced instances, it might make sense to set this to
               EXCLUDE to ease the handling of these generated objects.</entry>
           </row>
+          <row>
+            <entry>skipSharing</entry>
+            <entry>false/true</entry>
+            <entry>Enabling this will strip the sharing properties from the exported objects. This
+              includes <emphasis>user</emphasis>, <emphasis>publicAccess</emphasis>,
+                <emphasis>userGroupAccesses</emphasis>, <emphasis>userAccesses</emphasis>, and
+                <emphasis>externalAccess</emphasis>.</entry>
+          </row>
         </tbody>
       </tgroup>
     </table>
