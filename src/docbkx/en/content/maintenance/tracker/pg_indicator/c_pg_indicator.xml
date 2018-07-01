@@ -173,9 +173,35 @@
                             data up to a given point in time. <itemizedlist>
                                 <listitem>
                                     <para>Boundary target: Can be <emphasis>incident
-                                        date</emphasis>, <emphasis>event date</emphasis> or
-                                            <emphasis>enrollment date</emphasis>. Designates what is
-                                        being constrained by the boundary.</para>
+                                        date</emphasis>, <emphasis>event date</emphasis>,
+                                            <emphasis>enrollment date</emphasis> or
+                                            <emphasis>custom</emphasis>. Designates what is being
+                                        constrained by the boundary. </para>
+                                    <para><emphasis>custom</emphasis> is used make boundary that
+                                        target either a date data element, tracked entity attribute
+                                        or the presence of an event in a program stage. This is done
+                                        with a custom expression on the form: <itemizedlist>
+                                            <listitem>
+                                                <para> Data element of type date:
+                                                  #{programStageUid.dataElementUid}.
+                                                  <screen>#{A03MvHHogjR.a3kGcGDCuk6}</screen>
+                                                </para>
+                                            </listitem>
+                                            <listitem>
+                                                <para> Tracked entity attribute of type date:
+                                                  #{attributeUid}. <screen>A{GPkGfbmArby}</screen>
+                                                </para>
+                                            </listitem>
+                                            <listitem>
+                                                <para> Presence of one event in a specific program
+                                                  stage: PS_EVENTDATE:programStageUid. <screen>PS_EVENTDATE:A03MvHHogjR</screen>
+                                                  <note>This boundary target is only applicable to
+                                                  <emphasis>Analytics type
+                                                  Enrollment</emphasis></note>
+                                                </para>
+                                            </listitem>
+                                        </itemizedlist>
+                                    </para>
                                 </listitem>
                                 <listitem>
                                     <para>Analytics period boundary type: Defines wether the
